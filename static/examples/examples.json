@@ -1,0 +1,35 @@
+{
+  "nlp": {
+    "name": "NLP: Q&A",
+    "description": "Answer questions based on a given text using tensorflow NLP model.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/nlp.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "nlp"
+  },
+  "OllamaToolCall": {
+    "name": "Ollama Tool Call",
+    "description": "AI agents that can use real time data using the Ollama tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ollama_tool_call.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OllamaToolCall"
+  },
+  "BouncingBall": {
+    "name": "Bouncing Ball",
+    "description": "A bouncing ball animation based on physics game engine.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/bouncing_ball.jpg",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "BouncingBall"
+  }
+}
