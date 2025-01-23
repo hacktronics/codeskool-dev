@@ -31,5 +31,27 @@
     "insetIconURL": "games",
     "isMemberOnly": false,
     "urlId": "BouncingBall"
+  },
+  "QRCode": {
+    "name": "QR Code",
+    "description": "Detect and decode QR codes in an image.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/qr_code.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "QRCode"
+  },
+  "OCR": {
+    "name": "OCR",
+    "description": "Optical character recognition (OCR) using Tesseract.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ocr.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OCR"
   }
 }
