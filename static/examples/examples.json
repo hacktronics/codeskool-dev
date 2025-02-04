@@ -53,5 +53,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "OCR"
+  },
+  "FaceMatching": {
+    "name": "Face Matching",
+    "description": "Match faces similarity in two images.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/face_matching.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "FaceMatching"
   }
 }
