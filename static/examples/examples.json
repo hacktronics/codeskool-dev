@@ -64,5 +64,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "FaceMatching"
+  },
+  "ObjectDetection": {
+    "name": "Object Detection",
+    "description": "Detect objects in an image using machine learning.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/object_detection.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "ObjectDetection"
   }
 }
