@@ -1,0 +1,90 @@
+{
+  "nlp": {
+    "name": "NLP: Q&A",
+    "description": "Answer questions based on a given text using tensorflow NLP model.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/nlp.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "nlp"
+  },
+  "OllamaToolCall": {
+    "name": "Ollama Tool Call",
+    "description": "AI agents that can use real time data using the Ollama tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ollama_tool_call.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OllamaToolCall"
+  },
+  "BouncingBall": {
+    "name": "Bouncing Ball",
+    "description": "A bouncing ball animation based on physics game engine.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/bouncing_ball.jpg",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "BouncingBall"
+  },
+  "QRCode": {
+    "name": "QR Code",
+    "description": "Detect and decode QR codes in an image.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/qr_code.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "QRCode"
+  },
+  "OCR": {
+    "name": "OCR",
+    "description": "Optical character recognition (OCR) using Tesseract.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ocr.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OCR"
+  },
+  "FaceMatching": {
+    "name": "Face Matching",
+    "description": "Match faces similarity in two images.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/face_matching.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "FaceMatching"
+  },
+  "ObjectDetection": {
+    "name": "Object Detection",
+    "description": "Detect objects in an image using machine learning.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/object_detection.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "ObjectDetection"
+  },
+  "OpenAIToolCall": {
+    "name": "OpenAI Tool Call",
+    "description": "AI agents that can use real time data using the OpenAI tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/openai_tool_call.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OpenAIToolCall"
+  }
+}
