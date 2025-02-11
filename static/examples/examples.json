@@ -86,5 +86,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "OpenAIToolCall"
+  },
+  "BarChart": {
+    "name": "Bar Chart",
+    "description": "Create a bar chart from a given data set.",
+    "tags": [
+      "data"
+    ],
+    "img": "/static/examples/thumbnails/bar_chart.jpg",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "BarChart"
   }
 }
