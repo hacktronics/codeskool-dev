@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google OAuth2 Authorization Failure</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            text-align: center;
+            transform: translateY(-18%);
+        }
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            background-color: #ffddd788;
+            border-radius: 50%;
+        }
+        .message {
+            margin-top: 1.5rem;
+        }
+        .message h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .message p {
+            font-size: 1rem;
+        }
+        svg {
+            width: 100px;
+            height: 100px;
+            fill: #f44336;
+        }
+        a {
+            color: #809bce;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="svg-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><title>Failure</title><path d="M12,2C17.53,2 22,6.47 22,12C22,17.53 17.53,22 12,22C6.47,22 2,17.53 2,12C2,6.47 6.47,2 12,2M15.59,7L12,10.59L8.41,7L7,8.41L10.59,12L7,15.59L8.41,17L12,13.41L15.59,17L17,15.59L13.41,12L17,8.41L15.59,7Z" /></svg>
+        </div>
+        <div class="message">
+            <h1>Authorization Failure</h1>
+            <p>There was an error while trying to authorize your Google account. Please try again.</p>
+            <p>If the problem persists, please contact the <a href="https://codeskool.cc">CodeSkool</a> team.</p>
+        </div>
+    </div>
+</body>
+</html>
