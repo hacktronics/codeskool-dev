@@ -97,5 +97,16 @@
     "insetIconURL": "scratch",
     "isMemberOnly": false,
     "urlId": "BarChart"
+  },
+  "CustomSpeechCommands": {
+    "name": "Custom Speech Commands",
+    "description": "Create custom speech commands using TensorFlow.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/custom_speech_commands.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "CustomSpeechCommands"
   }
 }
