@@ -91,7 +91,7 @@
     "name": "Bar Chart",
     "description": "Create a bar chart from a given data set.",
     "tags": [
-      "data"
+      "scratch"
     ],
     "img": "/static/examples/thumbnails/bar_chart.jpg",
     "insetIconURL": "scratch",
@@ -108,5 +108,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "CustomSpeechCommands"
+  },
+  "Cloudinary": {
+    "name": "Cloudinary",
+    "description": "Upload images to Cloudinary and get the URL.",
+    "tags": [
+      "internet"
+    ],
+    "img": "/static/examples/thumbnails/cloudinary.jpg",
+    "insetIconURL": "internet",
+    "isMemberOnly": false,
+    "urlId": "Cloudinary"
   }
 }
