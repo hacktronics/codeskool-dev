@@ -119,5 +119,16 @@
     "insetIconURL": "internet",
     "isMemberOnly": false,
     "urlId": "Cloudinary"
+  },
+  "BearTrackingOpenCV": {
+    "name": "Bear Tracking OpenCV",
+    "description": "Track bears in a image using OpenCV.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/bear_tracking_opencv.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "BearTrackingOpenCV"
   }
 }
