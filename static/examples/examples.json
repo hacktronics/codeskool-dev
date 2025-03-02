@@ -130,5 +130,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "BearTrackingOpenCV"
+  },
+  "TeachableMachines": {
+    "name": "Teachable Machines",
+    "description": "Train a model to recognize images using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/teachable_machines.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "TeachableMachines"
   }
 }
