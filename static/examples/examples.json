@@ -152,5 +152,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "Florence2"
+  },
+  "MinecraftFarming": {
+    "name": "Minecraft Farming",
+    "description": "Automate farming in Minecraft using Agents.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/minecraft_farming.jpg",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "MinecraftFarming"
   }
 }
