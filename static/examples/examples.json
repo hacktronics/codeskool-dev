@@ -141,5 +141,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "TeachableMachines"
+  },
+  "Florence2": {
+    "name": "Florence2",
+    "description": "Vision tasks using foundation model that uses prompt-based approach.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/florence2.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "Florence2"
   }
 }
