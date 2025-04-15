@@ -163,5 +163,16 @@
     "insetIconURL": "games",
     "isMemberOnly": false,
     "urlId": "MinecraftFarming"
+  },
+  "LEDBlink": {
+    "name": "LED Blink",
+    "description": "Blink an LED using Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/led_blink.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "LEDBlink"
   }
 }
