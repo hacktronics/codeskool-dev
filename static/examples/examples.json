@@ -174,5 +174,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": false,
     "urlId": "LEDBlink"
+  },
+  "NeoPixelTrafficLight": {
+    "name": "NeoPixel Traffic Light",
+    "description": "Control a traffic light using NeoPixels and Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/neo_pixel_traffic_light.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "NeoPixelTrafficLight"
   }
 }
