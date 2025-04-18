@@ -196,5 +196,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": false,
     "urlId": "AutomaticGate"
+  },
+  "TempDisplay": {
+    "name": "Temperature Display",
+    "description": "Display temperature using DHT11 sensor and TM1637 display.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/temp_display.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "TempDisplay"
   }
 }
