@@ -207,5 +207,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": false,
     "urlId": "TempDisplay"
+  },
+  "MarioRotaryEncoder": {
+    "name": "Mario Game",
+    "description": "Control Mario's movement using a rotary encoder.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/mario_rotary_encoder.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "MarioRotaryEncoder"
   }
 }
