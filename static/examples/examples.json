@@ -7,7 +7,7 @@
     ],
     "img": "/static/examples/thumbnails/nlp.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "nlp"
   },
   "OllamaToolCall": {
@@ -18,7 +18,7 @@
     ],
     "img": "/static/examples/thumbnails/ollama_tool_call.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "OllamaToolCall"
   },
   "BouncingBall": {
@@ -29,7 +29,7 @@
     ],
     "img": "/static/examples/thumbnails/bouncing_ball.jpg",
     "insetIconURL": "games",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "BouncingBall"
   },
   "QRCode": {
@@ -40,7 +40,7 @@
     ],
     "img": "/static/examples/thumbnails/qr_code.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "QRCode"
   },
   "OCR": {
@@ -51,7 +51,7 @@
     ],
     "img": "/static/examples/thumbnails/ocr.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "OCR"
   },
   "FaceMatching": {
@@ -62,7 +62,7 @@
     ],
     "img": "/static/examples/thumbnails/face_matching.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "FaceMatching"
   },
   "ObjectDetection": {
@@ -73,7 +73,7 @@
     ],
     "img": "/static/examples/thumbnails/object_detection.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "ObjectDetection"
   },
   "OpenAIToolCall": {
@@ -84,7 +84,7 @@
     ],
     "img": "/static/examples/thumbnails/openai_tool_call.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "OpenAIToolCall"
   },
   "BarChart": {
@@ -95,7 +95,7 @@
     ],
     "img": "/static/examples/thumbnails/bar_chart.jpg",
     "insetIconURL": "scratch",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "BarChart"
   },
   "CustomSpeechCommands": {
@@ -106,7 +106,7 @@
     ],
     "img": "/static/examples/thumbnails/custom_speech_commands.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "CustomSpeechCommands"
   },
   "Cloudinary": {
@@ -117,7 +117,7 @@
     ],
     "img": "/static/examples/thumbnails/cloudinary.jpg",
     "insetIconURL": "internet",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "Cloudinary"
   },
   "BearTrackingOpenCV": {
@@ -128,7 +128,7 @@
     ],
     "img": "/static/examples/thumbnails/bear_tracking_opencv.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "BearTrackingOpenCV"
   },
   "TeachableMachines": {
@@ -139,7 +139,7 @@
     ],
     "img": "/static/examples/thumbnails/teachable_machines.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "TeachableMachines"
   },
   "Florence2": {
@@ -150,7 +150,7 @@
     ],
     "img": "/static/examples/thumbnails/florence2.jpg",
     "insetIconURL": "ai",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "Florence2"
   },
   "MinecraftFarming": {
@@ -161,7 +161,7 @@
     ],
     "img": "/static/examples/thumbnails/minecraft_farming.jpg",
     "insetIconURL": "games",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "MinecraftFarming"
   },
   "LEDBlink": {
@@ -172,7 +172,7 @@
     ],
     "img": "/static/examples/thumbnails/led_blink.jpg",
     "insetIconURL": "arduino",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "LEDBlink"
   },
   "NeoPixelTrafficLight": {
@@ -183,7 +183,7 @@
     ],
     "img": "/static/examples/thumbnails/neo_pixel_traffic_light.jpg",
     "insetIconURL": "arduino",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "NeoPixelTrafficLight"
   },
   "AutomaticGate": {
@@ -194,7 +194,7 @@
     ],
     "img": "/static/examples/thumbnails/automatic_gate.jpg",
     "insetIconURL": "arduino",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "AutomaticGate"
   },
   "TempDisplay": {
@@ -205,7 +205,7 @@
     ],
     "img": "/static/examples/thumbnails/temp_display.jpg",
     "insetIconURL": "arduino",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "TempDisplay"
   },
   "MarioRotaryEncoder": {
@@ -216,7 +216,7 @@
     ],
     "img": "/static/examples/thumbnails/mario_rotary_encoder.jpg",
     "insetIconURL": "arduino",
-    "isMemberOnly": false,
+    "isMemberOnly": true,
     "urlId": "MarioRotaryEncoder"
   }
 }
