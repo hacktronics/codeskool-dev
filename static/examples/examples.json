@@ -218,5 +218,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "MarioRotaryEncoder"
+  },
+  "DigitalLocker": {
+    "name": "Digital Locker",
+    "description": "Simulate a digital locker using a keypad and 16x2 LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/digital_locker.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "DigitalLocker"
   }
 }
