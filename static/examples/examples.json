@@ -229,5 +229,49 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "DigitalLocker"
+  },
+  "Calculator": {
+    "name": "Calculator",
+    "description": "Simple calculator using membrane keypad and I2C lcd.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/calculator.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "Calculator"
+  },
+  "IkeaPM2.5": {
+    "name": "IKEA PM2.5 Sensor",
+    "description": "Monitor PM2.5 levels using ENS160 air quality sensor and Neopixel led.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ikea_pm_2.5.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "IkeaPM2.5"
+  },
+  "ReverseParking": {
+    "name": "Reverse Parking",
+    "description": "Reverse parking assistance using ultrasonic sensor and buzzer.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/reverse_parking.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ReverseParking"
+  },
+  "ArduinoBlinkLed": {
+    "name": "Arduino Blink LED",
+    "description": "Blink an LED using Arduino Code.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/arduino_blink_led.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ArduinoBlinkLed"
   }
 }
