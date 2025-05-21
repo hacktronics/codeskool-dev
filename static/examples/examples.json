@@ -273,5 +273,27 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "ArduinoBlinkLed"
+  },
+  "Python101": {
+    "name": "Python 101",
+    "description": "Your first Python program using Scratch.",
+    "tags": [
+      "python"
+    ],
+    "img": "/static/examples/thumbnails/python_101.jpg",
+    "insetIconURL": "python",
+    "isMemberOnly": true,
+    "urlId": "Python101"
+  },
+  "HandwritingRecognition": {
+    "name": "Handwriting Recognition",
+    "description": "Recognize handwritten digits using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/handwriting_recognition.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "HandwritingRecognition"
   }
 }
