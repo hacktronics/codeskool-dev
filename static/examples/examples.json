@@ -295,5 +295,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": true,
     "urlId": "HandwritingRecognition"
+  },
+  "FingerCountingLed": {
+    "name": "Finger Counting LED",
+    "description": "Count fingers and control LED based on count.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/finger_counting_led.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "FingerCountingLed"
   }
 }
