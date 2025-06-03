@@ -306,5 +306,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": true,
     "urlId": "FingerCountingLed"
+  },
+  "SmartTrashCan": {
+    "name": "Smart Trash Can",
+    "description": "Open trash can lid using IR obstacle sensor and servo motor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/smart_trash_can.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "SmartTrashCan"
   }
 }
