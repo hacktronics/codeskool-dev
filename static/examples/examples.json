@@ -317,5 +317,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "SmartTrashCan"
+  },
+  "ESP32BoomBarrierGate": {
+    "name": "Boom Barrier Gate",
+    "description": "Control a boom barrier gate using ESP32 and ultrasonic sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ESP32BoomBarrierGate"
   }
 }
