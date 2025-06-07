@@ -328,5 +328,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "ESP32BoomBarrierGate"
+  },
+  "AIPoweredGarageGate": {
+    "name": "AI Powered Garage Gate",
+    "description": "Control garage gate using teachable machine AI.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ai_powered_garage_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "AIPoweredGarageGate"
   }
 }
