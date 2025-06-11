@@ -339,5 +339,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "AIPoweredGarageGate"
+  },
+  "PasswordProtectedGate": {
+    "name": "Password Protected Gate",
+    "description": "Control a gate using password protection.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/password_protected_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "PasswordProtectedGate"
   }
 }
