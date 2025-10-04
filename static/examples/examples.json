@@ -350,5 +350,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "PasswordProtectedGate"
+  },
+  "TrafficViolation": {
+    "name": "Traffic Violation",
+    "description": "Detect vehicles jumping red light signal using an IR sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/traffic_violation.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "TrafficViolation"
   }
 }
