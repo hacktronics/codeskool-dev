@@ -361,5 +361,16 @@
     "insetIconURL": "arduino",
     "isMemberOnly": true,
     "urlId": "TrafficViolation"
+  },
+  "PomodoroTimer": {
+    "name": "Pomodoro Timer",
+    "description": "A Pomodoro timer to boost productivity.",
+    "tags": [
+      "hardware"
+    ],
+    "img": "/static/examples/thumbnails/pomodoro_timer.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "PomodoroTimer"
   }
 }
