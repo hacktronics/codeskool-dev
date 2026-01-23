@@ -372,5 +372,29 @@
     "insetIconURL": "hardware",
     "isMemberOnly": true,
     "urlId": "PomodoroTimer"
+  },
+  "PlantWateringBD": {
+    "name": "Automatic Plant Watering",
+    "description": "Automated plant watering system with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/plant_watering_bd.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "PlantWateringBD"
+  },
+  "ButtonControlledTrafficLight": {
+    "name": "Button Controlled Traffic Light",
+    "description": "Control traffic light using button with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/button_controlled_traffic_light.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "ButtonControlledTrafficLight"
   }
 }
