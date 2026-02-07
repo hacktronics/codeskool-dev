@@ -1,0 +1,400 @@
+{
+  "nlp": {
+    "name": "NLP: Q&A",
+    "description": "Answer questions based on a given text using tensorflow NLP model.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/nlp.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "nlp"
+  },
+  "OllamaToolCall": {
+    "name": "Ollama Tool Call",
+    "description": "AI agents that can use real time data using the Ollama tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ollama_tool_call.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "OllamaToolCall"
+  },
+  "BouncingBall": {
+    "name": "Bouncing Ball",
+    "description": "A bouncing ball animation based on physics game engine.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/bouncing_ball.jpg",
+    "insetIconURL": "games",
+    "isMemberOnly": true,
+    "urlId": "BouncingBall"
+  },
+  "QRCode": {
+    "name": "QR Code",
+    "description": "Detect and decode QR codes in an image.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/qr_code.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "QRCode"
+  },
+  "OCR": {
+    "name": "OCR",
+    "description": "Optical character recognition (OCR) using Tesseract.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ocr.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "OCR"
+  },
+  "FaceMatching": {
+    "name": "Face Matching",
+    "description": "Match faces similarity in two images.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/face_matching.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "FaceMatching"
+  },
+  "ObjectDetection": {
+    "name": "Object Detection",
+    "description": "Detect objects in an image using machine learning.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/object_detection.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "ObjectDetection"
+  },
+  "OpenAIToolCall": {
+    "name": "OpenAI Tool Call",
+    "description": "AI agents that can use real time data using the OpenAI tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/openai_tool_call.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "OpenAIToolCall"
+  },
+  "BarChart": {
+    "name": "Bar Chart",
+    "description": "Create a bar chart from a given data set.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/bar_chart.jpg",
+    "insetIconURL": "scratch",
+    "isMemberOnly": true,
+    "urlId": "BarChart"
+  },
+  "CustomSpeechCommands": {
+    "name": "Custom Speech Commands",
+    "description": "Create custom speech commands using TensorFlow.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/custom_speech_commands.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "CustomSpeechCommands"
+  },
+  "Cloudinary": {
+    "name": "Cloudinary",
+    "description": "Upload images to Cloudinary and get the URL.",
+    "tags": [
+      "internet"
+    ],
+    "img": "/static/examples/thumbnails/cloudinary.jpg",
+    "insetIconURL": "internet",
+    "isMemberOnly": true,
+    "urlId": "Cloudinary"
+  },
+  "BearTrackingOpenCV": {
+    "name": "Bear Tracking OpenCV",
+    "description": "Track bears in a image using OpenCV.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/bear_tracking_opencv.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "BearTrackingOpenCV"
+  },
+  "TeachableMachines": {
+    "name": "Teachable Machines",
+    "description": "Train a model to recognize images using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/teachable_machines.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "TeachableMachines"
+  },
+  "Florence2": {
+    "name": "Florence2",
+    "description": "Vision tasks using foundation model that uses prompt-based approach.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/florence2.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "Florence2"
+  },
+  "MinecraftFarming": {
+    "name": "Minecraft Farming",
+    "description": "Automate farming in Minecraft using Agents.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/minecraft_farming.jpg",
+    "insetIconURL": "games",
+    "isMemberOnly": true,
+    "urlId": "MinecraftFarming"
+  },
+  "LEDBlink": {
+    "name": "LED Blink",
+    "description": "Blink an LED using Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/led_blink.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "LEDBlink"
+  },
+  "NeoPixelTrafficLight": {
+    "name": "NeoPixel Traffic Light",
+    "description": "Control a traffic light using NeoPixels and Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/neo_pixel_traffic_light.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "NeoPixelTrafficLight"
+  },
+  "AutomaticGate": {
+    "name": "Automatic Gate",
+    "description": "Automatic gate control with servo and ultrasonic sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/automatic_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "AutomaticGate"
+  },
+  "TempDisplay": {
+    "name": "Temperature Display",
+    "description": "Display temperature using DHT11 sensor and TM1637 display.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/temp_display.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "TempDisplay"
+  },
+  "MarioRotaryEncoder": {
+    "name": "Mario Game",
+    "description": "Control Mario's movement using a rotary encoder.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/mario_rotary_encoder.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "MarioRotaryEncoder"
+  },
+  "DigitalLocker": {
+    "name": "Digital Locker",
+    "description": "Simulate a digital locker using a keypad and 16x2 LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/digital_locker.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "DigitalLocker"
+  },
+  "Calculator": {
+    "name": "Calculator",
+    "description": "Simple calculator using membrane keypad and I2C lcd.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/calculator.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "Calculator"
+  },
+  "IkeaPM2.5": {
+    "name": "IKEA PM2.5 Sensor",
+    "description": "Monitor PM2.5 levels using ENS160 air quality sensor and Neopixel led.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ikea_pm_2.5.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "IkeaPM2.5"
+  },
+  "ReverseParking": {
+    "name": "Reverse Parking",
+    "description": "Reverse parking assistance using ultrasonic sensor and buzzer.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/reverse_parking.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ReverseParking"
+  },
+  "ArduinoBlinkLed": {
+    "name": "Arduino Blink LED",
+    "description": "Blink an LED using Arduino Code.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/arduino_blink_led.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ArduinoBlinkLed"
+  },
+  "Python101": {
+    "name": "Python 101",
+    "description": "Your first Python program using Scratch.",
+    "tags": [
+      "python"
+    ],
+    "img": "/static/examples/thumbnails/python_101.jpg",
+    "insetIconURL": "python",
+    "isMemberOnly": true,
+    "urlId": "Python101"
+  },
+  "HandwritingRecognition": {
+    "name": "Handwriting Recognition",
+    "description": "Recognize handwritten digits using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/handwriting_recognition.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "HandwritingRecognition"
+  },
+  "FingerCountingLed": {
+    "name": "Finger Counting LED",
+    "description": "Count fingers and control LED based on count.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/finger_counting_led.jpg",
+    "insetIconURL": "ai",
+    "isMemberOnly": true,
+    "urlId": "FingerCountingLed"
+  },
+  "SmartTrashCan": {
+    "name": "Smart Trash Can",
+    "description": "Open trash can lid using IR obstacle sensor and servo motor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/smart_trash_can.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "SmartTrashCan"
+  },
+  "ESP32BoomBarrierGate": {
+    "name": "Boom Barrier Gate",
+    "description": "Control a boom barrier gate using ESP32 and ultrasonic sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "ESP32BoomBarrierGate"
+  },
+  "AIPoweredGarageGate": {
+    "name": "AI Powered Garage Gate",
+    "description": "Control garage gate using teachable machine AI.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ai_powered_garage_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "AIPoweredGarageGate"
+  },
+  "PasswordProtectedGate": {
+    "name": "Password Protected Gate",
+    "description": "Control a gate using password protection.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/password_protected_gate.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "PasswordProtectedGate"
+  },
+  "TrafficViolation": {
+    "name": "Traffic Violation",
+    "description": "Detect vehicles jumping red light signal using an IR sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/traffic_violation.jpg",
+    "insetIconURL": "arduino",
+    "isMemberOnly": true,
+    "urlId": "TrafficViolation"
+  },
+  "PomodoroTimer": {
+    "name": "Pomodoro Timer",
+    "description": "A Pomodoro timer to boost productivity.",
+    "tags": [
+      "hardware"
+    ],
+    "img": "/static/examples/thumbnails/pomodoro_timer.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "PomodoroTimer"
+  },
+  "PlantWateringBD": {
+    "name": "Automatic Plant Watering",
+    "description": "Automated plant watering system with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/plant_watering_bd.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "PlantWateringBD"
+  },
+  "ButtonControlledTrafficLight": {
+    "name": "Button Controlled Traffic Light",
+    "description": "Control traffic light using button with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/button_controlled_traffic_light.jpg",
+    "insetIconURL": "hardware",
+    "isMemberOnly": true,
+    "urlId": "ButtonControlledTrafficLight"
+  }
+}
