@@ -162,7 +162,7 @@
 
       async function openSpriteNotebook(name, savedContent) {
         var app = window.jupyterapp;
-        if (!app || !app.commands) {
+        if (!app || !app.commands || !app.commands.hasCommand('docmanager:open')) {
           pendingNotebook = { name: name, content: savedContent || null };
           return;
         }
@@ -269,7 +269,7 @@
       // Wait for app ready, then flush pending commands
       var appCheck = setInterval(function() {
         var app = window.jupyterapp;
-        if (!app || !app.commands) return;
+        if (!app || !app.commands || !app.commands.hasCommand('docmanager:open')) return;
         clearInterval(appCheck);
         // Clear stale notebooks from previous project before anything else
         clearAllNotebooks().then(function() {
