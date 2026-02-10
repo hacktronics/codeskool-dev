@@ -1,0 +1,306 @@
+<!DOCTYPE html><html><head><title>CodeSkool Notebook</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="manifest" href="../manifest.webmanifest"><link id="jupyter-lite-main" rel="preload" href="../build/lab/bundle.js?_=dba8133" main="index" as="script"><script id="jupyter-config-data" type="application/json" data-jupyter-lite-root="..">{
+        "federated_extensions": [
+          {
+            "name": "@jupyterlite/pyodide-kernel-extension",
+            "load": "static/remoteEntry.a117bd216cefa0b341fe.js"
+          }
+        ],
+        "litePluginSettings": {
+          "@jupyterlite/pyodide-kernel-extension:kernel": {
+            "pyodideUrl": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"
+          }
+        },
+        "defaultKernelName": "python",
+        "exposeAppInBrowser": true
+      }</script><script>(async function () {
+        const { pathname, origin, search, hash } = window.location;
+        if (pathname.match(/(index.html|\/?)$/) == null) {
+          window.location.href = `${origin}${pathname}/${search}${hash}`;
+          return;
+        }
+        await import('../config-utils.js?_=dba8133');
+      }.call(this));</script><style>body { margin: 0; padding: 0; background: #fff; }</style><style id="codeskool-theme">/* ===== HIDE ALL JUPYTERLAB CHROME ===== */
+      #jp-menu-panel, .lm-MenuBar, .lm-Menu,
+      .jp-StatusBar, .lm-DockPanel-tabBar,
+      #jupyterlab-splash, .jp-SpinnerContent,
+      .jp-SideBar, .lm-TabBar,
+      #jp-top-panel, #jp-bottom-panel, .jp-Toolbar:not(.jp-cell-toolbar),
+      .jp-NotebookPanel-toolbar,
+      .jp-NotebookPanel > .jp-Toolbar,
+      .jp-Notebook-footer,
+      .jp-NotebookTrustedStatus,
+      .jp-KernelStatus,
+      .jp-Notebook-ExecutionIndicator,
+      #jupyterlite-loading-indicator {
+        display: none !important;
+        height: 0 !important;
+        min-height: 0 !important;
+        visibility: hidden !important;
+      }
+
+      /* ===== LAYOUT ===== */
+      body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; overflow: hidden; }
+      .jp-LabShell, .jp-NotebookPanel, .jp-Notebook { background: #fff !important; border: none !important; outline: none !important; box-shadow: none !important; }
+      #jp-left-stack, #jp-right-stack, .jp-SideBar.lm-TabBar, .p-TabBar.jp-SideBar {
+        display: none !important; width: 0 !important; min-width: 0 !important;
+      }
+      #jp-main-content-panel { left: 0 !important; top: 0 !important; width: -webkit-fill-available !important; }
+      #jp-main-vsplit-panel { left: 0 !important; top: 0 !important; width: -webkit-fill-available !important; }
+      .lm-DockPanel { left: 0 !important; top: 0 !important; width: -webkit-fill-available !important; }
+      .jp-MainAreaWidget, .jp-NotebookPanel, .lm-BoxPanel-child, .lm-SplitPanel-child {
+        left: 0 !important; top: 0 !important; width: -webkit-fill-available !important;
+      }
+      [aria-label="main content area"], [aria-label="main area content"] {
+        left: 0 !important; top: 0 !important; width: -webkit-fill-available !important;
+      }
+
+      /* ===== CELLS ===== */
+      .jp-Cell { background: #fff; margin: 2px 0; border: none; }
+      .jp-Cell.jp-mod-active { border: none; box-shadow: none; }
+      .jp-InputArea-prompt, .jp-OutputArea-prompt { color: #999 !important; background: none !important; font-size: 11px !important; }
+      .jp-Cell .jp-InputArea-editor { border: none; border-radius: 0; margin: 0; }
+      .jp-Cell.jp-mod-active .jp-InputArea-editor { border: none; }
+      .jp-OutputArea { background: none; border: none; margin: 0; padding: 0; }
+      .jp-OutputArea-child { padding: 4px 8px; }
+      .jp-cell-toolbar {
+        display: flex !important; visibility: visible !important;
+        height: auto !important; min-height: auto !important;
+        background: transparent !important; border: none !important; box-shadow: none !important;
+      }
+
+      /* Scrollbar - auto-hide, only show when needed */
+      * { scrollbar-width: thin; scrollbar-color: transparent transparent; }
+      *:hover { scrollbar-color: #ddd transparent; }
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; }
+      *:hover::-webkit-scrollbar-thumb { background: #ddd; }
+
+      .jp-Notebook { padding-bottom: 0 !important; }
+      .jp-Notebook.jp-mod-scrollPastEnd > .jp-WindowedPanel-outer::after { min-height: 0 !important; display: none !important; }
+
+      /* Hide launcher (shown when no ?path= is given) */
+      .jp-Launcher { display: none !important; }</style></head><body class="jp-ThemedContainer" data-notebook="lab"><noscript>JavaScript is required.</noscript><script>(function() {
+      'use strict';
+
+      // Auto-dismiss kernel selection dialog
+      var dialogWatch = new MutationObserver(function() {
+        var dlg = document.querySelector('.jp-Dialog');
+        if (!dlg) return;
+        var btns = dlg.querySelectorAll('button');
+        for (var i = 0; i < btns.length; i++) {
+          var t = btns[i].textContent.toLowerCase();
+          if (t.indexOf('start') > -1 && t.indexOf('python') > -1) { btns[i].click(); dialogWatch.disconnect(); return; }
+        }
+        var sel = dlg.querySelector('select');
+        if (sel) {
+          for (var j = 0; j < sel.options.length; j++) {
+            if (sel.options[j].text.toLowerCase().indexOf('python') > -1) {
+              sel.selectedIndex = j; sel.dispatchEvent(new Event('change')); break;
+            }
+          }
+        }
+        setTimeout(function() {
+          var acc = dlg.querySelector('.jp-mod-accept');
+          if (acc) { acc.click(); dialogWatch.disconnect(); }
+        }, 300);
+      });
+      dialogWatch.observe(document.body, { childList: true, subtree: true });
+      setTimeout(function() { dialogWatch.disconnect(); }, 30000);
+
+      // postMessage command bridge
+      var cmds = {
+        'run-all': 'notebook:run-all-cells',
+        'run-cell': 'notebook:run-cell-and-select-next',
+        'restart': 'notebook:restart-kernel',
+        'restart-run-all': 'notebook:restart-run-all',
+        'clear': 'notebook:clear-all-cell-outputs',
+        'add-cell': 'notebook:insert-cell-below',
+        'delete-cell': 'notebook:delete-cell',
+        'move-cell-up': 'notebook:move-cell-up',
+        'move-cell-down': 'notebook:move-cell-down',
+        'undo': 'notebook:undo-cell-action',
+        'redo': 'notebook:redo-cell-action',
+        'cell-type-code': 'notebook:change-cell-to-code',
+        'cell-type-markdown': 'notebook:change-cell-to-markdown'
+      };
+      var pendingCmds = [];
+      var pendingNotebook = null;
+
+      function execCmd(type) {
+        var app = window.jupyterapp;
+        var cmd = cmds[type];
+        if (!cmd) return;
+        if (!app || !app.commands || !app.commands.hasCommand(cmd)) {
+          pendingCmds.push(type);
+          return;
+        }
+        app.commands.execute(cmd).then(function() {
+          if (window.parent !== window) {
+            window.parent.postMessage({ type: type + '-done' }, '*');
+          }
+        });
+      }
+
+      // ── Per-sprite notebook switching ──
+      async function clearAllNotebooks() {
+        var app = window.jupyterapp;
+        if (!app || !app.serviceManager) return;
+        var contents = app.serviceManager.contents;
+        try {
+          var dir = await contents.get('');
+          if (dir.content) {
+            for (var i = 0; i < dir.content.length; i++) {
+              var item = dir.content[i];
+              if (item.type === 'notebook') {
+                await contents.delete(item.path);
+              }
+            }
+          }
+        } catch (e) { /* ignore */ }
+      }
+
+      async function openSpriteNotebook(name, savedContent) {
+        var app = window.jupyterapp;
+        if (!app || !app.commands) {
+          pendingNotebook = { name: name, content: savedContent || null };
+          return;
+        }
+        var path = name + '.ipynb';
+        var contents = app.serviceManager.contents;
+        var exists = false;
+        try {
+          await contents.get(path);
+          exists = true;
+        } catch (e) { /* doesn't exist */ }
+        if (!exists) {
+          // Use saved content from sb3 if available, otherwise default template
+          var nbContent;
+          if (savedContent) {
+            nbContent = typeof savedContent === 'string' ? JSON.parse(savedContent) : savedContent;
+          } else {
+            var isStage = name === 'Stage';
+            var defaultSource = isStage
+              ? 'from codeskool import Stage\n\nstage = Stage()'
+              : 'from codeskool import Sprite\n\nsprite = Sprite()';
+            nbContent = {
+              metadata: {
+                kernelspec: { name: 'python', display_name: 'Python (Pyodide)' },
+                language_info: { name: 'python' }
+              },
+              nbformat: 4,
+              nbformat_minor: 5,
+              cells: [{
+                cell_type: 'code',
+                source: defaultSource,
+                metadata: {},
+                outputs: [],
+                execution_count: null
+              }]
+            };
+          }
+          await contents.save(path, {
+            type: 'notebook',
+            format: 'json',
+            content: nbContent
+          });
+        }
+        await app.commands.execute('docmanager:open', { path: path });
+      }
+
+      async function getNotebookContent(name) {
+        var app = window.jupyterapp;
+        if (!app || !app.serviceManager) return;
+        var path = name + '.ipynb';
+        var contents = app.serviceManager.contents;
+        try {
+          // Save any unsaved changes first
+          await app.commands.execute('docmanager:save');
+        } catch (e) { /* ignore — no active doc */ }
+        try {
+          var model = await contents.get(path, { content: true });
+          if (model && model.content) {
+            var nbJson = typeof model.content === 'string'
+              ? model.content
+              : JSON.stringify(model.content);
+            window.parent.postMessage({
+              type: 'notebook-content',
+              name: name,
+              content: nbJson
+            }, '*');
+          }
+        } catch (e) { /* notebook doesn't exist — nothing to save */ }
+      }
+
+      async function setNotebookContent(name, content) {
+        var app = window.jupyterapp;
+        if (!app || !app.serviceManager) return;
+        var path = name + '.ipynb';
+        var contents = app.serviceManager.contents;
+        var nbObj = typeof content === 'string' ? JSON.parse(content) : content;
+        await contents.save(path, {
+          type: 'notebook',
+          format: 'json',
+          content: nbObj
+        });
+      }
+
+      window.addEventListener('message', function(e) {
+        var data = e.data;
+        if (!data) return;
+        // Notebook control commands (run-all, restart, etc.)
+        if (data.type && cmds[data.type]) execCmd(data.type);
+        // Per-sprite notebook switching (with optional saved content from sb3)
+        if (data.type === 'open-notebook' && data.name) openSpriteNotebook(data.name, data.content);
+        // Clear all cached notebooks (sent on project load)
+        if (data.type === 'reset-notebooks') clearAllNotebooks();
+        // Save notebook content for a sprite
+        if (data.type === 'get-notebook-content' && data.name) getNotebookContent(data.name);
+        // Restore notebook content for a sprite
+        if (data.type === 'set-notebook-content' && data.name && data.content) {
+          setNotebookContent(data.name, data.content);
+        }
+        // CodeSkool responses from parent → relay back to SW
+        if (data.type === 'codeskool-response' && data.id) {
+          csSwChannel.postMessage({ id: data.id, result: data.result || '' });
+        }
+      });
+
+      // Wait for app ready, then flush pending commands
+      var appCheck = setInterval(function() {
+        var app = window.jupyterapp;
+        if (!app || !app.commands) return;
+        clearInterval(appCheck);
+        // Clear stale notebooks from previous project before anything else
+        clearAllNotebooks().then(function() {
+          if (window.parent !== window) {
+            window.parent.postMessage({ type: 'ready' }, '*');
+          }
+          while (pendingCmds.length) execCmd(pendingCmds.shift());
+          if (pendingNotebook) {
+            var pn = pendingNotebook;
+            pendingNotebook = null;
+            if (typeof pn === 'string') {
+              openSpriteNotebook(pn);
+            } else {
+              openSpriteNotebook(pn.name, pn.content);
+            }
+          }
+        });
+      }, 500);
+
+      // ── CodeSkool relay: SW ↔ main page ↔ parent ──
+      // SW sends commands via BC 'codeskool-sw', we forward to parent.
+      // Parent responds via postMessage, we relay back to SW via BC.
+      var csSwChannel = new BroadcastChannel('codeskool-sw');
+      csSwChannel.onmessage = function(e) {
+        var data = e.data;
+        if (!data || !data._codeskool_relay) return;
+        try {
+          var cmd = JSON.parse(data.cmd);
+          if (cmd._codeskool && window.parent !== window) {
+            window.parent.postMessage(cmd, '*');
+          }
+        } catch (err) { /* ignore */ }
+      };
+    })();</script></body></html>

@@ -1,0 +1,24 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "jupyter-config-data": {
+    "appUrl": "/notebooks",
+    "notebookPage": "notebooks",
+    "faviconUrl": "./favicon.ico",
+    "fullStaticUrl": "../build",
+    "settingsUrl": "../build/schemas",
+    "themesUrl": "./build/themes",
+    "federated_extensions": [
+      {
+        "name": "@jupyterlite/pyodide-kernel-extension",
+        "load": "static/remoteEntry.a117bd216cefa0b341fe.js"
+      }
+    ],
+    "litePluginSettings": {
+      "@jupyterlite/pyodide-kernel-extension:kernel": {
+        "pyodideUrl": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.mjs"
+      }
+    },
+    "fullLabextensionsUrl": "../extensions",
+    "baseUrl": "../"
+  }
+}

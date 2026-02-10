@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CodeSkool Notebook</title><style>* { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; overflow: hidden; }
+    iframe { width: 100%; height: 100%; border: none; display: block; }</style></head><body><iframe id="notebook" src="/static/notebook/lab/index.html?path=code.ipynb"></iframe><script>var notebook = document.getElementById('notebook');
+
+    // Send a command to the notebook iframe
+    function sendCommand(type) {
+      notebook.contentWindow.postMessage({ type: type }, '*');
+    }
+
+    // ── CodeSkool command handlers ──
+    // Each action returns a string that gets displayed in the notebook cell.
+    var handlers = {
+      create:    function(s, p) { return s + ' created'; },
+      move:      function(s, p) { return s + ' moved to (' + p.x + ', ' + p.y + ')'; },
+      turn_right:function(s, p) { return s + ' turned right, now facing ' + p.direction + '°'; },
+      turn_left: function(s, p) { return s + ' turned left, now facing ' + p.direction + '°'; },
+      go_to:     function(s, p) { return s + ' jumped to (' + p.x + ', ' + p.y + ')'; },
+      point_in_direction: function(s, p) { return s + ' pointing ' + p.direction + '°'; },
+      set_x:     function(s, p) { return s + ' x = ' + p.x; },
+      set_y:     function(s, p) { return s + ' y = ' + p.y; },
+      say:       function(s, p) { return s + ': ' + p.message; },
+      think:     function(s, p) { return s + ' thinks: ' + p.message; },
+      show:      function(s, p) { return s + ' visible'; },
+      hide:      function(s, p) { return s + ' hidden'; },
+      set_size:  function(s, p) { return s + ' size = ' + p.size + '%'; },
+      pen_down:  function(s, p) { return s + ' pen down'; },
+      pen_up:    function(s, p) { return s + ' pen up'; },
+      clear:     function(s, p) { return s + ' cleared'; },
+    };
+
+    // Listen for messages from the notebook iframe
+    window.addEventListener('message', function(e) {
+      if (!e.data) return;
+
+      // Notebook ready signal
+      if (e.data.type === 'ready') {
+        console.log('Notebook ready');
+        sendCommand('run-all');
+        return;
+      }
+
+      // Notebook control command done
+      if (e.data.type && e.data.type.endsWith('-done')) {
+        console.log('Notebook command completed:', e.data.type);
+        return;
+      }
+
+      // CodeSkool sprite command from Python
+      if (e.data._codeskool) {
+        var cmd = e.data;
+        var handler = handlers[cmd.action];
+        var result = handler
+          ? handler(cmd.sprite, cmd.params)
+          : cmd.sprite + '.' + cmd.action + '()';
+        console.log('[CodeSkool]', result);
+        // Send response back — this text appears in the notebook cell
+        notebook.contentWindow.postMessage({
+          type: 'codeskool-response',
+          id: cmd.id,
+          result: result
+        }, '*');
+      }
+    });</script></body></html>
