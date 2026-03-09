@@ -50,7 +50,9 @@ def _send(sprite_name, action, params):
         xhr = XMLHttpRequest.new()
         xhr.open("GET", f"/api/codeskool?id={quote(data['id'])}&cmd={quote(cmd)}", False)
         xhr.send(None)
-        return str(xhr.responseText)
+        resp = str(xhr.responseText)
+        _check_incoming_broadcasts(resp)
+        return resp
     except Exception:
         return ""
 
@@ -64,6 +66,84 @@ def _parse_val(resp):
         return data.get('val')
     except (json.JSONDecodeError, KeyError):
         return None
+
+
+# ── Broadcast registry ────────────────────────────────────
+
+_broadcast_handlers = {}   # {"message_name": [handler_fn, ...]}
+_dispatching = False       # reentrancy guard
+_broadcast_queue = []      # queued broadcasts arriving during dispatch
+
+def when_broadcast(message):
+    """Decorator to register a function as a broadcast handler.
+
+    @when_broadcast("start_game")
+    def on_start():
+        print("Game started!")
+    """
+    msg = message.lower()
+    def decorator(fn):
+        _broadcast_handlers.setdefault(msg, []).append(fn)
+        return fn
+    return decorator
+
+def _dispatch_broadcast(message):
+    """Dispatch a broadcast to all registered Python handlers."""
+    global _dispatching
+    if _dispatching:
+        _broadcast_queue.append(message)
+        return
+    _dispatching = True
+    try:
+        for handler in _broadcast_handlers.get(message.lower(), []):
+            handler()
+        # Process any broadcasts that arrived during handler execution
+        while _broadcast_queue:
+            queued = _broadcast_queue.pop(0)
+            for handler in _broadcast_handlers.get(queued.lower(), []):
+                handler()
+    finally:
+        _dispatching = False
+        _broadcast_queue.clear()
+
+def _clear_broadcast_handlers():
+    """Clear all registered broadcast handlers. Called between executions."""
+    _broadcast_handlers.clear()
+    _broadcast_queue.clear()
+
+def _check_incoming_broadcasts(resp):
+    """Check response for Scratch broadcasts and dispatch to Python handlers."""
+    if not resp:
+        return
+    try:
+        data = json.loads(resp)
+        for msg in data.get('_broadcasts', []):
+            _dispatch_broadcast(msg)
+    except (json.JSONDecodeError, KeyError, TypeError):
+        pass
+
+
+def listen():
+    """Keep Python running and listening for Scratch broadcasts.
+
+    Call this at the end of your code after registering @when_broadcast handlers.
+    Press the stop button to end.
+
+    Example::
+
+        @when_broadcast("start_game")
+        def begin():
+            sprite.say("Game started!")
+
+        listen()  # keeps running until stopped
+    """
+    import time
+    try:
+        while True:
+            _send(_sprite_name(), '_poll', {})
+            time.sleep(0.05)
+    except KeyboardInterrupt:
+        pass  # stop button pressed — exit cleanly
 
 
 # ── Sprite class ────────────────────────────────────────────
@@ -352,16 +432,18 @@ class Sprite:
     # ── Events ──────────────────────────────────────────
 
     def broadcast(self, message):
-        """Send a broadcast message to all sprites."""
-        return self._do('event_broadcast', {
+        """Send a broadcast message to all sprites and Python handlers."""
+        self._do('event_broadcast', {
             'BROADCAST_INPUT': {'BROADCAST_OPTION': {'id': message, 'name': message}}
         })
+        _dispatch_broadcast(message)
 
     def broadcast_and_wait(self, message):
         """Send a broadcast message and wait until all listeners finish."""
-        return self._do('event_broadcastandwait', {
+        self._do('event_broadcastandwait', {
             'BROADCAST_INPUT': {'BROADCAST_OPTION': {'id': message, 'name': message}}
         })
+        _dispatch_broadcast(message)
 
     # ── Clone ───────────────────────────────────────────
 
@@ -486,10 +568,11 @@ class Stage:
     # ── Events ───────────────────────────────────────────
 
     def broadcast(self, message):
-        """Send a broadcast message to all sprites."""
-        return self._do('event_broadcast', {
+        """Send a broadcast message to all sprites and Python handlers."""
+        self._do('event_broadcast', {
             'BROADCAST_INPUT': {'BROADCAST_OPTION': {'id': message, 'name': message}}
         })
+        _dispatch_broadcast(message)
 
     def __repr__(self):
         return f"Stage()"
@@ -847,16 +930,22 @@ def get_username():
 
 # Events
 def broadcast_message(message):
-    """Send a broadcast message to all sprites."""
+    """Send a broadcast message to all sprites and Python handlers."""
     _send(_sprite_name(), 'event_broadcast', {
         'BROADCAST_INPUT': {'BROADCAST_OPTION': {'id': message, 'name': message}}
     })
+    _dispatch_broadcast(message)
+
+def broadcast(message):
+    """Send a broadcast message to all sprites and Python handlers."""
+    broadcast_message(message)
 
 def broadcast_and_wait(message):
     """Send a broadcast message and wait until all listeners finish."""
     _send(_sprite_name(), 'event_broadcastandwait', {
         'BROADCAST_INPUT': {'BROADCAST_OPTION': {'id': message, 'name': message}}
     })
+    _dispatch_broadcast(message)
 
 # Pen (standalone)
 def pen_down():
