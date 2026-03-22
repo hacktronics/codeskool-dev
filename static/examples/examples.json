@@ -331,5 +331,23 @@
         "insetIconURL": "3d",
         "isMemberOnly": true,
         "urlId": "RocketLaunch"
+    },
+    "WeatherStation": {
+        "name": "Weather Station",
+        "description": "Display temperature and humidity on LCD using DHT22 sensor.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/weather_station.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "WeatherStation"
+    },
+    "ParkingSensor": {
+        "name": "Parking Sensor",
+        "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/parking_sensor.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "ParkingSensor"
     }
 }
