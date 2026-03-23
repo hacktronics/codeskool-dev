@@ -261,7 +261,7 @@
         "urlId": "SmartTrashCan"
     },
     "ESP32BoomBarrierGate": {
-        "name": "Boom Barrier Gate",
+        "name": "ESP32 Boom Barrier Gate",
         "description": "Control a boom barrier gate using ESP32 and ultrasonic sensor.",
         "tags": ["arduino"],
         "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.jpg",
@@ -349,5 +349,104 @@
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "ParkingSensor"
+    },
+    "TempMonitorOLED": {
+        "name": "Temperature Monitor OLED",
+        "description": "Display temperature and humidity on OLED using DHT22 sensor.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/temp_monitor_oled.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "TempMonitorOLED"
+    },
+    "Thermometer": {
+        "name": "Thermometer",
+        "description": "Read temperature using NTC sensor and display on LCD 16x2.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/thermometer.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "Thermometer"
+    },
+    "DigitalStopwatch": {
+        "name": "Digital Stopwatch",
+        "description": "Stopwatch using TM1637 7-segment display with start and reset buttons.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/digital_stopwatch.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "DigitalStopwatch"
+    },
+    "HCSR04_LCD": {
+        "name": "Ultrasonic Distance Sensor",
+        "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/hcsr04_lcd.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "HCSR04_LCD"
+    },
+    "NTCSensorOLED": {
+        "name": "NTC Temperature Sensor OLED",
+        "description": "Read temperature using NTC sensor and display on OLED screen.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/ntc_sensor_oled.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "NTCSensorOLED"
+    },
+    "StepperMotor": {
+        "name": "Stepper Motor",
+        "description": "Control a 28BYJ-48 stepper motor with ULN2003 driver for precise rotation.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/stepper_motor.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "StepperMotor"
+    },
+    "TrafficLight": {
+        "name": "Traffic Light",
+        "description": "Simulate a traffic light sequence using LEDs and Arduino.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/traffic_light_sim.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "TrafficLight"
+    },
+    "BoomBarrierGate": {
+        "name": "Boom Barrier Gate",
+        "description": "Automatic boom barrier gate using HC-SR04 ultrasonic sensor and servo motor.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/boom_barrier_gate.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "BoomBarrierGate"
+    },
+    "RotaryEncoder": {
+        "name": "Rotary Encoder",
+        "description": "Read rotary encoder rotation and button press, display counter on LCD.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/rotary_encoder.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "RotaryEncoder"
+    },
+    "AnalogJoyStick": {
+        "name": "Analog Joystick",
+        "description": "Read joystick X/Y axes and button, display values on LCD.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/analog_joystick.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "AnalogJoyStick"
+    },
+    "KeypadLocker": {
+        "name": "Keypad Locker",
+        "description": "Password-protected locker using membrane keypad and LCD display.",
+        "tags": ["arduino"],
+        "img": "/static/examples/thumbnails/keypad_locker.png",
+        "insetIconURL": "arduino",
+        "isMemberOnly": true,
+        "urlId": "KeypadLocker"
     }
 }
