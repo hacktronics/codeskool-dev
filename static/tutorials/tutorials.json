@@ -1099,5 +1099,124 @@
             },
             {"deckIds": ["Tell-A-Story", "Animate-A-Character"]}
         ]
+    },
+
+    "blink-led": {
+        "name": "Blink an LED",
+        "description": "Learn to blink an LED using Arduino blocks and the simulator",
+        "tags": ["arduino", "hardware", "beginner", "led"],
+        "category": "arduino",
+        "urlId": "blink-led",
+        "img": "/static/tutorials/thumbnails/blink-led.png",
+        "steps": [
+            {
+                "title": "Open the Board Menu",
+                "image": "/static/tutorials/steps/blinkBoardMenu.png",
+                "narration": {"id": "gui.tutorials.blinkLed.boardMenu", "default": "Click the Board menu in the top menu bar to see board options."}
+            },
+            {
+                "title": "Open Board Manager",
+                "image": "/static/tutorials/steps/blinkBoardManager.png",
+                "narration": {"id": "gui.tutorials.blinkLed.boardManager", "default": "Click Board Manager from the dropdown. This opens the board selection dialog."}
+            },
+            {
+                "title": "Search for UNO",
+                "image": "/static/tutorials/steps/blinkSearchUno.png",
+                "narration": {"id": "gui.tutorials.blinkLed.searchUno", "default": "Type UNO in the search box to find the Arduino Uno board."}
+            },
+            {
+                "title": "Select Arduino Uno",
+                "image": "/static/tutorials/steps/blinkSelectUno.png",
+                "narration": {"id": "gui.tutorials.blinkLed.selectUno", "default": "Click on the Arduino Uno card to select it."}
+            },
+            {
+                "title": "Add the Extension",
+                "image": "/static/tutorials/steps/blinkAddExtension.png",
+                "narration": {"id": "gui.tutorials.blinkLed.addExtension", "default": "Click the Add Extension button to add Arduino blocks to your toolbox. A device connection dialog will appear — you can close it since we will use the simulator."}
+            },
+            {
+                "title": "Switch to Upload Mode",
+                "image": "/static/tutorials/steps/blinkUploadMode.png",
+                "narration": {"id": "gui.tutorials.blinkLed.uploadMode", "default": "Click the Upload toggle at the top to switch to Upload mode. This shows the Code and Simulator tabs on the right side."}
+            },
+            {
+                "title": "Find the Setup Block",
+                "image": "/static/tutorials/steps/blinkSetupVisible.png",
+                "narration": {"id": "gui.tutorials.blinkLed.findSetup", "default": "Click the Arduino category in the toolbox and scroll down to the Code Generation section. You will find the setup and loop block at the bottom."},
+                "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"}
+            },
+            {
+                "title": "Drag the Setup Block",
+                "image": "/static/tutorials/steps/blinkSetupDropped.png",
+                "narration": {"id": "gui.tutorials.blinkLed.dragSetup", "default": "Drag the setup/loop block into the workspace. This is the main block for Arduino programs. Setup runs once when the program starts, and loop runs over and over."},
+                "validate": true
+            },
+            {
+                "title": "Add pinMode to Setup",
+                "image": "/static/tutorials/steps/blinkPinMode.png",
+                "narration": {"id": "gui.tutorials.blinkLed.addPinMode", "default": "Drag a pinMode block into the setup section. Set pin to 13 and mode to OUTPUT. This tells the Arduino that pin 13 will be used to send signals out."},
+                "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+                "validate": true
+            },
+            {
+                "title": "Add digitalWrite HIGH",
+                "image": "/static/tutorials/steps/blinkDwHigh.png",
+                "narration": {"id": "gui.tutorials.blinkLed.dwHigh", "default": "Drag a digitalWrite block into the loop section. Set pin to 13 and value to HIGH. This turns the LED on."},
+                "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+                "validate": true
+            },
+            {
+                "title": "Add a Delay",
+                "image": "/static/tutorials/steps/blinkDelay1.png",
+                "narration": {"id": "gui.tutorials.blinkLed.delay1", "default": "Add a delay block after digitalWrite. Set it to 1000 milliseconds which is 1 second. The LED will stay on for this long."},
+                "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+                "validate": true
+            },
+            {
+                "title": "Add digitalWrite LOW",
+                "image": "/static/tutorials/steps/blinkDwLow.png",
+                "narration": {"id": "gui.tutorials.blinkLed.dwLow", "default": "Add another digitalWrite block. Keep pin 13 but change the value to LOW. This turns the LED off."}
+            },
+            {
+                "title": "Add Another Delay",
+                "image": "/static/tutorials/steps/blinkComplete.png",
+                "narration": {"id": "gui.tutorials.blinkLed.delay2", "default": "Add one more delay block with 1000 milliseconds. Your blink program is now complete! The loop will repeat: LED on, wait, LED off, wait."}
+            },
+            {
+                "title": "Open the Simulator",
+                "image": "/static/tutorials/steps/blinkSimulator.png",
+                "narration": {"id": "gui.tutorials.blinkLed.simulator", "default": "Click the Simulator tab on the right side. The simulator lets you test your code without a real Arduino board."}
+            },
+            {
+                "title": "Add an LED Component",
+                "image": "/static/tutorials/steps/blinkComponentPicker.png",
+                "narration": {"id": "gui.tutorials.blinkLed.addComponent", "default": "Click the plus button at the bottom right to open the component picker. Select LED from the list."}
+            },
+            {
+                "title": "Map LED to Pin 13",
+                "image": "/static/tutorials/steps/blinkPinMapping.png",
+                "narration": {"id": "gui.tutorials.blinkLed.pinMapping", "default": "In the pin mapping dialog, select pin 13 from the dropdown and click Save. This connects the virtual LED to the same pin your code uses."}
+            },
+            {
+                "title": "LED Added to Simulator",
+                "image": "/static/tutorials/steps/blinkLedAdded.png",
+                "narration": {"id": "gui.tutorials.blinkLed.ledAdded", "default": "You can now see the LED component on the simulator board, connected to pin 13."}
+            },
+            {
+                "title": "Click Start",
+                "image": "/static/tutorials/steps/blinkLedAdded.png",
+                "narration": {"id": "gui.tutorials.blinkLed.clickStart", "default": "Click the green Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board."}
+            },
+            {
+                "title": "Wait for Compilation",
+                "image": "/static/tutorials/steps/blinkLedAdded.png",
+                "narration": {"id": "gui.tutorials.blinkLed.compiling", "default": "Wait a few seconds while the program compiles. You will see a loading indicator. Once it finishes, the simulation will start automatically."}
+            },
+            {
+                "title": "Watch the LED Blink!",
+                "image": "/static/tutorials/steps/blinkRunning.png",
+                "narration": {"id": "gui.tutorials.blinkLed.running", "default": "The LED is now blinking on and off every second! Congratulations, you have created your first Arduino program! Try changing the delay values to make it blink faster or slower."}
+            }
+        ]
     }
 }

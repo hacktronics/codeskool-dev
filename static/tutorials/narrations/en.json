@@ -173,5 +173,26 @@
     "gui.tutorials.talking.stepChooseThirdBackdrop": "Add a third backdrop for the final scene of your tale.",
     "gui.tutorials.talking.stepChooseSound": "Go to the Sounds tab and add a music track from the sound library for your characters to dance to.",
     "gui.tutorials.talking.stepDanceMoves": "Add turn and move blocks to make your character dance when the music plays.",
-    "gui.tutorials.talking.stepAskAnswer": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer."
+    "gui.tutorials.talking.stepAskAnswer": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer.",
+
+    "gui.tutorials.blinkLed.boardMenu": "Click the Board menu in the top menu bar to see board options.",
+    "gui.tutorials.blinkLed.boardManager": "Click Board Manager from the dropdown. This opens the board selection dialog.",
+    "gui.tutorials.blinkLed.searchUno": "Type UNO in the search box to find the Arduino Uno board.",
+    "gui.tutorials.blinkLed.selectUno": "Click on the Arduino Uno card to select it.",
+    "gui.tutorials.blinkLed.addExtension": "Click the Add Extension button to add Arduino blocks to your toolbox. A device connection dialog will appear — you can close it since we will use the simulator.",
+    "gui.tutorials.blinkLed.uploadMode": "Click the Upload toggle at the top to switch to Upload mode. This shows the Code and Simulator tabs on the right side.",
+    "gui.tutorials.blinkLed.findSetup": "Click the Arduino category in the toolbox and scroll down to the Code Generation section. You will find the setup and loop block at the bottom.",
+    "gui.tutorials.blinkLed.dragSetup": "Drag the setup/loop block into the workspace. This is the main block for Arduino programs. Setup runs once when the program starts, and loop runs over and over.",
+    "gui.tutorials.blinkLed.addPinMode": "Drag a pinMode block into the setup section. Set pin to 13 and mode to OUTPUT. This tells the Arduino that pin 13 will be used to send signals out.",
+    "gui.tutorials.blinkLed.dwHigh": "Drag a digitalWrite block into the loop section. Set pin to 13 and value to HIGH. This turns the LED on.",
+    "gui.tutorials.blinkLed.delay1": "Add a delay block after digitalWrite. Set it to 1000 milliseconds which is 1 second. The LED will stay on for this long.",
+    "gui.tutorials.blinkLed.dwLow": "Add another digitalWrite block. Keep pin 13 but change the value to LOW. This turns the LED off.",
+    "gui.tutorials.blinkLed.delay2": "Add one more delay block with 1000 milliseconds. Your blink program is now complete! The loop will repeat: LED on, wait, LED off, wait.",
+    "gui.tutorials.blinkLed.simulator": "Click the Simulator tab on the right side. The simulator lets you test your code without a real Arduino board.",
+    "gui.tutorials.blinkLed.addComponent": "Click the plus button at the bottom right to open the component picker. Select LED from the list.",
+    "gui.tutorials.blinkLed.pinMapping": "In the pin mapping dialog, select pin 13 from the dropdown and click Save. This connects the virtual LED to the same pin your code uses.",
+    "gui.tutorials.blinkLed.ledAdded": "You can now see the LED component on the simulator board, connected to pin 13.",
+    "gui.tutorials.blinkLed.clickStart": "Click the green Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board.",
+    "gui.tutorials.blinkLed.compiling": "Wait a few seconds while the program compiles. You will see a loading indicator. Once it finishes, the simulation will start automatically.",
+    "gui.tutorials.blinkLed.running": "The LED is now blinking on and off every second! Congratulations, you have created your first Arduino program! Try changing the delay values to make it blink faster or slower."
 }

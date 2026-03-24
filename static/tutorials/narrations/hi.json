@@ -173,5 +173,20 @@
     "gui.tutorials.talking.stepChooseThirdBackdrop": "अपनी कहानी के आखिरी सीन के लिए तीसरा बैकड्रॉप जोड़ें।",
     "gui.tutorials.talking.stepChooseSound": "साउंड्स टैब पर जाएं और अपने कैरेक्टर्स को डांस कराने के लिए साउंड लाइब्रेरी से एक म्यूज़िक ट्रैक जोड़ें।",
     "gui.tutorials.talking.stepDanceMoves": "म्यूज़िक बजने पर अपने कैरेक्टर को डांस कराने के लिए टर्न और मूव ब्लॉक जोड़ें।",
-    "gui.tutorials.talking.stepAskAnswer": "यूज़र को जवाब टाइप करके आपकी कहानी से बातचीत करने देने के लिए सेंसिंग कैटेगरी से आस्क ब्लॉक का उपयोग करें।"
+    "gui.tutorials.talking.stepAskAnswer": "यूज़र को जवाब टाइप करके आपकी कहानी से बातचीत करने देने के लिए सेंसिंग कैटेगरी से आस्क ब्लॉक का उपयोग करें।",
+
+    "gui.tutorials.blinkLed.boardMenu": "टॉप मेन्यू बार में Board मेन्यू पर क्लिक करें। यहां आप चुनते हैं कि कौन सा Arduino बोर्ड प्रोग्राम करना है।",
+    "gui.tutorials.blinkLed.boardManager": "ड्रॉपडाउन मेन्यू से Board Manager पर क्लिक करें। इससे बोर्ड सिलेक्शन डायलॉग खुलेगा जहां आप अपना Arduino बोर्ड चुन सकते हैं।",
+    "gui.tutorials.blinkLed.selectBoard": "बोर्ड लिस्ट में Arduino UNO R3 ढूंढें और सिलेक्ट करने के लिए इस पर क्लिक करें। इससे आपके टूलबॉक्स में सभी Arduino ब्लॉक्स जुड़ जाएंगे।",
+    "gui.tutorials.blinkLed.arduinoBlocks": "बोर्ड सिलेक्ट करने के बाद, बाईं ओर टूलबॉक्स में नई Arduino कैटेगरीज़ दिखेंगी। digital write, delay जैसे सभी ब्लॉक्स देखने के लिए Arduino कैटेगरी पर क्लिक करें।",
+    "gui.tutorials.blinkLed.setupBlock": "Arduino Setup ब्लॉक को वर्कस्पेस में खींचें। यह Arduino प्रोग्राम का मुख्य ब्लॉक है। इसमें दो सेक्शन हैं: setup प्रोग्राम शुरू होने पर एक बार चलता है, और loop बार-बार चलता रहता है।",
+    "gui.tutorials.blinkLed.digitalWriteHigh": "अपने सेटअप ब्लॉक के लूप सेक्शन में digital write ब्लॉक खींचें। पिन 13 सेट करें और वैल्यू HIGH रखें। इससे LED ऑन होगी। ज़्यादातर Arduino बोर्ड्स पर पिन 13 में बिल्ट-इन LED होती है।",
+    "gui.tutorials.blinkLed.delay1": "digital write ब्लॉक के नीचे delay ब्लॉक जोड़ें। इसे 1000 मिलीसेकंड सेट करें, यानी 1 सेकंड। अगला ब्लॉक चलने से पहले LED इतनी देर ऑन रहेगी।",
+    "gui.tutorials.blinkLed.digitalWriteLow": "delay के नीचे एक और digital write ब्लॉक जोड़ें। पिन 13 रखें लेकिन वैल्यू LOW करें। इससे LED बंद हो जाएगी। अब आपके पास ऑन, रुको, ऑफ है।",
+    "gui.tutorials.blinkLed.delay2": "एक और delay ब्लॉक 1000 मिलीसेकंड के साथ जोड़ें। LED बंद रहने के दौरान यह पॉज़ बनाता है। चूंकि यह लूप के अंदर है, पूरा सीक्वेंस दोहराता रहेगा: ऑन, रुको, ऑफ, रुको, और इसी तरह।",
+    "gui.tutorials.blinkLed.uploadMode": "स्क्रीन के ऊपर Upload टैब पर क्लिक करें। यहां आप अपने ब्लॉक्स से जनरेट हुआ Arduino C कोड देख सकते हैं। यही कोड Arduino बोर्ड पर चलेगा।",
+    "gui.tutorials.blinkLed.generatedCode": "यहां आप अपने ब्लॉक्स से जनरेट हुआ Arduino C कोड देख सकते हैं। इसमें setup फंक्शन और loop फंक्शन है, digital write और delay कॉल्स के साथ। यही कोड आप Arduino IDE में लिखते।",
+    "gui.tutorials.blinkLed.simulator": "स्क्रीन के दाईं ओर Simulator टैब पर क्लिक करें। सिम्युलेटर आपको असली Arduino बोर्ड कनेक्ट किए बिना अपना कोड टेस्ट करने देता है।",
+    "gui.tutorials.blinkLed.addLed": "सिम्युलेटर में Add Component बटन पर क्लिक करें। कंपोनेंट लिस्ट से LED चुनें। अपने कोड से मैच करने के लिए इसे पिन 13 पर मैप करें। सिम्युलेटर बोर्ड पर LED दिखेगी।",
+    "gui.tutorials.blinkLed.runSimulation": "अपना कोड कंपाइल और रन करने के लिए सिम्युलेटर में Play बटन पर क्लिक करें। LED को हर सेकंड ऑन और ऑफ होते देखें! बधाई हो, आपने अपना पहला Arduino प्रोग्राम बना लिया है! delay वैल्यू बदलकर ब्लिंकिंग तेज़ या धीमी कर सकते हैं।"
 }
