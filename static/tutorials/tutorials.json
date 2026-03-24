@@ -1,0 +1,1103 @@
+{
+    "getting-started": {
+        "name": "Getting Started",
+        "description": "Learn to make the cat move and talk",
+        "tags": ["help", "stuck", "how", "can", "say"],
+        "category": "gettingStarted",
+        "urlId": "getStarted",
+        "img": "/static/tutorials/thumbnails/getting-started.jpg",
+        "steps": [
+            {"video": "intro-move-sayhello"},
+            {
+                "title": "Add a move block",
+                "image": "/static/tutorials/steps/intro-move.gif",
+                "narration": {"id": "gui.tutorials.gettingStarted.addMoveBlock", "default": "Drag the move 10 steps block from the Motion category into the workspace."},
+                "highlightBlock": {"category": "motion", "blockType": "motion_movesteps"},
+                "validate": true
+            },
+            {
+                "title": "Add a say block",
+                "image": "/static/tutorials/steps/intro-say.gif",
+                "narration": {"id": "gui.tutorials.gettingStarted.addSayBlock", "default": "Now drag the say hello for 2 seconds block from the Looks category and snap it below the move block."},
+                "highlightBlock": {"category": "looks", "blockType": "looks_sayforsecs"},
+                "validate": true
+            },
+            {
+                "title": "Click the green flag to start",
+                "image": "/static/tutorials/steps/intro-flag.gif",
+                "narration": {"id": "gui.tutorials.gettingStarted.addGreenFlag", "default": "Finally, drag the when green flag clicked block from Events and place it on top of your blocks. Then click the green flag to run your project!"},
+                "highlightBlock": {"category": "events", "blockType": "event_whenflagclicked"},
+                "validate": true,
+                "expectedSequence": ["event_whenflagclicked", "motion_movesteps", "looks_sayforsecs"]
+            },
+            {"deckIds": ["add-a-backdrop", "add-sprite"]}
+        ]
+    },
+
+    "getting-started-asl": {
+        "name": "Getting Started - ASL",
+        "description": "Getting started with Scratch using American Sign Language",
+        "tags": ["help", "stuck", "how", "can", "say", "asl", "deaf", "accessible", "hear"],
+        "category": "gettingStarted",
+        "urlId": "getting-started-ASL",
+        "img": "/static/tutorials/thumbnails/getting-started-asl.png",
+        "steps": [
+            {"video": "intro-getting-started-ASL"},
+            {"deckIds": ["add-a-backdrop", "add-sprite"]}
+        ]
+    },
+
+    "add-sprite": {
+        "name": "Add a Sprite",
+        "description": "Learn how to add a new sprite",
+        "tags": ["art", "games", "stories", "character"],
+        "category": "gettingStarted",
+        "urlId": "add-a-sprite",
+        "img": "/static/tutorials/thumbnails/add-sprite.jpg",
+        "steps": [
+            {
+                "title": "Add a Sprite",
+                "image": "/static/tutorials/steps/addSprite.gif",
+                "narration": {"id": "gui.tutorials.addSprite.step1", "default": "To add a new sprite, click the Choose a Sprite button at the bottom right of the screen. Pick any sprite you like!"}
+            },
+            {"deckIds": ["add-a-backdrop", "switch-costume"]}
+        ]
+    },
+
+    "add-a-backdrop": {
+        "name": "Add a Backdrop",
+        "description": "Learn how to add a backdrop",
+        "tags": ["art", "games", "stories", "background"],
+        "category": "gettingStarted",
+        "urlId": "add-a-backdrop",
+        "img": "/static/tutorials/thumbnails/add-backdrop.jpg",
+        "steps": [
+            {"video": "add-a-backdrop"},
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/addBackdrop.png",
+                "narration": {"id": "gui.tutorials.addBackdrop.step1", "default": "Click the Choose a Backdrop button at the bottom right of the screen to add a new backdrop to your project."}
+            },
+            {"deckIds": ["change-size", "switch-costume"]}
+        ]
+    },
+
+    "switch-costume": {
+        "name": "Animate a Sprite",
+        "description": "Learn how to animate a sprite by switching costumes",
+        "tags": ["animation", "art", "games", "stories", "paint", "edit", "change", "character", "sprite"],
+        "category": "gettingStarted",
+        "urlId": "animate-a-sprite",
+        "img": "/static/tutorials/thumbnails/animate-sprite.jpg",
+        "steps": [
+            {"video": "switch-costume"},
+            {
+                "title": "Animate a Sprite",
+                "image": "/static/tutorials/steps/switchCostumes.png",
+                "narration": {"id": "gui.tutorials.switchCostume.step1", "default": "Use the switch costume block inside a forever loop to animate your sprite. Each costume is like a frame of animation!"}
+            },
+            {"deckIds": ["imagine", "add-effects"]}
+        ]
+    },
+
+    "move-around-with-arrow-keys": {
+        "name": "Use Arrow Keys",
+        "description": "Learn how to move a sprite with arrow keys",
+        "tags": ["games", "keyboard"],
+        "category": "basics",
+        "urlId": "arrow-keys",
+        "img": "/static/tutorials/thumbnails/move-arrow-keys.jpg",
+        "steps": [
+            {"video": "move-around-with-arrow-keys"},
+            {
+                "title": "Move Left and Right",
+                "image": "/static/tutorials/steps/moveArrowKeysLeftRight.png",
+                "narration": {"id": "gui.tutorials.moveArrowKeys.stepLeftRight", "default": "Use when key pressed blocks for the left and right arrow keys. Add change x blocks to move the sprite left and right."}
+            },
+            {
+                "title": "Move Up and Down",
+                "image": "/static/tutorials/steps/moveArrowKeysUpDown.png",
+                "narration": {"id": "gui.tutorials.moveArrowKeys.stepUpDown", "default": "Now add when key pressed blocks for the up and down arrow keys. Use change y blocks to move the sprite up and down."}
+            },
+            {"deckIds": ["make-it-fly", "switch-costume"]}
+        ]
+    },
+
+    "change-size": {
+        "name": "Change Size",
+        "description": "Learn how to change the size of a sprite",
+        "tags": ["art", "animation", "scale"],
+        "category": "basics",
+        "urlId": "change-size",
+        "img": "/static/tutorials/thumbnails/change-size.jpg",
+        "steps": [
+            {"video": "change-size"},
+            {
+                "title": "Change Size",
+                "image": "/static/tutorials/steps/changeSize.png",
+                "narration": {"id": "gui.tutorials.changeSize.step1", "default": "Use the change size block to make your sprite grow or shrink. Put it in a forever loop to keep changing!"}
+            },
+            {"deckIds": ["glide-around", "spin-video"]}
+        ]
+    },
+
+    "glide-around": {
+        "name": "Glide Around",
+        "description": "Learn how to make a sprite glide around the stage",
+        "tags": ["animation", "stories", "music", "instrument", "play", "song", "band"],
+        "category": "basics",
+        "urlId": "glide-around",
+        "img": "/static/tutorials/thumbnails/glide-around.jpg",
+        "steps": [
+            {"video": "glide-around"},
+            {
+                "title": "Glide Around",
+                "image": "/static/tutorials/steps/glideAroundBackAndForth.png",
+                "narration": {"id": "gui.tutorials.glideAround.stepBackAndForth", "default": "Use the glide block to make your sprite move smoothly back and forth across the stage."}
+            },
+            {
+                "title": "Glide to a Point",
+                "image": "/static/tutorials/steps/glideAroundPoint.png",
+                "narration": {"id": "gui.tutorials.glideAround.stepPoint", "default": "Use the glide to x y block to make your sprite glide to a specific point on the stage."}
+            },
+            {"deckIds": ["Tell-A-Story", "switch-costume"]}
+        ]
+    },
+
+    "spin-video": {
+        "name": "Make It Spin",
+        "description": "Learn how to make a sprite spin",
+        "tags": ["animation", "rotate", "rotation"],
+        "category": "basics",
+        "urlId": "make-it-spin",
+        "img": "/static/tutorials/thumbnails/spin.jpg",
+        "steps": [
+            {"video": "spin-video"},
+            {
+                "title": "Turn",
+                "image": "/static/tutorials/steps/spinTurn.png",
+                "narration": {"id": "gui.tutorials.spin.stepTurn", "default": "Use the turn block inside a forever loop to make your sprite spin continuously."}
+            },
+            {
+                "title": "Set Direction",
+                "image": "/static/tutorials/steps/spinPointInDirection.png",
+                "narration": {"id": "gui.tutorials.spin.stepPointInDirection", "default": "Use the point in direction block to set which way your sprite faces before spinning."}
+            },
+            {"deckIds": ["add-a-backdrop", "switch-costume"]}
+        ]
+    },
+
+    "record-a-sound": {
+        "name": "Record a Sound",
+        "description": "Learn how to record your own sounds",
+        "tags": ["music", "games", "stories"],
+        "category": "basics",
+        "urlId": "record-a-sound",
+        "img": "/static/tutorials/thumbnails/record-a-sound.jpg",
+        "steps": [
+            {"video": "record-a-sound"},
+            {
+                "title": "Click on the Sounds Tab",
+                "image": "/static/tutorials/steps/recordASoundSoundsTab.png",
+                "narration": {"id": "gui.tutorials.recordASound.stepSoundsTab", "default": "Click on the Sounds tab at the top of the screen to open the sound editor."}
+            },
+            {
+                "title": "Click Record",
+                "image": "/static/tutorials/steps/recordASoundClickRecord.png",
+                "narration": {"id": "gui.tutorials.recordASound.stepClickRecord", "default": "Click the Record button to start recording a new sound."}
+            },
+            {
+                "title": "Press the Record Button",
+                "image": "/static/tutorials/steps/recordASoundPressRecordButton.png",
+                "narration": {"id": "gui.tutorials.recordASound.stepPressRecordButton", "default": "Press the record button and speak into your microphone to record your sound."}
+            },
+            {
+                "title": "Choose Your Sound",
+                "image": "/static/tutorials/steps/recordASoundChooseSound.png",
+                "narration": {"id": "gui.tutorials.recordASound.stepChooseSound", "default": "After recording, you can trim and edit your sound. Press Save to keep it."}
+            },
+            {
+                "title": "Play Your Sound",
+                "image": "/static/tutorials/steps/recordASoundPlayYourSound.png",
+                "narration": {"id": "gui.tutorials.recordASound.stepPlayYourSound", "default": "Now use the play sound block to play your recorded sound in your project!"}
+            },
+            {"deckIds": ["Make-Music", "switch-costume"]}
+        ]
+    },
+
+    "hide-and-show": {
+        "name": "Hide and Show",
+        "description": "Learn how to hide and show sprites",
+        "tags": ["stories", "appear", "disappear"],
+        "category": "basics",
+        "urlId": "hide",
+        "img": "/static/tutorials/thumbnails/hide-and-show.jpg",
+        "steps": [
+            {"video": "hide-and-show"},
+            {
+                "title": "Hide and Show",
+                "image": "/static/tutorials/steps/hideAndShow.png",
+                "narration": {"id": "gui.tutorials.hideAndShow.step1", "default": "Use the hide and show blocks to make your sprite disappear and reappear. Add a wait block in between for a timed effect!"}
+            },
+            {"deckIds": ["add-a-backdrop", "switch-costume"]}
+        ]
+    },
+
+    "animate-a-name": {
+        "name": "Animate a Name",
+        "description": "Make letters spin, grow, and change color",
+        "tags": ["animation", "art", "spin", "grow"],
+        "category": "prompts",
+        "urlId": "name",
+        "img": "/static/tutorials/thumbnails/animate-a-name.jpg",
+        "steps": [
+            {"video": "animate-a-name"},
+            {
+                "title": "Pick a Letter Sprite",
+                "image": "/static/tutorials/steps/namePickLetter.gif",
+                "narration": {"id": "gui.tutorials.animateAName.stepPickLetter", "default": "Click the Choose a Sprite button and pick a letter sprite to start spelling out a name."}
+            },
+            {
+                "title": "Play a Sound When Clicked",
+                "image": "/static/tutorials/steps/namePlaySound.png",
+                "narration": {"id": "gui.tutorials.animateAName.stepPlaySound", "default": "Add a when this sprite clicked block and a play sound block so the letter plays a sound when you click it."}
+            },
+            {
+                "title": "Pick Another Letter Sprite",
+                "image": "/static/tutorials/steps/namePickLetter2.gif",
+                "narration": {"id": "gui.tutorials.animateAName.stepPickLetter2", "default": "Choose another letter sprite to add the next letter of your name."}
+            },
+            {
+                "title": "Change color",
+                "image": "/static/tutorials/steps/nameChangeColor.png",
+                "narration": {"id": "gui.tutorials.animateAName.stepChangeColor", "default": "Add a change color effect block to make this letter change color when clicked."}
+            },
+            {
+                "title": "Pick Another Letter Sprite & Make It Spin",
+                "image": "/static/tutorials/steps/nameSpin.png",
+                "narration": {"id": "gui.tutorials.animateAName.stepSpin", "default": "Pick another letter and add a turn block inside a forever loop to make it spin."}
+            },
+            {
+                "title": "Pick Another Letter Sprite & Make It Grow",
+                "image": "/static/tutorials/steps/nameGrow.png",
+                "narration": {"id": "gui.tutorials.animateAName.stepGrow", "default": "Pick one more letter and add a change size block to make it grow when clicked."}
+            },
+            {"deckIds": ["add-a-backdrop", "glide-around"]}
+        ]
+    },
+
+    "Animate-A-Character": {
+        "name": "Animate A Character",
+        "description": "Add a backdrop, sprite, sound, and movement to create an animated character",
+        "tags": ["animation", "character"],
+        "category": "prompts",
+        "urlId": "animate-a-character",
+        "img": "/static/tutorials/thumbnails/animate-a-character.jpg",
+        "steps": [
+            {"video": "s228u3g5u9"},
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/animateCharPickBackdrop.gif",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepPickBackdrop", "default": "Click the Choose a Backdrop button and pick a backdrop for your scene."}
+            },
+            {
+                "title": "Add a Sprite",
+                "image": "/static/tutorials/steps/animateCharPickSprite.gif",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepPickSprite", "default": "Click the Choose a Sprite button and pick a character for your animation."}
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/animateCharSaySomething.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepSaySomething", "default": "Add a say block to make your character say something when the green flag is clicked."}
+            },
+            {
+                "title": "Add Sound",
+                "image": "/static/tutorials/steps/animateCharAddSound.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepAddSound", "default": "Add a play sound block to give your character a sound effect."}
+            },
+            {
+                "title": "Animate Talking",
+                "image": "/static/tutorials/steps/animateCharTalk.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepTalk", "default": "Use the switch costume block to animate your character talking by switching between costumes."}
+            },
+            {
+                "title": "Move Using Arrow Keys",
+                "image": "/static/tutorials/steps/animateCharMove.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepMove", "default": "Add when key pressed blocks with change x blocks so your character can move left and right with the arrow keys."}
+            },
+            {
+                "title": "Jump",
+                "image": "/static/tutorials/steps/animateCharJump.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepJump", "default": "Use change y blocks to make your character jump up and come back down."}
+            },
+            {
+                "title": "Change Color",
+                "image": "/static/tutorials/steps/animateCharChangeColor.png",
+                "narration": {"id": "gui.tutorials.animateACharacter.stepChangeColor", "default": "Add a change color effect block to make your character change colors."}
+            },
+            {"deckIds": ["code-cartoon", "Tell-A-Story"]}
+        ]
+    },
+
+    "Tell-A-Story": {
+        "name": "Create A Story",
+        "description": "Create a story with characters, dialogue, and scenes",
+        "tags": ["story", "narrative", "dialogue"],
+        "category": "prompts",
+        "urlId": "tell-a-story",
+        "img": "/static/tutorials/thumbnails/tell-a-story.jpg",
+        "steps": [
+            {"video": "stah7jjorp"},
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/storyPickBackdrop.gif",
+                "narration": {"id": "gui.tutorials.tellAStory.stepPickBackdrop", "default": "Click the Choose a Backdrop button and pick a backdrop for your story scene."}
+            },
+            {
+                "title": "Add a Character",
+                "image": "/static/tutorials/steps/storyPickSprite.gif",
+                "narration": {"id": "gui.tutorials.tellAStory.stepPickSprite", "default": "Click the Choose a Sprite button and pick a character for your story."}
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/storySaySomething.png",
+                "narration": {"id": "gui.tutorials.tellAStory.stepSaySomething", "default": "Add a say block to make your character say something as part of the story."}
+            },
+            {
+                "title": "Add Another Character",
+                "image": "/static/tutorials/steps/storyPickSprite2.gif",
+                "narration": {"id": "gui.tutorials.tellAStory.stepPickSprite2", "default": "Add another character sprite so two characters can have a conversation."}
+            },
+            {
+                "title": "Flip Direction",
+                "image": "/static/tutorials/steps/storyFlip.gif",
+                "narration": {"id": "gui.tutorials.tellAStory.stepFlip", "default": "Flip the direction of the second character so the two characters face each other."}
+            },
+            {
+                "title": "Have A Conversation",
+                "image": "/static/tutorials/steps/storyConversation.png",
+                "narration": {"id": "gui.tutorials.tellAStory.stepConversation", "default": "Use say and wait blocks on both characters with different timing to create a conversation."}
+            },
+            {
+                "title": "Add Another Backdrop",
+                "image": "/static/tutorials/steps/storyPickBackdrop2.gif",
+                "narration": {"id": "gui.tutorials.tellAStory.stepPickBackdrop2", "default": "Add another backdrop for a new scene in your story."}
+            },
+            {
+                "title": "Switch Backdrops",
+                "image": "/static/tutorials/steps/storySwitchBackdrop.png",
+                "narration": {"id": "gui.tutorials.tellAStory.stepSwitchBackdrop", "default": "Use the switch backdrop block to change scenes in your story."}
+            },
+            {
+                "title": "Hide a Character",
+                "image": "/static/tutorials/steps/storyHideCharacter.png",
+                "narration": {"id": "gui.tutorials.tellAStory.stepHideCharacter", "default": "Use the hide block to make a character disappear when the scene changes."}
+            },
+            {
+                "title": "Show a Character",
+                "image": "/static/tutorials/steps/storyShowCharacter.png",
+                "narration": {"id": "gui.tutorials.tellAStory.stepShowCharacter", "default": "Use the show block to make a character appear in the new scene."}
+            },
+            {"deckIds": ["say-it-out-loud", "record-a-sound"]}
+        ]
+    },
+
+    "say-it-out-loud": {
+        "name": "Create Animations That Talk",
+        "description": "Use the Text to Speech extension to make characters speak out loud",
+        "tags": ["text", "speech", "voice", "talk"],
+        "category": "prompts",
+        "urlId": "animations-that-talk",
+        "img": "/static/tutorials/thumbnails/text-to-speech.jpg",
+        "steps": [
+            {"video": "k54n8uwcty"},
+            {
+                "title": "Add the Text to Speech blocks",
+                "image": "/static/tutorials/steps/speechAddExtension.gif",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepAddExtension", "default": "Click the Add Extension button at the bottom left and choose the Text to Speech extension to add talking blocks."}
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/speechSaySomething.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepSaySomething", "default": "Drag the speak block into the workspace and type what you want your character to say out loud."}
+            },
+            {
+                "title": "Set a Voice",
+                "image": "/static/tutorials/steps/speechSetVoice.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepSetVoice", "default": "Use the set voice block to choose a different voice for your character."}
+            },
+            {
+                "title": "Move Around",
+                "image": "/static/tutorials/steps/speechMoveAround.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepMoveAround", "default": "Add motion blocks to make your character move while it talks."}
+            },
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/speechAddBackdrop.gif",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepAddBackdrop", "default": "Click the Choose a Backdrop button and pick a backdrop for your talking animation."}
+            },
+            {
+                "title": "Add Another Character",
+                "image": "/static/tutorials/steps/speechAddSprite.gif",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepAddSprite", "default": "Add another sprite to create a conversation between two characters."}
+            },
+            {
+                "title": "Perform a Song",
+                "image": "/static/tutorials/steps/speechSong.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepSong", "default": "Use the speak block with different words and set voice blocks to make your character sing a song."}
+            },
+            {
+                "title": "Change Color",
+                "image": "/static/tutorials/steps/speechChangeColor.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepChangeColor", "default": "Add a change color effect block to make your character change color while speaking."}
+            },
+            {
+                "title": "Spin Around",
+                "image": "/static/tutorials/steps/speechSpin.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepSpin", "default": "Add a turn block to make your character spin around while it talks."}
+            },
+            {
+                "title": "Grow and Shrink",
+                "image": "/static/tutorials/steps/speechGrowShrink.png",
+                "narration": {"id": "gui.tutorials.sayItOutLoud.stepGrowShrink", "default": "Use the change size block to make your character grow and shrink while speaking."}
+            },
+            {"deckIds": ["animate-a-name", "talking"]}
+        ]
+    },
+
+    "imagine": {
+        "name": "Imagine a World",
+        "description": "Create an interactive world with multiple characters and backdrops",
+        "tags": ["imagine"],
+        "category": "prompts",
+        "urlId": "imagine",
+        "img": "/static/tutorials/thumbnails/imagine.jpg",
+        "steps": [
+            {"video": "imagine"},
+            {
+                "title": "Type What You Want to Say",
+                "image": "/static/tutorials/steps/imagineTypeWhatYouWant.png",
+                "narration": {"id": "gui.tutorials.imagine.stepTypeWhatYouWant", "default": "Click on the say block and type what you want your character to say."}
+            },
+            {
+                "title": "Click the Green Flag to Start",
+                "image": "/static/tutorials/steps/imagineClickGreenFlag.png",
+                "narration": {"id": "gui.tutorials.imagine.stepClickGreenFlag", "default": "Click the green flag to see your character say the message you typed."}
+            },
+            {
+                "title": "Choose Any Backdrop",
+                "image": "/static/tutorials/steps/imagineChooseBackdrop.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChooseBackdrop", "default": "Click the Choose a Backdrop button and pick any backdrop to set the scene for your world."}
+            },
+            {
+                "title": "Choose Any Sprite",
+                "image": "/static/tutorials/steps/imagineChooseSprite.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChooseSprite", "default": "Click the Choose a Sprite button and pick any sprite to add to your world."}
+            },
+            {
+                "title": "Press the Space Key to Glide",
+                "image": "/static/tutorials/steps/imagineFlyAround.png",
+                "narration": {"id": "gui.tutorials.imagine.stepFlyAround", "default": "Add a when space key pressed block with a glide block to make your sprite fly around when you press space."}
+            },
+            {
+                "title": "Choose Another Sprite",
+                "image": "/static/tutorials/steps/imagineChooseAnotherSprite.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChooseAnotherSprite", "default": "Add another sprite to your world to make it more interesting."}
+            },
+            {
+                "title": "Move Left-Right",
+                "image": "/static/tutorials/steps/imagineLeftRight.png",
+                "narration": {"id": "gui.tutorials.imagine.stepLeftRight", "default": "Use the change x block with when key pressed to move this sprite left and right."}
+            },
+            {
+                "title": "Move Up-Down",
+                "image": "/static/tutorials/steps/imagineUpDown.png",
+                "narration": {"id": "gui.tutorials.imagine.stepUpDown", "default": "Use the change y block with when key pressed to move this sprite up and down."}
+            },
+            {
+                "title": "Change Costumes",
+                "image": "/static/tutorials/steps/imagineChangeCostumes.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChangeCostumes", "default": "Add a next costume block to make your sprite animate by switching between costumes."}
+            },
+            {
+                "title": "Glide to a Point",
+                "image": "/static/tutorials/steps/imagineGlideToPoint.png",
+                "narration": {"id": "gui.tutorials.imagine.stepGlideToPoint", "default": "Use the glide to x y block to make your sprite glide to a specific location."}
+            },
+            {
+                "title": "Grow and Shrink",
+                "image": "/static/tutorials/steps/imagineGrowShrink.png",
+                "narration": {"id": "gui.tutorials.imagine.stepGrowShrink", "default": "Use the change size block to make your sprite grow and shrink."}
+            },
+            {
+                "title": "Choose Another Backdrop",
+                "image": "/static/tutorials/steps/imagineChooseAnotherBackdrop.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChooseAnotherBackdrop", "default": "Add another backdrop to create a new scene in your world."}
+            },
+            {
+                "title": "Switch Backdrops",
+                "image": "/static/tutorials/steps/imagineSwitchBackdrops.png",
+                "narration": {"id": "gui.tutorials.imagine.stepSwitchBackdrops", "default": "Use the switch backdrop block to change between different scenes."}
+            },
+            {
+                "title": "Add a Sound",
+                "image": "/static/tutorials/steps/imagineRecordASound.gif",
+                "narration": {"id": "gui.tutorials.imagine.stepRecordASound", "default": "Click the Sounds tab and add or record a sound to play in your world."}
+            },
+            {
+                "title": "Choose Your Sound",
+                "image": "/static/tutorials/steps/imagineChooseSound.png",
+                "narration": {"id": "gui.tutorials.imagine.stepChooseSound", "default": "Choose a sound from the library and add a play sound block to your code."}
+            },
+            {"deckIds": ["hide-and-show", "Chase-Game"]}
+        ]
+    },
+
+    "add-effects": {
+        "name": "Add Effects",
+        "description": "Add visual effects like color, fisheye, and more",
+        "tags": ["animation", "art", "games", "stories", "8-bit", "brightness", "ghost", "transparency", "opacity", "fx", "color", "fisheye", "whirl", "twist", "pixelate", "mosaic", "8bit"],
+        "category": "intermediate",
+        "urlId": "add-effects",
+        "img": "/static/tutorials/thumbnails/add-effects.jpg",
+        "steps": [
+            {"video": "add-effects"},
+            {
+                "title": "Add Effects",
+                "image": "/static/tutorials/steps/addEffects.png",
+                "narration": {"id": "gui.tutorials.addEffects.step1", "default": "Use the change effect block to add visual effects like color, fisheye, whirl, pixelate, mosaic, brightness, and ghost to your sprite."}
+            },
+            {"deckIds": ["add-a-backdrop", "code-cartoon"]}
+        ]
+    },
+
+    "make-it-fly": {
+        "name": "Make it Fly",
+        "description": "Create a flying game with scoring and scenery",
+        "tags": ["game", "fly", "how", "can", "animation"],
+        "category": "intermediate",
+        "urlId": "make-it-fly",
+        "img": "/static/tutorials/thumbnails/make-it-fly.jpg",
+        "steps": [
+            {"video": "zbtdx2dem9"},
+            {
+                "title": "Choose a Sky Background",
+                "image": "/static/tutorials/steps/flyChooseBackdrop.gif",
+                "narration": {"id": "gui.tutorials.makeItFly.stepChooseBackdrop", "default": "Click the Choose a Backdrop button and pick a sky background for your flying game."}
+            },
+            {
+                "title": "Choose a Character",
+                "image": "/static/tutorials/steps/flyChooseCharacter.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepChooseCharacter", "default": "Choose a character sprite that will fly around the screen."}
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/flySaySomething.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepSaySomething", "default": "Add a say block to make your flying character say something when the game starts."}
+            },
+            {
+                "title": "Move With Arrow Keys",
+                "image": "/static/tutorials/steps/flyMoveArrows.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepMoveArrows", "default": "Add when key pressed blocks with change x and change y blocks to control your character with arrow keys."}
+            },
+            {
+                "title": "Choose an Object to Collect",
+                "image": "/static/tutorials/steps/flyChooseObject.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepChooseObject", "default": "Add another sprite that your character will try to collect as it flies around."}
+            },
+            {
+                "title": "Make the Object Move",
+                "image": "/static/tutorials/steps/flyFlyingObject.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepFlyingObject", "default": "Add code to make the collectible object move across the screen and reappear."}
+            },
+            {
+                "title": "Select Your Character",
+                "image": "/static/tutorials/steps/flySelectFlyingSprite.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepSelectFlyingSprite", "default": "Click on your flying character sprite to select it and add more code."}
+            },
+            {
+                "title": "Add a Score",
+                "image": "/static/tutorials/steps/flyAddScore.gif",
+                "narration": {"id": "gui.tutorials.makeItFly.stepAddScore", "default": "Create a variable called score to keep track of how many objects you collect."}
+            },
+            {
+                "title": "Keep Score",
+                "image": "/static/tutorials/steps/flyKeepScore.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepKeepScore", "default": "Add a change score by 1 block inside an if touching block so the score goes up when you collect an object."}
+            },
+            {
+                "title": "Add Scenery",
+                "image": "/static/tutorials/steps/flyAddScenery.gif",
+                "narration": {"id": "gui.tutorials.makeItFly.stepAddScenery", "default": "Add a scenery sprite like clouds or buildings to make the background more interesting."}
+            },
+            {
+                "title": "Move the Scenery",
+                "image": "/static/tutorials/steps/flyMoveScenery.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepMoveScenery", "default": "Add code to make the scenery move across the screen to create a scrolling effect."}
+            },
+            {
+                "title": "Next Costume",
+                "image": "/static/tutorials/steps/flySwitchLooks.png",
+                "narration": {"id": "gui.tutorials.makeItFly.stepSwitchLooks", "default": "Use the next costume block to change the scenery appearance as it moves."}
+            },
+            {"deckIds": ["change-size", "spin-video"]}
+        ]
+    },
+
+    "Make-Music": {
+        "name": "Make Music",
+        "description": "Create a musical instrument project with sounds and beats",
+        "tags": ["music", "sound", "instrument", "play", "song", "band"],
+        "category": "intermediate",
+        "urlId": "music",
+        "img": "/static/tutorials/thumbnails/make-music.jpg",
+        "steps": [
+            {"video": "Make-Music"},
+            {
+                "title": "Pick an Instrument Sprite",
+                "image": "/static/tutorials/steps/musicPickInstrument.gif",
+                "narration": {"id": "gui.tutorials.makeMusic.stepPickInstrument", "default": "Click the Choose a Sprite button and pick an instrument sprite to use in your music project."}
+            },
+            {
+                "title": "Play Sound When Clicked",
+                "image": "/static/tutorials/steps/musicPlaySound.png",
+                "narration": {"id": "gui.tutorials.makeMusic.stepPlaySound", "default": "Add a when this sprite clicked block and a play sound block so the instrument plays when you click it."}
+            },
+            {
+                "title": "Create a Song",
+                "image": "/static/tutorials/steps/musicMakeSong.png",
+                "narration": {"id": "gui.tutorials.makeMusic.stepMakeSong", "default": "Add multiple play sound blocks with different notes to create a song that plays automatically."}
+            },
+            {
+                "title": "Choose a Drum & Make a Beat",
+                "image": "/static/tutorials/steps/musicMakeBeat.png",
+                "narration": {"id": "gui.tutorials.makeMusic.stepMakeBeat", "default": "Pick a drum sprite and add play drum blocks to create a beat."}
+            },
+            {
+                "title": "Choose the Microphone Sprite & Surprise Beatbox",
+                "image": "/static/tutorials/steps/musicMakeBeatbox.png",
+                "narration": {"id": "gui.tutorials.makeMusic.stepMakeBeatbox", "default": "Pick the microphone sprite and add random play sound blocks for a surprise beatbox effect."}
+            },
+            {"deckIds": ["add-a-backdrop", "add-sprite"]}
+        ]
+    },
+
+    "pong": {
+        "name": "Pong Game",
+        "description": "Create a classic Pong game with a ball, paddle, and score",
+        "tags": ["pong", "game"],
+        "category": "prompts",
+        "urlId": "pong",
+        "img": "/static/tutorials/thumbnails/pong.jpg",
+        "steps": [
+            {"video": "pong-game"},
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/pongAddBackdrop.png",
+                "narration": {"id": "gui.tutorials.pong.stepAddBackdrop", "default": "Click the Choose a Backdrop button and pick a simple backdrop for your Pong game."}
+            },
+            {
+                "title": "Add a Ball Sprite",
+                "image": "/static/tutorials/steps/pongAddBallSprite.png",
+                "narration": {"id": "gui.tutorials.pong.stepAddBallSprite", "default": "Add a ball sprite that will bounce around the stage."}
+            },
+            {
+                "title": "Bounce Around",
+                "image": "/static/tutorials/steps/pongBounceAround.png",
+                "narration": {"id": "gui.tutorials.pong.stepBounceAround", "default": "Add code to make the ball move and bounce off the edges of the stage."}
+            },
+            {
+                "title": "Add a Paddle",
+                "image": "/static/tutorials/steps/pongAddPaddle.gif",
+                "narration": {"id": "gui.tutorials.pong.stepAddPaddle", "default": "Add a paddle sprite at the bottom of the stage."}
+            },
+            {
+                "title": "Move the Paddle",
+                "image": "/static/tutorials/steps/pongMoveThePaddle.png",
+                "narration": {"id": "gui.tutorials.pong.stepMoveThePaddle", "default": "Add code to make the paddle follow your mouse pointer left and right."}
+            },
+            {
+                "title": "Select the Ball Sprite",
+                "image": "/static/tutorials/steps/pongSelectBallSprite.png",
+                "narration": {"id": "gui.tutorials.pong.stepSelectBallSprite", "default": "Click on the ball sprite to select it and add more code."}
+            },
+            {
+                "title": "Add Code to Bounce the Ball Off the Paddle",
+                "image": "/static/tutorials/steps/pongAddMoreCodeToBall.png",
+                "narration": {"id": "gui.tutorials.pong.stepAddMoreCodeToBall", "default": "Add an if touching paddle block to make the ball bounce off the paddle."}
+            },
+            {
+                "title": "Add a Score",
+                "image": "/static/tutorials/steps/pongAddAScore.gif",
+                "narration": {"id": "gui.tutorials.pong.stepAddAScore", "default": "Create a variable called score to track how many times you hit the ball."}
+            },
+            {
+                "title": "Choose 'Score' from the Menu",
+                "image": "/static/tutorials/steps/pongChooseScoreFromMenu.png",
+                "narration": {"id": "gui.tutorials.pong.stepChooseScoreFromMenu", "default": "Select the score variable from the dropdown menu in the change block."}
+            },
+            {
+                "title": "Insert the 'Change Score' Block",
+                "image": "/static/tutorials/steps/pongInsertChangeScoreBlock.png",
+                "narration": {"id": "gui.tutorials.pong.stepInsertChangeScoreBlock", "default": "Add the change score by 1 block inside the if touching paddle section so the score goes up each time you hit the ball."}
+            },
+            {
+                "title": "Reset Score",
+                "image": "/static/tutorials/steps/pongResetScore.png",
+                "narration": {"id": "gui.tutorials.pong.stepResetScore", "default": "Add a set score to 0 block at the start so the score resets when you begin a new game."}
+            },
+            {
+                "title": "Add the Line Sprite",
+                "image": "/static/tutorials/steps/pongAddLineSprite.gif",
+                "narration": {"id": "gui.tutorials.pong.stepAddLineSprite", "default": "Add a line sprite at the bottom of the stage to mark the game over zone."}
+            },
+            {
+                "title": "Game Over",
+                "image": "/static/tutorials/steps/pongGameOver.png",
+                "narration": {"id": "gui.tutorials.pong.stepGameOver", "default": "Add code to stop the game when the ball touches the line at the bottom."}
+            },
+            {"deckIds": ["add-effects", "Video-Sensing"]}
+        ]
+    },
+
+    "Make-A-Game": {
+        "name": "Make a Clicker Game",
+        "description": "Create a clicker game where you click sprites to score points",
+        "tags": ["games", "click", "clicked", "score"],
+        "category": "prompts",
+        "urlId": "clicker-game",
+        "img": "/static/tutorials/thumbnails/pop-game.jpg",
+        "steps": [
+            {"video": "Make-A-Game"},
+            {
+                "title": "Pick A Sprite",
+                "image": "/static/tutorials/steps/popGamePickSprite.gif",
+                "narration": {"id": "gui.tutorials.makeAGame.stepPickSprite", "default": "Click the Choose a Sprite button and pick a sprite to be your clickable target."}
+            },
+            {
+                "title": "Play Sound When Clicked",
+                "image": "/static/tutorials/steps/popGamePlaySound.png",
+                "narration": {"id": "gui.tutorials.makeAGame.stepPlaySound", "default": "Add a when this sprite clicked block and a play sound block so the sprite makes a sound when you click it."}
+            },
+            {
+                "title": "Create Score Variable",
+                "image": "/static/tutorials/steps/popGameAddScore.gif",
+                "narration": {"id": "gui.tutorials.makeAGame.stepAddScore", "default": "Create a variable called score to track how many times you click the sprite."}
+            },
+            {
+                "title": "When Clicked Increase Score",
+                "image": "/static/tutorials/steps/popGameChangeScore.png",
+                "narration": {"id": "gui.tutorials.makeAGame.stepChangeScore", "default": "Add a change score by 1 block inside the when this sprite clicked section to increase the score each time."}
+            },
+            {
+                "title": "Go to a random position",
+                "image": "/static/tutorials/steps/popGameRandomPosition.png",
+                "narration": {"id": "gui.tutorials.makeAGame.stepRandomPosition", "default": "Add a go to random position block so the sprite moves to a new spot after each click."}
+            },
+            {
+                "title": "Change Color",
+                "image": "/static/tutorials/steps/popGameChangeColor.png",
+                "narration": {"id": "gui.tutorials.makeAGame.stepChangeColor", "default": "Add a change color effect block to make the sprite change color each time it is clicked."}
+            },
+            {
+                "title": "Reset Score",
+                "image": "/static/tutorials/steps/popGameResetScore.png",
+                "narration": {"id": "gui.tutorials.makeAGame.stepResetScore", "default": "Add a set score to 0 block under when green flag clicked so the score resets at the start."}
+            },
+            {"deckIds": ["add-a-backdrop", "move-around-with-arrow-keys"]}
+        ]
+    },
+
+    "Chase-Game": {
+        "name": "Make a Chase Game",
+        "description": "Create a chase game with two sprites and scoring",
+        "tags": ["games", "arrow", "keyboard", "score"],
+        "category": "prompts",
+        "urlId": "chase-game",
+        "img": "/static/tutorials/thumbnails/chase-game.jpg",
+        "steps": [
+            {"video": "Chase-Game"},
+            {
+                "title": "Add a Backdrop",
+                "image": "/static/tutorials/steps/chaseGameAddBackdrop.gif",
+                "narration": {"id": "gui.tutorials.chaseGame.stepAddBackdrop", "default": "Click the Choose a Backdrop button and pick an underwater or outdoor backdrop for your chase game."}
+            },
+            {
+                "title": "Add a Sprite",
+                "image": "/static/tutorials/steps/chaseGameAddSprite1.gif",
+                "narration": {"id": "gui.tutorials.chaseGame.stepAddSprite1", "default": "Add a sprite that you will control to chase after objects."}
+            },
+            {
+                "title": "Move Right & Left With Arrow Keys",
+                "image": "/static/tutorials/steps/chaseGameRightLeft.png",
+                "narration": {"id": "gui.tutorials.chaseGame.stepRightLeft", "default": "Add when key pressed blocks for right and left arrow keys with change x blocks to move the sprite."}
+            },
+            {
+                "title": "Move Up & Down With Arrow Keys",
+                "image": "/static/tutorials/steps/chaseGameUpDown.png",
+                "narration": {"id": "gui.tutorials.chaseGame.stepUpDown", "default": "Add when key pressed blocks for up and down arrow keys with change y blocks to move the sprite."}
+            },
+            {
+                "title": "Add Another Sprite",
+                "image": "/static/tutorials/steps/chaseGameAddSprite2.gif",
+                "narration": {"id": "gui.tutorials.chaseGame.stepAddSprite2", "default": "Add another sprite that will move randomly for your character to chase."}
+            },
+            {
+                "title": "Move Randomly",
+                "image": "/static/tutorials/steps/chaseGameMoveRandomly.png",
+                "narration": {"id": "gui.tutorials.chaseGame.stepMoveRandomly", "default": "Add a glide to random position block inside a forever loop to make this sprite move randomly."}
+            },
+            {
+                "title": "In Octopus Sprite, When Touching Play Sound",
+                "image": "/static/tutorials/steps/chaseGamePlaySound.png",
+                "narration": {"id": "gui.tutorials.chaseGame.stepPlaySound", "default": "Select your character sprite and add an if touching block with a play sound block inside it."}
+            },
+            {
+                "title": "Create Score Variable",
+                "image": "/static/tutorials/steps/chaseGameAddVariable.gif",
+                "narration": {"id": "gui.tutorials.chaseGame.stepAddVariable", "default": "Create a variable called score to track how many times you catch the other sprite."}
+            },
+            {
+                "title": "In Octopus Sprite, When Touching Add Score",
+                "image": "/static/tutorials/steps/chaseGameChangeScore.png",
+                "narration": {"id": "gui.tutorials.chaseGame.stepChangeScore", "default": "Add a change score by 1 block inside the if touching section so the score goes up each time you catch the sprite."}
+            },
+            {"deckIds": ["add-effects", "move-around-with-arrow-keys"]}
+        ]
+    },
+
+    "code-cartoon": {
+        "name": "Code a Cartoon",
+        "description": "Animate characters in a pre-made cartoon project",
+        "tags": ["code-cartoon"],
+        "category": "prompts",
+        "urlId": "code-cartoon",
+        "requiredProjectId": "331474033",
+        "img": "/static/tutorials/thumbnails/code-a-cartoon.jpg",
+        "steps": [
+            {"video": "code-cartoon"},
+            {
+                "title": "Say Something When You Click the Green Flag",
+                "image": "/static/tutorials/steps/codeCartoonSaySomething.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepSaySomething", "default": "Add a when green flag clicked block and a say block to make a character say something when the project starts."}
+            },
+            {
+                "title": "Animate a Character When You Click It",
+                "image": "/static/tutorials/steps/codeCartoonAnimate.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepAnimate", "default": "Add a when this sprite clicked block with switch costume blocks to animate a character when you click on it."}
+            },
+            {
+                "title": "Select a Different Character",
+                "image": "/static/tutorials/steps/codeCartoonSelectDifferentCharacter.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepSelectDifferentCharacter", "default": "Click on a different character sprite in the sprite list to select it."}
+            },
+            {
+                "title": "Use a Minus Sign to Get Smaller",
+                "image": "/static/tutorials/steps/codeCartoonUseMinusSign.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepUseMinusSign", "default": "Use a minus number in the change size block to make a character shrink when clicked."}
+            },
+            {
+                "title": "Make a Character Grow and Shrink",
+                "image": "/static/tutorials/steps/codeCartoonGrowShrink.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepGrowShrink", "default": "Add change size blocks with positive and negative numbers in a loop to make a character grow and shrink."}
+            },
+            {
+                "title": "Select a Different Character",
+                "image": "/static/tutorials/steps/codeCartoonSelectDifferentCharacter2.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepSelectDifferentCharacter2", "default": "Click on another character sprite in the sprite list to add code to it."}
+            },
+            {
+                "title": "Jump Up and Down",
+                "image": "/static/tutorials/steps/codeCartoonJump.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepJump", "default": "Use change y blocks with positive and negative numbers to make the character jump up and come back down."}
+            },
+            {
+                "title": "Click a Character to Change Scenes",
+                "image": "/static/tutorials/steps/codeCartoonChangeScenes.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepChangeScenes", "default": "Add a when this sprite clicked block with a switch backdrop block to change scenes when you click a character."}
+            },
+            {
+                "title": "Glide Around",
+                "image": "/static/tutorials/steps/codeCartoonGlideAround.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepGlideAround", "default": "Add a glide block to make a character glide smoothly across the stage."}
+            },
+            {
+                "title": "Change Costumes",
+                "image": "/static/tutorials/steps/codeCartoonChangeCostumes.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepChangeCostumes", "default": "Use the next costume block in a loop to animate a character by cycling through its costumes."}
+            },
+            {
+                "title": "Choose More Characters to Add to Your Cartoon",
+                "image": "/static/tutorials/steps/codeCartoonChooseMoreCharacters.png",
+                "narration": {"id": "gui.tutorials.codeCartoon.stepChooseMoreCharacters", "default": "Click the Choose a Sprite button to add more characters and keep building your cartoon!"}
+            },
+            {"deckIds": ["Chase-Game", "Tell-A-Story"]}
+        ]
+    },
+
+    "cartoon-network": {
+        "name": "Animate an Adventure Game",
+        "description": "Create an adventure game with characters, collecting, and scoring",
+        "tags": ["cartoon", "network", "adventure"],
+        "category": "prompts",
+        "urlId": "animate-an-adventure-game",
+        "requiredProjectId": "249143200",
+        "img": "/static/tutorials/thumbnails/cartoon-network.jpg",
+        "steps": [
+            {"video": "uz5oz5h9yg"},
+            {
+                "title": "Choose a Character to Show",
+                "image": "/static/tutorials/steps/cnShowCharacter.gif",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepShowCharacter", "default": "Pick a character sprite and add a show block so it appears on screen."}
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/cnSay.png",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepSay", "default": "Add a say block to make your character introduce themselves or give instructions."}
+            },
+            {
+                "title": "Glide Around",
+                "image": "/static/tutorials/steps/cnGlide.png",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepGlide", "default": "Add a glide block to make your character move smoothly across the stage."}
+            },
+            {
+                "title": "Choose an Object to Chase",
+                "image": "/static/tutorials/steps/cnPickSprite.gif",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepPickSprite", "default": "Add another sprite that your character will chase and collect."}
+            },
+            {
+                "title": "Collect Objects",
+                "image": "/static/tutorials/steps/cnCollect.png",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepCollect", "default": "Add code to detect when your character touches the object and collect it."}
+            },
+            {
+                "title": "Make a Score Variable",
+                "image": "/static/tutorials/steps/cnVariable.gif",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepVariable", "default": "Create a variable called score to keep track of how many objects you collect."}
+            },
+            {
+                "title": "Keep Score",
+                "image": "/static/tutorials/steps/cnScore.png",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepScore", "default": "Add a change score by 1 block so the score increases each time you collect an object."}
+            },
+            {
+                "title": "Level Up: Change Backdrop",
+                "image": "/static/tutorials/steps/cnBackdrop.png",
+                "narration": {"id": "gui.tutorials.cartoonNetwork.stepBackdrop", "default": "Add code to switch to a new backdrop when the score reaches a certain number to level up."}
+            },
+            {"video": "6o76f5ivo1"},
+            {"deckIds": ["switch-costume", "add-effects"]}
+        ]
+    },
+
+    "Video-Sensing": {
+        "name": "Video Sensing",
+        "description": "Use your camera to interact with sprites",
+        "tags": ["video", "camera", "sensing"],
+        "category": "intermediate",
+        "urlId": "video-sensing",
+        "img": "/static/tutorials/thumbnails/video-sensing.jpg",
+        "steps": [
+            {"video": "3pd1z110d6"},
+            {
+                "title": "Add Extension",
+                "image": "/static/tutorials/steps/videoAddExtension.gif",
+                "narration": {"id": "gui.tutorials.videoSensing.stepAddExtension", "default": "Click the Add Extension button at the bottom left and choose the Video Sensing extension."}
+            },
+            {
+                "title": "Pet the Cat",
+                "image": "/static/tutorials/steps/videoPet.png",
+                "narration": {"id": "gui.tutorials.videoSensing.stepPet", "default": "Add a when video motion is greater than block to detect when you wave your hand near the cat sprite."}
+            },
+            {
+                "title": "Animate",
+                "image": "/static/tutorials/steps/videoAnimate.png",
+                "narration": {"id": "gui.tutorials.videoSensing.stepAnimate", "default": "Add a next costume block so the sprite animates when it detects video motion."}
+            },
+            {
+                "title": "Pop a Balloon",
+                "image": "/static/tutorials/steps/videoPop.png",
+                "narration": {"id": "gui.tutorials.videoSensing.stepPop", "default": "Add a balloon sprite and use video sensing to pop it when you wave your hand over it."}
+            },
+            {"deckIds": ["Make-Music", "add-effects"]}
+        ]
+    },
+
+    "talking": {
+        "name": "Talking Tales",
+        "description": "Create a multi-scene talking tale with music and dance",
+        "tags": ["talking"],
+        "category": "intermediate",
+        "urlId": "talking",
+        "img": "/static/tutorials/thumbnails/talking.png",
+        "steps": [
+            {"video": "talking"},
+            {
+                "title": "Click to Add the Text-to-Speech Blocks",
+                "image": "/static/tutorials/steps/talesAddExtension.gif",
+                "narration": {"id": "gui.tutorials.talking.stepAddExtension", "default": "Click the Add Extension button and choose the Text to Speech extension to add talking blocks."}
+            },
+            {
+                "title": "Choose a Sprite",
+                "image": "/static/tutorials/steps/talesChooseSprite.png",
+                "narration": {"id": "gui.tutorials.talking.stepChooseSprite", "default": "Click the Choose a Sprite button and pick a character for your tale."}
+            },
+            {
+                "title": "Make a Character Speak",
+                "image": "/static/tutorials/steps/talesSaySomething.png",
+                "narration": {"id": "gui.tutorials.talking.stepSaySomething", "default": "Add a speak block and type what you want the character to say out loud."}
+            },
+            {
+                "title": "Choose a Backdrop",
+                "image": "/static/tutorials/steps/talesChooseBackdrop.png",
+                "narration": {"id": "gui.tutorials.talking.stepChooseBackdrop", "default": "Click the Choose a Backdrop button and pick a backdrop for your first scene."}
+            },
+            {
+                "title": "Click a Character to Go to the Next Backdrop",
+                "image": "/static/tutorials/steps/talesSwitchBackdrop.png",
+                "narration": {"id": "gui.tutorials.talking.stepSwitchBackdrop", "default": "Add a when this sprite clicked block with a next backdrop block to change scenes when you click the character."}
+            },
+            {
+                "title": "Choose Another Sprite",
+                "image": "/static/tutorials/steps/talesChooseAnotherSprite.png",
+                "narration": {"id": "gui.tutorials.talking.stepChooseAnotherSprite", "default": "Add another character sprite to your tale."}
+            },
+            {
+                "title": "Move Around",
+                "image": "/static/tutorials/steps/talesMoveAround.png",
+                "narration": {"id": "gui.tutorials.talking.stepMoveAround", "default": "Add motion blocks to make this character move around the stage."}
+            },
+            {
+                "title": "Choose Another Backdrop",
+                "image": "/static/tutorials/steps/talesChooseAnotherBackdrop.png",
+                "narration": {"id": "gui.tutorials.talking.stepChooseAnotherBackdrop", "default": "Add another backdrop for a new scene in your tale."}
+            },
+            {
+                "title": "Animate Talking",
+                "image": "/static/tutorials/steps/talesAnimateTalking.png",
+                "narration": {"id": "gui.tutorials.talking.stepAnimateTalking", "default": "Use switch costume blocks to animate the character's mouth moving while it speaks."}
+            },
+            {
+                "title": "Choose Another Backdrop",
+                "image": "/static/tutorials/steps/talesChooseThirdBackdrop.png",
+                "narration": {"id": "gui.tutorials.talking.stepChooseThirdBackdrop", "default": "Add a third backdrop for the final scene of your tale."}
+            },
+            {
+                "title": "Choose a Song to Dance To",
+                "image": "/static/tutorials/steps/talesChooseSound.gif",
+                "narration": {"id": "gui.tutorials.talking.stepChooseSound", "default": "Go to the Sounds tab and add a music track from the sound library for your characters to dance to."}
+            },
+            {
+                "title": "Dance Moves",
+                "image": "/static/tutorials/steps/talesDanceMoves.png",
+                "narration": {"id": "gui.tutorials.talking.stepDanceMoves", "default": "Add turn and move blocks to make your character dance when the music plays."}
+            },
+            {
+                "title": "Get the Ask and Answer Blocks from the Sensing Category",
+                "image": "/static/tutorials/steps/talesAskAnswer.png",
+                "narration": {"id": "gui.tutorials.talking.stepAskAnswer", "default": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer."}
+            },
+            {"deckIds": ["Tell-A-Story", "Animate-A-Character"]}
+        ]
+    }
+}
