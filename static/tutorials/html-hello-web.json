@@ -1,0 +1,206 @@
+{
+    "steps": [
+        {
+            "title": "Click Add Extension",
+            "image": "/static/tutorials/steps/htmlHelloExtLibrary.png",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addExtension",
+                "default": "Click the purple Add Extension button at the bottom left of the screen to open the Extension Library."
+            },
+            "highlightUI": "addExtensionButton",
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Filter by Programming",
+            "image": "/static/tutorials/steps/htmlHelloProgFilter.png",
+            "imageFocus": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.progFilter",
+                "default": "Click the Programming tab at the top to filter the extensions. You will see the HTML 5 extension."
+            }
+        },
+        {
+            "title": "Select HTML 5",
+            "image": "/static/tutorials/steps/htmlHelloProgFilter.png",
+            "imageFocus": {
+                "x": 0,
+                "y": 27,
+                "zoom": 1.6
+            },
+            "highlightUI": "extension.html5",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.selectHtml5",
+                "default": "Click the HTML 5 card to add the HTML extension to your project. This gives you all the blocks needed to build web pages."
+            }
+        },
+        {
+            "title": "Switch to Upload Mode",
+            "image": "/static/tutorials/steps/htmlHelloUploadMode.png",
+            "imageFocus": {
+                "x": 87,
+                "y": 0,
+                "zoom": 7.8
+            },
+            "highlightUI": "modeSwitch",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.uploadMode",
+                "default": "Click the Upload toggle at the top right to switch to Upload mode. This shows the HTML and View tabs on the right side."
+            }
+        },
+        {
+            "title": "Select the HTML5 Category",
+            "image": "/static/tutorials/steps/htmlHelloFlyout.png",
+            "imageFocus": {
+                "x": 0,
+                "y": 18,
+                "zoom": 2
+            },
+            "highlightUI": "category.html5",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.category",
+                "default": "Click the HTML5 category in the blocks panel on the left. You will see all the blocks needed to build a web page."
+            }
+        },
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlHelloDragHtml.png",
+            "imageFocus": {
+                "x": 41,
+                "y": 54,
+                "zoom": 5.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.dragHtml",
+                "default": "Find the html block at the top of the HTML5 flyout and drag it into the workspace. Every web page starts with this block."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_html"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlHelloAddHead.png",
+            "imageFocus": {
+                "x": 41,
+                "y": 55,
+                "zoom": 3.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addHead",
+                "default": "Drag the head block and snap it below the html block. The head section holds information about your page like its title."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_head"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add <title> and Set Text",
+            "image": "/static/tutorials/steps/htmlHelloAddTitle.png",
+            "imageFocus": {
+                "x": 37,
+                "y": 54,
+                "zoom": 2.9
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addTitle",
+                "default": "Drag the title block inside the head block. Click the text field and type Hello Web. This text appears in the browser tab."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_title"
+            }
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlHelloAddBody.png",
+            "imageFocus": {
+                "x": 34,
+                "y": 54,
+                "zoom": 2.2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addBody",
+                "default": "Drag the body block and snap it below the head block. Everything visible on your web page goes inside the body."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_body"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlHelloAddH1.png",
+            "imageFocus": {
+                "x": 32,
+                "y": 54,
+                "zoom": 2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addH1",
+                "default": "Drag the heading block inside the body block. Keep the level at 1 for a large heading. Click the text field and type Hello, Web!"
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_heading"
+            }
+        },
+        {
+            "title": "Add a Paragraph",
+            "image": "/static/tutorials/steps/htmlHelloComplete.png",
+            "imageFocus": {
+                "x": 29,
+                "y": 56,
+                "zoom": 1.8
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlHello.addParagraph",
+                "default": "Drag a paragraph block and snap it below the heading inside the body. Click the text field and type This is my first web page!"
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_paragraph"
+            }
+        },
+        {
+            "title": "See the Generated HTML",
+            "image": "/static/tutorials/steps/htmlHelloHTMLTab.png",
+            "imageFocus": {
+                "x": 100,
+                "y": 1,
+                "zoom": 1.9
+            },
+            "highlightUI": "htmlTab",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.htmlTab",
+                "default": "Click the HTML tab on the right panel. You can see the real HTML code that your blocks have generated!"
+            }
+        },
+        {
+            "title": "Preview Your Web Page",
+            "image": "/static/tutorials/steps/htmlHelloViewTab.png",
+            "imageFocus": {
+                "x": 100,
+                "y": 0,
+                "zoom": 2.4
+            },
+            "highlightUI": "viewTab",
+            "narration": {
+                "id": "gui.tutorials.htmlHello.viewTab",
+                "default": "Click the View tab to see your web page rendered in the browser. Congratulations — you have built your first HTML page!"
+            }
+        }
+    ]
+}

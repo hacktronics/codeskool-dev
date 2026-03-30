@@ -5,7 +5,7 @@
         "tags": ["help", "stuck", "how", "can", "say"],
         "category": "gettingStarted",
         "urlId": "getStarted",
-        "img": "/static/tutorials/thumbnails/getting-started.jpg",
+        "img": "/static/tutorials/thumbnails/getting-started.webp",
         "steps": [
             {"video": "intro-move-sayhello"},
             {
@@ -40,7 +40,7 @@
         "tags": ["help", "stuck", "how", "can", "say", "asl", "deaf", "accessible", "hear"],
         "category": "gettingStarted",
         "urlId": "getting-started-ASL",
-        "img": "/static/tutorials/thumbnails/getting-started-asl.png",
+        "img": "/static/tutorials/thumbnails/getting-started-asl.webp",
         "steps": [
             {"video": "intro-getting-started-ASL"},
             {"deckIds": ["add-a-backdrop", "add-sprite"]}
@@ -53,7 +53,7 @@
         "tags": ["art", "games", "stories", "character"],
         "category": "gettingStarted",
         "urlId": "add-a-sprite",
-        "img": "/static/tutorials/thumbnails/add-sprite.jpg",
+        "img": "/static/tutorials/thumbnails/add-sprite.webp",
         "steps": [
             {
                 "title": "Add a Sprite",
@@ -71,7 +71,7 @@
         "tags": ["art", "games", "stories", "background"],
         "category": "gettingStarted",
         "urlId": "add-a-backdrop",
-        "img": "/static/tutorials/thumbnails/add-backdrop.jpg",
+        "img": "/static/tutorials/thumbnails/add-backdrop.webp",
         "steps": [
             {"video": "add-a-backdrop"},
             {
@@ -90,7 +90,7 @@
         "tags": ["animation", "art", "games", "stories", "paint", "edit", "change", "character", "sprite"],
         "category": "gettingStarted",
         "urlId": "animate-a-sprite",
-        "img": "/static/tutorials/thumbnails/animate-sprite.jpg",
+        "img": "/static/tutorials/thumbnails/animate-sprite.webp",
         "steps": [
             {"video": "switch-costume"},
             {
@@ -108,7 +108,7 @@
         "tags": ["games", "keyboard"],
         "category": "basics",
         "urlId": "arrow-keys",
-        "img": "/static/tutorials/thumbnails/move-arrow-keys.jpg",
+        "img": "/static/tutorials/thumbnails/move-arrow-keys.webp",
         "steps": [
             {"video": "move-around-with-arrow-keys"},
             {
@@ -131,7 +131,7 @@
         "tags": ["art", "animation", "scale"],
         "category": "basics",
         "urlId": "change-size",
-        "img": "/static/tutorials/thumbnails/change-size.jpg",
+        "img": "/static/tutorials/thumbnails/change-size.webp",
         "steps": [
             {"video": "change-size"},
             {
@@ -149,7 +149,7 @@
         "tags": ["animation", "stories", "music", "instrument", "play", "song", "band"],
         "category": "basics",
         "urlId": "glide-around",
-        "img": "/static/tutorials/thumbnails/glide-around.jpg",
+        "img": "/static/tutorials/thumbnails/glide-around.webp",
         "steps": [
             {"video": "glide-around"},
             {
@@ -172,7 +172,7 @@
         "tags": ["animation", "rotate", "rotation"],
         "category": "basics",
         "urlId": "make-it-spin",
-        "img": "/static/tutorials/thumbnails/spin.jpg",
+        "img": "/static/tutorials/thumbnails/spin.webp",
         "steps": [
             {"video": "spin-video"},
             {
@@ -195,7 +195,7 @@
         "tags": ["music", "games", "stories"],
         "category": "basics",
         "urlId": "record-a-sound",
-        "img": "/static/tutorials/thumbnails/record-a-sound.jpg",
+        "img": "/static/tutorials/thumbnails/record-a-sound.webp",
         "steps": [
             {"video": "record-a-sound"},
             {
@@ -233,7 +233,7 @@
         "tags": ["stories", "appear", "disappear"],
         "category": "basics",
         "urlId": "hide",
-        "img": "/static/tutorials/thumbnails/hide-and-show.jpg",
+        "img": "/static/tutorials/thumbnails/hide-and-show.webp",
         "steps": [
             {"video": "hide-and-show"},
             {
@@ -251,7 +251,7 @@
         "tags": ["animation", "art", "spin", "grow"],
         "category": "prompts",
         "urlId": "name",
-        "img": "/static/tutorials/thumbnails/animate-a-name.jpg",
+        "img": "/static/tutorials/thumbnails/animate-a-name.webp",
         "steps": [
             {"video": "animate-a-name"},
             {
@@ -294,7 +294,7 @@
         "tags": ["animation", "character"],
         "category": "prompts",
         "urlId": "animate-a-character",
-        "img": "/static/tutorials/thumbnails/animate-a-character.jpg",
+        "img": "/static/tutorials/thumbnails/animate-a-character.webp",
         "steps": [
             {"video": "s228u3g5u9"},
             {
@@ -349,7 +349,7 @@
         "tags": ["story", "narrative", "dialogue"],
         "category": "prompts",
         "urlId": "tell-a-story",
-        "img": "/static/tutorials/thumbnails/tell-a-story.jpg",
+        "img": "/static/tutorials/thumbnails/tell-a-story.webp",
         "steps": [
             {"video": "stah7jjorp"},
             {
@@ -413,7 +413,7 @@
         "tags": ["text", "speech", "voice", "talk"],
         "category": "prompts",
         "urlId": "animations-that-talk",
-        "img": "/static/tutorials/thumbnails/text-to-speech.jpg",
+        "img": "/static/tutorials/thumbnails/text-to-speech.webp",
         "steps": [
             {"video": "k54n8uwcty"},
             {
@@ -477,7 +477,7 @@
         "tags": ["imagine"],
         "category": "prompts",
         "urlId": "imagine",
-        "img": "/static/tutorials/thumbnails/imagine.jpg",
+        "img": "/static/tutorials/thumbnails/imagine.webp",
         "steps": [
             {"video": "imagine"},
             {
@@ -565,7 +565,7 @@
         "tags": ["animation", "art", "games", "stories", "8-bit", "brightness", "ghost", "transparency", "opacity", "fx", "color", "fisheye", "whirl", "twist", "pixelate", "mosaic", "8bit"],
         "category": "intermediate",
         "urlId": "add-effects",
-        "img": "/static/tutorials/thumbnails/add-effects.jpg",
+        "img": "/static/tutorials/thumbnails/add-effects.webp",
         "steps": [
             {"video": "add-effects"},
             {
@@ -583,7 +583,7 @@
         "tags": ["game", "fly", "how", "can", "animation"],
         "category": "intermediate",
         "urlId": "make-it-fly",
-        "img": "/static/tutorials/thumbnails/make-it-fly.jpg",
+        "img": "/static/tutorials/thumbnails/make-it-fly.webp",
         "steps": [
             {"video": "zbtdx2dem9"},
             {
@@ -656,7 +656,7 @@
         "tags": ["music", "sound", "instrument", "play", "song", "band"],
         "category": "intermediate",
         "urlId": "music",
-        "img": "/static/tutorials/thumbnails/make-music.jpg",
+        "img": "/static/tutorials/thumbnails/make-music.webp",
         "steps": [
             {"video": "Make-Music"},
             {
@@ -694,7 +694,7 @@
         "tags": ["pong", "game"],
         "category": "prompts",
         "urlId": "pong",
-        "img": "/static/tutorials/thumbnails/pong.jpg",
+        "img": "/static/tutorials/thumbnails/pong.webp",
         "steps": [
             {"video": "pong-game"},
             {
@@ -773,7 +773,7 @@
         "tags": ["games", "click", "clicked", "score"],
         "category": "prompts",
         "urlId": "clicker-game",
-        "img": "/static/tutorials/thumbnails/pop-game.jpg",
+        "img": "/static/tutorials/thumbnails/pop-game.webp",
         "steps": [
             {"video": "Make-A-Game"},
             {
@@ -821,7 +821,7 @@
         "tags": ["games", "arrow", "keyboard", "score"],
         "category": "prompts",
         "urlId": "chase-game",
-        "img": "/static/tutorials/thumbnails/chase-game.jpg",
+        "img": "/static/tutorials/thumbnails/chase-game.webp",
         "steps": [
             {"video": "Chase-Game"},
             {
@@ -882,7 +882,7 @@
         "category": "prompts",
         "urlId": "code-cartoon",
         "requiredProjectId": "331474033",
-        "img": "/static/tutorials/thumbnails/code-a-cartoon.jpg",
+        "img": "/static/tutorials/thumbnails/code-a-cartoon.webp",
         "steps": [
             {"video": "code-cartoon"},
             {
@@ -951,7 +951,7 @@
         "category": "prompts",
         "urlId": "animate-an-adventure-game",
         "requiredProjectId": "249143200",
-        "img": "/static/tutorials/thumbnails/cartoon-network.jpg",
+        "img": "/static/tutorials/thumbnails/cartoon-network.webp",
         "steps": [
             {"video": "uz5oz5h9yg"},
             {
@@ -1005,7 +1005,7 @@
         "tags": ["video", "camera", "sensing"],
         "category": "intermediate",
         "urlId": "video-sensing",
-        "img": "/static/tutorials/thumbnails/video-sensing.jpg",
+        "img": "/static/tutorials/thumbnails/video-sensing.webp",
         "steps": [
             {"video": "3pd1z110d6"},
             {
@@ -1038,7 +1038,7 @@
         "tags": ["talking"],
         "category": "intermediate",
         "urlId": "talking",
-        "img": "/static/tutorials/thumbnails/talking.png",
+        "img": "/static/tutorials/thumbnails/talking.webp",
         "steps": [
             {"video": "talking"},
             {
@@ -1116,7 +1116,17 @@
         "tags": ["arduino", "hardware", "beginner", "led"],
         "category": "arduino",
         "urlId": "blink-led",
-        "img": "/static/tutorials/thumbnails/blink-led.png",
+        "img": "/static/tutorials/thumbnails/blink-led.webp",
         "stepsFile": "/static/tutorials/blink-led.json"
+    },
+
+    "html-hello-web": {
+        "name": "Hello Web! 🌐",
+        "description": "Build your first web page with HTML blocks",
+        "tags": ["html", "web", "beginner", "hello web"],
+        "category": "html",
+        "urlId": "html-hello-web",
+        "img": "/static/tutorials/thumbnails/html-hello-web.webp",
+        "stepsFile": "/static/tutorials/html-hello-web.json"
     }
 }
