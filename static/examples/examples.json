@@ -3,7 +3,7 @@
         "name": "NLP: Q&A",
         "description": "Answer questions based on a given text using tensorflow NLP model.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/nlp.jpg",
+        "img": "/static/examples/thumbnails/nlp.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "nlp"
@@ -12,7 +12,7 @@
         "name": "Ollama Tool Call",
         "description": "AI agents that can use real time data using the Ollama tool calls.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/ollama_tool_call.jpg",
+        "img": "/static/examples/thumbnails/ollama_tool_call.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "OllamaToolCall"
@@ -21,7 +21,7 @@
         "name": "Bouncing Ball",
         "description": "A bouncing ball animation based on physics game engine.",
         "tags": ["games"],
-        "img": "/static/examples/thumbnails/bouncing_ball.jpg",
+        "img": "/static/examples/thumbnails/bouncing_ball.webp",
         "insetIconURL": "games",
         "isMemberOnly": true,
         "urlId": "BouncingBall"
@@ -30,7 +30,7 @@
         "name": "QR Code",
         "description": "Detect and decode QR codes in an image.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/qr_code.jpg",
+        "img": "/static/examples/thumbnails/qr_code.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "QRCode"
@@ -39,7 +39,7 @@
         "name": "OCR",
         "description": "Optical character recognition (OCR) using Tesseract.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/ocr.jpg",
+        "img": "/static/examples/thumbnails/ocr.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "OCR"
@@ -48,7 +48,7 @@
         "name": "Face Matching",
         "description": "Match faces similarity in two images.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/face_matching.jpg",
+        "img": "/static/examples/thumbnails/face_matching.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "FaceMatching"
@@ -57,7 +57,7 @@
         "name": "Object Detection",
         "description": "Detect objects in an image using machine learning.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/object_detection.jpg",
+        "img": "/static/examples/thumbnails/object_detection.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "ObjectDetection"
@@ -66,7 +66,7 @@
         "name": "OpenAI Tool Call",
         "description": "AI agents that can use real time data using the OpenAI tool calls.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/openai_tool_call.jpg",
+        "img": "/static/examples/thumbnails/openai_tool_call.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "OpenAIToolCall"
@@ -75,7 +75,7 @@
         "name": "Bar Chart",
         "description": "Create a bar chart from a given data set.",
         "tags": ["scratch"],
-        "img": "/static/examples/thumbnails/bar_chart.jpg",
+        "img": "/static/examples/thumbnails/bar_chart.webp",
         "insetIconURL": "scratch",
         "isMemberOnly": true,
         "urlId": "BarChart"
@@ -84,7 +84,7 @@
         "name": "Custom Speech Commands",
         "description": "Create custom speech commands using TensorFlow.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/custom_speech_commands.jpg",
+        "img": "/static/examples/thumbnails/custom_speech_commands.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "CustomSpeechCommands"
@@ -93,7 +93,7 @@
         "name": "Cloudinary",
         "description": "Upload images to Cloudinary and get the URL.",
         "tags": ["internet"],
-        "img": "/static/examples/thumbnails/cloudinary.jpg",
+        "img": "/static/examples/thumbnails/cloudinary.webp",
         "insetIconURL": "internet",
         "isMemberOnly": true,
         "urlId": "Cloudinary"
@@ -102,7 +102,7 @@
         "name": "Bear Tracking OpenCV",
         "description": "Track bears in a image using OpenCV.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/bear_tracking_opencv.jpg",
+        "img": "/static/examples/thumbnails/bear_tracking_opencv.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "BearTrackingOpenCV"
@@ -111,7 +111,7 @@
         "name": "Teachable Machines",
         "description": "Train a model to recognize images using Teachable Machines.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/teachable_machines.jpg",
+        "img": "/static/examples/thumbnails/teachable_machines.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "TeachableMachines"
@@ -120,7 +120,7 @@
         "name": "Florence2",
         "description": "Vision tasks using foundation model that uses prompt-based approach.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/florence2.jpg",
+        "img": "/static/examples/thumbnails/florence2.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "Florence2"
@@ -129,7 +129,7 @@
         "name": "Minecraft Farming",
         "description": "Automate farming in Minecraft using Agents.",
         "tags": ["games"],
-        "img": "/static/examples/thumbnails/minecraft_farming.jpg",
+        "img": "/static/examples/thumbnails/minecraft_farming.webp",
         "insetIconURL": "games",
         "isMemberOnly": true,
         "urlId": "MinecraftFarming"
@@ -138,7 +138,7 @@
         "name": "LED Blink",
         "description": "Blink an LED using Arduino.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/led_blink.jpg",
+        "img": "/static/examples/thumbnails/led_blink.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "LEDBlink"
@@ -147,7 +147,7 @@
         "name": "NeoPixel Traffic Light",
         "description": "Control a traffic light using NeoPixels and Arduino.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/neo_pixel_traffic_light.jpg",
+        "img": "/static/examples/thumbnails/neo_pixel_traffic_light.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "NeoPixelTrafficLight"
@@ -156,7 +156,7 @@
         "name": "Automatic Gate",
         "description": "Automatic gate control with servo and ultrasonic sensor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/automatic_gate.jpg",
+        "img": "/static/examples/thumbnails/automatic_gate.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "AutomaticGate"
@@ -165,7 +165,7 @@
         "name": "Temperature Display",
         "description": "Display temperature using DHT11 sensor and TM1637 display.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/temp_display.jpg",
+        "img": "/static/examples/thumbnails/temp_display.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "TempDisplay"
@@ -174,7 +174,7 @@
         "name": "Mario Game",
         "description": "Control Mario's movement using a rotary encoder.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/mario_rotary_encoder.jpg",
+        "img": "/static/examples/thumbnails/mario_rotary_encoder.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "MarioRotaryEncoder"
@@ -183,7 +183,7 @@
         "name": "Digital Locker",
         "description": "Simulate a digital locker using a keypad and 16x2 LCD.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/digital_locker.jpg",
+        "img": "/static/examples/thumbnails/digital_locker.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "DigitalLocker"
@@ -192,7 +192,7 @@
         "name": "Calculator",
         "description": "Simple calculator using membrane keypad and I2C lcd.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/calculator.jpg",
+        "img": "/static/examples/thumbnails/calculator.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "Calculator"
@@ -201,7 +201,7 @@
         "name": "IKEA PM2.5 Sensor",
         "description": "Monitor PM2.5 levels using ENS160 air quality sensor and Neopixel led.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/ikea_pm_2.5.jpg",
+        "img": "/static/examples/thumbnails/ikea_pm_2.5.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "IkeaPM2.5"
@@ -210,7 +210,7 @@
         "name": "Reverse Parking",
         "description": "Reverse parking assistance using ultrasonic sensor and buzzer.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/reverse_parking.jpg",
+        "img": "/static/examples/thumbnails/reverse_parking.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "ReverseParking"
@@ -219,7 +219,7 @@
         "name": "Arduino Blink LED",
         "description": "Blink an LED using Arduino Code.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/arduino_blink_led.jpg",
+        "img": "/static/examples/thumbnails/arduino_blink_led.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "ArduinoBlinkLed"
@@ -228,7 +228,7 @@
         "name": "Python 101",
         "description": "Your first Python program using Scratch.",
         "tags": ["python"],
-        "img": "/static/examples/thumbnails/python_101.jpg",
+        "img": "/static/examples/thumbnails/python_101.webp",
         "insetIconURL": "python",
         "isMemberOnly": true,
         "urlId": "Python101"
@@ -237,7 +237,7 @@
         "name": "Handwriting Recognition",
         "description": "Recognize handwritten digits using Teachable Machines.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/handwriting_recognition.jpg",
+        "img": "/static/examples/thumbnails/handwriting_recognition.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "HandwritingRecognition"
@@ -246,7 +246,7 @@
         "name": "Finger Counting LED",
         "description": "Count fingers and control LED based on count.",
         "tags": ["ai"],
-        "img": "/static/examples/thumbnails/finger_counting_led.jpg",
+        "img": "/static/examples/thumbnails/finger_counting_led.webp",
         "insetIconURL": "ai",
         "isMemberOnly": true,
         "urlId": "FingerCountingLed"
@@ -255,7 +255,7 @@
         "name": "Smart Trash Can",
         "description": "Open trash can lid using IR obstacle sensor and servo motor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/smart_trash_can.jpg",
+        "img": "/static/examples/thumbnails/smart_trash_can.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "SmartTrashCan"
@@ -264,7 +264,7 @@
         "name": "ESP32 Boom Barrier Gate",
         "description": "Control a boom barrier gate using ESP32 and ultrasonic sensor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.jpg",
+        "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "ESP32BoomBarrierGate"
@@ -273,7 +273,7 @@
         "name": "AI Powered Garage Gate",
         "description": "Control garage gate using teachable machine AI.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/ai_powered_garage_gate.jpg",
+        "img": "/static/examples/thumbnails/ai_powered_garage_gate.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "AIPoweredGarageGate"
@@ -282,7 +282,7 @@
         "name": "Password Protected Gate",
         "description": "Control a gate using password protection.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/password_protected_gate.jpg",
+        "img": "/static/examples/thumbnails/password_protected_gate.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "PasswordProtectedGate"
@@ -291,7 +291,7 @@
         "name": "Traffic Violation",
         "description": "Detect vehicles jumping red light signal using an IR sensor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/traffic_violation.jpg",
+        "img": "/static/examples/thumbnails/traffic_violation.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "TrafficViolation"
@@ -300,7 +300,7 @@
         "name": "Pomodoro Timer",
         "description": "A Pomodoro timer to boost productivity.",
         "tags": ["hardware"],
-        "img": "/static/examples/thumbnails/pomodoro_timer.jpg",
+        "img": "/static/examples/thumbnails/pomodoro_timer.webp",
         "insetIconURL": "hardware",
         "isMemberOnly": true,
         "urlId": "PomodoroTimer"
@@ -309,7 +309,7 @@
         "name": "Automatic Plant Watering",
         "description": "Automated plant watering system with BlockDuino.",
         "tags": ["hardware", "blockDuino"],
-        "img": "/static/examples/thumbnails/plant_watering_bd.jpg",
+        "img": "/static/examples/thumbnails/plant_watering_bd.webp",
         "insetIconURL": "hardware",
         "isMemberOnly": true,
         "urlId": "PlantWateringBD"
@@ -318,7 +318,7 @@
         "name": "Button Controlled Traffic Light",
         "description": "Control traffic light using button with BlockDuino.",
         "tags": ["hardware", "blockDuino"],
-        "img": "/static/examples/thumbnails/button_controlled_traffic_light.jpg",
+        "img": "/static/examples/thumbnails/button_controlled_traffic_light.webp",
         "insetIconURL": "hardware",
         "isMemberOnly": true,
         "urlId": "ButtonControlledTrafficLight"
@@ -327,7 +327,7 @@
         "name": "Rocket Launch",
         "description": "Launch a rocket using 3D blocks.",
         "tags": ["3d"],
-        "img": "/static/examples/thumbnails/rocket_launch.jpg",
+        "img": "/static/examples/thumbnails/rocket_launch.webp",
         "insetIconURL": "3d",
         "isMemberOnly": true,
         "urlId": "RocketLaunch"
@@ -336,7 +336,7 @@
         "name": "Weather Station",
         "description": "Display temperature and humidity on LCD using DHT22 sensor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/weather_station.png",
+        "img": "/static/examples/thumbnails/weather_station.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "WeatherStation"
@@ -345,7 +345,7 @@
         "name": "Parking Sensor",
         "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/parking_sensor.png",
+        "img": "/static/examples/thumbnails/parking_sensor.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "ParkingSensor"
@@ -354,7 +354,7 @@
         "name": "Temperature Monitor OLED",
         "description": "Display temperature and humidity on OLED using DHT22 sensor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/temp_monitor_oled.png",
+        "img": "/static/examples/thumbnails/temp_monitor_oled.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "TempMonitorOLED"
@@ -363,7 +363,7 @@
         "name": "Thermometer",
         "description": "Read temperature using NTC sensor and display on LCD 16x2.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/thermometer.png",
+        "img": "/static/examples/thumbnails/thermometer.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "Thermometer"
@@ -372,7 +372,7 @@
         "name": "Digital Stopwatch",
         "description": "Stopwatch using TM1637 7-segment display with start and reset buttons.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/digital_stopwatch.png",
+        "img": "/static/examples/thumbnails/digital_stopwatch.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "DigitalStopwatch"
@@ -381,7 +381,7 @@
         "name": "Ultrasonic Distance Sensor",
         "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/hcsr04_lcd.png",
+        "img": "/static/examples/thumbnails/hcsr04_lcd.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "HCSR04_LCD"
@@ -390,7 +390,7 @@
         "name": "NTC Temperature Sensor OLED",
         "description": "Read temperature using NTC sensor and display on OLED screen.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/ntc_sensor_oled.png",
+        "img": "/static/examples/thumbnails/ntc_sensor_oled.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "NTCSensorOLED"
@@ -399,7 +399,7 @@
         "name": "Stepper Motor",
         "description": "Control a 28BYJ-48 stepper motor with ULN2003 driver for precise rotation.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/stepper_motor.png",
+        "img": "/static/examples/thumbnails/stepper_motor.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "StepperMotor"
@@ -408,7 +408,7 @@
         "name": "Traffic Light",
         "description": "Simulate a traffic light sequence using LEDs and Arduino.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/traffic_light_sim.png",
+        "img": "/static/examples/thumbnails/traffic_light_sim.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "TrafficLight"
@@ -417,7 +417,7 @@
         "name": "Boom Barrier Gate",
         "description": "Automatic boom barrier gate using HC-SR04 ultrasonic sensor and servo motor.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/boom_barrier_gate.png",
+        "img": "/static/examples/thumbnails/boom_barrier_gate.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "BoomBarrierGate"
@@ -426,7 +426,7 @@
         "name": "Rotary Encoder",
         "description": "Read rotary encoder rotation and button press, display counter on LCD.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/rotary_encoder.png",
+        "img": "/static/examples/thumbnails/rotary_encoder.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "RotaryEncoder"
@@ -435,7 +435,7 @@
         "name": "Analog Joystick",
         "description": "Read joystick X/Y axes and button, display values on LCD.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/analog_joystick.png",
+        "img": "/static/examples/thumbnails/analog_joystick.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "AnalogJoyStick"
@@ -444,7 +444,7 @@
         "name": "Keypad Locker",
         "description": "Password-protected locker using membrane keypad and LCD display.",
         "tags": ["arduino"],
-        "img": "/static/examples/thumbnails/keypad_locker.png",
+        "img": "/static/examples/thumbnails/keypad_locker.webp",
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "KeypadLocker"
