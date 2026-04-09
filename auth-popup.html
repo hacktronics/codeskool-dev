@@ -1,0 +1,250 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signing in…</title><style>html, body { margin: 0; padding: 0; height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      height: 100%; background: #f5f5f5;
+    }
+    .msg { color: #555; font-size: 15px; text-align: center; max-width: 360px; padding: 16px; }
+    .spinner {
+      width: 32px; height: 32px; border: 3px solid #ddd;
+      border-top-color: #4285f4; border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #status { margin-top: 8px; font-size: 13px; color: #888; word-break: break-all; }
+    .error { color: #c62828; font-weight: 500; }</style></head><body><div class="msg"><div class="spinner" id="spinner"></div><p id="label">Signing in, please wait…</p><p id="status"></p></div><script>// Single-popup SSO relay using Firebase Identity Toolkit REST API.
+    //
+    // Flow:
+    //   Phase 1 (no return params in URL):
+    //     - call createAuthUri REST → get OAuth URL + sessionId
+    //     - persist sessionId+provider in localStorage (sessionStorage is wiped
+    //       on BCG change when navigating to Google)
+    //     - navigate THIS window to the OAuth URL (NOT a nested popup)
+    //
+    //   Phase 2 (URL contains OAuth response — Google redirected back):
+    //     - call signInWithIdp REST with current URL → get OAuth credential
+    //     - send credential to opener via BroadcastChannel
+    //     - opener calls signInWithCredential to set Firebase auth state
+    //     - close this window
+    //
+    // Pure REST — no Firebase SDK iframe needed. Works inside the relay popup
+    // which is excluded from COEP/COOP headers by sw.js.
+
+    var API_KEY = 'AIzaSyDyeL3d7xtSgvN6qkmJ5TSdIbzQBge4O6M';
+    var SSO_CHANNEL = 'codeskool-sso';
+    var SESSION_KEY = 'codeskool-sso-session-id';
+    var PROVIDER_KEY = 'codeskool-sso-provider';
+
+    var PROVIDER_IDS = {
+      google: 'google.com',
+      microsoft: 'microsoft.com',
+      facebook: 'facebook.com'
+    };
+
+    function setStatus(msg, isError) {
+      var el = document.getElementById('status');
+      el.textContent = msg;
+      if (isError) {
+        el.className = 'error';
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('label').textContent = 'Sign-in failed';
+      }
+    }
+
+    // Send a message back to the opener (main page) via localStorage.
+    //
+    // We cannot use BroadcastChannel because the main page is
+    // crossOriginIsolated (Pyodide requirement) while this popup is not
+    // (auth-popup.html is excluded from COEP/COOP injection so it can
+    // run Google's OAuth flow). BroadcastChannel does not cross that
+    // agent-cluster boundary.
+    //
+    // We cannot use window.opener.postMessage either, because the main
+    // page's COOP: same-origin severs window.opener for popups.
+    //
+    // localStorage is partitioned by top-level site, not by isolation
+    // state, so it IS shared between this popup and the main page.
+    // The main page polls the storage key after opening the popup and
+    // also listens for the 'storage' event.
+    var SSO_RESULT_KEY = 'codeskool-sso-result';
+    function send(data) {
+      try {
+        var envelope = {ts: Date.now(), data: data};
+        localStorage.setItem(SSO_RESULT_KEY, JSON.stringify(envelope));
+      } catch (_e) { /* nothing else we can do */ }
+    }
+
+    function closeAfter(ms) {
+      setTimeout(function () { window.close(); }, ms);
+    }
+
+    function clearState() {
+      try {
+        localStorage.removeItem(SESSION_KEY);
+        localStorage.removeItem(PROVIDER_KEY);
+      } catch (_e) {}
+    }
+
+    function isReturnFromOAuth() {
+      // Google appends ?code=... or #access_token=... when redirecting back
+      return location.search.indexOf('code=') > -1 ||
+             location.hash.indexOf('access_token=') > -1 ||
+             location.search.indexOf('access_token=') > -1 ||
+             location.search.indexOf('id_token=') > -1 ||
+             location.hash.indexOf('id_token=') > -1;
+    }
+
+    function startPhase1() {
+      var params = new URLSearchParams(location.search);
+      var providerName = params.get('provider');
+      var providerId = PROVIDER_IDS[providerName];
+
+      if (!providerId) {
+        setStatus('Unknown provider: ' + providerName, true);
+        send({ type: 'error', code: 'auth/invalid-provider' });
+        closeAfter(2000);
+        return;
+      }
+
+      setStatus('Preparing sign-in…');
+
+      // continueUri is where Firebase's auth handler will redirect back to.
+      // It must be the URL of THIS popup (without query params) so that on
+      // return, we can detect the OAuth response and run Phase 2.
+      var continueUri = location.origin + location.pathname;
+
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:createAuthUri?key=' + API_KEY, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          providerId: providerId,
+          continueUri: continueUri
+        })
+      })
+      .then(function (resp) { return resp.json(); })
+      .then(function (data) {
+        if (data.error) {
+          setStatus('Error: ' + (data.error.message || JSON.stringify(data.error)), true);
+          send({ type: 'error', code: 'auth/operation-not-allowed' });
+          closeAfter(3000);
+          return;
+        }
+        if (!data.authUri || !data.sessionId) {
+          setStatus('Invalid Firebase response', true);
+          send({ type: 'error', code: 'auth/internal-error' });
+          closeAfter(3000);
+          return;
+        }
+        // Store sessionId in localStorage (NOT sessionStorage — that gets
+        // wiped when navigating to a different origin / BCG change)
+        try {
+          localStorage.setItem(SESSION_KEY, data.sessionId);
+          localStorage.setItem(PROVIDER_KEY, providerName);
+        } catch (_e) {}
+        setStatus('Redirecting to ' + providerName + '…');
+        // Navigate THIS window — single popup, no nested
+        window.location.href = data.authUri;
+      })
+      .catch(function (err) {
+        setStatus('Network error: ' + err.message, true);
+        send({ type: 'error', code: 'auth/network-request-failed' });
+        closeAfter(3000);
+      });
+    }
+
+    function startPhase2() {
+      setStatus('Processing sign-in…');
+
+      var sessionId = null;
+      var providerName = null;
+      try {
+        sessionId = localStorage.getItem(SESSION_KEY);
+        providerName = localStorage.getItem(PROVIDER_KEY);
+      } catch (_e) {}
+      clearState();
+
+      if (!sessionId) {
+        setStatus('Missing sign-in session', true);
+        send({ type: 'error', code: 'auth/missing-session' });
+        closeAfter(3000);
+        return;
+      }
+
+      // requestUri = full current URL (with OAuth response params)
+      var requestUri = window.location.href;
+
+      fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithIdp?key=' + API_KEY, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          requestUri: requestUri,
+          sessionId: sessionId,
+          returnSecureToken: true,
+          returnIdpCredential: true
+        })
+      })
+      .then(function (resp) { return resp.json(); })
+      .then(function (data) {
+        if (data.error) {
+          setStatus('Sign-in error: ' + (data.error.message || JSON.stringify(data.error)), true);
+          send({ type: 'error', code: 'auth/idp-error', message: data.error.message });
+          closeAfter(5000);
+          return;
+        }
+        if (!data.localId) {
+          setStatus('No user returned from provider', true);
+          send({ type: 'error', code: 'auth/no-user' });
+          closeAfter(3000);
+          return;
+        }
+
+        // Build the OAuthCredential JSON shape that Firebase SDK's
+        // OAuthCredential.fromJSON() expects on the opener side.
+        var providerToFirebaseId = {
+          google: 'google.com',
+          microsoft: 'microsoft.com',
+          facebook: 'facebook.com'
+        };
+        var signInMethodMap = {
+          google: 'google.com',
+          microsoft: 'microsoft.com',
+          facebook: 'facebook.com'
+        };
+
+        var credentialJson = {
+          providerId: providerToFirebaseId[providerName],
+          signInMethod: signInMethodMap[providerName]
+        };
+        if (data.oauthIdToken) credentialJson.idToken = data.oauthIdToken;
+        if (data.oauthAccessToken) credentialJson.accessToken = data.oauthAccessToken;
+        if (data.pendingToken) credentialJson.pendingToken = data.pendingToken;
+
+        setStatus('Signing you in…');
+
+        send({
+          type: 'credential',
+          credential: credentialJson,
+          // Also include the user info for display purposes (optional)
+          user: {
+            uid: data.localId,
+            email: data.email || '',
+            displayName: data.displayName || '',
+            photoUrl: data.photoUrl || ''
+          }
+        });
+
+        closeAfter(800);
+      })
+      .catch(function (err) {
+        setStatus('Network error: ' + err.message, true);
+        send({ type: 'error', code: 'auth/network-request-failed' });
+        closeAfter(3000);
+      });
+    }
+
+    // Decide which phase to run
+    if (isReturnFromOAuth()) {
+      startPhase2();
+    } else {
+      startPhase1();
+    }</script></body></html>
