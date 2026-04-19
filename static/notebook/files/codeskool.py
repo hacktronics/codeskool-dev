@@ -10,6 +10,7 @@ Works in both notebook mode (JupyterLite) and editor mode (Pyodide worker).
 """
 
 import json
+import time
 from urllib.parse import quote
 
 # ── JS bridge: sync XHR via service worker ─────────────────
@@ -52,6 +53,7 @@ def _send(sprite_name, action, params):
         xhr.send(None)
         resp = str(xhr.responseText)
         _check_incoming_broadcasts(resp)
+        _check_incoming_hats(resp)
         return resp
     except Exception:
         return ""
@@ -123,6 +125,133 @@ def _check_incoming_broadcasts(resp):
         pass
 
 
+# ── Hat event registry ────────────────────────────────────
+# Generic mechanism for every hat block that isn't a broadcast. The VM emits
+# ``HAT_STARTED`` for every startHats() call; the main thread relays those
+# into the worker, which piggy-backs them on the next XHR response as
+# ``_hats``. One dispatcher handles every hat; the public decorators
+# (``when_flag_clicked``, ``when_key_pressed``, ...) are thin wrappers.
+
+_hat_handlers = {}            # {(opcode, field_name_or_None, field_value_or_None): [fns...]}
+_hat_dispatching = False      # reentrancy guard (independent of _dispatching)
+_hat_queue = []               # queued hats arriving during dispatch
+
+
+def _normalise_hat_value(value):
+    """Fields arrive uppercased from startHats; lowercase strings for matching."""
+    return value.lower() if isinstance(value, str) else value
+
+
+def _when_hat(opcode, field=None, value=None):
+    """Generic hat-registration decorator. Prefer the public wrappers below."""
+    key = (opcode, field, _normalise_hat_value(value))
+    def decorator(fn):
+        _hat_handlers.setdefault(key, []).append(fn)
+        return fn
+    return decorator
+
+
+def when_flag_clicked(fn):
+    """Decorator: run when the green flag is clicked."""
+    return _when_hat('event_whenflagclicked')(fn)
+
+
+def when_key_pressed(key):
+    """Decorator: run when a key is pressed. Example: ``@when_key_pressed("space")``."""
+    return _when_hat('event_whenkeypressed', 'KEY_OPTION', key)
+
+
+def when_sprite_clicked(fn):
+    """Decorator: run when this sprite is clicked."""
+    return _when_hat('event_whenthisspriteclicked')(fn)
+
+
+def when_stage_clicked(fn):
+    """Decorator: run when the stage is clicked."""
+    return _when_hat('event_whenstageclicked')(fn)
+
+
+def when_backdrop_switches_to(backdrop):
+    """Decorator: run when the stage switches to a specific backdrop."""
+    return _when_hat('event_whenbackdropswitchesto', 'BACKDROP', backdrop)
+
+
+def when_greater_than(property_name, threshold=0):
+    """Decorator: run when loudness or timer exceeds a threshold.
+
+    ``property_name`` is ``"LOUDNESS"`` or ``"TIMER"``. The threshold comes from
+    the block and is preserved for documentation only — matching is on the
+    property name, exactly like the block behaves.
+    """
+    del threshold  # accepted for symmetry with the block; VM handles the predicate
+    return _when_hat('event_whengreaterthan', 'WHENGREATERTHANMENU', property_name)
+
+
+def when_start_as_clone(fn):
+    """Decorator: run on each clone when it is created."""
+    return _when_hat('control_start_as_clone')(fn)
+
+
+def _hat_keys_for(opcode, fields):
+    """Yield every (opcode, field, value) key that a triggered hat matches.
+
+    A single VM ``HAT_STARTED`` event may match handlers registered with a
+    specific field (``@when_key_pressed("space")``) AND handlers that ignore
+    fields entirely — emit both keys so nothing is missed.
+    """
+    yield (opcode, None, None)
+    if not fields:
+        return
+    for field_name, field_value in fields.items():
+        yield (opcode, field_name, _normalise_hat_value(field_value))
+
+
+def _dispatch_hat(payload):
+    """Dispatch a single hat event to all matching registered handlers."""
+    global _hat_dispatching
+    if _hat_dispatching:
+        _hat_queue.append(payload)
+        return
+    _hat_dispatching = True
+    try:
+        _run_hat_handlers(payload)
+        while _hat_queue:
+            _run_hat_handlers(_hat_queue.pop(0))
+    finally:
+        _hat_dispatching = False
+        _hat_queue.clear()
+
+
+def _run_hat_handlers(payload):
+    opcode = payload.get('opcode')
+    fields = payload.get('fields') or {}
+    seen = set()
+    for key in _hat_keys_for(opcode, fields):
+        if key in seen:
+            continue
+        seen.add(key)
+        for handler in _hat_handlers.get(key, []):
+            handler()
+
+
+def _clear_hat_handlers():
+    """Clear all registered hat handlers. Called between executions."""
+    _hat_handlers.clear()
+    _hat_queue.clear()
+
+
+def _check_incoming_hats(resp):
+    """Check response for Scratch hat events and dispatch to Python handlers."""
+    if not resp:
+        return
+    try:
+        data = json.loads(resp)
+        for payload in data.get('_hats', []):
+            _dispatch_hat(payload)
+    except (json.JSONDecodeError, KeyError, TypeError):
+        pass
+
+
 def listen():
     """Keep Python running and listening for Scratch broadcasts.
 
@@ -137,7 +266,6 @@ def listen():
 
         listen()  # keeps running until stopped
     """
-    import time
     try:
         while True:
             _send(_sprite_name(), '_poll', {})
@@ -757,13 +885,23 @@ def set_rotation_style(style):
     _send(_sprite_name(), 'motion_setrotationstyle', {'STYLE': style})
 
 # Looks
-def sprite_says(message):
-    """Make the sprite show a speech bubble with the message."""
-    _send(_sprite_name(), 'looks_say', {'MESSAGE': str(message)})
+def say(message, secs=None):
+    """Show a speech bubble with the message.
 
-def sprite_think(message):
-    """Make the sprite show a thought bubble with the message."""
-    _send(_sprite_name(), 'looks_think', {'MESSAGE': str(message)})
+    Pass ``secs`` to automatically clear the bubble after that many seconds
+    (mirrors the "say ... for ... seconds" block).
+    """
+    if secs is None:
+        _send(_sprite_name(), 'looks_say', {'MESSAGE': str(message)})
+    else:
+        _send(_sprite_name(), 'looks_sayforsecs', {'MESSAGE': str(message), 'SECS': secs})
+
+def think(message, secs=None):
+    """Show a thought bubble with the message. Pass ``secs`` for the timed variant."""
+    if secs is None:
+        _send(_sprite_name(), 'looks_think', {'MESSAGE': str(message)})
+    else:
+        _send(_sprite_name(), 'looks_thinkforsecs', {'MESSAGE': str(message), 'SECS': secs})
 
 def switch_costume(costume):
     """Switch the sprite's costume by name or number."""
@@ -801,11 +939,11 @@ def clear_effects():
     """Remove all graphic effects from the sprite."""
     _send(_sprite_name(), 'looks_cleargraphiceffects', {})
 
-def show_sprite():
+def show():
     """Make the sprite visible."""
     _send(_sprite_name(), 'looks_show', {})
 
-def hide_sprite():
+def hide():
     """Make the sprite invisible."""
     _send(_sprite_name(), 'looks_hide', {})
 
@@ -825,7 +963,7 @@ def get_backdrop():
     """Return the name of the current backdrop."""
     return _parse_val(_send(_sprite_name(), 'looks_backdropnumbername', {'NUMBER_NAME': 'name'}))
 
-def get_sprite_size():
+def size():
     """Return the sprite's current size as a percentage."""
     return _parse_val(_send(_sprite_name(), 'looks_size', {}))
 
@@ -916,7 +1054,7 @@ def reset_timer():
     """Reset the timer to 0."""
     _send(_sprite_name(), 'sensing_resettimer', {})
 
-def get_sprite_current(prop):
+def current(prop):
     """Get a property of the current sprite (e.g. 'x position', 'costume name')."""
     return _parse_val(_send(_sprite_name(), 'sensing_of', {'PROPERTY': prop}))
 
