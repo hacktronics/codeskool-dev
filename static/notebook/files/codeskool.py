@@ -28,6 +28,15 @@ except Exception:
 __SPRITE_NAME__ = "Sprite1"
 __IS_STAGE__ = False
 
+# Per-hat-dispatch target pin. Set by _run_hat_handlers when the VM emits
+# HAT_STARTED with a specific targetId (e.g. control_start_as_clone fires
+# once per clone). When non-None, _send threads it to the main thread so
+# sprite API calls route to the exact target, not the first name-matching
+# one. Clones share sprite.name with their original — without this,
+# `self.change_x(50)` inside a when_start_as_clone body would mutate the
+# original sprite.
+__TARGET_ID__ = None
+
 
 def _make_cmd(sprite_name, action, params):
     global _cmd_id
@@ -38,6 +47,7 @@ def _make_cmd(sprite_name, action, params):
         "sprite": sprite_name,
         "action": action,
         "params": params,
+        "targetId": __TARGET_ID__,
     })
 
 
@@ -91,11 +101,19 @@ def when_broadcast(message):
 
 def _dispatch_broadcast(message):
     """Dispatch a broadcast to all registered Python handlers."""
-    global _dispatching
+    global _dispatching, __TARGET_ID__
     if _dispatching:
         _broadcast_queue.append(message)
         return
     _dispatching = True
+    # Broadcasts don't carry a specific target — they fire across every sprite
+    # that registered the message. If a surrounding hat dispatcher has pinned
+    # __TARGET_ID__ (e.g. when_start_as_clone is running) the broadcast handlers
+    # would inherit that pin and route _send calls to the wrong sprite. Reset
+    # here so the handlers fall back to name-based routing, restore afterwards
+    # so the outer hat still resumes with its pin intact.
+    prev_target_id = __TARGET_ID__
+    __TARGET_ID__ = None
     try:
         for handler in _broadcast_handlers.get(message.lower(), []):
             handler()
@@ -105,6 +123,7 @@ def _dispatch_broadcast(message):
             for handler in _broadcast_handlers.get(queued.lower(), []):
                 handler()
     finally:
+        __TARGET_ID__ = prev_target_id
         _dispatching = False
         _broadcast_queue.clear()
 
@@ -223,15 +242,26 @@ def _dispatch_hat(payload):
 
 
 def _run_hat_handlers(payload):
+    global __TARGET_ID__
     opcode = payload.get('opcode')
     fields = payload.get('fields') or {}
-    seen = set()
-    for key in _hat_keys_for(opcode, fields):
-        if key in seen:
-            continue
-        seen.add(key)
-        for handler in _hat_handlers.get(key, []):
-            handler()
+    target_id = payload.get('targetId')
+    # Pin the current target for the duration of this hat's handler stack
+    # so nested sprite API calls route to the exact VM target instead of
+    # collapsing to the first name match. Matters most for clones.
+    prev = __TARGET_ID__
+    if target_id:
+        __TARGET_ID__ = target_id
+    try:
+        seen = set()
+        for key in _hat_keys_for(opcode, fields):
+            if key in seen:
+                continue
+            seen.add(key)
+            for handler in _hat_handlers.get(key, []):
+                handler()
+    finally:
+        __TARGET_ID__ = prev
 
 
 def _clear_hat_handlers():
@@ -784,33 +814,33 @@ class Whizz:
         _send(self.sprite_name, 'rcCar_toggleTurboMode', {})
 
 
-# ── SeaQuest class ────────────────────────────────────────
+# ── OceanQuest class ────────────────────────────────────────
 
-class SeaQuest:
-    """Controls the SeaQuest extension.
+class OceanQuest:
+    """Controls the OceanQuest extension.
 
-    Create with ``sub = SeaQuest()`` or ``sub = SeaQuest('SpriteName')``.
+    Create with ``sub = OceanQuest()`` or ``sub = OceanQuest('SpriteName')``.
     """
 
     def __init__(self, sprite_name=None):
-        """Create a SeaQuest controller for the given sprite."""
+        """Create a OceanQuest controller for the given sprite."""
         self.sprite_name = sprite_name or __SPRITE_NAME__
 
     def move_north(self, steps=1):
         """Move north (up) by the given number of steps."""
-        _send(self.sprite_name, 'seaQuest_moveNorth', {'STEPS': steps})
+        _send(self.sprite_name, 'oceanQuest_moveNorth', {'STEPS': steps})
 
     def move_south(self, steps=1):
         """Move south (down) by the given number of steps."""
-        _send(self.sprite_name, 'seaQuest_moveSouth', {'STEPS': steps})
+        _send(self.sprite_name, 'oceanQuest_moveSouth', {'STEPS': steps})
 
     def move_east(self, steps=1):
         """Move east (right) by the given number of steps."""
-        _send(self.sprite_name, 'seaQuest_moveEast', {'STEPS': steps})
+        _send(self.sprite_name, 'oceanQuest_moveEast', {'STEPS': steps})
 
     def move_west(self, steps=1):
         """Move west (left) by the given number of steps."""
-        _send(self.sprite_name, 'seaQuest_moveWest', {'STEPS': steps})
+        _send(self.sprite_name, 'oceanQuest_moveWest', {'STEPS': steps})
 
 
 # ── Standalone convenience functions ──────────────────────
