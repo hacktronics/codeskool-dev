@@ -1,6 +1,338 @@
-<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google" value="notranslate"><link rel="shortcut icon" href="static/favicon/favicon.ico"><title>Code Skool: Player Example</title><meta name="description" content="Bridge creativity and technology with our kid-friendly coding IDE"><link rel="manifest" href="manifest.json"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script><script>if ("serviceWorker" in navigator) {
+<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="google" value="notranslate"><link rel="shortcut icon" href="static/favicon/favicon.ico"><title>Code Skool: Player Example</title><meta name="description" content="Bridge creativity and technology with our kid-friendly coding IDE"><link rel="manifest" href="manifest.json"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet"><style>/* CodeSkool splash — inlined so first paint happens before the JS/CSS
+         bundle loads. Fades out when window.__dismissSplash() is called from
+         the React entry point, or after a safety timeout. */
+      html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; }
+      #codeskool-splash {
+        position: fixed; inset: 0;
+        z-index: 99999;
+        font-family: "Fredoka", "Segoe UI", sans-serif;
+        color: #3b0a82;
+        background: radial-gradient(1200px 800px at 50% 50%, #ffffff 0%, #f1ecff 55%, #e7e0ff 100%);
+        overflow: hidden;
+        transition: opacity 600ms ease;
+      }
+      #codeskool-splash.cs-done { opacity: 0; pointer-events: none; }
+      #codeskool-splash::before {
+        content: "";
+        position: absolute; inset: 0;
+        pointer-events: none;
+        background-image:
+          url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 200' opacity='0.06'><path d='M8,22 C16,6 52,6 60,22 H88 a4,4 0 0,1 4,4 V54 a4,4 0 0,1 -4,4 H42 l-3,-6 h-18 l-3,6 H8 a4,4 0 0,1 -4,-4 V26 a4,4 0 0,1 4,-4 Z' fill='%237c3aed'/><path d='M112,86 a4,4 0 0,1 4,-4 H144 l3,-6 h18 l3,6 H192 a4,4 0 0,1 4,4 V110 a4,4 0 0,1 -4,4 H116 a4,4 0 0,1 -4,-4 Z' fill='%234C97FF'/><path d='M40,130 a4,4 0 0,1 4,-4 H62 l3,-6 h18 l3,6 H112 a4,4 0 0,1 4,4 V154 a4,4 0 0,1 -4,4 H44 a4,4 0 0,1 -4,-4 Z' fill='%23FFAB19'/></svg>"),
+          linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+        background-size: 320px 280px, 48px 48px, 48px 48px;
+      }
+
+      .cs-halo {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: cs-halo-breath 3.5s ease-in-out infinite;
+      }
+      .cs-halo.cs-inner { width: 460px; height: 460px; border: 1px dashed rgba(124, 58, 237, 0.30); }
+      .cs-halo.cs-outer { width: 780px; height: 780px; border: 1px dashed rgba(124, 58, 237, 0.16); animation-delay: 0.7s; }
+      .cs-halo.cs-far   { width: 1100px; height: 1100px; border: 1px dashed rgba(124, 58, 237, 0.08); animation-delay: 1.4s; }
+      @keyframes cs-halo-breath {
+        0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+        50%      { opacity: 0.85; transform: translate(-50%, -50%) scale(1.015); }
+      }
+
+      .cs-center {
+        position: absolute; top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex; flex-direction: column; align-items: center;
+        gap: 10px; z-index: 5;
+        animation: cs-breath 5s ease-in-out infinite;
+      }
+      .cs-blocks-hero {
+        width: 108px; height: 108px;
+        filter: drop-shadow(0 10px 26px rgba(76,29,149,0.35));
+        animation: cs-pop 1s cubic-bezier(0.34, 1.6, 0.64, 1) 0.2s both, cs-hero-wiggle 4s ease-in-out 2s infinite;
+      }
+      @keyframes cs-hero-wiggle {
+        0%, 100% { transform: rotate(-4deg); }
+        50%      { transform: rotate(4deg); }
+      }
+      @keyframes cs-breath {
+        0%, 100% { transform: translate(-50%, -50%) scale(1); }
+        50%      { transform: translate(-50%, -50%) scale(1.02); }
+      }
+      @keyframes cs-pop {
+        from { transform: scale(0); }
+        to   { transform: scale(1); }
+      }
+
+      .cs-wordmark {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: clamp(60px, 8vw, 108px);
+        line-height: 1;
+        letter-spacing: -0.5px;
+        -webkit-text-stroke: 1.5px #4c1d95;
+        filter: drop-shadow(0 4px 0 #5b21b6) drop-shadow(0 12px 26px rgba(76, 29, 149, 0.28));
+        animation: cs-pop 0.9s cubic-bezier(0.34, 1.6, 0.64, 1) 0.6s both;
+      }
+      .cs-wordmark .l1 { color: #FFBF00; }
+      .cs-wordmark .l2 { color: #4C97FF; }
+      .cs-wordmark .l3 { color: #9966FF; }
+      .cs-wordmark .l4 { color: #FF6680; }
+      .cs-wordmark .l5 { color: #59C059; }
+      .cs-wordmark .l6 { color: #FFAB19; }
+      .cs-wordmark .l7 { color: #5CB1D6; }
+      .cs-wordmark .l8 { color: #CF63CF; }
+      .cs-wordmark .l9 { color: #4C97FF; }
+
+      .cs-tagline {
+        display: flex; gap: 16px;
+        font-family: "Fredoka", sans-serif;
+        font-weight: 700;
+        font-size: clamp(16px, 1.8vw, 22px);
+        letter-spacing: 0.4px;
+        margin-top: 2px;
+        white-space: nowrap;
+        -webkit-text-stroke: 0.8px #4c1d95;
+        filter: drop-shadow(0 2px 0 #5b21b6) drop-shadow(0 6px 14px rgba(76, 29, 149, 0.18));
+        opacity: 0;
+        animation: cs-fade-up 0.6s ease 1.3s forwards;
+      }
+      .cs-tagline span:nth-child(1) { color: #4C97FF; }
+      .cs-tagline span:nth-child(2) { color: #9966FF; }
+      .cs-tagline span:nth-child(3) { color: #CF63CF; }
+      @keyframes cs-fade-up {
+        from { opacity: 0; transform: translateY(12px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes cs-fade-in {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+      }
+
+      .cs-ring-hw   { position: absolute; inset: 0; animation: cs-spin-cw  70s linear infinite; z-index: 3; }
+      .cs-ring-lang { position: absolute; inset: 0; animation: cs-spin-ccw 100s linear infinite; z-index: 2; }
+      @keyframes cs-spin-cw  { to { transform: rotate(360deg); } }
+      @keyframes cs-spin-ccw { to { transform: rotate(-360deg); } }
+
+      .cs-p-tile {
+        position: absolute; top: 50%; left: 50%;
+        display: flex; align-items: center; justify-content: center;
+        --angle: 0deg; --radius: 280px;
+        opacity: 0;
+        transform: translate(-50%,-50%) rotate(var(--angle)) translateY(0) rotate(calc(var(--angle)*-1)) scale(0.2);
+        animation: cs-orbit-out 0.8s cubic-bezier(0.34,1.5,0.64,1) forwards;
+      }
+      .cs-p-tile img {
+        max-width: 100%; max-height: 100%; object-fit: contain;
+        filter: drop-shadow(0 8px 18px rgba(76,29,149,0.28));
+      }
+      .cs-ring-hw   .cs-p-tile     { --radius: 240px; }
+      .cs-ring-hw   .cs-p-tile:nth-child(1) { width: 74px; height: 74px; }
+      .cs-ring-hw   .cs-p-tile:nth-child(2) { width: 82px; height: 82px; }
+      .cs-ring-hw   .cs-p-tile:nth-child(3) { width: 68px; height: 68px; }
+      .cs-ring-hw   .cs-p-tile img { animation: cs-counter-cw  70s linear infinite; }
+      .cs-ring-lang .cs-p-tile     { width: 72px; height: 72px; --radius: 360px; }
+      .cs-ring-lang .cs-p-tile img { animation: cs-counter-ccw 100s linear infinite; }
+      @keyframes cs-counter-cw  { to { transform: rotate(-360deg); } }
+      @keyframes cs-counter-ccw { to { transform: rotate(360deg); } }
+      @keyframes cs-orbit-out {
+        0%   { opacity: 0;
+               transform: translate(-50%,-50%) rotate(var(--angle)) translateY(0) rotate(calc(var(--angle)*-1)) scale(0.1); }
+        60%  { opacity: 1; }
+        100% { opacity: 1;
+               transform: translate(-50%,-50%) rotate(var(--angle)) translateY(calc(var(--radius)*-1)) rotate(calc(var(--angle)*-1)) scale(1); }
+      }
+
+      .cs-env {
+        position: absolute;
+        display: flex; flex-direction: column; align-items: center; gap: 6px;
+        opacity: 0;
+        animation: cs-env-pop 0.9s cubic-bezier(0.34,1.6,0.64,1) 2.2s forwards, cs-env-glow 3s ease-in-out 3s infinite;
+        z-index: 4;
+      }
+      .cs-env img { width: 108px; height: 108px; object-fit: contain; }
+      .cs-env label {
+        font-size: 11px; font-weight: 700; text-transform: uppercase;
+        letter-spacing: 0.6px; color: #4c1d95;
+        background: rgba(255,255,255,0.75);
+        padding: 4px 10px; border-radius: 999px;
+        border: 1.5px solid rgba(251, 191, 36, 0.7);
+      }
+      .cs-env-3d { top: 8%; right: 4%; }
+      .cs-env-ml { bottom: 10%; left: 4%; }
+      @keyframes cs-env-pop {
+        from { opacity: 0; transform: scale(0.3) rotate(-8deg); }
+        to   { opacity: 1; transform: scale(1) rotate(0); }
+      }
+      @keyframes cs-env-glow {
+        0%, 100% { filter: drop-shadow(0 16px 30px rgba(251, 191, 36, 0.25)) drop-shadow(0 4px 10px rgba(76,29,149,0.20)); }
+        50%      { filter: drop-shadow(0 20px 40px rgba(251, 191, 36, 0.45)) drop-shadow(0 4px 10px rgba(76,29,149,0.20)); }
+      }
+
+      .cs-sprinkle {
+        position: absolute; width: 44px; height: 44px;
+        opacity: 0; z-index: 2;
+        animation: cs-sprinkle-in 0.6s ease 2.6s forwards, cs-drift 9s ease-in-out infinite;
+      }
+      .cs-sprinkle img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(76,29,149,0.20)); }
+      @keyframes cs-sprinkle-in { to { opacity: 0.9; } }
+      @keyframes cs-drift {
+        0%, 100% { transform: translate(0, 0) rotate(0); }
+        50%      { transform: translate(-6px, -10px) rotate(4deg); }
+      }
+      .cs-s1  { top: 4%;    left: 8%;   animation-delay: 2.6s, 0s; }
+      .cs-s2  { top: 4%;    left: 46%;  animation-delay: 2.7s, 0.8s; }
+      .cs-s3  { top: 6%;    right: 22%; animation-delay: 2.8s, 1.6s; }
+      .cs-s4  { top: 38%;   right: 2%;  animation-delay: 2.9s, 2.4s; }
+      .cs-s5  { bottom: 8%; right: 26%; animation-delay: 3.0s, 0.4s; }
+      .cs-s6  { bottom: 8%; left: 32%;  animation-delay: 3.1s, 3.2s; }
+      .cs-s7  { top: 42%;   left: 2%;   animation-delay: 3.2s, 1.2s; }
+      .cs-s8  { bottom: 40%; right: 4%; animation-delay: 3.3s, 2.0s; }
+      .cs-s9  { bottom: 40%; left: 4%;  animation-delay: 3.4s, 0.6s; }
+      .cs-s10 { top: 5%;    left: 28%;  animation-delay: 3.5s, 2.8s; }
+      .cs-s11 { top: 5%;    right: 40%; animation-delay: 3.6s, 1.8s; }
+      .cs-s12 { top: 22%;   left: 18%;  animation-delay: 3.7s, 1.0s; }
+      .cs-s13 { bottom: 22%; right: 18%; animation-delay: 3.8s, 2.2s; }
+      .cs-s14 { bottom: 24%; left: 22%; animation-delay: 3.9s, 0.9s; }
+      .cs-s15 { top: 24%;   right: 22%; animation-delay: 4.0s, 2.5s; }
+      .cs-s16 { bottom: 30%; left: 28%; animation-delay: 4.1s, 1.4s; }
+      .cs-s17 { top: 30%;   right: 28%; animation-delay: 4.2s, 2.1s; }
+      .cs-s18 { top: 34%;   left: 30%;  animation-delay: 4.3s, 1.7s; }
+      .cs-s19 { top: 50%;   left: 12%;  width: 32px; height: 32px; animation-delay: 4.4s, 0.7s; }
+
+      .cs-util {
+        position: absolute; width: 28px; height: 28px; opacity: 0; z-index: 1;
+        animation: cs-fade-in 0.5s ease 2.8s forwards, cs-tiny-float 6s ease-in-out infinite;
+      }
+      .cs-util img { width: 100%; height: 100%; object-fit: contain; opacity: 0.72; filter: drop-shadow(0 3px 6px rgba(0,0,0,0.10)); }
+      @keyframes cs-tiny-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -4px; } }
+      .cs-u1 { top: 4%;  left: 4%;    animation-delay: 2.80s, 0s; }
+      .cs-u2 { top: 5%;  right: 30%;  animation-delay: 2.85s, 1s; }
+      .cs-u3 { bottom: 4%; left: 36%; animation-delay: 2.90s, 2s; }
+      .cs-u4 { bottom: 4%; right: 4%; animation-delay: 2.95s, 3s; }
+      .cs-u5 { top: 68%; right: 28%;  animation-delay: 3.00s, 1.5s; }
+      .cs-u6 { top: 82%; left: 14%;   animation-delay: 3.05s, 0.5s; }
+
+      .cs-loader {
+        position: absolute; bottom: 28px; left: 50%;
+        transform: translateX(-50%);
+        display: flex; flex-direction: column; align-items: center;
+        gap: 8px; z-index: 10;
+        opacity: 0;
+        animation: cs-fade-in 0.6s ease 0.3s forwards;
+      }
+      .cs-loading-text {
+        font-family: "Fredoka", sans-serif;
+        font-size: 15px; font-weight: 700;
+        color: #4c1d95;
+      }
+      .cs-loading-text::after {
+        display: inline-block; width: 1.5em; text-align: left;
+        animation: cs-dots 1.4s steps(4, end) infinite;
+        content: "";
+      }
+      @keyframes cs-dots {
+        0%   { content: ""; }
+        25%  { content: "."; }
+        50%  { content: ".."; }
+        75%  { content: "..."; }
+        100% { content: ""; }
+      }
+      .cs-bar {
+        width: 340px; max-width: 60vw; height: 8px;
+        background: rgba(109, 40, 217, 0.15);
+        border-radius: 999px; overflow: hidden;
+      }
+      .cs-bar-fill {
+        width: 0; height: 100%;
+        border-radius: 999px;
+        background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 60%, #a78bfa 100%);
+        transition: width 300ms ease;
+      }</style><script src="https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.js"></script><script>if ("serviceWorker" in navigator) {
         navigator.serviceWorker
           .register("sw.js")
           .then(sw => console.log("service worker registered"))
           .catch(err => console.log("service worker not registered", err))
-      }</script><script defer="defer" src="player.js"></script></head><body></body></html>
+      }</script><script defer="defer" src="player.js"></script></head><body><div id="codeskool-splash"><div class="cs-halo cs-far"></div><div class="cs-halo cs-outer"></div><div class="cs-halo cs-inner"></div><div class="cs-env cs-env-3d"><img src="static/splash-icons/1.webp" alt=""><label>3D Studio</label></div><div class="cs-env cs-env-ml"><img src="static/splash-icons/25.webp" alt=""><label>ML Studio</label></div><div class="cs-sprinkle cs-s1"><img src="static/splash-icons/3.webp" alt=""></div><div class="cs-sprinkle cs-s2"><img src="static/splash-icons/16.webp" alt=""></div><div class="cs-sprinkle cs-s3"><img src="static/splash-icons/9.webp" alt=""></div><div class="cs-sprinkle cs-s4"><img src="static/splash-icons/27.webp" alt=""></div><div class="cs-sprinkle cs-s5"><img src="static/splash-icons/23.webp" alt=""></div><div class="cs-sprinkle cs-s6"><img src="static/splash-icons/4.webp" alt=""></div><div class="cs-sprinkle cs-s7"><img src="static/splash-icons/34.webp" alt=""></div><div class="cs-sprinkle cs-s8"><img src="static/splash-icons/21.webp" alt=""></div><div class="cs-sprinkle cs-s9"><img src="static/splash-icons/30.webp" alt=""></div><div class="cs-sprinkle cs-s10"><img src="static/splash-icons/24.webp" alt=""></div><div class="cs-sprinkle cs-s11"><img src="static/splash-icons/26.webp" alt=""></div><div class="cs-sprinkle cs-s12"><img src="static/splash-icons/7.webp" alt=""></div><div class="cs-sprinkle cs-s13"><img src="static/splash-icons/29.webp" alt=""></div><div class="cs-sprinkle cs-s14"><img src="static/splash-icons/19.webp" alt=""></div><div class="cs-sprinkle cs-s15"><img src="static/splash-icons/10.webp" alt=""></div><div class="cs-sprinkle cs-s16"><img src="static/splash-icons/2.webp" alt=""></div><div class="cs-sprinkle cs-s17"><img src="static/splash-icons/15.webp" alt=""></div><div class="cs-sprinkle cs-s18"><img src="static/splash-icons/31.webp" alt=""></div><div class="cs-sprinkle cs-s19"><img src="static/splash-icons/37.webp" alt=""></div><div class="cs-ring-hw"><div class="cs-p-tile" style="--angle:   0deg; animation-delay: 1.30s"><img src="static/splash-icons/6.webp" alt=""></div><div class="cs-p-tile" style="--angle: 120deg; animation-delay: 1.40s"><img src="static/splash-icons/14.webp" alt=""></div><div class="cs-p-tile" style="--angle: 240deg; animation-delay: 1.50s"><img src="static/splash-icons/36.webp" alt=""></div></div><div class="cs-ring-lang"><div class="cs-p-tile" style="--angle:   0deg; animation-delay: 1.60s"><img src="static/splash-icons/28.webp" alt=""></div><div class="cs-p-tile" style="--angle:  72deg; animation-delay: 1.68s"><img src="static/splash-icons/11.webp" alt=""></div><div class="cs-p-tile" style="--angle: 144deg; animation-delay: 1.76s"><img src="static/splash-icons/22.webp" alt=""></div><div class="cs-p-tile" style="--angle: 216deg; animation-delay: 1.84s"><img src="static/splash-icons/20.webp" alt=""></div><div class="cs-p-tile" style="--angle: 288deg; animation-delay: 1.92s"><img src="static/splash-icons/12.webp" alt=""></div></div><div class="cs-center"><img class="cs-blocks-hero" src="static/splash-icons/8.svg" alt=""><div class="cs-wordmark"><span class="l1">C</span><span class="l2">o</span><span class="l3">d</span><span class="l4">e</span><span class="l5">S</span><span class="l6">k</span><span class="l7">o</span><span class="l8">o</span><span class="l9">l</span></div><div class="cs-tagline"><span>Code.</span><span>Create.</span><span>Innovate.</span></div></div><div class="cs-util cs-u1"><img src="static/splash-icons/13.webp" alt=""></div><div class="cs-util cs-u2"><img src="static/splash-icons/33.webp" alt=""></div><div class="cs-util cs-u3"><img src="static/splash-icons/32.webp" alt=""></div><div class="cs-util cs-u4"><img src="static/splash-icons/18.webp" alt=""></div><div class="cs-util cs-u5"><img src="static/splash-icons/35.webp" alt=""></div><div class="cs-util cs-u6"><img src="static/splash-icons/17.webp" alt=""></div><div class="cs-loader"><div class="cs-loading-text" id="cs-loading-text">Loading</div><div class="cs-bar"><div class="cs-bar-fill" id="cs-bar-fill"></div></div></div></div><script>(function(){
+        // "Loading" label translated across the 16 active CodeSkool locales.
+        // Picked from navigator.language; falls back to English.
+        var LOADING = {
+          en: "Loading", de: "Laden", es: "Cargando", fr: "Chargement",
+          hi: "लोड हो रहा है",
+          id: "Memuat", it: "Caricamento", ja: "読み込み中",
+          nl: "Laden", pl: "Ładowanie",
+          "pt-br": "Carregando", pt: "Carregando",
+          ru: "Загрузка",
+          tr: "Yükleniyor",
+          uk: "Завантаження",
+          vi: "Đang tải",
+          "zh-cn": "加载中", zh: "加载中"
+        };
+        try {
+          var raw = (navigator.language || "en").toLowerCase();
+          var label = LOADING[raw] || LOADING[raw.split("-")[0]] || LOADING.en;
+          var el = document.getElementById("cs-loading-text");
+          if (el) el.textContent = label;
+        } catch (e) { /* keep English fallback */ }
+
+        // Progress bar — driven by real signals only.
+        //   1. PerformanceObserver counts each resource as it finishes
+        //      downloading (scripts, stylesheets, images, fonts, WASM, etc).
+        //      Normalised against a rough expected total so the bar climbs
+        //      smoothly during the heavy download phase.
+        //   2. readyState / load events anchor specific milestones so the
+        //      bar doesn't over-rely on resource count alone.
+        //   3. window.__dismissSplash() (called from the React entry point)
+        //      jumps to 100 — this is the authoritative "IDE ready" signal.
+        var bar = document.getElementById("cs-bar-fill");
+        var pct = 0;
+        var resourcesSeen = 0;
+        // Empirical count — CodeSkool's full bundle + fonts + sprite atlases
+        // hit ~80 resources on a cold load. Over-estimating is safer than
+        // under; the bar is capped at 90 until dismiss() fires anyway.
+        var EXPECTED_RESOURCES = 80;
+
+        function setPct(v) {
+          if (v > pct) pct = Math.min(100, v);
+          if (bar) bar.style.width = pct + "%";
+        }
+        setPct(5);
+
+        if (typeof PerformanceObserver !== "undefined") {
+          try {
+            var po = new PerformanceObserver(function (list) {
+              resourcesSeen += list.getEntries().length;
+              // Resource counting contributes up to 85% of the bar. Reserve
+              // the last 15% for the authoritative dismiss() callback.
+              var p = 5 + Math.min(80, (resourcesSeen / EXPECTED_RESOURCES) * 80);
+              setPct(p);
+            });
+            po.observe({type: "resource", buffered: true});
+          } catch (e) { /* Safari/private-mode may throw */ }
+        }
+
+        document.addEventListener("readystatechange", function () {
+          if (document.readyState === "interactive") setPct(25);
+          if (document.readyState === "complete") setPct(60);
+        });
+        window.addEventListener("load", function () { setPct(85); });
+
+        // Bundle entry point calls this once the IDE is mounted. Safety
+        // fallback dismiss ensures users never see an eternal splash.
+        var dismissed = false;
+        function dismiss() {
+          if (dismissed) return;
+          dismissed = true;
+          setPct(100);
+          var splash = document.getElementById("codeskool-splash");
+          if (!splash) return;
+          setTimeout(function () {
+            splash.classList.add("cs-done");
+            setTimeout(function () {
+              if (splash.parentNode) splash.parentNode.removeChild(splash);
+            }, 700);
+          }, 150);
+        }
+        window.__dismissSplash = dismiss;
+        setTimeout(dismiss, 30000);
+      })();</script></body></html>
