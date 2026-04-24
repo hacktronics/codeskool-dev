@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Smart Thermostat",
+            "image": "/static/tutorials/thumbnails/smart-thermostat.webp",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.placeholder",
+                "default": "You'll build a smart thermostat that reads the room temperature and switches a heater or fan on and off to keep things just right — like the one on your wall at home."
+            }
+        }
+    ]
+}

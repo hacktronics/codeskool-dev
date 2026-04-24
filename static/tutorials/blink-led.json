@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "Open the Board Menu",
-            "image": "/static/tutorials/steps/blinkBoardMenu.png",
+            "image": "/static/tutorials/steps/blinkBoardMenu.webp",
             "imageFocus": {
                 "x": 41,
                 "y": 0,
@@ -16,7 +16,7 @@
         },
         {
             "title": "Open Board Manager",
-            "image": "/static/tutorials/steps/blinkBoardManager.png",
+            "image": "/static/tutorials/steps/blinkBoardManager.webp",
             "imageFocus": {
                 "x": 50,
                 "y": 15,
@@ -30,7 +30,7 @@
         },
         {
             "title": "Search for UNO",
-            "image": "/static/tutorials/steps/blinkSearchUno.png",
+            "image": "/static/tutorials/steps/blinkSearchUno.webp",
             "imageFocus": {
                 "x": 51,
                 "y": 7,
@@ -44,7 +44,7 @@
         },
         {
             "title": "Select Arduino Uno",
-            "image": "/static/tutorials/steps/blinkSelectUno.png",
+            "image": "/static/tutorials/steps/blinkSelectUno.webp",
             "imageFocus": {
                 "x": 60,
                 "y": 25,
@@ -57,7 +57,7 @@
         },
         {
             "title": "Add the Board",
-            "image": "/static/tutorials/steps/blinkSelectUno.png",
+            "image": "/static/tutorials/steps/blinkSelectUno.webp",
             "imageFocus": {
                 "x": 49,
                 "y": 27,
@@ -71,7 +71,7 @@
         },
         {
             "title": "Dismiss the Connection Dialog",
-            "image": "/static/tutorials/steps/blinkAddExtension.png",
+            "image": "/static/tutorials/steps/blinkAddExtension.webp",
             "narration": {
                 "id": "gui.tutorials.blinkLed.dismissConnection",
                 "default": "A device connection dialog will appear. Close it by clicking the X button — we will use the simulator instead of a real board."
@@ -84,7 +84,7 @@
         },
         {
             "title": "Switch to Upload Mode",
-            "image": "/static/tutorials/steps/blinkUploadMode.png",
+            "image": "/static/tutorials/steps/blinkUploadMode.webp",
             "imageFocus": {
                 "x": 86,
                 "y": 0,
@@ -98,7 +98,7 @@
         },
         {
             "title": "Find the Setup Block",
-            "image": "/static/tutorials/steps/blinkSetupVisible.png",
+            "image": "/static/tutorials/steps/blinkSetupVisible.webp",
             "imageFocus": {
                 "x": 0,
                 "y": 100,
@@ -115,7 +115,7 @@
         },
         {
             "title": "Drag the Setup Block",
-            "image": "/static/tutorials/steps/blinkSetupDropped.png",
+            "image": "/static/tutorials/steps/blinkSetupDropped.webp",
             "imageFocus": {
                 "x": 38,
                 "y": 56,
@@ -133,7 +133,7 @@
         },
         {
             "title": "Add pinMode to Setup",
-            "image": "/static/tutorials/steps/blinkPinMode.png",
+            "image": "/static/tutorials/steps/blinkPinMode.webp",
             "imageFocus": {
                 "x": 37,
                 "y": 54,
@@ -151,7 +151,7 @@
         },
         {
             "title": "Add digitalWrite HIGH",
-            "image": "/static/tutorials/steps/blinkDwHigh.png",
+            "image": "/static/tutorials/steps/blinkDwHigh.webp",
             "imageFocus": {
                 "x": 37,
                 "y": 54,
@@ -169,7 +169,7 @@
         },
         {
             "title": "Add a Delay",
-            "image": "/static/tutorials/steps/blinkDelay1.png",
+            "image": "/static/tutorials/steps/blinkDelay1.webp",
             "imageFocus": {
                 "x": 35,
                 "y": 55,
@@ -187,7 +187,7 @@
         },
         {
             "title": "Add digitalWrite LOW",
-            "image": "/static/tutorials/steps/blinkDwLow.png",
+            "image": "/static/tutorials/steps/blinkDwLow.webp",
             "imageFocus": {
                 "x": 32,
                 "y": 55,
@@ -204,7 +204,7 @@
         },
         {
             "title": "Add Another Delay",
-            "image": "/static/tutorials/steps/blinkComplete.png",
+            "image": "/static/tutorials/steps/blinkComplete.webp",
             "imageFocus": {
                 "x": 31,
                 "y": 55,
@@ -221,7 +221,7 @@
         },
         {
             "title": "Open the Simulator",
-            "image": "/static/tutorials/steps/blinkSimulator.png",
+            "image": "/static/tutorials/steps/blinkSimulator.webp",
             "imageFocus": {
                 "x": 84,
                 "y": 0,
@@ -235,7 +235,7 @@
         },
         {
             "title": "Open Component Picker",
-            "image": "/static/tutorials/steps/blinkComponentPicker.png",
+            "image": "/static/tutorials/steps/blinkComponentPicker.webp",
             "imageFocus": {
                 "x": 50,
                 "y": 96,
@@ -249,7 +249,7 @@
         },
         {
             "title": "Select LED",
-            "image": "/static/tutorials/steps/blinkComponentPicker.png",
+            "image": "/static/tutorials/steps/blinkComponentPicker.webp",
             "imageFocus": {
                 "x": 100,
                 "y": 24,
@@ -263,7 +263,7 @@
         },
         {
             "title": "Map LED to Pin 13",
-            "image": "/static/tutorials/steps/blinkPinMapping.png",
+            "image": "/static/tutorials/steps/blinkPinMapping.webp",
             "imageFocus": {
                 "x": 98,
                 "y": 58,
@@ -276,7 +276,7 @@
         },
         {
             "title": "LED Added to Simulator",
-            "image": "/static/tutorials/steps/blinkLedAdded.png",
+            "image": "/static/tutorials/steps/blinkLedAdded.webp",
             "imageFocus": {
                 "x": 96,
                 "y": 29,
@@ -289,7 +289,7 @@
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/blinkLedAdded.png",
+            "image": "/static/tutorials/steps/blinkLedAdded.webp",
             "imageFocus": {
                 "x": 78,
                 "y": 7,
@@ -298,12 +298,12 @@
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.blinkLed.clickStart",
-                "default": "Click the green Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board."
+                "default": "Click the Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board."
             }
         },
         {
             "title": "Wait for Compilation",
-            "image": "/static/tutorials/steps/blinkLedAdded.png",
+            "image": "/static/tutorials/steps/blinkLedAdded.webp",
             "imageFocus": {
                 "x": 100,
                 "y": 10,
@@ -316,7 +316,7 @@
         },
         {
             "title": "Watch the LED Blink!",
-            "image": "/static/tutorials/steps/blinkRunning.png",
+            "image": "/static/tutorials/steps/blinkRunning.webp",
             "imageFocus": {
                 "x": 100,
                 "y": 17,

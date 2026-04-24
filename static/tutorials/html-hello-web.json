@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "Click Add Extension",
-            "image": "/static/tutorials/steps/htmlHelloExtLibrary.png",
+            "image": "/static/tutorials/steps/htmlHelloExtLibrary.webp",
             "narration": {
                 "id": "gui.tutorials.htmlHello.addExtension",
                 "default": "Click the purple Add Extension button at the bottom left of the screen to open the Extension Library."
@@ -16,7 +16,7 @@
         },
         {
             "title": "Filter by Programming",
-            "image": "/static/tutorials/steps/htmlHelloProgFilter.png",
+            "image": "/static/tutorials/steps/htmlHelloProgFilter.webp",
             "imageFocus": {
                 "x": 0,
                 "y": 0,
@@ -29,7 +29,7 @@
         },
         {
             "title": "Select HTML 5",
-            "image": "/static/tutorials/steps/htmlHelloProgFilter.png",
+            "image": "/static/tutorials/steps/htmlHelloProgFilter.webp",
             "imageFocus": {
                 "x": 0,
                 "y": 27,
@@ -43,7 +43,7 @@
         },
         {
             "title": "Switch to Upload Mode",
-            "image": "/static/tutorials/steps/htmlHelloUploadMode.png",
+            "image": "/static/tutorials/steps/htmlHelloUploadMode.webp",
             "imageFocus": {
                 "x": 87,
                 "y": 0,
@@ -57,7 +57,7 @@
         },
         {
             "title": "Select the HTML5 Category",
-            "image": "/static/tutorials/steps/htmlHelloFlyout.png",
+            "image": "/static/tutorials/steps/htmlHelloFlyout.webp",
             "imageFocus": {
                 "x": 0,
                 "y": 18,
@@ -71,7 +71,7 @@
         },
         {
             "title": "Drag the <html> Block",
-            "image": "/static/tutorials/steps/htmlHelloDragHtml.png",
+            "image": "/static/tutorials/steps/htmlHelloDragHtml.webp",
             "imageFocus": {
                 "x": 41,
                 "y": 54,
@@ -89,7 +89,7 @@
         },
         {
             "title": "Add the <head> Block",
-            "image": "/static/tutorials/steps/htmlHelloAddHead.png",
+            "image": "/static/tutorials/steps/htmlHelloAddHead.webp",
             "imageFocus": {
                 "x": 41,
                 "y": 55,
@@ -107,7 +107,7 @@
         },
         {
             "title": "Add <title> and Set Text",
-            "image": "/static/tutorials/steps/htmlHelloAddTitle.png",
+            "image": "/static/tutorials/steps/htmlHelloAddTitle.webp",
             "imageFocus": {
                 "x": 37,
                 "y": 54,
@@ -124,7 +124,7 @@
         },
         {
             "title": "Add the <body> Block",
-            "image": "/static/tutorials/steps/htmlHelloAddBody.png",
+            "image": "/static/tutorials/steps/htmlHelloAddBody.webp",
             "imageFocus": {
                 "x": 34,
                 "y": 54,
@@ -142,7 +142,7 @@
         },
         {
             "title": "Add a Heading",
-            "image": "/static/tutorials/steps/htmlHelloAddH1.png",
+            "image": "/static/tutorials/steps/htmlHelloAddH1.webp",
             "imageFocus": {
                 "x": 32,
                 "y": 54,
@@ -159,7 +159,7 @@
         },
         {
             "title": "Add a Paragraph",
-            "image": "/static/tutorials/steps/htmlHelloComplete.png",
+            "image": "/static/tutorials/steps/htmlHelloComplete.webp",
             "imageFocus": {
                 "x": 29,
                 "y": 56,
@@ -176,7 +176,7 @@
         },
         {
             "title": "See the Generated HTML",
-            "image": "/static/tutorials/steps/htmlHelloHTMLTab.png",
+            "image": "/static/tutorials/steps/htmlHelloHTMLTab.webp",
             "imageFocus": {
                 "x": 100,
                 "y": 1,
@@ -190,7 +190,7 @@
         },
         {
             "title": "Preview Your Web Page",
-            "image": "/static/tutorials/steps/htmlHelloViewTab.png",
+            "image": "/static/tutorials/steps/htmlHelloViewTab.webp",
             "imageFocus": {
                 "x": 100,
                 "y": 0,

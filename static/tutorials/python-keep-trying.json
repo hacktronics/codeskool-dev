@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Keep Trying Till You Win",
+            "image": "/static/tutorials/thumbnails/python-keep-trying.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.placeholder",
+                "default": "You'll use a loop that keeps running until the kid finally gets the right answer — the classic play-until-you-win pattern behind every guessing game."
+            }
+        }
+    ]
+}

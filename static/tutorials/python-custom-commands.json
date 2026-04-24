@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Create Your Own Commands",
+            "image": "/static/tutorials/thumbnails/python-custom-commands.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.placeholder",
+                "default": "You'll teach Python your own commands by writing a function — give it a name, tell it what to do, then use it again and again whenever you like."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Built-in Functions — Power Tools",
+            "image": "/static/tutorials/thumbnails/python-built-in-functions-power-tools.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctionsPowerTools.placeholder",
+                "default": "You'll meet Python's built-in power tools — len, max, min, sum, sorted — ready-made commands that save you from rewriting things you'll need again and again."
+            }
+        }
+    ]
+}

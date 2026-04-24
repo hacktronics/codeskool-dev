@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "One Command, One Job",
+            "image": "/static/tutorials/thumbnails/python-one-command-one-job.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.placeholder",
+                "default": "You'll learn to keep each function focused on a single job — small, clear commands that each do one thing well, so you can reuse them anywhere in your code."
+            }
+        }
+    ]
+}

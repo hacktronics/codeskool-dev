@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Save Your Data",
+            "image": "/static/tutorials/thumbnails/python-save-your-data.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.placeholder",
+                "default": "You'll save your data to a file so it stays around after your program ends — come back tomorrow and everything is right where you left it."
+            }
+        }
+    ]
+}

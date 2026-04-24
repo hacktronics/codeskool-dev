@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Traffic Light",
+            "image": "/static/tutorials/thumbnails/traffic-light.webp",
+            "narration": {
+                "id": "gui.tutorials.trafficLight.placeholder",
+                "default": "You'll build a working traffic light with red, yellow and green LEDs — cycling through the lights just like a real one."
+            }
+        }
+    ]
+}

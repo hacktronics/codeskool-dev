@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Automatic Plant Irrigation",
+            "image": "/static/tutorials/thumbnails/automatic-plant-irrigation.webp",
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.placeholder",
+                "default": "You'll build an automatic plant waterer that reads a soil moisture sensor and switches on a pump whenever the soil gets too dry."
+            }
+        }
+    ]
+}

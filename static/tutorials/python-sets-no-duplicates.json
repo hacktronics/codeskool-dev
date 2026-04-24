@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Sets — No Duplicates",
+            "image": "/static/tutorials/thumbnails/python-sets-no-duplicates.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSetsNoDuplicates.placeholder",
+                "default": "You'll learn about sets — a smart collection that throws out duplicates automatically, so you only keep one of each thing."
+            }
+        }
+    ]
+}

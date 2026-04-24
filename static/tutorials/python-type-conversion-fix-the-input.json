@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Type Conversion — Fix the Input",
+            "image": "/static/tutorials/thumbnails/python-type-conversion-fix-the-input.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.placeholder",
+                "default": "You'll learn to turn text into numbers and numbers into text — int, float, str — so input from the keyboard can actually do maths instead of just sitting there as a string."
+            }
+        }
+    ]
+}

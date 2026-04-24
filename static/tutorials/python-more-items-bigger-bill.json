@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "More Items, Bigger Bill",
+            "image": "/static/tutorials/thumbnails/python-more-items-bigger-bill.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.placeholder",
+                "default": "You'll store many shopping items in a list and loop through them to build a growing bill — the more items, the bigger the total."
+            }
+        }
+    ]
+}

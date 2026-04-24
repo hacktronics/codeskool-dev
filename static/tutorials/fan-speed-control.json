@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Fan Speed Control",
+            "image": "/static/tutorials/thumbnails/fan-speed-control.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.placeholder",
+                "default": "You'll control the speed of a fan by turning a knob — smoothly speeding it up or slowing it down, just like a real dimmer."
+            }
+        }
+    ]
+}

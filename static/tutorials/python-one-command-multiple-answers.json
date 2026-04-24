@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "One Command, Multiple Answers",
+            "image": "/static/tutorials/thumbnails/python-one-command-multiple-answers.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.placeholder",
+                "default": "You'll write a single command that gives back different answers depending on what you pass in — one function, many results, reused everywhere in your code."
+            }
+        }
+    ]
+}

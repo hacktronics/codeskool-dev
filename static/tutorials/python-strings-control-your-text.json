@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Strings — Control Your Text",
+            "image": "/static/tutorials/thumbnails/python-strings-control-your-text.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStringsControlYourText.placeholder",
+                "default": "You'll learn Python's string tools — upper, lower, split, replace, strip — commands that let you shape and clean up any piece of text exactly how you want."
+            }
+        }
+    ]
+}

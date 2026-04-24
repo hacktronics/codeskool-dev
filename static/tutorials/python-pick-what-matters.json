@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Pick What Matters",
+            "image": "/static/tutorials/thumbnails/python-pick-what-matters.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.placeholder",
+                "default": "You'll teach your program to look at a bunch of things and pick out the one that matters most — the biggest score, the best answer, the thing that wins."
+            }
+        }
+    ]
+}

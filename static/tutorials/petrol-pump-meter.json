@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Petrol Pump Meter",
+            "image": "/static/tutorials/thumbnails/petrol-pump-meter.webp",
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.placeholder",
+                "default": "You'll build a petrol pump meter that measures how much fuel flows through and shows the amount on a display — just like the one at the petrol station."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Can You Beat the Computer?",
+            "image": "/static/tutorials/thumbnails/python-beat-the-computer.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.placeholder",
+                "default": "You'll play rock-paper-scissors against the computer — the computer picks at random, you pick too, and the program says who won."
+            }
+        }
+    ]
+}

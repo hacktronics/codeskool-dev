@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Line Following Robot",
+            "image": "/static/tutorials/thumbnails/line-following-robot.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.placeholder",
+                "default": "You'll build a robot that drives itself along a black line on the floor — using IR sensors to see the line and motors to steer, just like warehouse robots."
+            }
+        }
+    ]
+}

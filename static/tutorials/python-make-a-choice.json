@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Make a Choice",
+            "image": "/static/tutorials/thumbnails/python-make-a-choice.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.placeholder",
+                "default": "You'll learn how to use if and else so your program can pick between different options."
+            }
+        }
+    ]
+}

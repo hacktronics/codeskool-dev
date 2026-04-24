@@ -1,0 +1,387 @@
+{
+    "gui.tutorials.pythonHello.workspace": {
+        "sha256": "721636f6d68d011959a5fca0cb191d4caa4622ce42a63de499b4db1019232267",
+        "text_len": 316,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 91584,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.typeSay": {
+        "sha256": "c4dfa9dede95c564a544e993690a6747a051be472927f62dff96bea8d54aa134",
+        "text_len": 385,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 108672,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.runSay": {
+        "sha256": "84e862ec816975c1662fe726acdb628963fb688f0150a9776258127cee1b1ca0",
+        "text_len": 338,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 94656,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.typePrint": {
+        "sha256": "7cb6a105f49a28e1758e35b142ba884cedcfbc2531b53eaedf826d60e8886cee",
+        "text_len": 323,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 94944,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.terminal": {
+        "sha256": "492c27219aceeb735719c53218b548d92211334a1dc5dfab81dc00c27dde8198",
+        "text_len": 351,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 103104,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.runBoth": {
+        "sha256": "5d69b79fcabf78f4ab2d2884d71802c3748e65f3410cbc4557acbf4ccf48cb63",
+        "text_len": 351,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 104544,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.pythonHello.recap": {
+        "sha256": "3cce7f0cefb3dace1af3e520fba65291403ad468dc0b7ae1deda2bf14998a986",
+        "text_len": 369,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 103104,
+        "generated_at": "2026-04-24T10:55:15.098894+00:00",
+        "bootstrapped": true
+    },
+    "gui.tutorials.blinkLed.boardMenu": {
+        "sha256": "98313f1ed8768b990ec588dc2e395d1ebc0b1a3512954c0c536ae92e7972dc53",
+        "text_len": 46,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 12672,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.boardManager": {
+        "sha256": "d53bf7cb74c7102d2186c2067c2d9f2ee1dd1b5f61d7d42e77a6d18fc8153dd4",
+        "text_len": 83,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 22656,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.searchUno": {
+        "sha256": "06c6b1fc0de51f69c25a1d88eec34645bebb0e46241aa0465590292c8277d586",
+        "text_len": 60,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 19872,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.selectUno": {
+        "sha256": "d7e0ff81abcb2ce9c9e9f6fa172c019fea36de2ce482680deed501d672c77bb8",
+        "text_len": 32,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 10944,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.addBoard": {
+        "sha256": "4e88a3481256324762959ab132dd3c06364947c25357cbbb23b0858c57d114c3",
+        "text_len": 76,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 20544,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.dismissConnection": {
+        "sha256": "969ae489ce3d0c024abf225e807154ccbb7f1f58fb617e1748d7bba7e8ee973f",
+        "text_len": 116,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 33216,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.uploadMode": {
+        "sha256": "acb9e240fbb6c1189ee65b5bbfb037c14639bc2ce107ec7f33a4a2f910bd0ce5",
+        "text_len": 107,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 33984,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.findSetup": {
+        "sha256": "2e8f8c1dc98994464b0b0a83cec53980bb0839a8e460d346249c34e26b97a1fb",
+        "text_len": 118,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 34656,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.dragSetup": {
+        "sha256": "b09bc1ca4b3e96ebeb2bc7cca59e07b0b3ed73e3cfd7b51b099a9014a9d259da",
+        "text_len": 133,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 40704,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.addPinMode": {
+        "sha256": "cf2805cbb6b6bcec3d0d641d69209129c5730edba092aa9532a9ae826ddfa1a5",
+        "text_len": 69,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 23424,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.dwHigh": {
+        "sha256": "7efef8598e5f74edc0fe23d3ee22898c8f810f3fff9c448ae9a8521dd352b0aa",
+        "text_len": 92,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 31776,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.delay1": {
+        "sha256": "83267329065496cac1a022be8339af7b0b4728fd8b74be5eea55697f2b748a33",
+        "text_len": 81,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 27072,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.dwLow": {
+        "sha256": "3f842e6075a006be9f5c2fd296981c11d6713d65db03b0319d07880bd871e784",
+        "text_len": 86,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 28032,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.delay2": {
+        "sha256": "58222155dc7a1745a27c5440a33af4accff2104407bbdf036bbe294350417f67",
+        "text_len": 116,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 36576,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.simulator": {
+        "sha256": "b2281cc5c36a2e589bb8d93cee73860cb528994a3b5ca14fbb883c8900fcef61",
+        "text_len": 95,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 27456,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.openPicker": {
+        "sha256": "5b1b38a810517b4ca8b55400ba1e909c2992dda83050d5c15249a336e14b124e",
+        "text_len": 63,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 18336,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.selectLed": {
+        "sha256": "2374bf0735d19894f72e0ce489c74020fd67a84c5bc900f9c6536b89fe835a06",
+        "text_len": 57,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 16416,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.pinMapping": {
+        "sha256": "e04bcdbbbf72873e64a438f87212294d5c77535514366d43f1b7c8858178b665",
+        "text_len": 70,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 21792,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.ledAdded": {
+        "sha256": "b8163424461b4650252a817ae41bbd440ea030ce125edbee2498ffeb33b4b7fa",
+        "text_len": 73,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 20736,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.clickStart": {
+        "sha256": "5f6dbdbd1eac14c83fd2d28ae084fdc2d7b56547e00f155dd27e89aa95ae7ed5",
+        "text_len": 106,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 33216,
+        "generated_at": "2026-04-24T12:33:43.808888+00:00"
+    },
+    "gui.tutorials.blinkLed.compiling": {
+        "sha256": "abef5148ac042453531e825f94ba4c38c8499c220ee13c14c2477096e04f5181",
+        "text_len": 110,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 30816,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.blinkLed.running": {
+        "sha256": "f2dc35b10c0fd53ddbd86d6258eafe8e86a85d0c90df660001643d93ed8d0f46",
+        "text_len": 139,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 44832,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addExtension": {
+        "sha256": "6c695cb196d2875bbcb7cf1a7d3154205c7826e318d6e58464860ee30b0ffc0f",
+        "text_len": 96,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 27072,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.progFilter": {
+        "sha256": "f01271516821948d45ee6cb39538bf07ec91b84f6a594cf54b3c2771ac3e0c90",
+        "text_len": 94,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 29952,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.selectHtml5": {
+        "sha256": "62ef779eb8dba73ad129be70443bdd79f291a81c62cad87ef2366b36a51748ee",
+        "text_len": 93,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 28032,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.uploadMode": {
+        "sha256": "601b5a5382e03e456b6ff2c202e132ea07f2d7be1ebf2f00349fdfd7782a1a3f",
+        "text_len": 110,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 34944,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.category": {
+        "sha256": "ac55bcdad34b77c5f6c742c1b8b36b1a43a4fba650a110e5fab354e8cedc0dc6",
+        "text_len": 91,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 31104,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.dragHtml": {
+        "sha256": "258cffee79af508ee59b72ee1c21ec6560e821434b11e272fd24a7f9ac66cc1a",
+        "text_len": 101,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 34464,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addHead": {
+        "sha256": "300eb8f4cceb6749abd942e5ef972610329cc587ac3817e0f8a1aaec76ecfdba",
+        "text_len": 98,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 28224,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addTitle": {
+        "sha256": "dd74dc40ae36540ee2f05fcd544340222ad287fb3b543f60b0313378e86a74fe",
+        "text_len": 123,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 36576,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addBody": {
+        "sha256": "5f70ba91f2d3d2d4bc7a1721acb3beedd1caa2ef362d80d64cea5656a4ccde7a",
+        "text_len": 104,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 27936,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addH1": {
+        "sha256": "7322d4c844b3af5c97497867b39a0f711438d9e579e91e08939db7e4e5a184e1",
+        "text_len": 129,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 36672,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.addParagraph": {
+        "sha256": "7f1ee4de3948a91a56f3b108e7dcbe89557b77319c47dbe58e21acd932d6fd70",
+        "text_len": 124,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 33792,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.htmlTab": {
+        "sha256": "d4ffcb079e3a1ce31686e2c20360fd47227a40aa41c70350640e6e8e90cd76bd",
+        "text_len": 95,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 30624,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    },
+    "gui.tutorials.htmlHello.viewTab": {
+        "sha256": "28ed677b80c19d5931a95785c7d944f829e2d7a654dba5f37f285fc2488054c9",
+        "text_len": 117,
+        "voice": "hi-IN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "hi-IN",
+        "bytes": 37056,
+        "generated_at": "2026-04-24T11:08:33.096152+00:00"
+    }
+}

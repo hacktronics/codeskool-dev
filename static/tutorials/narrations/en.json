@@ -2,39 +2,28 @@
     "gui.tutorials.gettingStarted.addMoveBlock": "Drag the move 10 steps block from the Motion category into the workspace.",
     "gui.tutorials.gettingStarted.addSayBlock": "Now drag the say hello for 2 seconds block from the Looks category and snap it below the move block.",
     "gui.tutorials.gettingStarted.addGreenFlag": "Finally, drag the when green flag clicked block from Events and place it on top of your blocks. Then click the green flag to run your project!",
-
     "gui.tutorials.addSprite.step1": "To add a new sprite, click the Choose a Sprite button at the bottom right of the screen. Pick any sprite you like!",
-
     "gui.tutorials.addBackdrop.step1": "Click the Choose a Backdrop button at the bottom right of the screen to add a new backdrop to your project.",
-
     "gui.tutorials.switchCostume.step1": "Use the switch costume block inside a forever loop to animate your sprite. Each costume is like a frame of animation!",
-
     "gui.tutorials.moveArrowKeys.stepLeftRight": "Use when key pressed blocks for the left and right arrow keys. Add change x blocks to move the sprite left and right.",
     "gui.tutorials.moveArrowKeys.stepUpDown": "Now add when key pressed blocks for the up and down arrow keys. Use change y blocks to move the sprite up and down.",
-
     "gui.tutorials.changeSize.step1": "Use the change size block to make your sprite grow or shrink. Put it in a forever loop to keep changing!",
-
     "gui.tutorials.glideAround.stepBackAndForth": "Use the glide block to make your sprite move smoothly back and forth across the stage.",
     "gui.tutorials.glideAround.stepPoint": "Use the glide to x y block to make your sprite glide to a specific point on the stage.",
-
     "gui.tutorials.spin.stepTurn": "Use the turn block inside a forever loop to make your sprite spin continuously.",
     "gui.tutorials.spin.stepPointInDirection": "Use the point in direction block to set which way your sprite faces before spinning.",
-
     "gui.tutorials.recordASound.stepSoundsTab": "Click on the Sounds tab at the top of the screen to open the sound editor.",
     "gui.tutorials.recordASound.stepClickRecord": "Click the Record button to start recording a new sound.",
     "gui.tutorials.recordASound.stepPressRecordButton": "Press the record button and speak into your microphone to record your sound.",
     "gui.tutorials.recordASound.stepChooseSound": "After recording, you can trim and edit your sound. Press Save to keep it.",
     "gui.tutorials.recordASound.stepPlayYourSound": "Now use the play sound block to play your recorded sound in your project!",
-
     "gui.tutorials.hideAndShow.step1": "Use the hide and show blocks to make your sprite disappear and reappear. Add a wait block in between for a timed effect!",
-
     "gui.tutorials.animateAName.stepPickLetter": "Click the Choose a Sprite button and pick a letter sprite to start spelling out a name.",
     "gui.tutorials.animateAName.stepPlaySound": "Add a when this sprite clicked block and a play sound block so the letter plays a sound when you click it.",
     "gui.tutorials.animateAName.stepPickLetter2": "Choose another letter sprite to add the next letter of your name.",
     "gui.tutorials.animateAName.stepChangeColor": "Add a change color effect block to make this letter change color when clicked.",
     "gui.tutorials.animateAName.stepSpin": "Pick another letter and add a turn block inside a forever loop to make it spin.",
     "gui.tutorials.animateAName.stepGrow": "Pick one more letter and add a change size block to make it grow when clicked.",
-
     "gui.tutorials.animateACharacter.stepPickBackdrop": "Click the Choose a Backdrop button and pick a backdrop for your scene.",
     "gui.tutorials.animateACharacter.stepPickSprite": "Click the Choose a Sprite button and pick a character for your animation.",
     "gui.tutorials.animateACharacter.stepSaySomething": "Add a say block to make your character say something when the green flag is clicked.",
@@ -43,7 +32,6 @@
     "gui.tutorials.animateACharacter.stepMove": "Add when key pressed blocks with change x blocks so your character can move left and right with the arrow keys.",
     "gui.tutorials.animateACharacter.stepJump": "Use change y blocks to make your character jump up and come back down.",
     "gui.tutorials.animateACharacter.stepChangeColor": "Add a change color effect block to make your character change colors.",
-
     "gui.tutorials.tellAStory.stepPickBackdrop": "Click the Choose a Backdrop button and pick a backdrop for your story scene.",
     "gui.tutorials.tellAStory.stepPickSprite": "Click the Choose a Sprite button and pick a character for your story.",
     "gui.tutorials.tellAStory.stepSaySomething": "Add a say block to make your character say something as part of the story.",
@@ -54,7 +42,6 @@
     "gui.tutorials.tellAStory.stepSwitchBackdrop": "Use the switch backdrop block to change scenes in your story.",
     "gui.tutorials.tellAStory.stepHideCharacter": "Use the hide block to make a character disappear when the scene changes.",
     "gui.tutorials.tellAStory.stepShowCharacter": "Use the show block to make a character appear in the new scene.",
-
     "gui.tutorials.sayItOutLoud.stepAddExtension": "Click the Add Extension button at the bottom left and choose the Text to Speech extension to add talking blocks.",
     "gui.tutorials.sayItOutLoud.stepSaySomething": "Drag the speak block into the workspace and type what you want your character to say out loud.",
     "gui.tutorials.sayItOutLoud.stepSetVoice": "Use the set voice block to choose a different voice for your character.",
@@ -65,7 +52,6 @@
     "gui.tutorials.sayItOutLoud.stepChangeColor": "Add a change color effect block to make your character change color while speaking.",
     "gui.tutorials.sayItOutLoud.stepSpin": "Add a turn block to make your character spin around while it talks.",
     "gui.tutorials.sayItOutLoud.stepGrowShrink": "Use the change size block to make your character grow and shrink while speaking.",
-
     "gui.tutorials.imagine.stepTypeWhatYouWant": "Click on the say block and type what you want your character to say.",
     "gui.tutorials.imagine.stepClickGreenFlag": "Click the green flag to see your character say the message you typed.",
     "gui.tutorials.imagine.stepChooseBackdrop": "Click the Choose a Backdrop button and pick any backdrop to set the scene for your world.",
@@ -81,9 +67,7 @@
     "gui.tutorials.imagine.stepSwitchBackdrops": "Use the switch backdrop block to change between different scenes.",
     "gui.tutorials.imagine.stepRecordASound": "Click the Sounds tab and add or record a sound to play in your world.",
     "gui.tutorials.imagine.stepChooseSound": "Choose a sound from the library and add a play sound block to your code.",
-
     "gui.tutorials.addEffects.step1": "Use the change effect block to add visual effects like color, fisheye, whirl, pixelate, mosaic, brightness, and ghost to your sprite.",
-
     "gui.tutorials.makeItFly.stepChooseBackdrop": "Click the Choose a Backdrop button and pick a sky background for your flying game.",
     "gui.tutorials.makeItFly.stepChooseCharacter": "Choose a character sprite that will fly around the screen.",
     "gui.tutorials.makeItFly.stepSaySomething": "Add a say block to make your flying character say something when the game starts.",
@@ -96,13 +80,11 @@
     "gui.tutorials.makeItFly.stepAddScenery": "Add a scenery sprite like clouds or buildings to make the background more interesting.",
     "gui.tutorials.makeItFly.stepMoveScenery": "Add code to make the scenery move across the screen to create a scrolling effect.",
     "gui.tutorials.makeItFly.stepSwitchLooks": "Use the next costume block to change the scenery appearance as it moves.",
-
     "gui.tutorials.makeMusic.stepPickInstrument": "Click the Choose a Sprite button and pick an instrument sprite to use in your music project.",
     "gui.tutorials.makeMusic.stepPlaySound": "Add a when this sprite clicked block and a play sound block so the instrument plays when you click it.",
     "gui.tutorials.makeMusic.stepMakeSong": "Add multiple play sound blocks with different notes to create a song that plays automatically.",
     "gui.tutorials.makeMusic.stepMakeBeat": "Pick a drum sprite and add play drum blocks to create a beat.",
     "gui.tutorials.makeMusic.stepMakeBeatbox": "Pick the microphone sprite and add random play sound blocks for a surprise beatbox effect.",
-
     "gui.tutorials.pong.stepAddBackdrop": "Click the Choose a Backdrop button and pick a simple backdrop for your Pong game.",
     "gui.tutorials.pong.stepAddBallSprite": "Add a ball sprite that will bounce around the stage.",
     "gui.tutorials.pong.stepBounceAround": "Add code to make the ball move and bounce off the edges of the stage.",
@@ -116,7 +98,6 @@
     "gui.tutorials.pong.stepResetScore": "Add a set score to 0 block at the start so the score resets when you begin a new game.",
     "gui.tutorials.pong.stepAddLineSprite": "Add a line sprite at the bottom of the stage to mark the game over zone.",
     "gui.tutorials.pong.stepGameOver": "Add code to stop the game when the ball touches the line at the bottom.",
-
     "gui.tutorials.makeAGame.stepPickSprite": "Click the Choose a Sprite button and pick a sprite to be your clickable target.",
     "gui.tutorials.makeAGame.stepPlaySound": "Add a when this sprite clicked block and a play sound block so the sprite makes a sound when you click it.",
     "gui.tutorials.makeAGame.stepAddScore": "Create a variable called score to track how many times you click the sprite.",
@@ -124,7 +105,6 @@
     "gui.tutorials.makeAGame.stepRandomPosition": "Add a go to random position block so the sprite moves to a new spot after each click.",
     "gui.tutorials.makeAGame.stepChangeColor": "Add a change color effect block to make the sprite change color each time it is clicked.",
     "gui.tutorials.makeAGame.stepResetScore": "Add a set score to 0 block under when green flag clicked so the score resets at the start.",
-
     "gui.tutorials.chaseGame.stepAddBackdrop": "Click the Choose a Backdrop button and pick an underwater or outdoor backdrop for your chase game.",
     "gui.tutorials.chaseGame.stepAddSprite1": "Add a sprite that you will control to chase after objects.",
     "gui.tutorials.chaseGame.stepRightLeft": "Add when key pressed blocks for right and left arrow keys with change x blocks to move the sprite.",
@@ -134,7 +114,6 @@
     "gui.tutorials.chaseGame.stepPlaySound": "Select your character sprite and add an if touching block with a play sound block inside it.",
     "gui.tutorials.chaseGame.stepAddVariable": "Create a variable called score to track how many times you catch the other sprite.",
     "gui.tutorials.chaseGame.stepChangeScore": "Add a change score by 1 block inside the if touching section so the score goes up each time you catch the sprite.",
-
     "gui.tutorials.codeCartoon.stepSaySomething": "Add a when green flag clicked block and a say block to make a character say something when the project starts.",
     "gui.tutorials.codeCartoon.stepAnimate": "Add a when this sprite clicked block with switch costume blocks to animate a character when you click on it.",
     "gui.tutorials.codeCartoon.stepSelectDifferentCharacter": "Click on a different character sprite in the sprite list to select it.",
@@ -146,7 +125,6 @@
     "gui.tutorials.codeCartoon.stepGlideAround": "Add a glide block to make a character glide smoothly across the stage.",
     "gui.tutorials.codeCartoon.stepChangeCostumes": "Use the next costume block in a loop to animate a character by cycling through its costumes.",
     "gui.tutorials.codeCartoon.stepChooseMoreCharacters": "Click the Choose a Sprite button to add more characters and keep building your cartoon!",
-
     "gui.tutorials.cartoonNetwork.stepShowCharacter": "Pick a character sprite and add a show block so it appears on screen.",
     "gui.tutorials.cartoonNetwork.stepSay": "Add a say block to make your character introduce themselves or give instructions.",
     "gui.tutorials.cartoonNetwork.stepGlide": "Add a glide block to make your character move smoothly across the stage.",
@@ -155,12 +133,10 @@
     "gui.tutorials.cartoonNetwork.stepVariable": "Create a variable called score to keep track of how many objects you collect.",
     "gui.tutorials.cartoonNetwork.stepScore": "Add a change score by 1 block so the score increases each time you collect an object.",
     "gui.tutorials.cartoonNetwork.stepBackdrop": "Add code to switch to a new backdrop when the score reaches a certain number to level up.",
-
     "gui.tutorials.videoSensing.stepAddExtension": "Click the Add Extension button at the bottom left and choose the Video Sensing extension.",
     "gui.tutorials.videoSensing.stepPet": "Add a when video motion is greater than block to detect when you wave your hand near the cat sprite.",
     "gui.tutorials.videoSensing.stepAnimate": "Add a next costume block so the sprite animates when it detects video motion.",
     "gui.tutorials.videoSensing.stepPop": "Add a balloon sprite and use video sensing to pop it when you wave your hand over it.",
-
     "gui.tutorials.talking.stepAddExtension": "Click the Add Extension button and choose the Text to Speech extension to add talking blocks.",
     "gui.tutorials.talking.stepChooseSprite": "Click the Choose a Sprite button and pick a character for your tale.",
     "gui.tutorials.talking.stepSaySomething": "Add a speak block and type what you want the character to say out loud.",
@@ -174,7 +150,6 @@
     "gui.tutorials.talking.stepChooseSound": "Go to the Sounds tab and add a music track from the sound library for your characters to dance to.",
     "gui.tutorials.talking.stepDanceMoves": "Add turn and move blocks to make your character dance when the music plays.",
     "gui.tutorials.talking.stepAskAnswer": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer.",
-
     "gui.tutorials.blinkLed.boardMenu": "Click the Board menu in the top menu bar to see board options.",
     "gui.tutorials.blinkLed.boardManager": "Click Board Manager from the dropdown. This opens the board selection dialog.",
     "gui.tutorials.blinkLed.searchUno": "Type UNO in the search box to find the Arduino Uno board.",
@@ -194,10 +169,23 @@
     "gui.tutorials.blinkLed.selectLed": "Select LED from the component list to add it to the simulator.",
     "gui.tutorials.blinkLed.pinMapping": "In the pin mapping dialog, select pin 13 from the dropdown and click Save. This connects the virtual LED to the same pin your code uses.",
     "gui.tutorials.blinkLed.ledAdded": "You can now see the LED component on the simulator board, connected to pin 13.",
-    "gui.tutorials.blinkLed.clickStart": "Click the green Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board.",
+    "gui.tutorials.blinkLed.clickStart": "Click the Start button at the top of the simulator. Your program will be compiled and sent to the virtual Arduino board.",
     "gui.tutorials.blinkLed.compiling": "Wait a few seconds while the program compiles. You will see a loading indicator. Once it finishes, the simulation will start automatically.",
     "gui.tutorials.blinkLed.running": "The LED is now blinking on and off every second! Congratulations, you have created your first Arduino program! Try changing the delay values to make it blink faster or slower.",
-
+    "gui.tutorials.buttonLed.intro": "In this tutorial we will turn an LED on when a button is pressed and off when it is released. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first. When you are ready, click Next.",
+    "gui.tutorials.buttonLed.setupLoop": "Open the Arduino category in the toolbox and drag the setup and loop block into the workspace. Setup runs once at the start and loop runs over and over.",
+    "gui.tutorials.buttonLed.pinModeLed": "Drag a pinMode block into the setup section. Set pin to 13 and mode to OUTPUT. This tells the Arduino that pin 13 is sending signals out to the LED.",
+    "gui.tutorials.buttonLed.pinModeBtn": "Drag a second pinMode block below the first one. Set pin to 2 and mode to INPUT_PULLUP. Pullup means the pin rests at HIGH on its own, and drops to LOW only when the button pulls it down to ground.",
+    "gui.tutorials.buttonLed.ifElse": "Open the Control category and drag an if / else block into the loop section. The if branch runs when the condition is true, otherwise the else branch runs.",
+    "gui.tutorials.buttonLed.digitalRead": "Back in the Arduino category, drag a digitalRead block. Set its pin to 2. This reads whether pin 2 is HIGH or LOW right now.",
+    "gui.tutorials.buttonLed.condition": "Open the Operators category and drag an equals block. Put digitalRead(2) on the left side and a LOW block (from the Arduino category) on the right side. Then drop the whole equals block into the condition slot of the if / else. This reads as: if the button is pressed (pin 2 is LOW), do something, otherwise do something else.",
+    "gui.tutorials.buttonLed.writeHigh": "Drag a digitalWrite block into the if branch. Set pin to 13 and value to HIGH. This turns the LED on when the button is pressed.",
+    "gui.tutorials.buttonLed.writeLow": "Drag another digitalWrite block into the else branch. Keep pin at 13 but set value to LOW. This turns the LED off when the button is not pressed.",
+    "gui.tutorials.buttonLed.openPicker": "Open the Simulator tab and click the plus button at the bottom right to open the component picker.",
+    "gui.tutorials.buttonLed.addLed": "Select LED from the component list. In the pin mapping dialog, choose pin 13 and click Save.",
+    "gui.tutorials.buttonLed.addButton": "Open the component picker again and select Push Button. In the pin mapping dialog, choose pin 2 and click Save. The button is wired to ground — pressing it pulls pin 2 LOW.",
+    "gui.tutorials.buttonLed.start": "Click the Start button at the top of the simulator. Your program will compile and load onto the virtual Arduino.",
+    "gui.tutorials.buttonLed.running": "Click and hold the simulated button. The LED turns on. Release it and the LED turns off. You have just built your first program that reacts to input. Try swapping HIGH and LOW in the digitalWrite blocks to reverse the behaviour.",
     "gui.tutorials.htmlHello.addExtension": "Click the purple Add Extension button at the bottom left of the screen to open the Extension Library.",
     "gui.tutorials.htmlHello.progFilter": "Click the Programming tab at the top to filter the extensions. You will see the HTML 5 extension.",
     "gui.tutorials.htmlHello.selectHtml5": "Click the HTML 5 card to add the HTML extension to your project. This gives you all the blocks needed to build web pages.",
@@ -210,5 +198,35 @@
     "gui.tutorials.htmlHello.addH1": "Drag the heading block inside the body block. Keep the level at 1 for a large heading. Click the text field and type Hello, Web!",
     "gui.tutorials.htmlHello.addParagraph": "Drag a paragraph block and snap it below the heading inside the body. Click the text field and type This is my first web page!",
     "gui.tutorials.htmlHello.htmlTab": "Click the HTML tab on the right panel. You can see the real HTML code that your blocks have generated!",
-    "gui.tutorials.htmlHello.viewTab": "Click the View tab to see your web page rendered in the browser. Congratulations — you have built your first HTML page!"
+    "gui.tutorials.htmlHello.viewTab": "Click the View tab to see your web page rendered in the browser. Congratulations — you have built your first HTML page!",
+    "gui.tutorials.pythonHello.typeSay": "Click inside the Python editor and type exactly this: say(\"Hello World!\") — with the round brackets and the quotes. The word say is a CodeSkool helper — it only works here, not in regular Python on your laptop. When you run it, it will make your penguin speak with a speech bubble on the stage. You can change the words inside the quotes to anything you like — your name, a joke, anything — just keep the word say and the brackets.",
+    "gui.tutorials.pythonHello.runSay": "Now click the Run button in the toolbar below the code editor. Watch the stage on the right — a speech bubble pops up right next to the penguin with your message! That's what say does: it puts your words on the stage as a visual speech bubble, attached to the sprite. Cool, right? But say is only one way Python can show us text. There's another way — and it looks completely different.",
+    "gui.tutorials.pythonHello.typePrint": "Press Enter to go to line 2, then type print(\"Hello World!\"). Now look closely — print is different from say. print is standard Python — it's built into Python itself and works in every Python program ever written, not just CodeSkool. But print doesn't put a speech bubble on the stage. It sends your message somewhere else. Want to know where?",
+    "gui.tutorials.pythonUseAVariable.placeholder": "You'll learn how to store a value in a name you pick, then use that name in your Python code.",
+    "gui.tutorials.pythonAskTheUser.placeholder": "You'll learn how to use input to ask the kid a question and read what they type.",
+    "gui.tutorials.pythonNumbers.placeholder": "You'll learn how to add, subtract, multiply and divide numbers in Python.",
+    "gui.tutorials.pythonMakeAChoice.placeholder": "You'll learn how to use if and else so your program can pick between different options.",
+    "gui.tutorials.pythonGuessTheNumber.placeholder": "You'll build a number-guessing game — the computer picks a secret number and you try to find it with hints like 'too high' or 'too low'.",
+    "gui.tutorials.ledGlowEffect.placeholder": "You'll learn how to use PWM to fade an LED smoothly brighter and dimmer, like a heartbeat.",
+    "gui.tutorials.trafficLight.placeholder": "You'll build a working traffic light with red, yellow and green LEDs — cycling through the lights just like a real one.",
+    "gui.tutorials.sosMorseCode.placeholder": "You'll blink an LED with the SOS Morse signal — three short flashes, three long flashes, three short flashes — the universal call for help.",
+    "gui.tutorials.nightLamp.placeholder": "You'll build a night lamp that turns an LED on automatically when the room gets dark and off when it's bright.",
+    "gui.tutorials.securityAlarm.placeholder": "You'll build a security alarm that sounds a buzzer when a motion sensor spots someone sneaking past.",
+    "gui.tutorials.fanSpeedControl.placeholder": "You'll control the speed of a fan by turning a knob — smoothly speeding it up or slowing it down, just like a real dimmer.",
+    "gui.tutorials.automaticPlantIrrigation.placeholder": "You'll build an automatic plant waterer that reads a soil moisture sensor and switches on a pump whenever the soil gets too dry.",
+    "gui.tutorials.carParkingSensor.placeholder": "You'll build a parking sensor with an ultrasonic distance module — the buzzer beeps faster as the car gets closer to the wall, just like a real car.",
+    "gui.tutorials.automaticHandSanitizer.placeholder": "You'll build a touchless sanitizer dispenser — the ultrasonic sensor spots a hand and a servo squirts the sanitizer, all without anyone touching anything.",
+    "gui.tutorials.smartDoorLock.placeholder": "You'll build a smart door lock that opens with a secret keypad code — type the right code and a servo unlocks the door, type a wrong one and it stays shut.",
+    "gui.tutorials.smartPeopleCounter.placeholder": "You'll build a people counter that ticks up by one every time someone walks past an infrared sensor — just like the counters at shop doors.",
+    "gui.tutorials.pythonSecondChance.placeholder": "You'll use a loop to let the kid try again — asking the same question over until they get it right, just like a real game giving you another chance.",
+    "gui.tutorials.pythonKeepTrying.placeholder": "You'll use a loop that keeps running until the kid finally gets the right answer — the classic play-until-you-win pattern behind every guessing game.",
+    "gui.tutorials.pythonSmartShoppingBill.placeholder": "You'll add up shopping items inside a loop and print a neat bill with the total at the bottom, just like a real supermarket receipt.",
+    "gui.tutorials.pythonMoreItemsBiggerBill.placeholder": "You'll store many shopping items in a list and loop through them to build a growing bill — the more items, the bigger the total.",
+    "gui.tutorials.pythonBeatTheComputer.placeholder": "You'll play rock-paper-scissors against the computer — the computer picks at random, you pick too, and the program says who won.",
+    "gui.tutorials.pythonCustomCommands.placeholder": "You'll teach Python your own commands by writing a function — give it a name, tell it what to do, then use it again and again whenever you like.",
+    "gui.tutorials.pythonOneCommandOneJob.placeholder": "You'll learn to keep each function focused on a single job — small, clear commands that each do one thing well, so you can reuse them anywhere in your code.",
+    "gui.tutorials.pythonHello.workspace": "Before we code, let's look around. The white area on the left is the Python editor — that's where you type code. The penguin on the right lives on the stage — that's where anything visual happens when you run your code. And the dark black strip at the bottom is the terminal — a place where your program can print text messages. Three places, three jobs. Let's use them!",
+    "gui.tutorials.pythonHello.terminal": "See that dark black strip at the bottom of the screen? That's the terminal — some people call it the console. It's a place where Python programs write text for you to read. The stage shows visual things like sprites and speech bubbles. The terminal shows words — plain text, one line after another. Right now the terminal is empty because we haven't run the new print line yet. Let's do it!",
+    "gui.tutorials.pythonHello.runBoth": "Click Run one more time. Two things happen at the same time: the penguin says Hello World! on the stage (that's the say line), AND your message appears in the terminal at the bottom (that's the print line). Same words — two totally different places. So remember: use say when you want the penguin to show a speech bubble; use print when you want to write a message in the terminal.",
+    "gui.tutorials.pythonHello.recap": "Congrats — you just wrote your first Python program! Two lines of real Python. Remember the difference: say is a CodeSkool helper — it makes your sprite speak on the stage. print is standard Python — it writes text to the terminal, and it works the same way in every Python program anywhere. Try changing the words inside the quotes on either line and click Run again to see your new message."
 }

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "SOS Morse Code",
+            "image": "/static/tutorials/thumbnails/sos-morse-code.webp",
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.placeholder",
+                "default": "You'll blink an LED with the SOS Morse signal — three short flashes, three long flashes, three short flashes — the universal call for help."
+            }
+        }
+    ]
+}

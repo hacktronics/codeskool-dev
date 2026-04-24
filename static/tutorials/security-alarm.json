@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Security Alarm",
+            "image": "/static/tutorials/thumbnails/security-alarm.webp",
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.placeholder",
+                "default": "You'll build a security alarm that sounds a buzzer when a motion sensor spots someone sneaking past."
+            }
+        }
+    ]
+}

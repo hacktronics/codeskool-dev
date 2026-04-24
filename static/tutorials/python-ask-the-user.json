@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Ask the User",
+            "image": "/static/tutorials/thumbnails/python-ask-the-user.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.placeholder",
+                "default": "You'll learn how to use input to ask the kid a question and read what they type."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Tuples — Fixed Together",
+            "image": "/static/tutorials/thumbnails/python-tuples-fixed-together.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuplesFixedTogether.placeholder",
+                "default": "You'll learn about tuples — a way to hold a few things together that should never change, like coordinates on a map or the red-green-blue of a colour."
+            }
+        }
+    ]
+}

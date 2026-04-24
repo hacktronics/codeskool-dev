@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Smart Shopping Bill",
+            "image": "/static/tutorials/thumbnails/python-smart-shopping-bill.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.placeholder",
+                "default": "You'll add up shopping items inside a loop and print a neat bill with the total at the bottom, just like a real supermarket receipt."
+            }
+        }
+    ]
+}

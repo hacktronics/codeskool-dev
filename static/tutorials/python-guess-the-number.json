@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Guess the Secret Number",
+            "image": "/static/tutorials/thumbnails/python-guess-the-number.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.placeholder",
+                "default": "You'll build a number-guessing game — the computer picks a secret number and you try to find it with hints like 'too high' or 'too low'."
+            }
+        }
+    ]
+}

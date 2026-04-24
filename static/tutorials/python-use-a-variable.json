@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Use a Variable",
+            "image": "/static/tutorials/thumbnails/python-use-a-variable.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.placeholder",
+                "default": "You'll learn how to store a value in a name you pick, then use that name in your Python code."
+            }
+        }
+    ]
+}

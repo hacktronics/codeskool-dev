@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Store Data with Meaning",
+            "image": "/static/tutorials/thumbnails/python-store-data-with-meaning.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.placeholder",
+                "default": "You'll learn to store information with labels that explain what each piece means — like a name tag on every bit of data, so you can look things up by name instead of by position."
+            }
+        }
+    ]
+}

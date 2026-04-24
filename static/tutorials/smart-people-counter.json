@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Smart People Counter",
+            "image": "/static/tutorials/thumbnails/smart-people-counter.webp",
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.placeholder",
+                "default": "You'll build a people counter that ticks up by one every time someone walks past an infrared sensor — just like the counters at shop doors."
+            }
+        }
+    ]
+}

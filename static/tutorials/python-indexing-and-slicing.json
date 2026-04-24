@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Indexing & Slicing — Pick What You Want",
+            "image": "/static/tutorials/thumbnails/python-indexing-and-slicing.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.placeholder",
+                "default": "You'll learn to reach into a list or a piece of text and pull out exactly what you want — one item, the last item, or a whole slice from the middle."
+            }
+        }
+    ]
+}

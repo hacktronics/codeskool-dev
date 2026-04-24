@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "LED Glow Effect",
+            "image": "/static/tutorials/thumbnails/led-glow-effect.webp",
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.placeholder",
+                "default": "You'll learn how to use PWM to fade an LED smoothly brighter and dimmer, like a heartbeat."
+            }
+        }
+    ]
+}

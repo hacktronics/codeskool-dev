@@ -5,7 +5,6 @@
         "tags": ["ai"],
         "img": "/static/examples/thumbnails/nlp.webp",
         "insetIconURL": "ai",
-        "isMemberOnly": true,
         "urlId": "nlp"
     },
     "OllamaToolCall": {

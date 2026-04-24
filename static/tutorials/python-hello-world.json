@@ -1,0 +1,110 @@
+{
+    "steps": [
+        {
+            "title": "Meet your workspace",
+            "image": "/static/tutorials/steps/pythonHello_01_workspace.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.workspace",
+                "default": "Before we code, let's look around. The white area on the left is the Python editor — that's where you type code. The penguin on the right lives on the stage — that's where anything visual happens when you run your code. And the dark black strip at the bottom is the terminal — a place where your program can print text messages. Three places, three jobs. Let's use them!"
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 53,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Type your first Python line",
+            "image": "/static/tutorials/steps/pythonHello_02_sayTyped.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.typeSay",
+                "default": "Click inside the Python editor and type exactly this: say(\"Hello World!\") — with the round brackets and the quotes. The word say is a CodeSkool helper — it only works here, not in regular Python on your laptop. When you run it, it will make your penguin speak with a speech bubble on the stage. You can change the words inside the quotes to anything you like — your name, a joke, anything — just keep the word say and the brackets."
+            },
+            "validateCode": {
+                "functionName": "say",
+                "lineIndex": 0
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Click Run — watch the penguin!",
+            "image": "/static/tutorials/steps/pythonHello_03_penguinSays.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.runSay",
+                "default": "Now click the Run button in the toolbar below the code editor. Watch the stage on the right — a speech bubble pops up right next to the penguin with your message! That's what say does: it puts your words on the stage as a visual speech bubble, attached to the sprite. Cool, right? But say is only one way Python can show us text. There's another way — and it looks completely different."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 100,
+                "y": 60,
+                "zoom": 1.2
+            }
+        },
+        {
+            "title": "Add a second line — print",
+            "image": "/static/tutorials/steps/pythonHello_04_bothLines.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.typePrint",
+                "default": "Press Enter to go to line 2, then type print(\"Hello World!\"). Now look closely — print is different from say. print is standard Python — it's built into Python itself and works in every Python program ever written, not just CodeSkool. But print doesn't put a speech bubble on the stage. It sends your message somewhere else. Want to know where?"
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 1
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "This is the terminal",
+            "image": "/static/tutorials/steps/pythonHello_05_terminalEmpty.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.terminal",
+                "default": "See that dark black strip at the bottom of the screen? That's the terminal — some people call it the console. It's a place where Python programs write text for you to read. The stage shows visual things like sprites and speech bubbles. The terminal shows words — plain text, one line after another. Right now the terminal is empty because we haven't run the new print line yet. Let's do it!"
+            },
+            "highlightUI": "terminal",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 100,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Click Run — see both at once!",
+            "image": "/static/tutorials/steps/pythonHello_06_printed.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.runBoth",
+                "default": "Click Run one more time. Two things happen at the same time: the penguin says Hello World! on the stage (that's the say line), AND your message appears in the terminal at the bottom (that's the print line). Same words — two totally different places. So remember: use say when you want the penguin to show a speech bubble; use print when you want to write a message in the terminal."
+            },
+            "highlightUI": "pythonRun",
+            "_sourceCrop": {
+                "x": 50,
+                "y": 52,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Congrats on your first Python program!",
+            "image": "/static/tutorials/steps/pythonHello_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHello.recap",
+                "default": "Congrats — you just wrote your first Python program! Two lines of real Python. Remember the difference: say is a CodeSkool helper — it makes your sprite speak on the stage. print is standard Python — it writes text to the terminal, and it works the same way in every Python program anywhere. Try changing the words inside the quotes on either line and click Run again to see your new message."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

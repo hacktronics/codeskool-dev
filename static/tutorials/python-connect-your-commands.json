@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Connect Your Commands",
+            "image": "/static/tutorials/thumbnails/python-connect-your-commands.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.placeholder",
+                "default": "You'll learn to call one command from inside another — connecting small commands together to build bigger programs out of simple, reusable pieces."
+            }
+        }
+    ]
+}

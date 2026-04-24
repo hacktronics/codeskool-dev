@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Built-in Advanced — Extra Power",
+            "image": "/static/tutorials/thumbnails/python-built-in-advanced-extra-power.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvancedExtraPower.placeholder",
+                "default": "You'll unlock Python's advanced built-in tools — zip, enumerate, map, filter, any, all — the commands that turn long loops into one clean line of code."
+            }
+        }
+    ]
+}

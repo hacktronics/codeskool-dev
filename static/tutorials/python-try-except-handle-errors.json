@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Try / Except — Handle Errors",
+            "image": "/static/tutorials/thumbnails/python-try-except-handle-errors.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExceptHandleErrors.placeholder",
+                "default": "You'll learn to catch mistakes before they crash your program — try something, and if it goes wrong, except lets you handle it nicely instead of blowing up."
+            }
+        }
+    ]
+}

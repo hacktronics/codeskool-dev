@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Smart Door Lock",
+            "image": "/static/tutorials/thumbnails/smart-door-lock.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.placeholder",
+                "default": "You'll build a smart door lock that opens with a secret keypad code — type the right code and a servo unlocks the door, type a wrong one and it stays shut."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Boolean Logic — Make Smart Decisions",
+            "image": "/static/tutorials/thumbnails/python-boolean-logic-smart-decisions.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogicSmartDecisions.placeholder",
+                "default": "You'll use True, False, and, or, not to build smart decisions — checking two things at once, flipping answers, and asking exactly the right question every time."
+            }
+        }
+    ]
+}

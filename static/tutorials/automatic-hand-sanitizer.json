@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Automatic Hand Sanitizer",
+            "image": "/static/tutorials/thumbnails/automatic-hand-sanitizer.webp",
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.placeholder",
+                "default": "You'll build a touchless sanitizer dispenser — the ultrasonic sensor spots a hand and a servo squirts the sanitizer, all without anyone touching anything."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Car Parking Sensor System",
+            "image": "/static/tutorials/thumbnails/car-parking-sensor.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.placeholder",
+                "default": "You'll build a parking sensor with an ultrasonic distance module — the buzzer beeps faster as the car gets closer to the wall, just like a real car."
+            }
+        }
+    ]
+}

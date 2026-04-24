@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Night Lamp",
+            "image": "/static/tutorials/thumbnails/night-lamp.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.placeholder",
+                "default": "You'll build a night lamp that turns an LED on automatically when the room gets dark and off when it's bright."
+            }
+        }
+    ]
+}

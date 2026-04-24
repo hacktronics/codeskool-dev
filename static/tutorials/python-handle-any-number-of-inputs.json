@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Handle Any Number of Inputs",
+            "image": "/static/tutorials/thumbnails/python-handle-any-number-of-inputs.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.placeholder",
+                "default": "You'll write a command that can take one input, five inputs, or fifty — no limit — and work with all of them at once, no matter how many you give it."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Second Chance",
+            "image": "/static/tutorials/thumbnails/python-second-chance.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.placeholder",
+                "default": "You'll use a loop to let the kid try again — asking the same question over until they get it right, just like a real game giving you another chance."
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "steps": [
+        {
+            "title": "Numbers in Python",
+            "image": "/static/tutorials/thumbnails/python-numbers.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonNumbers.placeholder",
+                "default": "You'll learn how to add, subtract, multiply and divide numbers in Python."
+            }
+        }
+    ]
+}
