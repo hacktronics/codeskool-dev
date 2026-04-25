@@ -1,11 +1,139 @@
 {
     "steps": [
         {
-            "title": "Night Lamp",
-            "image": "/static/tutorials/thumbnails/night-lamp.webp",
+            "title": "A lamp that knows when it's dark",
+            "image": "/static/tutorials/steps/nightLampIntro.webp",
             "narration": {
-                "id": "gui.tutorials.nightLamp.placeholder",
-                "default": "You'll build a night lamp that turns an LED on automatically when the room gets dark and off when it's bright."
+                "id": "gui.tutorials.nightLamp.intro",
+                "default": "Streetlights don't have a person flipping a switch every evening. They turn themselves on when the sky gets dark and off when the sun comes up. Today you'll build a tiny version of that same idea — an LED that reads the room's light level and decides on its own whether to glow. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/nightLampSetupLoop.webp",
+            "imageFocus": {"x": 60, "y": 50, "zoom": 2.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Only the LED needs setup",
+            "image": "/static/tutorials/steps/nightLampPinMode.webp",
+            "imageFocus": {"x": 58, "y": 48, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.pinMode",
+                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT — that's the LED. The light sensor lives on pin A0, but A0 is read-only by nature, so it doesn't need a pinMode. Only outputs do."
+            },
+            "validate": true
+        },
+        {
+            "title": "We'll need a box for the sensor reading",
+            "image": "/static/tutorials/steps/nightLampMakeVar.webp",
+            "imageFocus": {"x": 12, "y": 30, "zoom": 2.6},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.makeVar",
+                "default": "Open Variables and click Make a Variable. Name it lightValue. This will hold the latest reading from the light sensor — a number between 0 (pitch dark, like a closed cupboard) and 1023 (bright noon sunshine)."
+            },
+            "validate": true
+        },
+        {
+            "title": "Read the light sensor",
+            "image": "/static/tutorials/steps/nightLampReadLdr.webp",
+            "imageFocus": {"x": 58, "y": 58, "zoom": 2.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogReadFn"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.readLdr",
+                "default": "Drag a set lightValue block into the loop. For the value, drag an analogRead block from the Arduino category and drop it in place of the 0. Set analogRead's pin to A0. analogRead measures the voltage on a pin and gives back a number from 0 to 1023 — Arduino's way of telling us how bright the room is."
+            },
+            "validate": true
+        },
+        {
+            "title": "Time to make a decision",
+            "image": "/static/tutorials/steps/nightLampIfElse.webp",
+            "imageFocus": {"x": 55, "y": 65, "zoom": 2.6},
+            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.ifElse",
+                "default": "Drag an if / else block below the set lightValue block. Now the program will pick a path: bright room or dark room. The if branch handles one case, the else branch handles the other."
+            },
+            "validate": true
+        },
+        {
+            "title": "How dark is dark enough?",
+            "image": "/static/tutorials/steps/nightLampCondition.webp",
+            "imageFocus": {"x": 58, "y": 58, "zoom": 2.8},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.condition",
+                "default": "Open Operators. Drag a less-than block into the condition slot of the if / else. Drop the lightValue variable on the left side. Change the right side to 500. The condition reads: 'if the light reading is below 500, the room is dark — switch the lamp on'. 500 is just our chosen line in the sand; you can tune it later."
+            },
+            "validate": true
+        },
+        {
+            "title": "Dark — light up",
+            "image": "/static/tutorials/steps/nightLampLedOn.webp",
+            "imageFocus": {"x": 58, "y": 65, "zoom": 2.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.ledOn",
+                "default": "Drag a digitalWrite block into the if branch. Set pin to 9 and keep value on HIGH. When the room is below 500 — too dark — the LED turns on."
+            },
+            "validate": true
+        },
+        {
+            "title": "Bright — switch off",
+            "image": "/static/tutorials/steps/nightLampLedOff.webp",
+            "imageFocus": {"x": 58, "y": 72, "zoom": 2.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.ledOff",
+                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW — the LED switches off when the room is bright enough on its own."
+            },
+            "validate": true
+        },
+        {
+            "title": "A small pause",
+            "image": "/static/tutorials/steps/nightLampDelay.webp",
+            "imageFocus": {"x": 55, "y": 80, "zoom": 2.5},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.delay",
+                "default": "Drag a delay block below the if / else. Set it to 100 milliseconds. The Arduino now checks the light level ten times every second — fast enough to feel instant, but gentle enough to keep the loop calm."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the LED and the light sensor",
+            "image": "/static/tutorials/steps/nightLampAddLed.webp",
+            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.addLed",
+                "default": "Open the Simulator and click the plus button. Add an LED on pin 9. Then click the plus button again and add a Photoresistor on pin A0 — that's the light sensor that stands in for our LDR. Both parts are now wired up."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/nightLampStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.start",
+                "default": "Click Start. Your program compiles and starts watching the light level."
+            }
+        },
+        {
+            "title": "Try it out",
+            "image": "/static/tutorials/steps/nightLampRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.nightLamp.running",
+                "default": "Drag the LDR slider in the simulator down to a low number — the LED comes on. Slide it back up high and the LED switches off. On a real board you'd cover the LDR with your hand for the same effect. Try this: change 500 to 200 — your lamp now waits for a really dark room. Or change to 800 and watch it stay on most of the day. That single number is your lamp's personality."
             }
         }
     ]

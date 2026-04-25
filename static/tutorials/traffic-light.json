@@ -1,11 +1,171 @@
 {
     "steps": [
         {
-            "title": "Traffic Light",
-            "image": "/static/tutorials/thumbnails/traffic-light.webp",
+            "title": "A traffic light at your desk",
+            "image": "/static/tutorials/steps/trafficIntro.webp",
             "narration": {
-                "id": "gui.tutorials.trafficLight.placeholder",
-                "default": "You'll build a working traffic light with red, yellow and green LEDs — cycling through the lights just like a real one."
+                "id": "gui.tutorials.trafficLight.intro",
+                "default": "Every junction in the world runs the same simple program: red, then green, then a quick yellow warning, back to red. Today you'll write that program yourself with three LEDs. Once it's running you'll understand exactly what's happening inside the metal box at every traffic light you've ever waited at. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first. When you are ready, click Next."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/trafficSetupLoop.webp",
+            "imageFocus": {"x": 60, "y": 50, "zoom": 2.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. Setup runs once at the start. Loop runs forever — perfect for a traffic light cycle that should never stop."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Three lights mean three pins",
+            "image": "/static/tutorials/steps/trafficPinRed.webp",
+            "imageFocus": {"x": 60, "y": 50, "zoom": 2.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.pinRed",
+                "default": "Each LED needs its own pin. Drag a pinMode block into the setup section. Set pin to 8 and leave mode on OUTPUT. Pin 8 will drive the red LED."
+            },
+            "validate": true
+        },
+        {
+            "title": "pinMode for the yellow LED",
+            "image": "/static/tutorials/steps/trafficPinYellow.webp",
+            "imageFocus": {"x": 60, "y": 52, "zoom": 2.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.pinYellow",
+                "default": "Drag a second pinMode block below the first. Set pin to 9 — this pin will drive the yellow LED."
+            },
+            "validate": true
+        },
+        {
+            "title": "pinMode for the green LED",
+            "image": "/static/tutorials/steps/trafficPinGreen.webp",
+            "imageFocus": {"x": 60, "y": 55, "zoom": 1.9},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.pinGreen",
+                "default": "Drag one more pinMode block below. Set pin to 10 — the green LED. Now all three pins know they're sending signals out."
+            },
+            "validate": true
+        },
+        {
+            "title": "Phase 1: red on",
+            "image": "/static/tutorials/steps/trafficRedOn.webp",
+            "imageFocus": {"x": 60, "y": 60, "zoom": 1.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.redOn",
+                "default": "Drag a digitalWrite block into the loop section. Set pin to 8 and value to HIGH — the red light comes on. The cycle starts here, just like a real junction."
+            },
+            "validate": true
+        },
+        {
+            "title": "Make sure the others are off",
+            "image": "/static/tutorials/steps/trafficOthersOff.webp",
+            "imageFocus": {"x": 60, "y": 65, "zoom": 1.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.othersOff",
+                "default": "A real traffic light NEVER shows two colours at once — that would tell drivers two things at the same time. Drag two more digitalWrite blocks below. Set the first to pin 9, value LOW (yellow off). Set the second to pin 10, value LOW (green off). Now only red is on."
+            },
+            "validate": true
+        },
+        {
+            "title": "Hold red for two seconds",
+            "image": "/static/tutorials/steps/trafficDelayRed.webp",
+            "imageFocus": {"x": 60, "y": 70, "zoom": 1.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.delayRed",
+                "default": "Drag a delay block below. Change its value to 2000 — that's 2000 milliseconds, or two seconds. The red light stays on while the Arduino waits here."
+            },
+            "validate": true
+        },
+        {
+            "title": "Phase 2: switch to green",
+            "image": "/static/tutorials/steps/trafficGreenOn.webp",
+            "imageFocus": {"x": 60, "y": 60, "zoom": 1.5},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.greenOn",
+                "default": "Time to let the cars go. Add two digitalWrite blocks. First: pin 8, LOW — red off. Second: pin 10, HIGH — green on. Then add a delay of 2000 so green stays on for two seconds."
+            },
+            "validate": true
+        },
+        {
+            "title": "Phase 3: warn with yellow",
+            "image": "/static/tutorials/steps/trafficYellowOn.webp",
+            "imageFocus": {"x": 60, "y": 55, "zoom": 1.4},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.yellowOn",
+                "default": "Yellow means 'get ready to stop'. Add two more digitalWrite blocks. First: pin 10, LOW — green off. Second: pin 9, HIGH — yellow on. Then a delay of 1000 — yellow is always shorter than red or green, just like in real life."
+            },
+            "validate": true
+        },
+        {
+            "title": "Reset before the cycle restarts",
+            "image": "/static/tutorials/steps/trafficFinalReset.webp",
+            "imageFocus": {"x": 60, "y": 50, "zoom": 1.3},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.finalReset",
+                "default": "Add one last digitalWrite — pin 9, LOW — so the yellow turns off before the loop restarts and red comes back on. Without this, yellow would be on at the same time as red the next pass. Your traffic light cycle is now complete."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the red LED",
+            "image": "/static/tutorials/steps/trafficAddRed.webp",
+            "imageFocus": {"x": 100, "y": 35, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.trafficLight.addRed",
+                "default": "Open the Simulator tab and click the plus button. Choose LED, pick pin 8, and click Save. This is the red light."
+            }
+        },
+        {
+            "title": "Add the yellow LED",
+            "image": "/static/tutorials/steps/trafficAddYellow.webp",
+            "imageFocus": {"x": 100, "y": 35, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.trafficLight.addYellow",
+                "default": "Add another LED on pin 9 — the yellow light."
+            }
+        },
+        {
+            "title": "Add the green LED",
+            "image": "/static/tutorials/steps/trafficAddGreen.webp",
+            "imageFocus": {"x": 100, "y": 55, "zoom": 2.0},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.trafficLight.addGreen",
+                "default": "Add the third LED on pin 10 — the green light. All three lights are wired up."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/trafficStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.trafficLight.start",
+                "default": "Click Start. Your program compiles and the traffic light begins its cycle."
+            }
+        },
+        {
+            "title": "Watch the cycle",
+            "image": "/static/tutorials/steps/trafficRunning.webp",
+            "imageFocus": {"x": 100, "y": 70, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.trafficLight.running",
+                "default": "Red for two seconds, then green for two, then a one-second yellow, then back to red — a proper junction. Try this: change the red delay to 5000 to make a busy main-road light. Or add a fourth LED on pin 11 as a pedestrian walk signal that comes on whenever red is on. Real traffic engineers do exactly this for every corner."
             }
         }
     ]

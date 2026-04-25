@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Boolean Logic — Make Smart Decisions",
-            "image": "/static/tutorials/thumbnails/python-boolean-logic-smart-decisions.webp",
+            "title": "One condition isn't always enough",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonBooleanLogicSmartDecisions.placeholder",
-                "default": "You'll use True, False, and, or, not to build smart decisions — checking two things at once, flipping answers, and asking exactly the right question every time."
+                "id": "gui.tutorials.pythonBooleanLogic.intro",
+                "default": "Last tutorial, your if checked ONE thing — age >= 10. But real decisions often need more. A theme-park ride might need \"tall enough AND has a ticket\". A free coupon might accept \"adult OR has a voucher\". Today you'll learn the three small words Python uses to combine conditions: and, or, not. Each one is a standard Python keyword."
+            }
+        },
+        {
+            "title": "Set up the data",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_02_variables.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.typeVars",
+                "default": "Type these three lines:\n\nage = 15\nhas_pass = True\nvip = False\n\nage holds a number like before. has_pass and vip hold True and False — Python's two special yes/no values. They're called booleans after the mathematician George Boole, who first wrote down the rules of true/false logic. You'll use these three variables in every if below."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "AND — both sides must be true",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_03_and.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.typeAnd",
+                "default": "Leave a blank line, then type:\n\nif age > 10 and has_pass:\n    print(\"Allowed (AND)\")\n\nRead it in English: \"if age is more than 10 AND has_pass is True\". Both halves must be true for the whole thing to be true. 15 > 10 is true, and has_pass is True — so Python prints the line. If has_pass were False, Python would skip even though the age check passed."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "OR — at least one side must be true",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_04_or.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.typeOr",
+                "default": "Type next:\n\nif age > 18 or has_pass:\n    print(\"Allowed (OR)\")\n\nIn English: \"if the kid is older than 18 OR has a pass\". With or, only ONE side needs to be true. age > 18 is false (15 is not over 18), but has_pass is True — so the whole thing is true and the line prints. or is lenient; and is strict."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "NOT — flip true and false",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_05_not.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.typeNot",
+                "default": "Type next:\n\nif not has_pass:\n    print(\"No pass\")\n\nnot flips the value. If has_pass is True, not has_pass is False. If has_pass is False, not has_pass is True. Right now has_pass is True, so not has_pass is False and nothing prints. Change has_pass to False on line 2 and run again — the line will print."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Combine with parentheses",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_06_combined.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.typeCombined",
+                "default": "Type the last block:\n\nif (age > 18 and has_pass) or vip:\n    print(\"Access allowed\")\nelse:\n    print(\"Access denied\")\n\nParentheses group conditions so Python knows which go together. This one says \"either (old enough AND has a pass) or (is a VIP)\". Neither group is true right now, so Python prints Access denied. VIPs always get in, regardless of age or pass."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 9
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch all the decisions unfold",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_07_terminal.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.run",
+                "default": "Click Run. The terminal prints Allowed (AND) and Allowed (OR) — and Access denied at the bottom. The not line stayed silent because has_pass is True. Try changing values on lines 1-3 and running again: make vip = True and Access will flip to allowed; make has_pass = False and the AND check will stop passing."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "The three-word logic toolkit",
+            "image": "/static/tutorials/steps/pythonBooleanLogic_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.recap",
+                "default": "You now have and, or, not. With these three words you can express almost any rule a game or app would need. Games like Rock Paper Scissors — which you'll build in a few tutorials — rely on and chains to figure out who wins. Keep them in your head: and is strict, or is lenient, not flips, parentheses group."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

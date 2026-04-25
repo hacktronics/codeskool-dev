@@ -1,148 +1,148 @@
 {
     "steps": [
         {
-            "title": "Control an LED with a Button",
+            "title": "An LED that listens to you",
             "image": "/static/tutorials/steps/btnLedIntro.webp",
             "narration": {
                 "id": "gui.tutorials.buttonLed.intro",
-                "default": "In this tutorial we will turn an LED on when a button is pressed and off when it is released. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first. When you are ready, click Next."
+                "default": "Every doorbell, every elevator button, every keyboard key on your laptop — they all do one tiny thing: turn an electrical signal on while you press, and off when you let go. Today you'll teach an LED that exact trick. Press the button, the light comes on. Release it, the light goes off. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first. When you are ready, click Next."
             }
         },
         {
-            "title": "Drag the setup / loop Block",
+            "title": "Drag the setup / loop block",
             "image": "/static/tutorials/steps/btnLedSetupLoop.webp",
-            "imageFocus": {"x": 38, "y": 56, "zoom": 2.9},
+            "imageFocus": {"x": 60, "y": 55, "zoom": 2.4},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.setupLoop",
-                "default": "Open the Arduino category in the toolbox and drag the setup and loop block into the workspace. Setup runs once at the start and loop runs over and over."
+                "default": "Open the Arduino category in the toolbox and drag the setup-and-loop block into the workspace. Setup runs once when the program starts — like getting dressed in the morning. Loop runs over and over forever — like your heartbeat."
             },
             "requiresEmptyWorkspaceBefore": true,
             "validate": true
         },
         {
-            "title": "pinMode for the LED",
+            "title": "Tell pin 13 it's an output",
             "image": "/static/tutorials/steps/btnLedPinModeLed.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 60, "y": 50, "zoom": 2.4},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.pinModeLed",
-                "default": "Drag a pinMode block into the setup section. Set pin to 13 and mode to OUTPUT. This tells the Arduino that pin 13 is sending signals out to the LED."
+                "default": "Drag a pinMode block into the setup section. Set pin to 13 and mode to OUTPUT. Output means the Arduino will SEND electricity out on this pin — that's how it lights up the LED."
             },
             "validate": true
         },
         {
-            "title": "pinMode for the Button",
+            "title": "Tell pin 2 it's an input — with a twist",
             "image": "/static/tutorials/steps/btnLedPinModeBtn.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 60, "y": 52, "zoom": 2.4},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.pinModeBtn",
-                "default": "Drag a second pinMode block below the first one. Set pin to 2 and mode to INPUT_PULLUP. Pullup means the pin rests at HIGH on its own, and drops to LOW only when the button pulls it down to ground."
+                "default": "Drag a second pinMode block below the first one. Set pin to 2 and mode to INPUT_PULLUP. INPUT_PULLUP is a clever trick — Arduino keeps the pin gently held HIGH all on its own, and pressing the button pulls it down to LOW. So a pressed button reads LOW. That feels backwards, but it's the most reliable way to wire a button."
             },
             "validate": true
         },
         {
-            "title": "Add an if / else Block",
+            "title": "Now we need a decision",
             "image": "/static/tutorials/steps/btnLedIfElse.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 55, "y": 60, "zoom": 2.2},
             "highlightBlock": {"category": "control", "blockType": "control_if_else"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.ifElse",
-                "default": "Open the Control category and drag an if / else block into the loop section. The if branch runs when the condition is true, otherwise the else branch runs."
+                "default": "Open the Control category and drag an if / else block into the loop section. This is the very first block in your tutorials that DECIDES — the if branch runs when the condition is true, otherwise the else branch runs. Two paths, one chosen each time the loop runs."
             },
             "validate": true
         },
         {
-            "title": "Add the digitalRead Block",
+            "title": "Read what's on pin 2 right now",
             "image": "/static/tutorials/steps/btnLedDigitalRead.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 50, "y": 50, "zoom": 2.2},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalReadFn"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.digitalRead",
-                "default": "Back in the Arduino category, drag a digitalRead block. Set its pin to 2. This reads whether pin 2 is HIGH or LOW right now."
+                "default": "Back in the Arduino category, drag a digitalRead block. Set its pin to 2. digitalRead is the opposite of digitalWrite — instead of sending a signal out, it asks 'what's on this pin right now?' and reports back HIGH or LOW."
             },
             "validate": true
         },
         {
-            "title": "Build the Condition: digitalRead = LOW",
+            "title": "Build the question: is the button pressed?",
             "image": "/static/tutorials/steps/btnLedCondition.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 60, "y": 60, "zoom": 2.2},
             "narration": {
                 "id": "gui.tutorials.buttonLed.condition",
-                "default": "Open the Operators category and drag an equals block. Put digitalRead(2) on the left side and a LOW block (from the Arduino category) on the right side. Then drop the whole equals block into the condition slot of the if / else. This reads as: if the button is pressed (pin 2 is LOW), do something, otherwise do something else."
+                "default": "Open the Operators category and drag an equals block. Put digitalRead(2) on the left side and a LOW block (from the Arduino category) on the right side. Then drop the whole equals block into the condition slot of the if / else. Remember the pull-up trick — a pressed button reads LOW. So the question now reads: 'is pin 2 LOW right now?' which is the same as 'is the button pressed?'"
             },
             "validate": true
         },
         {
-            "title": "Turn the LED On When Pressed",
+            "title": "Pressed: turn the LED on",
             "image": "/static/tutorials/steps/btnLedWriteHigh.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 60, "y": 62, "zoom": 2.2},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.writeHigh",
-                "default": "Drag a digitalWrite block into the if branch. Set pin to 13 and value to HIGH. This turns the LED on when the button is pressed."
+                "default": "Drag a digitalWrite block into the if branch (the top one). Set pin to 13 and value to HIGH. This is what runs when the button is pressed — light on."
             },
             "validate": true
         },
         {
-            "title": "Turn the LED Off When Released",
+            "title": "Released: turn the LED off",
             "image": "/static/tutorials/steps/btnLedWriteLow.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
+            "imageFocus": {"x": 60, "y": 65, "zoom": 2.2},
             "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
             "narration": {
                 "id": "gui.tutorials.buttonLed.writeLow",
-                "default": "Drag another digitalWrite block into the else branch. Keep pin at 13 but set value to LOW. This turns the LED off when the button is not pressed."
+                "default": "Drag another digitalWrite block into the else branch. Keep pin at 13 but set value to LOW. This is the otherwise — when the button is NOT pressed, the LED stays off. The code is finished — let's wire up the simulator."
             },
             "validate": true
         },
         {
-            "title": "Open the Component Picker",
+            "title": "Open the component picker",
             "image": "/static/tutorials/steps/btnLedPicker.webp",
-            "imageFocus": {"x": 50, "y": 96, "zoom": 1},
+            "imageFocus": {"x": 88, "y": 50, "zoom": 2.0},
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.buttonLed.openPicker",
-                "default": "Open the Simulator tab and click the plus button at the bottom right to open the component picker."
+                "default": "Open the Simulator tab and click the plus button at the bottom right to open the component picker. We need to add the LED and the button to the virtual board."
             }
         },
         {
-            "title": "Add an LED on Pin 13",
+            "title": "Add an LED on pin 13",
             "image": "/static/tutorials/steps/btnLedAddLed.webp",
             "imageFocus": {"x": 100, "y": 24, "zoom": 2.3},
             "highlightUI": "component.led",
             "narration": {
                 "id": "gui.tutorials.buttonLed.addLed",
-                "default": "Select LED from the component list. In the pin mapping dialog, choose pin 13 and click Save."
+                "default": "Select LED from the component list. In the pin mapping dialog, choose pin 13 and click Save. Same pin your code is writing HIGH and LOW to."
             }
         },
         {
-            "title": "Add a Push Button on Pin 2",
+            "title": "Add a push button on pin 2",
             "image": "/static/tutorials/steps/btnLedAddButton.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "imageFocus": {"x": 92, "y": 38, "zoom": 2.4},
             "highlightUI": "component.button",
             "narration": {
                 "id": "gui.tutorials.buttonLed.addButton",
-                "default": "Open the component picker again and select Push Button. In the pin mapping dialog, choose pin 2 and click Save. The button is wired to ground — pressing it pulls pin 2 LOW."
+                "default": "Open the component picker again and select Push Button. In the pin mapping dialog, choose pin 2 and click Save. The button is wired to ground — exactly what INPUT_PULLUP expects."
             }
         },
         {
             "title": "Click Start",
             "image": "/static/tutorials/steps/btnLedStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "imageFocus": {"x": 73, "y": 18, "zoom": 4.0},
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.buttonLed.start",
-                "default": "Click the Start button at the top of the simulator. Your program will compile and load onto the virtual Arduino."
+                "default": "Click the Start button at the top of the simulator. Your program will compile and load onto the virtual Arduino — give it a few seconds."
             }
         },
         {
-            "title": "Press the Button!",
+            "title": "Press it!",
             "image": "/static/tutorials/steps/btnLedRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "imageFocus": {"x": 90, "y": 40, "zoom": 2.2},
             "narration": {
                 "id": "gui.tutorials.buttonLed.running",
-                "default": "Click and hold the simulated button. The LED turns on. Release it and the LED turns off. You have just built your first program that reacts to input. Try swapping HIGH and LOW in the digitalWrite blocks to reverse the behaviour."
+                "default": "Click and hold the simulated button. The LED turns on. Release it and the LED turns off. You just built your first program that REACTS to the world. Try this: swap HIGH and LOW in the two digitalWrite blocks — now your button turns the LED off and releasing turns it on. Or add a second LED on pin 12 and make it light up only when the button is released."
             }
         }
     ]

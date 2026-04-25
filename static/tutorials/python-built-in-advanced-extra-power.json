@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Built-in Advanced — Extra Power",
-            "image": "/static/tutorials/thumbnails/python-built-in-advanced-extra-power.webp",
+            "title": "Tools that work WITH your functions",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonBuiltInAdvancedExtraPower.placeholder",
-                "default": "You'll unlock Python's advanced built-in tools — zip, enumerate, map, filter, any, all — the commands that turn long loops into one clean line of code."
+                "id": "gui.tutorials.pythonBuiltInAdvanced.intro",
+                "default": "You've seen sum, max, min, len, sorted — those work on data alone. Today's tools work WITH a function you wrote yourself: map applies your function to every item in a list, filter keeps only the items your function approves of. Plus zip and enumerate, which pair lists up neatly. Together they often replace a whole for loop with one short line."
+            }
+        },
+        {
+            "title": "abs — start simple",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_02_abs.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.abs",
+                "default": "Type:\n\nnum = -5\nprint(\"Absolute value:\", abs(num))\n\nabs is standard Python — it removes the sign. abs(-5) gives 5; abs(5) gives 5; abs(0) gives 0. Tiny tool, useful when you don't care about direction, only distance."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "map — apply a function to every item",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_03_map.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.map",
+                "default": "Type:\n\nnumbers = [1, 2, 3]\n\ndef double(x):\n    return x * 2\n\nprint(\"Doubled:\", list(map(double, numbers)))\n\nmap takes two arguments — a FUNCTION and a LIST. It runs the function on every item and gives back a new sequence of results. We wrap it in list(...) to force the results out into a real list. Result: [2, 4, 6] — every number doubled, no for loop in sight."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "filter — keep only what passes the test",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_04_filter.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.filter",
+                "default": "Type:\n\ndef greater_than_one(x):\n    return x > 1\n\nprint(\"Filtered:\", list(filter(greater_than_one, numbers)))\n\nfilter also takes a function and a list, but the function must return True or False. Only items where the function returns True survive. greater_than_one is True for 2 and 3, False for 1 — so the result is [2, 3]."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "zip — pair two lists together",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_05_zip.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.zip",
+                "default": "Type:\n\nnames = [\"Aman\", \"Riya\", \"Kabir\"]\nscores = [90, 85, 88]\n\nprint(\"Paired:\", list(zip(names, scores)))\n\nzip pairs items from two lists by position — first with first, second with second. Result: [('Aman', 90), ('Riya', 85), ('Kabir', 88)] — a list of tuples. Useful for printing a table, or for matching things up after sorting them separately."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "enumerate — number the items",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_06_enumerate.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.enumerate",
+                "default": "Type:\n\nprint(\"With index:\", list(enumerate(names)))\n\nenumerate pairs every item with its position number — starting at 0. Result: [(0, 'Aman'), (1, 'Riya'), (2, 'Kabir')]. Useful when you want to loop over a list and ALSO know how far along you are: \"3rd in line, here is your name\"."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 18
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch one-liners replace loops",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.run",
+                "default": "Click Run. The terminal shows the absolute value, the doubled list, the filtered list, the paired tuples, and the indexed pairs. Each result that would have taken 3-5 lines of for loop fits in one line. That's why these tools are favourites of experienced Python programmers."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "When to use which",
+            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInAdvanced.recap",
+                "default": "Quick guide. map: transform every item the same way. filter: drop items that fail a test. zip: pair lists up by position. enumerate: tag each item with its index. abs: drop the sign. As your programs grow these will save you typing — and once you spot the pattern, your code reads more like a sentence than a recipe."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

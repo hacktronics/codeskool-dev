@@ -1,11 +1,107 @@
 {
     "steps": [
         {
-            "title": "Save Your Data",
-            "image": "/static/tutorials/thumbnails/python-save-your-data.webp",
+            "title": "Keep a record of every item",
+            "image": "/static/tutorials/steps/pythonSaveYourData_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.placeholder",
-                "default": "You'll save your data to a file so it stays around after your program ends — come back tomorrow and everything is right where you left it."
+                "id": "gui.tutorials.pythonSaveYourData.intro",
+                "default": "The shopping bills you've built so far throw away each item right after adding it to the total — once the loop is over, only the final number is left. Today you'll keep a record of every item the kid added, in a structure called a list. By the end, your program will print the total AND show every name in the basket."
+            }
+        },
+        {
+            "title": "Open the program",
+            "image": "/static/tutorials/steps/pythonSaveYourData_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.setup",
+                "default": "Type the opening:\n\nprint(\"Store Your Items\")\n\nn = int(input(\"How many items? \"))\n\nFamiliar territory — title and count. The new variable comes next."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Make an empty list",
+            "image": "/static/tutorials/steps/pythonSaveYourData_03_emptyList.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.emptyList",
+                "default": "Type:\n\nitems = []\ntotal = 0\n\nThe square brackets [] make an empty list — like a row of empty boxes, ready to be filled. items is a list, total is a single number. Both start empty/zero. As the loop runs, items will grow and total will climb."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Three questions per item, then store the name",
+            "image": "/static/tutorials/steps/pythonSaveYourData_04_loopBody.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.loopBody",
+                "default": "Type:\n\nfor i in range(n):\n    name = input(\"Enter item name: \")\n    price = int(input(\"Enter price: \"))\n    qty = int(input(\"Enter quantity: \"))\n\n    items.append(name)\n\n    total = total + (price * qty)\n\nThe loop body asks three questions: name (text), price (number), quantity (number). items.append(name) adds the name to the END of the list — append is a list method, standard Python. The list grows by one each loop."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "What append really does",
+            "image": "/static/tutorials/steps/pythonSaveYourData_05_appendExplain.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.appendExplain",
+                "default": "Lists are different from variables. A variable holds ONE value at a time — assigning a new value forgets the old. A list holds MANY values in order, and append adds a new one without forgetting the rest. After three appends with apple, banana, mango, items will look like ['apple', 'banana', 'mango']."
+            }
+        },
+        {
+            "title": "Print the basket and the bill",
+            "image": "/static/tutorials/steps/pythonSaveYourData_06_summary.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.summary",
+                "default": "After the loop ends — back to no indent — type:\n\nprint(\"Items bought:\", items)\nprint(\"Total Bill:\", total)\n\nThe first line prints the whole list at once — Python knows how to display a list neatly with the names in square brackets. The second line prints the total. Two snapshots of what just happened: the contents and the cost."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 11
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and fill your basket",
+            "image": "/static/tutorials/steps/pythonSaveYourData_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.run",
+                "default": "Click Run. Type 3 items. Add apple at 10 each, qty 2. Add bread at 30, qty 1. Add milk at 50, qty 1. The terminal prints Items bought: ['apple', 'bread', 'milk'] and Total Bill: 100. The list remembered every name in the order you typed them."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "What lists let you do",
+            "image": "/static/tutorials/steps/pythonSaveYourData_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.recap",
+                "default": "Lists are one of Python's most useful tools. You can store quiz questions, costume names for a sprite, levels in a game, students in a class, even other lists. Coming up you'll learn more list tricks — counting how many things are in it, finding the biggest, sorting them — all built into Python with one short word."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

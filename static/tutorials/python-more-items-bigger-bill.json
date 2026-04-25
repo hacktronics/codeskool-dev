@@ -1,11 +1,93 @@
 {
     "steps": [
         {
-            "title": "More Items, Bigger Bill",
-            "image": "/static/tutorials/thumbnails/python-more-items-bigger-bill.webp",
+            "title": "Add quantity to the bill",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonMoreItemsBiggerBill.placeholder",
-                "default": "You'll store many shopping items in a list and loop through them to build a growing bill — the more items, the bigger the total."
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.intro",
+                "default": "Last tutorial each item had one price. But real shoppers buy 3 apples, 2 chocolates, 5 pencils. Today's program asks for BOTH the price AND the quantity for each item, and multiplies them. Same loop shape — one extra input, one tiny piece of maths."
+            }
+        },
+        {
+            "title": "Open the program",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.setup",
+                "default": "Type the opening:\n\nprint(\"Shopping Bill with Quantity\")\n\nn = int(input(\"How many items? \"))\n\ntotal = 0\n\nSame title-count-zero pattern as last time. The for loop comes next, with one new line inside."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Two questions per item",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_03_loopBody.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.loopBody",
+                "default": "Type:\n\nfor i in range(n):\n    price = int(input(\"Enter price: \"))\n    qty = int(input(\"Enter quantity: \"))\n\n    total = total + (price * qty)\n\nThe loop body now asks TWO questions per iteration — price and quantity. The line total = total + (price * qty) does maths first (price times quantity = subtotal for that item), then adds the subtotal into the running total. Parentheses make the order obvious."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why parentheses matter",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_04_parensExplain.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.parensExplain",
+                "default": "Python actually does multiplication before addition without the parentheses — but writing (price * qty) makes the line easy to read. Future-you, looking at this code months from now, won't have to remember the order-of-operations rules. Parentheses are free; clarity is priceless."
+            }
+        },
+        {
+            "title": "Print and discount",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_05_discount.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.discount",
+                "default": "Same finishing block as last tutorial — back to no indent:\n\nprint(\"Total Bill:\", total)\n\nif total > 100:\n    print(\"Discount applied!\")\n    total = total - 10\n\nprint(\"Final Amount:\", total)\n\nNotice how reusing the same shape across tutorials helps you read code faster — your eyes know where to look."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 13
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run with bulk shopping",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.run",
+                "default": "Click Run. Type 2 items. Enter price 20 quantity 3 → that's 60. Enter price 30 quantity 2 → that's 60. Total: 120 — over 100, so the discount kicks in, Final Amount: 110. Two items but six things in the basket."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Try ideas",
+            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.recap",
+                "default": "Things to play with: lower the discount threshold to 50, change the discount amount to a percentage like total = total * 0.9. Or print the line subtotal each loop so the kid sees the running tally. Two new tools so far — for + range, and a running total — already enough to build dozens of useful programs."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Indexing & Slicing — Pick What You Want",
-            "image": "/static/tutorials/thumbnails/python-indexing-and-slicing.webp",
+            "title": "Reach into a list with []",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonIndexingAndSlicing.placeholder",
-                "default": "You'll learn to reach into a list or a piece of text and pull out exactly what you want — one item, the last item, or a whole slice from the middle."
+                "id": "gui.tutorials.pythonIndexingAndSlicing.intro",
+                "default": "Lists hold many values in order. Today you'll learn the exact ways to reach in and grab one item, the last item, or a whole chunk in the middle. The same tricks work on strings — every character is at a position, just like every item in a list. Two new ideas: indexing (one position at a time) and slicing (a range of positions)."
+            }
+        },
+        {
+            "title": "A list of fruits",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_02_list.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.list",
+                "default": "Type:\n\nfruits = [\"apple\", \"banana\", \"mango\", \"kiwi\", \"grape\"]\n\nFive items, each at a position. Python counts from ZERO — apple is at 0, banana at 1, mango at 2, kiwi at 3, grape at 4. The first item is always [0], not [1]."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Grab one by index",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_03_first.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.first",
+                "default": "Type:\n\nprint(fruits[0])\nprint(fruits[2])\n\nThe square brackets after the list reach IN to one position. fruits[0] is apple, fruits[2] is mango. Negative indices count from the END — fruits[-1] is grape (the last), fruits[-2] is kiwi (second-last). Try those too if you like."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Slicing — a range of positions",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_04_slice.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.slice",
+                "default": "Type:\n\nprint(fruits[1:4])\n\nThe colon between two numbers makes a slice — give back a NEW list from the first index UP TO BUT NOT INCLUDING the second. So fruits[1:4] gives banana, mango, kiwi — positions 1, 2, 3. Position 4 is left out. The \"up to but not including\" rule is consistent everywhere in Python — once you accept it, slicing becomes second nature."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Open-ended slices",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_05_open.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.open",
+                "default": "Type:\n\nprint(fruits[:3])\nprint(fruits[2:])\n\nLeave a side blank to mean \"from the start\" or \"to the end\". fruits[:3] is the first three (apple, banana, mango). fruits[2:] is mango, kiwi, grape — from position 2 to the end. fruits[:] is the whole list copied — the most common Python idiom for \"give me a fresh copy\"."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 5
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Strings are slices too",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_06_string.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.string",
+                "default": "Type:\n\nword = \"Python\"\nprint(word[0])\nprint(word[1:4])\n\nIndexing and slicing work on strings too — every character is at a position, just like a one-letter list. word[0] is P. word[1:4] is yth — three characters starting at position 1, up to but not including 4. Same rule, same syntax."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch them all",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.run",
+                "default": "Click Run. The terminal shows apple, mango, ['banana', 'mango', 'kiwi'], ['apple', 'banana', 'mango'], ['mango', 'kiwi', 'grape'], P, and yth. Seven different ways to look INTO the same data."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "When to reach for which",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.recap",
+                "default": "Use a single index when you want ONE item — the third question in a quiz, the last enemy in a level. Use a slice when you want a CHUNK — the top three scores, the first half of a story, the suffix of a filename. Negative indices are perfect for \"last\" and \"second to last\". The slice rule is always start ≤ index < stop — never include the stop."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

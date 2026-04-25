@@ -1,11 +1,79 @@
 {
     "steps": [
         {
-            "title": "Handle Any Number of Inputs",
-            "image": "/static/tutorials/thumbnails/python-handle-any-number-of-inputs.webp",
+            "title": "A function that accepts any number of inputs",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.placeholder",
-                "default": "You'll write a command that can take one input, five inputs, or fifty — no limit — and work with all of them at once, no matter how many you give it."
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.intro",
+                "default": "All your functions so far had a fixed number of parameters — exactly two for add(a, b), one for greet(name). But what if you don't know in advance how many things will be passed? Today you'll meet *args — a Python feature that lets ONE function accept any number of arguments, from one to a hundred."
+            }
+        },
+        {
+            "title": "Define total with *args",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_02_starArgs.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.starArgs",
+                "default": "Type:\n\ndef total(*numbers):\n    result = 0\n    for n in numbers:\n        result = result + n\n    return result\n\nThe star * is what's new. *numbers tells Python: \"collect every argument that gets passed and put them all into a list called numbers\". Inside the function, you treat numbers like any other list — for n in numbers loops over them, and we add each one onto result."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why *args is useful",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_03_explainStar.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.explainStar",
+                "default": "Without the star, you'd have to define total(a, b), total(a, b, c), total(a, b, c, d) — separate functions for each count. The star says \"however many they pass, gather them up\". The name args is just convention — you could call it numbers, items, parts. The * is what does the magic."
+            }
+        },
+        {
+            "title": "Call with two, then four, then five numbers",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_04_calls.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.calls",
+                "default": "Below, type:\n\nprint(total(5, 3))\nprint(total(1, 2, 3, 4))\nprint(total(10, 20, 30, 40, 50))\n\nThree calls with different numbers of arguments — 2, 4, and 5. Python collects each call's arguments into the numbers list and total adds them all up. No need to redefine the function for different argument counts."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 6
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch the totals",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.run",
+                "default": "Click Run. The terminal prints 8, 10, 150 — sums of the three different sets of numbers. Same one-line definition handled all three. Try total() with no arguments — it'll return 0, because the loop runs zero times."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Real Python builds on this",
+            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.recap",
+                "default": "Many built-in Python functions use *args under the hood. print can take any number of things to print — print(\"a\", \"b\", \"c\") works because of *args. max(1, 2, 3) and min(1, 2, 3, 4, 5) too. Now that you've written one yourself, you understand how those tools work."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

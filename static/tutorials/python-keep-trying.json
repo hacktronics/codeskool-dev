@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Keep Trying Till You Win",
-            "image": "/static/tutorials/thumbnails/python-keep-trying.webp",
+            "title": "Repeat until they get it right",
+            "image": "/static/tutorials/steps/pythonKeepTrying_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonKeepTrying.placeholder",
-                "default": "You'll use a loop that keeps running until the kid finally gets the right answer — the classic play-until-you-win pattern behind every guessing game."
+                "id": "gui.tutorials.pythonKeepTrying.intro",
+                "default": "Last tutorial you nested an if inside an else to give a second chance. But what if you want to keep asking forever, until the kid guesses right? Copying the same code over and over wouldn't scale. Today you'll meet the while loop — Python's way of saying \"keep doing this as long as a condition is true\". In Scratch this is the \"repeat until\" block. In Python it's one keyword: while."
+            }
+        },
+        {
+            "title": "Set up the game",
+            "image": "/static/tutorials/steps/pythonKeepTrying_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.setup",
+                "default": "Type the opening:\n\nprint(\"Guess the number!\")\n\nnumber = 5\n\nguess = int(input(\"Enter your guess: \"))\n\nSame three lines you've used twice already — title, secret, first guess. The interesting bit comes next."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Meet while",
+            "image": "/static/tutorials/steps/pythonKeepTrying_03_whileHeader.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.whileHeader",
+                "default": "Leave a blank line, then type:\n\nwhile guess != number:\n\nwhile is standard Python. != means \"not equal\". Read it in English: \"while the guess is NOT equal to the secret number, keep running the indented lines below\". As soon as guess EQUALS number, the loop stops. The colon at the end is the same as with if — what follows must be indented."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Give a hint inside the loop",
+            "image": "/static/tutorials/steps/pythonKeepTrying_04_hint.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.hint",
+                "default": "Indent and type:\n\n    if guess > number:\n        print(\"Too high\")\n    else:\n        print(\"Too low\")\n\nThis is the same if/else you wrote two tutorials ago — but now it's INSIDE the while. Every time the loop runs, Python checks the current guess and prints a hint. Notice the indent — four spaces because the if is inside the while, and eight spaces for the print lines inside the if and else."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Ask for a new guess — still inside the loop",
+            "image": "/static/tutorials/steps/pythonKeepTrying_05_regrab.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.regrab",
+                "default": "Still indented inside the while, type:\n\n    guess = int(input(\"Try again: \"))\n\nThis is critical — you MUST change guess somewhere inside the loop. Otherwise guess stays the same number it was before the loop started, guess != number stays true forever, and the loop never ends. That's called an infinite loop — a real bug you'll hit more than once."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Celebrate outside the loop",
+            "image": "/static/tutorials/steps/pythonKeepTrying_06_celebrate.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.celebrate",
+                "default": "Go back to the very left edge (no indent) and type:\n\nprint(\"Correct!\")\n\nThis line is OUTSIDE the while — Python only runs it after the loop has finished. And the loop only finishes when guess == number. So by the time this line runs, the kid has guessed right. Notice how the indentation tells the whole story of what runs when."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 8
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and take several tries",
+            "image": "/static/tutorials/steps/pythonKeepTrying_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.run",
+                "default": "Click Run. Start far away — type 1. Terminal: Too low. Try 9 — Too high. Try 3 — Too low. Try 6 — Too high. Try 5 — Correct! The loop ran four times and each time re-asked for a guess. The moment your guess matched, the loop stopped and the celebration printed."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "What could go wrong",
+            "image": "/static/tutorials/steps/pythonKeepTrying_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonKeepTrying.recap",
+                "default": "Two dangers with while. One: forgetting to update the variable inside the loop, so the condition never changes — infinite loop. Two: what if the kid just wants to QUIT without guessing? Right now the only way out is to guess correctly. In the next tutorial you'll learn break — a way to pop out of a loop early, even if the condition is still true."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

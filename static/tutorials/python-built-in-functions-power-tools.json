@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Built-in Functions — Power Tools",
-            "image": "/static/tutorials/thumbnails/python-built-in-functions-power-tools.webp",
+            "title": "Tools Python gives you for free",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonBuiltInFunctionsPowerTools.placeholder",
-                "default": "You'll meet Python's built-in power tools — len, max, min, sum, sorted — ready-made commands that save you from rewriting things you'll need again and again."
+                "id": "gui.tutorials.pythonBuiltInFunctions.intro",
+                "default": "Python comes with dozens of small functions ready to use — no import needed. Today we'll meet the most useful ones for working with lists: sum, max, min, len, sorted, type. They each do one specific job, and together they're enough to write a real little stats program in five lines."
+            }
+        },
+        {
+            "title": "Make a list of numbers",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_02_list.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.list",
+                "default": "Type:\n\nnumbers = [5, 8, 2, 10]\n\nprint(\"Numbers:\", numbers)\n\nThe square brackets create a list with four numbers in it — same kind of list as last tutorial, but pre-filled this time. The first print shows the whole list."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "sum, max, min — three at once",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_03_summary.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.summary",
+                "default": "Type three more lines:\n\nprint(\"Total:\", sum(numbers))\nprint(\"Highest:\", max(numbers))\nprint(\"Lowest:\", min(numbers))\n\nsum adds every number in the list. max returns the biggest, min the smallest. All three are standard Python — they work on any list of numbers, no matter how long. Imagine writing a for loop yourself for each — these save you the work."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "len counts how many",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_04_len.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.len",
+                "default": "Type:\n\nprint(\"Count:\", len(numbers))\n\nlen tells you how many things are in a list. Here it'll print 4, because the list has four numbers. len also works on strings — len(\"Python\") is 6 — and on most other Python collections."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "sorted — make a new ordered list",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_05_sorted.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.sorted",
+                "default": "Type:\n\nprint(\"Sorted:\", sorted(numbers))\n\nsorted gives you back a NEW list, smallest to largest, without changing the original. After this line numbers is still [5, 8, 2, 10] — the print just shows [2, 5, 8, 10]. Important: sorted does not modify; it returns a new sorted copy."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "type — what KIND of value is this?",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_06_type.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.type",
+                "default": "Type the last line:\n\nprint(\"Type:\", type(numbers))\n\ntype shows what KIND of thing a value is — Python prints something like <class 'list'>. Useful when debugging — if a print shows a string when you expected a number, type tells you so. type works on any value: type(5) is int, type(\"hi\") is str, type(True) is bool."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 9
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run all six",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_07_terminal.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.run",
+                "default": "Click Run. The terminal shows six lines: the original list, the total 25, the highest 10, the lowest 2, the count 4, the sorted version, and the type. Six built-in tools, one short program."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Try with your own data",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.recap",
+                "default": "Change numbers to your test scores, your daily steps, the number of likes on your last 5 posts. The same six tools work on any list. In the next tutorial, you'll see what happens when these built-ins are paired with another idea — STRINGS — to slice, search, and reshape text."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

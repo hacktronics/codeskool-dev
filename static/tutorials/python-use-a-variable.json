@@ -1,11 +1,87 @@
 {
     "steps": [
         {
-            "title": "Use a Variable",
-            "image": "/static/tutorials/thumbnails/python-use-a-variable.webp",
+            "title": "Variables in Scratch — and now in Python",
+            "image": "/static/tutorials/steps/pythonUseAVariable_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonUseAVariable.placeholder",
-                "default": "You'll learn how to store a value in a name you pick, then use that name in your Python code."
+                "id": "gui.tutorials.pythonUseAVariable.intro",
+                "default": "In Scratch you use the orange Variables blocks: one to SET a value, and a rounded reporter to USE it. Python does the same two things — but as text. Let's write it."
+            }
+        },
+        {
+            "title": "Set the variable (Scratch's SET block)",
+            "image": "/static/tutorials/steps/pythonUseAVariable_02_messageAssigned.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.typeAssign",
+                "default": "On line 1, type:\n\nmessage = \"Hello Python!\"\n\nLeft side = the name (like Scratch's variable name). Equals sign = SET. Right side = the value."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why the terminal is still empty",
+            "image": "/static/tutorials/steps/pythonUseAVariable_03_silent.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.silent",
+                "default": "Setting a variable shows nothing on its own — just like clicking the Scratch SET block doesn't say anything aloud. Python remembers the value quietly. Next we'll USE it."
+            }
+        },
+        {
+            "title": "Use the variable (Scratch's reporter block)",
+            "image": "/static/tutorials/steps/pythonUseAVariable_04_bothLines.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.typePrint",
+                "default": "Press Enter for line 2, then type:\n\nprint(message)\n\nIn Scratch you'd drag the rounded message reporter into a say block. In Python, you just type the name."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 1
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why there are no quotes",
+            "image": "/static/tutorials/steps/pythonUseAVariable_05_noQuotes.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.noQuotes",
+                "default": "No quotes around message — that's important. With quotes (\"message\") Python would print the WORD message. Without quotes, Python looks up the value the name stands for. The reporter block in Scratch works the same way: it uses the value, not the name."
+            }
+        },
+        {
+            "title": "Run it",
+            "image": "/static/tutorials/steps/pythonUseAVariable_06_terminal.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.runBoth",
+                "default": "Click Run. The terminal shows: Hello Python! Python looked up message, found \"Hello Python!\", and printed that — the same way Scratch's say block reads the reporter."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Try your own value",
+            "image": "/static/tutorials/steps/pythonUseAVariable_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.recap",
+                "default": "Change the text on line 1 — your name, a joke, anything. Click Run again. The print line stays the same. SET once, USE many times — that's the whole point of a variable, in Scratch and in Python."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

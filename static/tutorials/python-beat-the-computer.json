@@ -1,11 +1,127 @@
 {
     "steps": [
         {
-            "title": "Can You Beat the Computer?",
-            "image": "/static/tutorials/thumbnails/python-beat-the-computer.webp",
+            "title": "Build a Rock Paper Scissors game",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonBeatTheComputer.placeholder",
-                "default": "You'll play rock-paper-scissors against the computer — the computer picks at random, you pick too, and the program says who won."
+                "id": "gui.tutorials.pythonBeatTheComputer.intro",
+                "default": "Today's project: a game where you play Rock Paper Scissors against the computer. Three new ideas in one tutorial — random.choice for picking from a list, multiple elifs to cover the rules, and the and operator (you met it in Boolean Logic) for asking two questions at once. You already know everything else."
+            }
+        },
+        {
+            "title": "Bring random into the game",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_02_import.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.importRandom",
+                "default": "Type the very first line:\n\nimport random\n\nrandom is a standard Python module that adds dice-roll-like helpers. import means \"load this set of tools so I can use them\". After this line, anything inside random becomes available — the most useful one for games is random.choice."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Title and player input",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_03_titlePlayer.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.titlePlayer",
+                "default": "Type:\n\nprint(\"Rock Paper Scissors\")\n\nplayer = input(\"Enter rock, paper, or scissors: \")\n\nThe player variable holds whatever the kid types — text. We won't wrap with int because we're comparing words, not numbers."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Make the computer pick",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_04_computerPick.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.computerPick",
+                "default": "Type:\n\nchoices = [\"rock\", \"paper\", \"scissors\"]\ncomputer = random.choice(choices)\n\nprint(\"Computer chose:\", computer)\n\nchoices is a list of the three options. random.choice(choices) picks ONE at random — like rolling a 3-sided die labelled rock/paper/scissors. The print line shows the kid what the computer picked, so they can see whether they won."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "First check — was it a tie?",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_05_tie.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.tie",
+                "default": "Type:\n\nif player == computer:\n    print(\"It's a tie\")\n\nIf both picked the same thing, it's a tie — easiest case to check first. Putting the simplest case first keeps the elif chain that follows clear."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The three winning combinations",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_06_winChain.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.winChain",
+                "default": "Type three elif lines:\n\nelif player == \"rock\" and computer == \"scissors\":\n    print(\"You win\")\n\nelif player == \"paper\" and computer == \"rock\":\n    print(\"You win\")\n\nelif player == \"scissors\" and computer == \"paper\":\n    print(\"You win\")\n\nThree winning combos — rock smashes scissors, paper covers rock, scissors cut paper. Each elif uses and to require BOTH conditions: what the player picked AND what the computer picked."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "else — everything left is a loss",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_07_lose.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.lose",
+                "default": "Type:\n\nelse:\n    print(\"You lose\")\n\nIf none of the if/elif branches matched, it's a loss. else is the catch-all. With nine possible (player, computer) combinations and 4 branches above (1 tie + 3 wins), this else covers exactly the 5 losing cases — neat."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 17
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and play",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_08_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.run",
+                "default": "Click Run. Type rock. The terminal prints what the computer chose and one of: It's a tie, You win, or You lose. Run it five or six times — random.choice will pick a different option most times, so each run feels new."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "What to try next",
+            "image": "/static/tutorials/steps/pythonBeatTheComputer_09_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.recap",
+                "default": "Three new things this tutorial: import random, random.choice, and an elif chain with and. With these you can build dice games, magic 8-balls, random Mad Libs, or a coin flipper. Next up, you'll learn to put the WHOLE game inside a while loop so the kid can play multiple rounds without re-running."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

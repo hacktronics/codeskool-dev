@@ -1,11 +1,150 @@
 {
     "steps": [
         {
-            "title": "Security Alarm",
-            "image": "/static/tutorials/thumbnails/security-alarm.webp",
+            "title": "Catch the burglar",
+            "image": "/static/tutorials/steps/securityAlarmIntro.webp",
             "narration": {
-                "id": "gui.tutorials.securityAlarm.placeholder",
-                "default": "You'll build a security alarm that sounds a buzzer when a motion sensor spots someone sneaking past."
+                "id": "gui.tutorials.securityAlarm.intro",
+                "default": "You've seen those little white domes on the ceilings of shops and offices — motion sensors. The moment something moves under them they tell the alarm to go off. Today you'll build that same setup with a PIR motion sensor and a buzzer. Quiet room: silence. Something moves: alarm. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/securityAlarmSetupLoop.webp",
+            "imageFocus": {"x": 50, "y": 55, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Listen on pin 2 — the sensor",
+            "image": "/static/tutorials/steps/securityAlarmPinPir.webp",
+            "imageFocus": {"x": 50, "y": 45, "zoom": 3.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.pinPir",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and change the mode to INPUT. INPUT means the Arduino is going to LISTEN on this pin, not send signals out. The PIR sensor — a tiny eye that sees body heat moving — will whisper HIGH on this pin when it spots movement."
+            },
+            "validate": true
+        },
+        {
+            "title": "Speak on pin 9 — the buzzer",
+            "image": "/static/tutorials/steps/securityAlarmPinBuzzer.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 3.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.pinBuzzer",
+                "default": "Drag a second pinMode block below. Set pin to 9 and leave mode on OUTPUT — pin 9 will drive the buzzer that yells when the sensor sees movement."
+            },
+            "validate": true
+        },
+        {
+            "title": "Make the decision: alarm or silence?",
+            "image": "/static/tutorials/steps/securityAlarmIfElse.webp",
+            "imageFocus": {"x": 48, "y": 60, "zoom": 2.8},
+            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.ifElse",
+                "default": "Open the Control category and drag an if / else block into the loop section. The if branch will switch the buzzer ON when motion appears; the else branch will keep things quiet when nothing's moving."
+            },
+            "validate": true
+        },
+        {
+            "title": "Start with an equals check",
+            "image": "/static/tutorials/steps/securityAlarmEquals.webp",
+            "imageFocus": {"x": 50, "y": 58, "zoom": 2.8},
+            "highlightBlock": {"category": "operators", "blockType": "operator_equals"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.equals",
+                "default": "Open Operators and drag an equals block into the if condition slot. We're going to ask: 'is the sensor reading equal to HIGH?' We need to build both sides of that question next."
+            },
+            "validate": true
+        },
+        {
+            "title": "Read the sensor",
+            "image": "/static/tutorials/steps/securityAlarmReadPir.webp",
+            "imageFocus": {"x": 48, "y": 58, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalReadFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.readPir",
+                "default": "From the Arduino category, drag a digitalRead block into the left side of the equals. Set its pin to 2 — that's where the PIR sensor is wired. digitalRead reports back HIGH or LOW depending on what the sensor is seeing right now."
+            },
+            "validate": true
+        },
+        {
+            "title": "Compare to HIGH — motion!",
+            "image": "/static/tutorials/steps/securityAlarmHigh.webp",
+            "imageFocus": {"x": 52, "y": 58, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_HIGHFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.high",
+                "default": "Drag a HIGH reporter from the Arduino category and drop it on the right side of the equals. The full condition now reads: if digitalRead(2) equals HIGH — meaning the PIR has spotted movement."
+            },
+            "validate": true
+        },
+        {
+            "title": "Motion seen — sound the alarm",
+            "image": "/static/tutorials/steps/securityAlarmBuzzerOn.webp",
+            "imageFocus": {"x": 50, "y": 65, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.buzzerOn",
+                "default": "Drag a digitalWrite into the if branch. Set pin to 9 and keep value on HIGH — the buzzer turns on the moment the PIR spots movement."
+            },
+            "validate": true
+        },
+        {
+            "title": "Nothing moving — stay quiet",
+            "image": "/static/tutorials/steps/securityAlarmBuzzerOff.webp",
+            "imageFocus": {"x": 50, "y": 70, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.buzzerOff",
+                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW — when nothing's moving, the buzzer stays silent. Without this else, the buzzer might keep ringing after motion stops."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the PIR sensor",
+            "image": "/static/tutorials/steps/securityAlarmAddPir.webp",
+            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.addPir",
+                "default": "Open the Simulator and click the plus button. Choose PIR Motion, pick pin 2, and click Save."
+            }
+        },
+        {
+            "title": "Add the buzzer",
+            "image": "/static/tutorials/steps/securityAlarmAddBuzzer.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.addBuzzer",
+                "default": "Click the plus again and add a Buzzer on pin 9. Both parts of the alarm — the eye and the voice — are now wired up."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/securityAlarmStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.start",
+                "default": "Click Start. Your program compiles and the PIR begins watching for motion."
+            }
+        },
+        {
+            "title": "Trigger it",
+            "image": "/static/tutorials/steps/securityAlarmRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.securityAlarm.running",
+                "default": "Click the PIR sensor in the simulator to toggle motion. The buzzer sounds the moment motion appears and falls silent when it stops. Try this: add an LED on pin 8 and turn it on at the same time as the buzzer — a flashing red light is a classic alarm. Or wire a second PIR for a hallway-and-room combo."
             }
         }
     ]

@@ -1,11 +1,204 @@
 {
     "steps": [
         {
-            "title": "Smart Thermostat",
-            "image": "/static/tutorials/thumbnails/smart-thermostat.webp",
+            "title": "A thermostat that runs your fan for you",
+            "image": "/static/tutorials/steps/thermostatIntro.webp",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.placeholder",
-                "default": "You'll build a smart thermostat that reads the room temperature and switches a heater or fan on and off to keep things just right — like the one on your wall at home."
+                "id": "gui.tutorials.smartThermostat.intro",
+                "default": "Your fridge has one. Your air-conditioner has one. The geyser in your bathroom has one. A thermostat is just a tiny brain that watches the temperature and switches something on or off to keep things comfortable. Today you'll build that brain. A DHT11 sensor reads the room temperature, an OLED screen shows you the live reading, and an LED stands in for the fan — when the room gets above 28 degrees the fan switches on, and when it cools back down the fan switches off. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/thermostatSetupLoop.webp",
+            "imageFocus": {"x": 60, "y": 45, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Pin 9 will drive the fan",
+            "image": "/static/tutorials/steps/thermostatPinFan.webp",
+            "imageFocus": {"x": 63, "y": 40, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.pinFan",
+                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT. Pin 9 will drive the fan — but in our simulator we'll connect an LED there to stand in for the real fan motor."
+            },
+            "validate": true
+        },
+        {
+            "title": "Tell the temperature sensor where it lives",
+            "image": "/static/tutorials/steps/thermostatDhtInit.webp",
+            "imageFocus": {"x": 63, "y": 45, "zoom": 2.5},
+            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtInit"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.dhtInit",
+                "default": "Open the DHT11 category and drag a DHT dht block into setup. Set the pin to 2 and leave the type on DHT11. This block tells the Arduino which temperature sensor it'll be talking to and which wire it lives on."
+            },
+            "validate": true
+        },
+        {
+            "title": "Wake up the temperature sensor",
+            "image": "/static/tutorials/steps/thermostatDhtBegin.webp",
+            "imageFocus": {"x": 63, "y": 50, "zoom": 2.5},
+            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtBegin"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.dhtBegin",
+                "default": "Drag a dht.begin block right after the DHT dht block. Two-step introduction again: the first block named the sensor, this one wakes it up so it's ready to give us readings."
+            },
+            "validate": true
+        },
+        {
+            "title": "Wake up the OLED screen",
+            "image": "/static/tutorials/steps/thermostatOledInit.webp",
+            "imageFocus": {"x": 60, "y": 38, "zoom": 2.4},
+            "highlightBlock": {"category": "i2cOled", "blockType": "i2cOled_oledBegin"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.oledInit",
+                "default": "Open the I2C OLED category and drag the initialize OLED block into setup. Leave the address on 0x3C and the power mode on SSD1306_SWITCHCAPVCC — those are the standard defaults for these tiny screens. An OLED is the same kind of crisp display you'll find in a smartwatch."
+            },
+            "validate": true
+        },
+        {
+            "title": "A box for the temperature reading",
+            "image": "/static/tutorials/steps/thermostatMakeTemp.webp",
+            "imageFocus": {"x": 12, "y": 30, "zoom": 2.6},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.makeTemp",
+                "default": "Open Variables and click Make a Variable. Name it temp. This will hold the current temperature reading from the sensor — the number we'll show on screen and use to decide whether to switch the fan on."
+            },
+            "validate": true
+        },
+        {
+            "title": "Read the temperature",
+            "image": "/static/tutorials/steps/thermostatReadTemp.webp",
+            "imageFocus": {"x": 60, "y": 65, "zoom": 2.4},
+            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtReadTemperature"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.readTemp",
+                "default": "Drag a set temp block into the loop. From the DHT11 category, drag the dht.readTemperature reporter into the value slot. Every loop now stores the latest temperature in temp."
+            },
+            "validate": true
+        },
+        {
+            "title": "Show the temperature on the OLED",
+            "image": "/static/tutorials/steps/thermostatShowTemp.webp",
+            "imageFocus": {"x": 60, "y": 70, "zoom": 2.2},
+            "highlightBlock": {"category": "i2cOled", "blockType": "i2cOled_oledClear"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.showTemp",
+                "default": "Below the set temp block, drop these in order from the I2C OLED category: clear display, set cursor x 0 y 20, set text size to 2, print line — drop the temp variable into the message slot — then update display. The screen wipes, draws the new number large, and pushes the change to the panel. Without update display, your changes wouldn't show — that's the OLED's quirk."
+            },
+            "validate": true
+        },
+        {
+            "title": "Decide: fan on or fan off?",
+            "image": "/static/tutorials/steps/thermostatIfElse.webp",
+            "imageFocus": {"x": 55, "y": 38, "zoom": 2.5},
+            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.ifElse",
+                "default": "Open Control and drag an if / else block below the OLED blocks. The classic thermostat decision: too hot — fan on; cool enough — fan off."
+            },
+            "validate": true
+        },
+        {
+            "title": "How hot is too hot?",
+            "image": "/static/tutorials/steps/thermostatCondition.webp",
+            "imageFocus": {"x": 55, "y": 38, "zoom": 2.6},
+            "highlightBlock": {"category": "operators", "blockType": "operator_gt"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.condition",
+                "default": "Open Operators. Drag a greater-than block into the if / else condition. Drop the temp variable on the left side. Type 28 on the right side. The condition reads: 'if the room is hotter than 28 degrees, run the if branch — otherwise run the else'."
+            },
+            "validate": true
+        },
+        {
+            "title": "Hot — fan on",
+            "image": "/static/tutorials/steps/thermostatFanOn.webp",
+            "imageFocus": {"x": 55, "y": 42, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.fanOn",
+                "default": "Drag a digitalWrite into the if branch. Set pin to 9 and keep value on HIGH. When temp is above 28, the fan kicks in."
+            },
+            "validate": true
+        },
+        {
+            "title": "Cool — fan off",
+            "image": "/static/tutorials/steps/thermostatFanOff.webp",
+            "imageFocus": {"x": 55, "y": 48, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.fanOff",
+                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW. When the room cools below 28, the fan stops. Real thermostats often add a little buffer here so the fan doesn't twitch on and off at exactly 28 — but our simple version works."
+            },
+            "validate": true
+        },
+        {
+            "title": "Wait a second between readings",
+            "image": "/static/tutorials/steps/thermostatDelay.webp",
+            "imageFocus": {"x": 55, "y": 70, "zoom": 2.4},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.delay",
+                "default": "Drag a delay block at the bottom of the loop. Set it to 1000 milliseconds — one second. The DHT11 needs at least that long between readings, so we check the temperature once a second. That's plenty fast — rooms don't change temperature in milliseconds."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the temperature sensor",
+            "image": "/static/tutorials/steps/thermostatAddSensor.webp",
+            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.addSensor",
+                "default": "Open the Simulator and click the plus button. Choose DHT22, pick pin 2, and click Save. The simulator part is labelled DHT22 but it responds to our DHT block exactly the same way — it's the close cousin of the DHT11."
+            }
+        },
+        {
+            "title": "Add the OLED display",
+            "image": "/static/tutorials/steps/thermostatAddOled.webp",
+            "imageFocus": {"x": 100, "y": 32, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.addOled",
+                "default": "Click the plus again and add an OLED 128x64 display. It runs over the I2C bus on SDA pin A4 and SCL pin A5 — same shared bus we used for the LCD in the petrol pump tutorial."
+            }
+        },
+        {
+            "title": "Add the fan (an LED stand-in)",
+            "image": "/static/tutorials/steps/thermostatAddFan.webp",
+            "imageFocus": {"x": 100, "y": 38, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.addFan",
+                "default": "Click the plus once more and add an LED on pin 9. The LED stands in for the fan in the simulator — when the LED lights up, imagine the fan blades spinning. On real hardware the same HIGH would switch a relay that powers an actual fan."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/thermostatStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.start",
+                "default": "Click Start. Your program compiles and the OLED begins showing the live temperature."
+            }
+        },
+        {
+            "title": "Heat the room",
+            "image": "/static/tutorials/steps/thermostatRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.running",
+                "default": "In the simulator, drag the temperature on the DHT22 above 28 degrees — the fan LED lights up. Drag it back below 28 and the LED switches off. Try this: change 28 to your favourite room temperature. Or add a heater LED on pin 8 that turns on when the room is BELOW 18 — now you've built both sides of climate control. That's how a real air-conditioner brain works."
             }
         }
     ]

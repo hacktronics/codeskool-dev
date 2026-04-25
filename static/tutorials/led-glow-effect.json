@@ -1,11 +1,185 @@
 {
     "steps": [
         {
-            "title": "LED Glow Effect",
-            "image": "/static/tutorials/thumbnails/led-glow-effect.webp",
+            "title": "Make a light breathe",
+            "image": "/static/tutorials/steps/ledGlowIntro.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.0},
             "narration": {
-                "id": "gui.tutorials.ledGlowEffect.placeholder",
-                "default": "You'll learn how to use PWM to fade an LED smoothly brighter and dimmer, like a heartbeat."
+                "id": "gui.tutorials.ledGlowEffect.intro",
+                "default": "Ever noticed the breathing light on a laptop's power button when it's asleep? Or the pulsing notification light on a phone? They glow brighter, then dimmer, then brighter — like they're breathing. Today you'll build that same effect on a real LED. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first. When you are ready, click Next."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/ledGlowSetupLoop.webp",
+            "imageFocus": {"x": 46, "y": 54, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. Setup runs once when the Arduino starts. Loop runs forever, over and over."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Pin 9 — a special kind of pin",
+            "image": "/static/tutorials/steps/ledGlowPinMode.webp",
+            "imageFocus": {"x": 48, "y": 50, "zoom": 2.8},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.pinMode",
+                "default": "Drag a pinMode block into the setup section. Set pin to 9 and leave mode on OUTPUT. Pin 9 is a PWM pin — that means it can do more than just on or off. It can pretend to be partially on, by switching very fast. That's the secret to a smooth fade."
+            },
+            "validate": true
+        },
+        {
+            "title": "We need to remember a number",
+            "image": "/static/tutorials/steps/ledGlowMakeVar.webp",
+            "imageFocus": {"x": 12, "y": 28, "zoom": 2.6},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.makeVar",
+                "default": "Open the Variables category and click Make a Variable. Name it brightness. A variable is just a labelled box that holds a number — and we'll use this one to remember how bright the LED should be right now, from 0 (off) to 255 (full power)."
+            },
+            "validate": true
+        },
+        {
+            "title": "Start at zero",
+            "image": "/static/tutorials/steps/ledGlowSetZero.webp",
+            "imageFocus": {"x": 46, "y": 60, "zoom": 2.8},
+            "highlightBlock": {"category": "variables", "blockType": "data_setvariableto"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.setZero",
+                "default": "Drag a set brightness to 0 block into the loop section. Every time the loop restarts, we begin the breath from total darkness — about to fade up."
+            },
+            "validate": true
+        },
+        {
+            "title": "Repeat 256 times to fade up",
+            "image": "/static/tutorials/steps/ledGlowRepeatUp.webp",
+            "imageFocus": {"x": 48, "y": 65, "zoom": 2.6},
+            "highlightBlock": {"category": "control", "blockType": "control_repeat"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.repeatUp",
+                "default": "Open the Control category and drag a repeat block below set brightness. Change the count from 10 to 256 — one tiny step for every brightness level from 0 to 255. We'll do something inside this loop, 256 times, before it lets us continue."
+            },
+            "validate": true
+        },
+        {
+            "title": "Send the brightness to the LED",
+            "image": "/static/tutorials/steps/ledGlowAnalogWriteUp.webp",
+            "imageFocus": {"x": 50, "y": 60, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.analogWriteUp",
+                "default": "Drag an analogWrite block inside the repeat. Set pin to 9. For the value, drag the brightness variable from the Variables category and drop it in place of the number. analogWrite is digitalWrite's cooler cousin — instead of just HIGH or LOW, it sends a number from 0 to 255 that controls how much power reaches the LED."
+            },
+            "validate": true
+        },
+        {
+            "title": "Bump brightness up by 1",
+            "image": "/static/tutorials/steps/ledGlowChangeUp.webp",
+            "imageFocus": {"x": 50, "y": 60, "zoom": 2.5},
+            "highlightBlock": {"category": "variables", "blockType": "data_changevariableby"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.changeUp",
+                "default": "Back in Variables. Drag a change brightness by 1 block below analogWrite, still inside the repeat. Each pass through the repeat: light up at the current brightness, then add one. After 256 passes, brightness has climbed from 0 all the way to 255."
+            },
+            "validate": true
+        },
+        {
+            "title": "A tiny pause so we can see it",
+            "image": "/static/tutorials/steps/ledGlowDelayUp.webp",
+            "imageFocus": {"x": 50, "y": 65, "zoom": 2.4},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.delayUp",
+                "default": "Drag a delay block below change brightness, still inside the repeat. Set it to 10 milliseconds. Without this pause the Arduino would whip through all 256 levels in a blink and you'd just see 'on'. Ten milliseconds per step gives us a 2.5-second fade — the speed of a calm breath."
+            },
+            "validate": true
+        },
+        {
+            "title": "Now reverse the journey",
+            "image": "/static/tutorials/steps/ledGlowSet255.webp",
+            "imageFocus": {"x": 48, "y": 70, "zoom": 2.3},
+            "highlightBlock": {"category": "variables", "blockType": "data_setvariableto"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.set255",
+                "default": "The LED is now at full brightness. Time to fade back down. Drag another set brightness block, this time AFTER the repeat (still in the loop). Change the value to 255 — we're starting the descent from the top."
+            },
+            "validate": true
+        },
+        {
+            "title": "Repeat 256 times to fade down",
+            "image": "/static/tutorials/steps/ledGlowRepeatDown.webp",
+            "imageFocus": {"x": 48, "y": 75, "zoom": 2.2},
+            "highlightBlock": {"category": "control", "blockType": "control_repeat"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.repeatDown",
+                "default": "Drag another repeat block below the set brightness to 255. Change its count to 256 as well. Same length of journey as the way up — just heading the other direction this time."
+            },
+            "validate": true
+        },
+        {
+            "title": "Send brightness to the LED again",
+            "image": "/static/tutorials/steps/ledGlowAnalogWriteDown.webp",
+            "imageFocus": {"x": 50, "y": 75, "zoom": 2.1},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.analogWriteDown",
+                "default": "Drag an analogWrite block inside the second repeat. Set pin to 9 and drop the brightness variable into the value slot, just like before."
+            },
+            "validate": true
+        },
+        {
+            "title": "Step brightness DOWN by 1",
+            "image": "/static/tutorials/steps/ledGlowChangeDown.webp",
+            "imageFocus": {"x": 52, "y": 78, "zoom": 2.1},
+            "highlightBlock": {"category": "variables", "blockType": "data_changevariableby"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.changeDown",
+                "default": "Drag change brightness by 1 below analogWrite in the second repeat. Click the number and change it to -1 — minus one. Adding negative one is the same as subtracting. Now brightness counts down from 255 to 0."
+            },
+            "validate": true
+        },
+        {
+            "title": "A tiny pause again",
+            "image": "/static/tutorials/steps/ledGlowDelayDown.webp",
+            "imageFocus": {"x": 52, "y": 80, "zoom": 2.0},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.delayDown",
+                "default": "Drag one more delay block below change brightness, still inside the second repeat. Set it to 10 milliseconds — same pace as the way up, so the breath is symmetrical."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add an LED on pin 9",
+            "image": "/static/tutorials/steps/ledGlowAddLed.webp",
+            "imageFocus": {"x": 100, "y": 24, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.addLed",
+                "default": "Open the Simulator tab and click the plus button at the bottom right. Choose LED from the list, pick pin 9 (it has to be a PWM pin), and click Save."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/ledGlowStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.start",
+                "default": "Click the Start button at the top of the simulator. Your program will compile and run."
+            }
+        },
+        {
+            "title": "Watch it breathe",
+            "image": "/static/tutorials/steps/ledGlowRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.ledGlowEffect.running",
+                "default": "The LED fades smoothly brighter, then dimmer, then back up — a slow heartbeat. Try this: change the delay from 10 to 5 for a fast nervous breath, or to 20 for a deep sleepy one. Or change the change-by amount from 1 to 5 to make the LED fade in big jumpy steps instead of smooth — you'll see exactly why we needed 256 small steps."
             }
         }
     ]

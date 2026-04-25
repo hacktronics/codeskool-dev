@@ -1,11 +1,112 @@
 {
     "steps": [
         {
-            "title": "Smart Shopping Bill",
-            "image": "/static/tutorials/thumbnails/python-smart-shopping-bill.webp",
+            "title": "A bill that grows",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSmartShoppingBill.placeholder",
-                "default": "You'll add up shopping items inside a loop and print a neat bill with the total at the bottom, just like a real supermarket receipt."
+                "id": "gui.tutorials.pythonSmartShoppingBill.intro",
+                "default": "Today you'll write a tiny shopping bill. The kid says how many items they bought, then types the price of each one — and Python adds them up. You'll meet two new tools at once: the for loop with range, and a running total. By the end you'll have a working cashier program."
+            }
+        },
+        {
+            "title": "Print a title and ask for the count",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_02_count.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.count",
+                "default": "Type:\n\nprint(\"Smart Shopping Bill\")\n\nn = int(input(\"How many items? \"))\n\nThe variable n holds the number of items. We wrap input in int because we'll loop that many times — and you can't loop a string. Notice we picked a short name, n — that's a common Python convention for \"count\" variables."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Start the running total",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_03_total.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.total",
+                "default": "Type:\n\ntotal = 0\n\nThis is the running total — empty at the start. Every loop iteration will add the new price into total. The pattern \"start at zero, add as you go\" shows up everywhere — counting, scoring, summing — so it's worth noticing."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The for loop with range",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_04_forRange.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.forRange",
+                "default": "Type:\n\nfor i in range(n):\n    price = int(input(\"Enter price: \"))\n    total = total + price\n\nfor and range are both standard Python. range(n) makes a sequence of numbers 0, 1, 2 … up to n-1 — exactly n numbers. for i in range(n) means \"do the indented block n times\". Each loop the kid types a price, and total = total + price adds it on top of whatever total already had."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print the total and apply a discount",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_05_discount.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.discount",
+                "default": "Back to no indent — the discount logic runs ONCE, after the loop has added every price:\n\nprint(\"Total Bill:\", total)\n\nif total > 100:\n    print(\"Discount applied!\")\n    total = total - 10\n\nprint(\"Final Amount:\", total)\n\nNotice print can take more than one thing — it'll glue them with a space. The if checks the running total and knocks 10 off if it's big enough."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 12
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run a small order",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_06_smallOrder.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.smallOrder",
+                "default": "Click Run. Type 3 items. Enter prices 20, 30, 40. The terminal prints Total Bill: 90 — under 100, no discount, Final Amount: 90. Your for loop ran exactly three times because range(3) makes 0, 1, 2 — three values."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run a big order",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_07_bigOrder.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.bigOrder",
+                "default": "Run again. This time type 4 items. Enter 50, 50, 50, 50. Total: 200. Now the if catches it — Discount applied!, and Final Amount: 190. Same code, two different stories, depending on the prices."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "What you can build now",
+            "image": "/static/tutorials/steps/pythonSmartShoppingBill_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.recap",
+                "default": "Three new ideas in one tutorial: for loops, range, and running totals. With these you can score a quiz, count up dance moves, build a virtual piggy bank, or sum up steps in a fitness app. Next tutorial we'll add a quantity per item — what if the kid buys 3 of the same thing?"
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

@@ -1,11 +1,111 @@
 {
     "steps": [
         {
-            "title": "Try / Except — Handle Errors",
-            "image": "/static/tutorials/thumbnails/python-try-except-handle-errors.webp",
+            "title": "Stop the program from crashing",
+            "image": "/static/tutorials/steps/pythonTryExcept_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonTryExceptHandleErrors.placeholder",
-                "default": "You'll learn to catch mistakes before they crash your program — try something, and if it goes wrong, except lets you handle it nicely instead of blowing up."
+                "id": "gui.tutorials.pythonTryExcept.intro",
+                "default": "Real users type unexpected things. Real maths sometimes divides by zero. Until now, any error has crashed your program with a red wall of text. Today you'll learn try and except — Python's way of catching errors so the program can recover and keep running. You'll also meet finally, a block that ALWAYS runs, error or not."
+            }
+        },
+        {
+            "title": "Wrap risky code in try",
+            "image": "/static/tutorials/steps/pythonTryExcept_02_try.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.try",
+                "default": "Type:\n\ntry:\n    a = int(input(\"Enter number: \"))\n    b = int(input(\"Enter another number: \"))\n    \n    print(a / b)\n\ntry is standard Python — it tells Python \"the indented lines below MIGHT fail; if they do, don't crash, jump to the except block I'll write next\". The risky bits here are int(input(...)) (kid types non-digits?) and a / b (kid types 0 for b?)."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Handle the failure with except",
+            "image": "/static/tutorials/steps/pythonTryExcept_03_except.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.except",
+                "default": "Type:\n\nexcept:\n    print(\"Error occurred\")\n\nIf any line inside the try fails, Python jumps straight here — skipping the rest of the try block — and runs the except block. Then the program keeps going, no crash. The except is your safety net."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Always-run cleanup with finally",
+            "image": "/static/tutorials/steps/pythonTryExcept_04_finally.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.finally",
+                "default": "Type:\n\nfinally:\n    print(\"Done\")\n\nfinally is also standard Python — it runs at the end whether or not there was an error. Useful for cleanup steps: closing files, hanging up network connections, saving progress. Even if the try crashes AND the except runs, finally still runs after."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 8
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run with sensible numbers",
+            "image": "/static/tutorials/steps/pythonTryExcept_05_runOk.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.runOk",
+                "default": "Click Run. Type 10 for the first number, 2 for the second. The terminal prints 5.0 (Python's division gives a decimal) and Done. The try block ran cleanly, the except was skipped, and finally still ran at the end."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run with a divide-by-zero",
+            "image": "/static/tutorials/steps/pythonTryExcept_06_runZero.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.runZero",
+                "default": "Run again. Type 10, then 0. The terminal prints Error occurred (the except caught the divide-by-zero) and Done (finally still ran). Without try/except, Python would have crashed loudly. With it, the program handles the problem gracefully and keeps moving."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run with non-numeric input",
+            "image": "/static/tutorials/steps/pythonTryExcept_07_runText.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.runText",
+                "default": "Run once more. Type hello when it asks for a number. int can't convert that — error. Same except catches it, same Error occurred, same Done. One try/except handles many different kinds of failure, all in one neat block."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "When to reach for try/except",
+            "image": "/static/tutorials/steps/pythonTryExcept_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTryExcept.recap",
+                "default": "Use try/except whenever the line could fail because of OUTSIDE input — kid's text, files that might not exist, network calls that might time out. Don't use it to hide bugs in YOUR own code — those should be fixed, not silenced. Next coming tutorial: connecting all of this to files, where try/except saves the day every time a file isn't where you expected."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

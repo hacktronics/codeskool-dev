@@ -1,11 +1,85 @@
 {
     "steps": [
         {
-            "title": "One Command, One Job",
-            "image": "/static/tutorials/thumbnails/python-one-command-one-job.webp",
+            "title": "Return more than one answer",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonOneCommandOneJob.placeholder",
-                "default": "You'll learn to keep each function focused on a single job — small, clear commands that each do one thing well, so you can reuse them anywhere in your code."
+                "id": "gui.tutorials.pythonOneCommandOneJob.intro",
+                "default": "Sometimes one calculation has several answers — a sum AND a product, a name AND an age, x AND y coordinates. Until now, our functions could only return ONE thing. Today you'll learn to return TWO at the same time, then unpack them on the receiving side. Tiny addition to what you already know about return."
+            }
+        },
+        {
+            "title": "Define a calculator that returns two values",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_02_def.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.def",
+                "default": "Type:\n\ndef calculate(a, b):\n    return a + b, a * b\n\nLook at the return — there are TWO values separated by a comma. Python wraps them up together as a pair. The function still hands ONE thing back; that one thing just happens to contain both values. We'll see how to take them apart on the next line."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Call and unpack",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_03_unpack.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.unpack",
+                "default": "Below, type:\n\nsum_result, product_result = calculate(5, 3)\n\nThe two names on the left, separated by a comma, are unpacking. Python takes the pair returned by calculate and puts the first value into sum_result, the second into product_result. This is called tuple unpacking — and it works any time a function returns multiple values."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print both values",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_04_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.print",
+                "default": "Type:\n\nprint(\"Sum:\", sum_result)\nprint(\"Product:\", product_result)\n\nNow each value is a normal variable you can use independently. The function did one job — both calculations on the same two numbers — and handed back both results in one trip."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 5
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see both results",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.run",
+                "default": "Click Run. The terminal prints Sum: 8 and Product: 15. One call, two answers, both useful. Try changing the numbers — calculate(7, 7) gives 14 and 49."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Where you'd actually use this",
+            "image": "/static/tutorials/steps/pythonOneCommandOneJob_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandOneJob.recap",
+                "default": "Real uses: a function that splits a full name into first and last; a function that returns the min AND max of a list; a function that returns the x AND y of a sprite's position. Returning multiple values keeps related results together. The pair Python builds on the right of return is called a tuple — you'll meet that name properly in a few tutorials."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

@@ -1,11 +1,93 @@
 {
     "steps": [
         {
-            "title": "Type Conversion — Fix the Input",
-            "image": "/static/tutorials/thumbnails/python-type-conversion-fix-the-input.webp",
+            "title": "Why text that LOOKS like a number is a trap",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonTypeConversionFixTheInput.placeholder",
-                "default": "You'll learn to turn text into numbers and numbers into text — int, float, str — so input from the keyboard can actually do maths instead of just sitting there as a string."
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.intro",
+                "default": "You've been using int to turn text into numbers when you need to add or compare. Today you'll see exactly why — side by side. We'll take two numbers from the kid, once without int (wrong) and once with int (right), and watch what Python actually does. Spoiler: the same plus sign behaves completely differently depending on what it's adding."
+            }
+        },
+        {
+            "title": "Ask for two values — leave them as text",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_02_twoInputs.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.typeInputs",
+                "default": "Type these two lines:\n\na = input(\"Enter number: \")\nb = input(\"Enter number: \")\n\nNotice there is NO int around input this time. So a and b will hold strings like \"12\" and \"34\" even if the kid types digits. We're doing this on purpose — to see what goes wrong when text pretends to be a number."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The wrong way",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_03_wrongPrint.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.typeWrong",
+                "default": "Leave a blank line, then type:\n\nprint(a + b)            # wrong\n\nThe # starts a comment — Python ignores anything after # on a line, but we humans can read it. Think for a second: a is \"12\" and b is \"34\". What will \"12\" + \"34\" do?"
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Plus on strings glues, it does not add",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_04_explainGlue.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.explainGlue",
+                "default": "When the plus sign is between two strings, Python glues them — no maths happens. \"12\" + \"34\" becomes \"1234\", the digits stuck together, NOT 46. This is exactly the concatenation you used to make greetings two tutorials ago. Python is doing the same thing here — it just isn't what we wanted this time."
+            }
+        },
+        {
+            "title": "The right way",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_05_rightPrint.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.typeRight",
+                "default": "Now add the correct line underneath:\n\nprint(int(a) + int(b))  # correct\n\nint is standard Python — it converts a string of digits into a real number. int(a) is the number 12, int(b) is the number 34, and 12 + 34 is real addition. Same plus sign, totally different behaviour because now its sides are numbers."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 3
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see both answers side by side",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_06_terminalResults.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.runBoth",
+                "default": "Click Run. Type 12 for the first number, type 34 for the second. The terminal prints 1234 from the wrong line and 46 from the right line. Same inputs, same plus — but the wrapping with int changed everything. That's what \"type conversion\" means: turning a value into the kind of thing you actually need."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "The rule to remember",
+            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTypeConversionFixTheInput.recap",
+                "default": "From now on, every time you take a number from input and want to do maths with it, wrap it in int (for whole numbers) or float (for decimals like 3.5). There is also str going the other way — number back into text. int, float, str are all standard Python. Keep them handy — they show up in every program that mixes input and maths."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

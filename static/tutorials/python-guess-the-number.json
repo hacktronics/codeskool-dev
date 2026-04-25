@@ -1,11 +1,120 @@
 {
     "steps": [
         {
-            "title": "Guess the Secret Number",
-            "image": "/static/tutorials/thumbnails/python-guess-the-number.webp",
+            "title": "A real game",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonGuessTheNumber.placeholder",
-                "default": "You'll build a number-guessing game — the computer picks a secret number and you try to find it with hints like 'too high' or 'too low'."
+                "id": "gui.tutorials.pythonGuessTheNumber.intro",
+                "default": "You've got enough pieces now to build a real game. The computer will think of a secret number and give the kid a hint — too high, too low, or correct. You already know if and else. Today you'll learn elif — the word that lets you chain THREE possible answers together in one decision."
+            }
+        },
+        {
+            "title": "Print a friendly title",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_02_title.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.title",
+                "default": "Type the first line:\n\nprint(\"Guess the number!\")\n\nThis just prints a title in the terminal when the game starts. Anything in quotes is just text to Python — your title can be whatever you like."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Store the secret number",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_03_secret.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.secret",
+                "default": "Leave a blank line, then type:\n\nnumber = 5\n\nThis is your \"secret\" answer. It's not very secret right now — the kid can read the code. In a few tutorials you'll use random to make the computer pick for you. For now, 5 is fine — it keeps our attention on the decision logic."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Ask for a guess",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_04_guessLine.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.guessLine",
+                "default": "Leave a blank line and type:\n\nguess = int(input(\"Enter your guess: \"))\n\nSame pattern as the Numbers tutorial — ask a question and wrap with int, because we're going to COMPARE it to number. Comparing works on real numbers, not text."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Meet elif — three-way branching",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_05_elif.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.elif",
+                "default": "Type the three-way check with blank lines between each:\n\nif guess == number:\n    print(\"Correct!\")\n\nelif guess > number:\n    print(\"Too high\")\n\nelse:\n    print(\"Too low\")\n\nelif is standard Python — short for \"else if\". It's like else, but with its own condition. Python checks each condition top to bottom and runs the first branch that's true. The later branches are skipped. If none match, else catches the rest."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 7
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why == and not =",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_06_equalsExplain.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.equalsExplain",
+                "default": "Notice the double equals sign in if guess == number. That's not a typo. One equals sign (=) means STORE — like age = 10 stores 10 under age. Two equals signs (==) means CHECK — \"are these the same?\". Mixing them up is the most common bug in early Python code. Read your if conditions carefully."
+            }
+        },
+        {
+            "title": "Run — guess too low",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_07_tooLow.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.tooLow",
+                "default": "Click Run. Type 3. The terminal says Too low. Walk through what happened: guess == number was 3 == 5, false. elif guess > number was 3 > 5, false. else caught everything else. Python ran exactly ONE branch."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run again — guess too high",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_08_tooHigh.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.tooHigh",
+                "default": "Click Run again. Type 9. Now the terminal says Too high. This time the first if was still false, but the elif was true (9 > 5), so Python ran that one and skipped the else. First-true-wins."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run again — get it right",
+            "image": "/static/tutorials/steps/pythonGuessTheNumber_09_correct.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.correct",
+                "default": "Click Run once more. Type 5. The terminal says Correct! The very first if was true, so Python ran it and didn't even LOOK at the elif or else. Three runs, three different messages, one program. In the next tutorial we'll let the kid guess again after they get it wrong."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

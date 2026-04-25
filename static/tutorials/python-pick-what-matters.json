@@ -1,11 +1,79 @@
 {
     "steps": [
         {
-            "title": "Pick What Matters",
-            "image": "/static/tutorials/thumbnails/python-pick-what-matters.webp",
+            "title": "Pass a whole list to a function",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonPickWhatMatters.placeholder",
-                "default": "You'll teach your program to look at a bunch of things and pick out the one that matters most — the biggest score, the best answer, the thing that wins."
+                "id": "gui.tutorials.pythonPickWhatMatters.intro",
+                "default": "You've passed numbers, strings, even multiple values into functions. Today you'll pass an ENTIRE LIST as a single argument — and the function will loop through it inside. The function picks out only the items that match a rule, and returns how many it found. Combining functions with lists is where Python starts to feel powerful."
+            }
+        },
+        {
+            "title": "Define count_big",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_02_def.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.def",
+                "default": "Type:\n\ndef count_big(numbers):\n    count = 0\n    \n    for n in numbers:\n        if n > 10:\n            count = count + 1\n            \n    return count\n\nThe parameter numbers is a list — passed in by whoever calls. Inside, count starts at 0, the for loop goes through every item, and the if bumps count up by one if the item is greater than 10. At the end, return hands the answer back."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Counting pattern",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_03_pattern.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.pattern",
+                "default": "This shape — start at zero, loop through, bump up when a condition is true, return the total — is one of the most common patterns in programming. Same shape works for counting words, ticking off completed tasks, scoring a quiz. Once you spot the pattern in your own problem, the code almost writes itself."
+            }
+        },
+        {
+            "title": "Make a list and call the function",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_04_call.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.call",
+                "default": "Below the def block, type:\n\nnums = [5, 12, 7, 20, 3]\n\nprint(count_big(nums))\n\nThe whole list nums is passed in as a single argument. count_big loops over it inside and gives back how many items were greater than 10. Spoiler: 12 and 20 — that's 2."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 11
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see 2",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.run",
+                "default": "Click Run. The terminal prints 2 — the count of items greater than 10. Try with a different list — change nums to [50, 60, 70] and you'll get 3. Or to [1, 2, 3] and you'll get 0. Same function, any list, instant answer."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Make it more flexible",
+            "image": "/static/tutorials/steps/pythonPickWhatMatters_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonPickWhatMatters.recap",
+                "default": "Stretch challenge: change count_big to count_above and add a second parameter — count_above(numbers, threshold) — so you can ask \"how many bigger than 100?\" or \"how many bigger than 0?\" Same pattern, just one extra empty box at the top of the function. You're now writing functions other people would actually use."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

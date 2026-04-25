@@ -1,11 +1,125 @@
 {
     "steps": [
         {
-            "title": "Second Chance",
-            "image": "/static/tutorials/thumbnails/python-second-chance.webp",
+            "title": "Give the kid another chance",
+            "image": "/static/tutorials/steps/pythonSecondChance_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSecondChance.placeholder",
-                "default": "You'll use a loop to let the kid try again — asking the same question over until they get it right, just like a real game giving you another chance."
+                "id": "gui.tutorials.pythonSecondChance.intro",
+                "default": "Last tutorial's game ended on one guess — right or wrong, the game was over. Real games don't work that way. Today you'll build a version that gives the kid a second try if they miss the first time. We'll do it by NESTING one if inside another else — a little decision tree inside the bigger decision."
+            }
+        },
+        {
+            "title": "Set up the game",
+            "image": "/static/tutorials/steps/pythonSecondChance_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.setup",
+                "default": "Type these lines — same opening as last time:\n\nprint(\"Guess the number (2 chances)!\")\n\nnumber = 5\n\nguess = int(input(\"Enter your guess: \"))\n\nThe title mentions the 2 chances up front so the kid knows what to expect. number is still 5. The first guess is taken exactly like before."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The outer if — got it first try?",
+            "image": "/static/tutorials/steps/pythonSecondChance_03_outerIf.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.outerIf",
+                "default": "Type:\n\nif guess == number:\n    print(\"Correct!\")\n\nThis is the \"got it first try\" path. If the kid guessed 5, Python prints the celebration and skips everything else. The interesting work happens in the else branch — when the first guess was wrong."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The else — start the second chance",
+            "image": "/static/tutorials/steps/pythonSecondChance_04_elseStart.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.elseStart",
+                "default": "Type:\n\nelse:\n    print(\"Try again\")\n\n    guess = int(input(\"Second chance: \"))\n\nNote the BLANK line between the two indented lines — that's for readability, Python doesn't mind. The else block first tells the kid they missed, then asks for another guess. The variable guess gets reassigned — the new answer overwrites the old one in the same box."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The inner if — nested inside else",
+            "image": "/static/tutorials/steps/pythonSecondChance_05_innerIf.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.innerIf",
+                "default": "Still inside the else block, type:\n\n    if guess == number:\n        print(\"Correct!\")\n    else:\n        print(\"Game over\")\n\nLook at the indentation — EIGHT spaces in front of the inner if and else, because they're inside the outer else. The inner if/else only runs when the outer else is taken. This is called nesting, and it can go as deep as you need."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 5
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run — win on the first try",
+            "image": "/static/tutorials/steps/pythonSecondChance_06_firstWin.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.firstWin",
+                "default": "Click Run. Type 5 straight away. Terminal prints Correct! and stops. Python never entered the else — the second-chance code sat there untouched. That's how branches work: only the path you take runs."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run again — miss then catch",
+            "image": "/static/tutorials/steps/pythonSecondChance_07_missWin.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.missWin",
+                "default": "Run again. Type 3. Terminal says Try again and asks Second chance. Type 5 this time. Terminal prints Correct! The outer if was false, so the else ran — it prompted, got a new guess, and the INNER if caught it. Two tries, one win."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run once more — miss twice",
+            "image": "/static/tutorials/steps/pythonSecondChance_08_missMiss.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.missMiss",
+                "default": "Run once more. Type 3, then 7. Terminal: Try again, then Game over. The outer if missed, the else ran, the inner if missed too, the inner else was the final catch. Two chances, both wrong — game over. The shape of your code controls exactly how the game feels."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why we'll replace this with a loop next",
+            "image": "/static/tutorials/steps/pythonSecondChance_09_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSecondChance.recap",
+                "default": "Copy-pasting the same code for two tries works — but imagine writing it for 10 tries, or \"keep going until they win\". You'd run out of room fast. Next tutorial introduces the while loop: a way to repeat the same block of code until a condition stops being true. Your game will suddenly accept unlimited tries in just a few lines."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

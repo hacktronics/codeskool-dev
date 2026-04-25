@@ -1,11 +1,128 @@
 {
     "steps": [
         {
-            "title": "Automatic Hand Sanitizer",
-            "image": "/static/tutorials/thumbnails/automatic-hand-sanitizer.webp",
+            "title": "Touchless hand sanitizer",
+            "image": "/static/tutorials/steps/handSanitizerIntro.webp",
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.placeholder",
-                "default": "You'll build a touchless sanitizer dispenser — the ultrasonic sensor spots a hand and a servo squirts the sanitizer, all without anyone touching anything."
+                "id": "gui.tutorials.automaticHandSanitizer.intro",
+                "default": "You've seen them at hospitals, airports, every shop entrance — wave your hand under a little box and a clean squirt of sanitizer comes out. No buttons to press, no germs to share. Today you'll build that exact thing. An infrared sensor notices a hand and a servo motor gives one squeeze to a sanitizer bottle. In this simulator a PIR motion sensor stands in for the IR proximity sensor; both pulse HIGH when something's in front of them, so the code is identical. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/handSanitizerSetupLoop.webp",
+            "imageFocus": {"x": 47, "y": 46, "zoom": 2.9},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Listen on pin 2",
+            "image": "/static/tutorials/steps/handSanitizerPinIr.webp",
+            "imageFocus": {"x": 52, "y": 40, "zoom": 2.9},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.pinIr",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and change the mode to INPUT. The IR sensor (a PIR here) will whisper HIGH on this pin whenever a hand comes close. INPUT means the Arduino is listening, not sending."
+            },
+            "validate": true
+        },
+        {
+            "title": "Decide: squirt or wait?",
+            "image": "/static/tutorials/steps/handSanitizerIfElse.webp",
+            "imageFocus": {"x": 51, "y": 60, "zoom": 2.7},
+            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.ifElse",
+                "default": "Open Control and drag an if / else block into the loop. We'll dispense ONLY when the sensor sees a hand — never randomly."
+            },
+            "validate": true
+        },
+        {
+            "title": "Build the question",
+            "image": "/static/tutorials/steps/handSanitizerCondition.webp",
+            "imageFocus": {"x": 56, "y": 53, "zoom": 2.7},
+            "highlightBlock": {"category": "operators", "blockType": "operator_equals"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.condition",
+                "default": "Open Operators and drop an equals block into the condition slot. On the left side drop a digitalRead block from Arduino and set its pin to 2. On the right side drop a HIGH reporter from Arduino. The condition now reads: 'is the sensor reporting HIGH?' — which means a hand is present."
+            },
+            "validate": true
+        },
+        {
+            "title": "Press the bottle",
+            "image": "/static/tutorials/steps/handSanitizerPress.webp",
+            "imageFocus": {"x": 55, "y": 58, "zoom": 2.7},
+            "highlightBlock": {"category": "servo", "blockType": "servo_writeFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.press",
+                "default": "From the Servo category, drag a servo write block into the if branch. Set pin to 9 and angle to 90. A servo is a motor that rotates to a specific angle on command — so 90 means 'turn the arm to the 90-degree mark'. That's the position where it presses the sanitizer pump down."
+            },
+            "validate": true
+        },
+        {
+            "title": "Hold for a full squirt",
+            "image": "/static/tutorials/steps/handSanitizerHold.webp",
+            "imageFocus": {"x": 55, "y": 62, "zoom": 2.7},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.hold",
+                "default": "Below the servo write, drag a delay block. Set it to 1000 milliseconds — a full second. The servo holds the press down long enough for one good squirt. Without this delay, it would lift off before any sanitizer made it out."
+            },
+            "validate": true
+        },
+        {
+            "title": "Lift back up — ready for the next hand",
+            "image": "/static/tutorials/steps/handSanitizerRelease.webp",
+            "imageFocus": {"x": 55, "y": 68, "zoom": 2.7},
+            "highlightBlock": {"category": "servo", "blockType": "servo_writeFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.release",
+                "default": "Drag another servo write block below the delay. Keep pin on 9 but change the angle to 0. The servo arm swings back up, off the bottle, ready for the next hand to walk up."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the IR sensor stand-in",
+            "image": "/static/tutorials/steps/handSanitizerAddIr.webp",
+            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.addIr",
+                "default": "Open the Simulator and click the plus button. Choose PIR Motion — it stands in for the IR proximity sensor here because both pulse HIGH when something is in front of them, so our digitalRead block reads them identically. Pick pin 2 and click Save."
+            }
+        },
+        {
+            "title": "Add the servo",
+            "image": "/static/tutorials/steps/handSanitizerAddServo.webp",
+            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.addServo",
+                "default": "Click the plus again and add a Servo Motor on pin 9. The servo is the little motorised arm that pushes the sanitizer pump."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/handSanitizerStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.start",
+                "default": "Click Start. Your program compiles and the Arduino begins watching for hands."
+            }
+        },
+        {
+            "title": "Wave a hand",
+            "image": "/static/tutorials/steps/handSanitizerRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.automaticHandSanitizer.running",
+                "default": "Click the sensor in the simulator to trigger a detection. The servo swings to 90, holds for a second, and swings back to 0 — one clean squirt, hands-free. Try this: change the hold delay from 1000 to 2000 for a generous squirt, or change the press angle from 90 to 60 for a smaller dose. Real dispensers are tuned exactly like this for the bottle they're using."
             }
         }
     ]

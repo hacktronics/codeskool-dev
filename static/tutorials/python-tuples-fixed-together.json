@@ -1,11 +1,93 @@
 {
     "steps": [
         {
-            "title": "Tuples — Fixed Together",
-            "image": "/static/tutorials/thumbnails/python-tuples-fixed-together.webp",
+            "title": "A pack of values that don't change",
+            "image": "/static/tutorials/steps/pythonTuples_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonTuplesFixedTogether.placeholder",
-                "default": "You'll learn about tuples — a way to hold a few things together that should never change, like coordinates on a map or the red-green-blue of a colour."
+                "id": "gui.tutorials.pythonTuples.intro",
+                "default": "You've already met tuples — when a function returns multiple values, what comes back is a tuple. Today you'll meet them on their own. A tuple holds a few values together that belong as a unit and shouldn't be changed: an x-y position, the red-green-blue of a colour, a date's day-month-year. Lists grow and shrink; tuples stay fixed."
+            }
+        },
+        {
+            "title": "Make a colour as a tuple",
+            "image": "/static/tutorials/steps/pythonTuples_02_color.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.color",
+                "default": "Type:\n\ncolor = (255, 100, 50)\n\nThe round brackets and commas make a tuple. Three values inside — red, green, blue — packed together as one. This is exactly what graphics libraries use to describe a colour. Notice the brackets are () round, NOT [] square. Square brackets make a list; round brackets make a tuple."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Pull the pieces out by index",
+            "image": "/static/tutorials/steps/pythonTuples_03_index.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.index",
+                "default": "Type:\n\nr = color[0]\ng = color[1]\nb = color[2]\n\nThe square brackets after a tuple's name reach IN — color[0] grabs the first value, color[1] the second, color[2] the third. Important: Python counts from ZERO, not one. The first thing is at position 0. This is the same indexing that works for lists and strings."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print the parts",
+            "image": "/static/tutorials/steps/pythonTuples_04_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.print",
+                "default": "Type:\n\nprint(\"Red:\", r)\nprint(\"Green:\", g)\nprint(\"Blue:\", b)\n\nThree prints — each labelled. Now you've taken a packed-together tuple, opened it up, and shown each piece on its own."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 6
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see the colour split",
+            "image": "/static/tutorials/steps/pythonTuples_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.run",
+                "default": "Click Run. The terminal prints Red: 255, Green: 100, Blue: 50 — the three pieces of the original colour, neatly labelled. The tuple stayed put as a whole; we just looked into it."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Tuples vs lists",
+            "image": "/static/tutorials/steps/pythonTuples_06_vsList.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.vsList",
+                "default": "Lists [a, b, c] can grow with append, shrink, and reorder. Tuples (a, b, c) cannot — once made, they're fixed. Use a tuple when the values belong together and shouldn't change as a group. Use a list when you'll be adding or removing items as the program runs. Same indexing, different rules about modification."
+            }
+        },
+        {
+            "title": "Where tuples shine",
+            "image": "/static/tutorials/steps/pythonTuples_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonTuples.recap",
+                "default": "Use them for coordinates: position = (x, y). RGB colours: (red, green, blue). Dates: (year, month, day). Anything where the count is fixed and changing one piece without the others would be wrong. You'll see tuples come back when we work with dictionaries and when functions return multiple values."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

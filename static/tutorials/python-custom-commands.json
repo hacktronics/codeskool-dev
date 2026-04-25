@@ -1,11 +1,79 @@
 {
     "steps": [
         {
-            "title": "Create Your Own Commands",
-            "image": "/static/tutorials/thumbnails/python-custom-commands.webp",
+            "title": "Teach Python a new command",
+            "image": "/static/tutorials/steps/pythonCustomCommands_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonCustomCommands.placeholder",
-                "default": "You'll teach Python your own commands by writing a function — give it a name, tell it what to do, then use it again and again whenever you like."
+                "id": "gui.tutorials.pythonCustomCommands.intro",
+                "default": "So far you've used Python's built-in commands — print, input, len. Today you'll teach Python a NEW command that does whatever you want. We call this making a function. In Scratch this is the \"My Blocks\" feature — you make a custom block that does a chunk of work, then drop it anywhere. In Python, the keyword is def."
+            }
+        },
+        {
+            "title": "Define a function with def",
+            "image": "/static/tutorials/steps/pythonCustomCommands_02_def.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.def",
+                "default": "Type:\n\ndef greet():\n    print(\"Hello!\")\n\ndef is standard Python — short for \"define\". The line def greet(): is saying \"make a new command called greet that takes no extra info\". The colon at the end and the indented line below tell Python what greet should DO when called. Notice nothing has happened yet — defining a function just teaches Python the recipe."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Defining vs calling",
+            "image": "/static/tutorials/steps/pythonCustomCommands_03_defVsCall.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.defVsCall",
+                "default": "Defining a function is like writing the recipe down on a card. Nothing gets cooked. To actually run the steps inside, you have to CALL the function — type its name with parentheses on a line, like greet(). The parentheses are how Python knows you want to USE the function, not just point at it."
+            }
+        },
+        {
+            "title": "Call it three times",
+            "image": "/static/tutorials/steps/pythonCustomCommands_04_callThrice.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.callThrice",
+                "default": "Below the def block, with NO indent, type:\n\ngreet()\ngreet()\ngreet()\n\nThree calls — Python will run the function's body three separate times. This is the magic: write the print line ONCE, reuse it as many times as you like. If you ever wanted to change \"Hello!\" to something else, you only edit ONE line and every call updates."
+            },
+            "validateCode": {
+                "functionName": "greet",
+                "lineIndex": 2
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch greet fire three times",
+            "image": "/static/tutorials/steps/pythonCustomCommands_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.run",
+                "default": "Click Run. The terminal prints Hello! three times — once for each call. Same recipe, executed three times. Try changing the print inside greet to something else and run again — all three calls produce the new message. One change, three updates."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why functions matter",
+            "image": "/static/tutorials/steps/pythonCustomCommands_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonCustomCommands.recap",
+                "default": "Functions let you NAME a chunk of work. Instead of repeating the same lines, you write them once and reuse the name. Bigger programs are mostly functions calling other functions. In the next tutorial we'll teach functions to ACCEPT information — so the same greet command can say hello to different people."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

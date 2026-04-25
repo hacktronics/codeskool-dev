@@ -1,11 +1,92 @@
 {
     "steps": [
         {
-            "title": "Ask the User",
-            "image": "/static/tutorials/thumbnails/python-ask-the-user.webp",
+            "title": "Asking the kid a question",
+            "image": "/static/tutorials/steps/pythonAskTheUser_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonAskTheUser.placeholder",
-                "default": "You'll learn how to use input to ask the kid a question and read what they type."
+                "id": "gui.tutorials.pythonAskTheUser.intro",
+                "default": "Last tutorial you stored a value yourself: message = \"Hello Python!\". But the kid running your program can't change it without editing the code. Today we'll let the program ask a question and use whatever the kid types. In Scratch this is the \"ask and wait\" block. In Python it's one short line — but it unlocks every game, quiz, and chat program you'll ever write."
+            }
+        },
+        {
+            "title": "Type the input line",
+            "image": "/static/tutorials/steps/pythonAskTheUser_02_inputLine.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.typeInput",
+                "default": "On line 1, type: name = input(\"What is your name?\"). The function input is standard Python — when the program runs, a small text box pops up on the stage with the question above it, and the program WAITS until the kid types an answer and presses Enter. Whatever they type is given back, and the equals sign stores it under the name name."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "What input gives back is always text",
+            "image": "/static/tutorials/steps/pythonAskTheUser_03_textFact.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.textFact",
+                "default": "One important thing to remember about input: it always gives back TEXT. Even if the kid types 12, Python sees the string \"12\", not the number 12. We're not doing maths today so this doesn't matter — but it will matter in two tutorials. For now, just keep in mind: whatever comes out of input is a string."
+            }
+        },
+        {
+            "title": "Greet them with their answer",
+            "image": "/static/tutorials/steps/pythonAskTheUser_04_bothLines.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.typePrint",
+                "default": "Press Enter for line 2, then type print(\"Hello, \" + name). The plus sign here does something you haven't seen before — it GLUES two pieces of text together into one. This is called concatenation. \"Hello, \" is a fixed string (with a space after the comma!) and name holds whatever the kid typed. Put together they make one greeting. Notice: no quotes around name — it's a variable, like last tutorial."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 1
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and answer the prompt",
+            "image": "/static/tutorials/steps/pythonAskTheUser_05_terminalPrompt.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.run",
+                "default": "Click Run. A small text box pops up on the stage with the question — that's input waiting. Type your name in the box and press Enter (or click the arrow button). The moment you submit, the wait ends and Python runs the next line."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "The greeting appears",
+            "image": "/static/tutorials/steps/pythonAskTheUser_06_greetingShown.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.greeting",
+                "default": "Now the terminal shows Hello, followed by whatever you typed. Python glued \"Hello, \" and your name together with the plus sign and print put the whole thing in the terminal. Same program, different answer each time you run it — that's the magic of input."
+            },
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Ask a different question",
+            "image": "/static/tutorials/steps/pythonAskTheUser_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.recap",
+                "default": "Change the question inside the quotes on line 1 — ask for a favourite colour, a pet's name, a superpower. Change the greeting on line 2 to match, like print(\"Nice choice, \" + colour + \"!\"). Remember to store the answer in a variable with a matching name. Click Run again. Your program now knows how to talk to anyone."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

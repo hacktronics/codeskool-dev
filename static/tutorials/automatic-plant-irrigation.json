@@ -1,11 +1,149 @@
 {
     "steps": [
         {
-            "title": "Automatic Plant Irrigation",
-            "image": "/static/tutorials/thumbnails/automatic-plant-irrigation.webp",
+            "title": "A plant that waters itself",
+            "image": "/static/tutorials/steps/plantIrrigationIntro.webp",
             "narration": {
-                "id": "gui.tutorials.automaticPlantIrrigation.placeholder",
-                "default": "You'll build an automatic plant waterer that reads a soil moisture sensor and switches on a pump whenever the soil gets too dry."
+                "id": "gui.tutorials.automaticPlantIrrigation.intro",
+                "default": "Forget to water a plant for a week and you come back to droopy leaves. What if the plant could check its own soil and turn on a pump whenever it got thirsty? That's exactly what real farms do for entire fields, and it's what you're about to build in miniature. In this simulator a photoresistor stands in for the soil moisture sensor, and an LED stands in for the water pump — both speak the same electrical language as the real parts. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/plantIrrigationSetupLoop.webp",
+            "imageFocus": {"x": 38, "y": 56, "zoom": 2.9},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Tell pin 9 it'll drive the pump",
+            "image": "/static/tutorials/steps/plantIrrigationPinMode.webp",
+            "imageFocus": {"x": 60, "y": 45, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.pinMode",
+                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT — this pin drives the pump. The soil sensor on A0 is read-only by nature so it doesn't need a pinMode. Only outputs do."
+            },
+            "validate": true
+        },
+        {
+            "title": "Make a moisture variable",
+            "image": "/static/tutorials/steps/plantIrrigationMakeVar.webp",
+            "imageFocus": {"x": 10, "y": 30, "zoom": 2.4},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.makeVar",
+                "default": "Open Variables and click Make a Variable. Name it moisture. This will hold the current reading from the soil sensor. Low numbers mean dry soil (the plant is thirsty), high numbers mean wet soil (the plant has had a drink)."
+            },
+            "validate": true
+        },
+        {
+            "title": "Read the soil sensor",
+            "image": "/static/tutorials/steps/plantIrrigationRead.webp",
+            "imageFocus": {"x": 60, "y": 60, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogReadFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.read",
+                "default": "Drag a set moisture block into the loop. For the value, drag an analogRead block from the Arduino category and drop it in place of the 0. Set analogRead's pin to A0 — the soil sensor is wired there. analogRead reports a number from 0 to 1023, and that number tracks how wet the soil is."
+            },
+            "validate": true
+        },
+        {
+            "title": "Decide: water or wait?",
+            "image": "/static/tutorials/steps/plantIrrigationIfElse.webp",
+            "imageFocus": {"x": 60, "y": 70, "zoom": 2.6},
+            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.ifElse",
+                "default": "Drag an if / else block below the set moisture block. Two choices: turn the pump ON if the soil is dry, or leave it OFF if the soil is fine."
+            },
+            "validate": true
+        },
+        {
+            "title": "How dry is too dry?",
+            "image": "/static/tutorials/steps/plantIrrigationCondition.webp",
+            "imageFocus": {"x": 60, "y": 70, "zoom": 2.6},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.condition",
+                "default": "Open Operators. Drag a less-than block into the condition slot. Drop the moisture reporter on the left side and change the right side to 500. Below 500 means dry soil — time to water. You can tune this number later for thirstier or hardier plants."
+            },
+            "validate": true
+        },
+        {
+            "title": "Dry soil — pump on",
+            "image": "/static/tutorials/steps/plantIrrigationPumpOn.webp",
+            "imageFocus": {"x": 60, "y": 73, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.pumpOn",
+                "default": "Drag a digitalWrite block into the if branch. Set pin to 9 and keep value on HIGH — when the soil reading is below 500 the pump runs and waters the plant."
+            },
+            "validate": true
+        },
+        {
+            "title": "Damp enough — pump off",
+            "image": "/static/tutorials/steps/plantIrrigationPumpOff.webp",
+            "imageFocus": {"x": 60, "y": 78, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.pumpOff",
+                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW — when the soil is already moist enough, the pump stays off. Without this else, the plant could end up drowning."
+            },
+            "validate": true
+        },
+        {
+            "title": "A small pause",
+            "image": "/static/tutorials/steps/plantIrrigationDelay.webp",
+            "imageFocus": {"x": 60, "y": 80, "zoom": 2.6},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.delay",
+                "default": "Drag a delay block below the if / else. Set it to 200 milliseconds. Five checks a second — fast enough to react before the plant notices, gentle enough not to wear out the sensor."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the soil sensor stand-in",
+            "image": "/static/tutorials/steps/plantIrrigationAddSensor.webp",
+            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.addSensor",
+                "default": "Open the Simulator and click the plus button. Choose Photoresistor — it stands in for the soil moisture sensor here, since both report an analog value on A0 and we read them with the same analogRead block. Pick pin A0 and click Save."
+            }
+        },
+        {
+            "title": "Add the pump (an LED stand-in)",
+            "image": "/static/tutorials/steps/plantIrrigationAddPump.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.addPump",
+                "default": "Click the plus again and add an LED on pin 9. The LED stands in for the water pump — on real hardware the exact same HIGH signal would switch a relay that powers a small water pump."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/plantIrrigationStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.start",
+                "default": "Click Start. Your program compiles and begins watching the soil."
+            }
+        },
+        {
+            "title": "Dry and wet",
+            "image": "/static/tutorials/steps/plantIrrigationRunning.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.automaticPlantIrrigation.running",
+                "default": "Drag the photoresistor slider down (the stand-in for dry soil) — the pump LED comes on. Slide it back up and it switches off. Try this: change 500 to 300 — now your plant only gets watered when the soil is REALLY dry. Or to 800 for a fussy plant that wants damp soil all day. Real farmers tune that exact number for every crop."
             }
         }
     ]

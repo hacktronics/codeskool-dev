@@ -1,11 +1,161 @@
 {
     "steps": [
         {
-            "title": "Smart People Counter",
-            "image": "/static/tutorials/thumbnails/smart-people-counter.webp",
+            "title": "Counting people through a doorway",
+            "image": "/static/tutorials/steps/peopleCounterIntro.webp",
             "narration": {
-                "id": "gui.tutorials.smartPeopleCounter.placeholder",
-                "default": "You'll build a people counter that ticks up by one every time someone walks past an infrared sensor — just like the counters at shop doors."
+                "id": "gui.tutorials.smartPeopleCounter.intro",
+                "default": "Shopping malls track visitor numbers. Libraries count how many readers walked in today. Even cricket stadiums know exactly how many people are inside. They all use the same trick: a sensor at the door and a counter that ticks up by one every time someone walks through. Today you'll build that. To make it work in the simulator we'll use a PIR motion sensor in place of an infrared beam — the idea is the same. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+            }
+        },
+        {
+            "title": "Drag the setup / loop block",
+            "image": "/static/tutorials/steps/peopleCounterSetupLoop.webp",
+            "imageFocus": {"x": 55, "y": 50, "zoom": 2.1},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true
+        },
+        {
+            "title": "Listen for the sensor on pin 2",
+            "image": "/static/tutorials/steps/peopleCounterPinSensor.webp",
+            "imageFocus": {"x": 55, "y": 50, "zoom": 2.1},
+            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.pinSensor",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and change the mode to INPUT. The motion sensor will pulse HIGH on this pin every time it sees a person — so the Arduino has to listen on pin 2."
+            },
+            "validate": true
+        },
+        {
+            "title": "Wake up the 7-segment display",
+            "image": "/static/tutorials/steps/peopleCounterDisplayInit.webp",
+            "imageFocus": {"x": 55, "y": 55, "zoom": 2.0},
+            "highlightBlock": {"category": "tm1637", "blockType": "tm1637_displayTM1637Display"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.displayInit",
+                "default": "Open the TM1637 7-Segment category and drag the initialize display block into setup. Set CLK to 3 and DIO to 4 — those are the two wires that drive the 7-segment display. A 7-segment display is the bright red number screen you see on microwaves and digital clocks."
+            },
+            "validate": true
+        },
+        {
+            "title": "A box for the count",
+            "image": "/static/tutorials/steps/peopleCounterMakeCount.webp",
+            "imageFocus": {"x": 12, "y": 30, "zoom": 2.6},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.makeCount",
+                "default": "Open Variables and click Make a Variable. Name it count. This holds how many people have walked past so far — and it survives across loops, which is exactly what we need."
+            },
+            "validate": true
+        },
+        {
+            "title": "A second box: lastState",
+            "image": "/static/tutorials/steps/peopleCounterMakeLast.webp",
+            "imageFocus": {"x": 12, "y": 35, "zoom": 2.6},
+            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.makeLast",
+                "default": "Click Make a Variable again and name this one lastState. Here's why we need it: if someone stands in front of the sensor for two seconds, the loop sees HIGH hundreds of times — without lastState we'd count the same person hundreds of times. lastState remembers what the sensor said LAST TIME, so we only count when the reading just CHANGED from LOW to HIGH. That moment-of-change is called an edge."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add an if block",
+            "image": "/static/tutorials/steps/peopleCounterIf.webp",
+            "imageFocus": {"x": 55, "y": 60, "zoom": 2.0},
+            "highlightBlock": {"category": "control", "blockType": "control_if"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.if",
+                "default": "Open Control and drag an if block into the loop. This is where we'll watch for the brand-new edge — the exact moment a person arrives."
+            },
+            "validate": true
+        },
+        {
+            "title": "Build the edge condition",
+            "image": "/static/tutorials/steps/peopleCounterCondition.webp",
+            "imageFocus": {"x": 50, "y": 62, "zoom": 1.9},
+            "highlightBlock": {"category": "operators", "blockType": "operator_and"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.condition",
+                "default": "Open Operators and drag an and block into the if condition. The and block needs BOTH sides to be true. On the left build digitalRead pin 2 equals 1 — the sensor sees a person right now. On the right build lastState equals 0 — but it didn't see one last time. Both conditions true together means: a brand-new person just arrived this very moment."
+            },
+            "validate": true
+        },
+        {
+            "title": "Tick the counter up",
+            "image": "/static/tutorials/steps/peopleCounterIncrement.webp",
+            "imageFocus": {"x": 50, "y": 65, "zoom": 1.9},
+            "highlightBlock": {"category": "variables", "blockType": "data_changevariableby"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.increment",
+                "default": "From Variables, drag a change count by 1 block into the if branch. Every fresh edge — every new person — bumps count up by one."
+            },
+            "validate": true
+        },
+        {
+            "title": "Show the new total",
+            "image": "/static/tutorials/steps/peopleCounterShow.webp",
+            "imageFocus": {"x": 50, "y": 68, "zoom": 1.8},
+            "highlightBlock": {"category": "tm1637", "blockType": "tm1637_displayTM1637ShowNumberDec"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.show",
+                "default": "From the TM1637 7-Segment category, drag a show number block below the change count by 1. Drop the count variable into the number slot. The fresh total appears on the display the instant we count someone in."
+            },
+            "validate": true
+        },
+        {
+            "title": "Remember this reading",
+            "image": "/static/tutorials/steps/peopleCounterRemember.webp",
+            "imageFocus": {"x": 50, "y": 70, "zoom": 1.8},
+            "highlightBlock": {"category": "variables", "blockType": "data_setvariableto"},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.remember",
+                "default": "After the if block, drag a set lastState block. Drop a digitalRead pin 2 reporter into the value slot. lastState now stores whatever the sensor reported on this pass — so next time around we can tell whether anything CHANGED, which is the heart of edge detection."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the sensor",
+            "image": "/static/tutorials/steps/peopleCounterAddSensor.webp",
+            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.addSensor",
+                "default": "Open the Simulator and click the plus button. Choose PIR Motion, pick pin 2, and click Save. We're using PIR Motion as a stand-in for an infrared people-detector at a doorway — both pulse HIGH when something walks past."
+            }
+        },
+        {
+            "title": "Add the display",
+            "image": "/static/tutorials/steps/peopleCounterAddDisplay.webp",
+            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.addDisplay",
+                "default": "Click the plus again and add a 7-Segment display. Set CLK to 3 and DIO to 4, then click Save."
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/peopleCounterStart.webp",
+            "imageFocus": {"x": 78, "y": 7, "zoom": 4},
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.start",
+                "default": "Click Start. Your program compiles and the counter starts watching the door."
+            }
+        },
+        {
+            "title": "Walk past the sensor",
+            "image": "/static/tutorials/steps/peopleCounterRunning.webp",
+            "imageFocus": {"x": 100, "y": 35, "zoom": 2.3},
+            "narration": {
+                "id": "gui.tutorials.smartPeopleCounter.running",
+                "default": "Click the PIR sensor in the simulator to toggle motion on and off. Each fresh trigger adds 1 to the display — never more, never fewer. Click motion off, then on again — count goes up by exactly one, because lastState filters out anything except the moment the sensor changed. That's edge detection in action."
             }
         }
     ]

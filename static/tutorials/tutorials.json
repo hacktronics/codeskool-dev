@@ -1231,7 +1231,7 @@
         "name": "Automatic Hand Sanitizer",
         "isPremium": true,
         "description": "Squirt sanitizer automatically when a hand comes near — no touching needed",
-        "tags": ["arduino", "hardware", "sensor", "ultrasonic", "distance", "servo", "touchless", "beginner"],
+        "tags": ["arduino", "hardware", "sensor", "ir", "distance", "servo", "touchless", "beginner"],
         "category": "arduino",
         "urlId": "automatic-hand-sanitizer",
         "img": "/static/tutorials/thumbnails/automatic-hand-sanitizer.webp",

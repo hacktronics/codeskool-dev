@@ -1,11 +1,99 @@
 {
     "steps": [
         {
-            "title": "Sets — No Duplicates",
-            "image": "/static/tutorials/thumbnails/python-sets-no-duplicates.webp",
+            "title": "A collection without duplicates",
+            "image": "/static/tutorials/steps/pythonSets_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSetsNoDuplicates.placeholder",
-                "default": "You'll learn about sets — a smart collection that throws out duplicates automatically, so you only keep one of each thing."
+                "id": "gui.tutorials.pythonSets.intro",
+                "default": "Lists keep every value, even if it's repeated. Tuples too. Today you'll meet a set — a collection that automatically throws out any duplicates, so you only ever keep one of each. Sets are the perfect tool for questions like \"what unique words appeared?\" or \"which players are on BOTH teams?\""
+            }
+        },
+        {
+            "title": "Two team rosters with duplicates",
+            "image": "/static/tutorials/steps/pythonSets_02_lists.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.lists",
+                "default": "Type:\n\nteam_a = [\"Aman\", \"Riya\", \"Kabir\", \"Aman\"]\nteam_b = [\"Riya\", \"Zoya\", \"Kabir\"]\n\nNotice team_a has \"Aman\" twice — maybe by mistake, maybe because Aman scored twice. Lists keep both copies. We're going to convert these into sets and watch the duplicates disappear."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Convert lists into sets",
+            "image": "/static/tutorials/steps/pythonSets_03_convert.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.convert",
+                "default": "Type:\n\na = set(team_a)\nb = set(team_b)\n\nset is standard Python — it takes a list (or any collection) and gives you back a set with only the unique values. After this line a holds {\"Aman\", \"Riya\", \"Kabir\"} — the duplicate \"Aman\" was dropped automatically."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print the unique team",
+            "image": "/static/tutorials/steps/pythonSets_04_unique.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.unique",
+                "default": "Type:\n\nprint(\"Unique Team A:\", a)\n\nThe terminal will show three names — \"Aman\" only once. Sets use curly braces {} when shown, just like dictionaries — but no key:value pairs, just bare values."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Find players on BOTH teams with &",
+            "image": "/static/tutorials/steps/pythonSets_05_intersect.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.intersect",
+                "default": "Type:\n\nprint(\"Common players:\", a & b)\n\nThe & sign between two sets gives you the INTERSECTION — the values that appear in BOTH. \"Riya\" and \"Kabir\" are on both teams, so the result is the set {\"Riya\", \"Kabir\"}. One symbol, no loop, instant answer."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 6
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see the magic",
+            "image": "/static/tutorials/steps/pythonSets_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.run",
+                "default": "Click Run. The terminal shows the unique Team A (three names, no duplicates) and the common players (two names). All this without writing a single loop or if. Sets are tiny but mighty."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Other set operators",
+            "image": "/static/tutorials/steps/pythonSets_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSets.recap",
+                "default": "Two more useful operators: a | b is the UNION (everyone on either team). a - b is the DIFFERENCE (everyone on Team A who is not on Team B). All standard Python. Use a set anywhere duplicates would be wrong: unique words in a story, unique IPs visiting a website, students who finished a quiz."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

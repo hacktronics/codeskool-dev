@@ -1,11 +1,93 @@
 {
     "steps": [
         {
-            "title": "One Command, Multiple Answers",
-            "image": "/static/tutorials/thumbnails/python-one-command-multiple-answers.webp",
+            "title": "One function, different inputs",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.placeholder",
-                "default": "You'll write a single command that gives back different answers depending on what you pass in — one function, many results, reused everywhere in your code."
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.intro",
+                "default": "Last tutorial your function did the SAME thing every time you called it — print Hello! Today you'll write functions that take INFORMATION when called, and behave differently depending on what they get. Same command name, many different answers. The information is called a parameter."
+            }
+        },
+        {
+            "title": "Add and subtract — two functions, two parameters each",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_02_addSub.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.addSub",
+                "default": "Type:\n\ndef add(a, b):\n    print(a + b)\n\ndef subtract(a, b):\n    print(a - b)\n\nThe (a, b) inside the brackets is new — those are PARAMETERS. They're like empty boxes the function expects to be filled when it's called. Inside the function, a and b act like normal variables."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Add multiply too",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_03_multiply.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.multiply",
+                "default": "Type:\n\ndef multiply(a, b):\n    print(a * b)\n\nThree functions now, all defined but none called yet. Each one takes two numbers, does some maths with them, and prints the answer. Notice how similar the three definitions look — same shape, just a different operator. That's a hint we'll improve later."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Call them with different numbers",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_04_calls.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.calls",
+                "default": "Below the defs (no indent), type:\n\nadd(5, 3)\nsubtract(10, 4)\nmultiply(2, 6)\n\nWhen you call add(5, 3), the parameter a gets 5 and b gets 3 — like Python's filling the empty boxes. The function runs, prints 8, and finishes. Each call below uses different numbers — the same function gives a different answer each time."
+            },
+            "validateCode": {
+                "functionName": "add",
+                "lineIndex": 8
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run all three",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.run",
+                "default": "Click Run. The terminal prints 8, 6, 12 — the answers from each call. Same trio of functions could now be reused with any numbers. Try add(100, 200) or multiply(7, 7) — the function definitions never change, only what you pass in."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Parameters vs arguments",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_06_terminology.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.terminology",
+                "default": "Two words you'll hear: PARAMETER is the empty box in the function definition (a and b). ARGUMENT is the actual value you pass in when you call (5 and 3). Same idea, just the names differ depending on which side you're on. Don't worry about getting the names right — most programmers use them interchangeably."
+            }
+        },
+        {
+            "title": "What's still missing",
+            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonOneCommandMultipleAnswers.recap",
+                "default": "Right now your functions PRINT but don't give back a value you can use. So you can't write x = add(5, 3) and then USE x. In the next tutorial you'll learn return — the way a function hands a value back to whoever called it, so it can be stored or passed into another function."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

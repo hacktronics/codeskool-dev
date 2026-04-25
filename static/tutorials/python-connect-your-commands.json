@@ -1,11 +1,99 @@
 {
     "steps": [
         {
-            "title": "Connect Your Commands",
-            "image": "/static/tutorials/thumbnails/python-connect-your-commands.webp",
+            "title": "Make a function hand back an answer",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonConnectYourCommands.placeholder",
-                "default": "You'll learn to call one command from inside another — connecting small commands together to build bigger programs out of simple, reusable pieces."
+                "id": "gui.tutorials.pythonConnectYourCommands.intro",
+                "default": "Last tutorial your functions PRINTED their results, but they couldn't pass values to other functions. Today you'll meet return — the way a function hands a result back to whoever called it. With return, the answer from one function can flow straight into the next. That's how you connect tiny commands into bigger programs."
+            }
+        },
+        {
+            "title": "An add that returns",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_02_addReturn.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.addReturn",
+                "default": "Type:\n\ndef add(a, b):\n    return a + b\n\nNotice — no print this time. The keyword return is standard Python. It says \"give this value back to the caller and stop\". The caller can then store the value, print it, or pass it into another call."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "A multiply that returns",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_03_multiplyReturn.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.multiplyReturn",
+                "default": "Type:\n\ndef multiply(a, b):\n    return a * b\n\nSame shape as add, just multiplication instead of addition. Two tiny functions, each doing one job and handing the answer back. Now we can connect them."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Connect them — call inside a call",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_04_compose.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.compose",
+                "default": "Below, type:\n\nresult = multiply(add(2, 3), 4)\n\nRead it from the inside out. add(2, 3) runs first and returns 5. That 5 becomes the FIRST argument to multiply. multiply(5, 4) runs and returns 20. The whole expression gives 20, which gets stored in result. Two functions chained — the answer from one piped straight into the other."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print the connected result",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_05_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.print",
+                "default": "Type:\n\nprint(result)\n\nYou could also have written print(multiply(add(2, 3), 4)) directly — but storing the answer in a named variable makes long programs easier to read. Either way works."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 7
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see 20",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.run",
+                "default": "Click Run. The terminal prints 20. (2 + 3) is 5, then 5 × 4 is 20. The two functions cooperated without you writing any extra code — return made it possible. Imagine a third function divide(a, b) — you could chain that on too: divide(multiply(add(2, 3), 4), 2)."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why this matters",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.recap",
+                "default": "Big programs are made of small functions that hand results to each other. With return, every function becomes a reusable building block. In the next tutorial we'll teach a function to return MORE than one value at once — useful when a calculation has multiple answers."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

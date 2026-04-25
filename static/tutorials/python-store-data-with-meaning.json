@@ -1,11 +1,92 @@
 {
     "steps": [
         {
-            "title": "Store Data with Meaning",
-            "image": "/static/tutorials/thumbnails/python-store-data-with-meaning.webp",
+            "title": "Labels for every value",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonStoreDataWithMeaning.placeholder",
-                "default": "You'll learn to store information with labels that explain what each piece means — like a name tag on every bit of data, so you can look things up by name instead of by position."
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.intro",
+                "default": "Lists and tuples store values by POSITION — color[0] is red because red was first. That works for short, ordered things, but for a student record you really want to look things up by name: name, score, level. Today you'll meet the dictionary — a structure that pairs a key (the label) with a value, like name tags on every piece of data."
+            }
+        },
+        {
+            "title": "Make a student dictionary",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_02_dict.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.dict",
+                "default": "Type:\n\nstudent = {\n    \"name\": \"Aman\",\n    \"score\": 85,\n    \"level\": 3\n}\n\nThe curly braces {} make a dictionary. Inside, every entry is key: value. The keys are the labels (\"name\", \"score\", \"level\") and they're strings here. The values can be ANY kind of thing — a string, a number, a list, even another dictionary. Commas separate entries."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Look things up by name",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_03_lookup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.lookup",
+                "default": "Type:\n\nprint(student[\"name\"])\nprint(student[\"score\"])\n\nThe square brackets after the dictionary's name reach IN, just like with a list — but instead of a number index, you use the KEY. student[\"name\"] gives back \"Aman\". student[\"score\"] gives back 85. Look up by meaning instead of by position — much easier to read."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 6
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see the labelled lookup",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.run",
+                "default": "Click Run. The terminal prints Aman and 85 — the two values you asked for by name. The third entry (level: 3) was left untouched, because we didn't ask for it."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why dictionaries beat lists for records",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_05_vsList.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.vsList",
+                "default": "Imagine the same student as a list: [\"Aman\", 85, 3]. Position 0 is the name, 1 is the score, 2 is the level. Six months later, you'd have to remember what each position MEANT. With a dictionary, the meaning is in the key — student[\"score\"] tells you exactly what 85 represents. Code that reads itself."
+            }
+        },
+        {
+            "title": "Add and update entries",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_06_addUpdate.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.addUpdate",
+                "default": "After your two prints, try:\n\nstudent[\"score\"] = 90\nstudent[\"grade\"] = \"A\"\nprint(student)\n\nThe first line changes the existing score to 90. The second adds a brand new entry called grade. Then print(student) shows the whole dictionary. Dictionaries can grow and change — much like lists, but indexed by name."
+            },
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Where dictionaries shine",
+            "image": "/static/tutorials/steps/pythonStoreDataWithMeaning_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.recap",
+                "default": "Use a dictionary anywhere you'd write \"X has a Y\" in plain English: a sprite has a costume, a score, a position. A user has a name, an age, an email. A game level has a title, enemies, a goal. Most game saves and chat messages get sent around the internet as dictionaries (in a format called JSON) — what you've learned today translates directly."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]

@@ -1,11 +1,113 @@
 {
     "steps": [
         {
-            "title": "Strings — Control Your Text",
-            "image": "/static/tutorials/thumbnails/python-strings-control-your-text.webp",
+            "title": "Reshape text without retyping it",
+            "image": "/static/tutorials/steps/pythonStrings_01_intro.webp",
             "narration": {
-                "id": "gui.tutorials.pythonStringsControlYourText.placeholder",
-                "default": "You'll learn Python's string tools — upper, lower, split, replace, strip — commands that let you shape and clean up any piece of text exactly how you want."
+                "id": "gui.tutorials.pythonStrings.intro",
+                "default": "Whenever a kid types something into your program, the answer comes back as text — sometimes with extra spaces, sometimes in the wrong case, sometimes with words you want to swap out. Python has built-in string methods to clean and reshape text without you re-typing anything. Today: strip, upper, lower, replace, and the in operator."
+            }
+        },
+        {
+            "title": "Make a messy string",
+            "image": "/static/tutorials/steps/pythonStrings_02_text.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.text",
+                "default": "Type:\n\ntext = \"  python code  \"\n\nNotice the spaces at the BOTH ends inside the quotes — they count as part of the value. Try clicking right after the second quote and you'll see the cursor jump past two spaces. Real input from kids often has stray spaces too — so cleaning is a real-life skill."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "strip — trim the spaces",
+            "image": "/static/tutorials/steps/pythonStrings_03_strip.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.strip",
+                "default": "Type:\n\nprint(text.strip())\n\nNotice the dot — text.strip() means \"call the strip method ON this text\". Methods are functions that belong to a value. strip is standard Python — it returns a NEW string with leading and trailing whitespace removed, but text itself doesn't change."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "upper and lower — change the case",
+            "image": "/static/tutorials/steps/pythonStrings_04_case.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.case",
+                "default": "Type:\n\nprint(text.upper())\nprint(text.lower())\n\nupper returns a copy with every letter in CAPITALS. lower returns one with every letter in small case. Both standard Python. Useful when comparing answers — \"Yes\", \"yes\", \"YES\" should all count, so lowercase the kid's answer before checking."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "replace — swap one piece for another",
+            "image": "/static/tutorials/steps/pythonStrings_05_replace.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.replace",
+                "default": "Type:\n\nprint(text.replace(\"python\", \"java\"))\n\nreplace finds every copy of the first piece and swaps in the second. The original text is unchanged — replace returns a new string, just like the others. Could be useful for things like censoring rude words, building a Mad Libs game, or fixing typos."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "in — does the text contain something?",
+            "image": "/static/tutorials/steps/pythonStrings_06_in.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.in",
+                "default": "Type:\n\nif \"python\" in text:\n    print(\"Found python\")\nelse:\n    print(\"Not found\")\n\nThe in operator is standard Python — it returns True or False. \"python\" in text reads in English: \"is the word python somewhere inside text?\" Combined with if, you can route the program based on what the kid typed."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 8
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch each method",
+            "image": "/static/tutorials/steps/pythonStrings_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.run",
+                "default": "Click Run. The terminal shows the cleaned string, the uppercase version, the lowercase version, the replaced version, and Found python — because text contains python (with the spaces stripped, even). Five tiny tools, each doing one job perfectly."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "What you can build now",
+            "image": "/static/tutorials/steps/pythonStrings_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonStrings.recap",
+                "default": "Combine these with input and you can build a chat bot that recognises greetings even with weird spacing, a quiz that accepts answers in any case, or a story generator that swaps in the kid's name. Strings are 80% of what real programs do — knowing these methods well makes everything easier."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
             }
         }
     ]
