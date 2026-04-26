@@ -5,135 +5,324 @@
             "image": "/static/tutorials/steps/nightLampIntro.webp",
             "narration": {
                 "id": "gui.tutorials.nightLamp.intro",
-                "default": "Streetlights don't have a person flipping a switch every evening. They turn themselves on when the sky gets dark and off when the sun comes up. Today you'll build a tiny version of that same idea — an LED that reads the room's light level and decides on its own whether to glow. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "Bedside lamps that switch themselves on at sunset. Garden lights that wake up at dusk. Streetlamps that come alive when the sky goes orange. They all share one trick: a tiny sensor that watches the light, and a program that decides when it's dark enough. Today you'll build that exact program. If you haven't done Blink an LED and Button and LED yet, finish those first — this tutorial assumes you've met pinMode, digitalWrite, if-else, and the simulator already."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
+            "title": "The setup-and-loop block",
             "image": "/static/tutorials/steps/nightLampSetupLoop.webp",
-            "imageFocus": {"x": 60, "y": 50, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.nightLamp.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "You've seen this twice now. Open the Arduino category and drag the setup-and-loop block into the workspace. Setup runs once when the program starts. Loop runs forever, over and over, while the Arduino has power."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Only the LED needs setup",
+            "title": "The lamp lives on pin 9",
             "image": "/static/tutorials/steps/nightLampPinMode.webp",
-            "imageFocus": {"x": 58, "y": 48, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
             "narration": {
                 "id": "gui.tutorials.nightLamp.pinMode",
-                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT — that's the LED. The light sensor lives on pin A0, but A0 is read-only by nature, so it doesn't need a pinMode. Only outputs do."
+                "default": "Drag a pinMode block into setup. Set pin to 9 and mode to output — pin 9 will send voltage out to the LED. Notice we only need pinMode for the LED. The light sensor will go on an analog pin, and analog inputs configure themselves automatically. One pinMode line, that's it."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
         },
         {
-            "title": "We'll need a box for the sensor reading",
+            "title": "The LDR — what does it report?",
+            "image": "/static/tutorials/steps/nightLampMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.mystery",
+                "default": "The light sensor we'll use is called an LDR — short for light-dependent resistor. Now think for a second. A button has two answers: pressed or not pressed. high or low. A neat little yes-or-no. But light isn't a yes-or-no. A room can be pitch dark, or sunny, or anywhere in between — dim, twilight, cloudy afternoon, lamp-lit evening. So when our program asks the LDR what it sees, what could the answer possibly be? high and low aren't enough."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Meet analogRead",
+            "image": "/static/tutorials/steps/nightLampMeetAnalogRead.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.meetAnalogRead",
+                "default": "Here's the answer: the LDR reports a number. Not high or low — an actual number from 0 to 1023. 0 means pitch dark. 1023 means full sun. A dim room might be 200. A sunny window might be 900. Anywhere in between, anywhere on the scale. The block that reads this is called analogRead — analog meaning a smooth scale, not just two states. digitalRead gives you one of two answers; analogRead gives you one of 1024. That's the whole mystery solved."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "A box for the reading",
             "image": "/static/tutorials/steps/nightLampMakeVar.webp",
-            "imageFocus": {"x": 12, "y": 30, "zoom": 2.6},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
             "narration": {
                 "id": "gui.tutorials.nightLamp.makeVar",
-                "default": "Open Variables and click Make a Variable. Name it lightValue. This will hold the latest reading from the light sensor — a number between 0 (pitch dark, like a closed cupboard) and 1023 (bright noon sunshine)."
+                "default": "We need somewhere to put the LDR's number so we can use it in the next step. Open the Variables category, click Make a Variable, and name it lightLevel. A variable is just a labelled box — every loop, we'll drop the latest reading into it."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 30,
+                "y": 50,
+                "zoom": 2.5
+            },
+            "highlightUI": "category.variables"
         },
         {
-            "title": "Read the light sensor",
-            "image": "/static/tutorials/steps/nightLampReadLdr.webp",
-            "imageFocus": {"x": 58, "y": 58, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogReadFn"},
+            "title": "Make a set-variable line",
+            "image": "/static/tutorials/steps/nightLampSetVar.webp",
+            "highlightBlock": {
+                "category": "variables",
+                "blockType": "data_setvariableto"
+            },
             "narration": {
-                "id": "gui.tutorials.nightLamp.readLdr",
-                "default": "Drag a set lightValue block into the loop. For the value, drag an analogRead block from the Arduino category and drop it in place of the 0. Set analogRead's pin to A0. analogRead measures the voltage on a pin and gives back a number from 0 to 1023 — Arduino's way of telling us how bright the room is."
+                "id": "gui.tutorials.nightLamp.setVar",
+                "default": "Drag a set-variable block into the loop. Click its dropdown and pick lightLevel — that's the box we just made. Right now the value slot just has a 0 in it; the next step swaps that for the live sensor reading."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
         },
         {
-            "title": "Time to make a decision",
+            "title": "Drop analogRead into the value slot",
+            "image": "/static/tutorials/steps/nightLampDropAnalogRead.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogReadFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.nightLamp.dropAnalogRead",
+                "default": "Now go to the Arduino category and drag an analogRead block. Drop it into the value slot of the set-variable line. Set its pin to A0. Now every loop, the program asks the LDR what it sees and parks that number into the lightLevel box."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "When is it dark enough?",
+            "image": "/static/tutorials/steps/nightLampThreshold.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.threshold",
+                "default": "Now we have to make a decision. lightLevel is somewhere between 0 and 1023, but the lamp only has two states — on or off. So we have to draw a line. We pick a number — a threshold — and say: below this number, it's dark, switch the lamp on; above this number, it's bright, switch it off. We'll start with 500 — roughly the middle of the scale. Below 500 means dark, lamp on. This pattern — pick a threshold, compare against it — is one of the most common shapes in all of programming."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "The if-else block",
             "image": "/static/tutorials/steps/nightLampIfElse.webp",
-            "imageFocus": {"x": 55, "y": 65, "zoom": 2.6},
-            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if_else"
+            },
             "narration": {
                 "id": "gui.tutorials.nightLamp.ifElse",
-                "default": "Drag an if / else block below the set lightValue block. Now the program will pick a path: bright room or dark room. The if branch handles one case, the else branch handles the other."
+                "default": "Same if-else block you used in Button and LED. Open the Control category and drag an if-else into the loop, just below the read-LDR step. The diamond slot is where our question goes. The if branch runs when the answer is yes, the else branch when the answer is no."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 56,
+                "zoom": 2.1
+            }
         },
         {
-            "title": "How dark is dark enough?",
-            "image": "/static/tutorials/steps/nightLampCondition.webp",
-            "imageFocus": {"x": 58, "y": 58, "zoom": 2.8},
-            "narration": {
-                "id": "gui.tutorials.nightLamp.condition",
-                "default": "Open Operators. Drag a less-than block into the condition slot of the if / else. Drop the lightValue variable on the left side. Change the right side to 500. The condition reads: 'if the light reading is below 500, the room is dark — switch the lamp on'. 500 is just our chosen line in the sand; you can tune it later."
+            "title": "Build the comparison",
+            "image": "/static/tutorials/steps/nightLampLessThan.webp",
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_lt"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.nightLamp.lessThan",
+                "default": "Open the Operators category and drag the less-than block. Drop it into the diamond slot of the if-else. On the left side, drop the lightLevel variable from the Variables category. On the right side, type 500. The question now reads: is lightLevel less than 500? If yes, it's dark. If no, it's bright."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.1
+            }
         },
         {
             "title": "Dark — light up",
-            "image": "/static/tutorials/steps/nightLampLedOn.webp",
-            "imageFocus": {"x": 58, "y": 65, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
-            "narration": {
-                "id": "gui.tutorials.nightLamp.ledOn",
-                "default": "Drag a digitalWrite block into the if branch. Set pin to 9 and keep value on HIGH. When the room is below 500 — too dark — the LED turns on."
+            "image": "/static/tutorials/steps/nightLampWriteHigh.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.nightLamp.writeHigh",
+                "default": "Drag a digitalWrite block into the if branch — the top half. Set pin to 9 and value to high. When lightLevel is below 500, this line runs: 5 volts on pin 9, the LED lights up. The room is dark, the lamp comes on."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.1
+            }
         },
         {
             "title": "Bright — switch off",
-            "image": "/static/tutorials/steps/nightLampLedOff.webp",
-            "imageFocus": {"x": 58, "y": 72, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
-            "narration": {
-                "id": "gui.tutorials.nightLamp.ledOff",
-                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW — the LED switches off when the room is bright enough on its own."
+            "image": "/static/tutorials/steps/nightLampWriteLow.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.nightLamp.writeLow",
+                "default": "Drag another digitalWrite into the else branch — the bottom half. Pin 9, value low. When lightLevel is 500 or above, this line runs instead: 0 volts on pin 9, LED dark. The room is bright, the lamp stays off."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 2
+            }
         },
         {
             "title": "A small pause",
             "image": "/static/tutorials/steps/nightLampDelay.webp",
-            "imageFocus": {"x": 55, "y": 80, "zoom": 2.5},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
             "narration": {
                 "id": "gui.tutorials.nightLamp.delay",
-                "default": "Drag a delay block below the if / else. Set it to 100 milliseconds. The Arduino now checks the light level ten times every second — fast enough to feel instant, but gentle enough to keep the loop calm."
+                "default": "Drag a delay block to the bottom of the loop, after the if-else. Set it to 200 milliseconds. Every loop should have at least a small pause — it stops the Arduino from spinning at full speed for no reason, and 200 milliseconds is fast enough that the lamp still feels instantly responsive when the room dims."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.9
+            }
         },
         {
-            "title": "Add the LED and the light sensor",
+            "title": "Add an LED on pin 9",
             "image": "/static/tutorials/steps/nightLampAddLed.webp",
-            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.nightLamp.addLed",
-                "default": "Open the Simulator and click the plus button. Add an LED on pin 9. Then click the plus button again and add a Photoresistor on pin A0 — that's the light sensor that stands in for our LDR. Both parts are now wired up."
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose LED. In the pin dialog, choose pin 9 and click Save. The virtual lamp appears next to the virtual Arduino — wired to the same pin your code is writing high and low to."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Add a photoresistor on A0",
+            "image": "/static/tutorials/steps/nightLampAddPhoto.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.addPhoto",
+                "default": "Click the plus button again and choose Photoresistor — that's the simulator's name for the LDR. Set the pin to A0 and click Save. A new component appears with a slider underneath it. The slider is how you fake a sunrise or a sunset in the simulator: drag it up for bright, drag it down for dark."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 3
             }
         },
         {
             "title": "Click Start",
             "image": "/static/tutorials/steps/nightLampStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.nightLamp.start",
-                "default": "Click Start. Your program compiles and starts watching the light level."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
-            "title": "Try it out",
-            "image": "/static/tutorials/steps/nightLampRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "title": "Drag the slider",
+            "image": "/static/tutorials/steps/nightLampSlider.webp",
+            "highlightUI": "simComp.photoresistor",
             "narration": {
-                "id": "gui.tutorials.nightLamp.running",
-                "default": "Drag the LDR slider in the simulator down to a low number — the LED comes on. Slide it back up high and the LED switches off. On a real board you'd cover the LDR with your hand for the same effect. Try this: change 500 to 200 — your lamp now waits for a really dark room. Or change to 800 and watch it stay on most of the day. That single number is your lamp's personality."
+                "id": "gui.tutorials.nightLamp.slider",
+                "default": "Click and drag the slider under the photoresistor. Push it down — the LED comes on the moment the number passes 500. Push it back up — the LED goes dark again. You're simulating the sun setting, then rising. The same code, the same threshold, every time. You just built a streetlamp."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 30,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Why 500?",
+            "image": "/static/tutorials/steps/nightLampWhy500.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.why500",
+                "default": "Here's the honest truth: 500 was a guess. It's halfway between 0 and 1023, which felt reasonable. But your bedroom isn't average — maybe your nights are very dark and 500 makes the lamp turn on too early. Maybe your curtains are thin and morning light leaks in, and 500 makes it turn off too late. In real life you'd test in your actual room and tune the number. A bigger number means the lamp comes on sooner, while there's still some light. A smaller number means the lamp waits for it to get really dark before switching on. The number isn't magic — it's a knob you adjust to your taste."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Try changing things",
+            "image": "/static/tutorials/steps/nightLampExperiments.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.experiments",
+                "default": "Try this: change 500 to 200 and run again. The lamp now waits much longer before switching on — only the deepest darkness triggers it. Then try 800 — the lamp comes on almost any time the room dims. Or add a second LED on pin 10, with its own pinMode and its own if-else using a different threshold. Below 700, the dim-light LED comes on. Below 300, both come on — a two-stage night light that gets brighter as the room gets darker."
+            },
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/nightLampRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.nightLamp.recap",
+                "default": "You learned three big things today. analogRead — the block that reads a sensor on a smooth scale from 0 to 1023, instead of just high or low. The threshold pattern — pick a number, compare against it, decide. And the shape underneath all of this: sensor, decision, output. Read the world. Compare. Act. That same shape runs every thermostat, every soil-moisture irrigation system, every smart streetlamp, every battery-low warning on your phone. Once you see the pattern, you'll spot it everywhere — and you can write it now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

@@ -1,0 +1,87 @@
+{
+    "steps": [
+        {
+            "title": "More maths than plus and times",
+            "image": "/static/tutorials/steps/pythonMath_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.intro",
+                "default": "Python's basic maths covers plus, minus, times, divide. But what about square roots, powers, the value of pi, rounding decimals? Python has a math module — a bundle of built-in maths tools you unlock with one line: import math. Same kind of import you used for random."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Import the math bundle",
+            "image": "/static/tutorials/steps/pythonMath_02_import.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.import",
+                "default": "Type the very first line:\n\nimport math\n\nimport is standard Python — it loads a bundle of tools so the rest of your code can use them. After this line, anything inside math is available — written as math.toolname."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "pi and square root",
+            "image": "/static/tutorials/steps/pythonMath_03_piSqrt.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.piSqrt",
+                "default": "Type two lines:\n\nprint(\"Pi:\", math.pi)\nprint(\"Square root of 16:\", math.sqrt(16))\n\nmath.pi is the famous circle constant, about 3.14159. math.sqrt finds the square root — for 16 it gives 4.0 (the dot-zero means it's a decimal, not a whole number). Both standard Python."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Powers and rounding",
+            "image": "/static/tutorials/steps/pythonMath_04_powCeilFloor.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.powCeilFloor",
+                "default": "Type three more lines:\n\nprint(\"2 to the power 10:\", math.pow(2, 10))\nprint(\"Round up 3.2:\", math.ceil(3.2))\nprint(\"Round down 3.8:\", math.floor(3.8))\n\nmath.pow takes a base and an exponent — two to the power ten gives 1024. ceil rounds UP to the next whole number, so 3.2 becomes 4. floor rounds DOWN, so 3.8 becomes 3. Useful when you need a guaranteed whole answer."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see all five",
+            "image": "/static/tutorials/steps/pythonMath_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.run",
+                "default": "Click Run. The terminal shows the value of pi, the square root of sixteen, two to the power ten, three-point-two rounded up, and three-point-eight rounded down. Five lines of maths, none of which Python's plus-minus-times-divide could do on their own."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Modules everywhere",
+            "image": "/static/tutorials/steps/pythonMath_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMath.recap",
+                "default": "math is one of dozens of modules that come built into every Python install — random was another. Anywhere your code needs more than basic maths, math has the tool. Want the area of a circle? math.pi times radius times radius. The diagonal of a screen? math.sqrt of width-squared plus height-squared. Round a price up to the next rupee? math.ceil. Try math.factorial of 5, or math.log of 100 — each one is a single line, and the heavy maths is done for you."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

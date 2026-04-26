@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonBeatTheComputer.intro",
                 "default": "Today's project: a game where you play Rock Paper Scissors against the computer. Three new ideas in one tutorial — random.choice for picking from a list, multiple elifs to cover the rules, and the and operator (you met it in Boolean Logic) for asking two questions at once. You already know everything else."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -45,6 +60,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -62,6 +82,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -73,6 +98,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -94,6 +124,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -109,6 +144,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -116,9 +156,14 @@
             "image": "/static/tutorials/steps/pythonBeatTheComputer_09_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBeatTheComputer.recap",
-                "default": "Three new things this tutorial: import random, random.choice, and an elif chain with and. With these you can build dice games, magic 8-balls, random Mad Libs, or a coin flipper. Next up, you'll learn to put the WHOLE game inside a while loop so the kid can play multiple rounds without re-running."
+                "default": "Three new things this tutorial: import random, random.choice, and an elif chain with and. With these you can build dice games, magic 8-balls, random Mad Libs, or a coin flipper. Try it: wrap the whole game in a while loop and let the kid play round after round without re-running — you already know while from earlier."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

@@ -5,7 +5,12 @@
             "image": "/static/tutorials/steps/pythonIndexingAndSlicing_01_intro.webp",
             "narration": {
                 "id": "gui.tutorials.pythonIndexingAndSlicing.intro",
-                "default": "Lists hold many values in order. Today you'll learn the exact ways to reach in and grab one item, the last item, or a whole chunk in the middle. The same tricks work on strings — every character is at a position, just like every item in a list. Two new ideas: indexing (one position at a time) and slicing (a range of positions)."
+                "default": "Lists hold many values in order, and so do strings — every character of a string sits at a position too. Today you'll learn the exact ways to reach in and grab one item, the last item, a chunk in the middle, every other one, or the whole thing reversed. Two new ideas: indexing means picking ONE position; slicing means picking a RANGE."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -13,7 +18,7 @@
             "image": "/static/tutorials/steps/pythonIndexingAndSlicing_02_list.webp",
             "narration": {
                 "id": "gui.tutorials.pythonIndexingAndSlicing.list",
-                "default": "Type:\n\nfruits = [\"apple\", \"banana\", \"mango\", \"kiwi\", \"grape\"]\n\nFive items, each at a position. Python counts from ZERO — apple is at 0, banana at 1, mango at 2, kiwi at 3, grape at 4. The first item is always [0], not [1]."
+                "default": "Type:\n\nfruits = [\"apple\", \"banana\", \"mango\", \"kiwi\", \"grape\"]\n\nFive items, each at its own position. Python counts from ZERO — apple sits at 0, banana at 1, mango at 2, kiwi at 3, grape at 4. The first item is always at position 0, never at 1."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -23,11 +28,11 @@
             }
         },
         {
-            "title": "Grab one by index",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_03_first.webp",
+            "title": "Indexing — pick one by position",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_03_indexing.webp",
             "narration": {
-                "id": "gui.tutorials.pythonIndexingAndSlicing.first",
-                "default": "Type:\n\nprint(fruits[0])\nprint(fruits[2])\n\nThe square brackets after the list reach IN to one position. fruits[0] is apple, fruits[2] is mango. Negative indices count from the END — fruits[-1] is grape (the last), fruits[-2] is kiwi (second-last). Try those too if you like."
+                "id": "gui.tutorials.pythonIndexingAndSlicing.indexing",
+                "default": "Now the indexing block:\n\n# Indexing — pick one item by position\nprint(fruits[0])\nprint(fruits[2])\nprint(fruits[-1])\n\nThe line starting with the hash sign is a comment — a note for humans, which Python ignores. The square brackets after the list reach IN to one position. fruits[0] is apple. fruits[2] is mango. And fruits[-1] is grape — the LAST item. A negative number counts from the end. fruits[-2] would be kiwi, fruits[-3] mango, all the way back."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -37,11 +42,11 @@
             }
         },
         {
-            "title": "Slicing — a range of positions",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_04_slice.webp",
+            "title": "Slicing — pick a chunk",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_04_slicing.webp",
             "narration": {
-                "id": "gui.tutorials.pythonIndexingAndSlicing.slice",
-                "default": "Type:\n\nprint(fruits[1:4])\n\nThe colon between two numbers makes a slice — give back a NEW list from the first index UP TO BUT NOT INCLUDING the second. So fruits[1:4] gives banana, mango, kiwi — positions 1, 2, 3. Position 4 is left out. The \"up to but not including\" rule is consistent everywhere in Python — once you accept it, slicing becomes second nature."
+                "id": "gui.tutorials.pythonIndexingAndSlicing.slicing",
+                "default": "Type the slicing block:\n\n# Slicing — pick a chunk\nprint(fruits[1:4])\nprint(fruits[:3])\nprint(fruits[2:])\n\nA slice gives you a chunk. The colon between two numbers separates the START position from the STOP position. fruits[1:4] gives positions 1, 2, and 3 — banana, mango, kiwi. The stop number is where Python stops, NOT the last item to include. Leave the start blank and Python begins at zero. Leave the stop blank and Python goes to the end. So fruits[:3] is the first three; fruits[2:] is everything from position 2 onward."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -51,29 +56,43 @@
             }
         },
         {
-            "title": "Open-ended slices",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_05_open.webp",
+            "title": "Step — every other one",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_05_step.webp",
             "narration": {
-                "id": "gui.tutorials.pythonIndexingAndSlicing.open",
-                "default": "Type:\n\nprint(fruits[:3])\nprint(fruits[2:])\n\nLeave a side blank to mean \"from the start\" or \"to the end\". fruits[:3] is the first three (apple, banana, mango). fruits[2:] is mango, kiwi, grape — from position 2 to the end. fruits[:] is the whole list copied — the most common Python idiom for \"give me a fresh copy\"."
+                "id": "gui.tutorials.pythonIndexingAndSlicing.step",
+                "default": "Type:\n\n# Step — every other item\nprint(fruits[::2])\n\nA second colon adds a STEP — how many positions to jump each time. The number two means take one, skip one, take one, skip one. So fruits[::2] gives apple, mango, grape — every other fruit. The two empty slots before and after the colons mean start at the beginning and go all the way to the end. With a step of three you'd jump in threes; with a step of one you'd take every item."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Reverse — read backwards",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_06_reverse.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.reverse",
+                "default": "Type:\n\n# Reverse — read backwards\nprint(fruits[::-1])\n\nA negative step flips the direction. Step minus one means take every item, but going backwards. So fruits[::-1] gives grape, kiwi, mango, banana, apple. This is the shortest way to reverse a list in Python — no extra function needed. The same trick works on any string too, which you'll see in the next step."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Strings work the same way",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_07_string.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.string",
+                "default": "Type the last block:\n\n# Same tricks work on strings\nword = \"Python\"\nprint(word[0])\nprint(word[1:4])\nprint(word[::-1])\n\nA string is a sequence of characters at positions, just like a list of single letters. word[0] is P. word[1:4] is yth — three characters from positions 1, 2, and 3. word[::-1] is nohtyP — the whole word reversed. Every trick you learned on the fruits list works on text in exactly the same way."
             },
             "validateCode": {
                 "functionName": "print",
-                "lineIndex": 5
-            },
-            "highlightUI": "pythonEditor",
-            "_sourceCrop": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
-            }
-        },
-        {
-            "title": "Strings are slices too",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_06_string.webp",
-            "narration": {
-                "id": "gui.tutorials.pythonIndexingAndSlicing.string",
-                "default": "Type:\n\nword = \"Python\"\nprint(word[0])\nprint(word[1:4])\n\nIndexing and slicing work on strings too — every character is at a position, just like a one-letter list. word[0] is P. word[1:4] is yth — three characters starting at position 1, up to but not including 4. Same rule, same syntax."
+                "lineIndex": 22
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -84,10 +103,10 @@
         },
         {
             "title": "Run and watch them all",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_07_run.webp",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_08_run.webp",
             "narration": {
                 "id": "gui.tutorials.pythonIndexingAndSlicing.run",
-                "default": "Click Run. The terminal shows apple, mango, ['banana', 'mango', 'kiwi'], ['apple', 'banana', 'mango'], ['mango', 'kiwi', 'grape'], P, and yth. Seven different ways to look INTO the same data."
+                "default": "Click Run. The terminal prints each line in order — the three indexing answers, then the three slicing chunks, then every-other-fruit, then the reversed list, then the same tricks on the word. Eleven different ways to look INTO the same data."
             },
             "highlightUI": "pythonRun",
             "clearRuntimeBefore": true,
@@ -99,10 +118,10 @@
         },
         {
             "title": "When to reach for which",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_08_recap.webp",
+            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_09_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonIndexingAndSlicing.recap",
-                "default": "Use a single index when you want ONE item — the third question in a quiz, the last enemy in a level. Use a slice when you want a CHUNK — the top three scores, the first half of a story, the suffix of a filename. Negative indices are perfect for \"last\" and \"second to last\". The slice rule is always start ≤ index < stop — never include the stop."
+                "default": "Use a single index when you want ONE item — the third question in a quiz, the last enemy in a level. Use a slice when you want a CHUNK — the top three scores, the first half of a story, the suffix of a filename. A negative index is perfect for last and second-to-last. A second colon adds a step — every second item, every third, or with a minus sign, the whole thing backwards. The same square-bracket syntax works on a list of fruits, a list of names, a list of scores, or any string. Square brackets are how Python lets you reach into ordered things."
             },
             "_sourceCrop": {
                 "x": 0,

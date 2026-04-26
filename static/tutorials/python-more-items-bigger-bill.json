@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonMoreItemsBiggerBill.intro",
                 "default": "Last tutorial each item had one price. But real shoppers buy 3 apples, 2 chocolates, 5 pencils. Today's program asks for BOTH the price AND the quantity for each item, and multiplies them. Same loop shape — one extra input, one tiny piece of maths."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -42,6 +57,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonMoreItemsBiggerBill.parensExplain",
                 "default": "Python actually does multiplication before addition without the parentheses — but writing (price * qty) makes the line easy to read. Future-you, looking at this code months from now, won't have to remember the order-of-operations rules. Parentheses are free; clarity is priceless."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -60,6 +80,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -67,11 +92,16 @@
             "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_06_run.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMoreItemsBiggerBill.run",
-                "default": "Click Run. Type 2 items. Enter price 20 quantity 3 → that's 60. Enter price 30 quantity 2 → that's 60. Total: 120 — over 100, so the discount kicks in, Final Amount: 110. Two items but six things in the basket."
+                "default": "Click Run. Type 2 items. Enter price 20 quantity 3 — that's 60. Enter price 30 quantity 2 — that's 60. Total: 120 — over 100, so the discount kicks in, Final Amount: 110. Two items but six things in the basket."
             },
             "highlightUI": "pythonRun",
             "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
@@ -82,9 +112,14 @@
             "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_07_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMoreItemsBiggerBill.recap",
-                "default": "Things to play with: lower the discount threshold to 50, change the discount amount to a percentage like total = total * 0.9. Or print the line subtotal each loop so the kid sees the running tally. Two new tools so far — for + range, and a running total — already enough to build dozens of useful programs."
+                "default": "Things to play with: lower the discount threshold to 50, change the discount amount to a percentage like total = total * 0.9. Or print the line subtotal each loop so the kid sees the running tally. Two new tools so far — for + range, and a running total — already enough to build a quiz score counter, a fitness step tracker, a piggy bank app, or a game level summer."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

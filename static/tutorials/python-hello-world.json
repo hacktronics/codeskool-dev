@@ -11,6 +11,11 @@
                 "x": 50,
                 "y": 53,
                 "zoom": 1
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 53,
+                "zoom": 1
             }
         },
         {
@@ -29,6 +34,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -41,6 +51,11 @@
             "highlightUI": "pythonRun",
             "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 100,
+                "y": 60,
+                "zoom": 1.2
+            },
+            "imageFocus": {
                 "x": 100,
                 "y": 60,
                 "zoom": 1.2
@@ -62,6 +77,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -77,6 +97,11 @@
                 "x": 1,
                 "y": 100,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 100,
+                "zoom": 1.6
             }
         },
         {
@@ -87,7 +112,13 @@
                 "default": "Click Run one more time. Two things happen at the same time: the penguin says Hello World! on the stage (that's the say line), AND your message appears in the terminal at the bottom (that's the print line). Same words — two totally different places. So remember: use say when you want the penguin to show a speech bubble; use print when you want to write a message in the terminal."
             },
             "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 50,
+                "y": 52,
+                "zoom": 1
+            },
+            "imageFocus": {
                 "x": 50,
                 "y": 52,
                 "zoom": 1
@@ -100,7 +131,13 @@
                 "id": "gui.tutorials.pythonHello.recap",
                 "default": "Congrats — you just wrote your first Python program! Two lines of real Python. Remember the difference: say is a CodeSkool helper — it makes your sprite speak on the stage. print is standard Python — it writes text to the terminal, and it works the same way in every Python program anywhere. Try changing the words inside the quotes on either line and click Run again to see your new message."
             },
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandOneJob.intro",
                 "default": "Sometimes one calculation has several answers — a sum AND a product, a name AND an age, x AND y coordinates. Until now, our functions could only return ONE thing. Today you'll learn to return TWO at the same time, then unpack them on the receiving side. Tiny addition to what you already know about return."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -31,6 +41,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -52,6 +67,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -67,6 +87,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -74,9 +99,14 @@
             "image": "/static/tutorials/steps/pythonOneCommandOneJob_06_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandOneJob.recap",
-                "default": "Real uses: a function that splits a full name into first and last; a function that returns the min AND max of a list; a function that returns the x AND y of a sprite's position. Returning multiple values keeps related results together. The pair Python builds on the right of return is called a tuple — you'll meet that name properly in a few tutorials."
+                "default": "Real uses: a function that splits a full name into first and last; a function that returns the min AND max of a list; a function that returns the x AND y of a sprite's position. Returning multiple values keeps related results together. The pair Python builds on the right of return is a tuple — the same fixed-together pack you met in the Tuples tutorial."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

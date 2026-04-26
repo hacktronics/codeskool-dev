@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.intro",
                 "default": "Every program you've written so far runs the same way from top to bottom, one line after another. Today your program will start to DECIDE — it will do one thing when the answer is big enough, and something different when it isn't. In Scratch this is the \"if-else\" block shaped like a C. In Python it's two keywords: if and else. Let's build one."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -15,8 +20,17 @@
                 "id": "gui.tutorials.pythonMakeAChoice.typeInput",
                 "default": "Type line 1: age = int(input(\"How old are you?\")). You've done this pattern before — ask a question, wrap the answer in int because we'll compare the number. The kid's age will flow into the decision you're about to build."
             },
+            "validateCode": {
+                "functionName": "input",
+                "lineIndex": 0
+            },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +48,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -42,6 +61,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.indentExplain",
                 "default": "Look at the four spaces before print. Python uses those spaces — called indentation — to know which lines belong to the if. Most editors, including this one, add them automatically when you press Enter after a colon. If you forget to indent, Python will complain. If you add extra spaces, Python will complain. Same amount of indent, every time."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -60,6 +84,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -75,6 +104,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -84,7 +118,14 @@
                 "id": "gui.tutorials.pythonMakeAChoice.runFail",
                 "default": "Click Run again. This time type 5. Now the terminal prints You are too young — because 5 is not 10 or more, the if was false, and Python ran the else branch instead. One program, two different paths, chosen live depending on what the kid answers."
             },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
@@ -95,9 +136,14 @@
             "image": "/static/tutorials/steps/pythonMakeAChoice_08_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.recap",
-                "default": "You used >= which means \"greater than or equal to\". Python has more: > is greater than, < is less than, <= is less than or equal, == is \"is exactly the same\", != is \"is not the same\". Try changing the condition to age == 10, or age < 18. Each one gives the program a different rule for who gets in."
+                "default": "You used greater-than-or-equal — that's the angle bracket pointing right next to an equals sign. Python has more comparisons too. Greater than. Less than. Less than or equal. Two equals signs side by side mean is exactly the same. An exclamation mark and an equals sign mean is not the same. Try changing the condition to is exactly 10, or is less than 18. Each one gives the program a different rule for who gets in."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

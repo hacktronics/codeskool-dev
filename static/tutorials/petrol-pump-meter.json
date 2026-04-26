@@ -2,225 +2,368 @@
     "steps": [
         {
             "title": "The pump screen at the petrol station",
-            "image": "/static/tutorials/steps/petrolPumpIntro.webp",
+            "image": "/static/tutorials/steps/petrolPumpMeterIntro.webp",
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.intro",
-                "default": "Next time you're at a petrol station, look at the screen on the pump. Press the trigger and the number starts climbing — litres flowing into the tank. Let go, the number stops. Hit reset and it goes back to zero. Today you'll build that whole machine. One push button starts and stops the pump, another resets the total, and the live amount appears on a 16x2 LCD screen. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "You've seen it a hundred times — the screen on the petrol pump. The attendant clicks a button, fuel starts flowing, and a number on the screen ticks up and up. Click again, it pauses. Reset, and it goes back to zero. Today you'll build that exact screen — two buttons, one LCD, and a program that knows when to count and when to stop. Make sure Arduino Uno is selected, you're in Upload mode, and the I2C 16-by-2 LCD extension is added in Sensor Manager. If adding extensions is new to you, the Move a Servo tutorial walks you through Sensor Manager."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/petrolPumpSetupLoop.webp",
-            "imageFocus": {"x": 38, "y": 56, "zoom": 2.9},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/petrolPumpMeterSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. Same start as every Arduino program — setup runs once, loop runs forever."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Listen on pin 2 — the start button",
-            "image": "/static/tutorials/steps/petrolPumpPinStart.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.pinStart",
-                "default": "Drag a pinMode block into setup. Set pin to 2 and change the mode to INPUT. Pin 2 is the start-and-stop button — the Arduino has to listen on it."
+            "title": "Pin 2 — the Start button",
+            "image": "/static/tutorials/steps/petrolPumpMeterPinModeStart.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.pinModeStart",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and mode to input pullup. Pin 2 will be the Start button — the attendant taps it to start pumping, taps it again to pause. input pullup keeps the reading stable when nothing is pressed, just like in the button-and-LED tutorial."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
         },
         {
-            "title": "Listen on pin 3 — the reset button",
-            "image": "/static/tutorials/steps/petrolPumpPinReset.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.pinReset",
-                "default": "Drag a second pinMode block below the first. Set pin to 3 and keep the mode on INPUT. Pin 3 is the reset button — pressing it will zero the total."
+            "title": "Pin 3 — the Reset button",
+            "image": "/static/tutorials/steps/petrolPumpMeterPinModeReset.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.pinModeReset",
+                "default": "Drag a second pinMode block below the first. Set pin to 3 and mode to input pullup. Pin 3 will be the Reset button — one press and the total goes back to zero. Two buttons, two pins, both listening."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.3
+            }
         },
         {
-            "title": "Tell the LCD which screen to talk to",
-            "image": "/static/tutorials/steps/petrolPumpLcdCreate.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.5},
-            "highlightBlock": {"category": "i2c16x2", "blockType": "i2c16x2_lcdCreate"},
+            "title": "One button, three boxes — why?",
+            "image": "/static/tutorials/steps/petrolPumpMeterMystery.webp",
             "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.lcdCreate",
-                "default": "Open the 16x2 LCD category and drag a connect LCD block into setup. Leave the address on 0x27 and keep 16 chars by 2 lines. The LCD talks over a shared bus called I2C — many devices can sit on the same wires, and the address (0x27) is its house number on that bus."
+                "id": "gui.tutorials.petrolPumpMeter.mystery",
+                "default": "Here's something strange we'll need to handle. The Start button is just one button. But to make it behave like a real petrol pump, we'll need three separate variables. Three boxes for one button. That sounds like too many — why three? Hold the question. We'll answer it in the next step."
             },
-            "validate": true
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Three different facts about right-now",
+            "image": "/static/tutorials/steps/petrolPumpMeterReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.reveal",
+                "default": "The trick is that one button has to tell us three different things. Fact one — is the pump running right now? That's a yes or no. Fact two — how much fuel has flowed so far? That's a number that grows. Fact three — did the button just transition from not-pressed to pressed? That's edge detection, the same trick from the people-counter tutorial. Three different facts, three different boxes. One pumping flag, one total counter, one lastStart memory of what the button looked like a moment ago."
+            },
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Tell the LCD which screen",
+            "image": "/static/tutorials/steps/petrolPumpMeterSetupLcd.webp",
+            "highlightBlock": {
+                "category": "i2c16x2",
+                "blockType": "i2c16x2_lcdCreate"
+            },
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.setupLcd",
+                "default": "Drag the setup LCD block into setup, below the two pinModes. The LCD is the little screen on the pump that shows the total. We're using a 16-by-2 LCD — sixteen letters wide, two rows tall — and it talks to the Arduino over a special two-wire connection called I2C, at address hex 27. The block knows the defaults; you just drop it in."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 3.1
+            }
         },
         {
             "title": "Wake up the LCD",
-            "image": "/static/tutorials/steps/petrolPumpLcdInit.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.5},
-            "highlightBlock": {"category": "i2c16x2", "blockType": "i2c16x2_lcdInit"},
+            "image": "/static/tutorials/steps/petrolPumpMeterLcdInit.webp",
+            "highlightBlock": {
+                "category": "i2c16x2",
+                "blockType": "i2c16x2_lcdInit"
+            },
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.lcdInit",
-                "default": "Drag an initialize LCD block right after the connect LCD block. Two-step introduction: the first block named the screen, this one wakes it up so it's ready to print."
+                "default": "Drag the LCD init block right below. This is the wake-up call — it tells the LCD 'get ready to receive text'. Without this, the screen stays blank no matter what we send. Two LCD setup blocks done; now the screen is alive."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 3
+            }
         },
         {
-            "title": "Box one: is the pump running?",
-            "image": "/static/tutorials/steps/petrolPumpMakeRunning.webp",
-            "imageFocus": {"x": 10, "y": 30, "zoom": 2.4},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.makeRunning",
-                "default": "Open Variables and click Make a Variable. Name it running. We'll use 1 for 'pump on' and 0 for 'pump off'. The pump remembers its own state between loops."
+            "title": "Box one — pumping",
+            "image": "/static/tutorials/steps/petrolPumpMeterMakePumping.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_setvariableto"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.makePumping",
+                "default": "Open the Variables category and click Make a Variable. Name it pumping. Then drag a set pumping to block into setup and set the value to false. This is fact one — is the pump running right now? At the start, no — the pump is idle. So pumping starts as false."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.8
+            }
         },
         {
-            "title": "Box two: how much has flowed",
-            "image": "/static/tutorials/steps/petrolPumpMakeFlow.webp",
-            "imageFocus": {"x": 10, "y": 30, "zoom": 2.4},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.makeFlow",
-                "default": "Click Make a Variable again. Name this one flow. It holds the running total — how much fuel has gone through since the last reset."
+            "title": "Box two — total",
+            "image": "/static/tutorials/steps/petrolPumpMeterMakeTotal.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_setvariableto"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.makeTotal",
+                "default": "Make another variable, name it total. Drag a set total to block into setup, set the value to 0. This is fact two — how much fuel has flowed. Every loop while the pump is running, this number ticks up. The LCD shows whatever's in this box."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.8
+            }
         },
         {
-            "title": "Box three: was the start button already held?",
-            "image": "/static/tutorials/steps/petrolPumpMakeLast.webp",
-            "imageFocus": {"x": 10, "y": 30, "zoom": 2.4},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.makeLast",
-                "default": "One more variable. Click Make a Variable and name it lastStart. Same edge-detection trick as the people counter — without lastStart, holding the button for a second would flip the pump on, off, on, off many times. lastStart remembers what the button looked like last loop, so we only flip on a fresh tap."
+            "title": "Box three — lastStart",
+            "image": "/static/tutorials/steps/petrolPumpMeterMakeLastStart.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_setvariableto"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.makeLastStart",
+                "default": "One more variable. Make it, name it lastStart. Drag a set lastStart to block into setup, and drop a high block into its value slot. This is fact three — what did the Start button look like the last time we checked? Because of input pullup, an unpressed button reads high, so we start lastStart at high. We'll use this in a moment to spot the exact instant the button transitions from not-pressed to pressed."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.8
+            }
         },
         {
             "title": "Detect a fresh tap",
-            "image": "/static/tutorials/steps/petrolPumpStartIf.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.startIf",
-                "default": "Drag an if block into the loop. Build the condition: digitalRead pin 2 equals 1 AND lastStart equals 0. That means: the start button is pressed RIGHT NOW but it WASN'T pressed a moment ago — a brand-new tap, not someone holding the button down. That AND combo is edge detection."
+            "image": "/static/tutorials/steps/petrolPumpMeterFreshTap.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.freshTap",
+                "default": "Now into the loop. Drag an if block. In its diamond slot, we want to ask two questions joined by and — is digitalRead pin 2 equal to low right now, and was lastStart equal to high a moment ago? Use an and block from Operators with two equals blocks inside it. Left side — digitalRead 2 equals low. Right side — lastStart equals high. The whole question reads: is the button pressed now, and was it not-pressed a moment ago? That's how we catch a fresh tap and ignore a held finger."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
         },
         {
             "title": "Flip the pump",
-            "image": "/static/tutorials/steps/petrolPumpToggle.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.4},
-            "highlightBlock": {"category": "variables", "blockType": "data_setvariableto"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.toggle",
-                "default": "Inside that if branch, drag a set running block. For the value, build 1 minus running. Cool maths trick: if running was 0, this makes it 1; if it was 1, this makes it 0. One tap flips the pump between off and on."
+            "image": "/static/tutorials/steps/petrolPumpMeterFlipPump.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_setvariableto"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.flipPump",
+                "default": "Inside the if branch, drag a set pumping to block. In its value slot, drop a not block from Operators, and inside the not block put a pumping reporter. The whole line reads: set pumping to not pumping. If pumping was false, this flips it to true — the pump starts. If pumping was true, this flips it to false — the pump pauses. One button, toggle behaviour, exactly like a television remote's power key."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2.3
+            }
         },
         {
             "title": "Reset to zero",
-            "image": "/static/tutorials/steps/petrolPumpReset.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
+            "image": "/static/tutorials/steps/petrolPumpMeterReset.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.reset",
-                "default": "Below the first if, drag a second if block. The condition is digitalRead pin 3 equals 1. Inside, drag a set flow to 0 block. Pressing the reset button zeros the meter — exactly what the attendant does before each new customer."
+                "default": "Drag a second if block below the first one, still inside the loop. The condition asks: is digitalRead pin 3 equal to low? That's the Reset button being pressed. Inside this if branch, drag a set total to block and set it to 0. One press of Reset, the total goes back to zero — fresh customer, fresh fill-up."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2.2
+            }
         },
         {
             "title": "Tick up while running",
-            "image": "/static/tutorials/steps/petrolPumpTick.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.tick",
-                "default": "Below the reset if, drag a third if block. Condition: running equals 1. Inside, drag a change flow by 1 block. Each loop while the pump is on, the meter advances by one — fuel flowing into the tank."
+            "image": "/static/tutorials/steps/petrolPumpMeterTickUp.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.tickUp",
+                "default": "Drag a third if block below. Its condition is just the pumping reporter — true means the pump is running, false means it's idle. Inside this if branch, drag a change total by 1 block. Every loop where pumping is true, total grows by one. Every loop where pumping is false, this branch is skipped and total stays put. That's the difference between flowing and idle, expressed in code."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 2.1
+            }
         },
         {
             "title": "Print the live total",
-            "image": "/static/tutorials/steps/petrolPumpPrint.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.3},
-            "highlightBlock": {"category": "i2c16x2", "blockType": "i2c16x2_lcdClear"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.print",
-                "default": "Below the third if, drop these in order from the 16x2 LCD category: clear LCD, set cursor to column 0 row 0, print Flow on LCD, then print number on LCD with the flow variable in the value slot. The screen wipes and redraws the live total every loop. Print-then-clear-then-print-fresh is how all rolling-number displays work."
+            "image": "/static/tutorials/steps/petrolPumpMeterLcdPrint.webp",
+            "highlightBlock": {
+                "category": "i2c16x2",
+                "blockType": "i2c16x2_lcdPrint"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.lcdPrint",
+                "default": "Drag the LCD print block into the loop, below the three ifs. In its text slot, drop a total reporter. Every loop, the LCD shows whatever number is in the total box right now. When pumping ticks total up, the screen ticks up too. When Reset zeros it, the screen zeros."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 57,
+                "zoom": 2
+            }
         },
         {
             "title": "Save what the button looked like",
-            "image": "/static/tutorials/steps/petrolPumpRemember.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.3},
-            "highlightBlock": {"category": "variables", "blockType": "data_setvariableto"},
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.remember",
-                "default": "Below the print blocks, drag a set lastStart block. Drop a digitalRead pin 2 reporter into the value slot. lastStart now stores whatever the button looked like this round, ready for the edge check next time around. Without this, the edge trick would forget."
+            "image": "/static/tutorials/steps/petrolPumpMeterSaveLast.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_setvariableto"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.petrolPumpMeter.saveLast",
+                "default": "Drag a set lastStart to block at the very bottom of the loop. In its value slot, drop a digitalRead block with pin 2. Every loop, after we've done all our checking, we remember what the Start button looks like right now so the next loop can compare. This is the heartbeat of edge detection — without this line, lastStart never changes, and the fresh-tap check from earlier breaks."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 57,
+                "zoom": 2
+            }
         },
         {
-            "title": "A small pause to keep the screen calm",
-            "image": "/static/tutorials/steps/petrolPumpDelay.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.3},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "title": "A small pause",
+            "image": "/static/tutorials/steps/petrolPumpMeterDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.delay",
-                "default": "Drag a delay block at the very bottom of the loop. Set it to 100 milliseconds. Without this gentle pause the LCD would flicker as we redraw it dozens of times per second. Ten redraws a second is plenty for a smooth count."
+                "default": "Last block — drag a delay at the bottom of the loop, set to 100 milliseconds. A tenth-of-a-second pause keeps the loop from racing. Every Arduino loop should have a small pause; without one, the program checks the button thousands of times per second and the counter ticks up too fast to read. Blocks are done — let's wire up the simulator."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 57,
+                "zoom": 1.9
+            }
         },
         {
             "title": "Add the LCD",
-            "image": "/static/tutorials/steps/petrolPumpAddLcd.webp",
-            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "image": "/static/tutorials/steps/petrolPumpMeterAddLcd.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.addLcd",
-                "default": "Open the Simulator and click the plus button. Choose LCD 16x2 and click Save. The display is wired through the I2C bus on SDA pin A4 and SCL pin A5 — those two wires carry data and clock for every I2C device."
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose LCD 16x2. The pin dialog asks for sda and scl — leave those at A4 and A5, the standard I2C pins on an Arduino Uno. Click Save. The virtual LCD appears, ready to display whatever your code prints to it."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
             }
         },
         {
-            "title": "Add the start button",
-            "image": "/static/tutorials/steps/petrolPumpAddStart.webp",
-            "imageFocus": {"x": 100, "y": 35, "zoom": 2.3},
+            "title": "Add the Start button",
+            "image": "/static/tutorials/steps/petrolPumpMeterAddStart.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.addStart",
-                "default": "Click the plus again. Add a Push Button on pin 2 — this is the start-and-stop button."
+                "default": "Click the plus button again, choose Push Button, set pin to 2, click Save. This is the Start button — tap it to begin pumping, tap it again to pause."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 3
             }
         },
         {
-            "title": "Add the reset button",
-            "image": "/static/tutorials/steps/petrolPumpAddReset.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "title": "Add the Reset button",
+            "image": "/static/tutorials/steps/petrolPumpMeterAddReset.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.petrolPumpMeter.addReset",
-                "default": "Click the plus once more and add a second Push Button on pin 3. That's the reset button. Both buttons are now wired."
-            }
-        },
-        {
-            "title": "Click Start",
-            "image": "/static/tutorials/steps/petrolPumpStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
-            "highlightUI": "simStartButton",
-            "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.start",
-                "default": "Click Start. Your program compiles and the LCD lights up showing Flow 0."
+                "default": "One more component. Plus button, Push Button, pin 3, Save. This is the Reset button. Two buttons and an LCD — that's all a real petrol pump screen really is."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 38,
+                "zoom": 3
             }
         },
         {
             "title": "Run the pump",
-            "image": "/static/tutorials/steps/petrolPumpRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "image": "/static/tutorials/steps/petrolPumpMeterRun.webp",
+            "highlightUI": "simComp.button",
             "narration": {
-                "id": "gui.tutorials.petrolPumpMeter.running",
-                "default": "Click the start button — the number on the LCD starts climbing. Click it again to pause. Click the reset button to drop the meter back to zero. The pump always remembers its state because of the running variable. Try this: change the change flow by 1 to change flow by 5 to make it count faster, like a fast pump nozzle. Or print the price on the second LCD line by multiplying flow by your local rate."
+                "id": "gui.tutorials.petrolPumpMeter.run",
+                "default": "Click the Start button at the top of the simulator and give it a few seconds to load. Now press the Start button on the breadboard — the LCD starts ticking up, one count per tenth of a second. Press Start again — it freezes. Press it once more — it ticks up from where it stopped. Press the Reset button — the LCD jumps back to zero. You just built a real-world appliance. Five concepts working together — the pumping flag is a state machine that remembers running-or-idle, the lastStart variable is edge detection that tells a fresh tap apart from a held finger, the change-total-by-one is counter accumulation, the LCD print is screen output, and the delay paces the loop. The same pattern runs every parking meter, every transit-card top-up screen, every coffee-shop loyalty counter you've ever seen."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 30,
+                "zoom": 1.6
             }
         }
     ]

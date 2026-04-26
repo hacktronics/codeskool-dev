@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonKeepTrying.intro",
                 "default": "Last tutorial you nested an if inside an else to give a second chance. But what if you want to keep asking forever, until the kid guesses right? Copying the same code over and over wouldn't scale. Today you'll meet the while loop — Python's way of saying \"keep doing this as long as a condition is true\". In Scratch this is the \"repeat until\" block. In Python it's one keyword: while."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -48,6 +63,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -59,6 +79,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -80,6 +105,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -95,6 +125,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -102,9 +137,14 @@
             "image": "/static/tutorials/steps/pythonKeepTrying_08_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonKeepTrying.recap",
-                "default": "Two dangers with while. One: forgetting to update the variable inside the loop, so the condition never changes — infinite loop. Two: what if the kid just wants to QUIT without guessing? Right now the only way out is to guess correctly. In the next tutorial you'll learn break — a way to pop out of a loop early, even if the condition is still true."
+                "default": "Two dangers with while. One: forgetting to update the variable inside the loop, so the condition never changes — that's called an infinite loop. Two: what if the kid just wants to QUIT without guessing? Right now the only way out is to guess correctly. Python has a keyword called break that pops you out of a loop early — useful when the condition is still true but you've decided to stop. Think chat bots that quit on the word bye, shopping baskets you stop adding items to, or a quiz that ends the moment you score full marks."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

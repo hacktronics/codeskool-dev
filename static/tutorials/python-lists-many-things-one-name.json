@@ -1,0 +1,101 @@
+{
+    "steps": [
+        {
+            "title": "Many things under one name",
+            "image": "/static/tutorials/steps/pythonLists_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.intro",
+                "default": "A list is ONE name that holds MANY values in order. Imagine a row of labelled boxes lined up — that's a list. In Scratch you've made these by clicking \"Make a List\" and adding items one at a time. In Python it's a single line: name equals square brackets, values inside, commas between."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Make your first list",
+            "image": "/static/tutorials/steps/pythonLists_02_make.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.make",
+                "default": "Type:\n\nfruits = [\"apple\", \"banana\", \"mango\"]\n\nThree items, each at its own position. Python counts from ZERO — apple sits at 0, banana at 1, mango at 2. The first item is always at position 0, never at 1. Items can be strings, numbers, even other lists."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Look inside",
+            "image": "/static/tutorials/steps/pythonLists_03_inspect.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.inspect",
+                "default": "Type two lines:\n\nprint(fruits)\nprint(len(fruits))\n\nThe first prints the whole list — Python shows it back with the brackets and commas, exactly how you wrote it. len is standard Python — it counts how many items are in the list. With three fruits, len(fruits) gives 3. len works on strings and most other collections too."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Grow the list with append",
+            "image": "/static/tutorials/steps/pythonLists_04_append.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.append",
+                "default": "Type:\n\nfruits.append(\"kiwi\")\nprint(fruits)\n\nThe dot tells Python: take this list and run a built-in command on it. append adds a new item to the END of the list. The list grew by one — you didn't make a new list, the same fruits now has four items. This is called a method — built-in commands that belong to a type."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Loop through every item",
+            "image": "/static/tutorials/steps/pythonLists_05_loop.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.loop",
+                "default": "Type:\n\nfor f in fruits:\n    print(\"I like\", f)\n\nYou've used for with range before — that gave you numbers 0, 1, 2 and so on. This time, for f in fruits walks every item of the list directly. Each turn through the loop, f IS the next item — first apple, then banana, then mango, then kiwi. No range, no index, no counting. Just every item, one by one. This is one of the most common patterns in real Python — for X in <list> shows up in almost every program that handles many things."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and watch the list",
+            "image": "/static/tutorials/steps/pythonLists_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.run",
+                "default": "Click Run. The terminal shows the original three fruits, the count 3, the grown list of four (with kiwi added), and four lines beginning with I like. One short program, four different ways of looking at the same list."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Where you'll use lists",
+            "image": "/static/tutorials/steps/pythonLists_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonLists.recap",
+                "default": "A list is one of Python's most useful types. Anywhere you'd say \"lots of things, all the same kind\" — game scores, friend names, todo items, photos, levels, costumes, classmates — a list fits. From here on, lists show up in almost every program you write."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

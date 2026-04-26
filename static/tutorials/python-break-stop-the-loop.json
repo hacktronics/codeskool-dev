@@ -1,0 +1,119 @@
+{
+    "steps": [
+        {
+            "title": "Stop a loop the moment something happens",
+            "image": "/static/tutorials/steps/pythonBreak_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.intro",
+                "default": "The loops you've built so far end on a fixed condition — guess the right number, count to n, walk every item. Real programs often need a different kind of stop: keep going until something specific happens, then jump out. Today's keyword is break — Python's instant exit from any loop."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "An empty list to fill",
+            "image": "/static/tutorials/steps/pythonBreak_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.setup",
+                "default": "Type the title and an empty list:\n\nprint(\"Type a word to add. Type stop to finish.\")\n\nwords = []\n\nThe square brackets create an empty list — no items yet. The kid will type words one at a time and the list will grow."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 0
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "A loop with no end condition",
+            "image": "/static/tutorials/steps/pythonBreak_03_whileTrue.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.whileTrue",
+                "default": "Type:\n\nwhile True:\n    word = input(\"Word: \")\n\nwhile True is Python's way of saying \"loop forever\" — True never becomes False, so the loop has no stopping condition. The only way out will be break. Inside the loop, ask the kid for a word."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "break — pop out instantly",
+            "image": "/static/tutorials/steps/pythonBreak_04_break.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.break",
+                "default": "Still inside the loop, type:\n\n    if word == \"stop\":\n        break\n\nbreak is standard Python. The moment Python runs break, it pops out of the nearest loop instantly — even if the loop's condition is still True. Without break, while True would run forever and the kid could never finish."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Otherwise, save the word",
+            "image": "/static/tutorials/steps/pythonBreak_05_append.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.append",
+                "default": "Still inside the while, but OUTSIDE the if (same indent as the if), type:\n\n    words.append(word)\n\nWhen the word isn't stop, this line runs and the word joins the list. When the word is stop, break has already fired and Python never reaches this line."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print after the loop ends",
+            "image": "/static/tutorials/steps/pythonBreak_06_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.print",
+                "default": "Back to NO indent — outside the while — type:\n\nprint(\"Your words:\", words)\n\nThis line only runs after break has fired. The indentation tells the whole story: indented lines are inside the loop, the un-indented line below is what happens after."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and add some words",
+            "image": "/static/tutorials/steps/pythonBreak_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.run",
+                "default": "Click Run. Type apple, then banana, then mango, then stop. The terminal shows your three words gathered in a list. Run again with anything you like — the kid decides when the loop ends."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Where break shows up",
+            "image": "/static/tutorials/steps/pythonBreak_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBreak.recap",
+                "default": "while True with break is one of Python's most useful loop patterns. Chat bots that listen until quit. Games that loop until game-over. Calculators that compute until the kid says done. Any time the program should keep going until SOMETHING happens — break is the way out."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

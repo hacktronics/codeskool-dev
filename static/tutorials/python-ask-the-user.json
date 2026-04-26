@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonAskTheUser.intro",
                 "default": "Last tutorial you stored a value yourself: message = \"Hello Python!\". But the kid running your program can't change it without editing the code. Today we'll let the program ask a question and use whatever the kid types. In Scratch this is the \"ask and wait\" block. In Python it's one short line — but it unlocks every game, quiz, and chat program you'll ever write."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -15,8 +20,17 @@
                 "id": "gui.tutorials.pythonAskTheUser.typeInput",
                 "default": "On line 1, type: name = input(\"What is your name?\"). The function input is standard Python — when the program runs, a small text box pops up on the stage with the question above it, and the program WAITS until the kid types an answer and presses Enter. Whatever they type is given back, and the equals sign stores it under the name name."
             },
+            "validateCode": {
+                "functionName": "input",
+                "lineIndex": 0
+            },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -27,7 +41,12 @@
             "image": "/static/tutorials/steps/pythonAskTheUser_03_textFact.webp",
             "narration": {
                 "id": "gui.tutorials.pythonAskTheUser.textFact",
-                "default": "One important thing to remember about input: it always gives back TEXT. Even if the kid types 12, Python sees the string \"12\", not the number 12. We're not doing maths today so this doesn't matter — but it will matter in two tutorials. For now, just keep in mind: whatever comes out of input is a string."
+                "default": "One important thing to remember about input: it always gives back TEXT. Even if the kid types 12, Python sees the string \"12\", not the number 12. We're not doing maths today so this doesn't matter — but keep it in mind. When you ask for an age or a price, you'll need to convert that string into a number first."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -46,6 +65,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -53,11 +77,16 @@
             "image": "/static/tutorials/steps/pythonAskTheUser_05_terminalPrompt.webp",
             "narration": {
                 "id": "gui.tutorials.pythonAskTheUser.run",
-                "default": "Click Run. A small text box pops up on the stage with the question — that's input waiting. Type your name in the box and press Enter (or click the arrow button). The moment you submit, the wait ends and Python runs the next line."
+                "default": "Click Run. A small text box pops up on the stage with the question — that's input waiting. Type your name in the box and press Enter (or click the tick button next to the box). The moment you submit, the wait ends and Python runs the next line."
             },
             "highlightUI": "pythonRun",
             "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
@@ -74,6 +103,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -83,7 +117,14 @@
                 "id": "gui.tutorials.pythonAskTheUser.recap",
                 "default": "Change the question inside the quotes on line 1 — ask for a favourite colour, a pet's name, a superpower. Change the greeting on line 2 to match, like print(\"Nice choice, \" + colour + \"!\"). Remember to store the answer in a variable with a matching name. Click Run again. Your program now knows how to talk to anyone."
             },
+            "highlightUI": "pythonEditor",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

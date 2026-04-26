@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.intro",
                 "default": "All your functions so far had a fixed number of parameters — exactly two for add(a, b), one for greet(name). But what if you don't know in advance how many things will be passed? Today you'll meet *args — a Python feature that lets ONE function accept any number of arguments, from one to a hundred."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -28,6 +38,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.explainStar",
                 "default": "Without the star, you'd have to define total(a, b), total(a, b, c), total(a, b, c, d) — separate functions for each count. The star says \"however many they pass, gather them up\". The name args is just convention — you could call it numbers, items, parts. The * is what does the magic."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -46,6 +61,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -61,6 +81,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -68,9 +93,14 @@
             "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_06_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.recap",
-                "default": "Many built-in Python functions use *args under the hood. print can take any number of things to print — print(\"a\", \"b\", \"c\") works because of *args. max(1, 2, 3) and min(1, 2, 3, 4, 5) too. Now that you've written one yourself, you understand how those tools work."
+                "default": "Many built-in Python functions use *args under the hood. print can take any number of things to print — print(\"a\", \"b\", \"c\") works because of *args. max(1, 2, 3) and min(1, 2, 3, 4, 5) too. Now that you've written one yourself, you understand how those tools work. Anywhere you need a function that adapts to one input or fifty — totalling quiz scores, joining player names, summing daily steps in a fitness app — *args is the trick."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

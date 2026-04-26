@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandMultipleAnswers.intro",
                 "default": "Last tutorial your function did the SAME thing every time you called it — print Hello! Today you'll write functions that take INFORMATION when called, and behave differently depending on what they get. Same command name, many different answers. The information is called a parameter."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -31,6 +41,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -52,6 +67,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -67,6 +87,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -75,6 +100,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandMultipleAnswers.terminology",
                 "default": "Two words you'll hear: PARAMETER is the empty box in the function definition (a and b). ARGUMENT is the actual value you pass in when you call (5 and 3). Same idea, just the names differ depending on which side you're on. Don't worry about getting the names right — most programmers use them interchangeably."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -82,9 +112,14 @@
             "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_07_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandMultipleAnswers.recap",
-                "default": "Right now your functions PRINT but don't give back a value you can use. So you can't write x = add(5, 3) and then USE x. In the next tutorial you'll learn return — the way a function hands a value back to whoever called it, so it can be stored or passed into another function."
+                "default": "Right now your functions PRINT but don't give back a value you can use. So you can't write x = add(5, 3) and then USE x. To make that work, the function needs to hand the value back instead of just printing it. Python has a keyword for exactly that — return. Once a function returns its answer, the caller can store it, print it, or feed it into another function — calculate a price with tax, look up a player's score from their name, build a chain of small calculators each handing the answer to the next."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

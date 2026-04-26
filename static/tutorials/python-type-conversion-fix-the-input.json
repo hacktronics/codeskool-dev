@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonTypeConversionFixTheInput.intro",
                 "default": "You've been using int to turn text into numbers when you need to add or compare. Today you'll see exactly why — side by side. We'll take two numbers from the kid, once without int (wrong) and once with int (right), and watch what Python actually does. Spoiler: the same plus sign behaves completely differently depending on what it's adding."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -42,6 +57,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonTypeConversionFixTheInput.explainGlue",
                 "default": "When the plus sign is between two strings, Python glues them — no maths happens. \"12\" + \"34\" becomes \"1234\", the digits stuck together, NOT 46. This is exactly the concatenation you used to make greetings two tutorials ago. Python is doing the same thing here — it just isn't what we wanted this time."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -60,6 +80,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -75,6 +100,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -85,6 +115,11 @@
                 "default": "From now on, every time you take a number from input and want to do maths with it, wrap it in int (for whole numbers) or float (for decimals like 3.5). There is also str going the other way — number back into text. int, float, str are all standard Python. Keep them handy — they show up in every program that mixes input and maths."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

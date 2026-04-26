@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonStoreDataWithMeaning.intro",
                 "default": "Lists and tuples store values by POSITION — color[0] is red because red was first. That works for short, ordered things, but for a student record you really want to look things up by name: name, score, level. Today you'll meet the dictionary — a structure that pairs a key (the label) with a value, like name tags on every piece of data."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -38,6 +48,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -53,6 +68,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -61,6 +81,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonStoreDataWithMeaning.vsList",
                 "default": "Imagine the same student as a list: [\"Aman\", 85, 3]. Position 0 is the name, 1 is the score, 2 is the level. Six months later, you'd have to remember what each position MEANT. With a dictionary, the meaning is in the key — student[\"score\"] tells you exactly what 85 represents. Code that reads itself."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -74,6 +99,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -84,6 +114,11 @@
                 "default": "Use a dictionary anywhere you'd write \"X has a Y\" in plain English: a sprite has a costume, a score, a position. A user has a name, an age, an email. A game level has a title, enemies, a goal. Most game saves and chat messages get sent around the internet as dictionaries (in a format called JSON) — what you've learned today translates directly."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

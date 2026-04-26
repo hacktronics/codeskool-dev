@@ -1,0 +1,128 @@
+{
+    "steps": [
+        {
+            "title": "Make data outlive the program",
+            "image": "/static/tutorials/steps/pythonFiles_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.intro",
+                "default": "Last tutorial you used open, write, and close to save and load a score — three lines per file operation. Today you'll meet a cleaner Python pattern called with that bundles the open and close into one block, so you can never forget the close. Same idea, fewer lines, safer code."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Save to your real computer",
+            "image": "/static/tutorials/steps/pythonFiles_02_mountFS.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.mountFS",
+                "default": "Before we write any file, tell Python where to put it. Look at the top of the terminal toolbar — there's a button labelled File System. Click it. A folder picker opens — pick any folder on your computer, or make a new one called shopping. Click Allow when your browser asks. From this moment on, every file your code saves lands in that real folder on your computer. You'll be able to open it later and see your data sitting there as a real file."
+            },
+            "highlightUI": "fileSystem",
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Set up a list to save",
+            "image": "/static/tutorials/steps/pythonFiles_03_list.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.list",
+                "default": "Type:\n\nitems = [\"apple\", \"banana\", \"mango\"]\n\nThree fruits in a list — the data you want to remember. In a real shopping app this list might come from the kid typing items in. Today we'll save these three to a file, then read them back."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Open a file for writing",
+            "image": "/static/tutorials/steps/pythonFiles_04_write.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.write",
+                "default": "Type:\n\nwith open(\"shopping.txt\", \"w\") as f:\n    for item in items:\n        f.write(item + \"\\n\")\n\nopen is standard Python. The first part is the filename, the second part is the mode — w for write, which means create a new file or replace the old one. The as f stores the open file as a name we can use inside the indented block. Loop through items and write each one, with a backslash-n at the end to put each on its own line."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why with — Python closes the file for you",
+            "image": "/static/tutorials/steps/pythonFiles_05_withExplain.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.withExplain",
+                "default": "The with keyword is a Python feature for things that need to be closed when you're done with them — files, network connections, and more. The moment the indented block under with ends, Python automatically closes the file. No closing line to write yourself, no risk of forgetting. Always use with when you open a file."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Open the same file for reading",
+            "image": "/static/tutorials/steps/pythonFiles_06_read.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.read",
+                "default": "Type:\n\nwith open(\"shopping.txt\", \"r\") as f:\n    saved = f.read()\n\nSame open and with — but this time the mode is r for read. f.read pulls every character in the file into one string, which we store as saved. The with closes the file when the indented block ends, just like before."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Print what came back",
+            "image": "/static/tutorials/steps/pythonFiles_07_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.print",
+                "default": "Type:\n\nprint(saved)\n\nThe whole file's contents — three fruits, each on its own line — comes back as one string and prints to the terminal. Whatever you wrote, you just read back. The file held your data while no Python code was running."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run the write-then-read",
+            "image": "/static/tutorials/steps/pythonFiles_08_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.run",
+                "default": "Click Run. Python writes the three fruits into shopping.txt, then opens the same file and reads them back into saved, then prints saved. The terminal shows your three fruits, each on its own line. Now open the folder you picked at the start of this tutorial — shopping.txt is sitting there as a real file on your computer's disk."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why files matter",
+            "image": "/static/tutorials/steps/pythonFiles_09_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFiles.recap",
+                "default": "Files are how programs REMEMBER. Save your game's high score, your todo list, the kid's name and avatar — anything you want to keep between runs. The pattern is the same every time: click File System once to pick a folder, then open with a mode and do the read or write inside a with block. Python closes the file for you and writes it straight to your computer's disk. Open the folder a month from now — your shopping.txt is still there with the same three fruits, just like a real Python program on a regular computer."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

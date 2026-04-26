@@ -1,108 +1,103 @@
 {
     "steps": [
         {
-            "title": "Keep a record of every item",
+            "title": "A real save-and-load app",
             "image": "/static/tutorials/steps/pythonSaveYourData_01_intro.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSaveYourData.intro",
-                "default": "The shopping bills you've built so far throw away each item right after adding it to the total — once the loop is over, only the final number is left. Today you'll keep a record of every item the kid added, in a structure called a list. By the end, your program will print the total AND show every name in the basket."
-            }
+                "default": "Real apps remember things between runs. Today you'll wrap save and load into reusable functions, then build a tiny menu that lets the kid save a score, load it back, or exit. One short program brings together almost everything you've learned: def, files, while True with break, input, and if-elif chains. This is what real Python feels like — small pieces working as a team."
+            },
+            "_sourceCrop": {"x": 50, "y": 50, "zoom": 1}
         },
         {
-            "title": "Open the program",
-            "image": "/static/tutorials/steps/pythonSaveYourData_02_setup.webp",
+            "title": "Save to your real computer",
+            "image": "/static/tutorials/steps/pythonSaveYourData_02_mountFS.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.setup",
-                "default": "Type the opening:\n\nprint(\"Store Your Items\")\n\nn = int(input(\"How many items? \"))\n\nFamiliar territory — title and count. The new variable comes next."
+                "id": "gui.tutorials.pythonSaveYourData.mountFS",
+                "default": "Before we write any file, tell Python where to put it. Look at the top of the terminal toolbar — there's a button labelled File System. Click it. A folder picker opens — pick any folder on your computer, or make a new one called scores. Click Allow when your browser asks. From this moment on, every file your code saves lands in that real folder on your computer. Open it later and you'll see score.txt sitting there as a real file."
+            },
+            "highlightUI": "fileSystem",
+            "_sourceCrop": {"x": 50, "y": 50, "zoom": 1}
+        },
+        {
+            "title": "Write the save function",
+            "image": "/static/tutorials/steps/pythonSaveYourData_03_saveFunction.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.saveFunction",
+                "default": "Type the first function:\n\ndef save_score(score):\n    file = open(\"score.txt\", \"w\")\n    file.write(str(score))\n    file.close()\n\nopen is standard Python — it asks Python to open a file. The first piece is the filename, the second is the mode. The mode \"w\" means WRITE — make a fresh file (or replace the old one). file.write puts the score into the file as text — note str(score), because files only hold text. file.close finishes the work and lets Python release the file. Three lines: open, write, close."
             },
             "highlightUI": "pythonEditor",
-            "_sourceCrop": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
-            }
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
         },
         {
-            "title": "Make an empty list",
-            "image": "/static/tutorials/steps/pythonSaveYourData_03_emptyList.webp",
+            "title": "Write the load function",
+            "image": "/static/tutorials/steps/pythonSaveYourData_04_loadFunction.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.emptyList",
-                "default": "Type:\n\nitems = []\ntotal = 0\n\nThe square brackets [] make an empty list — like a row of empty boxes, ready to be filled. items is a list, total is a single number. Both start empty/zero. As the loop runs, items will grow and total will climb."
+                "id": "gui.tutorials.pythonSaveYourData.loadFunction",
+                "default": "Type the second function:\n\ndef load_score():\n    file = open(\"score.txt\", \"r\")\n    return file.read()\n\nSame open, but the mode is \"r\" for READ — give back what's in the file, don't change anything. file.read pulls every character of the file into one string. return hands that string back to whoever called load_score. We could call file.close after reading, but for short reads inside a function Python tidies up on its own."
             },
             "highlightUI": "pythonEditor",
-            "_sourceCrop": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
-            }
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
         },
         {
-            "title": "Three questions per item, then store the name",
-            "image": "/static/tutorials/steps/pythonSaveYourData_04_loopBody.webp",
+            "title": "Start the menu loop",
+            "image": "/static/tutorials/steps/pythonSaveYourData_05_menuLoop.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.loopBody",
-                "default": "Type:\n\nfor i in range(n):\n    name = input(\"Enter item name: \")\n    price = int(input(\"Enter price: \"))\n    qty = int(input(\"Enter quantity: \"))\n\n    items.append(name)\n\n    total = total + (price * qty)\n\nThe loop body asks three questions: name (text), price (number), quantity (number). items.append(name) adds the name to the END of the list — append is a list method, standard Python. The list grows by one each loop."
+                "id": "gui.tutorials.pythonSaveYourData.menuLoop",
+                "default": "Below the functions (no indent), type:\n\nwhile True:\n    print(\"1. Save\")\n    print(\"2. Load\")\n    print(\"3. Exit\")\n\n    choice = input(\"Choose: \")\n\nwhile True is the loop-forever pattern you met with break. Each turn, print a three-option menu, ask the kid to choose. The if/elif/else below will route them to the right action."
             },
             "highlightUI": "pythonEditor",
-            "_sourceCrop": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
-            }
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
         },
         {
-            "title": "What append really does",
-            "image": "/static/tutorials/steps/pythonSaveYourData_05_appendExplain.webp",
+            "title": "Option 1 — save",
+            "image": "/static/tutorials/steps/pythonSaveYourData_06_handleSave.webp",
             "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.appendExplain",
-                "default": "Lists are different from variables. A variable holds ONE value at a time — assigning a new value forgets the old. A list holds MANY values in order, and append adds a new one without forgetting the rest. After three appends with apple, banana, mango, items will look like ['apple', 'banana', 'mango']."
-            }
-        },
-        {
-            "title": "Print the basket and the bill",
-            "image": "/static/tutorials/steps/pythonSaveYourData_06_summary.webp",
-            "narration": {
-                "id": "gui.tutorials.pythonSaveYourData.summary",
-                "default": "After the loop ends — back to no indent — type:\n\nprint(\"Items bought:\", items)\nprint(\"Total Bill:\", total)\n\nThe first line prints the whole list at once — Python knows how to display a list neatly with the names in square brackets. The second line prints the total. Two snapshots of what just happened: the contents and the cost."
-            },
-            "validateCode": {
-                "functionName": "print",
-                "lineIndex": 11
+                "id": "gui.tutorials.pythonSaveYourData.handleSave",
+                "default": "Still inside the while, type:\n\n    if choice == \"1\":\n        s = input(\"Enter score: \")\n        save_score(s)\n\nWhen the kid picks 1, ask for a score and call save_score with it. save_score handles all the file work — this code doesn't need to think about open or close at all. That's the win of wrapping work in a function."
             },
             "highlightUI": "pythonEditor",
-            "_sourceCrop": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
-            }
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
         },
         {
-            "title": "Run and fill your basket",
-            "image": "/static/tutorials/steps/pythonSaveYourData_07_run.webp",
+            "title": "Option 2 — load",
+            "image": "/static/tutorials/steps/pythonSaveYourData_07_handleLoad.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.handleLoad",
+                "default": "Type the next branch:\n\n    elif choice == \"2\":\n        print(\"Saved:\", load_score())\n\nelif keeps the chain going. When the kid picks 2, call load_score and print whatever it returns. The function does the open-read-close work; this line just shows the result."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Option 3 — exit with break",
+            "image": "/static/tutorials/steps/pythonSaveYourData_08_handleExit.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonSaveYourData.handleExit",
+                "default": "Type the last branch:\n\n    elif choice == \"3\":\n        break\n\nbreak pops out of the while, just like the chat-bot tutorial. Without it the kid would be stuck in the menu forever. With it, picking 3 ends the program cleanly."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Run — save 100, load it, exit",
+            "image": "/static/tutorials/steps/pythonSaveYourData_09_run.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSaveYourData.run",
-                "default": "Click Run. Type 3 items. Add apple at 10 each, qty 2. Add bread at 30, qty 1. Add milk at 50, qty 1. The terminal prints Items bought: ['apple', 'bread', 'milk'] and Total Bill: 100. The list remembered every name in the order you typed them."
+                "default": "Click Run. The menu shows up. Pick 1, type 100 as the score. The menu shows again. Pick 2 — the terminal prints Saved: 100, the value you just stored. Pick 3 to exit. Now open the folder you picked at the start of this tutorial — score.txt is sitting there as a real file with 100 in it. Run again — pick 2 straight away without saving — the file still has 100 from last time."
             },
             "highlightUI": "pythonRun",
             "clearRuntimeBefore": true,
-            "_sourceCrop": {
-                "x": 1,
-                "y": 90,
-                "zoom": 1.6
-            }
+            "_sourceCrop": {"x": 1, "y": 90, "zoom": 1.6}
         },
         {
-            "title": "What lists let you do",
-            "image": "/static/tutorials/steps/pythonSaveYourData_08_recap.webp",
+            "title": "Six tools, one program",
+            "image": "/static/tutorials/steps/pythonSaveYourData_10_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSaveYourData.recap",
-                "default": "Lists are one of Python's most useful tools. You can store quiz questions, costume names for a sprite, levels in a game, students in a class, even other lists. Coming up you'll learn more list tricks — counting how many things are in it, finding the biggest, sorting them — all built into Python with one short word."
+                "default": "Look at how much you used in one short program: File System mount to pick a real folder, def to make commands, open + write + close to touch a file, while True with break to keep a menu running, input to ask, if-elif to route, return to hand back the saved value. Seven big ideas working together. The same skeleton — menu loop, save and load functions, a file holding state on disk — is how high-score boards, todo apps, chat histories, and game saves all work behind the scenes."
             },
-            "_sourceCrop": {
-                "x": 0,
-                "y": 94,
-                "zoom": 5.3
-            }
+            "_sourceCrop": {"x": 0, "y": 94, "zoom": 5.3}
         }
     ]
 }

@@ -1,0 +1,87 @@
+{
+    "steps": [
+        {
+            "title": "A cleaner way to mix text and values",
+            "image": "/static/tutorials/steps/pythonFstrings_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.intro",
+                "default": "When you mixed text and numbers earlier you used the plus sign to glue them together — and wrapped numbers in str so the plus would behave. It works but gets long fast. Today's tutorial: a cleaner way that's standard Python — the f-string. Real programmers reach for it almost every day."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Set up the values",
+            "image": "/static/tutorials/steps/pythonFstrings_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.setup",
+                "default": "Type three variables:\n\nname = \"Aman\"\nscore = 85\ntotal = 100\n\nA name as text, a score and a total as numbers. The greeting we print will use all three."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The plus-glue way",
+            "image": "/static/tutorials/steps/pythonFstrings_03_plus.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.plus",
+                "default": "Type the long way first, the way you've done before:\n\nprint(\"Hi, \" + name + \"! You scored \" + str(score) + \" out of \" + str(total))\n\nNotice the str around every number — without it, plus would refuse to mix text with numbers. Lots of plus signs, lots of quotes, easy to miss one. It works — it just isn't pretty."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The f-string way",
+            "image": "/static/tutorials/steps/pythonFstrings_04_fstring.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.fstring",
+                "default": "Type the same greeting the new way:\n\nprint(f\"Hi, {name}! You scored {score} out of {total}\")\n\nThe little f right before the opening quote is the magic. Inside the quotes, anywhere you want a variable's value, write its name in curly braces. Python fills in each one for you. Numbers don't need str — Python sorts that out automatically. One sentence, no plus signs, no str."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run both lines",
+            "image": "/static/tutorials/steps/pythonFstrings_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.run",
+                "default": "Click Run. The terminal shows two identical greetings — same words, same numbers — produced two completely different ways. Same output, very different code."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why f-strings win",
+            "image": "/static/tutorials/steps/pythonFstrings_06_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonFstrings.recap",
+                "default": "Real Python programmers use f-strings everywhere — error messages, filenames, log lines, terminal output, web pages. The plus-glue still works, but f-strings read like English: a sentence with the variables sitting in their slots. From here on, prefer f-strings whenever you mix text and values."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

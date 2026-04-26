@@ -2,171 +2,353 @@
     "steps": [
         {
             "title": "A door that opens with a code",
-            "image": "/static/tutorials/steps/doorLockIntro.webp",
+            "image": "/static/tutorials/steps/smartDoorLockIntro.webp",
             "narration": {
                 "id": "gui.tutorials.smartDoorLock.intro",
-                "default": "Hotel rooms, office entrances, even some house front doors — they don't use a metal key any more. Tap the right number on a keypad and the lock clicks open. Today you'll build a tiny version: a 4x4 keypad reads the keys you press, and a servo motor swings the lock open or closed. To keep things simple, pressing 1 unlocks the door and pressing the star key locks it again. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "Hotel rooms, office entrances, gym lockers, smart safes — the metal key is gone. You walk up, tap a code on a keypad, and the lock swings open. Today you'll build a tiny version of that. A keypad to type on, a servo to swing the bolt, and a few lines of code to tie them together. Make sure Arduino Uno is selected and you're in Upload mode, and the Membrane Keypad and Servo Motor extensions are added in Sensor Manager. If you haven't done Blink an LED, Control an LED with a Button, and Move a Servo yet, finish those first — this tutorial builds on all three. Move a Servo also walks you through Sensor Manager if extensions are new to you."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/doorLockSetupLoop.webp",
-            "imageFocus": {"x": 45, "y": 50, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/smartDoorLockSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.smartDoorLock.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You've done this several times now — setup runs once when the program starts; loop runs forever, over and over, while the Arduino has power."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
             "title": "Wire up the keypad",
-            "image": "/static/tutorials/steps/doorLockKeypadInit.webp",
-            "imageFocus": {"x": 48, "y": 45, "zoom": 2.4},
-            "highlightBlock": {"category": "keypad", "blockType": "keypad_keypadInit"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.keypadInit",
-                "default": "A 4x4 keypad has 16 keys arranged as 4 rows and 4 columns. The Arduino scans the rows and columns to figure out which key you pressed — clever, but it needs to know which pins go where. Open the Keypad category and drag a setup keypad block into setup. Leave the type on 4x4. The row pins are 2, 3, 4, 5 and the column pins are 6, 7, 8, 9 — type those in to match the wiring."
+            "image": "/static/tutorials/steps/smartDoorLockSetupKeypad.webp",
+            "highlightBlock": {
+                "category": "keypad",
+                "blockType": "keypad_keypadInit"
             },
-            "validate": true
-        },
-        {
-            "title": "Wake up the servo on pin 10",
-            "image": "/static/tutorials/steps/doorLockServoAttach.webp",
-            "imageFocus": {"x": 48, "y": 52, "zoom": 2.4},
-            "highlightBlock": {"category": "servo", "blockType": "servo_servoAttach"},
             "narration": {
-                "id": "gui.tutorials.smartDoorLock.servoAttach",
-                "default": "Open the Servo category and drag the servo.attach block below the keypad setup. Set its pin to 10. This tells the Arduino which pin the servo is wired to — without it, every later servo command would error out because the Arduino wouldn't know where the motor lives."
+                "id": "gui.tutorials.smartDoorLock.setupKeypad",
+                "default": "Open the Keypad category and drag the setup keypad block into setup. Leave the type on 4 by 4 — four rows of four buttons, sixteen keys in total. Set the row pins to 2, 3, 4, 5 and the column pins to 6, 7, 8, 9. That's eight pins for sixteen keys. Hold on to that thought — we'll see the trick to it in a moment."
             },
-            "validate": true
-        },
-        {
-            "title": "A box for the pressed key",
-            "image": "/static/tutorials/steps/doorLockMakeVar.webp",
-            "imageFocus": {"x": 12, "y": 25, "zoom": 2.6},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.makeVar",
-                "default": "Open Variables and click Make a Variable. Name it key. This will hold whichever key the user just pressed on the keypad."
-            },
-            "validate": true
-        },
-        {
-            "title": "Read the keypad every loop",
-            "image": "/static/tutorials/steps/doorLockReadKey.webp",
-            "imageFocus": {"x": 48, "y": 58, "zoom": 2.6},
-            "highlightBlock": {"category": "keypad", "blockType": "keypad_keypadGetKey"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.readKey",
-                "default": "Drag a set key block into the loop. From the Keypad category, drag the key pressed on keypad reporter and drop it in place of the 0. Now every loop the program asks the keypad: 'which key is being pressed right now?' and stashes the answer in our key variable."
-            },
-            "validate": true
-        },
-        {
-            "title": "Decision time: did they press unlock?",
-            "image": "/static/tutorials/steps/doorLockIfUnlock.webp",
-            "imageFocus": {"x": 45, "y": 65, "zoom": 2.6},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.ifUnlock",
-                "default": "Open Control and drag an if block below the set key block. We'll use it to decide what the lock does when the user presses the unlock key."
-            },
-            "validate": true
-        },
-        {
-            "title": "Compare key to 1",
-            "image": "/static/tutorials/steps/doorLockEqualsOne.webp",
-            "imageFocus": {"x": 45, "y": 60, "zoom": 2.6},
-            "highlightBlock": {"category": "operators", "blockType": "operator_equals"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.equalsOne",
-                "default": "Open Operators and drag an equals block into the if condition slot. Drop the key variable on the left side. Type 1 on the right side. The condition reads: if the user just pressed 1 — unlock the door."
-            },
-            "validate": true
-        },
-        {
-            "title": "Swing the servo open",
-            "image": "/static/tutorials/steps/doorLockServoOpen.webp",
-            "imageFocus": {"x": 45, "y": 70, "zoom": 2.5},
-            "highlightBlock": {"category": "servo", "blockType": "servo_servoWrite"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.servoOpen",
-                "default": "Open the Servo category and drag a servo write block into the if branch. Set pin to 10 and angle to 90. Pressing 1 swings the servo to the 90-degree mark — the bolt slides back and the door is open."
-            },
-            "validate": true
-        },
-        {
-            "title": "Decision two: did they press lock?",
-            "image": "/static/tutorials/steps/doorLockIfLock.webp",
-            "imageFocus": {"x": 42, "y": 78, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.ifLock",
-                "default": "Drag a second if block below the first one. This branch handles locking the door when the user presses the star key."
-            },
-            "validate": true
-        },
-        {
-            "title": "Compare key to *",
-            "image": "/static/tutorials/steps/doorLockEqualsStar.webp",
-            "imageFocus": {"x": 42, "y": 80, "zoom": 2.4},
-            "highlightBlock": {"category": "operators", "blockType": "operator_equals"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.equalsStar",
-                "default": "Drag another equals block into the second if's condition. Put the key variable on the left and type a star character on the right. When the user taps star, the lock should snap shut."
-            },
-            "validate": true
-        },
-        {
-            "title": "Swing the servo closed",
-            "image": "/static/tutorials/steps/doorLockServoClose.webp",
-            "imageFocus": {"x": 42, "y": 82, "zoom": 2.3},
-            "highlightBlock": {"category": "servo", "blockType": "servo_servoWrite"},
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.servoClose",
-                "default": "Drag another servo write block into the second if branch. Keep pin on 10 but set angle to 0 — the servo swings back, the bolt slides into place, and the door is locked again."
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the keypad",
-            "image": "/static/tutorials/steps/doorLockAddKeypad.webp",
-            "imageFocus": {"x": 100, "y": 32, "zoom": 2.3},
-            "highlightUI": "simAddComponent",
-            "narration": {
-                "id": "gui.tutorials.smartDoorLock.addKeypad",
-                "default": "Open the Simulator and click the plus button. Choose Membrane Keypad and click Save. The keypad is wired to rows 2-5 and columns 6-9 just like our code expects."
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 2.6
             }
         },
         {
-            "title": "Add the servo",
-            "image": "/static/tutorials/steps/doorLockAddServo.webp",
-            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "title": "Wake up the servo on pin 10",
+            "image": "/static/tutorials/steps/smartDoorLockServoAttach.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoAttach"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.servoAttach",
+                "default": "Same servo pattern as Move a Servo. Make a variable called servo. Drag a 'set servo to' block below the keypad setup and drop a Servo reporter from the Servo category into the value slot — the reporter creates a new servo and your variable now holds a reference to it. Drag a servo attach block right under and set the pin to 10. Now when we say 'go to ninety degrees' the library knows which pin to drive."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Sixteen buttons — how does it know?",
+            "image": "/static/tutorials/steps/smartDoorLockMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.mystery",
+                "default": "Pause for a moment. Back in the Control an LED with a Button tutorial, one button used one pin. Easy. But this keypad has sixteen buttons and we only gave it eight pins — four rows and four columns. So how does the Arduino know which of the sixteen keys you actually pressed? Hold that question; the next step is the answer."
+            },
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Scanning rows and columns",
+            "image": "/static/tutorials/steps/smartDoorLockReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.reveal",
+                "default": "Here's the trick. The keys sit in a grid — every key is at a place where one row wire crosses one column wire. The Arduino checks the grid thousands of times every second: row by row, column by column, asking 'is anything pressed at this crossing?' If a key is held down, exactly one row and one column light up together — and that pair tells the Arduino which key it was. The keypad library does all that scanning for us. We just ask 'what was pressed?' and we get back a single character."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A box for the pressed key",
+            "image": "/static/tutorials/steps/smartDoorLockMakeKey.webp",
+            "highlightBlock": {
+                "category": "variables",
+                "blockType": "data_variable"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.makeKey",
+                "default": "Open the Variables category and click Make a Variable. Name it key. This is where we'll store whichever key the user just pressed — could be a digit, could be the star, could be nothing at all if no key is held."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 12,
+                "y": 30,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Read the keypad each loop",
+            "image": "/static/tutorials/steps/smartDoorLockReadKey.webp",
+            "highlightBlock": {
+                "category": "keypad",
+                "blockType": "keypad_keypadGetKey"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.readKey",
+                "default": "Drag a set variable block into the loop. Pick key on the dropdown. Then drag the read keypad reporter from the Keypad category and drop it into the value slot. Now every time the loop runs, key gets refreshed with whatever is being pressed right now."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Decide: did they press unlock?",
+            "image": "/static/tutorials/steps/smartDoorLockIfUnlock.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.ifUnlock",
+                "default": "Open Control and drag a plain if block — not if-else this time, just if — into the loop, below the set-key line. We'll fill in the diamond slot with the question 'is the pressed key the unlock key?' in the next two steps."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Compare key to one",
+            "image": "/static/tutorials/steps/smartDoorLockEqualsOne.webp",
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_equals"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.equalsOne",
+                "default": "Open Operators and drag an equals block. Drop it into the diamond slot of the if. On the left side, drop the key variable from Variables. On the right side, type the digit one. The keypad gives us a single character each time, so we're asking: 'is the pressed key the digit one?'"
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "Swing the servo open",
+            "image": "/static/tutorials/steps/smartDoorLockServoOpen.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.servoOpen",
+                "default": "Drag a servo write block into the if branch — the body that runs when the question's answer is yes. Set the pin to 10 and the angle to 90. When the user presses the digit one, the servo swings to ninety degrees — the bolt slides open, the door is unlocked."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "One key, one action",
+            "image": "/static/tutorials/steps/smartDoorLockOneKey.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.oneKey",
+                "default": "Take a moment to look at what you've built. Press the digit one and the door unlocks. Press anything else — two, five, the hash, the star, whatever — and nothing happens. There's no else branch, so the program just keeps reading the keypad. Right now the door has only one rule. Next we'll add a second rule so we can lock it again."
+            },
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "A second decision: lock",
+            "image": "/static/tutorials/steps/smartDoorLockIfLock.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.ifLock",
+                "default": "Drag a second if block into the loop, below the first one. Two ifs in a row means the program checks both questions every loop, one after the other. The first if handles unlocking; this one will handle locking."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Compare key to star",
+            "image": "/static/tutorials/steps/smartDoorLockEqualsStar.webp",
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_equals"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.equalsStar",
+                "default": "Drag another equals block. Drop it into the diamond slot of the second if. Drop the key variable on the left, and on the right type the star. The question reads: 'is the pressed key the star?'"
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Swing the servo closed",
+            "image": "/static/tutorials/steps/smartDoorLockServoClose.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.servoClose",
+                "default": "Drag another servo write block into the second if branch. Keep the pin on 10 and set the angle to 0. When the user presses the star, the servo swings back to zero — the bolt slides closed, the door is locked again. Two keys, two angles, two states: unlocked and locked."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "A small loop pause",
+            "image": "/static/tutorials/steps/smartDoorLockDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.delay",
+                "default": "Drag a delay block to the very bottom of the loop. Set it to 50 milliseconds. Every loop body should end with a small pause — it gives the Arduino breathing room and stops the keypad from registering a single press as dozens of presses in a row."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.7
+            }
+        },
+        {
+            "title": "Add the keypad",
+            "image": "/static/tutorials/steps/smartDoorLockAddKeypad.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.addKeypad",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose Membrane Keypad. The dialog asks for eight pins — four rows and four columns. Set the row pins to 2, 3, 4, 5 and the column pins to 6, 7, 8, 9 — exactly the same numbers you typed into the setup keypad block. Click Save. A virtual 4 by 4 keypad appears next to the Arduino."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 35,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Add the servo on pin 10",
+            "image": "/static/tutorials/steps/smartDoorLockAddServo.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.smartDoorLock.addServo",
-                "default": "Click the plus again and add a Servo Motor on pin 10. The lock motor is now connected."
+                "default": "Click the plus button again, choose Servo, set the pin to 10, click Save. The virtual servo appears — a little arm that swings to whatever angle your code asks for. In a real lock it would be glued to a sliding bolt; in the simulator we just watch the arm move."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 50,
+                "zoom": 2.5
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/doorLockStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4},
+            "image": "/static/tutorials/steps/smartDoorLockStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.smartDoorLock.start",
-                "default": "Click Start. Your program compiles and the keypad starts listening for key presses."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds to build. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Try the lock",
-            "image": "/static/tutorials/steps/doorLockRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "image": "/static/tutorials/steps/smartDoorLockRunning.webp",
+            "highlightUI": "simComp.keypad",
             "narration": {
                 "id": "gui.tutorials.smartDoorLock.running",
-                "default": "Press 1 on the keypad — the servo swings to 90 and the door is unlocked. Press the star key — the servo returns to 0 and the door is locked again. Try this: change 1 to a different unlock key for your own secret combination. Or for a real challenge, only unlock when the user types a multi-digit code in the right order — that's how real keypad locks work."
+                "default": "Click the digit one on the simulated keypad. The servo arm swings to ninety degrees — unlocked. Click the star. The servo swings back to zero — locked. Press any other key and nothing happens, because no if branch matches. You just built a working keypad-controlled lock."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 40,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "A real lock would chain digits",
+            "image": "/static/tutorials/steps/smartDoorLockChainDigits.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.chainDigits",
+                "default": "Real keypad locks don't open on a single digit — they want a sequence, like one-two-three-four. To do that, the program has to remember the last few keys in order and compare the whole sequence to the secret code. That needs a list of values held over time — a tool called an array. We'll meet arrays in a later tutorial; for now, one key opens, one key closes, and that's enough to see the idea."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/smartDoorLockRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.smartDoorLock.recap",
+                "default": "Look at what you just put together. A keypad — sixteen buttons read by only eight pins, thanks to the library scanning rows and columns thousands of times a second. A variable named key that holds whichever character was pressed. The equals block comparing characters to decide what to do. Two ifs in a row, each with its own action. A servo whose angle stands in for two states: zero degrees means locked, ninety means unlocked. Programs that read input, decide, and move something in the world are everywhere — keyless car entry, ATM keypads, smart safes, hotel room doors. You can write them now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInFunctions.intro",
                 "default": "Python comes with dozens of small functions ready to use — no import needed. Today we'll meet the most useful ones for working with lists: sum, max, min, len, sorted, type. They each do one specific job, and together they're enough to write a real little stats program in five lines."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -13,10 +18,15 @@
             "image": "/static/tutorials/steps/pythonBuiltInFunctions_02_list.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInFunctions.list",
-                "default": "Type:\n\nnumbers = [5, 8, 2, 10]\n\nprint(\"Numbers:\", numbers)\n\nThe square brackets create a list with four numbers in it — same kind of list as last tutorial, but pre-filled this time. The first print shows the whole list."
+                "default": "Type:\n\nnumbers = [5, 8, 2, 10]\n\nprint(\"Numbers:\", numbers)\n\nThe square brackets here create a LIST — a single name that holds many values in order. numbers holds five-eight-two-ten as one bundle. Lists are everywhere in Python: shopping items, quiz questions, scores, friend names. The first print shows the whole list."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -48,6 +63,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -59,6 +79,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -80,6 +105,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -95,6 +125,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -102,9 +137,14 @@
             "image": "/static/tutorials/steps/pythonBuiltInFunctions_08_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInFunctions.recap",
-                "default": "Change numbers to your test scores, your daily steps, the number of likes on your last 5 posts. The same six tools work on any list. In the next tutorial, you'll see what happens when these built-ins are paired with another idea — STRINGS — to slice, search, and reshape text."
+                "default": "Change numbers to your test scores, your daily steps, the number of likes on your last 5 posts. The same six tools work on any list. Pair them with strings, files, scores, votes — anywhere you have a bundle of values, these built-ins save you a loop."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

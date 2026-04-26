@@ -4,125 +4,325 @@
             "title": "Touchless hand sanitizer",
             "image": "/static/tutorials/steps/handSanitizerIntro.webp",
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.intro",
-                "default": "You've seen them at hospitals, airports, every shop entrance — wave your hand under a little box and a clean squirt of sanitizer comes out. No buttons to press, no germs to share. Today you'll build that exact thing. An infrared sensor notices a hand and a servo motor gives one squeeze to a sanitizer bottle. In this simulator a PIR motion sensor stands in for the IR proximity sensor; both pulse HIGH when something's in front of them, so the code is identical. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "id": "gui.tutorials.handSanitizer.intro",
+                "default": "Remember those automatic hand sanitizer dispensers that popped up everywhere during COVID? You wave your hand under the nozzle and a squirt of sanitizer lands in your palm — no touching, no pressing, no germs passed between hands. Today you'll build that exact behavior. A sensor watches for a hand. When it sees one, a servo presses the pump. Wave away — pump rests. Make sure Arduino Uno is selected and you're in Upload mode, and the Servo Motor extension is added in Sensor Manager. If you haven't done that yet, finish the Blink an LED tutorial first. If adding extensions is new to you, the Move a Servo tutorial walks you through Sensor Manager."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
+            "title": "The setup-and-loop block",
             "image": "/static/tutorials/steps/handSanitizerSetupLoop.webp",
-            "imageFocus": {"x": 47, "y": 46, "zoom": 2.9},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "id": "gui.tutorials.handSanitizer.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. Setup runs once when the program starts — that's where we'll prepare our pins. Loop runs forever — that's where we'll watch for a hand and press the pump."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Listen on pin 2",
-            "image": "/static/tutorials/steps/handSanitizerPinIr.webp",
-            "imageFocus": {"x": 52, "y": 40, "zoom": 2.9},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.pinIr",
-                "default": "Drag a pinMode block into setup. Set pin to 2 and change the mode to INPUT. The IR sensor (a PIR here) will whisper HIGH on this pin whenever a hand comes close. INPUT means the Arduino is listening, not sending."
+            "title": "Pin 2 listens for the sensor",
+            "image": "/static/tutorials/steps/handSanitizerPinModeSensor.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
-        },
-        {
-            "title": "Decide: squirt or wait?",
-            "image": "/static/tutorials/steps/handSanitizerIfElse.webp",
-            "imageFocus": {"x": 51, "y": 60, "zoom": 2.7},
-            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.ifElse",
-                "default": "Open Control and drag an if / else block into the loop. We'll dispense ONLY when the sensor sees a hand — never randomly."
+                "id": "gui.tutorials.handSanitizer.pinModeSensor",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and mode to input. Pin 2 will listen for the sensor — input means the pin is listening for voltage coming in, not sending it out."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 3.2
+            }
         },
         {
-            "title": "Build the question",
-            "image": "/static/tutorials/steps/handSanitizerCondition.webp",
-            "imageFocus": {"x": 56, "y": 53, "zoom": 2.7},
-            "highlightBlock": {"category": "operators", "blockType": "operator_equals"},
+            "title": "Attach the servo on pin 10",
+            "image": "/static/tutorials/steps/handSanitizerServoAttach.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoAttach"
+            },
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.condition",
-                "default": "Open Operators and drop an equals block into the condition slot. On the left side drop a digitalRead block from Arduino and set its pin to 2. On the right side drop a HIGH reporter from Arduino. The condition now reads: 'is the sensor reporting HIGH?' — which means a hand is present."
+                "id": "gui.tutorials.handSanitizer.servoAttach",
+                "default": "Same pattern as Move a Servo. Make a variable called servo. Drag a 'set servo to' block into setup and drop a Servo reporter from the Servo category into the value slot — the reporter creates a new servo and your variable now holds a reference to it. Drag a servo attach block right under and set the pin to 10. The Arduino now knows a servo lives on pin 10."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 3
+            }
         },
         {
-            "title": "Press the bottle",
+            "title": "How does it sense without touching?",
+            "image": "/static/tutorials/steps/handSanitizerMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.mystery",
+                "default": "Here's the puzzle. The sensor never touches your hand. Your hand never touches the sensor. So how does the program know a hand is there? Buttons need a press. Switches need a flip. This sensor needs neither. Hold that question — we'll answer it on the next slide."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "IR light, just like a TV remote",
+            "image": "/static/tutorials/steps/handSanitizerReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.reveal",
+                "default": "The trick is invisible light. The sensor quietly shines a beam of IR light — light your eyes can't see — out into the air. When nothing is in front of it, the beam just travels off into the room. When a hand gets close, the beam bounces off your skin and comes back to a tiny detector on the sensor. The detector sees the bounce and the sensor flips its output pin to high. Same idea as the television remote in your living room — that little dark window on the front is also IR. Press a button on the remote and IR light flies across the room to your television. Different job, same invisible light."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "We need a decision",
+            "image": "/static/tutorials/steps/handSanitizerIf.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.if",
+                "default": "We want the pump to react when the sensor sees a hand, and stay still when it doesn't. That's an if-block — same one you've seen in Scratch. Open the Control category and drag an if-block into the loop section. Whatever question we put in its diamond slot decides whether the inside runs."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 56,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Drop equals into the diamond slot",
+            "image": "/static/tutorials/steps/handSanitizerDropEquals.webp",
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_equals"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.dropEquals",
+                "default": "Open the Operators category. Drag an equals block. Drop it into the diamond slot of the if. The equals block compares two things; we'll fill in what to compare in the next two steps."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 60,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "Drop digitalRead into the left side",
+            "image": "/static/tutorials/steps/handSanitizerDropRead.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalReadFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.dropRead",
+                "default": "Back in the Arduino category, drag a digitalRead block. Drop it into the left slot of the equals block. Set the pin to 2. digitalRead checks what state pin 2 is in right now and reports back high or low."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 60,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "Drop high into the right side",
+            "image": "/static/tutorials/steps/handSanitizerDropHigh.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_HIGHFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.dropHigh",
+                "default": "Still in the Arduino category, drag a high block. Drop it into the right slot of the equals block. Your question now reads: 'is pin 2 high right now?' When the sensor sees a hand, it sets pin 2 to high — the answer becomes yes, and the if's inside runs."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 60,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "Press the pump",
             "image": "/static/tutorials/steps/handSanitizerPress.webp",
-            "imageFocus": {"x": 55, "y": 58, "zoom": 2.7},
-            "highlightBlock": {"category": "servo", "blockType": "servo_writeFn"},
-            "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.press",
-                "default": "From the Servo category, drag a servo write block into the if branch. Set pin to 9 and angle to 90. A servo is a motor that rotates to a specific angle on command — so 90 means 'turn the arm to the 90-degree mark'. That's the position where it presses the sanitizer pump down."
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.press",
+                "default": "Drag a servo write block into the if branch. Set pin to 10 and angle to 45. When the if's question answers yes — sensor sees a hand — the servo arm swings to 45 degrees, pressing the pump down."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
         },
         {
             "title": "Hold for a full squirt",
             "image": "/static/tutorials/steps/handSanitizerHold.webp",
-            "imageFocus": {"x": 55, "y": 62, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
-            "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.hold",
-                "default": "Below the servo write, drag a delay block. Set it to 1000 milliseconds — a full second. The servo holds the press down long enough for one good squirt. Without this delay, it would lift off before any sanitizer made it out."
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
             },
-            "validate": true
-        },
-        {
-            "title": "Lift back up — ready for the next hand",
-            "image": "/static/tutorials/steps/handSanitizerRelease.webp",
-            "imageFocus": {"x": 55, "y": 68, "zoom": 2.7},
-            "highlightBlock": {"category": "servo", "blockType": "servo_writeFn"},
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.release",
-                "default": "Drag another servo write block below the delay. Keep pin on 9 but change the angle to 0. The servo arm swings back up, off the bottle, ready for the next hand to walk up."
+                "id": "gui.tutorials.handSanitizer.hold",
+                "default": "Drag a delay block right after the servo write, still inside the if. Set it to 500 milliseconds. The servo needs a moment to actually swing all the way down and squeeze a proper squirt out. Without this pause, the next line would run instantly and the pump would barely move."
             },
-            "validate": true
-        },
-        {
-            "title": "Add the IR sensor stand-in",
-            "image": "/static/tutorials/steps/handSanitizerAddIr.webp",
-            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
-            "highlightUI": "simAddComponent",
-            "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.addIr",
-                "default": "Open the Simulator and click the plus button. Choose PIR Motion — it stands in for the IR proximity sensor here because both pulse HIGH when something is in front of them, so our digitalRead block reads them identically. Pick pin 2 and click Save."
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
             }
         },
         {
-            "title": "Add the servo",
-            "image": "/static/tutorials/steps/handSanitizerAddServo.webp",
-            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
+            "title": "Back to rest",
+            "image": "/static/tutorials/steps/handSanitizerRest.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.rest",
+                "default": "Drag a second servo write block into the if branch, below the delay. Pin 10, angle 0. The servo arm swings back up — pump released, ready for the next squirt."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "Wait between squirts",
+            "image": "/static/tutorials/steps/handSanitizerCooldown.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.cooldown",
+                "default": "Drag another delay block, still inside the if, below the second servo write. Set it to 2000 milliseconds — that's two seconds. Imagine someone leaves their hand under the nozzle. Without this pause, the loop would race round and round, firing a hundred squirts a second and emptying the bottle. Two seconds gives the user time to pull their hand away before the next squirt."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "A small pause for the loop",
+            "image": "/static/tutorials/steps/handSanitizerLoopDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.loopDelay",
+                "default": "Drag one more delay block, this time at the very bottom of loop, outside the if. Set it to 50 milliseconds. This is the small heartbeat that keeps the loop tidy — checking the sensor about twenty times a second. Plenty fast for spotting a hand, but not so fast that the program is hammering the sensor pointlessly."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "Add a sensor on pin 2",
+            "image": "/static/tutorials/steps/handSanitizerAddSensor.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.addServo",
-                "default": "Click the plus again and add a Servo Motor on pin 9. The servo is the little motorised arm that pushes the sanitizer pump."
+                "id": "gui.tutorials.handSanitizer.addSensor",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose PIR. We're using the PIR sensor as a stand-in for an IR hand sensor — same idea for the program: pin goes high when something is detected, low when not. Set pin to 2 and click Save."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Add the servo on pin 10",
+            "image": "/static/tutorials/steps/handSanitizerAddServo.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.addServo",
+                "default": "Click the plus button again, choose Servo, set pin to 10, click Save. The virtual servo appears next to the virtual Arduino — wired to the same pin your servo write blocks are commanding."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 45,
+                "zoom": 2.5
             }
         },
         {
             "title": "Click Start",
             "image": "/static/tutorials/steps/handSanitizerStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
             "highlightUI": "simStartButton",
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.start",
-                "default": "Click Start. Your program compiles and the Arduino begins watching for hands."
+                "id": "gui.tutorials.handSanitizer.start",
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
-            "title": "Wave a hand",
+            "title": "Wave a hand!",
             "image": "/static/tutorials/steps/handSanitizerRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "highlightUI": "simComp.pir",
             "narration": {
-                "id": "gui.tutorials.automaticHandSanitizer.running",
-                "default": "Click the sensor in the simulator to trigger a detection. The servo swings to 90, holds for a second, and swings back to 0 — one clean squirt, hands-free. Try this: change the hold delay from 1000 to 2000 for a generous squirt, or change the press angle from 90 to 60 for a smaller dose. Real dispensers are tuned exactly like this for the bottle they're using."
+                "id": "gui.tutorials.handSanitizer.running",
+                "default": "Click the sensor to toggle motion on. Watch the servo arm swing down to forty-five degrees, hold for half a second, swing back to zero, then sit still for two seconds. Click the sensor again to turn motion off. Click it back on and the cycle repeats. You just built a touchless reactive program — the same trick is inside every automatic faucet, every airport hand-dryer, every supermarket sliding door."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 30,
+                "zoom": 2.8
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/handSanitizerRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.handSanitizer.recap",
+                "default": "Look what you just put together. A sensor watches the world and reports back. An if-block decides whether to act. A servo from an earlier tutorial gets reused — no need to re-learn it, just place and command. Two delays shape the timing: one holds the pump down long enough to actually squirt, the other prevents a hundred squirts on a single hand. This trigger-and-actuate pattern — sense something, decide, do something — is the heart of automatic doors, motion lights, alarm systems, traffic sensors, and yes, every touchless dispenser you've ever waved at. You can write them now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

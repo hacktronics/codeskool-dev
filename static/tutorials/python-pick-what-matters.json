@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonPickWhatMatters.intro",
                 "default": "You've passed numbers, strings, even multiple values into functions. Today you'll pass an ENTIRE LIST as a single argument — and the function will loop through it inside. The function picks out only the items that match a rule, and returns how many it found. Combining functions with lists is where Python starts to feel powerful."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -28,6 +38,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonPickWhatMatters.pattern",
                 "default": "This shape — start at zero, loop through, bump up when a condition is true, return the total — is one of the most common patterns in programming. Same shape works for counting words, ticking off completed tasks, scoring a quiz. Once you spot the pattern in your own problem, the code almost writes itself."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -46,6 +61,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -61,6 +81,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -68,9 +93,14 @@
             "image": "/static/tutorials/steps/pythonPickWhatMatters_06_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonPickWhatMatters.recap",
-                "default": "Stretch challenge: change count_big to count_above and add a second parameter — count_above(numbers, threshold) — so you can ask \"how many bigger than 100?\" or \"how many bigger than 0?\" Same pattern, just one extra empty box at the top of the function. You're now writing functions other people would actually use."
+                "default": "Stretch challenge: change count_big to count_above and add a second parameter — count_above(numbers, threshold) — so you can ask \"how many bigger than 100?\" or \"how many bigger than 0?\" Same pattern, just one extra empty box at the top of the function. You're now writing functions other people would actually use — count quiz answers above a passing score, count students taller than 1 metre, count messages longer than 50 letters."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

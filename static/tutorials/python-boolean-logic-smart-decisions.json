@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonBooleanLogic.intro",
                 "default": "Last tutorial, your if checked ONE thing — age >= 10. But real decisions often need more. A theme-park ride might need \"tall enough AND has a ticket\". A free coupon might accept \"adult OR has a voucher\". Today you'll learn the three small words Python uses to combine conditions: and, or, not. Each one is a standard Python keyword."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -17,6 +22,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -34,6 +44,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -48,6 +63,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -57,8 +77,17 @@
                 "id": "gui.tutorials.pythonBooleanLogic.typeNot",
                 "default": "Type next:\n\nif not has_pass:\n    print(\"No pass\")\n\nnot flips the value. If has_pass is True, not has_pass is False. If has_pass is False, not has_pass is True. Right now has_pass is True, so not has_pass is False and nothing prints. Change has_pass to False on line 2 and run again — the line will print."
             },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 11
+            },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -80,6 +109,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -95,6 +129,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -102,9 +141,14 @@
             "image": "/static/tutorials/steps/pythonBooleanLogic_08_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBooleanLogic.recap",
-                "default": "You now have and, or, not. With these three words you can express almost any rule a game or app would need. Games like Rock Paper Scissors — which you'll build in a few tutorials — rely on and chains to figure out who wins. Keep them in your head: and is strict, or is lenient, not flips, parentheses group."
+                "default": "You now have and, or, not. With these three words you can express almost any rule a game or app would need. A Rock Paper Scissors judge uses and chains to spot who wins. A login screen uses and to require both username and password. A discount rule uses or to accept either a coupon or a member card. Keep them in your head: and is strict, or is lenient, not flips, parentheses group."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

@@ -1,0 +1,74 @@
+{
+    "steps": [
+        {
+            "title": "When did this happen?",
+            "image": "/static/tutorials/steps/pythonDateAndTime_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.intro",
+                "default": "Times and dates show up in every app — message timestamps, photo dates, game high-score boards, birthday reminders, expiry warnings. Python has a built-in module called datetime that hands you the current moment and lets you pull out the year, the month, the day, the hour. Same import idea you used for random and math, plus one new shape of import."
+            },
+            "_sourceCrop": {"x": 50, "y": 50, "zoom": 1}
+        },
+        {
+            "title": "A new shape of import",
+            "image": "/static/tutorials/steps/pythonDateAndTime_02_fromImport.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.fromImport",
+                "default": "Type the very first line:\n\nfrom datetime import datetime\n\nUntil now you typed import X. The from version pulls one specific tool out of a module. The first datetime here is the module name; the second is the class inside it. After this line, datetime (the class) is yours to use directly — no need to write datetime.datetime every time."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Get the current moment",
+            "image": "/static/tutorials/steps/pythonDateAndTime_03_getNow.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.getNow",
+                "default": "Leave a blank line, then type:\n\nnow = datetime.now()\n\nprint(\"Right now:\", now)\n\ndatetime.now() asks Python: what is the current date and time, exactly? The answer comes back as a single datetime value and gets stored in now. Printing it shows the date, the time, and a tiny bit of extra precision — all in one go."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Pull out the pieces",
+            "image": "/static/tutorials/steps/pythonDateAndTime_04_parts.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.parts",
+                "default": "Type four more lines to grab individual pieces:\n\nprint(\"Year:\", now.year)\nprint(\"Month:\", now.month)\nprint(\"Day:\", now.day)\nprint(\"Hour:\", now.hour)\n\nThe dot tells Python: take this datetime and grab one of its built-in pieces. now.year, now.month, now.day, now.hour each give back a single number. There's also now.minute, now.second, and now.weekday — try those after you've run this."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Format it nicely with strftime",
+            "image": "/static/tutorials/steps/pythonDateAndTime_05_strftime.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.strftime",
+                "default": "Type the pretty-format lines:\n\npretty = now.strftime(\"%A, %d %B %Y\")\nprint(pretty)\n\nstrftime is how a datetime turns itself into nicely-formatted text. The string with percent codes is the recipe — %A is the full weekday name, %d the day number, %B the full month name, %Y the four-digit year. Whatever you put between the codes — commas, spaces, dashes — gets kept in the output. So today might come out as Saturday, 26 April 2026. Different recipe, different layout."
+            },
+            "validateCode": {"functionName": "print", "lineIndex": 11},
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Run and see today",
+            "image": "/static/tutorials/steps/pythonDateAndTime_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.run",
+                "default": "Click Run. The terminal prints the full timestamp, then the year, month, day, hour each on their own line, then the pretty formatted version at the bottom. Run again in a minute — the hour and minute will have moved forward, the date will look the same. Run again next week — the day will have changed."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {"x": 1, "y": 90, "zoom": 1.6}
+        },
+        {
+            "title": "Where datetime shows up",
+            "image": "/static/tutorials/steps/pythonDateAndTime_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.recap",
+                "default": "datetime is one of the most useful modules in Python. Anywhere your program needs to know WHEN something happened, or stamp a piece of data with the moment — message timestamps, log entries, save-game dates, photo metadata, expiry checks, age-from-birthday calculations — datetime has the tool. The same dot-grab pattern you used for tuple parts works for time pieces too."
+            },
+            "_sourceCrop": {"x": 0, "y": 94, "zoom": 5.3}
+        }
+    ]
+}

@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonNumbers.intro",
                 "default": "Remember from the last tutorial — input always gives back text, even when the kid types digits. Today we'll see why that matters. Your program will ask for an age, add one to it, and predict the kid's next birthday. Adding only works on real numbers — so we need a way to turn \"12\" (text) into 12 (a number) before Python can add anything."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -15,8 +20,17 @@
                 "id": "gui.tutorials.pythonNumbers.typeInput",
                 "default": "On line 1, type: age = int(input(\"How old are you?\")). Read the line from the inside out. The input(\"How old are you?\") bit prints the question and waits — same as last tutorial. Then int(…) wraps around the answer. int is standard Python — it takes text and converts it into a whole number. Without int, age would hold the string \"12\" and we could not add to it."
             },
+            "validateCode": {
+                "functionName": "input",
+                "lineIndex": 0
+            },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -38,6 +52,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -46,6 +65,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonNumbers.strWhy",
                 "default": "Here's the rule: the plus sign adds numbers OR glues text, never a mix. If you write \"You will be \" + 13 + \" next year\", Python stops with an error. Text + text works. Number + number works. Text + number is a mistake Python refuses to guess about. That's why we use str to turn 13 into \"13\" first — now everything is text and plus glues them all."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -61,6 +85,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -68,9 +97,16 @@
             "image": "/static/tutorials/steps/pythonNumbers_06_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonNumbers.recap",
-                "default": "Run it again with different ages. Try 9, try 99, even try 0. Each time the maths on line 2 redoes itself with the new value. What do you think happens if you type \"ten\" (a word instead of digits) when it asks? Try it — int can't turn that into a number, so the program will stop with a type error. That's not a mistake, that's a lesson for the next tutorial."
+                "default": "Run it again with different ages. Try 9, try 99, even try 0. Each time the maths on line 2 redoes itself with the new value. What do you think happens if you type \"ten\" (a word instead of digits) when it asks? Try it — int can't turn that into a number, so the program will stop with a type error. That's not a mistake — it's how Python tells you it needs digits, not words."
             },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

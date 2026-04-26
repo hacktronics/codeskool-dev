@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonTryExcept.intro",
                 "default": "Real users type unexpected things. Real maths sometimes divides by zero. Until now, any error has crashed your program with a red wall of text. Today you'll learn try and except — Python's way of catching errors so the program can recover and keep running. You'll also meet finally, a block that ALWAYS runs, error or not."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -31,6 +41,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -52,6 +67,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -67,6 +87,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -76,7 +101,14 @@
                 "id": "gui.tutorials.pythonTryExcept.runZero",
                 "default": "Run again. Type 10, then 0. The terminal prints Error occurred (the except caught the divide-by-zero) and Done (finally still ran). Without try/except, Python would have crashed loudly. With it, the program handles the problem gracefully and keeps moving."
             },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
@@ -89,7 +121,14 @@
                 "id": "gui.tutorials.pythonTryExcept.runText",
                 "default": "Run once more. Type hello when it asks for a number. int can't convert that — error. Same except catches it, same Error occurred, same Done. One try/except handles many different kinds of failure, all in one neat block."
             },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
             "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
@@ -100,9 +139,14 @@
             "image": "/static/tutorials/steps/pythonTryExcept_08_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTryExcept.recap",
-                "default": "Use try/except whenever the line could fail because of OUTSIDE input — kid's text, files that might not exist, network calls that might time out. Don't use it to hide bugs in YOUR own code — those should be fixed, not silenced. Next coming tutorial: connecting all of this to files, where try/except saves the day every time a file isn't where you expected."
+                "default": "Use try/except whenever the line could fail because of OUTSIDE input — kid's text, files that might not exist, network calls that might time out. Don't use it to hide bugs in YOUR own code — those should be fixed, not silenced. Wrap the int(input(...)) line in any earlier game with try/except and the program stops crashing when the kid types nonsense — that one change makes any program much friendlier."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

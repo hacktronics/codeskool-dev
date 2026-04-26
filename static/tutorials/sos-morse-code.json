@@ -1,107 +1,300 @@
 {
     "steps": [
         {
-            "title": "The most famous three letters in the world",
-            "image": "/static/tutorials/steps/sosIntro.webp",
+            "title": "The most famous three letters",
+            "image": "/static/tutorials/steps/sosMorseCodeIntro.webp",
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.intro",
-                "default": "Long before phones or radios, sailors lost at sea flashed messages with a lamp using a code of dots and dashes — Morse code. The most famous Morse signal of all is SOS: three short flashes, three long flashes, three short flashes. Anyone who saw it knew help was needed. Today you'll teach an LED to send that exact signal. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "S, O, S. Three letters that have saved lives at sea for over 100 years. Lighthouse keepers, sailors lost in storms, mountaineers stuck on a cliff — when they had nothing but a flashlight, they sent these three letters. The light itself was the message. Today you'll teach an LED to blink that exact signal. Before you start, make sure Arduino Uno is selected and you're in Upload mode. If you haven't done the Blink an LED or Button-LED tutorials yet, do those first."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/sosSetupLoop.webp",
-            "imageFocus": {"x": 55, "y": 50, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/sosMorseCodeSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. The setup runs once; the loop will keep sending SOS forever — exactly what a real distress beacon does."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You've seen this before. setup runs once when the program starts. loop runs forever, over and over, while the Arduino has power. Our SOS message will live inside loop, so the Arduino sends the signal again and again."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Tell pin 9 it's an output",
-            "image": "/static/tutorials/steps/sosPinMode.webp",
-            "imageFocus": {"x": 55, "y": 55, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "title": "Pin 9 will be the signal",
+            "image": "/static/tutorials/steps/sosMorseCodePinMode.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.pinMode",
-                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT. The Arduino now knows it'll be sending signals out on pin 9."
+                "default": "Drag a pinMode block into setup. Set pin to 9 and mode to output. Pin 9 is going to send voltage out to an LED — that LED is our signal lamp. output tells the Arduino: this pin will be sending voltage out, not listening for it."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
         },
         {
-            "title": "S — three short dots",
-            "image": "/static/tutorials/steps/sosFirstS.webp",
-            "imageFocus": {"x": 58, "y": 62, "zoom": 2.6},
-            "highlightBlock": {"category": "control", "blockType": "control_repeat"},
+            "title": "How do you say letters with one light?",
+            "image": "/static/tutorials/steps/sosMorseCodeMystery.webp",
             "narration": {
-                "id": "gui.tutorials.sosMorseCode.firstS",
-                "default": "In Morse, S is dot-dot-dot. Open Control and drag a repeat block into the loop. Change the count to 3. Inside the repeat, add: digitalWrite pin 9 HIGH, delay 200, digitalWrite pin 9 LOW, delay 200. A short 200 ms flash is a dot — three of them is the letter S."
+                "id": "gui.tutorials.sosMorseCode.mystery",
+                "default": "Here's the puzzle. A button is just pressed or not pressed. An LED is just on or off. Two states. So how do you spell out a whole letter — never mind a whole alphabet — with one little light that only knows on and off? Sailors had to solve this with nothing but a lantern. The answer is older than computers, and it's beautiful."
             },
-            "validate": true
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
         },
         {
-            "title": "O — three long dashes",
-            "image": "/static/tutorials/steps/sosTheO.webp",
-            "imageFocus": {"x": 58, "y": 70, "zoom": 2.5},
-            "highlightBlock": {"category": "control", "blockType": "control_repeat"},
+            "title": "Morse code, in two seconds",
+            "image": "/static/tutorials/steps/sosMorseCodeReveal.webp",
             "narration": {
-                "id": "gui.tutorials.sosMorseCode.theO",
-                "default": "Now the O — that's dash-dash-dash. A dash is just a longer flash. Drag another repeat (count 3) below the first. Inside, add: digitalWrite pin 9 HIGH, delay 600, digitalWrite pin 9 LOW, delay 200. The 600 ms on-time is three times longer than a dot — that's how you tell the difference."
+                "id": "gui.tutorials.sosMorseCode.reveal",
+                "default": "Morse code. You make patterns out of time. A short blink is called a dot. A long blink is called a dash. Different combinations of dots and dashes spell different letters. The letter S is three short blinks — dot, dot, dot. The letter O is three long blinks — dash, dash, dash. So SOS is dot-dot-dot, dash-dash-dash, dot-dot-dot. We'll use 200 milliseconds for a dot and 600 milliseconds for a dash. Same light, just different lengths of on-time. That's how one LED becomes a whole alphabet."
             },
-            "validate": true
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
         },
         {
-            "title": "S again — three more dots",
-            "image": "/static/tutorials/steps/sosSecondS.webp",
-            "imageFocus": {"x": 55, "y": 78, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_repeat"},
+            "title": "First S — dot one",
+            "image": "/static/tutorials/steps/sosMorseCodeDot1.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dot1",
+                "default": "Time to write the first dot. Drag a digitalWrite block into loop. Set pin to 9 and value to high — that turns the LED on. Below it drag a delay block, set to 200 milliseconds — that's how long the LED stays on for one dot. Then another digitalWrite, pin 9, value low — LED off. Then a delay of 200 milliseconds — the small gap before the next dot. That whole stack is one dot."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "First S — dot two",
+            "image": "/static/tutorials/steps/sosMorseCodeDot2.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dot2",
+                "default": "Add the same four blocks again below the first dot. digitalWrite pin 9 high, delay 200, digitalWrite pin 9 low, delay 200. That's the second dot of S. Notice the rhythm — every dot is the same shape. We could shorten this with a loop later, but for now we're typing out the pattern so you can see it."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "First S — dot three",
+            "image": "/static/tutorials/steps/sosMorseCodeDot3.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dot3",
+                "default": "One more time — the third dot. digitalWrite pin 9 high, delay 200, digitalWrite pin 9 low, delay 200. That completes the letter S. Three short blinks in a row. Now we need a slightly longer silence before the next letter starts."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "A pause between letters",
+            "image": "/static/tutorials/steps/sosMorseCodeLetterGap1.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.letterGap1",
+                "default": "Drag one delay block, set it to 400 milliseconds. Why? In Morse code, the gap between letters has to be longer than the gap between dots inside a letter — otherwise the receiver can't tell where one letter ends and the next begins. 200 inside a letter, 400 between letters. Twice as long. Now the listener knows: the S is finished, something new is coming."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "O — dash one",
+            "image": "/static/tutorials/steps/sosMorseCodeDash1.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dash1",
+                "default": "Now the letter O — three dashes. A dash is the same shape as a dot, just longer. Drag digitalWrite pin 9 high. Then delay 600 milliseconds — that's the dash. Three times longer than a dot, so it looks clearly different to anyone watching. Then digitalWrite pin 9 low. Then delay 200 milliseconds — same small gap as inside the S."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "O — dash two",
+            "image": "/static/tutorials/steps/sosMorseCodeDash2.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dash2",
+                "default": "Same four blocks again — the second dash. digitalWrite pin 9 high, delay 600, digitalWrite pin 9 low, delay 200. The pattern is starting to feel familiar. That's the point — Morse is built from a tiny set of pieces repeated."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 1.7
+            }
+        },
+        {
+            "title": "O — dash three",
+            "image": "/static/tutorials/steps/sosMorseCodeDash3.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.dash3",
+                "default": "Third dash. digitalWrite pin 9 high, delay 600, digitalWrite pin 9 low, delay 200. The letter O is done — three long blinks. Halfway through the SOS message. Now we need another between-letters pause before the second S."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Pause between letters again",
+            "image": "/static/tutorials/steps/sosMorseCodeLetterGap2.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.letterGap2",
+                "default": "Drag another delay block, 400 milliseconds. Same idea as before — the longer gap that says 'a letter just finished'. Without it, the last dash of O would run straight into the first dot of the next S, and a watcher would see one blurry letter instead of two clean ones."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Second S — three more dots",
+            "image": "/static/tutorials/steps/sosMorseCodeSecondS.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.secondS",
-                "default": "One more letter to go. Drag one more repeat (count 3) below. Inside, copy the dot pattern: HIGH, delay 200, LOW, delay 200. That's the third letter — your full message now reads S-O-S."
+                "default": "Time for the closing S. You know the shape now. Drag three more dots, one after the other — each one is digitalWrite pin 9 high, delay 200, digitalWrite pin 9 low, delay 200. Three dots stacked. That finishes the full SOS — dot dot dot, dash dash dash, dot dot dot."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 32,
+                "y": 56,
+                "zoom": 1.5
+            }
         },
         {
             "title": "A long silence between bursts",
-            "image": "/static/tutorials/steps/sosLetterGap.webp",
-            "imageFocus": {"x": 55, "y": 85, "zoom": 2.5},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
-            "narration": {
-                "id": "gui.tutorials.sosMorseCode.letterGap",
-                "default": "Real distress signals send SOS, then pause, then send it again — so anyone tuning in catches the start of the message. Drag a delay block below the last repeat and set it to 2000. Two seconds of silence between each burst."
+            "image": "/static/tutorials/steps/sosMorseCodeLongPause.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.sosMorseCode.longPause",
+                "default": "One last delay — 1500 milliseconds at the very end of loop. That's the long silence between full SOS bursts. Real distress signals repeat over and over, with a noticeable pause between each repetition, so a rescuer scanning the horizon catches the rhythm. Without this pause, loop would slam straight from the last dot back to the first dot, and the message would look like a continuous flicker. The long pause is what makes it readable."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 32,
+                "y": 56,
+                "zoom": 1.5
+            }
         },
         {
-            "title": "Add the LED",
-            "image": "/static/tutorials/steps/sosAddLed.webp",
-            "imageFocus": {"x": 100, "y": 24, "zoom": 2.3},
+            "title": "Add the LED on pin 9",
+            "image": "/static/tutorials/steps/sosMorseCodeAddLed.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.addLed",
-                "default": "Open the Simulator tab and click the plus button. Choose LED, pick pin 9, and click Save."
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose LED. In the pin dialog, pick pin 9 and click Save. The virtual LED appears next to the virtual Arduino — wired to the same pin your code is writing high and low to."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/sosStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "image": "/static/tutorials/steps/sosMorseCodeStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.sosMorseCode.start",
-                "default": "Click Start. Your program compiles and the LED begins signalling."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The signal lamp comes alive."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Read the signal",
-            "image": "/static/tutorials/steps/sosRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "image": "/static/tutorials/steps/sosMorseCodeRecap.webp",
             "narration": {
-                "id": "gui.tutorials.sosMorseCode.running",
-                "default": "Three short blinks, three long blinks, three short blinks, silence — then it repeats. That's SOS, exactly what shipwrecked sailors flashed for over a century. Try this: change the dot delay from 200 to 150 for faster signalling, or push the dash to 800 for a slow heavy rhythm. For a challenge, try coding your own initials — A is dot-dash, B is dash-dot-dot-dot."
+                "id": "gui.tutorials.sosMorseCode.recap",
+                "default": "Watch the LED. Short, short, short — long, long, long — short, short, short. Long pause. And it starts again. That's a ship calling for help. Real distress lamps flash this same pattern for hours, all night, until rescue arrives. Look at what you just learned. A pattern is just data — dots, dashes, and silences arranged in time. Repetition is how short pieces build a long message. And timing is information: the same LED says different things depending on how long you hold it on. The same idea runs every blinking turn signal, every aircraft beacon, every ambulance light. You can write them now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

@@ -2,127 +2,307 @@
     "steps": [
         {
             "title": "Spin a fan with a knob",
-            "image": "/static/tutorials/steps/fanSpeedIntro.webp",
+            "image": "/static/tutorials/steps/fanSpeedControlIntro.webp",
             "narration": {
                 "id": "gui.tutorials.fanSpeedControl.intro",
-                "default": "Every dimmer switch on a wall, every volume knob on a speaker, every fan regulator at home — they all do the same thing: turn a knob and something gets stronger or weaker. Today you'll build that same idea. We're using an LED here to stand in for the fan motor — in real hardware this same PWM signal would drive a transistor that spins the fan. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "Every ceiling fan with a dimmer, every old radio volume knob, every car stereo — they all do the same thing. You twist a knob, and something speeds up or slows down. Today you'll teach an LED to do that. Turn the knob — the light dims and brightens, smooth as a sunrise. Before you start, make sure Arduino Uno is selected and you're in Upload mode. If you haven't done the led-glow-effect tutorial yet, do that one first — you'll need analogWrite and PWM ideas from there."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/fanSpeedSetupLoop.webp",
-            "imageFocus": {"x": 50, "y": 55, "zoom": 3.0},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/fanSpeedControlSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.fanSpeedControl.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You've done this a few times now — setup runs once at the start, loop runs forever. The fan-speed program lives almost entirely inside loop, because we need to keep checking the knob over and over."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Pin 9 needs to be a PWM output",
-            "image": "/static/tutorials/steps/fanSpeedPinMode.webp",
-            "imageFocus": {"x": 55, "y": 50, "zoom": 3.2},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
+            "title": "Pin 9 — a PWM output",
+            "image": "/static/tutorials/steps/fanSpeedControlPinMode.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
             "narration": {
                 "id": "gui.tutorials.fanSpeedControl.pinMode",
-                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT. Pin 9 is a PWM pin — the same kind we used for the breathing LED. PWM lets us send a signal whose strength varies, which is exactly what controls a fan's speed."
+                "default": "Drag a pinMode block into setup. Set pin to 9 and mode to output. Pin 9 is one of the special PWM pins — you saw this in led-glow-effect, the tutorial where the LED breathed in and out. PWM lets a pin be more than just on or off — it can be anywhere in between. That's exactly what we need to make a fan slow, medium, or fast."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
         },
         {
-            "title": "A box for the knob's reading",
-            "image": "/static/tutorials/steps/fanSpeedMakeVar.webp",
-            "imageFocus": {"x": 15, "y": 25, "zoom": 3.0},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.fanSpeedControl.makeVar",
-                "default": "Open Variables and click Make a Variable. Name it value. This will hold whatever number the potentiometer is reporting right now — between 0 (knob fully left) and 1023 (knob fully right)."
+            "title": "A box for the knob",
+            "image": "/static/tutorials/steps/fanSpeedControlMakeKnob.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_variable"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.makeKnob",
+                "default": "Open the Variables category and click Make a Variable. Name it knobValue. A variable is a labelled box that holds a number we can read and change. Each loop, we'll read the knob's position and stash it into knobValue, so the rest of the program has something to work with."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 56,
+                "zoom": 2.4
+            }
         },
         {
             "title": "Read the knob",
-            "image": "/static/tutorials/steps/fanSpeedReadPot.webp",
-            "imageFocus": {"x": 55, "y": 60, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogReadFn"},
-            "narration": {
-                "id": "gui.tutorials.fanSpeedControl.readPot",
-                "default": "Drag a set value block into the loop. For the value, drag an analogRead block from the Arduino category and drop it in place of the 0. Set analogRead's pin to A0 — the potentiometer is wired there. Every loop, value catches the knob's latest position."
+            "image": "/static/tutorials/steps/fanSpeedControlReadKnob.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogReadFn"
             },
-            "validate": true
-        },
-        {
-            "title": "Send the speed to the fan",
-            "image": "/static/tutorials/steps/fanSpeedAnalogWrite.webp",
-            "imageFocus": {"x": 55, "y": 65, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogWriteFn"},
             "narration": {
-                "id": "gui.tutorials.fanSpeedControl.analogWrite",
-                "default": "Drag an analogWrite block below the set value block. Set pin to 9. analogWrite sends a PWM signal — 0 is off, 255 is full power. But there's a problem we need to fix in the next step: the knob gives us 0 to 1023, and analogWrite only understands 0 to 255."
+                "id": "gui.tutorials.fanSpeedControl.readKnob",
+                "default": "Drag a set knobValue block into loop. Drop an analogRead block into its value slot, and set the pin to A0. analogRead is the sensing block we used in night-lamp — it reads a sensor and gives back a number from 0 to 1023. With a knob on A0, all the way left is 0, all the way right is 1023, and every position in between is somewhere in that range."
             },
-            "validate": true
-        },
-        {
-            "title": "map — the range translator",
-            "image": "/static/tutorials/steps/fanSpeedMap.webp",
-            "imageFocus": {"x": 55, "y": 70, "zoom": 2.5},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_mapFn"},
-            "narration": {
-                "id": "gui.tutorials.fanSpeedControl.map",
-                "default": "From the Arduino category, drag a map block and drop it in place of the 0 in analogWrite. map is a tiny translator — give it a number from one range and the matching number in another range pops out. So 0 stays 0, 1023 becomes 255, and 511 (middle of the knob) becomes 127 (half power). It does the maths for you."
-            },
-            "validate": true
-        },
-        {
-            "title": "Plug the knob into the translator",
-            "image": "/static/tutorials/steps/fanSpeedMapValue.webp",
-            "imageFocus": {"x": 55, "y": 65, "zoom": 2.4},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.fanSpeedControl.mapValue",
-                "default": "Open Variables and drag the value reporter into the first slot of the map block. Then set the other slots: from 0 to 1023, to 0 to 255. Reading left to right, the block now says: 'take value, which lives in the 0-1023 range, and translate it into the 0-255 range'. Now the fan's speed tracks the knob perfectly."
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the potentiometer",
-            "image": "/static/tutorials/steps/fanSpeedAddPot.webp",
-            "imageFocus": {"x": 96, "y": 92, "zoom": 4.0},
-            "highlightUI": "simAddComponent",
-            "narration": {
-                "id": "gui.tutorials.fanSpeedControl.addPot",
-                "default": "Open the Simulator and click the plus button. Choose Potentiometer, pick pin A0, and click Save."
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.2
             }
         },
         {
-            "title": "Add the fan (an LED stand-in)",
-            "image": "/static/tutorials/steps/fanSpeedAddLed.webp",
-            "imageFocus": {"x": 96, "y": 92, "zoom": 4.0},
+            "title": "The numbers don't match",
+            "image": "/static/tutorials/steps/fanSpeedControlMismatch.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.mismatch",
+                "default": "Here's a problem. analogRead gives us a number from 0 to 1023. But analogWrite — the block that controls the fan's speed — only accepts 0 to 255. The ranges don't match. If we just feed the knob's number straight into analogWrite, the fan would max out at one quarter of the way through the knob's travel, and stay at full speed for the rest. The knob would feel broken."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Meet map",
+            "image": "/static/tutorials/steps/fanSpeedControlMeetMap.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.meetMap",
+                "default": "There's a block built exactly for this — it's called map. Think of map as a range translator. You hand it a number from one range, and it scales it into a matching number in a different range. With map, 0 stays 0, the top of the input range becomes the top of the output range, and halfway in becomes halfway out. The map block takes five inputs: the number to translate, the lowest input, the highest input, the lowest output, and the highest output."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "A box for the speed",
+            "image": "/static/tutorials/steps/fanSpeedControlMakeSpeed.webp",
+            "highlightBlock": {
+                "category": "data",
+                "blockType": "data_variable"
+            },
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.makeSpeed",
+                "default": "Open Variables again and Make a Variable named fanSpeed. This box will hold the translated number — the version that fits the 0 to 255 range that analogWrite needs. Two variables, two jobs: knobValue holds the raw reading, fanSpeed holds the version we'll send to the fan."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Plug the knob into the translator",
+            "image": "/static/tutorials/steps/fanSpeedControlSetSpeed.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_mapFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.setSpeed",
+                "default": "Drag a set fanSpeed block under the set knobValue line. Drop a map block into its value slot. Drop the knobValue variable into map's first slot. Set the next two slots to 0 and 1023 — that's the input range, what analogRead can give us. Set the last two slots to 0 and 255 — that's the output range, what analogWrite expects. Read it as one sentence: take knobValue from the range zero to one-thousand-twenty-three, and squeeze it into the range zero to two-hundred-fifty-five."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "Send the speed to the fan",
+            "image": "/static/tutorials/steps/fanSpeedControlAnalogWrite.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.analogWrite",
+                "default": "Drag an analogWrite block below the set fanSpeed line. Set the pin to 9 and drop the fanSpeed variable into the value slot. analogWrite is the same block from led-glow-effect — it tells a PWM pin to be partly on. 0 means fully off, 255 means fully on, and every number in between is a different brightness, or in our case, a different fan speed."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "A small pause",
+            "image": "/static/tutorials/steps/fanSpeedControlDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.delay",
+                "default": "Drag a delay block at the bottom of loop. Set it to 250 milliseconds. A loop that runs flat-out with no pause works the Arduino harder than it needs to. 250 milliseconds is fast enough that the fan still feels responsive when you turn the knob, and slow enough that the loop has room to breathe. Every tutorial loop you write should have one of these at the end — it's a habit worth keeping."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Add the potentiometer",
+            "image": "/static/tutorials/steps/fanSpeedControlAddPot.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.addPot",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose Potentiometer. In the pin dialog, choose A0 and click Save. A potentiometer is the proper name for a knob — a turnable dial that gives back a different number depending on where it's pointing. The virtual knob appears in the simulator, wired to the same A0 pin your code is reading."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Add the fan — an LED stand-in",
+            "image": "/static/tutorials/steps/fanSpeedControlAddLed.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.fanSpeedControl.addLed",
-                "default": "Click the plus again and add an LED on pin 9. The LED is standing in for the fan motor here — when the LED brightens, imagine the blades spinning faster. On real hardware the same PWM signal would drive a transistor, and the transistor would spin a real fan."
+                "default": "Click the plus button again, choose LED, set pin to 9, click Save. A real fan would be a motor — but the simulator uses an LED as a stand-in. Brightness will represent speed: dim LED equals slow fan, bright LED equals fast fan. We'll come back to the real-motor story at the end. The code works the same either way."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 3
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/fanSpeedStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.0},
+            "image": "/static/tutorials/steps/fanSpeedControlStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.fanSpeedControl.start",
-                "default": "Click Start. Your program compiles and the Arduino begins reading the knob."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Turn the knob",
-            "image": "/static/tutorials/steps/fanSpeedRunning.webp",
-            "imageFocus": {"x": 100, "y": 35, "zoom": 2.3},
+            "image": "/static/tutorials/steps/fanSpeedControlTurnKnob.webp",
+            "highlightUI": "simComp.potentiometer",
             "narration": {
-                "id": "gui.tutorials.fanSpeedControl.running",
-                "default": "Drag the potentiometer slider in the simulator. The LED's brightness tracks the knob exactly — left is off, right is full bright, middle is half. Try this: change the map's last number from 255 to 127 — your fan now only ever runs at half speed maximum, no matter how far you turn the knob. That's how you'd build a 'silent mode' for a desk fan."
+                "id": "gui.tutorials.fanSpeedControl.turnKnob",
+                "default": "Click and drag the potentiometer in the simulator. Turn it slowly from one end to the other. The LED dims and brightens smoothly with the knob — slow at one end, full bright at the other, every shade in between. That's analogRead reading the knob, map translating the range, and analogWrite setting the brightness — about four times every second."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 18,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Why map matters",
+            "image": "/static/tutorials/steps/fanSpeedControlWhyMap.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.whyMap",
+                "default": "Try a thought experiment. If we'd skipped the map block and sent knobValue straight into analogWrite, what would happen? analogWrite tops out at 255 — feed it a bigger number and the LED just stays at full brightness. So the fan would race up to full speed by the time you'd turned the knob just one quarter of the way, and then stay stuck at full for the other three quarters. The knob would feel broken. map is what makes the whole knob useful."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "The map idea is everywhere",
+            "image": "/static/tutorials/steps/fanSpeedControlEverywhere.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.everywhere",
+                "default": "Once you spot the map pattern, you start seeing it everywhere. A game controller's joystick reports raw numbers — the game maps them into where your character should look. A thermostat reads a temperature sensor and maps it into how hard the fan should blow. A stage light dimmer reads a slider and maps it into bulb brightness. Different sensors, different outputs, same idea — translate one range into another."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Try changing things",
+            "image": "/static/tutorials/steps/fanSpeedControlExperiments.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.experiments",
+                "default": "Try this. Swap the last two map numbers — change 0 and 255 to 255 and 0. Now the knob works backwards: turn it right, the LED dims; turn it left, it brightens. Or change the output range to 0 and 100 — the LED never gets fully bright, no matter how far you turn the knob. Or set the output range to 0 and 50 to make the LED stay very dim. Same five blocks, totally different feel."
+            },
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/fanSpeedControlRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.recap",
+                "default": "Look at what you just built. analogRead reads a knob's position as a number from 0 to 1023. map translates that number into a different range. analogWrite uses PWM to set a pin anywhere between fully off and fully on. Three blocks, working together, turn a knob into a smooth dimmer. Range translation is the secret ingredient of almost every program that talks to a sensor. You'll use map again and again."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "The motor caveat",
+            "image": "/static/tutorials/steps/fanSpeedControlMotorCaveat.webp",
+            "narration": {
+                "id": "gui.tutorials.fanSpeedControl.motorCaveat",
+                "default": "One last thing. A real fan motor pulls more power than an Arduino pin can give it directly — so on a real desk fan, you'd add a small helper chip called a transistor between the pin and the motor. The Arduino tells the transistor what to do, and the transistor handles the heavy lifting. We use an LED here because the simulator can show brightness changing and that's enough to learn the idea. The code you wrote today is identical to the code that would drive a real fan. Same five blocks, same logic — just a different thing on the other end of pin 9."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

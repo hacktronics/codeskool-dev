@@ -1203,6 +1203,17 @@
         "stepsFile": "/static/tutorials/fan-speed-control.json"
     },
 
+    "move-a-servo": {
+        "name": "Move a Servo",
+        "isPremium": true,
+        "description": "Send a servo motor to a specific angle and watch it sweep — 0, 90, 180 degrees on cue",
+        "tags": ["arduino", "hardware", "servo", "motor", "angle", "beginner"],
+        "category": "arduino",
+        "urlId": "move-a-servo",
+        "img": "/static/tutorials/thumbnails/move-a-servo.webp",
+        "stepsFile": "/static/tutorials/move-a-servo.json"
+    },
+
     "automatic-plant-irrigation": {
         "name": "Automatic Plant Irrigation",
         "isPremium": true,
@@ -1428,6 +1439,18 @@
         "stepsFile": "/static/tutorials/python-keep-trying.json"
     },
 
+    "python-break-stop-the-loop": {
+        "name": "Break — Stop the Loop",
+        "isPremium": true,
+        "description": "Pop out of any loop the moment something specific happens — keep going until the kid says stop",
+        "tags": ["python", "loop", "while", "break", "beginner"],
+        "category": "python",
+        "urlId": "python-break-stop-the-loop",
+        "img": "/static/tutorials/thumbnails/python-break-stop-the-loop.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-break-stop-the-loop.json"
+    },
+
     "python-smart-shopping-bill": {
         "name": "Smart Shopping Bill",
         "isPremium": true,
@@ -1450,6 +1473,18 @@
         "img": "/static/tutorials/thumbnails/python-more-items-bigger-bill.webp",
         "requiresEmptyWorkspaceBefore": true,
         "stepsFile": "/static/tutorials/python-more-items-bigger-bill.json"
+    },
+
+    "python-lists-many-things-one-name": {
+        "name": "Lists — Many Things, One Name",
+        "isPremium": true,
+        "description": "One name, many values in order — make a list, count it, grow it, loop through every item",
+        "tags": ["python", "list", "for", "append", "len", "beginner"],
+        "category": "python",
+        "urlId": "python-lists-many-things-one-name",
+        "img": "/static/tutorials/thumbnails/python-lists-many-things-one-name.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-lists-many-things-one-name.json"
     },
 
     "python-built-in-functions-power-tools": {
@@ -1476,16 +1511,28 @@
         "stepsFile": "/static/tutorials/python-strings-control-your-text.json"
     },
 
-    "python-built-in-advanced-extra-power": {
-        "name": "Built-in Advanced — Extra Power",
+    "python-fstrings-cleaner-text": {
+        "name": "F-Strings — Cleaner Text",
         "isPremium": true,
-        "description": "Turn long loops into one clean line with zip, enumerate, map, filter, any, all",
-        "tags": ["python", "builtin", "zip", "enumerate", "map", "filter", "intermediate"],
+        "description": "Drop variables straight into a string with f-quote and curly braces — the way real Python prints",
+        "tags": ["python", "string", "fstring", "format", "print", "beginner"],
         "category": "python",
-        "urlId": "python-built-in-advanced-extra-power",
-        "img": "/static/tutorials/thumbnails/python-built-in-advanced-extra-power.webp",
+        "urlId": "python-fstrings-cleaner-text",
+        "img": "/static/tutorials/thumbnails/python-fstrings-cleaner-text.webp",
         "requiresEmptyWorkspaceBefore": true,
-        "stepsFile": "/static/tutorials/python-built-in-advanced-extra-power.json"
+        "stepsFile": "/static/tutorials/python-fstrings-cleaner-text.json"
+    },
+
+    "python-indexing-and-slicing": {
+        "name": "Reach Inside — Indexing and Slicing",
+        "isPremium": true,
+        "description": "Pull out one item or a chunk by position — works the same way on lists and on text",
+        "tags": ["python", "list", "string", "index", "slice", "beginner"],
+        "category": "python",
+        "urlId": "python-indexing-and-slicing",
+        "img": "/static/tutorials/thumbnails/python-indexing-and-slicing.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-indexing-and-slicing.json"
     },
 
     "python-beat-the-computer": {
@@ -1512,6 +1559,30 @@
         "stepsFile": "/static/tutorials/python-tuples-fixed-together.json"
     },
 
+    "python-math-module-power-tools": {
+        "name": "Math Module",
+        "isPremium": true,
+        "description": "Unlock pi, square root, powers, and rounding with Python's built-in math module",
+        "tags": ["python", "math", "module", "import", "intermediate"],
+        "category": "python",
+        "urlId": "python-math-module-power-tools",
+        "img": "/static/tutorials/thumbnails/python-math-module-power-tools.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-math-module-power-tools.json"
+    },
+
+    "python-date-and-time": {
+        "name": "Date and Time",
+        "isPremium": true,
+        "description": "Get the current date and time with Python's datetime module — pull out the year, month, day, format it nicely",
+        "tags": ["python", "datetime", "module", "import", "format", "intermediate"],
+        "category": "python",
+        "urlId": "python-date-and-time",
+        "img": "/static/tutorials/thumbnails/python-date-and-time.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-date-and-time.json"
+    },
+
     "python-custom-commands": {
         "name": "Create Your Own Commands",
         "isPremium": true,
@@ -1522,30 +1593,6 @@
         "img": "/static/tutorials/thumbnails/python-custom-commands.webp",
         "requiresEmptyWorkspaceBefore": true,
         "stepsFile": "/static/tutorials/python-custom-commands.json"
-    },
-
-    "python-one-command-one-job": {
-        "name": "One Command, One Job",
-        "isPremium": true,
-        "description": "Keep each function focused on a single job — small, clear, reusable",
-        "tags": ["python", "function", "refactor", "reuse", "beginner"],
-        "category": "python",
-        "urlId": "python-one-command-one-job",
-        "img": "/static/tutorials/thumbnails/python-one-command-one-job.webp",
-        "requiresEmptyWorkspaceBefore": true,
-        "stepsFile": "/static/tutorials/python-one-command-one-job.json"
-    },
-
-    "python-connect-your-commands": {
-        "name": "Connect Your Commands",
-        "isPremium": true,
-        "description": "Call one command from inside another — connect small pieces into bigger programs",
-        "tags": ["python", "function", "compose", "reuse", "beginner"],
-        "category": "python",
-        "urlId": "python-connect-your-commands",
-        "img": "/static/tutorials/thumbnails/python-connect-your-commands.webp",
-        "requiresEmptyWorkspaceBefore": true,
-        "stepsFile": "/static/tutorials/python-connect-your-commands.json"
     },
 
     "python-one-command-multiple-answers": {
@@ -1560,6 +1607,30 @@
         "stepsFile": "/static/tutorials/python-one-command-multiple-answers.json"
     },
 
+    "python-connect-your-commands": {
+        "name": "Connect Your Commands",
+        "isPremium": true,
+        "description": "Call one command from inside another — connect small pieces into bigger programs",
+        "tags": ["python", "function", "compose", "reuse", "beginner"],
+        "category": "python",
+        "urlId": "python-connect-your-commands",
+        "img": "/static/tutorials/thumbnails/python-connect-your-commands.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-connect-your-commands.json"
+    },
+
+    "python-one-command-one-job": {
+        "name": "One Command, One Job",
+        "isPremium": true,
+        "description": "Keep each function focused on a single job — small, clear, reusable",
+        "tags": ["python", "function", "refactor", "reuse", "beginner"],
+        "category": "python",
+        "urlId": "python-one-command-one-job",
+        "img": "/static/tutorials/thumbnails/python-one-command-one-job.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-one-command-one-job.json"
+    },
+
     "python-handle-any-number-of-inputs": {
         "name": "Handle Any Number of Inputs",
         "isPremium": true,
@@ -1572,11 +1643,23 @@
         "stepsFile": "/static/tutorials/python-handle-any-number-of-inputs.json"
     },
 
-    "python-pick-what-matters": {
-        "name": "Pick What Matters",
+    "python-built-in-advanced-extra-power": {
+        "name": "Built-in Advanced — Extra Power",
         "isPremium": true,
-        "description": "Pick out the one that matters most — the biggest, the best, the winner",
-        "tags": ["python", "function", "max", "compare", "beginner"],
+        "description": "Turn long loops into one clean line with zip, enumerate, map, filter, any, all",
+        "tags": ["python", "builtin", "zip", "enumerate", "map", "filter", "intermediate"],
+        "category": "python",
+        "urlId": "python-built-in-advanced-extra-power",
+        "img": "/static/tutorials/thumbnails/python-built-in-advanced-extra-power.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-built-in-advanced-extra-power.json"
+    },
+
+    "python-pick-what-matters": {
+        "name": "Count What Matters",
+        "isPremium": true,
+        "description": "Count items in a list that match a rule — bigger than X, longer than Y, that kind of question",
+        "tags": ["python", "function", "count", "filter", "beginner"],
         "category": "python",
         "urlId": "python-pick-what-matters",
         "img": "/static/tutorials/thumbnails/python-pick-what-matters.webp",
@@ -1623,12 +1706,36 @@
     "python-save-your-data": {
         "name": "Save Your Data",
         "isPremium": true,
-        "description": "Save your data to a file so it stays around after your program ends",
-        "tags": ["python", "file", "save", "persistence", "beginner"],
+        "description": "Build a save-and-load app with functions, files, and a menu loop — bring it all together",
+        "tags": ["python", "file", "function", "menu", "while", "break", "capstone"],
         "category": "python",
         "urlId": "python-save-your-data",
         "img": "/static/tutorials/thumbnails/python-save-your-data.webp",
         "requiresEmptyWorkspaceBefore": true,
         "stepsFile": "/static/tutorials/python-save-your-data.json"
+    },
+
+    "python-keep-it-after-restart": {
+        "name": "Keep It After Restart — Files",
+        "isPremium": true,
+        "description": "A cleaner way to handle files using the with keyword — automatic open and close in one block",
+        "tags": ["python", "file", "open", "with", "read", "write", "intermediate"],
+        "category": "python",
+        "urlId": "python-keep-it-after-restart",
+        "img": "/static/tutorials/thumbnails/python-keep-it-after-restart.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-keep-it-after-restart.json"
+    },
+
+    "python-build-a-list-as-you-go": {
+        "name": "Build a List as You Go",
+        "isPremium": true,
+        "description": "Collect items in a list as a loop runs and print them all at the end",
+        "tags": ["python", "list", "append", "loop", "beginner"],
+        "category": "python",
+        "urlId": "python-build-a-list-as-you-go",
+        "img": "/static/tutorials/thumbnails/python-build-a-list-as-you-go.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/python-build-a-list-as-you-go.json"
     }
 }

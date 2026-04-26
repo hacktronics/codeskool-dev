@@ -2,203 +2,421 @@
     "steps": [
         {
             "title": "A thermostat that runs your fan for you",
-            "image": "/static/tutorials/steps/thermostatIntro.webp",
+            "image": "/static/tutorials/steps/smartThermostatIntro.webp",
             "narration": {
                 "id": "gui.tutorials.smartThermostat.intro",
-                "default": "Your fridge has one. Your air-conditioner has one. The geyser in your bathroom has one. A thermostat is just a tiny brain that watches the temperature and switches something on or off to keep things comfortable. Today you'll build that brain. A DHT11 sensor reads the room temperature, an OLED screen shows you the live reading, and an LED stands in for the fan — when the room gets above 28 degrees the fan switches on, and when it cools back down the fan switches off. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "Every air conditioner, every fridge, every electric kettle has the same trick inside: a sensor watches the temperature, and the moment things cross a line, something switches on or off. Too hot? Fan kicks in. Cool enough? Fan stops. Today you'll build that exact brain. A temperature sensor will read the room, an OLED will display the number live, and an LED standing in for a fan will switch on when things heat up. Before you start, make sure Arduino Uno is selected and you're in Upload mode, and the Temp & Humidity (DHT11) and U8g OLED extensions are added in Sensor Manager. If adding extensions is new to you, the Move a Servo tutorial walks you through Sensor Manager."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/thermostatSetupLoop.webp",
-            "imageFocus": {"x": 60, "y": 45, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/smartThermostatSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.smartThermostat.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "You've seen this block plenty of times by now. Open the Arduino category and drag the setup-and-loop block into the workspace. Setup runs once when the program starts. Loop runs forever after that, over and over, while the Arduino has power."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
-            "title": "Pin 9 will drive the fan",
-            "image": "/static/tutorials/steps/thermostatPinFan.webp",
-            "imageFocus": {"x": 63, "y": 40, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.smartThermostat.pinFan",
-                "default": "Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT. Pin 9 will drive the fan — but in our simulator we'll connect an LED there to stand in for the real fan motor."
+            "title": "Pin 9 — the fan",
+            "image": "/static/tutorials/steps/smartThermostatPinModeFan.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
-        },
-        {
-            "title": "Tell the temperature sensor where it lives",
-            "image": "/static/tutorials/steps/thermostatDhtInit.webp",
-            "imageFocus": {"x": 63, "y": 45, "zoom": 2.5},
-            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtInit"},
             "narration": {
-                "id": "gui.tutorials.smartThermostat.dhtInit",
-                "default": "Open the DHT11 category and drag a DHT dht block into setup. Set the pin to 2 and leave the type on DHT11. This block tells the Arduino which temperature sensor it'll be talking to and which wire it lives on."
+                "id": "gui.tutorials.smartThermostat.pinModeFan",
+                "default": "Drag a pinMode block into setup. Set pin to 9 and mode to output. Pin 9 is going to send voltage out to the fan — well, to an LED standing in for the fan. When pin 9 is high the fan runs; when it's low the fan stops."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
         },
         {
-            "title": "Wake up the temperature sensor",
-            "image": "/static/tutorials/steps/thermostatDhtBegin.webp",
-            "imageFocus": {"x": 63, "y": 50, "zoom": 2.5},
-            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtBegin"},
+            "title": "Tell the sensor where it lives",
+            "image": "/static/tutorials/steps/smartThermostatDhtAttach.webp",
+            "highlightBlock": {
+                "category": "dht11",
+                "blockType": "dht11_dhtInit"
+            },
             "narration": {
-                "id": "gui.tutorials.smartThermostat.dhtBegin",
-                "default": "Drag a dht.begin block right after the DHT dht block. Two-step introduction again: the first block named the sensor, this one wakes it up so it's ready to give us readings."
+                "id": "gui.tutorials.smartThermostat.dhtAttach",
+                "default": "Now drag a DHT22 attach block into setup. Set its pin to 2. This tells the sensor library which pin the temperature sensor is wired to, so when we ask for a reading later, it knows where to look. Notice we did not use pinMode this time — the DHT22 library handles all of that for us behind the scenes."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.2
+            }
         },
         {
-            "title": "Wake up the OLED screen",
-            "image": "/static/tutorials/steps/thermostatOledInit.webp",
-            "imageFocus": {"x": 60, "y": 38, "zoom": 2.4},
-            "highlightBlock": {"category": "i2cOled", "blockType": "i2cOled_oledBegin"},
+            "title": "Wait — analogRead gave 0 to 1023?",
+            "image": "/static/tutorials/steps/smartThermostatMystery.webp",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.oledInit",
-                "default": "Open the I2C OLED category and drag the initialize OLED block into setup. Leave the address on 0x3C and the power mode on SSD1306_SWITCHCAPVCC — those are the standard defaults for these tiny screens. An OLED is the same kind of crisp display you'll find in a smartwatch."
+                "id": "gui.tutorials.smartThermostat.mystery",
+                "default": "Think back to the night-lamp tutorial. The LDR returned a number from 0 to 1023 — totally raw, with no units. That number meant nothing on its own; we had to pick a threshold and guess what it stood for. But a thermostat needs degrees. Twenty-five degrees Celsius, thirty degrees Celsius — real numbers a kid in any classroom would recognise. So how on earth do we get from a raw 0-to-1023 reading to actual degrees?"
             },
-            "validate": true
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
         },
         {
-            "title": "A box for the temperature reading",
-            "image": "/static/tutorials/steps/thermostatMakeTemp.webp",
-            "imageFocus": {"x": 12, "y": 30, "zoom": 2.6},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
+            "title": "Smart sensors do the math for you",
+            "image": "/static/tutorials/steps/smartThermostatReveal.webp",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.makeTemp",
-                "default": "Open Variables and click Make a Variable. Name it temp. This will hold the current temperature reading from the sensor — the number we'll show on screen and use to decide whether to switch the fan on."
+                "id": "gui.tutorials.smartThermostat.reveal",
+                "default": "Here's the secret. The DHT22 is not a dumb sensor like the LDR. It is a smart sensor — it has its own tiny brain inside the little case. It measures the temperature, does all the conversion maths internally, and hands your Arduino a number that is already in degrees Celsius. We don't read raw values. We don't pick scaling factors. We just ask the sensor for the temperature and it tells us. That's the whole reveal — some sensors are raw, some are smart, and the DHT22 is the smart kind."
             },
-            "validate": true
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.6
+            }
         },
         {
-            "title": "Read the temperature",
-            "image": "/static/tutorials/steps/thermostatReadTemp.webp",
-            "imageFocus": {"x": 60, "y": 65, "zoom": 2.4},
-            "highlightBlock": {"category": "dht11", "blockType": "dht11_dhtReadTemperature"},
+            "title": "Pick a font for the OLED",
+            "image": "/static/tutorials/steps/smartThermostatOledSetup.webp",
+            "highlightBlock": {
+                "category": "u8gOled",
+                "blockType": "u8gOled_oledSetFont"
+            },
             "narration": {
-                "id": "gui.tutorials.smartThermostat.readTemp",
-                "default": "Drag a set temp block into the loop. From the DHT11 category, drag the dht.readTemperature reporter into the value slot. Every loop now stores the latest temperature in temp."
+                "id": "gui.tutorials.smartThermostat.oledSetup",
+                "default": "Drag a setFont block from the U8g OLED category into setup, below the DHT22 attach. Pick unifont — that's a clean, readable typeface. The OLED is just dots, so to draw letters it needs a font. After this line runs once at startup, every print on the OLED uses that font."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3
+            }
         },
         {
-            "title": "Show the temperature on the OLED",
-            "image": "/static/tutorials/steps/thermostatShowTemp.webp",
-            "imageFocus": {"x": 60, "y": 70, "zoom": 2.2},
-            "highlightBlock": {"category": "i2cOled", "blockType": "i2cOled_oledClear"},
+            "title": "A box for the temperature",
+            "image": "/static/tutorials/steps/smartThermostatMakeVar.webp",
+            "highlightBlock": {
+                "category": "variables",
+                "blockType": "data_variable"
+            },
             "narration": {
-                "id": "gui.tutorials.smartThermostat.showTemp",
-                "default": "Below the set temp block, drop these in order from the I2C OLED category: clear display, set cursor x 0 y 20, set text size to 2, print line — drop the temp variable into the message slot — then update display. The screen wipes, draws the new number large, and pushes the change to the panel. Without update display, your changes wouldn't show — that's the OLED's quirk."
+                "id": "gui.tutorials.smartThermostat.makeVar",
+                "default": "Open the Variables category. Click Make a Variable and call it temp. A variable is a labelled box you can store a number in and read back later. We need one because the temperature is going to be used twice in every loop — once to print on the OLED, and once to compare against our threshold. Reading the sensor twice would be slower and the two readings might even disagree slightly. So we read once, store in temp, and use that one value everywhere."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 30,
+                "y": 50,
+                "zoom": 2.5
+            }
         },
         {
-            "title": "Decide: fan on or fan off?",
-            "image": "/static/tutorials/steps/thermostatIfElse.webp",
-            "imageFocus": {"x": 55, "y": 38, "zoom": 2.5},
-            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
+            "title": "Read the sensor into temp",
+            "image": "/static/tutorials/steps/smartThermostatSetTemp.webp",
+            "highlightBlock": {
+                "category": "variables",
+                "blockType": "data_setvariableto"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.setTemp",
+                "default": "Drag a set variable block into the loop section. Pick temp from its dropdown. Now open the Temp and Humidity category — that's where the DHT blocks live — and drag a DHT22 read temperature block. Drop it into the value slot of the set block. Each time the loop runs, this asks the smart sensor what the temperature is right now, and parks the answer in our temp box."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Start a fresh page",
+            "image": "/static/tutorials/steps/smartThermostatOledClear.webp",
+            "highlightBlock": {
+                "category": "u8gOled",
+                "blockType": "u8gOled_oledFirstPage"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.oledClear",
+                "default": "Drag a firstPage block from the U8g OLED category, just under the set-temp line. The OLED draws to a hidden buffer in chunks called pages. firstPage rewinds to the top of the screen and gets ready for a fresh redraw — without it, every new reading would stack on top of the old one."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Wrap the drawing with a picture loop",
+            "image": "/static/tutorials/steps/smartThermostatOledDisplay.webp",
+            "highlightBlock": {
+                "category": "u8gOled",
+                "blockType": "u8gOled_oledPictureLoop"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.oledDisplay",
+                "default": "Drag a do-while-next-page block under firstPage. This is a special C-shape — anything you drop inside its mouth gets repeated for every page chunk on the screen. firstPage starts the cycle, this picture loop walks through each chunk, and once it finishes the screen actually shows what you drew."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Move the print position to the top",
+            "image": "/static/tutorials/steps/smartThermostatOledSetCursor.webp",
+            "highlightBlock": {
+                "category": "u8gOled",
+                "blockType": "u8gOled_oledSetPrintPos"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.oledSetCursor",
+                "default": "Drag a setPrintPos block INTO the mouth of the picture loop. Set x to 0 and y to 22. That's the top-left, with y measured from the top of the letter down to its baseline — 22 leaves room for the unifont's tall characters. The next print starts right there."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Print the temperature",
+            "image": "/static/tutorials/steps/smartThermostatOledPrint.webp",
+            "highlightBlock": {
+                "category": "u8gOled",
+                "blockType": "u8gOled_oledPrint"
+            },
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.oledPrint",
+                "default": "Drag a print block into the picture loop, just below setPrintPos. In its value slot, build a join: the temp variable joined with the text space-C. Now every loop, the OLED writes something like twenty-five C. firstPage cleared the old reading, picture loop redraws — your display is now a live thermometer."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "When is it too hot?",
+            "image": "/static/tutorials/steps/smartThermostatThreshold.webp",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.threshold",
+                "default": "Time for a decision. We need to pick a threshold — a temperature where the fan switches on. In a real house, comfortable room temperature sits around twenty-two to twenty-four degrees Celsius. Anything above twenty-five starts feeling warm. So twenty-five is our line in the sand. Above twenty-five — fan on. At or below twenty-five — fan off. You can tune that number later for your own taste."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Drag an if-else",
+            "image": "/static/tutorials/steps/smartThermostatIfElse.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if_else"
+            },
             "narration": {
                 "id": "gui.tutorials.smartThermostat.ifElse",
-                "default": "Open Control and drag an if / else block below the OLED blocks. The classic thermostat decision: too hot — fan on; cool enough — fan off."
+                "default": "Open the Control category and drag an if-else block into the loop, below the OLED print. Same block you've used many times now. Whatever question goes in its diamond slot decides which branch runs — the if branch when the answer is yes, the else branch when the answer is no."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.2
+            }
         },
         {
-            "title": "How hot is too hot?",
-            "image": "/static/tutorials/steps/thermostatCondition.webp",
-            "imageFocus": {"x": 55, "y": 38, "zoom": 2.6},
-            "highlightBlock": {"category": "operators", "blockType": "operator_gt"},
-            "narration": {
-                "id": "gui.tutorials.smartThermostat.condition",
-                "default": "Open Operators. Drag a greater-than block into the if / else condition. Drop the temp variable on the left side. Type 28 on the right side. The condition reads: 'if the room is hotter than 28 degrees, run the if branch — otherwise run the else'."
+            "title": "Build the comparison",
+            "image": "/static/tutorials/steps/smartThermostatCompare.webp",
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_gt"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.compare",
+                "default": "Open the Operators category. Drag a greater-than block. Drop it into the diamond slot of the if-else. On the left side of the greater-than, drop in the temp variable from Variables. On the right side, type 25. The question now reads: is temp greater than 25? When the room is warmer than our threshold, the answer is yes."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2.2
+            }
         },
         {
             "title": "Hot — fan on",
-            "image": "/static/tutorials/steps/thermostatFanOn.webp",
-            "imageFocus": {"x": 55, "y": 42, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "image": "/static/tutorials/steps/smartThermostatFanOn.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
             "narration": {
                 "id": "gui.tutorials.smartThermostat.fanOn",
-                "default": "Drag a digitalWrite into the if branch. Set pin to 9 and keep value on HIGH. When temp is above 28, the fan kicks in."
+                "default": "Drag a digitalWrite block into the if branch — the top half of the if-else. Set pin to 9 and value to high. When the answer to is-temp-greater-than-25 is yes, this line runs: pin 9 goes high, the fan switches on."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 56,
+                "zoom": 2.1
+            }
         },
         {
             "title": "Cool — fan off",
-            "image": "/static/tutorials/steps/thermostatFanOff.webp",
-            "imageFocus": {"x": 55, "y": 48, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_digitalWriteFn"},
+            "image": "/static/tutorials/steps/smartThermostatFanOff.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_digitalWriteFn"
+            },
             "narration": {
                 "id": "gui.tutorials.smartThermostat.fanOff",
-                "default": "Drag another digitalWrite into the else branch. Keep pin on 9 but change value to LOW. When the room cools below 28, the fan stops. Real thermostats often add a little buffer here so the fan doesn't twitch on and off at exactly 28 — but our simple version works."
+                "default": "Drag another digitalWrite into the else branch — the bottom half. Pin 9, value low. When the room is at or below twenty-five, this line runs instead: pin 9 goes low, the fan stops. Sense, decide, react — same shape you've seen in night-lamp and button-led, just with degrees instead of light or button-presses."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 2
+            }
         },
         {
             "title": "Wait a second between readings",
-            "image": "/static/tutorials/steps/thermostatDelay.webp",
-            "imageFocus": {"x": 55, "y": 70, "zoom": 2.4},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "image": "/static/tutorials/steps/smartThermostatDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
             "narration": {
                 "id": "gui.tutorials.smartThermostat.delay",
-                "default": "Drag a delay block at the bottom of the loop. Set it to 1000 milliseconds — one second. The DHT11 needs at least that long between readings, so we check the temperature once a second. That's plenty fast — rooms don't change temperature in milliseconds."
+                "default": "Drag a delay block at the very bottom of the loop, after the if-else. Set it to 1000 milliseconds — one full second. Why? The temperature doesn't change quickly. Reading it ten thousand times a second is wasteful and would also flood the OLED with redraws. Once a second is plenty fast for a thermostat, and it gives the Arduino breathing room. Every loop you write should have some delay — never leave a loop running flat out. The blocks are done — let's wire up the simulator."
             },
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.9
+            }
         },
         {
             "title": "Add the temperature sensor",
-            "image": "/static/tutorials/steps/thermostatAddSensor.webp",
-            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
+            "image": "/static/tutorials/steps/smartThermostatAddDht.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.addSensor",
-                "default": "Open the Simulator and click the plus button. Choose DHT22, pick pin 2, and click Save. The simulator part is labelled DHT22 but it responds to our DHT block exactly the same way — it's the close cousin of the DHT11."
+                "id": "gui.tutorials.smartThermostat.addDht",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose DHT22. In the pin dialog, choose pin 2 — that's the pin we told dht22.attach about. Click Save. The virtual sensor appears next to the virtual Arduino, complete with a slider you'll use in a moment to fake a hot day."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
             }
         },
         {
             "title": "Add the OLED display",
-            "image": "/static/tutorials/steps/thermostatAddOled.webp",
-            "imageFocus": {"x": 100, "y": 32, "zoom": 2.3},
+            "image": "/static/tutorials/steps/smartThermostatAddOled.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.smartThermostat.addOled",
-                "default": "Click the plus again and add an OLED 128x64 display. It runs over the I2C bus on SDA pin A4 and SCL pin A5 — same shared bus we used for the LCD in the petrol pump tutorial."
+                "default": "Click the plus button again and choose SSD1306 — that's the chip name for our little OLED screen. The pin dialog will ask for SDA and SCL pins. These are the two wires the screen uses to talk to the Arduino. Set SDA to A4 and SCL to A5 — those are the standard pins on Arduino Uno for this kind of communication. Click Save. The OLED appears, blank and ready."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 2.4
             }
         },
         {
-            "title": "Add the fan (an LED stand-in)",
-            "image": "/static/tutorials/steps/thermostatAddFan.webp",
-            "imageFocus": {"x": 100, "y": 38, "zoom": 2.3},
+            "title": "Add the fan — an LED stand-in on pin 9",
+            "image": "/static/tutorials/steps/smartThermostatAddLed.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.addFan",
-                "default": "Click the plus once more and add an LED on pin 9. The LED stands in for the fan in the simulator — when the LED lights up, imagine the fan blades spinning. On real hardware the same HIGH would switch a relay that powers an actual fan."
+                "id": "gui.tutorials.smartThermostat.addLed",
+                "default": "Click the plus button one more time, choose LED, set pin to 9, click Save. A real fan needs a motor and a driver chip — a bit much for a beginner project. So in the simulator we use an LED to stand in for the fan: when the LED is bright, imagine the fan is spinning. When the LED is dark, the fan is off. The code is identical for a real fan once you add the motor driver."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 45,
+                "zoom": 2.2
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/thermostatStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4},
+            "image": "/static/tutorials/steps/smartThermostatClickStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.start",
-                "default": "Click Start. Your program compiles and the OLED begins showing the live temperature."
+                "id": "gui.tutorials.smartThermostat.clickStart",
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino and the simulator goes live. The OLED lights up with whatever the sensor is reading right now."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Heat the room",
-            "image": "/static/tutorials/steps/thermostatRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.4},
+            "image": "/static/tutorials/steps/smartThermostatHeatRoom.webp",
+            "highlightUI": "simComp.dht22",
             "narration": {
-                "id": "gui.tutorials.smartThermostat.running",
-                "default": "In the simulator, drag the temperature on the DHT22 above 28 degrees — the fan LED lights up. Drag it back below 28 and the LED switches off. Try this: change 28 to your favourite room temperature. Or add a heater LED on pin 8 that turns on when the room is BELOW 18 — now you've built both sides of climate control. That's how a real air-conditioner brain works."
+                "id": "gui.tutorials.smartThermostat.heatRoom",
+                "default": "The DHT22 in the simulator has a temperature slider. Drag it slowly upward. Watch the OLED — the number ticks up live. The moment the slider crosses 25 degrees, the LED turns on. Drag it back down past 25 — the LED clicks off. Sense, decide, react. The thermostat is alive."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Try changing things",
+            "image": "/static/tutorials/steps/smartThermostatExperiments.webp",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.experiments",
+                "default": "Try this. Change the threshold from 25 to 30 — the fan kicks in only when the room gets really hot. Or add a second LED on pin 10 wired to a colder threshold like 18 — now you have a heater that switches on when the room gets cold AND a fan when it gets hot. Two thresholds, two outputs, one sensor. That's a real climate-control loop."
+            },
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/smartThermostatRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.smartThermostat.recap",
+                "default": "You just built a feedback loop — sense, decide, act, wait, repeat. The DHT22 is a smart digital sensor: it does its own measuring and hands you Celsius directly. The OLED is a buffered display: write, then push to screen with display. Threshold comparison is the same shape as the night-lamp and the plant-irrigation tutorials — sensor reads a number, code compares to a line, output reacts. That feedback-loop pattern runs every air conditioner, every fridge, every electric kettle, every greenhouse heater. You named the sensor, set the line, picked the action. The Arduino does it forever."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

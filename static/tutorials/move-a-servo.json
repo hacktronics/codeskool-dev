@@ -1,0 +1,362 @@
+{
+    "steps": [
+        {
+            "title": "A motor that goes to an angle",
+            "image": "/static/tutorials/steps/moveServoIntro.webp",
+            "narration": {
+                "id": "gui.tutorials.moveServo.intro",
+                "default": "Most motors just spin — round and round, as fast as you let them. A servo is different. A servo goes to a specific angle and stays there. Tell it 90 and it goes to 90. Tell it 180 and it swings to 180. Robot arms, the steering on a remote-control car, the eyes and eyebrows on animatronic puppets — those are all servos. Today you'll make one sweep through three positions. And you'll learn something new along the way — the Servo blocks aren't loaded by default, so step one is to add them through Sensor Manager. Once you've done it here, every later tutorial that needs a sensor or a special component will just say 'add this extension' and you'll know exactly what to do. Before you start, make sure Arduino Uno is selected and you're in Upload mode. If you haven't done the earlier Arduino tutorials, finish Blink an LED and Control an LED with a Button first."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Open the Board menu",
+            "image": "/static/tutorials/steps/moveServoBoardMenu.webp",
+            "highlightUI": "boardMenu",
+            "narration": {
+                "id": "gui.tutorials.moveServo.boardMenu",
+                "default": "Before we can drag any servo blocks, we have to add the Servo extension to the toolbox. The toolbox starts with just the core Arduino blocks; sensors and special motors live in their own extensions. Open the Board menu at the top of the screen — it's the menu where you set the board, the upload mode, and any sensors you want to use."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Click Sensor Manager",
+            "image": "/static/tutorials/steps/moveServoSensorManager.webp",
+            "highlightUI": "boardMenu.sensorManager",
+            "narration": {
+                "id": "gui.tutorials.moveServo.sensorManager",
+                "default": "From the Board menu, click Sensor Manager. This is the door to every sensor, motor, display, and special component the Arduino can use. Every time a tutorial says 'add the such-and-such extension', this is where you go. A dialog opens up with a grid of cards."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Switch to the Arduino tab",
+            "image": "/static/tutorials/steps/moveServoArduinoTab.webp",
+            "highlightUI": "sensorTab.editorMode",
+            "narration": {
+                "id": "gui.tutorials.moveServo.arduinoTab",
+                "default": "At the top of the Sensor Manager dialog there are three tabs — Blocks, Arduino, and MicroPython. Click the Arduino tab. That tells Sensor Manager you want the C++ Arduino versions of these extensions. The grid of cards updates to show only the ones that work in Arduino mode."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Pick the Servo Motor card",
+            "image": "/static/tutorials/steps/moveServoPickCard.webp",
+            "highlightUI": "extension.servo",
+            "narration": {
+                "id": "gui.tutorials.moveServo.pickCard",
+                "default": "Find the Servo Motor card in the grid. You can scroll, or type 'servo' in the search box at the top to jump straight to it. Click the card once — a coloured border lights up around it to show it's picked. Picking it doesn't add it yet; that's the next step."
+            },
+            "imageFocus": {
+                "x": 5,
+                "y": 30,
+                "zoom": 2
+            }
+        },
+        {
+            "title": "Click Add Sensor",
+            "image": "/static/tutorials/steps/moveServoAddSensor.webp",
+            "highlightUI": "sensorAddButton",
+            "narration": {
+                "id": "gui.tutorials.moveServo.addSensor",
+                "default": "Click the Add Sensor button at the bottom of the dialog. The dialog closes and a new Servo category shows up in your block toolbox on the left, full of servo-specific blocks ready to drag. From now on, the routine for adding any extension is the same: Board menu, Sensor Manager, Arduino tab, click the card you want, click Add Sensor. Five clicks. Done once, used forever."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/moveServoSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.setupLoop",
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You've seen this before — setup runs once when the program starts, loop runs forever, over and over, while the Arduino has power."
+            },
+            "requiresEmptyWorkspaceBefore": true,
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
+        },
+        {
+            "title": "Tell the servo where it lives",
+            "image": "/static/tutorials/steps/moveServoAttach.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoAttach"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.attach",
+                "default": "Open Variables and click Make a Variable. Call it servo. Drag a 'set servo to' block into setup. Now open the Servo category — this is a new one — and drop a Servo reporter block into the value slot. The Servo reporter creates a new servo behind the scenes; assigning it to your variable means servo now holds a reference to that servo. Drag a servo attach block right under and set the pin to 10. From here on, anything you do to servo goes through pin 10."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.4
+            }
+        },
+        {
+            "title": "How does it know 90 degrees?",
+            "image": "/static/tutorials/steps/moveServoMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.moveServo.mystery",
+                "default": "Pause for a second. A regular motor just spins — you give it power and it goes round. So how do you tell a motor to stop at 90 degrees? Or to swing exactly halfway? Spinning is easy. Stopping at a precise angle and holding there — that's the trick. Inside a servo, something clever is happening. We'll see what in the next step."
+            },
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.4
+            }
+        },
+        {
+            "title": "The Servo library handles it",
+            "image": "/static/tutorials/steps/moveServoReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.moveServo.reveal",
+                "default": "Here's the secret. Inside every servo there's a tiny circuit that listens for very short electrical pulses on its signal wire. The length of each pulse tells the servo what angle to go to. A short pulse means swing one way. A longer pulse means swing the other. The Servo library writes those pulses for us, many times a second, with the exact lengths needed. We never see them. We just say 'go to 90' and the library does the rest. That's why we needed servo attach in setup — that's the library getting ready to do its pulse work."
+            },
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.4
+            }
+        },
+        {
+            "title": "First sweep — to 0",
+            "image": "/static/tutorials/steps/moveServoWrite0.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.write0",
+                "default": "Drag a servo write block into the loop. Set the angle to 0. This is the line that does the work — servo write 0 tells the library to send the pulses for 'go all the way to the 0 degree position'. The servo swings there and holds."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 56,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "A pause to watch it move",
+            "image": "/static/tutorials/steps/moveServoDelay1.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.delay1",
+                "default": "Drag a delay block under the servo write. Set it to 1000 milliseconds — that's one full second. Without this pause, the next servo write line would run instantly and the servo would never have time to actually get to 0. The delay holds the program still while the motor catches up."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 56,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "Sweep to 90",
+            "image": "/static/tutorials/steps/moveServoWrite90.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.write90",
+                "default": "Drag another servo write block below the delay. Set the angle to 90. Halfway. The library now sends a different pulse length, and the servo swings from 0 around to 90 degrees and holds there."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Pause",
+            "image": "/static/tutorials/steps/moveServoDelay2.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.delay2",
+                "default": "Drag another delay of 1000 milliseconds underneath. Same reason — give the servo a second to actually arrive at 90 before we tell it the next angle."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Sweep to 180",
+            "image": "/static/tutorials/steps/moveServoWrite180.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.write180",
+                "default": "Drag a third servo write block. Set the angle to 180. All the way around. The servo swings from 90 to 180 — the maximum a standard servo can do. Most servos cover a 180 degree arc, not a full circle."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.8
+            }
+        },
+        {
+            "title": "Pause",
+            "image": "/static/tutorials/steps/moveServoDelay3.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.delay3",
+                "default": "Drag another 1000 millisecond delay. Same idea — give the servo time to land at 180."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.8
+            }
+        },
+        {
+            "title": "Back to 90",
+            "image": "/static/tutorials/steps/moveServoWriteBack90.webp",
+            "highlightBlock": {
+                "category": "servo",
+                "blockType": "servo_servoWrite"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.writeBack90",
+                "default": "One more servo write — set the angle back to 90. Now the servo swings from 180 back to the middle. When the loop wraps around to the top and runs servo write 0 again, the sweep keeps going forever — 0, 90, 180, 90, 0, 90, 180, 90, on and on."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 34,
+                "y": 56,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Pause to keep the loop calm",
+            "image": "/static/tutorials/steps/moveServoDelay4.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.moveServo.delay4",
+                "default": "Drag a final 1000 millisecond delay at the bottom of the loop. This one matters for a different reason — every loop needs at least a small delay so the Arduino isn't running flat out at full speed for no reason. One second between sweeps gives the motor a moment to settle before the next round starts."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 2.3
+            }
+        },
+        {
+            "title": "Add the servo on pin 10",
+            "image": "/static/tutorials/steps/moveServoAddServo.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.moveServo.addServo",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose Servo. In the pin dialog, set the pin to 10 and click Save. The virtual servo appears next to the virtual Arduino — wired to the same pin your code is talking to."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 18,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Click Start",
+            "image": "/static/tutorials/steps/moveServoStart.webp",
+            "highlightUI": "simStartButton",
+            "narration": {
+                "id": "gui.tutorials.moveServo.start",
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
+            }
+        },
+        {
+            "title": "Watch the sweep",
+            "image": "/static/tutorials/steps/moveServoRunning.webp",
+            "highlightUI": "simComp.servo",
+            "narration": {
+                "id": "gui.tutorials.moveServo.running",
+                "default": "Watch the servo. It swings to 0 — pause. Around to 90 — pause. All the way to 180 — pause. Back to 90 — pause. Then the loop wraps and it starts again at 0. Four numbers in your code, four positions in the real world. The Servo library is doing the pulse work; you're just naming the angles."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 2.8
+            }
+        },
+        {
+            "title": "Try changing things",
+            "image": "/static/tutorials/steps/moveServoExperiments.webp",
+            "narration": {
+                "id": "gui.tutorials.moveServo.experiments",
+                "default": "Try this. Make the delays smaller — 200 milliseconds — and the servo whips between angles fast. Or sweep in smaller steps: 0, 30, 60, 90, 120, 150, 180 — a smoother arc. Even better, add a potentiometer on pin A0, then read the knob with analogRead and use map to turn the 0-to-1023 reading into a 0-to-180 angle. Now the servo follows your knob in real time — same idea you used in Fan Speed Control, but the output is an angle instead of brightness."
+            },
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/moveServoRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.moveServo.recap",
+                "default": "A few minutes ago, telling a motor to stop at exactly 90 degrees sounded impossible. Now you've done it. Here's what you used. The Servo library — a bundle of helper code that handles tricky timing for you, so your program stays simple. servo attach — the line in setup that tells the library which pin the servo is plugged into. servo write — the line that sends the servo to a specific angle and holds it there. And the idea of angle-as-data — a number in your code becomes a real position in the real world. That same trick runs anything with a finger-arm motion: robot grippers, drone wings flexing, the camera gimbals on phones, the little flap inside a 3D printer that switches between filaments. You name an angle, the library handles the pulses, the motor gets there. That's it."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        }
+    ]
+}

@@ -5,7 +5,12 @@
             "image": "/static/tutorials/steps/pythonTuples_01_intro.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTuples.intro",
-                "default": "You've already met tuples — when a function returns multiple values, what comes back is a tuple. Today you'll meet them on their own. A tuple holds a few values together that belong as a unit and shouldn't be changed: an x-y position, the red-green-blue of a colour, a date's day-month-year. Lists grow and shrink; tuples stay fixed."
+                "default": "Sometimes a few values belong as a unit and shouldn't change once set — an x-y position on a stage, the red-green-blue parts of a colour, the day-month-year of a date. Python has a special type for these: a tuple. It looks like a list, but with round brackets instead of square — and once made, you can't add, remove, or change items. Lists grow and shrink; tuples stay fixed."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -31,6 +41,11 @@
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
                 "x": 2,
                 "y": 16,
                 "zoom": 3
@@ -52,6 +67,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -67,6 +87,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -75,6 +100,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonTuples.vsList",
                 "default": "Lists [a, b, c] can grow with append, shrink, and reorder. Tuples (a, b, c) cannot — once made, they're fixed. Use a tuple when the values belong together and shouldn't change as a group. Use a list when you'll be adding or removing items as the program runs. Same indexing, different rules about modification."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -82,9 +112,14 @@
             "image": "/static/tutorials/steps/pythonTuples_07_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTuples.recap",
-                "default": "Use them for coordinates: position = (x, y). RGB colours: (red, green, blue). Dates: (year, month, day). Anything where the count is fixed and changing one piece without the others would be wrong. You'll see tuples come back when we work with dictionaries and when functions return multiple values."
+                "default": "Use them for coordinates: position = (x, y). RGB colours: (red, green, blue). Dates: (year, month, day). Anything where the count is fixed and changing one piece without the others would be wrong. Tuples also let a function hand back more than one value at a time — return (name, score) packs both into one tuple the caller can unpack."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

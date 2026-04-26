@@ -2,149 +2,363 @@
     "steps": [
         {
             "title": "The reverse-parking beep",
-            "image": "/static/tutorials/steps/carParkingIntro.webp",
+            "image": "/static/tutorials/steps/carParkingSensorIntro.webp",
             "narration": {
                 "id": "gui.tutorials.carParkingSensor.intro",
-                "default": "You've heard it from the back of a car — a slow beep when the bumper is far from the wall, faster as it gets close, and one solid tone right before contact. That's an ultrasonic sensor doing maths on the speed of sound. Today you'll build the very same thing. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "You've heard it a hundred times — the beep that starts slow when you back into a parking spot, gets faster as the bumper gets closer to the wall, and turns into one solid scream right before you hit. Today you build that. Three behaviours from one sensor and one buzzer. Make sure Arduino Uno is selected and you're in Upload mode, and the Distance Sensor extension is added in Sensor Manager. If you haven't done the earlier Arduino tutorials, finish Blink an LED and Button and LED first. If adding extensions is new to you, the Move a Servo tutorial walks you through Sensor Manager."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/carParkingSetupLoop.webp",
-            "imageFocus": {"x": 38, "y": 56, "zoom": 2.9},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/carParkingSensorSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.carParkingSensor.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You've done this a few times now — setup runs once at the start, loop runs forever while the Arduino has power. Everything we build today goes inside one of those two slots."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
             "title": "Trig — the pin that shouts",
-            "image": "/static/tutorials/steps/carParkingPinTrig.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.pinTrig",
-                "default": "An ultrasonic sensor works like a bat — it sends a tiny chirp out and listens for the echo. Drag a pinMode block into setup. Set pin to 9 and leave mode on OUTPUT. Pin 9 is the trigger — it sends out the chirp."
+            "image": "/static/tutorials/steps/carParkingSensorTrigPinMode.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
-        },
-        {
-            "title": "Echo — the pin that listens",
-            "image": "/static/tutorials/steps/carParkingPinEcho.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
             "narration": {
-                "id": "gui.tutorials.carParkingSensor.pinEcho",
-                "default": "Drag a second pinMode below. Set pin to 10 and change mode to INPUT. Pin 10 is the echo — it waits for the chirp to bounce back off the wall. The Arduino measures how long that round trip took, and that tells us the distance."
+                "id": "gui.tutorials.carParkingSensor.trigPinMode",
+                "default": "Drag a pinMode block into setup. Set pin to 9 and mode to output. Pin 9 is going to be our trig pin — short for trigger. We'll see what it triggers in just a moment, but the program needs to know up front that pin 9 is going to send something out."
             },
-            "validate": true
-        },
-        {
-            "title": "Buzzer on pin 3",
-            "image": "/static/tutorials/steps/carParkingPinBuzzer.webp",
-            "imageFocus": {"x": 37, "y": 54, "zoom": 2.8},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.pinBuzzer",
-                "default": "Drag one more pinMode below. Set pin to 3 and leave mode on OUTPUT — this pin drives the buzzer that we'll beep at different rhythms."
-            },
-            "validate": true
-        },
-        {
-            "title": "A box for the distance",
-            "image": "/static/tutorials/steps/carParkingMakeVar.webp",
-            "imageFocus": {"x": 12, "y": 22, "zoom": 2.6},
-            "highlightBlock": {"category": "variables", "blockType": "data_variable"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.makeVar",
-                "default": "Open Variables and click Make a Variable. Name it distance. We'll measure how far away the wall is and store the result here so we can decide what kind of beep to make."
-            },
-            "validate": true
-        },
-        {
-            "title": "Measure how far the wall is",
-            "image": "/static/tutorials/steps/carParkingRead.webp",
-            "imageFocus": {"x": 40, "y": 60, "zoom": 2.7},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pulseInFn"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.read",
-                "default": "Drag a set distance block into the loop. From the Arduino category, drop a pulseIn block into its value slot. Set pulseIn's pin to 10 and level to HIGH. pulseIn is a stopwatch — it measures how long pin 10 stays HIGH, which is how long the chirp took to bounce back. Bigger number means farther wall."
-            },
-            "validate": true
-        },
-        {
-            "title": "Far away — slow beep",
-            "image": "/static/tutorials/steps/carParkingFar.webp",
-            "imageFocus": {"x": 40, "y": 65, "zoom": 2.6},
-            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.far",
-                "default": "Drag an if / else block below. In the condition put: distance > 20000 — meaning the echo took a long time, so the wall is far. In the if branch drag a tone block (pin 3, frequency 1000), a delay of 500, a noTone block on pin 3, and one more delay of 500. That's a slow, calm beep — the 'you've got plenty of room' rhythm."
-            },
-            "validate": true
-        },
-        {
-            "title": "Getting closer — fast beep",
-            "image": "/static/tutorials/steps/carParkingMid.webp",
-            "imageFocus": {"x": 42, "y": 75, "zoom": 2.4},
-            "highlightBlock": {"category": "control", "blockType": "control_if_else"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.mid",
-                "default": "Inside the else, add another if / else (this is called nesting — one decision inside another). Condition: distance > 6000 — meaning the wall isn't far, but it isn't right next to the bumper either. In the if branch: tone on pin 3 frequency 1000, delay 200, noTone pin 3, delay 200. The beeps are now twice as fast — your driver should slow down."
-            },
-            "validate": true
-        },
-        {
-            "title": "Too close — solid alarm",
-            "image": "/static/tutorials/steps/carParkingClose.webp",
-            "imageFocus": {"x": 45, "y": 82, "zoom": 2.3},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_tone2Fn"},
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.close",
-                "default": "If neither of the above conditions was true, the wall is REALLY close. In the innermost else, drag a tone block — pin 3, frequency 1000. No delay, no noTone. The buzzer just stays on. That's the panic tone — stop reversing!"
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the distance sensor",
-            "image": "/static/tutorials/steps/carParkingAddSensor.webp",
-            "imageFocus": {"x": 100, "y": 30, "zoom": 2.3},
-            "highlightUI": "simAddComponent",
-            "narration": {
-                "id": "gui.tutorials.carParkingSensor.addSensor",
-                "default": "Open the Simulator and click the plus button. Choose Distance Sensor, set trig to 9 and echo to 10, and click Save."
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
             }
         },
         {
-            "title": "Add the buzzer",
-            "image": "/static/tutorials/steps/carParkingAddBuzzer.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "title": "Echo — the pin that listens",
+            "image": "/static/tutorials/steps/carParkingSensorEchoPinMode.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.echoPinMode",
+                "default": "Drag a second pinMode block. Set pin to 10 and mode to input. Pin 10 is the echo pin — and yes, the names trig and echo are clues. One sends, one listens. Two pins, working as a pair."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "How does the Arduino see distance?",
+            "image": "/static/tutorials/steps/carParkingSensorMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.mystery",
+                "default": "Hold on a second. Your eyes work because light bounces off things and lands in them. But the Arduino has no eyes, no camera, no lens. So how on earth is it about to tell us how far away the wall is? The names trig and echo were the hint. Think for a moment before the next step gives it away."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Sound, like a bat",
+            "image": "/static/tutorials/steps/carParkingSensorReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.reveal",
+                "default": "It uses sound. The trig pin shouts a tiny chirp — too high-pitched for you to hear, but a real chirp. The chirp travels through the air, hits the wall, and bounces back. The echo pin listens for the bounce. The Arduino measures the time between shout and echo, multiplies by the speed of sound, and divides by two — because the chirp went there and back. That's the distance. Bats and dolphins navigate this exact way; we just borrowed their trick."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Buzzer on pin 3",
+            "image": "/static/tutorials/steps/carParkingSensorBuzzerPinMode.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.buzzerPinMode",
+                "default": "Drag a third pinMode block. Set pin to 3 and mode to output. Pin 3 is for the buzzer — that's the part that's actually going to make the beeping noise. Output, because we want to send a signal out to it. Three pinModes total — two for the sensor, one for the buzzer. Setup is done."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "A box for the distance",
+            "image": "/static/tutorials/steps/carParkingSensorMakeVar.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.makeVar",
+                "default": "Open the Variables category and click Make a Variable. Name it distance. A variable is just a labelled box where the program can store a number and read it back later. Each loop, we're going to ask the sensor how far the wall is and stash that number in the distance box. Then the rest of the program reads from the box to decide what to do."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 25,
+                "y": 35,
+                "zoom": 2
+            },
+            "highlightUI": "category.variables"
+        },
+        {
+            "title": "Measure how far the wall is",
+            "image": "/static/tutorials/steps/carParkingSensorReadDistance.webp",
+            "highlightBlock": {
+                "category": "hcSR04",
+                "blockType": "hcSR04_measureDistanceCm"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.readDistance",
+                "default": "First, register the sensor in setup. Make a variable called sensorInit. Drag a 'set sensorInit to' block under the buzzer pinMode and from the Sensors category drop a distance sensor reporter into the value slot — set trig to 9 and echo to 10. The reporter creates a sensor and your variable now holds a reference to it. Now inside loop, drag a set distance to block, and from Sensors drop the measure distance reporter into its value slot, again with trig 9 and echo 10. Every loop the sensor fires a chirp, listens for the echo, and the answer in centimetres lands inside the distance box."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Three ranges, three rhythms",
+            "image": "/static/tutorials/steps/carParkingSensorThreeRanges.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.threeRanges",
+                "default": "Pause. We want three different sounds based on how far the wall is. Far away — beep slowly, plenty of room. Getting closer — beep faster, you should slow down. Too close — solid tone, stop right now. Three ranges of distance, three rhythms. We'll build them with a chain of if-else blocks: ask one question, and if the answer is no, ask the next."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Far away — outer if-else",
+            "image": "/static/tutorials/steps/carParkingSensorSlowBuild.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if_else"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.slowBuild",
+                "default": "Drag an if-else block under the set-distance line. In the diamond, build the question distance greater than 100 — meaning the wall is more than 100 centimetres away. The next step fills in what to do when the answer is yes."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Far away — slow beep",
+            "image": "/static/tutorials/steps/carParkingSensorSlowBody.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_toneFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.slowBody",
+                "default": "In the if branch, drop a tone block on pin 3 at 500 hertz, then a delay of 800 milliseconds, then a noTone block on pin 3, then another delay of 800 milliseconds. Beep — long pause — beep — long pause. That's the relaxed, you've-got-room rhythm."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Getting closer — nested if-else",
+            "image": "/static/tutorials/steps/carParkingSensorFastBuild.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if_else"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.fastBuild",
+                "default": "Inside the else branch of the first if-else, drop another if-else. The new question: distance greater than 30. We already know it's not greater than 100 — that case was handled above — so this catches anywhere from 31 up to 100 centimetres."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Getting closer — fast beep",
+            "image": "/static/tutorials/steps/carParkingSensorFastBody.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_toneFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.fastBody",
+                "default": "In this if half, tone on pin 3 at 800 hertz, delay 200 milliseconds, noTone, delay 200 milliseconds. Same shape as before, just much shorter pauses — that's what makes it sound urgent."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Too close — solid alarm",
+            "image": "/static/tutorials/steps/carParkingSensorCloseBeep.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_toneFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.closeBeep",
+                "default": "In the inner else branch — the one that runs when distance is 30 or less — drop a single tone block on pin 3 at 1500 hertz. No delay, no noTone. The buzzer just holds one continuous high-pitched note. That's the stop right now scream. Three branches, three rhythms: slow beep when far away, fast beep when getting closer, solid tone when too close."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Loop pause",
+            "image": "/static/tutorials/steps/carParkingSensorLoopDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.loopDelay",
+                "default": "At the very bottom of loop — after the if-else chain ends — drag a delay block and set it to 50 milliseconds. Without this, loop would run thousands of times a second, asking the sensor for distance more often than it can answer. 50 milliseconds gives the sensor time to chirp and listen. Twenty distance checks a second is more than enough to feel instant."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 33,
+                "y": 60,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Add the distance sensor",
+            "image": "/static/tutorials/steps/carParkingSensorAddSensor.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.addSensor",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose Distance Sensor. The dialog asks for two pins this time, not one — set trig to 9 and echo to 10, and click Save. The virtual ultrasonic sensor appears, wired up to the same two pins your code is talking to."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 11,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Add the buzzer on pin 3",
+            "image": "/static/tutorials/steps/carParkingSensorAddBuzzer.webp",
             "highlightUI": "simAddComponent",
             "narration": {
                 "id": "gui.tutorials.carParkingSensor.addBuzzer",
-                "default": "Click the plus again and add a Buzzer on pin 3. All three components are now wired."
+                "default": "Click the plus button again, choose Buzzer, set pin to 3, click Save. The virtual buzzer appears next to the sensor — same pin our tone and noTone blocks are sending to. Hardware ready. Code ready. Time to run it."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 3
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/carParkingStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.1},
+            "image": "/static/tutorials/steps/carParkingSensorStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.carParkingSensor.start",
-                "default": "Click Start. Your program compiles and the sensor begins pinging the wall."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds to spin up. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Move the wall",
-            "image": "/static/tutorials/steps/carParkingRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "image": "/static/tutorials/steps/carParkingSensorMoveWall.webp",
+            "highlightUI": "simComp.ultrasonic",
             "narration": {
-                "id": "gui.tutorials.carParkingSensor.running",
-                "default": "Move the distance sensor slider in the simulator. Far away you hear slow beeps, closer they speed up, and right on top of it the buzzer goes solid — exactly like a real reversing car. Try this: tune the 20000 and 6000 numbers to make a more cautious or more relaxed sensor. Or add an LED on pin 7 that lights up only during the panic-tone zone."
+                "id": "gui.tutorials.carParkingSensor.moveWall",
+                "default": "The distance sensor in the simulator has a slider — that's how you pretend a wall is moving closer or further. Slide it all the way out: slow beep, long pauses. Slide it into the middle range: fast beep, short pauses. Slide it close: one solid scream. Three rhythms from one sensor, just by reading distance and choosing a branch."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 35,
+                "zoom": 2.5
+            }
+        },
+        {
+            "title": "Try changing things",
+            "image": "/static/tutorials/steps/carParkingSensorExperiments.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.experiments",
+                "default": "Try this: add an LED on pin 5, give it a pinMode, and turn it on inside the close branch — now you have a buzzer and a warning light when the wall is too near. Or, instead of three fixed branches, use the map block to turn distance into a delay value smoothly — the closer the wall, the shorter the gap between beeps, with no sudden jumps. Same hardware, smarter behaviour."
+            },
+            "imageFocus": {
+                "x": 33,
+                "y": 56,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Where you've already met this",
+            "image": "/static/tutorials/steps/carParkingSensorRealWorld.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.realWorld",
+                "default": "Every modern car with reverse parking sensors does exactly this. So does the touchless soap dispenser, the automatic door at the supermarket, the robot vacuum that doesn't bump into chairs. Sensor checks distance, program decides what to do, output reacts — same shape, different jobs. Once you've built it once, you start spotting it everywhere."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "What you can do now",
+            "image": "/static/tutorials/steps/carParkingSensorRecap.webp",
+            "narration": {
+                "id": "gui.tutorials.carParkingSensor.recap",
+                "default": "Look at what you just learned. Ultrasonic sensing — chirp out, echo in, time-of-flight gives distance. Multi-branch decisions — if-elseif-else lets your program pick from three or more paths instead of just two. Tone variation — same buzzer, different frequencies and different delay rhythms make wildly different sounds. And sound-based sensing — a real, working alternative to eyes that you can program in twenty steps. Every parking sensor on every car on every road runs on this idea. You can build it now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         }
     ]

@@ -6,6 +6,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonCustomCommands.intro",
                 "default": "So far you've used Python's built-in commands — print, input, len. Today you'll teach Python a NEW command that does whatever you want. We call this making a function. In Scratch this is the \"My Blocks\" feature — you make a custom block that does a chunk of work, then drop it anywhere. In Python, the keyword is def."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -20,6 +25,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -28,6 +38,11 @@
             "narration": {
                 "id": "gui.tutorials.pythonCustomCommands.defVsCall",
                 "default": "Defining a function is like writing the recipe down on a card. Nothing gets cooked. To actually run the steps inside, you have to CALL the function — type its name with parentheses on a line, like greet(). The parentheses are how Python knows you want to USE the function, not just point at it."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -46,6 +61,11 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
             }
         },
         {
@@ -61,6 +81,11 @@
                 "x": 1,
                 "y": 90,
                 "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
             }
         },
         {
@@ -68,9 +93,14 @@
             "image": "/static/tutorials/steps/pythonCustomCommands_06_recap.webp",
             "narration": {
                 "id": "gui.tutorials.pythonCustomCommands.recap",
-                "default": "Functions let you NAME a chunk of work. Instead of repeating the same lines, you write them once and reuse the name. Bigger programs are mostly functions calling other functions. In the next tutorial we'll teach functions to ACCEPT information — so the same greet command can say hello to different people."
+                "default": "Functions let you NAME a chunk of work. Instead of repeating the same lines, you write them once and reuse the name. Bigger programs are mostly functions calling other functions. Anywhere you find yourself writing the same lines twice, that's a hint to wrap them in a def and reuse."
             },
             "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3

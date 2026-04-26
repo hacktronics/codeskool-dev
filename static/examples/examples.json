@@ -447,5 +447,14 @@
         "insetIconURL": "arduino",
         "isMemberOnly": true,
         "urlId": "KeypadLocker"
+    },
+    "car-parallax": {
+        "name": "Car Parallax",
+        "description": "Side-scrolling driving game with four parallax background layers. Press SPACE to jump the cones.",
+        "tags": ["games"],
+        "img": "/static/examples/thumbnails/car-parallax.webp",
+        "insetIconURL": "games",
+        "isMemberOnly": true,
+        "urlId": "car-parallax"
     }
 }

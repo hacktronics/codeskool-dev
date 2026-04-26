@@ -2,158 +2,381 @@
     "steps": [
         {
             "title": "A robot that drives itself",
-            "image": "/static/tutorials/steps/lineBotIntro.webp",
+            "image": "/static/tutorials/steps/lineFollowingRobotIntro.webp",
             "narration": {
                 "id": "gui.tutorials.lineFollowingRobot.intro",
-                "default": "Long before self-driving cars, hobbyists were building robots that could follow a black tape line on the floor. Two little eyes look down at the ground, and the robot adjusts its left and right wheels to stay centred on the line. That's exactly what you'll build today. In the simulator we'll use buttons to play the sensors and LEDs to show how fast each motor is turning. Before you start, make sure Arduino Uno is selected and you are in Upload mode. If you have not done that yet, finish the Blink an LED tutorial first."
+                "default": "Picture a little robot, no remote, no driver — just rolling along a black line painted on the floor. It steers around curves, stays on track, and never falls off. Today you'll teach one to do exactly that. Two eyes underneath, two motors, and a handful of decisions in code. Make sure Arduino Uno is selected and you're in Upload mode. If you've finished the earlier tutorials in this series, you've already met every block we'll use today — we're just putting them together in a new shape."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 0,
+                "zoom": 1
             }
         },
         {
-            "title": "Drag the setup / loop block",
-            "image": "/static/tutorials/steps/lineBotSetupLoop.webp",
-            "imageFocus": {"x": 50, "y": 55, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_setup"},
+            "title": "The setup-and-loop block",
+            "image": "/static/tutorials/steps/lineFollowingRobotSetupLoop.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_setup"
+            },
             "narration": {
                 "id": "gui.tutorials.lineFollowingRobot.setupLoop",
-                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace."
+                "default": "Open the Arduino category and drag the setup-and-loop block into the workspace. You know the drill by now — setup runs once when the program starts, loop runs forever after that. Our robot's brain lives inside loop: read the eyes, decide which way to go, drive the motors, repeat — many times every second."
             },
             "requiresEmptyWorkspaceBefore": true,
-            "validate": true
+            "validate": true,
+            "imageFocus": {
+                "x": 42,
+                "y": 55,
+                "zoom": 3.5
+            }
         },
         {
             "title": "The left eye on pin 2",
-            "image": "/static/tutorials/steps/lineBotPinLeftSensor.webp",
-            "imageFocus": {"x": 55, "y": 50, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.pinLeftSensor",
-                "default": "Drag a pinMode block into setup. Set pin to 2 and change mode to INPUT. Pin 2 reads the LEFT IR line sensor — HIGH means it sees the line under it, LOW means it's drifted off the line."
+            "image": "/static/tutorials/steps/lineFollowingRobotPinModeLeftEye.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.pinModeLeftEye",
+                "default": "Drag a pinMode block into setup. Set pin to 2 and mode to input pullup. Pin 2 is the robot's left eye — it'll listen for what the sensor underneath the robot is reporting. input pullup keeps the reading stable, the same way it did for the button in the earlier tutorial."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 3.4
+            }
+        },
+        {
+            "title": "How does it see?",
+            "image": "/static/tutorials/steps/lineFollowingRobotMystery.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.mystery",
+                "default": "Quick puzzle. The robot has no camera. It has no eyeballs. So how does it actually see the line on the floor? It can't take a photo, it can't recognise shapes — and yet somehow it knows which way to turn. Hold that question for a moment. The answer is simpler than you'd guess, and it's coming up next."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.5
+            }
+        },
+        {
+            "title": "Two IR sensors that read brightness",
+            "image": "/static/tutorials/steps/lineFollowingRobotReveal.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.reveal",
+                "default": "Here's the answer. The robot has two tiny IR sensors pointing down at the floor. Each one shines invisible infrared light at the ground and reads how much bounces back. Black floor absorbs the light — almost nothing bounces back, so the sensor reads low. White floor reflects the light — lots bounces back, so the sensor reads high. That's it. No camera, no AI — just two sensors saying bright or dark, many times every second. The Arduino reads those two numbers and decides where to steer."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 30,
+                "zoom": 1.5
+            }
         },
         {
             "title": "The right eye on pin 3",
-            "image": "/static/tutorials/steps/lineBotPinRightSensor.webp",
-            "imageFocus": {"x": 55, "y": 54, "zoom": 2.6},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.pinRightSensor",
-                "default": "Drag another pinMode below. Set pin to 3 and mode to INPUT — that's the RIGHT IR line sensor."
+            "image": "/static/tutorials/steps/lineFollowingRobotPinModeRightEye.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.pinModeRightEye",
+                "default": "Drag another pinMode block below the first. Set pin to 3 and mode to input pullup. Pin 3 is the right eye. Two sensors, two pins — the robot will compare what each one reports and steer based on the difference."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 3.2
+            }
         },
         {
-            "title": "Two motors, two output pins",
-            "image": "/static/tutorials/steps/lineBotPinMotors.webp",
-            "imageFocus": {"x": 55, "y": 60, "zoom": 2.4},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_pinModeFn"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.pinMotors",
-                "default": "Drag two more pinMode blocks. Pin 9 — OUTPUT for the left motor. Pin 10 — OUTPUT for the right motor. Both have to be PWM pins because we want SPEED, not just on or off — analogWrite needs PWM."
+            "title": "Left motor on pin 9",
+            "image": "/static/tutorials/steps/lineFollowingRobotPinModeLeftMotor.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.pinModeLeftMotor",
+                "default": "Drag a third pinMode. Set pin to 9 and mode to output. Pin 9 is the left motor. We picked pin 9 because it's a PWM pin — that lets us control motor speed, not just on or off. You met PWM in the LED glow tutorial; same idea here, but driving a motor instead of fading a light."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 3.2
+            }
+        },
+        {
+            "title": "Right motor on pin 10",
+            "image": "/static/tutorials/steps/lineFollowingRobotPinModeRightMotor.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_pinModeFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.pinModeRightMotor",
+                "default": "One more pinMode. Set pin to 10 and mode to output. Pin 10 is the right motor — also a PWM pin. Two eyes listening on pins 2 and 3, two motors talking on pins 9 and 10. Setup is done."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 55,
+                "zoom": 3.1
+            }
+        },
+        {
+            "title": "Motor stand-ins",
+            "image": "/static/tutorials/steps/lineFollowingRobotMotorStandIns.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.motorStandIns",
+                "default": "A quick heads-up about the simulator. Real motors need a special chip called a motor driver — the Arduino can't power them directly. To keep the focus on the programming and not on wiring chips, the simulator swaps the motors for LEDs. Bright LED means the motor is spinning fast. Dim LED means it's slowing down. Dark LED means the motor is stopped. The code you write today is exactly the same code that would drive a real two-wheeled robot — only the components in the simulator are swapped."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            }
         },
         {
             "title": "Drive straight by default",
-            "image": "/static/tutorials/steps/lineBotBothForward.webp",
-            "imageFocus": {"x": 55, "y": 70, "zoom": 2.2},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_analogWriteFn"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.bothForward",
-                "default": "Drag two analogWrite blocks into the loop. First: pin 9, value 200. Second: pin 10, value 200. Both motors at the same medium speed — the robot drives straight ahead. We'll only slow one motor down when it needs to turn."
+            "image": "/static/tutorials/steps/lineFollowingRobotDriveStraightLeft.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogWriteFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.driveStraightLeft",
+                "default": "Drag an analogWrite block into the top of the loop. Set pin to 9, value to 200. analogWrite sends a number from 0 to 255 — zero is stopped, 255 is full speed. We're picking 200, which is a nice cruising speed. This sets the left motor running every loop, before any decisions get made."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 38,
+                "y": 56,
+                "zoom": 2.6
+            }
         },
         {
-            "title": "Left eye loses the line: turn left",
-            "image": "/static/tutorials/steps/lineBotLeftCheck.webp",
-            "imageFocus": {"x": 55, "y": 75, "zoom": 2.1},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.leftCheck",
-                "default": "Drag an if block below the two analogWrites. In the condition, build digitalRead pin 2 equals LOW — the left eye no longer sees the line. Inside the if, add analogWrite pin 9 value 0 — the left motor stops. With only the right motor running, the robot pivots left, finding its way back onto the line."
+            "title": "Right motor at the same speed",
+            "image": "/static/tutorials/steps/lineFollowingRobotDriveStraightRight.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogWriteFn"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.driveStraightRight",
+                "default": "Drag a second analogWrite right below the first. Pin 10, value 200. Both motors running at speed 200 — left and right matched. When both wheels spin the same speed, the robot rolls straight ahead. Now we'll add the steering logic underneath."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 37,
+                "y": 56,
+                "zoom": 2.4
+            }
         },
         {
-            "title": "Right eye loses the line: turn right",
-            "image": "/static/tutorials/steps/lineBotRightCheck.webp",
-            "imageFocus": {"x": 55, "y": 80, "zoom": 2.0},
-            "highlightBlock": {"category": "control", "blockType": "control_if"},
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.rightCheck",
-                "default": "Drag a second if block below the first. Condition: digitalRead pin 3 equals LOW. Inside: analogWrite pin 10 value 0. Now the right motor stops when the right sensor drifts off the line, steering the robot right. Two simple rules, and the robot can follow any curvy line."
+            "title": "Build the left-eye check",
+            "image": "/static/tutorials/steps/lineFollowingRobotBuildLeftCheck.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
             },
-            "validate": true
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.buildLeftCheck",
+                "default": "Open Control and drag a plain if block below the two analogWrites. Then build its diamond slot the way you've done before — drop an equals block in, put digitalRead pin 2 on the left, and a low block on the right. The question reads: is the left eye seeing the line right now?"
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
         },
         {
-            "title": "Slow the brain down a little",
-            "image": "/static/tutorials/steps/lineBotDelay.webp",
-            "imageFocus": {"x": 55, "y": 88, "zoom": 1.9},
-            "highlightBlock": {"category": "arduino", "blockType": "arduino_delayFn"},
+            "title": "Left eye low means steer left",
+            "image": "/static/tutorials/steps/lineFollowingRobotConceptLeft.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.conceptLeft",
+                "default": "Pause for a moment. If the left eye is reading low, that means it's sitting over the dark line — and the line has drifted to the left side of the robot. So the robot needs to steer left to follow it. We do that by stopping just the left motor; the right motor keeps spinning, and the robot pivots around its left wheel. The next step writes that into code."
+            },
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Stop the left motor to turn left",
+            "image": "/static/tutorials/steps/lineFollowingRobotStopLeftMotor.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.stopLeftMotor",
+                "default": "Drag an analogWrite into the if branch — the slot inside the if block. Pin 9, value 0. That stops the left motor. The right motor is still spinning at 200, so the robot pivots: right wheel pushing forward, left wheel still — the robot rotates to the left, exactly what we want when the left eye spots the line."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 35,
+                "y": 62,
+                "zoom": 1.9
+            }
+        },
+        {
+            "title": "Build the right-eye check",
+            "image": "/static/tutorials/steps/lineFollowingRobotBuildRightCheck.webp",
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.buildRightCheck",
+                "default": "Drag a second if block below the first. Build its diamond the same way — equals, digitalRead pin 3 on the left, low on the right. This question is the mirror image of the left-eye one: is the right eye seeing the line right now?"
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Right eye low means steer right",
+            "image": "/static/tutorials/steps/lineFollowingRobotConceptRight.webp",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.conceptRight",
+                "default": "Same shape as before, mirrored. If the right eye is reading low, the line has drifted to the right side of the robot — so we steer right by stopping the right motor. Left motor keeps spinning, robot pivots around its right wheel. Next step writes that."
+            },
+            "imageFocus": {
+                "x": 36,
+                "y": 56,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Stop the right motor to turn right",
+            "image": "/static/tutorials/steps/lineFollowingRobotStopRightMotor.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_analogWriteFn"
+            },
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.stopRightMotor",
+                "default": "Drag an analogWrite into the second if branch. Pin 10, value 0. Right motor stops, left motor keeps spinning — robot pivots to the right. Two ifs, mirror images of each other. Each loop: drive both motors at 200, then check each eye and stop the matching motor if that eye sees the line. That's the entire steering brain."
+            },
+            "validate": true,
+            "imageFocus": {
+                "x": 32,
+                "y": 68,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "A small pause",
+            "image": "/static/tutorials/steps/lineFollowingRobotDelay.webp",
+            "highlightBlock": {
+                "category": "arduino",
+                "blockType": "arduino_delayFn"
+            },
             "narration": {
                 "id": "gui.tutorials.lineFollowingRobot.delay",
-                "default": "Drag a delay block at the bottom of the loop. Set it to 50 milliseconds. The robot now re-checks the sensors 20 times every second — quick enough to follow tight curves, slow enough that the motors don't twitch."
+                "default": "Drag a delay block at the very bottom of the loop. Set it to 50 milliseconds. That's a tiny pause — twenty times per second, the robot reads the eyes, picks a direction, and adjusts the motors. Fast enough to follow curves, slow enough not to peg the Arduino. Every loop should have at least a small delay."
             },
-            "validate": true
-        },
-        {
-            "title": "Add the left sensor (a button stand-in)",
-            "image": "/static/tutorials/steps/lineBotAddLeftBtn.webp",
-            "imageFocus": {"x": 100, "y": 28, "zoom": 2.3},
-            "highlightUI": "simAddComponent",
-            "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.addLeftBtn",
-                "default": "Open the Simulator and add a Push Button on pin 2 — this stands in for the left IR line sensor. Pressing the button is the same as 'sensor sees the line'."
+            "validate": true,
+            "imageFocus": {
+                "x": 32,
+                "y": 70,
+                "zoom": 1.5
             }
         },
         {
-            "title": "Add the right sensor",
-            "image": "/static/tutorials/steps/lineBotAddRightBtn.webp",
-            "imageFocus": {"x": 100, "y": 32, "zoom": 2.3},
+            "title": "Add the left sensor on pin 2",
+            "image": "/static/tutorials/steps/lineFollowingRobotAddLeftButton.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.addRightBtn",
-                "default": "Add a second Push Button on pin 3 — the right IR line sensor."
+                "id": "gui.tutorials.lineFollowingRobot.addLeftButton",
+                "default": "Open the Simulator tab. Click the plus button at the bottom-right and choose Push Button. Set pin to 2 and click Save. The simulator doesn't have an actual IR sensor component, so we use a push button as a stand-in for the left eye. Pressing the button is the same as the eye seeing the black line — it pulls pin 2 low. Not pressing means the eye is over white floor."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 18,
+                "zoom": 2.4
             }
         },
         {
-            "title": "Add the left motor (an LED stand-in)",
-            "image": "/static/tutorials/steps/lineBotAddLeftMotor.webp",
-            "imageFocus": {"x": 100, "y": 36, "zoom": 2.3},
+            "title": "Add the right sensor on pin 3",
+            "image": "/static/tutorials/steps/lineFollowingRobotAddRightButton.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.addLeftMotor",
-                "default": "Add an LED on pin 9. The brightness of this LED shows how fast the LEFT motor is running — bright means full speed, dim means slowing, dark means stopped."
+                "id": "gui.tutorials.lineFollowingRobot.addRightButton",
+                "default": "Click the plus button again and choose Push Button. Set pin to 3, click Save. That's the right eye — same trick, different pin. Two buttons in the simulator standing in for two IR sensors on the real robot."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 28,
+                "zoom": 2.4
             }
         },
         {
-            "title": "Add the right motor",
-            "image": "/static/tutorials/steps/lineBotAddRightMotor.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.3},
+            "title": "Add the left motor on pin 9",
+            "image": "/static/tutorials/steps/lineFollowingRobotAddLeftLed.webp",
             "highlightUI": "simAddComponent",
             "narration": {
-                "id": "gui.tutorials.lineFollowingRobot.addRightMotor",
-                "default": "Add a second LED on pin 10 — the right motor's speed indicator."
+                "id": "gui.tutorials.lineFollowingRobot.addLeftLed",
+                "default": "Click the plus button and choose LED. Pin 9, Save. This LED is the left motor stand-in. Bright glow means the motor is running at speed 200. Dark means the motor is stopped — robot turning."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 38,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Add the right motor on pin 10",
+            "image": "/static/tutorials/steps/lineFollowingRobotAddRightLed.webp",
+            "highlightUI": "simAddComponent",
+            "narration": {
+                "id": "gui.tutorials.lineFollowingRobot.addRightLed",
+                "default": "One more LED — plus button, choose LED, pin 10, Save. Right motor stand-in. Two buttons for the eyes, two LEDs for the motors. The whole robot is on screen."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 48,
+                "zoom": 2.4
             }
         },
         {
             "title": "Click Start",
-            "image": "/static/tutorials/steps/lineBotStart.webp",
-            "imageFocus": {"x": 78, "y": 7, "zoom": 4.0},
+            "image": "/static/tutorials/steps/lineFollowingRobotStart.webp",
             "highlightUI": "simStartButton",
             "narration": {
                 "id": "gui.tutorials.lineFollowingRobot.start",
-                "default": "Click Start. With no buttons pressed, both LEDs are dim — the robot thinks both sensors have lost the line, so both motors are stopped. Hold both buttons and both LEDs light up — both eyes see the line, and the robot is driving straight."
+                "default": "Click the Start button at the top of the simulator. Your program loads into the virtual Arduino — give it a few seconds. The simulator goes live."
+            },
+            "imageFocus": {
+                "x": 80,
+                "y": 8,
+                "zoom": 4.5
             }
         },
         {
             "title": "Test the steering",
-            "image": "/static/tutorials/steps/lineBotRunning.webp",
-            "imageFocus": {"x": 100, "y": 40, "zoom": 2.2},
+            "image": "/static/tutorials/steps/lineFollowingRobotRunning.webp",
+            "highlightUI": "simComp.button",
             "narration": {
                 "id": "gui.tutorials.lineFollowingRobot.running",
-                "default": "Hold the right button but release the left — the left LED goes dark, only the right 'motor' runs, and on a real robot this would spin the chassis left to find the line again. Try the opposite for a right turn. To build the real thing: a robot chassis with two DC motors, two IR line sensors on pins 2 and 3 pointing at the floor, and a roll of black electrical tape on a white surface."
+                "default": "Press neither button. Both LEDs glow at the same brightness — the robot is driving straight. Now press and hold the left button. The left LED goes dark while the right one stays glowing — the left motor stopped, the right motor kept spinning, so the robot is turning left. Let go, press the right button — right LED goes dark, robot turns right. You just built a line follower. Real robots scale this up — a third eye in the centre for sharper turns, a camera to spot intersections, a distance sensor to brake before obstacles. The same shape every time: sense, decide, drive. Five minutes ago you saw a black line on a floor and wondered how a robot could possibly follow it. Now you've written the brain that does it. Two sensors, two motors, two if blocks, and one delay — that's a self-driving robot."
+            },
+            "imageFocus": {
+                "x": 100,
+                "y": 33,
+                "zoom": 1.9
             }
         }
     ]
