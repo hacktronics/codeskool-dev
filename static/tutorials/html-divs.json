@@ -1,0 +1,97 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlDivsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.dragHtml",
+                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlDivsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.dragHead",
+                "default": "Snap the head block under html. The head holds info about your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlDivsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.dragBody",
+                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Drag a Div Block",
+            "image": "/static/tutorials/steps/htmlDivsDiv.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.dragDiv",
+                "default": "Drag the div block inside the body. A div is a generic container — it groups things together."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_div"},
+            "validate": true
+        },
+        {
+            "title": "Give the Div a Class Name",
+            "image": "/static/tutorials/steps/htmlDivsClass.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.setClass",
+                "default": "Click the class field on the div. Replace the text with profile-card. The class is a label — we'll use it soon to style this div with CSS."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_div"}
+        },
+        {
+            "title": "Add a Heading Inside",
+            "image": "/static/tutorials/steps/htmlDivsHeading.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.heading",
+                "default": "Drag a heading inside the div. Set the level to 2 and type Alex."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Add a Paragraph Inside",
+            "image": "/static/tutorials/steps/htmlDivsParagraph.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.paragraph",
+                "default": "Drag a paragraph below the heading, still inside the div. Type I love adventures and exploring."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+        },
+        {
+            "title": "See the Page",
+            "image": "/static/tutorials/steps/htmlDivsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.viewTab",
+                "default": "Click the View tab. The div itself is invisible — it's just a wrapper. The class name is waiting for CSS to make it stand out."
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Divs Group, Classes Label",
+            "image": "/static/tutorials/steps/htmlDivsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlDivs.recap",
+                "default": "A div groups elements together. The class is a name we attach to a div so CSS can find it later and change how it looks."
+            }
+        }
+    ]
+}

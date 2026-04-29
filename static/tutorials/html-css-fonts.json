@@ -1,0 +1,117 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlCssFontsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.dragHtml",
+                "default": "Start with the html block."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlCssFontsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlCssFontsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Paragraph",
+            "image": "/static/tutorials/steps/htmlCssFontsP.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.paragraph",
+                "default": "Drag a paragraph inside the body. Type This text will look fancy. We'll style it next."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlCssFontsStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.style",
+                "default": "Drag the style block inside the head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_style"},
+            "validate": true
+        },
+        {
+            "title": "Pick the Paragraph",
+            "image": "/static/tutorials/steps/htmlCssFontsSelector.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.selector",
+                "default": "Drag a selector inside the style. Replace the selector text with p — this picks every paragraph."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Make the Text Bigger",
+            "image": "/static/tutorials/steps/htmlCssFontsSize.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.size",
+                "default": "Drag a font-size block inside the selector. Replace 16 pixels with 24 pixels. Bigger numbers mean bigger text."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_font_size"}
+        },
+        {
+            "title": "Centre the Text",
+            "image": "/static/tutorials/steps/htmlCssFontsAlign.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.align",
+                "default": "Drag a text-align block inside the selector below font-size. Pick center from the dropdown. The text now sits in the middle of the page."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_text_align"}
+        },
+        {
+            "title": "Change the Font",
+            "image": "/static/tutorials/steps/htmlCssFontsFamily.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.family",
+                "default": "Drag a font block inside the selector. Pick family from the property dropdown and type Arial in the value field."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_font"}
+        },
+        {
+            "title": "See Your Styled Text",
+            "image": "/static/tutorials/steps/htmlCssFontsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.viewTab",
+                "default": "Click the View tab. Is the text bigger, centred, and in Arial font?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Three Ways to Style Text",
+            "image": "/static/tutorials/steps/htmlCssFontsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFonts.recap",
+                "default": "Font-size sets how big the text looks. Text-align sets where it sits. Font family sets which letters it uses."
+            }
+        }
+    ]
+}

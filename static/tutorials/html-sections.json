@@ -1,0 +1,106 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlSectionsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.dragHtml",
+                "default": "Start with the html block. We're going to design a page that has a header on top, sections in the middle, and a footer at the bottom — just like real websites."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlSectionsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlSectionsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add the Header",
+            "image": "/static/tutorials/steps/htmlSectionsHeader.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.header",
+                "default": "Drag a header inside the body. Inside the header, drag a heading and type My Awesome Website. The header sits at the top of every page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_header"}
+        },
+        {
+            "title": "Add a Navigation Bar",
+            "image": "/static/tutorials/steps/htmlSectionsNav.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.nav",
+                "default": "Drag a nav block below the heading, still inside the header. Inside the nav, drag three link blocks one after another with text blocks inside saying Home, About, and Contact."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_nav"}
+        },
+        {
+            "title": "Add a Welcome Section",
+            "image": "/static/tutorials/steps/htmlSectionsWelcome.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.welcome",
+                "default": "Drag a section block below the header inside the body. Inside the section, drag a heading at level 2 and type Welcome! Then add a paragraph that says This is my first real-looking website."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_section"}
+        },
+        {
+            "title": "Add a What I Do Section",
+            "image": "/static/tutorials/steps/htmlSectionsWhatIDo.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.whatIDo",
+                "default": "Drag another section below the first one. Inside, drag a heading at level 2 and type What I Do, then a paragraph saying I build websites that help people."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_section"}
+        },
+        {
+            "title": "Add the Footer",
+            "image": "/static/tutorials/steps/htmlSectionsFooter.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.footer",
+                "default": "Drag a footer below the last section inside the body. Drag a paragraph inside it and type Built with care, 2026."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_footer"}
+        },
+        {
+            "title": "See Your Layout",
+            "image": "/static/tutorials/steps/htmlSectionsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.viewTab",
+                "default": "Click the View tab. Do you see a header on top, a navigation menu, two sections in the middle, and a footer at the bottom?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Semantic Tags Give Pages Shape",
+            "image": "/static/tutorials/steps/htmlSectionsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSections.recap",
+                "default": "Header, nav, section, and footer are called semantic tags because their names describe what's inside. They help browsers, search engines, and screen readers understand your page."
+            }
+        }
+    ]
+}

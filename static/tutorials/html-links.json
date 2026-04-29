@@ -1,0 +1,138 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlLinksHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.dragHtml",
+                "default": "Start with the html block. We're going to make a page with clickable links — first one link, then a whole menu."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlLinksHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlLinksBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlLinksHeading.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.heading",
+                "default": "Drag a heading inside the body. Keep level 1 and type My Favourite Sites."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Drag a Link Block",
+            "image": "/static/tutorials/steps/htmlLinksAnchor.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.dragAnchor",
+                "default": "Drag a link block below the heading inside the body. The link block has a URL slot at the top."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_anchor"},
+            "validate": true
+        },
+        {
+            "title": "Set the Link URL",
+            "image": "/static/tutorials/steps/htmlLinksUrl.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.setUrl",
+                "default": "Click the URL field at the top of the link block and replace the text with h t t p s colon slash slash en dot wikipedia dot org slash wiki slash Adventure."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_anchor"}
+        },
+        {
+            "title": "Put Text Inside the Link",
+            "image": "/static/tutorials/steps/htmlLinksText.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.addText",
+                "default": "Drag a text block inside the link — between the link's open and close. Type Wikipedia Adventure. This is the words your reader clicks."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_text"}
+        },
+        {
+            "title": "Make a Menu — Drag a List",
+            "image": "/static/tutorials/steps/htmlLinksUl.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.ul",
+                "default": "Now let's turn many links into a menu. Drag a ul block below the link inside the body. The ul will hold each menu item."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_ul"},
+            "validate": true
+        },
+        {
+            "title": "Home Menu Item",
+            "image": "/static/tutorials/steps/htmlLinksHome.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.home",
+                "default": "Drag a li inside the ul. Drag a link block inside the li, set its URL to index.html, and put a text block inside the link saying Home."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "About Us Menu Item",
+            "image": "/static/tutorials/steps/htmlLinksAbout.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.about",
+                "default": "Drag another li below the first inside the ul. Add a link with URL about.html and a text block saying About Us."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "Contact Menu Item",
+            "image": "/static/tutorials/steps/htmlLinksContact.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.contact",
+                "default": "Add a third li inside the ul, with a link to contact.html and a text block saying Contact."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "See Your Page",
+            "image": "/static/tutorials/steps/htmlLinksView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.viewTab",
+                "default": "Click the View tab. You should see one Wikipedia link at the top, and a menu with Home, About Us, and Contact below it."
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Links and Menus",
+            "image": "/static/tutorials/steps/htmlLinksRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.recap",
+                "default": "A link has two parts — the URL it goes to, and the text people click. Put many links inside a ul to build a menu. Real websites use this same recipe to connect their pages."
+            }
+        }
+    ]
+}

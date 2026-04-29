@@ -1,0 +1,147 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlMakeItHappenHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.dragHtml",
+                "default": "Start with the html block. This is your capstone — a full website that brings together everything you've learned."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlMakeItHappenHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlMakeItHappenBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Build the Header With Navigation",
+            "image": "/static/tutorials/steps/htmlMakeItHappenHeader.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.header",
+                "default": "Drag a header inside the body. Inside the header, drag a nav block. Inside nav, drag four link blocks one after another, with text blocks inside saying Home, About, Projects, and Contact."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_header"}
+        },
+        {
+            "title": "Build the Hero Section",
+            "image": "/static/tutorials/steps/htmlMakeItHappenHero.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.hero",
+                "default": "Drag a section below the header. Set its class to hero. Inside it, drag a heading and type Create Your Future, then a paragraph saying Build today, change tomorrow. Then drag a link block, set its class to btn, and put a text block inside saying Get Started."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_section"}
+        },
+        {
+            "title": "Build the Features Section",
+            "image": "/static/tutorials/steps/htmlMakeItHappenFeatures.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.features",
+                "default": "Drag a second section below the hero. Set its class to features. Inside it, drag three div blocks each with class card. In each card, add a heading at level 2 and a paragraph — Innovate / Ideas into action, Create / With purpose, and Inspire / Empower others."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_section"}
+        },
+        {
+            "title": "Add the Footer",
+            "image": "/static/tutorials/steps/htmlMakeItHappenFooter.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.footer",
+                "default": "Drag a footer below the features section inside the body. Drag a paragraph inside the footer and type Code today, change tomorrow."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_footer"}
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlMakeItHappenStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.style",
+                "default": "Drag the style block inside the head. Time to make this site shine."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_style"},
+            "validate": true
+        },
+        {
+            "title": "Style the Hero",
+            "image": "/static/tutorials/steps/htmlMakeItHappenHeroCss.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.heroCss",
+                "default": "Drag a selector inside style. Change its text to .hero. Inside it, add a background-color set to mediumpurple, a color set to white, a text-align set to center, and a padding set to 60px."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Style the Button",
+            "image": "/static/tutorials/steps/htmlMakeItHappenBtnCss.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.btnCss",
+                "default": "Drag another selector. Change its text to .btn. Inside it, add a background-color set to orange, a color set to white, and a padding set to 12px."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Lay Out the Features",
+            "image": "/static/tutorials/steps/htmlMakeItHappenFeaturesCss.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.featuresCss",
+                "default": "Drag another selector. Change its text to .features. Inside it, add a display set to flex, a gap set to 20px, and a padding set to 30px."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Style Each Card",
+            "image": "/static/tutorials/steps/htmlMakeItHappenCardCss.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.cardCss",
+                "default": "Drag a final selector. Change its text to .card. Inside it, add a padding set to 20px and a background-color set to lavender."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "See Your Future-Themed Site",
+            "image": "/static/tutorials/steps/htmlMakeItHappenView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.viewTab",
+                "default": "Click the View tab. This is your capstone — a real, modern-looking website with a navigation menu, a hero, three feature cards, and a footer."
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Make It Happen",
+            "image": "/static/tutorials/steps/htmlMakeItHappenRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.recap",
+                "default": "You've gone from Hello Web to a full styled website. Every site you'll ever build uses the same recipe — HTML for structure, CSS for style, and your imagination for everything in between."
+            }
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlTextFormattingHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.dragHtml",
+                "default": "Start with the html block. We're going to learn how to make text bold, italic, and underlined."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlTextFormattingHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlTextFormattingBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlTextFormattingHeading.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.heading",
+                "default": "Drag a heading inside the body. Keep level 1 and type Bold, Italic, Underline."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Make Text Bold",
+            "image": "/static/tutorials/steps/htmlTextFormattingBold.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.bold",
+                "default": "Drag the b block below the heading inside the body. Drag a text block inside the b and type This is bold text. Whatever sits inside b becomes thicker on the page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_bold"}
+        },
+        {
+            "title": "Make Text Italic",
+            "image": "/static/tutorials/steps/htmlTextFormattingItalic.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.italic",
+                "default": "Drag an i block below the b block, still inside the body. Drag a text block inside the i and type This is italic text. Italic makes the letters slant."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_italic"}
+        },
+        {
+            "title": "Underline Some Text",
+            "image": "/static/tutorials/steps/htmlTextFormattingUnderline.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.underline",
+                "default": "Drag a u block below the i block, still inside the body. Drag a text block inside the u and type This is underlined text. The u block draws a line under whatever is inside."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_underline"}
+        },
+        {
+            "title": "See Your Styled Text",
+            "image": "/static/tutorials/steps/htmlTextFormattingView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.viewTab",
+                "default": "Click the View tab. Do you see one bold line, one italic line, and one underlined line?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Shape Your Words",
+            "image": "/static/tutorials/steps/htmlTextFormattingRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.recap",
+                "default": "Use b for bold, i for italic, and u for underlined. There are also strong and em tags that look the same as b and i but tell screen readers the words are important."
+            }
+        }
+    ]
+}

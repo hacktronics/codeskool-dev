@@ -1,0 +1,170 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlMakeItYoursHtml.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.dragHtml",
+                "default": "Now build the page. Drag the html block to start."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_html"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlMakeItYoursHead.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.dragHead",
+                "default": "Snap the head block under html. The CSS rules will live inside head."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_head"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlMakeItYoursBody.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_body"
+            },
+            "validate": true
+        },
+        {
+            "title": "Build the Header",
+            "image": "/static/tutorials/steps/htmlMakeItYoursHeader.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.header",
+                "default": "Drag a header inside the body. Set the header's class to site-header. Drag a heading inside it and type My Website."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_header"
+            }
+        },
+        {
+            "title": "Build the Hero Section",
+            "image": "/static/tutorials/steps/htmlMakeItYoursHero.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.hero",
+                "default": "Drag a section below the header. Set its class to hero. Inside it, drag a heading at level 2 and type Welcome! Then drag a link block, set its class to btn, and put a text block inside saying See My Work."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_section"
+            }
+        },
+        {
+            "title": "Style the Header",
+            "image": "/static/tutorials/steps/htmlMakeItYoursStyleHeader.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.styleHeader",
+                "default": "Drag the style block inside the head. Drag a selector inside style and change its text to .site-header. Drag a background-color block inside the selector and set it to navy. Drag a color block and set it to white. Add a padding block set to 20px."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_style"
+            }
+        },
+        {
+            "title": "Style the Hero",
+            "image": "/static/tutorials/steps/htmlMakeItYoursStyleHero.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.styleHero",
+                "default": "Drag another selector below the first one. Change its text to .hero. Inside it, add a text-align block set to center and a padding block set to 40px."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "Style the Button",
+            "image": "/static/tutorials/steps/htmlMakeItYoursStyleBtn.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.styleBtn",
+                "default": "Drag a third selector. Change its text to .btn. Inside it, add a background-color set to orange, a color set to white, and a padding set to 10px."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "See Your Styled Site",
+            "image": "/static/tutorials/steps/htmlMakeItYoursView.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 0,
+                "zoom": 2.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.viewTab",
+                "default": "Click the View tab. Do you see the navy header, the centred welcome message, and the orange button?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "CSS Classes Make It Yours",
+            "image": "/static/tutorials/steps/htmlMakeItYoursRecap.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItYours.recap",
+                "default": "Classes like site-header, hero, and btn are labels you put on HTML blocks. CSS uses those labels to style each part of your site exactly the way you want."
+            }
+        }
+    ]
+}

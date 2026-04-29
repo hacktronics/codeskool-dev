@@ -1,0 +1,116 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlUploadImageHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.dragHtml",
+                "default": "Start every webpage with the html block. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlUploadImageHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.dragHead",
+                "default": "Snap the head block right after html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlUploadImageBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.dragBody",
+                "default": "Snap the body block after head. Everything you see on a page goes inside body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlUploadImageH1.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.heading",
+                "default": "Drop a heading inside body and type \"My Pet\" — that's the title above your photo."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"},
+            "validate": true
+        },
+        {
+            "title": "Add an <img> Block",
+            "image": "/static/tutorials/steps/htmlUploadImageImg.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.dragImg",
+                "default": "Snap an img block after the heading. Right now it points at a placeholder picture — let's swap it for one of your own."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_img"},
+            "validate": true
+        },
+        {
+            "title": "Click the Upload Image Button",
+            "image": "/static/tutorials/steps/htmlUploadImageUpload.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.uploadClick",
+                "default": "Up in the toolbar there's an Upload Image button — the icon with a picture and a plus. Click it. Your computer's file picker opens."
+            },
+            "highlightUI": "uploadImageButton"
+        },
+        {
+            "title": "Pick Your Photo",
+            "image": "/static/tutorials/steps/htmlUploadImagePick.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.pickFile",
+                "default": "Pick any photo from your computer — your pet, your toy, a drawing — and confirm. CodeSkool saves it to your project."
+            }
+        },
+        {
+            "title": "Use Your Picture",
+            "image": "/static/tutorials/steps/htmlUploadImageImgSrc.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.setSrc",
+                "default": "In the img block, type the filename you just uploaded (like my-pet.jpg) into the src field. The picture you uploaded now points to your photo."
+            },
+            "validate": true
+        },
+        {
+            "title": "Add Alt Text",
+            "image": "/static/tutorials/steps/htmlUploadImageAlt.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.alt",
+                "default": "Type a short description into the alt field — \"A photo of my pet\". This shows up if the picture can't load and helps screen readers describe the image."
+            },
+            "validate": true
+        },
+        {
+            "title": "See It on Your Page",
+            "image": "/static/tutorials/steps/htmlUploadImageView.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.view",
+                "default": "Click the View tab. Your actual picture is on your webpage. That's a real photo from YOUR computer rendered inside the browser."
+            }
+        },
+        {
+            "title": "Recap",
+            "image": "/static/tutorials/steps/htmlUploadImageRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.recap",
+                "default": "You uploaded an image, named it, used it in img src, and saw it on your page. Anything you can take a photo of can now go on a webpage you make."
+            }
+        }
+    ]
+}

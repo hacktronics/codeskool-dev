@@ -1,0 +1,97 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlFormsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.dragHtml",
+                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlFormsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.dragHead",
+                "default": "Snap the head block under html. The head holds info about your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlFormsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.dragBody",
+                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Drag a Form",
+            "image": "/static/tutorials/steps/htmlFormsForm.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.dragForm",
+                "default": "Drag the form block inside the body. A form collects what someone types or chooses on your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_form"},
+            "validate": true
+        },
+        {
+            "title": "Add a Label",
+            "image": "/static/tutorials/steps/htmlFormsLabel.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.label",
+                "default": "Drag a label block inside the form. Type Your name. The label tells the reader what to type."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_label"}
+        },
+        {
+            "title": "Add an Input Box",
+            "image": "/static/tutorials/steps/htmlFormsInput.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.input",
+                "default": "Drag an input block below the label, still inside the form. Click the placeholder field and type Enter your name. The placeholder shows a hint inside the empty box."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_input"}
+        },
+        {
+            "title": "Add a Button",
+            "image": "/static/tutorials/steps/htmlFormsButton.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.button",
+                "default": "Drag a button block below the input, still inside the form. Type Send. The button is what the reader clicks when they're done."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_button"}
+        },
+        {
+            "title": "Try Your Form",
+            "image": "/static/tutorials/steps/htmlFormsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.viewTab",
+                "default": "Click the View tab. Try typing your name in the box. Do you see the placeholder hint disappear when you start typing?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Forms Collect Input",
+            "image": "/static/tutorials/steps/htmlFormsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlForms.recap",
+                "default": "A form has three parts: a label that tells the reader what to type, an input box where they type, and a button to submit. Together they collect information from the reader."
+            }
+        }
+    ]
+}

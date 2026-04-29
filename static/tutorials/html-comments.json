@@ -1,0 +1,96 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlCommentsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.dragHtml",
+                "default": "Start with the html block. We're going to learn how to add notes to your code that only you can read — the browser will ignore them."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlCommentsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlCommentsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add Your First Comment",
+            "image": "/static/tutorials/steps/htmlCommentsFirst.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.first",
+                "default": "Drag a text block inside the body. In the text field, type the comment markers exactly: less-than-sign exclamation dash dash space This is the page header space dash dash greater-than-sign. Anything between these markers is a comment."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_text"}
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlCommentsHeading.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.heading",
+                "default": "Drag a heading below the comment, still inside the body. Keep level 1 and type My Recipe Book."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Add Another Comment",
+            "image": "/static/tutorials/steps/htmlCommentsSecond.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.second",
+                "default": "Drag another text block below the heading, still inside the body. Type the same kind of comment markers around the words Favourite recipes."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_text"}
+        },
+        {
+            "title": "Add a List of Recipes",
+            "image": "/static/tutorials/steps/htmlCommentsList.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.list",
+                "default": "Drag a ul below the second comment inside the body. Add two li items, each with a text block inside, and type Pancakes and Pizza."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_ul"}
+        },
+        {
+            "title": "See Your Page",
+            "image": "/static/tutorials/steps/htmlCommentsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.viewTab",
+                "default": "Click the View tab. You should see only the heading and the list — the comments are invisible to readers. Now click the HTML tab to see the comments in the source code."
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Notes for the Programmer",
+            "image": "/static/tutorials/steps/htmlCommentsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlComments.recap",
+                "default": "Comments are notes you leave in your code so you can remember what each part does. The browser ignores them. Real websites use comments all the time to organise their code."
+            }
+        }
+    ]
+}

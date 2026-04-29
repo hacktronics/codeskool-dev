@@ -1,0 +1,108 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlSavePageHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.dragHtml",
+                "default": "We'll build a tiny page first, then save it. Start with the html block."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlSavePageHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add a Title",
+            "image": "/static/tutorials/steps/htmlSavePageTitle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.title",
+                "default": "Drop a title block inside head. Type \"My First Saved Page\" — this is the name shown in the browser tab."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_title"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlSavePageBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.dragBody",
+                "default": "Snap body after head. Page content goes inside body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlSavePageH1.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.heading",
+                "default": "Drop a heading inside body and type \"Hello from my own webpage!\"."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"},
+            "validate": true
+        },
+        {
+            "title": "Add a Paragraph",
+            "image": "/static/tutorials/steps/htmlSavePageP.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.paragraph",
+                "default": "Add a paragraph after the heading: \"I built this with CodeSkool and saved it.\""
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"},
+            "validate": true
+        },
+        {
+            "title": "Click Save",
+            "image": "/static/tutorials/steps/htmlSavePageClickSave.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.clickSave",
+                "default": "Up in the toolbar, click the Save button — the floppy-disk icon. Or press Ctrl+S. A naming dialog opens."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Name It index.html",
+            "image": "/static/tutorials/steps/htmlSavePageDialog.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.dialog",
+                "default": "Type \"index\" as the file name. The dropdown next to it is already set to .html. Click Save. Your page is now stored in your browser as index.html."
+            }
+        },
+        {
+            "title": "View Your Saved Files",
+            "image": "/static/tutorials/steps/htmlSavePageFiles.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.viewFiles",
+                "default": "Click the View Files button — the list icon in the toolbar. You'll see index.html in your saved files. Come back to this page anytime."
+            },
+            "highlightUI": "viewFilesButton"
+        },
+        {
+            "title": "Recap",
+            "image": "/static/tutorials/steps/htmlSavePageRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlSavePage.recap",
+                "default": "You built a page, saved it as index.html, and opened the file list to see it. Saved pages are real .html files inside your browser — ready for the next tutorial where you'll link multiple pages together."
+            }
+        }
+    ]
+}

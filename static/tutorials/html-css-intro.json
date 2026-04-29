@@ -1,0 +1,171 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlCssIntroHtml.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.dragHtml",
+                "default": "Now back to the workspace. Drag the html block to start your page."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_html"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlCssIntroHead.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.dragHead",
+                "default": "Snap the head block under html. CSS rules will live inside the head."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_head"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlCssIntroBody.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_body"
+            },
+            "validate": true
+        },
+        {
+            "title": "Add a Heading to Style",
+            "image": "/static/tutorials/steps/htmlCssIntroHeading.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.heading",
+                "default": "Drag a heading inside the body. Keep level 1 and type Hello CSS. We'll change its colours next."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_heading"
+            }
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlCssIntroStyle.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.style",
+                "default": "Drag the style block inside the head. The style block is where all your CSS rules live."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_style"
+            },
+            "validate": true
+        },
+        {
+            "title": "Pick the Heading with a Selector",
+            "image": "/static/tutorials/steps/htmlCssIntroSelector.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.selector",
+                "default": "Drag a selector block inside the style. Click the selector field and replace the text with h1. The selector tells CSS which elements to change."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "Set the Text Colour",
+            "image": "/static/tutorials/steps/htmlCssIntroColor.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.color",
+                "default": "Drag a color block inside the selector. Replace red with darkblue. This sets the text colour of every h1 on the page."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_color"
+            }
+        },
+        {
+            "title": "Set the Background Colour",
+            "image": "/static/tutorials/steps/htmlCssIntroBg.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.bg",
+                "default": "Drag a background-color block below the color block, still inside the selector. Replace skyblue with lightyellow. This is the box behind the text."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_background_color"
+            }
+        },
+        {
+            "title": "See Your First Style",
+            "image": "/static/tutorials/steps/htmlCssIntroView.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 0,
+                "zoom": 2.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.viewTab",
+                "default": "Click the View tab. Is your heading dark blue on a light yellow background?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "How CSS Works",
+            "image": "/static/tutorials/steps/htmlCssIntroRecap.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.recap",
+                "default": "CSS has two parts: a selector that picks elements, and properties that change how they look. Color sets the text. Background-color sets the box behind it."
+            }
+        }
+    ]
+}

@@ -1,0 +1,97 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlImagesHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.dragHtml",
+                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlImagesHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.dragHead",
+                "default": "Snap the head block under html. The head holds info about your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlImagesBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.dragBody",
+                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlImagesHeading.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.addHeading",
+                "default": "Drag a heading inside the body. Keep the level at 1 and type My Favourite Animal."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Drag the Image Block",
+            "image": "/static/tutorials/steps/htmlImagesImg.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.dragImg",
+                "default": "Drag the image block below the heading inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_img"},
+            "validate": true
+        },
+        {
+            "title": "Set the Source URL",
+            "image": "/static/tutorials/steps/htmlImagesSource.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.setSource",
+                "default": "Click the source field on the image block, called src. Replace the text with h t t p s colon slash slash picsum dot photos slash i d slash two three seven slash four hundred slash three hundred."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_img"}
+        },
+        {
+            "title": "Describe the Picture",
+            "image": "/static/tutorials/steps/htmlImagesAlt.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.setAlt",
+                "default": "Click the alt field. Type A puppy looking at the camera. The alt describes the picture in words. It helps people who can't see the image understand it."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_img"}
+        },
+        {
+            "title": "See Your Picture",
+            "image": "/static/tutorials/steps/htmlImagesView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.viewTab",
+                "default": "Click the View tab. Do you see the puppy below your heading?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Two Parts of an Image",
+            "image": "/static/tutorials/steps/htmlImagesRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlImages.recap",
+                "default": "An image has two parts: the source, called src, which tells where the picture comes from, and the alt, which describes it."
+            }
+        }
+    ]
+}

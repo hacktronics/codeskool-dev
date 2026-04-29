@@ -1,0 +1,97 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlListsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.dragHtml",
+                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlListsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.dragHead",
+                "default": "Snap the head block under html. The head holds info about your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlListsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.dragBody",
+                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Drag the List Block",
+            "image": "/static/tutorials/steps/htmlListsUl.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.dragUl",
+                "default": "Drag the list block, called ul, inside the body. This creates an empty list."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_ul"},
+            "validate": true
+        },
+        {
+            "title": "First Item",
+            "image": "/static/tutorials/steps/htmlListsLi1.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.li1",
+                "default": "Drag a list item block, called li, inside the ul. Drag a text block inside the li and type Tent. Each li becomes one bullet."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "Second Item",
+            "image": "/static/tutorials/steps/htmlListsLi2.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.li2",
+                "default": "Drag another li below the first one, still inside the ul. Drag a text block inside the li and type Compass."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "Third Item",
+            "image": "/static/tutorials/steps/htmlListsLi3.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.li3",
+                "default": "Drag a third li inside the ul, below the others. Drag a text block inside it and type Snacks."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_li"}
+        },
+        {
+            "title": "See Your List",
+            "image": "/static/tutorials/steps/htmlListsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.viewTab",
+                "default": "Click the View tab. Do you see three bullets stacked one below the other?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "How Lists Work",
+            "image": "/static/tutorials/steps/htmlListsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLists.recap",
+                "default": "A list has two parts: the ul holds the list, and each li is one item. Use ol for numbered lists when order matters."
+            }
+        }
+    ]
+}

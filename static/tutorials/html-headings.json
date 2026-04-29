@@ -1,0 +1,86 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlHeadingsHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.dragHtml",
+                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlHeadingsHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.dragHead",
+                "default": "Snap the head block under html. The head holds information about your page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlHeadingsBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.dragBody",
+                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Big Heading (h1)",
+            "image": "/static/tutorials/steps/htmlHeadingsH1.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.addH1",
+                "default": "Drag a heading block inside the body. Keep the level at 1 and type My Adventure."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Add a Smaller Heading (h2)",
+            "image": "/static/tutorials/steps/htmlHeadingsH2.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.addH2",
+                "default": "Drag another heading below the first one inside the body. Click the level dropdown and choose 2. Type Chapter One."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "Add an Even Smaller Heading (h3)",
+            "image": "/static/tutorials/steps/htmlHeadingsH3.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.addH3",
+                "default": "Drag a third heading below the second one inside the body. Set the level to 3 and type The Forest."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_heading"}
+        },
+        {
+            "title": "See the Size Hierarchy",
+            "image": "/static/tutorials/steps/htmlHeadingsView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.viewTab",
+                "default": "Click the View tab. Look at the page — which heading is biggest, and which is smallest?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Headings, Big to Small",
+            "image": "/static/tutorials/steps/htmlHeadingsRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHeadings.recap",
+                "default": "Headings have six levels, h1 to h6. h1 is the biggest and most important — used for the page title. You used the first three levels here. Use headings to organise your page like chapters in a book."
+            }
+        }
+    ]
+}

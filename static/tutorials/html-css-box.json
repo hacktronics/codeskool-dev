@@ -1,0 +1,127 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlCssBoxHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.dragHtml",
+                "default": "Start with the html block."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlCssBoxHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlCssBoxBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Card",
+            "image": "/static/tutorials/steps/htmlCssBoxDiv.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.div",
+                "default": "Drag a div inside the body. Set its class to card. Drag a paragraph inside the div and type I am inside a box."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_div"}
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlCssBoxStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.style",
+                "default": "Drag the style block inside the head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_style"},
+            "validate": true
+        },
+        {
+            "title": "Pick the Card",
+            "image": "/static/tutorials/steps/htmlCssBoxSelector.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.selector",
+                "default": "Drag a selector inside the style. Replace the text with .card — the dot tells CSS to look for the class card."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Make the Box Visible",
+            "image": "/static/tutorials/steps/htmlCssBoxBg.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.bg",
+                "default": "Drag a background-color block inside the selector. Replace skyblue with lightblue. Now the box has a colour we can see."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_background_color"}
+        },
+        {
+            "title": "Add Padding (Inside Space)",
+            "image": "/static/tutorials/steps/htmlCssBoxPadding.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.padding",
+                "default": "Drag a padding block inside the selector. Replace 10 pixels with 20 pixels. Padding pushes the text away from the inside edge of the box."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_padding"}
+        },
+        {
+            "title": "Add a Border (the Edge)",
+            "image": "/static/tutorials/steps/htmlCssBoxBorder.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.border",
+                "default": "Drag a border block inside the selector. Replace the value with 2 pixels solid darkblue. The border draws a line around the box."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_border"}
+        },
+        {
+            "title": "Add Margin (Outside Space)",
+            "image": "/static/tutorials/steps/htmlCssBoxMargin.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.margin",
+                "default": "Drag a margin block inside the selector. Replace 10 pixels with 20 pixels. Margin pushes the box away from its neighbours on the outside."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_margin"}
+        },
+        {
+            "title": "See the Three Layers",
+            "image": "/static/tutorials/steps/htmlCssBoxView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.viewTab",
+                "default": "Click the View tab. Look at your box — can you spot the colour inside, the line at the edge, and the gap on the outside?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "The Box Model",
+            "image": "/static/tutorials/steps/htmlCssBoxRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.recap",
+                "default": "Every element on a page is a box with three layers — padding inside, border at the edge, margin outside. This is called the box model."
+            }
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "steps": [
+        {
+            "title": "Drag the <html> Block",
+            "image": "/static/tutorials/steps/htmlCssFlexHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.dragHtml",
+                "default": "Start with the html block. We're going to arrange three cards side by side in a row."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlCssFlexHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.dragHead",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlCssFlexBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.dragBody",
+                "default": "Snap the body block under head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Row Container",
+            "image": "/static/tutorials/steps/htmlCssFlexRow.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.row",
+                "default": "Drag a div inside the body. Set its class to row. This will hold the three cards we'll arrange."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_div"}
+        },
+        {
+            "title": "Add Three Cards",
+            "image": "/static/tutorials/steps/htmlCssFlexCards.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.cards",
+                "default": "Drag three more divs inside the row, one below the other. Set each one's class to card."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_div"}
+        },
+        {
+            "title": "Put Text Inside Each Card",
+            "image": "/static/tutorials/steps/htmlCssFlexCardsText.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.cardsText",
+                "default": "Inside each of the three cards, drag a paragraph and type Card 1, Card 2, and Card 3 — one in each."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlCssFlexStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.style",
+                "default": "Drag the style block inside the head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_style"},
+            "validate": true
+        },
+        {
+            "title": "Pick the Row",
+            "image": "/static/tutorials/steps/htmlCssFlexSelectorRow.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.selectorRow",
+                "default": "Drag a selector inside the style. Replace the text with .row."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "Turn It Into a Flex Row",
+            "image": "/static/tutorials/steps/htmlCssFlexDisplay.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.display",
+                "default": "Drag a display block inside the .row selector. Pick flex from the dropdown. Normally elements stack vertically — flex arranges them side by side in a row."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_display"}
+        },
+        {
+            "title": "Add a Gap Between Cards",
+            "image": "/static/tutorials/steps/htmlCssFlexGap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.gap",
+                "default": "Drag a gap block inside the selector. Replace 10 pixels with 20 pixels. Gap is the breathing room between flex items."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_gap"}
+        },
+        {
+            "title": "Style Each Card",
+            "image": "/static/tutorials/steps/htmlCssFlexCardStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.cardStyle",
+                "default": "Drag another selector below the first. Replace its text with .card. Inside it, add a padding set to 20 pixels and a background-color set to lightblue — so the cards become visible boxes."
+            },
+            "highlightBlock": {"category": "css", "blockType": "css_css_selector"}
+        },
+        {
+            "title": "See the Flex Row",
+            "image": "/static/tutorials/steps/htmlCssFlexView.webp",
+            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.viewTab",
+                "default": "Click the View tab. Are your three cards arranged side by side in a row, with space between them?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "How Flexbox Works",
+            "image": "/static/tutorials/steps/htmlCssFlexRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.recap",
+                "default": "Display flex turns a container into a flex row. Gap adds space between items. Together they're how real websites build rows of cards."
+            }
+        }
+    ]
+}

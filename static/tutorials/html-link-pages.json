@@ -1,0 +1,146 @@
+{
+    "steps": [
+        {
+            "title": "Build the Home Page",
+            "image": "/static/tutorials/steps/htmlLinkPagesHtml.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.html",
+                "default": "We'll build three pages today — Home, About, Contact — and link them together. Start with the html block for the home page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
+            "validate": true
+        },
+        {
+            "title": "Add the <head> Block",
+            "image": "/static/tutorials/steps/htmlLinkPagesHead.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.head",
+                "default": "Snap the head block under html."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
+            "validate": true
+        },
+        {
+            "title": "Add the <body> Block",
+            "image": "/static/tutorials/steps/htmlLinkPagesBody.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.body",
+                "default": "Snap body after head."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
+            "validate": true
+        },
+        {
+            "title": "Add a Header With Site Name",
+            "image": "/static/tutorials/steps/htmlLinkPagesHeader.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.header",
+                "default": "Drop a header inside body. Inside header, drop an h1 with the text \"My Adventure Site\" — this title will appear on every page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_header"},
+            "validate": true
+        },
+        {
+            "title": "Build the Nav Menu",
+            "image": "/static/tutorials/steps/htmlLinkPagesNav.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.nav",
+                "default": "After the h1, drop a nav block. Inside nav, add three anchors with hrefs index.html, about.html, contact.html — and the texts Home, About, Contact. Right now those links don't go anywhere — we'll fix that by saving each page."
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_nav"},
+            "validate": true
+        },
+        {
+            "title": "Add a Welcome Section",
+            "image": "/static/tutorials/steps/htmlLinkPagesSection.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.section",
+                "default": "After the header, drop a section. Inside it: an h2 \"Welcome!\" and a paragraph \"This is my home page. Use the menu above to explore.\""
+            },
+            "highlightBlock": {"category": "html5", "blockType": "html5_html5_section"},
+            "validate": true
+        },
+        {
+            "title": "Save This Page as index.html",
+            "image": "/static/tutorials/steps/htmlLinkPagesSaveIndex.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.saveIndex",
+                "default": "Click the Save button. Type \"index\" as the file name. Click Save. Your home page is now stored as index.html."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Start a Fresh Page",
+            "image": "/static/tutorials/steps/htmlLinkPagesNewDoc.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.newDoc",
+                "default": "Click the New Document button — the page-with-plus icon. Pick HTML document. Your editor clears for a fresh page. The home page you just saved is safely stored — you'll see it again."
+            },
+            "highlightUI": "newDocumentButton"
+        },
+        {
+            "title": "Build the About Page",
+            "image": "/static/tutorials/steps/htmlLinkPagesAbout.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.about",
+                "default": "Build the same structure as the home page — header with site title, nav with the three links, then a section. This time the section is \"About Me\" with text \"I love exploring and building websites with CodeSkool.\""
+            }
+        },
+        {
+            "title": "Save as about.html",
+            "image": "/static/tutorials/steps/htmlLinkPagesSaveAbout.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.saveAbout",
+                "default": "Click Save. The dialog suggests \"index2\" because index.html already exists. Change it to \"about\". Click Save. Now you have two saved pages."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Build the Contact Page",
+            "image": "/static/tutorials/steps/htmlLinkPagesContact.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.contact",
+                "default": "Click New Document again. Build the same header and nav. Section title: \"Get in Touch\". Paragraph: \"Email me at: hello@example.com\". Save as contact.html."
+            }
+        },
+        {
+            "title": "View All Your Files",
+            "image": "/static/tutorials/steps/htmlLinkPagesFiles.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.files",
+                "default": "Click the View Files button. You'll see index.html, about.html, and contact.html — three real pages stored in your browser."
+            },
+            "highlightUI": "viewFilesButton"
+        },
+        {
+            "title": "Click the Links!",
+            "image": "/static/tutorials/steps/htmlLinkPagesView.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.view",
+                "default": "Open index.html and click the View tab. Click About in the menu — the page changes to your about page. Click Contact, click Home. Three pages, real navigation, no internet needed."
+            }
+        },
+        {
+            "title": "Recap",
+            "image": "/static/tutorials/steps/htmlLinkPagesRecap.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinkPages.recap",
+                "default": "You built three pages, saved each one with its own filename, and the menu links between them work. That's a real multi-page website — every site you visit on the internet works exactly the same way under the hood."
+            }
+        }
+    ]
+}
