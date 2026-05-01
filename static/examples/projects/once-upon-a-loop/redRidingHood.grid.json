@@ -1,0 +1,927 @@
+{
+  "story": "redRidingHood",
+  "cols": 13,
+  "rows": 10,
+  "mainCharacter": {
+    "name": "Red Riding Hood",
+    "col": 0,
+    "row": 6
+  },
+  "goal": {
+    "col": 12,
+    "row": 6
+  },
+  "goalGlow": true,
+  "tiles": [
+    {
+      "col": 0,
+      "row": 9,
+      "x": -183.48,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 9,
+      "x": -152.82,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 9,
+      "x": -120.66,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 9,
+      "x": -87.68,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 9,
+      "x": -56.19,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 9,
+      "x": -25.19,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 9,
+      "x": 7.79,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 9,
+      "x": 40.94,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 9,
+      "x": 72.76,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 9,
+      "x": 104.92,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 9,
+      "x": 138.73,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 9,
+      "x": 168.73,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 9,
+      "x": 198.56,
+      "y": 111.71,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 8,
+      "x": -183.48,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 8,
+      "x": -152.82,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 8,
+      "x": -120.66,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 8,
+      "x": -87.68,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 8,
+      "x": -56.19,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 8,
+      "x": -25.19,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 8,
+      "x": 7.79,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 8,
+      "x": 40.94,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 8,
+      "x": 72.76,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 8,
+      "x": 104.92,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 8,
+      "x": 138.73,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 8,
+      "x": 168.73,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 8,
+      "x": 198.56,
+      "y": 97.96,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 7,
+      "x": -183.48,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 7,
+      "x": -152.82,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 7,
+      "x": -120.66,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 7,
+      "x": -87.68,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 7,
+      "x": -56.19,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 7,
+      "x": -25.19,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 7,
+      "x": 7.79,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 7,
+      "x": 40.94,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 7,
+      "x": 72.76,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 7,
+      "x": 104.92,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 7,
+      "x": 138.73,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 7,
+      "x": 168.73,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 7,
+      "x": 198.56,
+      "y": 68.95,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 6,
+      "x": -183.26,
+      "y": 36.59,
+      "walkable": true
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "x": -152.82,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "x": -120.66,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "x": -87.68,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "x": -56.19,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "x": -25.19,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "x": 7.79,
+      "y": 38.45,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "x": 40.94,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "x": 72.76,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 6,
+      "x": 104.92,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 6,
+      "x": 138.73,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 6,
+      "x": 168.73,
+      "y": 38.45,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 6,
+      "x": 196.77,
+      "y": 32.53,
+      "walkable": true
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "x": -184.62,
+      "y": 5.97,
+      "walkable": true
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "x": -152.2,
+      "y": 5.97,
+      "walkable": true
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "x": -121.13,
+      "y": 5.97,
+      "walkable": true
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "x": -87.68,
+      "y": 7.29,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "x": -56.19,
+      "y": 7.29,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "x": -25.19,
+      "y": 7.29,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "x": 7.79,
+      "y": 7.29,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "x": 40.94,
+      "y": 7.29,
+      "walkable": true
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "x": 72.76,
+      "y": 7.29,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 5,
+      "x": 104.92,
+      "y": 7.29,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 5,
+      "x": 138.24,
+      "y": 5.07,
+      "walkable": true
+    },
+    {
+      "col": 11,
+      "row": 5,
+      "x": 168.41,
+      "y": 4.62,
+      "walkable": true
+    },
+    {
+      "col": 12,
+      "row": 5,
+      "x": 196.77,
+      "y": 2.81,
+      "walkable": true
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "x": -183.48,
+      "y": -25.19,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "x": -152.82,
+      "y": -25.19,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "x": -120.66,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "x": -88.26,
+      "y": -27.35,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "x": -55.38,
+      "y": -26.45,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "x": -25.19,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "x": 7.79,
+      "y": -25.19,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "x": 40.94,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "x": 72.76,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 9,
+      "row": 4,
+      "x": 104.92,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 10,
+      "row": 4,
+      "x": 138.73,
+      "y": -25.19,
+      "walkable": true
+    },
+    {
+      "col": 11,
+      "row": 4,
+      "x": 168.73,
+      "y": -25.19,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 4,
+      "x": 198.56,
+      "y": -25.19,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "x": -183.48,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "x": -152.82,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "x": -120.66,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "x": -87.8,
+      "y": -60.23,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "x": -56.19,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "x": -25.19,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "x": 7.79,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "x": 40.94,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "x": 72.5,
+      "y": -58.42,
+      "walkable": true
+    },
+    {
+      "col": 9,
+      "row": 3,
+      "x": 104.92,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 3,
+      "x": 138.73,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 3,
+      "x": 168.73,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 3,
+      "x": 198.56,
+      "y": -55.19,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "x": -183.48,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "x": -152.82,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "x": -120.66,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "x": -87.68,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "x": -56.19,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "x": -25.19,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "x": 7.79,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "x": 40.94,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "x": 72.76,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 2,
+      "x": 104.92,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 2,
+      "x": 138.73,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 2,
+      "x": 168.73,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 2,
+      "x": 198.56,
+      "y": -81.71,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "x": -183.48,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "x": -152.82,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "x": -120.66,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "x": -87.68,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "x": -56.19,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "x": -25.19,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "x": 7.79,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 1,
+      "x": 40.94,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "x": 72.76,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 1,
+      "x": 104.92,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 1,
+      "x": 138.73,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 1,
+      "x": 168.73,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 1,
+      "x": 198.56,
+      "y": -109.72,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 0,
+      "x": -183.48,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "x": -152.82,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "x": -120.66,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "x": -87.68,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "x": -56.19,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "x": -25.19,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "x": 7.79,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 0,
+      "x": 40.94,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "x": 72.76,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 0,
+      "x": 104.92,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 10,
+      "row": 0,
+      "x": 138.73,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 11,
+      "row": 0,
+      "x": 168.73,
+      "y": -128.29,
+      "walkable": false
+    },
+    {
+      "col": 12,
+      "row": 0,
+      "x": 198.56,
+      "y": -128.29,
+      "walkable": false
+    }
+  ]
+}

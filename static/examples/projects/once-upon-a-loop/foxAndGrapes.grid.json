@@ -1,0 +1,310 @@
+{
+  "story": "foxAndGrapes",
+  "cols": 7,
+  "rows": 6,
+  "mainCharacter": {
+    "name": "Fox",
+    "col": 0,
+    "row": 0
+  },
+  "goal": {
+    "col": 6,
+    "row": 5
+  },
+  "tiles": [
+    {
+      "col": 0,
+      "row": 5,
+      "x": -174,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "x": -117,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "x": -60.5,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "x": -3.75,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "x": 54.25,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "x": 114.75,
+      "y": 105.75,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "x": 174.5,
+      "y": 105.75,
+      "walkable": true
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "x": -174,
+      "y": 56.25,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "x": -117,
+      "y": 56.25,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "x": -60.5,
+      "y": 56.25,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "x": -3.75,
+      "y": 56.25,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "x": 54.25,
+      "y": 56.25,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "x": 115.27,
+      "y": 55.5,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "x": 174.5,
+      "y": 56.25,
+      "walkable": true
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "x": -174,
+      "y": 6.75,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "x": -117,
+      "y": 6.75,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "x": -60.5,
+      "y": 6.75,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "x": -3.75,
+      "y": 6.75,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "x": 54.25,
+      "y": 6.75,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "x": 114.75,
+      "y": 6.75,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "x": 174.5,
+      "y": 6.75,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "x": -174,
+      "y": -43,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "x": -117,
+      "y": -43,
+      "walkable": true
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "x": -60.5,
+      "y": -43,
+      "walkable": true
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "x": -3.75,
+      "y": -43,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "x": 54.25,
+      "y": -43,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "x": 114.75,
+      "y": -43,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "x": 174.5,
+      "y": -43,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "x": -175.61,
+      "y": -93.1,
+      "walkable": true
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "x": -117,
+      "y": -92.25,
+      "walkable": true
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "x": -60.5,
+      "y": -92.25,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "x": -3.75,
+      "y": -92.25,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "x": 54.25,
+      "y": -92.25,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "x": 114.75,
+      "y": -92.25,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "x": 174.5,
+      "y": -92.25,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 0,
+      "x": -175.16,
+      "y": -140.83,
+      "walkable": true
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "x": -117.52,
+      "y": -141.73,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "x": -61.69,
+      "y": -142.18,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "x": -1.8,
+      "y": -140.38,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "x": 55.38,
+      "y": -141.73,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "x": 114.82,
+      "y": -143.08,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "x": 175.16,
+      "y": -141.28,
+      "walkable": false
+    }
+  ]
+}

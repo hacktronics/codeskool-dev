@@ -1,0 +1,42 @@
+[
+    {
+        "id": "thirstyCrow",
+        "urlId": "thirstyCrow",
+        "name": "The Thirsty Crow",
+        "description": "Help the crow drop stones into the pot to raise the water.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/thirstyCrow.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/thirstyCrow.grid.json"
+    },
+    {
+        "id": "bearCollectingHoney",
+        "urlId": "bearCollectingHoney",
+        "name": "The Bear Collecting Honey",
+        "description": "Help the bear gather honey from the hives.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/bearCollectingHoney.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/bearCollectingHoney.grid.json"
+    },
+    {
+        "id": "foxAndGrapes",
+        "urlId": "foxAndGrapes",
+        "name": "The Fox and the Grapes",
+        "description": "Help the fox reach the grapes hanging from the vine.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/foxAndGrapes.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/foxAndGrapes.grid.json"
+    },
+    {
+        "id": "redRidingHood",
+        "urlId": "redRidingHood",
+        "name": "Red Riding Hood",
+        "description": "Help Red walk the path through the forest.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/redRidingHood.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/redRidingHood.grid.json"
+    },
+    {
+        "id": "monkeyAndCrocodile",
+        "urlId": "monkeyAndCrocodile",
+        "name": "The Monkey and the Crocodile",
+        "description": "Help the monkey reach the tree house, dodging the crocodiles.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/monkeyAndCrocodile.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/monkeyAndCrocodile.grid.json"
+    }
+]

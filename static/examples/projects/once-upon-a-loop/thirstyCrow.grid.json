@@ -1,0 +1,646 @@
+{
+  "story": "thirstyCrow",
+  "cols": 10,
+  "rows": 9,
+  "mainCharacter": {
+    "name": "Crow",
+    "col": 2,
+    "row": 7
+  },
+  "goal": {
+    "col": 5,
+    "row": 5
+  },
+  "tiles": [
+    {
+      "col": 0,
+      "row": 8,
+      "x": -172.92,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 8,
+      "x": -129.94,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 8,
+      "x": -87.16,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 8,
+      "x": -44.38,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 8,
+      "x": -1.61,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 8,
+      "x": 40.57,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 8,
+      "x": 82.64,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 8,
+      "x": 125.52,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 8,
+      "x": 169,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 8,
+      "x": 211.58,
+      "y": 134.96,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 7,
+      "x": -172.92,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 7,
+      "x": -129.94,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 7,
+      "x": -86.45,
+      "y": 99.17,
+      "walkable": true
+    },
+    {
+      "col": 3,
+      "row": 7,
+      "x": -44.38,
+      "y": 99.01,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 7,
+      "x": -1.61,
+      "y": 99.01,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 7,
+      "x": 41.88,
+      "y": 99.62,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 7,
+      "x": 82.64,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 7,
+      "x": 125.52,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 7,
+      "x": 169,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 7,
+      "x": 211.58,
+      "y": 99.01,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 6,
+      "x": -172.92,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "x": -130.58,
+      "y": 62.25,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "x": -87.16,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "x": -44.38,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "x": -1.61,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "x": 41.88,
+      "y": 64.05,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "x": 82.64,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "x": 125.52,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "x": 169,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 6,
+      "x": 211.58,
+      "y": 63.36,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "x": -172.92,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "x": -129.94,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "x": -87.16,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "x": -44.38,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "x": -1.61,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "x": 41.88,
+      "y": 28.93,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "x": 82.64,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "x": 125.52,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "x": 169,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 5,
+      "x": 211.58,
+      "y": 27.82,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "x": -172.92,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "x": -129.94,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "x": -87.16,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "x": -44.38,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "x": -1.61,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "x": 40.57,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "x": 82.64,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "x": 125.52,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "x": 169,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 4,
+      "x": 211.58,
+      "y": -7.43,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "x": -172.92,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "x": -129.94,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "x": -87.16,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "x": -44.38,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "x": -1.61,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "x": 40.57,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "x": 82.64,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "x": 125.52,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "x": 169,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 3,
+      "x": 211.58,
+      "y": -42.38,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "x": -172.92,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "x": -129.94,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "x": -87.16,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "x": -44.38,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "x": -1.61,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "x": 40.57,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "x": 82.64,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "x": 125.52,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "x": 169,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 2,
+      "x": 211.58,
+      "y": -77.62,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "x": -172.92,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "x": -129.94,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "x": -87.16,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "x": -44.38,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "x": -1.61,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "x": 40.57,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "x": 82.64,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 1,
+      "x": 125.52,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "x": 169,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 1,
+      "x": 211.58,
+      "y": -112.87,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 0,
+      "x": -172.92,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "x": -129.94,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "x": -87.16,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "x": -44.38,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "x": -1.61,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "x": 40.57,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "x": 82.64,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 0,
+      "x": 125.52,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "x": 169,
+      "y": -147.31,
+      "walkable": false
+    },
+    {
+      "col": 9,
+      "row": 0,
+      "x": 211.58,
+      "y": -147.31,
+      "walkable": false
+    }
+  ]
+}
