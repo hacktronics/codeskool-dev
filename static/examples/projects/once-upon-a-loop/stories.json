@@ -32,6 +32,22 @@
         "grid": "/static/examples/projects/once-upon-a-loop/snakesAndLadders.grid.json"
     },
     {
+        "id": "gooseAndGoldenEgg",
+        "urlId": "gooseAndGoldenEgg",
+        "name": "The Goose and the Golden Egg",
+        "description": "Help the farmer collect the golden eggs without losing patience.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/gooseAndGoldenEgg.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/gooseAndGoldenEgg.grid.json"
+    },
+    {
+        "id": "antAndGrasshopper",
+        "urlId": "antAndGrasshopper",
+        "name": "The Ant and the Grasshopper",
+        "description": "Help the ant gather food before winter while the grasshopper plays.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/antAndGrasshopper.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/antAndGrasshopper.grid.json"
+    },
+    {
         "id": "redRidingHood",
         "urlId": "redRidingHood",
         "name": "Red Riding Hood",

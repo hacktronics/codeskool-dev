@@ -1,0 +1,457 @@
+{
+  "story": "antAndGrasshopper",
+  "cols": 9,
+  "rows": 7,
+  "mainCharacter": {
+    "name": "Ant",
+    "col": 0,
+    "row": 5
+  },
+  "goal": {
+    "col": 7,
+    "row": 0
+  },
+  "tiles": [
+    {
+      "col": 0,
+      "row": 6,
+      "x": -207.58,
+      "y": 155.46,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 6,
+      "x": -148.14,
+      "y": 151.86,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 6,
+      "x": -94.56,
+      "y": 151.86,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 6,
+      "x": -39.62,
+      "y": 151.86,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 6,
+      "x": 11.26,
+      "y": 150.96,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 6,
+      "x": 65.74,
+      "y": 150.51,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 6,
+      "x": 115.27,
+      "y": 151.86,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 6,
+      "x": 165.7,
+      "y": 152.31,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 6,
+      "x": 214.33,
+      "y": 153.21,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 5,
+      "x": -199.02,
+      "y": 101.88,
+      "walkable": true
+    },
+    {
+      "col": 1,
+      "row": 5,
+      "x": -144.09,
+      "y": 101.43,
+      "walkable": true
+    },
+    {
+      "col": 2,
+      "row": 5,
+      "x": -88.71,
+      "y": 100.98,
+      "walkable": true
+    },
+    {
+      "col": 3,
+      "row": 5,
+      "x": -31.52,
+      "y": 103.23,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 5,
+      "x": 15.31,
+      "y": 100.98,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 5,
+      "x": 65.74,
+      "y": 97.82,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 5,
+      "x": 114.37,
+      "y": 95.57,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 5,
+      "x": 164.35,
+      "y": 96.02,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 5,
+      "x": 212.98,
+      "y": 98.72,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 4,
+      "x": -206.23,
+      "y": 46.49,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 4,
+      "x": -149.49,
+      "y": 47.39,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 4,
+      "x": -92.76,
+      "y": 46.04,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 4,
+      "x": -40.08,
+      "y": 45.14,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 4,
+      "x": 15.31,
+      "y": 50.09,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 4,
+      "x": 63.94,
+      "y": 43.79,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 4,
+      "x": 115.72,
+      "y": 46.04,
+      "walkable": false
+    },
+    {
+      "col": 7,
+      "row": 4,
+      "x": 164.35,
+      "y": 46.94,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 4,
+      "x": 213.33,
+      "y": 51.43,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 3,
+      "x": -205.33,
+      "y": -1.69,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 3,
+      "x": -150.84,
+      "y": -4.39,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 3,
+      "x": -93.66,
+      "y": -6.19,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 3,
+      "x": -40.08,
+      "y": -7.09,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 3,
+      "x": 15.31,
+      "y": 3.71,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 3,
+      "x": 69.34,
+      "y": 3.71,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 3,
+      "x": 117.97,
+      "y": 0.11,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 3,
+      "x": 165.7,
+      "y": -3.49,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 3,
+      "x": 212.98,
+      "y": -4.39,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 2,
+      "x": -205.78,
+      "y": -51.22,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 2,
+      "x": -149.04,
+      "y": -56.62,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 2,
+      "x": -94.11,
+      "y": -53.92,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 2,
+      "x": -40.08,
+      "y": -57.07,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 2,
+      "x": 11.26,
+      "y": -57.52,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 2,
+      "x": 63.04,
+      "y": -57.07,
+      "walkable": false
+    },
+    {
+      "col": 6,
+      "row": 2,
+      "x": 117.97,
+      "y": -48.97,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 2,
+      "x": 164.35,
+      "y": -54.37,
+      "walkable": false
+    },
+    {
+      "col": 8,
+      "row": 2,
+      "x": 213.88,
+      "y": -54.82,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 1,
+      "x": -206.23,
+      "y": -104.8,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 1,
+      "x": -149.49,
+      "y": -104.8,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 1,
+      "x": -92.31,
+      "y": -106.15,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 1,
+      "x": -33.77,
+      "y": -99.85,
+      "walkable": true
+    },
+    {
+      "col": 4,
+      "row": 1,
+      "x": 18.46,
+      "y": -97.6,
+      "walkable": true
+    },
+    {
+      "col": 5,
+      "row": 1,
+      "x": 68.89,
+      "y": -102.1,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 1,
+      "x": 117.97,
+      "y": -101.65,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 1,
+      "x": 168.86,
+      "y": -100.3,
+      "walkable": true
+    },
+    {
+      "col": 8,
+      "row": 1,
+      "x": 213.33,
+      "y": -102.86,
+      "walkable": false
+    },
+    {
+      "col": 0,
+      "row": 0,
+      "x": -208.03,
+      "y": -155.68,
+      "walkable": false
+    },
+    {
+      "col": 1,
+      "row": 0,
+      "x": -148.14,
+      "y": -156.14,
+      "walkable": false
+    },
+    {
+      "col": 2,
+      "row": 0,
+      "x": -94.11,
+      "y": -154.78,
+      "walkable": false
+    },
+    {
+      "col": 3,
+      "row": 0,
+      "x": -38.27,
+      "y": -155.23,
+      "walkable": false
+    },
+    {
+      "col": 4,
+      "row": 0,
+      "x": 10.81,
+      "y": -154.33,
+      "walkable": false
+    },
+    {
+      "col": 5,
+      "row": 0,
+      "x": 69.79,
+      "y": -146.68,
+      "walkable": true
+    },
+    {
+      "col": 6,
+      "row": 0,
+      "x": 113.92,
+      "y": -147.13,
+      "walkable": true
+    },
+    {
+      "col": 7,
+      "row": 0,
+      "x": 167.05,
+      "y": -148.48,
+      "walkable": true
+    },
+    {
+      "col": 8,
+      "row": 0,
+      "x": 211.63,
+      "y": -153.43,
+      "walkable": false
+    }
+  ]
+}
