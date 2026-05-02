@@ -1,6 +1,24 @@
 {
     "steps": [
         {
+            "title": "How a Webpage Really Works",
+            "image": "/static/tutorials/steps/htmlHelloIntro.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.intro",
+                "default": "Every webpage on the internet — Google, YouTube, your friend's page — is HTML code under the hood. The browser reads that code and draws the page. Right-click any webpage and pick View Page Source to see it for yourself."
+            }
+        },
+        {
+            "title": "What Are These Blocks?",
+            "image": "/static/tutorials/steps/htmlHelloBlocksConcept.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.blocksConcept",
+                "default": "The HTML blocks you're about to use are a CodeSkool helper. Snap them together like LEGO and they generate the real HTML code for you — no typing angle brackets, no missing closing tags. The HTML tab on the right will show the code your blocks made; the View tab shows what the browser draws from that code."
+            }
+        },
+        {
             "title": "Click Add Extension",
             "image": "/static/tutorials/steps/htmlHelloExtLibrary.webp",
             "narration": {

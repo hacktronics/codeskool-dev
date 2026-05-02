@@ -1,66 +1,25 @@
 {
     "steps": [
         {
-            "title": "Drag the <html> Block",
-            "image": "/static/tutorials/steps/htmlCssIntroHtml.webp",
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlCssIntroBoilerplate.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
-                "id": "gui.tutorials.htmlCssIntro.dragHtml",
-                "default": "Now back to the workspace. Drag the html block to start your page."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_html"
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the <head> Block",
-            "image": "/static/tutorials/steps/htmlCssIntroHead.webp",
-            "imageFocus": {
-                "x": 50,
-                "y": 50,
-                "zoom": 1
-            },
-            "narration": {
-                "id": "gui.tutorials.htmlCssIntro.dragHead",
-                "default": "Snap the head block under html. CSS rules will live inside the head."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_head"
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the <body> Block",
-            "image": "/static/tutorials/steps/htmlCssIntroBody.webp",
-            "imageFocus": {
-                "x": 50,
-                "y": 50,
-                "zoom": 1
-            },
-            "narration": {
-                "id": "gui.tutorials.htmlCssIntro.dragBody",
-                "default": "Snap the body block under head."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_body"
-            },
-            "validate": true
+                "id": "gui.tutorials.html_css_intro.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
         },
         {
             "title": "Add a Heading to Style",
             "image": "/static/tutorials/steps/htmlCssIntroHeading.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.heading",
@@ -75,9 +34,9 @@
             "title": "Add a Style Block",
             "image": "/static/tutorials/steps/htmlCssIntroStyle.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.style",
@@ -93,9 +52,9 @@
             "title": "Pick the Heading with a Selector",
             "image": "/static/tutorials/steps/htmlCssIntroSelector.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.selector",
@@ -110,9 +69,9 @@
             "title": "Set the Text Colour",
             "image": "/static/tutorials/steps/htmlCssIntroColor.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.color",
@@ -127,9 +86,9 @@
             "title": "Set the Background Colour",
             "image": "/static/tutorials/steps/htmlCssIntroBg.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.bg",
@@ -144,9 +103,9 @@
             "title": "See Your First Style",
             "image": "/static/tutorials/steps/htmlCssIntroView.webp",
             "imageFocus": {
-                "x": 100,
-                "y": 0,
-                "zoom": 2.4
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.viewTab",
@@ -158,9 +117,9 @@
             "title": "How CSS Works",
             "image": "/static/tutorials/steps/htmlCssIntroRecap.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 75,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.recap",

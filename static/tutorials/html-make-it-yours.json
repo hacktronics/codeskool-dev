@@ -1,66 +1,25 @@
 {
     "steps": [
         {
-            "title": "Drag the <html> Block",
-            "image": "/static/tutorials/steps/htmlMakeItYoursHtml.webp",
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlMakeItYoursBoilerplate.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
-                "id": "gui.tutorials.htmlMakeItYours.dragHtml",
-                "default": "Now build the page. Drag the html block to start."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_html"
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the <head> Block",
-            "image": "/static/tutorials/steps/htmlMakeItYoursHead.webp",
-            "imageFocus": {
-                "x": 50,
-                "y": 50,
-                "zoom": 1
-            },
-            "narration": {
-                "id": "gui.tutorials.htmlMakeItYours.dragHead",
-                "default": "Snap the head block under html. The CSS rules will live inside head."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_head"
-            },
-            "validate": true
-        },
-        {
-            "title": "Add the <body> Block",
-            "image": "/static/tutorials/steps/htmlMakeItYoursBody.webp",
-            "imageFocus": {
-                "x": 50,
-                "y": 50,
-                "zoom": 1
-            },
-            "narration": {
-                "id": "gui.tutorials.htmlMakeItYours.dragBody",
-                "default": "Snap the body block under head."
-            },
-            "highlightBlock": {
-                "category": "html5",
-                "blockType": "html5_html5_body"
-            },
-            "validate": true
+                "id": "gui.tutorials.html_make_it_yours.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
         },
         {
             "title": "Build the Header",
             "image": "/static/tutorials/steps/htmlMakeItYoursHeader.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.header",
@@ -75,9 +34,9 @@
             "title": "Build the Hero Section",
             "image": "/static/tutorials/steps/htmlMakeItYoursHero.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.hero",
@@ -92,9 +51,9 @@
             "title": "Style the Header",
             "image": "/static/tutorials/steps/htmlMakeItYoursStyleHeader.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.styleHeader",
@@ -109,9 +68,9 @@
             "title": "Style the Hero",
             "image": "/static/tutorials/steps/htmlMakeItYoursStyleHero.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.styleHero",
@@ -126,9 +85,9 @@
             "title": "Style the Button",
             "image": "/static/tutorials/steps/htmlMakeItYoursStyleBtn.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 55,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.styleBtn",
@@ -143,9 +102,9 @@
             "title": "See Your Styled Site",
             "image": "/static/tutorials/steps/htmlMakeItYoursView.webp",
             "imageFocus": {
-                "x": 100,
-                "y": 0,
-                "zoom": 2.4
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.viewTab",
@@ -157,9 +116,9 @@
             "title": "CSS Classes Make It Yours",
             "image": "/static/tutorials/steps/htmlMakeItYoursRecap.webp",
             "imageFocus": {
-                "x": 50,
+                "x": 75,
                 "y": 50,
-                "zoom": 1
+                "zoom": 1.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItYours.recap",

@@ -1,95 +1,114 @@
 {
     "steps": [
         {
-            "title": "Drag the <html> Block",
-            "image": "/static/tutorials/steps/htmlTablesHtml.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
-            "narration": {
-                "id": "gui.tutorials.htmlTables.dragHtml",
-                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlTablesBoilerplate.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
-            "validate": true
-        },
-        {
-            "title": "Add the <head> Block",
-            "image": "/static/tutorials/steps/htmlTablesHead.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
-                "id": "gui.tutorials.htmlTables.dragHead",
-                "default": "Snap the head block under html. The head holds info about your page."
-            },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
-            "validate": true
-        },
-        {
-            "title": "Add the <body> Block",
-            "image": "/static/tutorials/steps/htmlTablesBody.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
-            "narration": {
-                "id": "gui.tutorials.htmlTables.dragBody",
-                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
-            },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
-            "validate": true
+                "id": "gui.tutorials.html_tables.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
         },
         {
             "title": "Drag a Table",
             "image": "/static/tutorials/steps/htmlTablesTable.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.dragTable",
                 "default": "Drag the table block inside the body. A table holds data in rows and columns."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_table"},
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_table"
+            },
             "validate": true
         },
         {
             "title": "Add the Header Row",
             "image": "/static/tutorials/steps/htmlTablesHeaderRow.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.headerRow",
                 "default": "Drag a tr block inside the table. tr stands for table row — this will be the header row."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_tr"},
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_tr"
+            },
             "validate": true
         },
         {
             "title": "Add Header Cells",
             "image": "/static/tutorials/steps/htmlTablesHeaderCells.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.headerCells",
                 "default": "Drag a th block inside the tr. Drag a text block inside the th and type Name. Then drag another th beside it inside the same tr, drag a text block inside, and type Species. th stands for table header cell."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_th"}
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_th"
+            }
         },
         {
             "title": "Add a Data Row",
             "image": "/static/tutorials/steps/htmlTablesDataRow.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.dataRow",
                 "default": "Drag another tr block below the header row, still inside the table. This will hold one row of data."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_tr"},
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_tr"
+            },
             "validate": true
         },
         {
             "title": "Add Data Cells",
             "image": "/static/tutorials/steps/htmlTablesDataCells.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.dataCells",
                 "default": "Drag a td block inside the second tr. Drag a text block inside it and type Pingu. Then drag another td beside it, drag a text block inside, and type Penguin. td stands for table data cell."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_td"}
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_td"
+            }
         },
         {
             "title": "See Your Table",
             "image": "/static/tutorials/steps/htmlTablesView.webp",
-            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.viewTab",
                 "default": "Click the View tab. Do you see two rows and two columns of data?"
@@ -99,7 +118,11 @@
         {
             "title": "How Tables Work",
             "image": "/static/tutorials/steps/htmlTablesRecap.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.recap",
                 "default": "A table is built from rows. Each tr is a row. Inside each row, th is a header cell and td is a data cell. Tables show data in rows and columns."

@@ -24,6 +24,14 @@
         "grid": "/static/examples/projects/once-upon-a-loop/foxAndGrapes.grid.json"
     },
     {
+        "id": "snakesAndLadders",
+        "urlId": "snakesAndLadders",
+        "name": "Snakes and Ladders",
+        "description": "Climb the ladders, avoid the snakes, reach the top.",
+        "thumbnail": "/static/examples/projects/once-upon-a-loop/thumbnails/snakesAndLadders.webp",
+        "grid": "/static/examples/projects/once-upon-a-loop/snakesAndLadders.grid.json"
+    },
+    {
         "id": "redRidingHood",
         "urlId": "redRidingHood",
         "name": "Red Riding Hood",

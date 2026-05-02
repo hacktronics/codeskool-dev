@@ -1,72 +1,77 @@
 {
     "steps": [
         {
-            "title": "Drag the <html> Block",
-            "image": "/static/tutorials/steps/htmlParagraphsHtml.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
-            "narration": {
-                "id": "gui.tutorials.htmlParagraphs.dragHtml",
-                "default": "Start with the html block — every web page begins this way. Drag it into the workspace."
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlParagraphsBoilerplate.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_html"},
-            "validate": true
-        },
-        {
-            "title": "Add the <head> Block",
-            "image": "/static/tutorials/steps/htmlParagraphsHead.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
-                "id": "gui.tutorials.htmlParagraphs.dragHead",
-                "default": "Snap the head block under html. The head holds info about your page."
-            },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_head"},
-            "validate": true
-        },
-        {
-            "title": "Add the <body> Block",
-            "image": "/static/tutorials/steps/htmlParagraphsBody.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
-            "narration": {
-                "id": "gui.tutorials.htmlParagraphs.dragBody",
-                "default": "Snap the body block under head. Everything visible on your page goes inside the body."
-            },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_body"},
-            "validate": true
+                "id": "gui.tutorials.html_paragraphs.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
         },
         {
             "title": "Your First Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP1.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP1",
                 "default": "Drag a paragraph into the body and type I love adventures."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_paragraph"
+            }
         },
         {
             "title": "Add a Second Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP2.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP2",
                 "default": "Drag another paragraph below the first one inside the body. Type I want to explore new places."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_paragraph"
+            }
         },
         {
             "title": "Add a Third Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP3.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP3",
                 "default": "Add one more paragraph below the second one inside the body. Type Tomorrow I will start my journey."
             },
-            "highlightBlock": {"category": "html5", "blockType": "html5_html5_paragraph"}
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_paragraph"
+            }
         },
         {
             "title": "See the Spacing",
             "image": "/static/tutorials/steps/htmlParagraphsView.webp",
-            "imageFocus": {"x": 100, "y": 0, "zoom": 2.4},
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.viewTab",
                 "default": "Click the View tab. Look at the page — are your sentences separated into blocks? Do you see space between them?"
@@ -76,7 +81,11 @@
         {
             "title": "Paragraphs Make Reading Easy",
             "image": "/static/tutorials/steps/htmlParagraphsRecap.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.recap",
                 "default": "Each paragraph is a block of writing. The browser adds space between them so your text is easy to read. Use one paragraph for each idea."
