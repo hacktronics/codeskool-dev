@@ -1149,6 +1149,263 @@ def pen_change_size(change):
     _send(_sprite_name(), 'pen_changePenSizeBy', {'SIZE': change})
 
 
+# ── Draw (module-level) ──────────────────────────────────
+# Declarative shapes on a dedicated stage layer. Coords are top-left
+# origin, y-down (matches Canvas2D / p5.js / every web tutorial), so a
+# kid Googling "draw a rectangle in p5" gets a transferable answer.
+# Colours accept any CSS string ("#00b0f0", "yellow", "rgb(0,128,255)").
+# circle uses RADIUS (CodeGuppy convention), not diameter.
+
+def fill(color):
+    """Set the fill colour for subsequent shapes (CSS colour string)."""
+    _send(_sprite_name(), 'draw_fill', {'COLOR': color})
+
+
+def noFill():
+    """Disable filling — subsequent shapes draw outlined only."""
+    _send(_sprite_name(), 'draw_noFill', {})
+
+
+def stroke(color):
+    """Set the stroke (outline) colour for subsequent shapes."""
+    _send(_sprite_name(), 'draw_stroke', {'COLOR': color})
+
+
+def noStroke():
+    """Disable stroking — subsequent shapes draw filled only."""
+    _send(_sprite_name(), 'draw_noStroke', {})
+
+
+def strokeWeight(w):
+    """Set the stroke thickness in pixels."""
+    _send(_sprite_name(), 'draw_strokeWeight', {'W': w})
+
+
+def rect(x, y, w, h):
+    """Draw a rectangle. (x, y) is the top-left corner."""
+    _send(_sprite_name(), 'draw_rect', {'X': x, 'Y': y, 'W': w, 'H': h})
+
+
+def square(x, y, s):
+    """Draw a square at (x, y) with side length s."""
+    _send(_sprite_name(), 'draw_square', {'X': x, 'Y': y, 'S': s})
+
+
+def circle(x, y, r):
+    """Draw a circle. Third argument is the RADIUS (CodeGuppy convention)."""
+    _send(_sprite_name(), 'draw_circle', {'X': x, 'Y': y, 'R': r})
+
+
+def line(x1, y1, x2, y2):
+    """Draw a straight line between two points."""
+    _send(_sprite_name(), 'draw_line', {'X1': x1, 'Y1': y1, 'X2': x2, 'Y2': y2})
+
+
+def triangle(x1, y1, x2, y2, x3, y3):
+    """Draw a triangle from three points."""
+    _send(_sprite_name(), 'draw_triangle',
+          {'X1': x1, 'Y1': y1, 'X2': x2, 'Y2': y2, 'X3': x3, 'Y3': y3})
+
+
+def background(color):
+    """Paint the whole Draw layer with a colour."""
+    _send(_sprite_name(), 'draw_background', {'COLOR': color})
+
+
+def clear():
+    """Erase everything drawn on the Draw layer."""
+    _send(_sprite_name(), 'draw_clear', {})
+
+
+# Stage 2 — extra primitives + cap/join + free-form polygon builder.
+
+def ellipse(x, y, w, h):
+    """Draw an ellipse. (x, y) is the centre, (w, h) the bounding box."""
+    _send(_sprite_name(), 'draw_ellipse', {'X': x, 'Y': y, 'W': w, 'H': h})
+
+
+def point(x, y):
+    """Draw a single dot — diameter equals the current strokeWeight."""
+    _send(_sprite_name(), 'draw_point', {'X': x, 'Y': y})
+
+
+def arc(x, y, r, start_deg, end_deg):
+    """Draw a partial circle. Angles in degrees, clockwise from 3 o'clock."""
+    _send(_sprite_name(), 'draw_arc',
+          {'X': x, 'Y': y, 'R': r, 'START': start_deg, 'END': end_deg})
+
+
+def quad(x1, y1, x2, y2, x3, y3, x4, y4):
+    """Draw a quadrilateral from four points."""
+    _send(_sprite_name(), 'draw_quad',
+          {'X1': x1, 'Y1': y1, 'X2': x2, 'Y2': y2,
+           'X3': x3, 'Y3': y3, 'X4': x4, 'Y4': y4})
+
+
+def beginShape():
+    """Start collecting vertices for a free-form polygon."""
+    _send(_sprite_name(), 'draw_beginShape', {})
+
+
+def vertex(x, y):
+    """Add a vertex to the polygon currently being built."""
+    _send(_sprite_name(), 'draw_vertex', {'X': x, 'Y': y})
+
+
+def endShape():
+    """Close and render the polygon built with beginShape / vertex."""
+    _send(_sprite_name(), 'draw_endShape', {})
+
+
+def strokeCap(cap):
+    """Set the line-end style ('butt' | 'round' | 'square')."""
+    _send(_sprite_name(), 'draw_strokeCap', {'CAP': cap})
+
+
+def strokeJoin(join):
+    """Set the line-corner style ('miter' | 'round' | 'bevel')."""
+    _send(_sprite_name(), 'draw_strokeJoin', {'JOIN': join})
+
+
+# Stage 2 — colour helpers. Pure Python — return CSS strings consumable
+# by fill / stroke / background. No round-trip to the main thread.
+
+def rgb(r, g, b):
+    """Build a CSS rgb() colour string from 0-255 components."""
+    def _c(v):
+        return max(0, min(255, int(round(float(v)))))
+    return f"rgb({_c(r)}, {_c(g)}, {_c(b)})"
+
+
+def rgba(r, g, b, a):
+    """Build a CSS rgba() colour string. a is 0.0-1.0."""
+    def _c(v):
+        return max(0, min(255, int(round(float(v)))))
+    ac = max(0.0, min(1.0, float(a)))
+    return f"rgba({_c(r)}, {_c(g)}, {_c(b)}, {ac})"
+
+
+def hsl(h, s, l):
+    """Build a CSS hsl() colour string. h is degrees, s/l are percent (0-100)."""
+    return f"hsl({float(h)}, {float(s)}%, {float(l)}%)"
+
+
+# Stage 3 — text.
+
+def text(s, x, y):
+    """Draw a string at (x, y) using the current fill / stroke / textSize / textFont state."""
+    _send(_sprite_name(), 'draw_text', {'STR': str(s), 'X': x, 'Y': y})
+
+
+def textSize(size):
+    """Set the text size (font height) in pixels."""
+    _send(_sprite_name(), 'draw_textSize', {'SIZE': size})
+
+
+def textFont(font):
+    """Set the text font family (any CSS font-family string)."""
+    _send(_sprite_name(), 'draw_textFont', {'FONT': font})
+
+
+def textAlign(h, v='top'):
+    """Set horizontal ('left'|'center'|'right') and vertical ('top'|'middle'|'bottom') alignment."""
+    _send(_sprite_name(), 'draw_textAlign', {'H': h, 'V': v})
+
+
+def textWidth(s):
+    """Return the rendered width of the string in pixels at the current text size + font."""
+    return _parse_val(_send(_sprite_name(), 'draw_textWidth', {'STR': str(s)}))
+
+
+# Stage 4 — transforms.
+
+def push():
+    """Save current transform + style state. Pair with pop()."""
+    _send(_sprite_name(), 'draw_push', {})
+
+
+def pop():
+    """Restore the state saved by the most recent push()."""
+    _send(_sprite_name(), 'draw_pop', {})
+
+
+def translate(x, y):
+    """Move the drawing origin by (x, y)."""
+    _send(_sprite_name(), 'draw_translate', {'X': x, 'Y': y})
+
+
+def rotate(a):
+    """Rotate subsequent drawing (degrees by default; switch via angleMode())."""
+    _send(_sprite_name(), 'draw_rotate', {'A': a})
+
+
+def scale(sx, sy=None):
+    """Scale subsequent drawing. If sy is omitted, scales uniformly."""
+    if sy is None:
+        sy = sx
+    _send(_sprite_name(), 'draw_scale', {'SX': sx, 'SY': sy})
+
+
+def resetMatrix():
+    """Reset the transform matrix to identity."""
+    _send(_sprite_name(), 'draw_resetMatrix', {})
+
+
+def angleMode(mode):
+    """Switch angle interpretation between 'DEGREES' (default) and 'RADIANS'."""
+    _send(_sprite_name(), 'draw_angleMode', {'MODE': mode})
+
+
+# True while any mouse button is currently held down. New capability —
+# codeskool didn't expose sensing_mousedown before; mouse_x() and
+# mouse_y() were already there.
+
+def mouse_is_pressed():
+    """True while any mouse button is currently held down."""
+    return _parse_val(_send(_sprite_name(), 'sensing_mousedown', {})) is True
+
+
+# Collision detection. Pure Python — no round-trip needed.
+
+def collisionPointCircle(px, py, cx, cy, cr):
+    dx, dy = px - cx, py - cy
+    return (dx * dx + dy * dy) <= (cr * cr)
+
+
+def collisionCircleCircle(c1x, c1y, c1r, c2x, c2y, c2r):
+    dx, dy = c1x - c2x, c1y - c2y
+    r = c1r + c2r
+    return (dx * dx + dy * dy) <= (r * r)
+
+
+def collisionPointRect(px, py, rx, ry, rw, rh):
+    return rx <= px <= rx + rw and ry <= py <= ry + rh
+
+
+def collisionRectRect(r1x, r1y, r1w, r1h, r2x, r2y, r2w, r2h):
+    return not (r1x + r1w < r2x or r2x + r2w < r1x or
+                r1y + r1h < r2y or r2y + r2h < r1y)
+
+
+def collisionCircleRect(cx, cy, cr, rx, ry, rw, rh):
+    tx = max(rx, min(cx, rx + rw))
+    ty = max(ry, min(cy, ry + rh))
+    dx, dy = cx - tx, cy - ty
+    return (dx * dx + dy * dy) <= (cr * cr)
+
+
+def collisionPointLine(px, py, x1, y1, x2, y2, tolerance=1):
+    A, B, C, D = px - x1, py - y1, x2 - x1, y2 - y1
+    dot = A * C + B * D
+    len2 = C * C + D * D
+    t = 0 if len2 == 0 else dot / len2
+    t = max(0, min(1, t))
+    proj_x = x1 + t * C
+    proj_y = y1 + t * D
+    dx, dy = px - proj_x, py - proj_y
+    return (dx * dx + dy * dy) <= (tolerance * tolerance)
+
+
 # ── input() override ─────────────────────────────────────
 
 def input(prompt=''):
