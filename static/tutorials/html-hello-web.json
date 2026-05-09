@@ -6,7 +6,16 @@
             "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
                 "id": "gui.tutorials.htmlHello.intro",
-                "default": "Every webpage on the internet — Google, YouTube, your friend's page — is HTML code under the hood. The browser reads that code and draws the page. Right-click any webpage and pick View Page Source to see it for yourself."
+                "default": "Every webpage on the internet — Google, YouTube, your friend's page — is HTML code under the hood. The browser reads that code and draws the page. Right-click any webpage and pick View Page Source to see it for yourself. Browsers like Chrome, Firefox, Safari, and Edge are different programs, but they all read the same HTML — that's why we call HTML a web STANDARD. HTML itself was invented in 1989 by Tim Berners-Lee at CERN, the science lab. Same idea, same shape, still running the modern internet."
+            }
+        },
+        {
+            "title": "Where the HTML Lives",
+            "image": "/static/tutorials/steps/htmlIntro_clientServer.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.clientServer",
+                "default": "When you type youtube.com into your browser, the browser sends a quick message to a faraway computer that's always switched on — that computer is called a SERVER. The server has all of YouTube's HTML files saved on it. It sends one back to your browser. Your browser reads that HTML and draws the page on your screen. Every site works this way — Google, your school's website, your favourite game site. CodeSkool is special — your HTML lives RIGHT HERE in this editor while you build it. Once your page is done you can save it and put it on a real server too — and then anyone in the world can visit it."
             }
         },
         {
@@ -16,6 +25,15 @@
             "narration": {
                 "id": "gui.tutorials.htmlHello.blocksConcept",
                 "default": "The HTML blocks you're about to use are a CodeSkool helper. Snap them together like LEGO and they generate the real HTML code for you — no typing angle brackets, no missing closing tags. The HTML tab on the right will show the code your blocks made; the View tab shows what the browser draws from that code."
+            }
+        },
+        {
+            "title": "Open. Close. The Stuff in Between.",
+            "image": "/static/tutorials/steps/htmlTagAnatomy.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.tagAnatomy",
+                "default": "Every HTML tag has three parts — the OPEN tag, the CLOSE tag, and the STUFF you put between. The blocks you will use shape themselves around the stuff. Watch — every C-shape block IS one tag with a slot for what is inside. Open at the top, close at the bottom, the slot in the middle."
             }
         },
         {
@@ -126,11 +144,7 @@
         {
             "title": "Add <title> and Set Text",
             "image": "/static/tutorials/steps/htmlHelloAddTitle.webp",
-            "imageFocus": {
-                "x": 37,
-                "y": 54,
-                "zoom": 2.9
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "narration": {
                 "id": "gui.tutorials.htmlHello.addTitle",
                 "default": "Drag the title block inside the head block. Click the text field and type Hello Web. This text appears in the browser tab."
@@ -138,6 +152,15 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_title"
+            }
+        },
+        {
+            "title": "Where the Title Actually Shows",
+            "image": "/static/tutorials/steps/htmlHelloBrowserTab.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.titleInBrowserTab",
+                "default": "The title tag is special. Its text does NOT appear on the page itself — it appears in the BROWSER TAB at the very top of the window. That's how you name your page."
             }
         },
         {
@@ -195,15 +218,20 @@
         {
             "title": "See the Generated HTML",
             "image": "/static/tutorials/steps/htmlHelloHTMLTab.webp",
-            "imageFocus": {
-                "x": 100,
-                "y": 1,
-                "zoom": 1.9
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "highlightUI": "htmlTab",
             "narration": {
                 "id": "gui.tutorials.htmlHello.htmlTab",
                 "default": "Click the HTML tab on the right panel. You can see the real HTML code that your blocks have generated!"
+            }
+        },
+        {
+            "title": "Open Tag, Content, Close Tag",
+            "image": "/static/tutorials/steps/htmlHelloHtmlTabAnnotated.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlHello.htmlTabAnnotated",
+                "default": "Look at the real HTML your blocks made. Every C-shape block became ONE tag pair — an open tag with angle brackets, your content in the middle, and a matching close tag with a slash. Same shape, every time."
             }
         },
         {

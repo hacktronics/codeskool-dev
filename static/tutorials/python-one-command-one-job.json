@@ -15,7 +15,7 @@
         },
         {
             "title": "Define a calculator that returns two values",
-            "image": "/static/tutorials/steps/pythonOneCommandOneJob_02_def.webp",
+            "image": "/static/tutorials/steps/pyOneCommandOneJob_02_pairPack.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandOneJob.def",
                 "default": "Type:\n\ndef calculate(a, b):\n    return a + b, a * b\n\nLook at the return — there are TWO values separated by a comma. Python wraps them up together as a pair. The function still hands ONE thing back; that one thing just happens to contain both values. We'll see how to take them apart on the next line."
@@ -27,14 +27,14 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "Call and unpack",
-            "image": "/static/tutorials/steps/pythonOneCommandOneJob_03_unpack.webp",
+            "image": "/static/tutorials/steps/pyOneCommandOneJob_03_unpack.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandOneJob.unpack",
                 "default": "Below, type:\n\nsum_result, product_result = calculate(5, 3)\n\nThe two names on the left, separated by a comma, are unpacking. Python takes the pair returned by calculate and puts the first value into sum_result, the second into product_result. This is called tuple unpacking — and it works any time a function returns multiple values."
@@ -46,9 +46,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

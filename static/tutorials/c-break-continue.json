@@ -1,0 +1,64 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 10; i++) {\n        if (i == 5) {\n            break;\n        }\n        if (i % 2 == 0) {\n            continue;\n        }\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Steering inside a loop",
+            "image": "/static/tutorials/steps/cBreakCont_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cBreakCont.intro",
+                "default": "Sometimes inside a loop you want to STOP the whole loop EARLY (before the condition naturally becomes false), or SKIP the rest of the current pass and jump to the next one. C gives you two special keywords for these: break (exit the loop completely) and continue (skip to the next pass). Scratch had \"stop this script\" inside a forever block — that's like break. Today you'll see both used together: break out at i=5, and skip even numbers with continue."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "break leaves the loop",
+            "image": "/static/tutorials/steps/cBreakCont_02_break.webp",
+            "narration": {
+                "id": "gui.tutorials.cBreakCont.break",
+                "default": "Lines 5 to 7: if (i == 5) { break; }. The moment i is 5, break fires and the WHOLE loop exits — the rest of the loop body is skipped, and so are all future iterations. Useful for \"I found what I was looking for, no need to keep searching\" — like checking 100 names for a match and stopping the moment you find one. Without break, you'd either keep looking after success or have to add complicated condition tracking."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "continue skips to the next pass",
+            "image": "/static/tutorials/steps/cBreakCont_03_continue.webp",
+            "narration": {
+                "id": "gui.tutorials.cBreakCont.continue",
+                "default": "Lines 8 to 10: if (i % 2 == 0) { continue; }. Remember % from the arithmetic chapter? i % 2 is 0 for even numbers and 1 for odd. So this if reads \"if i is even\". When continue fires, C SKIPS the rest of the loop body for THIS pass and jumps straight to the next iteration — the printf below NEVER runs for even values. Use continue when you want to SKIP certain inputs but keep going."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 10
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — predict the output",
+            "image": "/static/tutorials/steps/cBreakCont_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cBreakCont.run",
+                "default": "Trace pass by pass. i=1: not 5, odd → print 1. i=2: not 5, even → continue (skip print). i=3: not 5, odd → print 3. i=4: not 5, even → continue. i=5: equals 5 → BREAK → loop ends. Click Run. The Console shows just two numbers: 1 and 3. break and continue together let you express \"skip these, stop at that\" in one short loop — a powerful pattern."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

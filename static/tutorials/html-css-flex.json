@@ -14,6 +14,15 @@
             }
         },
         {
+            "title": "Stacked vs Side by Side",
+            "image": "/static/tutorials/steps/htmlCssFlexDisplay.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.stackedVsRow",
+                "default": "By default, divs and other block elements STACK on top of each other — one per line, top to bottom. That is what you have seen so far. Today you will meet display: flex — a CSS power that arranges them SIDE BY SIDE in a row instead. Same boxes, different layout."
+            }
+        },
+        {
             "title": "Add a Row Container",
             "image": "/static/tutorials/steps/htmlCssFlexRow.webp",
             "imageFocus": {
@@ -101,7 +110,7 @@
         },
         {
             "title": "Turn It Into a Flex Row",
-            "image": "/static/tutorials/steps/htmlCssFlexDisplay.webp",
+            "image": "/static/tutorials/steps/htmlCssFlexStackedVsRow.webp",
             "imageFocus": {
                 "x": 55,
                 "y": 50,
@@ -117,13 +126,18 @@
             }
         },
         {
+            "title": "Stacked vs Side by Side",
+            "image": "/static/tutorials/steps/htmlCssFlexStackedVsRow.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.stackedVsRowVisual",
+                "default": "Without display: flex, divs stack on top of each other — one per line, top to bottom. Add display: flex to the parent and they switch to side by side in a row. Same boxes, different layout."
+            }
+        },
+        {
             "title": "Add a Gap Between Cards",
             "image": "/static/tutorials/steps/htmlCssFlexGap.webp",
-            "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "narration": {
                 "id": "gui.tutorials.htmlCssFlex.gap",
                 "default": "Drag a gap block inside the selector. Replace 10 pixels with 20 pixels. Gap is the breathing room between flex items."
@@ -131,6 +145,15 @@
             "highlightBlock": {
                 "category": "css",
                 "blockType": "css_css_gap"
+            }
+        },
+        {
+            "title": "Gap Visual",
+            "image": "/static/tutorials/steps/htmlCssFlexGapVisual.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssFlex.gapConcept",
+                "default": "Gap is the breathing room BETWEEN flex children. With gap: 20 pixels, every pair of neighbours gets 20 pixels of space — no matter how many children, no extra code."
             }
         },
         {
@@ -166,7 +189,7 @@
         },
         {
             "title": "How Flexbox Works",
-            "image": "/static/tutorials/steps/htmlCssFlexRecap.webp",
+            "image": "/static/tutorials/steps/htmlCssFlexStackedVsRow.webp",
             "imageFocus": {
                 "x": 75,
                 "y": 50,

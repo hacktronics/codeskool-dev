@@ -21,7 +21,7 @@
         },
         {
             "title": "Write the save function",
-            "image": "/static/tutorials/steps/pythonSaveYourData_03_saveFunction.webp",
+            "image": "/static/tutorials/steps/pySaveData_03_writeReadModes.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSaveYourData.saveFunction",
                 "default": "Type the first function:\n\ndef save_score(score):\n    file = open(\"score.txt\", \"w\")\n    file.write(str(score))\n    file.close()\n\nopen is standard Python — it asks Python to open a file. The first piece is the filename, the second is the mode. The mode \"w\" means WRITE — make a fresh file (or replace the old one). file.write puts the score into the file as text — note str(score), because files only hold text. file.close finishes the work and lets Python release the file. Three lines: open, write, close."
@@ -41,7 +41,7 @@
         },
         {
             "title": "Start the menu loop",
-            "image": "/static/tutorials/steps/pythonSaveYourData_05_menuLoop.webp",
+            "image": "/static/tutorials/steps/pySaveData_05_menuLoopFlow.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSaveYourData.menuLoop",
                 "default": "Below the functions (no indent), type:\n\nwhile True:\n    print(\"1. Save\")\n    print(\"2. Load\")\n    print(\"3. Exit\")\n\n    choice = input(\"Choose: \")\n\nwhile True is the loop-forever pattern you met with break. Each turn, print a three-option menu, ask the kid to choose. The if/elif/else below will route them to the right action."

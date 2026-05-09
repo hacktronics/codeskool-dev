@@ -15,7 +15,7 @@
         },
         {
             "title": "Define total with *args",
-            "image": "/static/tutorials/steps/pythonHandleAnyNumberOfInputs_02_starArgs.webp",
+            "image": "/static/tutorials/steps/pyHandleAnyInputs_02_argsHopper.webp",
             "narration": {
                 "id": "gui.tutorials.pythonHandleAnyNumberOfInputs.starArgs",
                 "default": "Type:\n\ndef total(*numbers):\n    result = 0\n    for n in numbers:\n        result = result + n\n    return result\n\nThe star * is what's new. *numbers tells Python: \"collect every argument that gets passed and put them all into a list called numbers\". Inside the function, you treat numbers like any other list — for n in numbers loops over them, and we add each one onto result."
@@ -27,9 +27,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

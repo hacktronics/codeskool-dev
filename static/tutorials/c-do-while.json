@@ -1,0 +1,59 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int n = 10;\n    do {\n        printf(\"n is %d\\n\", n);\n        n--;\n    } while (n > 5);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Run it at LEAST once",
+            "image": "/static/tutorials/steps/cDoWhile_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cDoWhile.why",
+                "default": "Both while and for check the condition BEFORE running the body for the first time. If the condition is already false at the start, the body NEVER RUNS. Sometimes you need the opposite: run the body at least ONCE, THEN check whether to do it again. That's where do-while comes in. The body runs first, the condition is checked AFTER. This shape fits situations like menus (\"show the menu, read input, ask again if invalid\") where the first action — showing the menu — must happen no matter what."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "do { body } while (condition);",
+            "image": "/static/tutorials/steps/cDoWhile_02_loop.webp",
+            "narration": {
+                "id": "gui.tutorials.cDoWhile.loop",
+                "default": "Lines 5 to 8 are the do-while loop. The shape: do { body; } while (condition); — note the SEMICOLON after the closing parenthesis on the while line. (Regular while loops don't have a semicolon there — only do-while does.) The body runs first, no matter what. Then the condition is checked. If true, jump back and do it again. If false, exit. Inside the body, n-- is critical — without it the loop would run forever, just like with regular while."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Run — counts down 10 to 6",
+            "image": "/static/tutorials/steps/cDoWhile_03_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cDoWhile.run",
+                "default": "Trace it: n=10, run body (print \"n is 10\", n becomes 9), check 9>5 true → loop again. Run body (print \"n is 9\", n becomes 8), check 8>5 true → again. ... Run body (print \"n is 6\", n becomes 5), check 5>5 FALSE → exit. Click Run. Console shows 10, 9, 8, 7, 6 — the body ran five times. Notice the body printed n BEFORE n was decremented — that's why we see 10 first, not 9."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "When to choose do-while",
+            "image": "/static/tutorials/steps/cDoWhile_04_useCase.webp",
+            "narration": {
+                "id": "gui.tutorials.cDoWhile.useCase",
+                "default": "A real-world example: a menu. \"Pick a number 1 to 9: \" — show the menu, read input, check if it's valid; if not, ask again. The \"show the menu\" step has to happen at LEAST once before you can ask anything. With a regular while loop, you'd have to print the menu once before the loop AND inside the loop — repeating yourself. With do-while, the print is just inside the body and runs naturally on the first pass. Use do-while whenever the body MUST execute at least once. For everything else, regular while or for is more common."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

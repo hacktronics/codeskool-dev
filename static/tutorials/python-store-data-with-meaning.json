@@ -26,10 +26,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Make a student dictionary — Visual",
+            "image": "/static/tutorials/steps/pyDict_02_filingCabinet.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonStoreDataWithMeaning.filingCabinet",
+                "default": "A dictionary is like a filing cabinet — each entry has a labelled key and the value tucked behind it. Curly braces hold it all together, and the key tells you where to find each value."
             }
         },
         {

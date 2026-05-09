@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int age = 15;\n    int hasTicket = 1;\n    if (age >= 13 && hasTicket) {\n        printf(\"You can enter.\\n\");\n    }\n    if (age < 5 || age > 65) {\n        printf(\"Free entry.\\n\");\n    }\n    if (!hasTicket) {\n        printf(\"Buy a ticket first.\\n\");\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Smart conditions",
+            "image": "/static/tutorials/steps/cLogic_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cLogic.intro",
+                "default": "So far your conditions have been simple — one comparison at a time. But real-world rules are often \"BOTH this AND that\" or \"EITHER this OR that\". Scratch had three green hexagon blocks for combining conditions: \"and\", \"or\", and \"not\". C uses SYMBOLS instead: && (and), || (or), ! (not). Same job, shorter to type. Today you'll see all three on a movie-theater example: must be 13+ AND have a ticket; under 5 OR over 65 = free; if NOT have a ticket, buy one first."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "&& — both must be true",
+            "image": "/static/tutorials/steps/cLogic_02_and.webp",
+            "narration": {
+                "id": "gui.tutorials.cLogic.and",
+                "default": "Lines 6 to 8 use && which means AND: if (age >= 13 && hasTicket). For the IF to fire, BOTH halves must be true. age is 15, so age >= 13 is true. hasTicket is 1, which counts as true (in C, 0 means false; anything else means true). Both true → the print runs and \"You can enter.\" appears. If EITHER half were false, the print would be skipped. Use && when you need EVERY rule to be satisfied at once. Read && out loud as \"and\" — it makes the code easier to follow."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "|| — either is enough",
+            "image": "/static/tutorials/steps/cLogic_03_or.webp",
+            "narration": {
+                "id": "gui.tutorials.cLogic.or",
+                "default": "Lines 9 to 11 use || which means OR: if (age < 5 || age > 65). For the IF to fire, AT LEAST ONE half must be true. age is 15. age < 5? No. age > 65? No. Both false → the print is SKIPPED, \"Free entry.\" does not appear. Try changing age to 3 — then age < 5 is true, so the OR is true, and the print fires. The two pipes || are typed by holding Shift and pressing the \\ key (above Enter on most keyboards). Read || out loud as \"or\"."
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "! — flip true and false",
+            "image": "/static/tutorials/steps/cLogic_04_not.webp",
+            "narration": {
+                "id": "gui.tutorials.cLogic.not",
+                "default": "Lines 12 to 14 use ! which means NOT — it FLIPS true to false and false to true: if (!hasTicket). hasTicket is 1 (true), so !hasTicket becomes false → the print is skipped. If you change hasTicket to 0 (no ticket), then !hasTicket becomes true → the print fires. Use ! when you want to act on the OPPOSITE of a condition. A common pattern: if (!isLoggedIn) { ask them to log in; }. Read ! as \"not\" — !x is \"not x\"."
+            },
+            "highlightLine": {
+                "from": 12,
+                "to": 14
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — see which branches fire",
+            "image": "/static/tutorials/steps/cLogic_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cLogic.run",
+                "default": "Trace each line in your head before clicking. age=15, hasTicket=1. (1) && line: 15 >= 13 true AND 1 is true → print runs (\"You can enter.\"). (2) || line: 15 < 5 false OR 15 > 65 false → both false → silent. (3) ! line: !1 is false → silent. So only ONE line should print. Click Run to confirm. Now change hasTicket to 0 and Run again — different lines fire. Try age = 3 with hasTicket = 1, then age = 70 with hasTicket = 1. Each combination triggers a different mix of branches."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

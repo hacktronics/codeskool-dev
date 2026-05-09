@@ -1,0 +1,108 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int nums[5] = {10, 20, 30, 40, 50};\n    int sum = 0;\n    for (int i = 0; i < 5; i++) {\n        printf(\"nums[%d] = %d\\n\", i, nums[i]);\n        sum += nums[i];\n    }\n    printf(\"Sum = %d\\n\", sum);\n    printf(\"Average = %d\\n\", sum / 5);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Walking through arrays",
+            "image": "/static/tutorials/steps/cArrLoop_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.intro",
+                "default": "Arrays plus for loops are the most common combination in all of C. So common that the pattern has a name: \"iterating an array\". The trick is to use the for loop counter (usually i) as the array INDEX. The loop counts 0, 1, 2, 3, 4 — exactly the valid indexes for a 5-slot array. Inside the body you can use nums[i] to grab whichever slot the counter is currently pointing at. Today you'll print every slot AND compute the sum and average — three useful things in one short loop."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Print each item",
+            "image": "/static/tutorials/steps/cArrLoop_02_print.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.print",
+                "default": "Lines 6 to 8: for (int i = 0; i < 5; i++) { print nums[i]; }. The loop counter i goes 0, 1, 2, 3, 4 — exactly the valid indexes. Inside, nums[i] picks the right slot each pass. So pass 1 prints nums[0] (10), pass 2 prints nums[1] (20), and so on. This is the canonical \"print every item\" pattern. Notice the condition is i < 5 (less than) not i <= 5 — because the last valid index is 4, not 5. Common bug: writing i <= 5 walks one slot off the end."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Sum all items with the accumulator pattern",
+            "image": "/static/tutorials/steps/cArrLoop_03_sum.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.sum",
+                "default": "Line 5: int sum = 0; — this BEFORE the loop. Inside the loop body: sum += nums[i]; — adds the current slot to the running total. This is the ACCUMULATOR pattern: start a variable at zero (or sometimes one), then add (or multiply, or count) each item as you walk through the array. Used everywhere — totalling a bill, counting matching items, finding the maximum, computing averages. Once you see this pattern in two or three programs, you'll spot it everywhere."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Average = sum / count",
+            "image": "/static/tutorials/steps/cArrLoop_04_avg.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.avg",
+                "default": "Line 11: sum / 5. Both sum and 5 are int, so this is INTEGER division — drops any decimal. For our numbers (sum = 150 ÷ 5 = 30) it's exact, no decimal lost. But for, say, sum = 23 ÷ 5 = 4 (would-be 4.6 lost the .6). To get the decimal, you'd compute as (float)sum / 5 — that \"casts\" sum to a float so the division is float-division. We'll keep it int for now; just know the trick exists."
+            },
+            "highlightLine": {
+                "from": 11,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Try: find the max",
+            "image": "/static/tutorials/steps/cArrLoop_05_max.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.max",
+                "default": "Challenge: find the LARGEST number in the array. The pattern is similar to accumulator. Add a line BEFORE the loop: int max = nums[0]; — start max at the first element. INSIDE the loop, add: if (nums[i] > max) max = nums[i]; — if the current item beats max, update max. After the loop, print max. Trace: max=10, see 10 (no), 20 (yes, max=20), 30 (yes, max=30), 40 (yes, max=40), 50 (yes, max=50). Final max=50. Same shape as the sum pattern — start somewhere, update as you go."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Run — see five items, sum, average",
+            "image": "/static/tutorials/steps/cArrLoop_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.run",
+                "default": "Click Run. Console: nums[0] = 10, nums[1] = 20, ..., nums[4] = 50, Sum = 150, Average = 30. The for loop did 5 prints AND computed the sum AND the loop ran in microseconds. Real productivity. Try changing the array to {7, 14, 21, 28, 35} and Run again — predictions: each number prints, sum = 105, average = 21."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "The pattern to remember",
+            "image": "/static/tutorials/steps/cArrLoop_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.cArrLoop.recap",
+                "default": "for (int i = 0; i < SIZE; i++) — burn this single line into your muscle memory. It's how you walk every array, every string, every list of anything in C. Hundreds of millions of lines of C code use this exact line shape. Combined with the accumulator pattern (start at 0, add as you go), you have the toolkit for processing any collection of data. Sum, average, count matches, find max, find min — all variations on this same combo."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

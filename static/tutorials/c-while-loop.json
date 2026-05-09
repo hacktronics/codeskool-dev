@@ -1,0 +1,113 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int count = 1;\n    while (count <= 5) {\n        printf(\"Count is %d\\n\", count);\n        count++;\n    }\n    printf(\"Done!\\n\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Doing it again",
+            "image": "/static/tutorials/steps/cWhile_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.intro",
+                "default": "Imagine printing the numbers 1 to 5. You COULD write five separate printf lines — that works but it's ugly. What about 1 to 1000? Or 1 to a million? You need a LOOP — code that repeats. Scratch had three loop blocks: \"repeat (10)\" (do this exactly N times), \"repeat until <condition>\" (keep going UNTIL something becomes true), and \"forever\" (never stop). C's while loop is the closest match to \"repeat until NOT condition\" — it keeps going AS LONG AS the condition stays true. Today you'll write a while loop that prints 1 to 5, then accidentally make a forever loop and learn to escape it."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A counter starting at 1",
+            "image": "/static/tutorials/steps/cWhile_02_counter.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.counter",
+                "default": "Line 4: int count = 1; — a regular int variable. By tradition, C loop counters are usually named i, j, k, or count. The counter holds the CURRENT iteration number — it changes each time around the loop. We start at 1 and plan to stop after 5. Setting the starting value BEFORE the loop is important — the loop will read this variable on the very first check."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "while keeps going while true",
+            "image": "/static/tutorials/steps/cWhile_03_loop.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.loop",
+                "default": "Lines 5 to 8 are the while loop. The shape: while (condition) { body; }. Each pass through the loop, C does this: (1) check the condition. (2) if true, run the body once. (3) jump back to step 1. (4) if false, EXIT the loop and continue with the line after the closing brace. Inside the body, count++ is critical — without it, count would never change, the condition would never become false, and the loop would run FOREVER. The body has two lines: print the current count, then bump count by 1."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Run — trace before clicking",
+            "image": "/static/tutorials/steps/cWhile_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.run",
+                "default": "Trace it step by step in your head before clicking. count=1, check 1<=5 → true, print \"Count is 1\", count becomes 2. count=2, check 2<=5 → true, print \"Count is 2\", count becomes 3. ... eventually count=5, check 5<=5 → true, print \"Count is 5\", count becomes 6. count=6, check 6<=5 → FALSE, exit loop, jump to the printf(\"Done!\") line. Click Run. Console shows: Count is 1, Count is 2, Count is 3, Count is 4, Count is 5, Done!"
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "The forever-loop trap",
+            "image": "/static/tutorials/steps/cWhile_05_infiniteIntro.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.infiniteIntro",
+                "default": "Loops have ONE big trap: if the condition NEVER becomes false, the loop runs FOREVER and your program never stops. The Stop button at the top right (the square icon next to Run) is your safety net — it kills the program when things go wrong. The most common cause of a forever loop is forgetting to update the counter inside the loop body. We're going to break the loop on purpose right now so you know exactly what an infinite loop looks like, and how to recover from one."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Comment out count++ and Run",
+            "image": "/static/tutorials/steps/cWhile_06_runInfinite.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.runInfinite",
+                "default": "Put // at the very start of the count++ line — the // turns it into a comment, and C ignores commented lines. Now count is never updated. Click Run. The Console fills rapidly with \"Count is 1, Count is 1, Count is 1, ...\" forever, because count stays at 1, and 1 <= 5 is always true. Click the Stop button (square icon, top right) to kill it. Now remove the // to restore the count++ line. The takeaway: every while loop needs SOMETHING inside it that eventually makes the condition false. If you forget, you get a forever loop."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Fix it and change the limit",
+            "image": "/static/tutorials/steps/cWhile_07_changeLimit.webp",
+            "narration": {
+                "id": "gui.tutorials.cWhile.changeLimit",
+                "default": "With count++ restored, change the condition to count <= 10 and Run. Now you get 10 lines instead of 5 — the only change was when the loop stops. Try count <= 100 — 100 lines, instant. Try count <= 1000 — 1000 lines, still fast. The loop is doing the same work each pass; only the stopping point changed. This is the power of loops: write the body ONCE, repeat it as many times as you want by changing one number."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

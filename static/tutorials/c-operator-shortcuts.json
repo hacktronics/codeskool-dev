@@ -1,0 +1,100 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int score = 10;\n    score += 5;\n    printf(\"After +=5: %d\\n\", score);\n    score -= 2;\n    printf(\"After -=2: %d\\n\", score);\n    score++;\n    printf(\"After ++: %d\\n\", score);\n    score--;\n    printf(\"After --: %d\\n\", score);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Smart shortcuts",
+            "image": "/static/tutorials/steps/cShort_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.why",
+                "default": "In Scratch, the \"change [score] by 1\" block was a single drag — quick, easy. The long way in C would be: score = score + 1; — that works but it's ugly when you do it dozens of times. C gives you SHORTCUTS that mean exactly the same thing in fewer characters. The shortcuts are: += (add and store), -= (subtract and store), *= (multiply and store), /= (divide and store), ++ (add 1), -- (subtract 1). Today you'll see all four of the most common ones used on a single score variable. Once you learn these, you'll see them in pretty much every C program you ever read."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "+= adds and stores",
+            "image": "/static/tutorials/steps/cShort_02_plusEquals.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.plusEq",
+                "default": "Line 5: score += 5; — this is exactly the same as writing score = score + 5; just shorter. Read it as \"increase score by 5\" or \"score plus-equals 5\". After this line runs, score holds 15 (it was 10, plus 5). The same pattern works for any operation: -= subtracts, *= multiplies, /= divides. So count *= 2; doubles count, total /= 4; quarters total, etc. Use these shortcuts everywhere — they're standard C style and other programmers expect to see them."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "-= subtracts and stores",
+            "image": "/static/tutorials/steps/cShort_03_minusEquals.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.minusEq",
+                "default": "Line 7: score -= 2; — same shape as +=, opposite direction. score was 15, subtract 2, now it's 13. In Scratch you'd use \"change [lives] by -1\" when the player lost a life — same idea. Useful for scoring penalties, countdowns, paying for items in a game shop, anywhere a number needs to drop."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "++ adds 1",
+            "image": "/static/tutorials/steps/cShort_04_plusPlus.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.plusPlus",
+                "default": "Line 9: score++; — adds exactly 1 to score. This shortcut is so famous that the language C++ is named after it (C++ is \"C, with one added\"). Why have a special shortcut just for +1? Because adding 1 happens all the time in loops — every time around a loop, you usually bump a counter by 1. score++ is shorter than score += 1, which is shorter than score = score + 1. They all do the same thing. After this line, score is 14. There is also score++ vs ++score (with the ++ in front) — they have a subtle difference, but for now think of them as the same. We'll dig in later if needed."
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "-- subtracts 1",
+            "image": "/static/tutorials/steps/cShort_05_minusMinus.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.minusMinus",
+                "default": "Line 11: score--; — subtracts exactly 1 from score. Same shape as ++, opposite direction. After this line, score is 13. Common use: lives--, time--, ammo-- in a game; or counting down in a loop (\"for i from 10 down to 1, do something\"). Together with ++, this pair (++ and --) is one of the most-typed pieces of code in all of C."
+            },
+            "highlightLine": {
+                "from": 11,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — watch the score change",
+            "image": "/static/tutorials/steps/cShort_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cShort.run",
+                "default": "Trace it in your head before clicking: score starts at 10. After +=5 it's 15. After -=2 it's 13. After ++ it's 14. After -- it's 13 again. Click Run. The Console should show exactly that sequence: 15, 13, 14, 13. Each printf shows the value AT THAT MOMENT. These four shortcuts are everywhere in real C code — get comfortable with all of them."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

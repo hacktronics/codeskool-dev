@@ -15,10 +15,10 @@
         },
         {
             "title": "An add that returns",
-            "image": "/static/tutorials/steps/pythonConnectYourCommands_02_addReturn.webp",
+            "image": "/static/tutorials/steps/pyConnectCommands_02_returnChute.webp",
             "narration": {
                 "id": "gui.tutorials.pythonConnectYourCommands.addReturn",
-                "default": "Type:\n\ndef add(a, b):\n    return a + b\n\nNotice — no print this time. The keyword return is standard Python. It says \"give this value back to the caller and stop\". The caller can then store the value, print it, or pass it into another call."
+                "default": "Type:\n\ndef add(a, b):\n    return a + b\n\nNotice — no print this time. The keyword return is standard Python. It says \"give this value back to the caller and stop\". The caller can then store the value, print it, or pass it into another call. One small but important note: if a function has no return at all (or just an empty return), Python quietly hands back a special value called None — meaning 'nothing here'. You'll meet None more later; for now just remember: every function hands SOMETHING back, even if it's None."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -27,9 +27,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -53,7 +53,7 @@
         },
         {
             "title": "Connect them — call inside a call",
-            "image": "/static/tutorials/steps/pythonConnectYourCommands_04_compose.webp",
+            "image": "/static/tutorials/steps/pyConnectCommands_04_nestedComposition.webp",
             "narration": {
                 "id": "gui.tutorials.pythonConnectYourCommands.compose",
                 "default": "Below, type:\n\nresult = multiply(add(2, 3), 4)\n\nRead it from the inside out. add(2, 3) runs first and returns 5. That 5 becomes the FIRST argument to multiply. multiply(5, 4) runs and returns 20. The whole expression gives 20, which gets stored in result. Two functions chained — the answer from one piped straight into the other."
@@ -65,9 +65,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

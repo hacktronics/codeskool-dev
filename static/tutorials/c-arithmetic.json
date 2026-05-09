@@ -1,0 +1,100 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int a = 10;\n    int b = 3;\n    printf(\"a + b = %d\\n\", a + b);\n    printf(\"a - b = %d\\n\", a - b);\n    printf(\"a * b = %d\\n\", a * b);\n    printf(\"a / b = %d\\n\", a / b);\n    printf(\"a %% b = %d\\n\", a % b);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "C as a calculator",
+            "image": "/static/tutorials/steps/cMath_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.intro",
+                "default": "In Scratch you used hexagon-shaped math blocks like (x) + (y) and (x) * (y) — they slotted into other blocks where a number was needed. C does the same math but written FLAT, the way you'd write it on paper: x + y, x * y. The five C operators you'll use 99% of the time are + (plus), - (minus), * (times — note: NOT the letter x), / (divide), and % (modulo, the leftover after division). Today you'll see all five in action with two whole numbers, and we'll meet a surprising twist with division that trips up every beginner."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Two numbers to work with",
+            "image": "/static/tutorials/steps/cMath_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.setup",
+                "default": "Lines 4 and 5 set up int a = 10; and int b = 3; — two whole-number variables we'll use as inputs to the math. The lines below do the math with them and print each result. Using variables (instead of writing 10 + 3 directly) makes it easy to change the inputs and re-run. We could have called them x and y, or num1 and num2 — a and b are just short and clear for a math demo."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Plus, minus, times",
+            "image": "/static/tutorials/steps/cMath_03_basicOps.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.basicOps",
+                "default": "Lines 6, 7, and 8 print a+b, a-b, and a*b. Notice the math expression sits INSIDE the printf, after the comma — that means the math happens FIRST, then printf prints whatever the result was. Same as Scratch — the inner block runs before the outer block. So a+b becomes 13, a-b becomes 7, a*b becomes 30. The * (asterisk) is multiplication — never use the letter x for times in C, the compiler would think x is a variable name. Plus and minus are the same as on a calculator."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Division — the int trap",
+            "image": "/static/tutorials/steps/cMath_04_division.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.division",
+                "default": "Line 9 is a / b — that's 10 divided by 3. On a calculator you'd expect 3.3333... But because BOTH a and b are int (whole numbers), C does INTEGER DIVISION — it throws away the decimal part and gives you 3. Just 3, no remainder shown. This is one of the biggest gotchas in C — every beginner gets caught by it once. The rule: if both sides of / are int, the answer is int (rounded down). To get the decimal answer (3.33), at least ONE of a or b would need to be a float. We'll see that in a later chapter. For now, just remember: int / int = int."
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Modulo — the leftover",
+            "image": "/static/tutorials/steps/cMath_05_modulo.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.modulo",
+                "default": "Line 10 uses the % symbol — that is MODULO, not percent. Modulo gives you the LEFTOVER (the remainder) after division. 10 % 3: how many times does 3 fit into 10? Three times (3+3+3 = 9), with 1 left over. So 10 % 3 = 1. Try in your head: 17 % 5? 5 fits into 17 three times (15), with 2 left over. So 17 % 5 = 2. Modulo is super useful for one specific question: \"is this number even or odd?\" — n % 2 is 0 for even numbers and 1 for odd numbers, ALWAYS. You'll see this trick in many later chapters. (Side note: in printf strings, %% prints a literal % sign, because a single % means \"format code starting\".)"
+            },
+            "highlightLine": {
+                "from": 10,
+                "to": 10
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — five answers",
+            "image": "/static/tutorials/steps/cMath_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cMath.run",
+                "default": "Predict before clicking Run: what will the division line show? Did you guess 3 or 3.33? Click Run. The Console shows: 13, 7, 30, 3 (yes, 3, not 3.33), 1. Now change a to 17 and b to 5 and Run again. Predict the new outputs first, then check. Same operations, different numbers. Math in C is mostly the same as math on a calculator — except for that integer-division surprise."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

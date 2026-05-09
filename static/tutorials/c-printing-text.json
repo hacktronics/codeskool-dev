@@ -1,0 +1,128 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Write your own printfs",
+            "image": "/static/tutorials/steps/cPrint_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.intro",
+                "default": "Last chapter you READ a C program someone else wrote. Today YOU are going to write — multiple printf lines, special characters that change how text looks, and your first comment for future-you to read. The boring setup parts (#include and main) are already typed for you so you can focus on what you're actually learning. Look at the editor: line 1 has the #include we covered last chapter, line 3 has int main, lines 4 and 6 are the body. The line that says \"// your code here\" is just a placeholder to show you where to write — we'll replace it shortly. By the end of this chapter you will be comfortable writing printf statements with multiple lines, tab spacing, and quotes inside text."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Replace the comment with printf",
+            "image": "/static/tutorials/steps/cPrint_02_firstPrintf.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.first",
+                "default": "Click on line 4 (the line that says \"// your code here\") and select the whole line. Now type: printf(\"Hello!\\n\"); — exact spelling, exact brackets, semicolon at the end. Pay close attention to the small details: lower-case p-r-i-n-t-f, opening quote, Hello with capital H, exclamation mark, backslash n (NOT slash n), closing quote, closing parenthesis, semicolon. Forgetting the semicolon at the end is the number one mistake C beginners make — if you ever see a red error in the Log tab, check your semicolons first. The \\n means NEW LINE — it pushes whatever prints next onto a fresh line. Without it, things would all jam together. Take your time typing this; speed will come later."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Add a second line",
+            "image": "/static/tutorials/steps/cPrint_03_secondLine.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.second",
+                "default": "Press Enter at the end of line 4 to start a new line. Type: printf(\"My name is Sam.\\n\"); — replace Sam with your real name. Each printf is its own complete instruction (called a STATEMENT in programming) and each one ends with its own semicolon. You can have as many printfs as you want — they will run in order, top to bottom, when the program runs. Notice that we put a \\n at the end of THIS printf too — that ensures whatever comes after it lands on a new line. If you forgot the \\n on the FIRST printf last step, the two messages would glue together: \"Hello!My name is Sam.\" with no space. Each printf controls its OWN line ending."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/cPrint_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.run",
+                "default": "Click the Run button. After it finishes, switch to the Console tab if you're not already there. You should see two lines: \"Hello!\" on the first line, then your name on a fresh line below. The \\n at the end of the first printf is what dropped the second message onto a new line. Try this experiment: remove the \\n from the FIRST printf (just delete the backslash and the n, leave the rest alone), then click Run again. Now both messages glue together onto one line: \"Hello!My name is Sam.\" That's the difference \\n makes. Add the \\n back when you're done playing."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Tab spacing with \\t",
+            "image": "/static/tutorials/steps/cPrint_05_tab.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.tab",
+                "default": "Add another line below the others: printf(\"Two\\twords\\tspaced\\n\"); — pay attention to the \\t pieces between the words. \\t is a TAB, similar to pressing the Tab key in a word processor. Tabs are bigger than regular spaces — they make the text jump to the next \"tab stop\" (usually about every 8 characters). When this line runs, you'll see the three words spread out with big gaps between them. Tabs are super useful when you want to line things up in columns, like a small spreadsheet of numbers. Just like \\n means newline, \\t means tab — both start with a backslash to tell C \"this isn't the literal letter, it's a special code\"."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Print a quote mark",
+            "image": "/static/tutorials/steps/cPrint_06_quote.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.quote",
+                "default": "What if your printed text needs to include a QUOTE MARK in the middle? You might think \"I'll just type it like printf(\"She said \"Hi!\"\")\". But C would get confused — the SECOND quote would END the string early, and the rest would be garbage. The fix is to put a backslash before each quote you want to be printed: \\\". Add this line: printf(\"She said \\\"Hi!\\\"\\n\"); — the \\\" pairs print as literal quote marks. The general rule: when a character has a special meaning to C (like \" ending a string, or \\ starting a special code), put a backslash in front to say \"I literally mean this character\". \\\" = print a quote, \\\\ = print a backslash itself, \\n = newline, \\t = tab."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Leave a note for yourself with //",
+            "image": "/static/tutorials/steps/cPrint_07_comment.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.comment",
+                "default": "Click at the very start of line 4 (the first printf) and press Enter to push it down, then go back up to the new empty line and type: // these prints test the escape codes. The two slashes // mark the start of a COMMENT — anything from // to the end of that line is for HUMANS to read; the compiler completely ignores it. Comments don't make your program do anything — they explain WHY you wrote things. As your programs grow longer (50, 100, 1000 lines), comments save you when you come back next week and wonder \"why did I do this?\" Good programmers leave comments for their future self and for teammates. Bad programmers don't — and pay for it later. Use them generously, but only where they actually help (don't comment \"// add 1 to x\" — the code already says that)."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Run again — all four prints",
+            "image": "/static/tutorials/steps/cPrint_08_runAll.webp",
+            "narration": {
+                "id": "gui.tutorials.cPrint.runAll",
+                "default": "Click Run one more time. Notice that the comment line you added didn't print anything to the Console — exactly right; C ignored it. The Console shows your three printfs in order: the greeting, your name, the tab-spaced words, and the quoted line. You've learned the basics of printing in C: multiple printfs, the \\n newline, the \\t tab, and how to print quote marks with \\\". You also know what comments are for. Next chapter we move on from printing fixed text to PRINTING VALUES — variables that can hold and remember numbers."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

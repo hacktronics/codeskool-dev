@@ -26,10 +26,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Bring random into the game — Visual",
+            "image": "/static/tutorials/steps/pyBeatComputer_02_toolbox.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.toolbox",
+                "default": "import random loads Python's random toolbox. Once imported, dice-roll helpers like random.choice become available for your game."
             }
         },
         {
@@ -64,10 +69,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Make the computer pick — Visual",
+            "image": "/static/tutorials/steps/pyBeatComputer_04_threeSidedDie.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.threeSidedDie",
+                "default": "random.choice picks ONE item from a list at random — like rolling a 3-sided die labelled rock, paper, scissors."
             }
         },
         {
@@ -102,10 +112,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "The three winning combinations — Visual",
+            "image": "/static/tutorials/steps/pyBeatComputer_06_winsGrid.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBeatTheComputer.winsGrid",
+                "default": "There are three winning combos: rock smashes scissors, paper covers rock, scissors cut paper. Each elif uses and to check BOTH player and computer."
             }
         },
         {

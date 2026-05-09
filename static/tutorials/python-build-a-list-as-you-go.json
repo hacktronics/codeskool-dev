@@ -72,7 +72,7 @@
         },
         {
             "title": "What append really does",
-            "image": "/static/tutorials/steps/pythonBuildAListAsYouGo_05_appendExplain.webp",
+            "image": "/static/tutorials/steps/pyBuildList_05_variableVsListMemory.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuildAListAsYouGo.appendExplain",
                 "default": "Lists are different from variables. A variable holds ONE value at a time — assigning a new value forgets the old. A list holds MANY values in order, and append adds a new one without forgetting the rest. After three appends with apple, banana, mango, items will look like ['apple', 'banana', 'mango']."

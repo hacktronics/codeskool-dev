@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    char grade = 'B';\n    switch (grade) {\n        case 'A':\n            printf(\"Excellent!\\n\");\n            break;\n        case 'B':\n            printf(\"Good job.\\n\");\n            break;\n        case 'C':\n            printf(\"Keep trying.\\n\");\n            break;\n        default:\n            printf(\"Unknown grade.\\n\");\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "When else if gets long",
+            "image": "/static/tutorials/steps/cSwitch_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cSwitch.why",
+                "default": "Imagine you have to check ONE variable against MANY specific values — like a menu choice (1, 2, 3, 4, or 5), a grade letter (A, B, C, D, F), a key press (W, A, S, D for movement). You COULD write a long else-if chain (if grade == 'A', else if grade == 'B', else if grade == 'C', ...) but it gets repetitive fast. C has a cleaner tool for this exact case: the switch statement. Same logic, less typing, and it tells the reader \"I am picking from a list of fixed values\" at a glance. switch is your friend whenever you have ONE value with MANY possible specific cases."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A char to switch on",
+            "image": "/static/tutorials/steps/cSwitch_02_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.cSwitch.setup",
+                "default": "Line 4: char grade = 'B'; — single quotes around B because grade is a char (one character). The switch coming next will look at this variable and pick a CASE based on what it holds. switch only works with whole-number-like types (int, char, enum) — not strings or floats. char counts because each character is internally a small number (A is 65, B is 66, etc.)."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Three cases + default",
+            "image": "/static/tutorials/steps/cSwitch_03_cases.webp",
+            "narration": {
+                "id": "gui.tutorials.cSwitch.cases",
+                "default": "Lines 5 to 17 are the switch block. The structure is: switch (variable) { case VALUE: do stuff; break; case ANOTHER_VALUE: do stuff; break; default: do fallback; }. Think of it like a vending machine: the switch looks at the input (grade), checks each case from top to bottom for a match ('A' first? 'B' second? 'C' third?), and runs the matching case. If nothing matches, default runs (like the else at the end of an if-else chain)."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 17
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 35,
+                "zoom": 1.4
+            }
+        },
+        {
+            "title": "Don't forget break",
+            "image": "/static/tutorials/steps/cSwitch_04_break.webp",
+            "narration": {
+                "id": "gui.tutorials.cSwitch.break",
+                "default": "Notice the break; line at the end of each case. break tells C \"I am done with this case, EXIT the switch entirely\". Without break, C \"falls through\" to the NEXT case and runs that too — and the one after that. Forgetting break is one of the most common switch bugs. Try removing the break after case 'A' (delete line 8) and run with grade = 'A' — you'll see \"Excellent!\" AND \"Good job.\" AND \"Keep trying.\" all print. That fall-through behavior is sometimes useful but usually a bug. Always end each case with break unless you really mean fall-through."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — Good job",
+            "image": "/static/tutorials/steps/cSwitch_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cSwitch.run",
+                "default": "Trace it: grade is 'B'. switch checks case 'A' — no match. Checks case 'B' — MATCH. Runs the body: prints \"Good job.\" then break exits the switch entirely. The default case is skipped. Click Run to confirm — Console shows \"Good job.\" Now change grade to 'A' and rerun → \"Excellent!\" Try 'C', then 'X' (unknown), then 'F' (unknown). The default catches anything that doesn't match any specific case."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

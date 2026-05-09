@@ -1,0 +1,180 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char questions[3][30] = {\n        \"Capital of France? \",\n        \"2 + 2 * 3 = ? \",\n        \"Color of the sky? \"\n    };\n    char answers[3][20] = {\"Paris\", \"8\", \"Blue\"};\n    char reply[40];\n    int score = 0;\n    for (int i = 0; i < 3; i++) {\n        printf(\"%s\", questions[i]);\n        scanf(\"%s\", reply);\n        if (strcmp(reply, answers[i]) == 0) score++;\n    }\n    printf(\"You scored %d / 3\\n\", score);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "A 3-question quiz",
+            "image": "/static/tutorials/steps/cQuiz_01_plan.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.plan",
+                "default": "The capstone tutorial. You'll build a quiz game that asks three questions, reads each answer, checks if the answer is right, and prints a final score out of 3. The program uses TWO PARALLEL ARRAYS (one for questions, one for answers), a for loop to ask each question, scanf to read replies, strcmp to check correctness, and the accumulator pattern for the score. Every concept from the last 31 chapters working together in one short program."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "stdio + string",
+            "image": "/static/tutorials/steps/cQuiz_02_includes.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.includes",
+                "default": "Lines 1 and 2: stdio.h (for printf and scanf, as always) and string.h (for strcmp, to compare the kid's answer to the correct one). Two libraries, two reasons. Without string.h, strcmp wouldn't exist and we'd have to write our own letter-by-letter comparison loop — much more work."
+            },
+            "highlightLine": {
+                "from": 1,
+                "to": 2
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Two parallel arrays",
+            "image": "/static/tutorials/steps/cQuiz_03_ask.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.ask",
+                "default": "Lines 5 to 10: questions is a 2D char array — three rows, each row up to 30 characters long. Each row holds one question string. answers is the same shape, three rows of up to 20 characters. The arrays are PARALLEL — questions[0] goes with answers[0], questions[1] with answers[1], questions[2] with answers[2]. Same index, matching data. We saw 2D arrays in the grids chapter and char arrays as strings in the strings chapter — this combines both ideas."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 10
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "A reply buffer",
+            "image": "/static/tutorials/steps/cQuiz_04_show.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.show",
+                "default": "Line 11: char reply[40]; — ONE buffer, reused for each question. We don't need three separate reply variables — after we check the answer, we throw the kid's reply away and reuse the buffer for the next question. 40 characters is plenty (the kid won't type a 40-letter answer for \"Capital of France\"). Sizing buffers safely is a good habit even when you \"know\" they'll be small."
+            },
+            "highlightLine": {
+                "from": 11,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Score starts at 0",
+            "image": "/static/tutorials/steps/cQuiz_05_data.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.data",
+                "default": "Line 12: int score = 0; — the accumulator pattern again. Start at zero, add 1 for each correct answer as we go. After all 3 questions, score holds the final tally. (If we forgot to set score = 0, it would hold garbage and the final printf would show a weird number.)"
+            },
+            "highlightLine": {
+                "from": 12,
+                "to": 12
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "for loops 0 to 2",
+            "image": "/static/tutorials/steps/cQuiz_06_counter.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.counter",
+                "default": "Line 13: for (int i = 0; i < 3; i++) — three questions, so loop three times. The counter i serves as the index into BOTH arrays at the same time: questions[i] picks the current question and answers[i] picks the current correct answer. They stay in sync because they share the same index. Parallel arrays + same index = matched pairs."
+            },
+            "highlightLine": {
+                "from": 13,
+                "to": 13
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Ask, read, check",
+            "image": "/static/tutorials/steps/cQuiz_07_loop.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.loop",
+                "default": "Lines 14 to 16, the loop body. (1) printf(\"%s\", questions[i]); — print the current question (no \\n on purpose so the kid types right after the prompt). (2) scanf(\"%s\", reply); — read what the kid types into reply. (3) if (strcmp(reply, answers[i]) == 0) score++; — compare reply to the correct answer; remember strcmp returns 0 for SAME. If they match, bump the score. After 3 iterations, the score holds 0, 1, 2, or 3."
+            },
+            "highlightLine": {
+                "from": 14,
+                "to": 16
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Print the final score",
+            "image": "/static/tutorials/steps/cQuiz_08_final.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.final",
+                "default": "Line 18: printf(\"You scored %d / 3\\n\", score); — placed OUTSIDE the loop so it runs ONCE after all questions are answered. Prints something like \"You scored 2 / 3\". Notice the / 3 in the format string is just literal text — printf prints it as-is. Same trick as the %% pattern (a literal % in printf needs to be %%, but / has no special meaning so it's just /)."
+            },
+            "highlightLine": {
+                "from": 18,
+                "to": 18
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 60,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run — take the quiz",
+            "image": "/static/tutorials/steps/cQuiz_09_play.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.play",
+                "default": "Click Run. Console asks \"Capital of France? \" — click in the Console and type Paris, press Enter. Then \"2 + 2 * 3 = ? \" — type 8 (math: multiplication first → 2 + 6 → 8). Then \"Color of the sky? \" — type Blue. Final line: \"You scored 3 / 3\". Try one wrong on purpose (type \"London\" for the first one) and see the score drop to 2."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "What you used",
+            "image": "/static/tutorials/steps/cQuiz_10_reflection.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.reflection",
+                "default": "Look at how many concepts you used in this short program: PARALLEL ARRAYS (questions and answers in lock-step), a FOR LOOP over a fixed count, SCANF to read input, STRCMP to compare strings, the ACCUMULATOR pattern for score, PRINTF with %s and %d format codes. Six C concepts woven into one useful program. You can read AND write all of them now."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Where to go from here",
+            "image": "/static/tutorials/steps/cQuiz_11_end.webp",
+            "narration": {
+                "id": "gui.tutorials.cQuiz.end",
+                "default": "You know enough C to write small useful programs — calculators, quizzes, games, simple text processors. The next big topics are: FILE I/O (fopen, fread to read from disk), STRUCTS (custom types like a Player with name, score, level), POINTERS (the deep magic that makes C powerful), and DYNAMIC MEMORY (malloc, free for arrays whose size you don't know upfront). Every advanced topic builds on what you've learned in these 32 chapters. You have the foundation; everything else is a step up from here."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

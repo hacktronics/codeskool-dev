@@ -14,6 +14,19 @@
             }
         },
         {
+            "title": "Truthy and Falsy — what Python treats as yes/no",
+            "image": "/static/tutorials/steps/pyBoolean_02_truthyFalsy.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogic.truthyFalsy",
+                "default": "Python has True and False — but inside an if, it's actually more flexible than that. A few values count as 'falsy' — Python treats them as False even though they aren't the word False. Those are: 0, the empty text \"\", an empty list [], an empty dict {}, and None. Everything else — any non-zero number, any non-empty text, any non-empty list — is 'truthy' and counts as True. So if my_list: works as 'is the list not empty?'. Useful to remember as you write more if-checks."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
             "title": "Set up the data",
             "image": "/static/tutorials/steps/pythonBooleanLogic_02_variables.webp",
             "narration": {
@@ -34,7 +47,7 @@
         },
         {
             "title": "AND — both sides must be true",
-            "image": "/static/tutorials/steps/pythonBooleanLogic_03_and.webp",
+            "image": "/static/tutorials/steps/pyBoolean_03_andLights.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBooleanLogic.typeAnd",
                 "default": "Leave a blank line, then type:\n\nif age > 10 and has_pass:\n    print(\"Allowed (AND)\")\n\nRead it in English: \"if age is more than 10 AND has_pass is True\". Both halves must be true for the whole thing to be true. 15 > 10 is true, and has_pass is True — so Python prints the line. If has_pass were False, Python would skip even though the age check passed."
@@ -46,9 +59,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -64,10 +77,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "OR — at least one side must be true — Visual",
+            "image": "/static/tutorials/steps/pyBoolean_04_orUmbrellas.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogicSmartDecisions.orUmbrellas",
+                "default": "or is the lenient operator — it's True if EITHER side is true. Like sharing one umbrella: as long as one of you brought it, you both stay dry."
             }
         },
         {
@@ -87,10 +105,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "NOT — flip true and false — Visual",
+            "image": "/static/tutorials/steps/pyBoolean_05_notSwitch.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogicSmartDecisions.notSwitch",
+                "default": "not is the flip switch. It turns True into False and False into True — the opposite of whatever it's given."
             }
         },
         {
@@ -110,10 +133,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Combine with parentheses — Visual",
+            "image": "/static/tutorials/steps/pyBoolean_06_parensGroup.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBooleanLogicSmartDecisions.parensGroup",
+                "default": "Parentheses group conditions so Python knows which ones belong together — just like in math. They make the order of and / or / not clear at a glance."
             }
         },
         {

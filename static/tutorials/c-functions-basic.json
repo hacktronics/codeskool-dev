@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nvoid greet() {\n    printf(\"Hello, friend!\\n\");\n}\n\nint main() {\n    greet();\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Your own tools",
+            "image": "/static/tutorials/steps/cFunc_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cFunc.why",
+                "default": "Until now everything you wrote lived inside main. That's fine for tiny programs but real programs are hundreds or thousands of lines — main would be unreadable. The fix is to FACTOR chunks of code out into named units called FUNCTIONS. Once a function is defined, you call its name whenever you need that chunk to run. Scratch had this exact feature: \"Make a Block\" in the My Blocks tab. You defined a custom block (define [my-block]), then dragged that block into your scripts whenever you wanted that code to run. C functions are the same idea, just typed."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Define greet() above main",
+            "image": "/static/tutorials/steps/cFunc_02_define.webp",
+            "narration": {
+                "id": "gui.tutorials.cFunc.define",
+                "default": "Lines 3 to 5 define a function called greet: void greet() { printf(\"Hello, friend!\"); }. Three pieces. (1) void means \"this function returns NOTHING\" — it just does stuff, doesn't hand back an answer (more on returning values in two chapters). (2) greet() is the NAME with empty parentheses — empty because greet takes no inputs. (3) The body is between curly braces, and contains the code that runs when greet is called. The function is defined ABOVE main so that main can SEE it (C reads top to bottom — you must define before you use)."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Call greet() inside main",
+            "image": "/static/tutorials/steps/cFunc_03_call.webp",
+            "narration": {
+                "id": "gui.tutorials.cFunc.call",
+                "default": "Line 8: greet(); — that's a function CALL. Just the name and parentheses, with a semicolon. When C reaches this line, it JUMPS up to greet's body, runs everything inside, then comes back down here and continues. Like dragging a custom block onto your script in Scratch. The empty parentheses are required even for no-input calls — it's how C knows you mean \"call greet\" instead of just \"the value of greet\"."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — Hello, friend!",
+            "image": "/static/tutorials/steps/cFunc_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cFunc.run",
+                "default": "Click Run. Console: \"Hello, friend!\". The flow: program starts, hits main, hits greet(), jumps up to greet's body, runs the printf, returns to main, hits return 0, ends. Same output as if you'd just put the printf directly in main. So WHY use a function for one printf? Because right now you can't see the win. The win comes when you call the function MORE THAN ONCE — coming up next."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Call greet() three times",
+            "image": "/static/tutorials/steps/cFunc_05_callMany.webp",
+            "narration": {
+                "id": "gui.tutorials.cFunc.callMany",
+                "default": "Add two more greet(); lines below the first — three total calls. Run. Console shows \"Hello, friend!\" three times. Now the win is obvious: you wrote the printf ONCE inside greet, but it printed THREE times because you called greet three times. Imagine if greet had ten lines of complicated code — without the function you'd have to copy all ten lines three times. With the function, you change greet ONCE and all three callers update automatically. This is the superpower of functions — write code in one place, use it many places."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

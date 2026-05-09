@@ -66,6 +66,15 @@
             }
         },
         {
+            "title": "Parts of a Web Address",
+            "image": "/static/tutorials/steps/htmlLinks_urlAnatomy.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlLinks.urlAnatomy",
+                "default": "Look at the URL you typed. A web address has parts — and once you know them, web addresses stop feeling random. https:// is the PROTOCOL — the language the browser uses to talk to the server. The next part is the DOMAIN — the name of the site (like google.com or youtube.com). After the slash comes the PATH — which page on that site you want. Sometimes there's a question mark and extra info called QUERY parameters. Every link you'll write breaks down this way. Knowing the parts helps you spot bad links — wrong protocol, wrong domain, missing path — and write working ones."
+            }
+        },
+        {
             "title": "Put Text Inside the Link",
             "image": "/static/tutorials/steps/htmlLinksText.webp",
             "imageFocus": {
@@ -167,12 +176,8 @@
         },
         {
             "title": "Links and Menus",
-            "image": "/static/tutorials/steps/htmlLinksRecap.webp",
-            "imageFocus": {
-                "x": 75,
-                "y": 50,
-                "zoom": 1.3
-            },
+            "image": "/static/tutorials/steps/htmlLinksHrefMapping.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
                 "id": "gui.tutorials.htmlLinks.recap",
                 "default": "A link has two parts — the URL it goes to, and the text people click. Put many links inside a ul to build a menu. Real websites use this same recipe to connect their pages."

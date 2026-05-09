@@ -87,15 +87,20 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Meet elif — three-way branching — Visual",
+            "image": "/static/tutorials/steps/pyGuess_05_elifDoors.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonGuessTheNumber.elifDoors",
+                "default": "elif is like a row of doors — Python checks each condition top to bottom and walks through the first one that's true. The rest are skipped."
             }
         },
         {
             "title": "Why == and not =",
-            "image": "/static/tutorials/steps/pythonGuessTheNumber_06_equalsExplain.webp",
+            "image": "/static/tutorials/steps/pyGuess_06_eqVsEqEq.webp",
             "narration": {
                 "id": "gui.tutorials.pythonGuessTheNumber.equalsExplain",
                 "default": "Notice the double equals sign in if guess == number. That's not a typo. One equals sign (=) means STORE — like age = 10 stores 10 under age. Two equals signs (==) means CHECK — \"are these the same?\". Mixing them up is the most common bug in early Python code. Read your if conditions carefully."

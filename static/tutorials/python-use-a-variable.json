@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "What is a variable?",
-            "image": "/static/tutorials/steps/pythonUseAVariable_01_intro.webp",
+            "image": "/static/tutorials/steps/pyVar_01_labelledBox.webp",
             "narration": {
                 "id": "gui.tutorials.pythonUseAVariable.intro",
                 "default": "A variable is like a labelled box. You pick a name (the label), and Python keeps a value inside. You can open the box by name whenever you want what's in it. You've already made these in Scratch — clicking \"Make a Variable\" and typing a name creates a new labelled box."
@@ -12,9 +12,18 @@
                 "y": 46,
                 "zoom": 1
             },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1}
+        },
+        {
+            "title": "Naming rules — what you can call a box",
+            "image": "/static/tutorials/steps/pyVar_02_identifierRules.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonUseAVariable.namingRules",
+                "default": "Before we put something in a box, let's pick a good label. Python has rules for names. A name must start with a letter or an underscore — never a digit. After that you can use letters, digits, and underscores, but no spaces and no minus or @ signs. Names are case-sensitive — score and Score are TWO different boxes. And a few words are reserved for Python itself, like for, if, def, return, class, import — those can't be names. The convention people follow is snake_case — small letters with underscores between words, like player_name or high_score."
+            },
             "imageFocus": {
                 "x": 50,
-                "y": 46,
+                "y": 50,
                 "zoom": 1
             }
         },
@@ -62,7 +71,7 @@
         },
         {
             "title": "Why no quotes around the label?",
-            "image": "/static/tutorials/steps/pythonUseAVariable_04_noQuotes.webp",
+            "image": "/static/tutorials/steps/pyVar_04_quotesVsNoQuotes.webp",
             "narration": {
                 "id": "gui.tutorials.pythonUseAVariable.noQuotes",
                 "default": "Notice there are no quotes around the word message in the print line. That tiny detail changes everything. Without quotes, Python sees message as the name of a box and prints what's inside, which is Hello Python. If we put quotes around it instead, Python would ignore the box completely and just print the word message itself, letter by letter. The rule: no quotes means look in the box, quotes means it's just plain text."
@@ -74,9 +83,9 @@
                 "zoom": 2.9
             },
             "imageFocus": {
-                "x": 2,
-                "y": 17,
-                "zoom": 2.9
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

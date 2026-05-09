@@ -61,7 +61,7 @@
         },
         {
             "title": "Why str is needed",
-            "image": "/static/tutorials/steps/pythonNumbers_04_strWhy.webp",
+            "image": "/static/tutorials/steps/pyNumbers_04_glueVsAdd.webp",
             "narration": {
                 "id": "gui.tutorials.pythonNumbers.strWhy",
                 "default": "Here's the rule: the plus sign adds numbers OR glues text, never a mix. If you write \"You will be \" + 13 + \" next year\", Python stops with an error. Text + text works. Number + number works. Text + number is a mistake Python refuses to guess about. That's why we use str to turn 13 into \"13\" first — now everything is text and plus glues them all."
@@ -110,6 +110,20 @@
                 "x": 0,
                 "y": 94,
                 "zoom": 5.3
+            }
+        },
+        {
+            "title": "What an error looks like",
+            "image": "/static/tutorials/steps/pyNumbers_06_realError.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonNumbers.realError",
+                "default": "Try one more thing — when it asks your age, type a word like \"hello\" instead of a number. Watch the terminal turn red. That's an ERROR. Python is just saying 'I don't understand — hello isn't a number.' Errors are normal — every coder hits them every day. They aren't scary, and your code didn't break the computer. Read the LAST line of the red text — it tells you exactly what Python got confused about. We'll learn how to handle errors properly later, but for now, just know: red text = Python is asking for help."
+            },
+            "highlightUI": "terminal",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

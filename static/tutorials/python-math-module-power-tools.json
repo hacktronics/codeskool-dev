@@ -56,6 +56,15 @@
             }
         },
         {
+            "title": "Powers and rounding — Visual",
+            "image": "/static/tutorials/steps/pyMath_04_ceilFloor.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonMathModulePowerTools.ceilFloor",
+                "default": "ceil rounds UP to the next whole number; floor rounds DOWN. Handy when you need a guaranteed whole answer no matter what the decimal is."
+            }
+        },
+        {
             "title": "Run and see all five",
             "image": "/static/tutorials/steps/pythonMath_05_run.webp",
             "narration": {

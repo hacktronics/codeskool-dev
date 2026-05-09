@@ -14,6 +14,15 @@
             }
         },
         {
+            "title": "The Slot Inside",
+            "image": "/static/tutorials/steps/htmlTextFormattingNestingConcept.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.slotInside",
+                "default": "Every C-shape block has a SLOT in the middle — that is the content slot. Whatever you put in the slot is the STUFF between the open tag and the close tag. Today we will see what happens when blocks go INSIDE other blocks slots. That is called nesting."
+            }
+        },
+        {
             "title": "Add a Heading",
             "image": "/static/tutorials/steps/htmlTextFormattingHeading.webp",
             "imageFocus": {
@@ -82,6 +91,24 @@
             }
         },
         {
+            "title": "Combine Bold and Italic",
+            "image": "/static/tutorials/steps/htmlTextFormattingBoldItalic.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.combineBoldItalic",
+                "default": "Drag a paragraph below the underlined text. Inside the paragraph, drag a b block. Inside the b, drag an i block. Inside the i, drag a text block and type \"This is bold AND italic.\" Tags inside tags COMBINE — the page shows both effects on the same words."
+            }
+        },
+        {
+            "title": "Triple Stack",
+            "image": "/static/tutorials/steps/htmlTextFormattingTripleNest.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.tripleStack",
+                "default": "Now nest a u inside the i. Same words inside become bold, italic, AND underlined. The deeper you nest, the more effects pile on."
+            }
+        },
+        {
             "title": "See Your Styled Text",
             "image": "/static/tutorials/steps/htmlTextFormattingView.webp",
             "imageFocus": {
@@ -94,6 +121,15 @@
                 "default": "Click the View tab. Do you see one bold line, one italic line, and one underlined line?"
             },
             "highlightUI": "viewTab"
+        },
+        {
+            "title": "Inline vs Block",
+            "image": "/static/tutorials/steps/htmlInlineVsBlock.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlTextFormatting.inlineVsBlock",
+                "default": "Here's something you might have noticed. Your bold text and italic text sat on the SAME LINE as the other words. But your paragraphs and headings each started on a NEW line. Why the difference? HTML elements come in two flavours. INLINE elements (like b, i, u, a) sit in the flow of words like extra colour or emphasis — they don't break the line. BLOCK elements (like p, h1, div) each take a whole line by themselves — the next thing has to start below them. Most of the time you don't have to think about it; the browser does the right thing automatically. Just know the difference exists — it explains why some things wrap into the line and others jump down."
+            }
         },
         {
             "title": "Shape Your Words",

@@ -1,0 +1,162 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    double a, b, result;\n    char op;\n    printf(\"Enter: number op number  (e.g. 5 + 3): \");\n    scanf(\"%lf %c %lf\", &a, &op, &b);\n    if (op == '+') result = a + b;\n    else if (op == '-') result = a - b;\n    else if (op == '*') result = a * b;\n    else if (op == '/') result = a / b;\n    else { printf(\"Bad op\\n\"); return 1; }\n    printf(\"%.2f %c %.2f = %.2f\\n\", a, op, b, result);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "A calculator from scratch",
+            "image": "/static/tutorials/steps/cCalc_01_plan.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.plan",
+                "default": "Time to combine many things you've learned into one real program: a calculator that reads a math expression like \"5 + 3\" or \"10 / 4\" and prints the answer. You'll use variables (multiple types), scanf to read input, char to hold the operator, an else-if chain to pick the operation, and printf to format the output. By the end, in 14 lines of C, you'll have a working calculator that handles +, -, *, /, AND gracefully refuses unknown operators. Real software in 14 lines."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Three doubles + one char",
+            "image": "/static/tutorials/steps/cCalc_02_vars.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.vars",
+                "default": "Lines 4 and 5: double a, b, result; on one line declares THREE variables of the same type — saves typing. Then char op; for the operator. Why doubles instead of ints? Because we want 10 / 4 to give 2.5, not 2 (remember the integer-division trap from the arithmetic chapter). char op holds the operator the kid types: +, -, *, or /. Putting all the variables together at the top makes the function easy to read."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Prompt and read",
+            "image": "/static/tutorials/steps/cCalc_03_first.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.first",
+                "default": "Lines 6 and 7: printf the prompt (no \\n so the kid types right after), then scanf(\"%lf %c %lf\", &a, &op, &b); to read three pieces in ONE call. %lf means \"long float\" = double (the format code for doubles is %lf, slightly different from %f for plain float). %c reads one character. The SPACES inside the format string skip whitespace, so the kid can type \"5+3\" or \"5 + 3\" or \"5  +  3\" — all work the same. scanf needs & in front of each variable (remember from the input chapter)."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Pick the right operation",
+            "image": "/static/tutorials/steps/cCalc_04_op.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.op",
+                "default": "Lines 8 to 12: an else-if chain that compares op to each of the four operator characters ('+', '-', '*', '/'). Match → do the right math, store in result. Notice the single quotes around the chars ('+' is a char, \"+\" would be a string). The final else handles the case where the kid types something weird (% or @ or #) — print an error and return 1 (non-zero exit code = \"something went wrong\", a real-world convention)."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 12
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Format the answer nicely",
+            "image": "/static/tutorials/steps/cCalc_05_second.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.second",
+                "default": "Line 13: printf(\"%.2f %c %.2f = %.2f\\n\", a, op, b, result); — print the whole expression in nice format. %.2f shows 2 decimals (so 5 prints as 5.00, 12.5 as 12.50). %c prints the operator. Four format codes, four arguments — they line up in order. Example output: \"5.00 + 3.00 = 8.00\"."
+            },
+            "highlightLine": {
+                "from": 13,
+                "to": 13
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Predict before running",
+            "image": "/static/tutorials/steps/cCalc_06_checkpoint.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.checkpoint",
+                "default": "Before you click Run, predict the flow: you'll type three things into the Console (a number, an operator character, another number, all separated by spaces or stuck together). The program reads all three at once, picks the right branch with else-if, computes the answer, prints it formatted. We'll try +, -, *, /, and one bad operator to see all paths fire."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Try +",
+            "image": "/static/tutorials/steps/cCalc_07_plus.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.plus",
+                "default": "Click Run. The Console shows the prompt and waits. Click in the Console area, type: 5 + 3, then press Enter. The program reads it, picks the + branch, computes 5 + 3 = 8, and prints: 5.00 + 3.00 = 8.00. The doubles printed with two decimals each, the operator printed in the middle. Your first calculator operation works."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Try - and *",
+            "image": "/static/tutorials/steps/cCalc_08_minusTimes.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.minusTimes",
+                "default": "Run again, type: 10 - 7. The - branch fires, output: 10.00 - 7.00 = 3.00. Run again, type: 6 * 4. The * branch fires, output: 6.00 * 4.00 = 24.00. Same code, three different operations — the else-if chain picked the right one each time."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Try / — see the decimals",
+            "image": "/static/tutorials/steps/cCalc_09_divide.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.divide",
+                "default": "Run again, type: 10 / 4. Output: 10.00 / 4.00 = 2.50. NOT 2! Because a and b are doubles, the division KEEPS the decimals. If they were ints, you'd lose the .5 (we covered that trap in the arithmetic chapter). Picking the right type matters — when decimals matter, use double or float."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Try a bad operator",
+            "image": "/static/tutorials/steps/cCalc_10_fallback.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.fallback",
+                "default": "Run again, type: 5 % 3 (using percent, which we don't support). Output: \"Bad op\". The final else caught the unknown operator. The program then exits with return 1 (signaling failure). Always handle the \"weird input\" case — real software does this constantly. Without the else, op would just keep its old value (or garbage) and the printf would show nonsense."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "You built a calculator",
+            "image": "/static/tutorials/steps/cCalc_11_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cCalc.run",
+                "default": "14 lines, 4 operations, error handling, formatted output. Every concept from the last 13 chapters — variables, types (double, char), scanf, if-else-if, printf with multiple format codes — combined into one useful program. This is what programming is: combining small concepts into bigger usable things. The next two chapters (guessing game, quiz game) push that further."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

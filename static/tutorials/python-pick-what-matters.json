@@ -34,7 +34,7 @@
         },
         {
             "title": "Counting pattern",
-            "image": "/static/tutorials/steps/pythonPickWhatMatters_03_pattern.webp",
+            "image": "/static/tutorials/steps/pyPickWhatMatters_03_counterStrip.webp",
             "narration": {
                 "id": "gui.tutorials.pythonPickWhatMatters.pattern",
                 "default": "This shape — start at zero, loop through, bump up when a condition is true, return the total — is one of the most common patterns in programming. Same shape works for counting words, ticking off completed tasks, scoring a quiz. Once you spot the pattern in your own problem, the code almost writes itself."

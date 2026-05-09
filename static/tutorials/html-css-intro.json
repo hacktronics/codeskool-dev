@@ -14,6 +14,15 @@
             }
         },
         {
+            "title": "Structure and Style — Two Jobs",
+            "image": "/static/tutorials/steps/htmlCssIntroStructureVsStyle.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.structureVsStyle",
+                "default": "Until now you have learned HTML — the STRUCTURE of a page (head, body, headings, paragraphs, lists). Today you start learning CSS — the STYLE (colours, sizes, spacing, fonts). HTML decides what is there. CSS decides how it looks. Two jobs. Same page."
+            }
+        },
+        {
             "title": "Add a Heading to Style",
             "image": "/static/tutorials/steps/htmlCssIntroHeading.webp",
             "imageFocus": {
@@ -51,11 +60,7 @@
         {
             "title": "Pick the Heading with a Selector",
             "image": "/static/tutorials/steps/htmlCssIntroSelector.webp",
-            "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "narration": {
                 "id": "gui.tutorials.htmlCssIntro.selector",
                 "default": "Drag a selector block inside the style. Click the selector field and replace the text with h1. The selector tells CSS which elements to change."
@@ -63,6 +68,15 @@
             "highlightBlock": {
                 "category": "css",
                 "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "Selector Picks the Element",
+            "image": "/static/tutorials/steps/htmlCssIntroSelectorPicks.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.selectorPicks",
+                "default": "A CSS selector is a pointer. h1 means EVERY h1 on the page. p means EVERY paragraph. The styles inside the curly braces apply to every element the selector picks."
             }
         },
         {
@@ -112,6 +126,15 @@
                 "default": "Click the View tab. Is your heading dark blue on a light yellow background?"
             },
             "highlightUI": "viewTab"
+        },
+        {
+            "title": "HTML Describes, Python Does",
+            "image": "/static/tutorials/steps/htmlIntro_markupVsProgramming.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssIntro.markupVsProgramming",
+                "default": "Quick comparison. HTML is what we call a MARKUP language — it DESCRIBES things on the page (this is a heading, this is a paragraph, this is a list). It can't ask the user a question. It can't add 2 plus 2. It just lays out what's there. CSS is similar — it describes how things LOOK. Python is different — Python is a PROGRAMMING language. Python can DO things — ask the user, decide, repeat, calculate. Three different jobs working together: HTML structures the page, CSS styles it, and Python or JavaScript can make it move and respond."
+            }
         },
         {
             "title": "How CSS Works",

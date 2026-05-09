@@ -1,0 +1,113 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    // your variables here\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Three flavours of variable",
+            "image": "/static/tutorials/steps/cTypes_01_three.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.intro",
+                "default": "In Scratch, a variable could hold pretty much anything — a number, a word, a sentence — and Scratch figured out the type for you. C is fussier and asks you to be SPECIFIC. The reason: each type takes a different amount of memory, and the CPU does math differently on each type. Today you'll meet the three most common types in C. The first is int — INTEGERS, whole numbers like 42, -7, 0, 1000. The second is float — DECIMAL numbers like 3.14 or 12.5 (the f stands for floating point, which means the decimal point can \"float\" to wherever it needs to be). The third is char — a single CHARACTER like 'A', '!', or '7'. By the end of this chapter you'll have written and printed all three types in one program."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A whole number and a decimal",
+            "image": "/static/tutorials/steps/cTypes_02_float.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.float",
+                "default": "Replace the placeholder with these two lines: int score = 90; on the first line, then float price = 12.5; on the next. The first line is just like last chapter — a whole-number variable named score holding 90. The second line uses a NEW type: float. float means \"a number that can have a decimal point\". int can't hold 12.5 — that's a float's job. If you tried to store 12.5 in an int variable, C would silently chop off the decimal and store just 12. Use float when you need decimals — prices, distances, percentages, averages, scientific measurements, anything that isn't a whole number."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Print int with %d, float with %f",
+            "image": "/static/tutorials/steps/cTypes_03_printFloat.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.printFloat",
+                "default": "Add two printfs: printf(\"Score: %d\\n\", score); on one line, then printf(\"Price: %.2f\\n\", price); on the next. Notice the format codes are DIFFERENT for each type. %d for the int (we know that). %.2f for the float — the f means \"decimal number\", and the .2 in front controls how many digits to show after the decimal point. So %.2f means \"show 2 decimals\", which prints 12.50. If you wrote %.0f, you'd get 13 (rounded). If you wrote just %f with no .2, you'd get 12.500000 (six decimals — the default). The .2 makes prices and money look right. Always pick the number of decimals that fits what you're showing."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "A single letter — char",
+            "image": "/static/tutorials/steps/cTypes_04_charVsString.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.charVsString",
+                "default": "Now we meet char (pronounced \"car\" or \"char\"). A char holds ONE single character — a letter, a digit, a symbol. Examples: 'A', 'B', '!', '7', ' ' (a space). Notice the SINGLE QUOTES around each. This is one of C's big rules to remember: SINGLE quotes for one character (char), DOUBLE quotes for a whole string of text. So 'A' is a char (one letter) but \"A\" is a string (a one-letter string, which is different in C). Mixing them up is a classic bug. char takes only 1 byte of memory — perfect for storing things like grades (A, B, C), menu choices (Y, N), or single-key answers in a quiz."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Add a char called grade",
+            "image": "/static/tutorials/steps/cTypes_05_char.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.addChar",
+                "default": "Below the price line, add: char grade = 'A'; — note the single quotes around the A. char is the type, grade is the name, 'A' is the value. This stores the letter A in a one-byte variable called grade. char is great for grades (A, B, C, F), menu choices (Y or N), single-letter codes, or anywhere you only need one character. If you tried to write char grade = \"A\"; (with double quotes), the compiler would refuse — \"A\" is a string, not a char. Single quotes for char, always."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Print the char with %c",
+            "image": "/static/tutorials/steps/cTypes_06_printChar.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.printChar",
+                "default": "Add a third printf: printf(\"Grade: %c\\n\", grade); — %c is the format code for char (c for character). So you now have three printfs: one with %d for int, one with %.2f for float, and one with %c for char. Each format code matches its type. Remember the lesson from last chapter: mixing them up gives garbage output. The compiler trusts you to match them, so it's YOUR job to get it right."
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — three lines, three types",
+            "image": "/static/tutorials/steps/cTypes_07_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cTypes.run",
+                "default": "Click Run. The Console shows three lines: Score: 90, Price: 12.50, Grade: A. Same printf trick you learned last chapter — just three different format codes for three different types. Once you know the four basic format codes (%d for int, %f for float, %c for char, %s for string — coming later), you can print pretty much anything. Try changing the values: edit price to 99.99, grade to 'B', score to 75, and Run again. The output reflects your changes immediately. Every C program from here on uses these types — int the most, then float, then char. Get comfortable with all three."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

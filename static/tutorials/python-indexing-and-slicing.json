@@ -28,8 +28,17 @@
             }
         },
         {
+            "title": "A list of fruits — Visual",
+            "image": "/static/tutorials/steps/pyIndex_02_boxesWithNegativeIndexes.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.boxesWithNegativeIndexes",
+                "default": "A list is a row of numbered boxes. Python counts from 0 going forward, and from -1 going backwards from the end."
+            }
+        },
+        {
             "title": "Indexing — pick one by position",
-            "image": "/static/tutorials/steps/pythonIndexingAndSlicing_03_indexing.webp",
+            "image": "/static/tutorials/steps/pyIndex_03_indexingPicks.webp",
             "narration": {
                 "id": "gui.tutorials.pythonIndexingAndSlicing.indexing",
                 "default": "Now the indexing block:\n\n# Indexing — pick one item by position\nprint(fruits[0])\nprint(fruits[2])\nprint(fruits[-1])\n\nThe line starting with the hash sign is a comment — a note for humans, which Python ignores. The square brackets after the list reach IN to one position. fruits[0] is apple. fruits[2] is mango. And fruits[-1] is grape — the LAST item. A negative number counts from the end. fruits[-2] would be kiwi, fruits[-3] mango, all the way back."
@@ -56,6 +65,15 @@
             }
         },
         {
+            "title": "Slicing — pick a chunk — Visual",
+            "image": "/static/tutorials/steps/pyIndex_04_sliceStopsBefore.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.sliceStopsBefore",
+                "default": "A slice picks a chunk from start to stop — but the stop number is where Python STOPS, not the last item to include. So [1:4] gives you positions 1, 2, 3."
+            }
+        },
+        {
             "title": "Step — every other one",
             "image": "/static/tutorials/steps/pythonIndexingAndSlicing_05_step.webp",
             "narration": {
@@ -70,6 +88,15 @@
             }
         },
         {
+            "title": "Step — every other one — Visual",
+            "image": "/static/tutorials/steps/pyIndex_05_stepEveryOther.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.stepEveryOther",
+                "default": "A step says how many positions to jump each time. Step 2 means take one, skip one — every other item."
+            }
+        },
+        {
             "title": "Reverse — read backwards",
             "image": "/static/tutorials/steps/pythonIndexingAndSlicing_06_reverse.webp",
             "narration": {
@@ -81,6 +108,15 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            }
+        },
+        {
+            "title": "Reverse — read backwards — Visual",
+            "image": "/static/tutorials/steps/pyIndex_06_reverseStep.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonIndexingAndSlicing.reverseStep",
+                "default": "A negative step flips the direction. Step -1 walks the list backwards — the shortest way to reverse anything in Python."
             }
         },
         {

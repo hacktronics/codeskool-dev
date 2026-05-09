@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n#include <math.h>\n\nint main() {\n    double x = 16.0;\n    printf(\"sqrt(16) = %.2f\\n\", sqrt(x));\n    printf(\"pow(2, 8) = %.0f\\n\", pow(2, 8));\n    printf(\"abs(-5) = %d\\n\", abs(-5));\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "The math toolbox",
+            "image": "/static/tutorials/steps/cMathLib_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cMathLib.intro",
+                "default": "Scratch had a green Operators block with a dropdown — you could pick sqrt, sin, cos, log, abs, and more. C has the same set of math functions, but they're in a separate TOOLBOX (LIBRARY) called math.h. Just like #include <stdio.h> brings in printf and scanf, #include <math.h> brings in sqrt, pow, sin, cos, and friends. Today you'll add the math include, then use the three most common math functions: sqrt (square root), pow (raise to a power), and abs (absolute value)."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Add #include <math.h>",
+            "image": "/static/tutorials/steps/cMathLib_02_include.webp",
+            "narration": {
+                "id": "gui.tutorials.cMathLib.include",
+                "default": "Line 2: #include <math.h> — same shape as #include <stdio.h>, just a different header. Without this line, sqrt and pow below would be unknown to the compiler and you'd get a \"function not declared\" error. The .h files are HEADER FILES — they tell the compiler \"these functions exist, here's how to call them\". Most programs only #include what they need — fewer headers = faster compile times."
+            },
+            "highlightLine": {
+                "from": 2,
+                "to": 2
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "sqrt for square root",
+            "image": "/static/tutorials/steps/cMathLib_03_sqrt.webp",
+            "narration": {
+                "id": "gui.tutorials.cMathLib.sqrt",
+                "default": "Line 6: sqrt(x) where x is 16.0 — returns 4.0 (because 4 × 4 = 16). sqrt takes a double (decimal number) and returns a double. Print with %.2f to show 2 decimals — sqrt(16) = 4.00. Notice we declared x as double (16.0 not 16) — math functions want decimals, not whole numbers. If you passed an int, the compiler would silently convert it, but using doubles is the cleanest style."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "pow for powers",
+            "image": "/static/tutorials/steps/cMathLib_04_pow.webp",
+            "narration": {
+                "id": "gui.tutorials.cMathLib.pow",
+                "default": "Line 7: pow(2, 8) — pow takes TWO arguments: the base and the exponent. pow(2, 8) means \"2 to the power of 8\" = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. The result is a double. We use %.0f to show zero decimals (256 not 256.000000 — looks tidier). Try pow(10, 3) (1000), pow(2, 16) (65536), pow(3, 5) (243)."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — three math results",
+            "image": "/static/tutorials/steps/cMathLib_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cMathLib.run",
+                "default": "Click Run. Console: sqrt(16) = 4.00, pow(2, 8) = 256, abs(-5) = 5. abs is from stdlib (already included via stdio in this case) and works on int — returns the positive version of any number. Other math.h goodies you might explore: sin(angle), cos(angle), log(x) (natural log), log10(x) (base-10 log), floor(x) (round down), ceil(x) (round up), round(x). All take and return doubles."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

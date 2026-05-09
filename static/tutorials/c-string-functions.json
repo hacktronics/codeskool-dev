@@ -1,0 +1,126 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n#include <string.h>\n\nint main() {\n    char a[20] = \"Hello\";\n    char b[20] = \"World\";\n    printf(\"len(a) = %lu\\n\", strlen(a));\n    if (strcmp(a, b) == 0) {\n        printf(\"Same\\n\");\n    } else {\n        printf(\"Different\\n\");\n    }\n    strcat(a, \" \");\n    strcat(a, b);\n    printf(\"Joined: %s\\n\", a);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Tools for strings",
+            "image": "/static/tutorials/steps/cStrFn_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.intro",
+                "default": "In Scratch you had handy string blocks: \"length of [Hello]\" gave you 5, \"join [Hello] [world]\" gave you \"Helloworld\", \"letter (3) of [Hello]\" gave you \"l\". C's string library has equivalent tools — strlen (length), strcat (concatenate / join), strcmp (compare), strcpy (copy). One #include line at the top brings them all in. Today you'll use the four most common ones in a single program — counting letters, comparing two strings, joining strings together."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Include the string library",
+            "image": "/static/tutorials/steps/cStrFn_02_include.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.include",
+                "default": "Line 2: #include <string.h> — same shape as math.h or stdio.h, just a different toolbox. Without this line, strlen, strcmp, strcat, and strcpy would all be unknown to the compiler — you'd get \"function not declared\" errors. The .h header tells the compiler what these functions look like; the actual code lives in the C standard library."
+            },
+            "highlightLine": {
+                "from": 2,
+                "to": 2
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "strlen counts the letters",
+            "image": "/static/tutorials/steps/cStrFn_03_strlen.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.strlen",
+                "default": "Line 7: strlen(a) — returns how many CHARACTERS are in the string, NOT including the hidden '\\0' terminator. For \"Hello\" that's 5 (H, e, l, l, o). The return type is a special \"size_t\" (basically unsigned long), so we use %lu in printf. (For most beginner code, %d works too but technically %lu is correct.) Try strlen on a longer string to see — strlen(\"CodeSkool\") = 9, strlen(\"\") = 0 (empty string)."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "strcpy copies one string into another",
+            "image": "/static/tutorials/steps/cStrFn_04_strcpy.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.strcpy",
+                "default": "strcpy(dest, src) — COPIES the contents of src into dest. Note: dest is FIRST in the arguments, src second. (It's like writing dest = src; in pseudo-code.) Why do you need strcpy? Because you CAN'T write a = \"Hello\"; once a is declared — assignment doesn't work for arrays. To put a new string into an existing char array, use strcpy(a, \"Hello\");. Important: dest must be BIG ENOUGH to hold src plus the '\\0' — if not, you write past the end and corrupt memory."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "strcmp checks if two strings are the same",
+            "image": "/static/tutorials/steps/cStrFn_05_strcmp.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.strcmp",
+                "default": "Lines 8 to 12: if (strcmp(a, b) == 0) — strcmp returns 0 if the two strings are EXACTLY equal, non-zero otherwise. Surprising twist: == 0 means SAME, == non-zero means DIFFERENT. This catches everyone — you'd expect \"true means same\" but it's the opposite. (The non-zero return is actually the alphabetic difference, useful for sorting.) NEVER compare strings with == directly — that compares ADDRESSES, not contents, and almost always gives wrong answers."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 12
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "strcat glues two strings",
+            "image": "/static/tutorials/steps/cStrFn_06_strcat.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.strcat",
+                "default": "Lines 13 and 14: strcat(a, \" \"); then strcat(a, b);. strcat(dest, src) APPENDS src to the end of dest. So after strcat(a, \" \"), a holds \"Hello \"; after strcat(a, b), a holds \"Hello World\". (Same as Scratch's \"join [Hello] [World]\" block, just two steps.) Important: dest must have ROOM for the new content — that's why we declared a[20] originally, plenty of space for \"Hello World\" plus the terminator."
+            },
+            "highlightLine": {
+                "from": 13,
+                "to": 14
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "The buffer overflow trap",
+            "image": "/static/tutorials/steps/cStrFn_07_pitfall.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.pitfall",
+                "default": "strcpy and strcat do NOT check sizes — they trust you to make sure dest is big enough. If dest is char x[5] and you copy \"HelloWorld\" into it, you write 11 characters into a 5-character box — you've overwritten 6 characters worth of memory you don't own. This is undefined behavior and a HUGE category of real-world security bugs (called \"buffer overflows\"). Always size your buffer larger than the largest string you'll put in it. The safer cousins strncpy and strncat take a max length and stop at the limit — use them for input you don't control."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Run — see all four tools",
+            "image": "/static/tutorials/steps/cStrFn_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.cStrFn.recap",
+                "default": "Click Run. Console: len(a) = 5, Different, Joined: Hello World. strlen counted \"Hello\" as 5. strcmp returned non-zero because \"Hello\" and \"World\" are different strings, so the else branch fired. strcat joined them with a space in between. Scratch's \"length of\", \"=\" check, and \"join\" all in one C chapter."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

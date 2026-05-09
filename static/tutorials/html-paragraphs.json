@@ -80,12 +80,8 @@
         },
         {
             "title": "Paragraphs Make Reading Easy",
-            "image": "/static/tutorials/steps/htmlParagraphsRecap.webp",
-            "imageFocus": {
-                "x": 75,
-                "y": 50,
-                "zoom": 1.3
-            },
+            "image": "/static/tutorials/steps/htmlParagraphsSpacing.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.recap",
                 "default": "Each paragraph is a block of writing. The browser adds space between them so your text is easy to read. Use one paragraph for each idea."

@@ -15,7 +15,7 @@
         },
         {
             "title": "Make a messy string",
-            "image": "/static/tutorials/steps/pythonStrings_02_text.webp",
+            "image": "/static/tutorials/steps/pythonFstrings_02_setup.webp",
             "narration": {
                 "id": "gui.tutorials.pythonStrings.text",
                 "default": "Type:\n\ntext = \"  python code  \"\n\nNotice the spaces at the BOTH ends inside the quotes — they count as part of the value. Try clicking right after the second quote and you'll see the cursor jump past two spaces. Real input from kids often has stray spaces too — so cleaning is a real-life skill."
@@ -26,10 +26,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Make a messy string — Visual",
+            "image": "/static/tutorials/steps/pyStrings_02_stringAsSequence.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonStringsControlYourText.stringAsSequence",
+                "default": "A string is a sequence of characters — even spaces count. Stray spaces at the ends are part of the value too, which is why real input often needs cleaning."
             }
         },
         {
@@ -45,10 +50,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "strip — trim the spaces — Visual",
+            "image": "/static/tutorials/steps/pyStrings_03_dotMethodBelongs.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonStringsControlYourText.dotMethodBelongs",
+                "default": "The dot says \"this method belongs to this value\". strip is a string method — it returns a NEW clean string, but the original text stays exactly as it was."
             }
         },
         {
@@ -83,10 +93,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "replace — swap one piece for another — Visual",
+            "image": "/static/tutorials/steps/pyStrings_05_replaceReturnsNew.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonStringsControlYourText.replaceReturnsNew",
+                "default": "replace finds every copy of one piece and swaps in another. It returns a NEW string — the original is left untouched, just like strip."
             }
         },
         {
@@ -106,10 +121,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "in — does the text contain something? — Visual",
+            "image": "/static/tutorials/steps/pyStrings_06_inFoundOrNot.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonStringsControlYourText.inFoundOrNot",
+                "default": "in is the \"is it inside?\" operator. It returns True or False — perfect for an if to route the program based on what's there."
             }
         },
         {

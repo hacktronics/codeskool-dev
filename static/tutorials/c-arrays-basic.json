@@ -1,0 +1,100 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int scores[5] = {90, 85, 78, 92, 88};\n    printf(\"First score: %d\\n\", scores[0]);\n    printf(\"Last score: %d\\n\", scores[4]);\n    scores[0] = 100;\n    printf(\"Updated first: %d\\n\", scores[0]);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Lists of numbers",
+            "image": "/static/tutorials/steps/cArr_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.intro",
+                "default": "Scratch had Lists — at the top of the Variables panel, you could click \"Make a List\" and create a list that holds many values. You could add items to it, look up item N, replace items, etc. C calls this same idea an ARRAY. Same fundamental concept: ONE name, many slots, each slot at a numbered position. Today: a list of five test scores in a single int array. By the end you'll know how to make an array, fill it up, read any slot, and change a slot's value."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "int scores[5] = {...};",
+            "image": "/static/tutorials/steps/cArr_02_declare.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.declare",
+                "default": "Line 4: int scores[5] = {90, 85, 78, 92, 88};. Three pieces. (1) int scores — an array of ints called scores. (2) [5] — the SIZE: this array has 5 slots. The size is fixed at creation; you can't grow or shrink it later. (3) = {90, 85, 78, 92, 88} — the initial values, separated by commas, surrounded by curly braces. Slot 0 gets 90, slot 1 gets 85, slot 2 gets 78, slot 3 gets 92, slot 4 gets 88. Like Scratch's \"add 90 to [scores]\" five times, but in one neat line."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "scores[0] is the FIRST slot",
+            "image": "/static/tutorials/steps/cArr_03_indexFirst.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.indexFirst",
+                "default": "Line 5: scores[0] — this picks the FIRST slot of the array. C counts from ZERO, not from 1. This is one of the biggest gotchas for kids coming from Scratch (where Lists are 1-indexed: item 1 is the first). In C, the first slot is index 0, the second is index 1, the third is index 2, and so on. So our 5-slot array has indexes 0, 1, 2, 3, 4 — there is no index 5. Burn this into memory: arrays are zero-indexed in C."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Last slot is [size - 1]",
+            "image": "/static/tutorials/steps/cArr_04_indexLast.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.indexLast",
+                "default": "Line 6: scores[4] — the LAST slot of a 5-slot array. Count: slot 0, slot 1, slot 2, slot 3, slot 4. That's 5 slots, last index = size - 1 = 4. If you tried scores[5] (one past the end), C would NOT stop you at compile time — it would try to read whatever bits are in memory at that location, giving you garbage or crashing the program. This is one of the most dangerous bugs in C, called a \"buffer overrun\". Always: last index = size - 1."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Change a slot's value",
+            "image": "/static/tutorials/steps/cArr_05_update.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.update",
+                "default": "Line 7: scores[0] = 100;. Same syntax as a normal variable assignment, just with the [index]. After this line, slot 0 holds 100 instead of the original 90. The other four slots are unchanged. Like Scratch's \"replace item 1 of [scores] with [100]\" — overwrite ONE slot, leave the rest alone. You can read OR write any slot using the [index] syntax — read by using it in an expression, write by putting it on the LEFT of an = sign."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — see the array work",
+            "image": "/static/tutorials/steps/cArr_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cArr.run",
+                "default": "Click Run. Console: First score: 90, Last score: 88, Updated first: 100. Five values stored in ONE variable, accessed by index. Next chapter we'll learn the most important array trick: walking through ALL the slots with a for loop. That combination — array plus for loop — is the foundation for almost everything you do with collections of data."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

@@ -34,7 +34,7 @@
         },
         {
             "title": "The wrong way",
-            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_03_wrongPrint.webp",
+            "image": "/static/tutorials/steps/pyTypeConv_03_hashComment.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTypeConversionFixTheInput.typeWrong",
                 "default": "Leave a blank line, then type:\n\nprint(a + b)            # wrong\n\nThe # starts a comment — Python ignores anything after # on a line, but we humans can read it. Think for a second: a is \"12\" and b is \"34\". What will \"12\" + \"34\" do?"
@@ -46,14 +46,14 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "Plus on strings glues, it does not add",
-            "image": "/static/tutorials/steps/pythonTypeConversionFixTheInput_04_explainGlue.webp",
+            "image": "/static/tutorials/steps/pyTypeConv_04_glueVsAddSplit.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTypeConversionFixTheInput.explainGlue",
                 "default": "When the plus sign is between two strings, Python glues them — no maths happens. \"12\" + \"34\" becomes \"1234\", the digits stuck together, NOT 46. This is exactly the concatenation you used to make greetings two tutorials ago. Python is doing the same thing here — it just isn't what we wanted this time."

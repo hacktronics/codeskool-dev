@@ -50,11 +50,7 @@
         {
             "title": "Build the Features Section",
             "image": "/static/tutorials/steps/htmlMakeItHappenFeatures.webp",
-            "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "narration": {
                 "id": "gui.tutorials.htmlMakeItHappen.features",
                 "default": "Drag a second section below the hero. Set its class to features. Inside it, drag three div blocks each with class card. In each card, add a heading at level 2 and a paragraph — Innovate / Ideas into action, Create / With purpose, and Inspire / Empower others."
@@ -62,6 +58,15 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_section"
+            }
+        },
+        {
+            "title": "Your Page Has a Tree Shape",
+            "image": "/static/tutorials/steps/htmlMakeItHappenFeaturesTree.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlMakeItHappen.featuresTree",
+                "default": "Your page now has a tree shape — header at top, hero below, features inside, then footer. Each section is a div with a class so we can style it next. Bigger sites all follow this same shape."
             }
         },
         {
@@ -191,7 +196,7 @@
             },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItHappen.recap",
-                "default": "You've gone from Hello Web to a full styled website. Every site you'll ever build uses the same recipe — HTML for structure, CSS for style, and your imagination for everything in between."
+                "default": "You've gone from Hello Web to a full styled website. Every site you'll ever build uses the same recipe — HTML for structure, CSS for style, and your imagination for everything in between. The third layer is JavaScript — it adds BEHAVIOUR (buttons that DO things, animations, games that respond). That's a whole new track when you are ready. And when you want to look up exactly how a tag or property works, MDN (developer.mozilla.org) is the reference every web developer uses — bookmark it."
             }
         }
     ]

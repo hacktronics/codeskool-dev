@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "Many things under one name",
-            "image": "/static/tutorials/steps/pythonLists_01_intro.webp",
+            "image": "/static/tutorials/steps/pyLists_01_rowOfBoxes.webp",
             "narration": {
                 "id": "gui.tutorials.pythonLists.intro",
                 "default": "A list is ONE name that holds MANY values in order. Imagine a row of labelled boxes lined up — that's a list. In Scratch you've made these by clicking \"Make a List\" and adding items one at a time. In Python it's a single line: name equals square brackets, values inside, commas between."
@@ -56,6 +56,15 @@
             }
         },
         {
+            "title": "Grow the list with append — Visual",
+            "image": "/static/tutorials/steps/pyLists_04_appendDotMethod.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonListsManyThingsOneName.appendDotMethod",
+                "default": "append is a method — a built-in command that belongs to a list. The dot says \"run this command ON this list\", and append tacks a new item onto the end."
+            }
+        },
+        {
             "title": "Loop through every item",
             "image": "/static/tutorials/steps/pythonLists_05_loop.webp",
             "narration": {
@@ -67,6 +76,15 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            }
+        },
+        {
+            "title": "Loop through every item — Visual",
+            "image": "/static/tutorials/steps/pyLists_05_forInPointer.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonListsManyThingsOneName.forInPointer",
+                "default": "for f in fruits walks the list directly — each turn, f IS the next item. No range, no index, no counting — just every item, one by one."
             }
         },
         {

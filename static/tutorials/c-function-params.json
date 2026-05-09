@@ -1,0 +1,64 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nvoid greet(char name[]) {\n    printf(\"Hello, %s!\\n\", name);\n}\n\nint main() {\n    greet(\"Alice\");\n    greet(\"Bob\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Talking to functions",
+            "image": "/static/tutorials/steps/cFuncP_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncP.why",
+                "default": "Last chapter's greet() always said the same thing — \"Hello, friend!\". What if you wanted to greet Alice, then Bob, then Charlie — each by name? You could define three separate functions, but that's repetitive. The right way is to make ONE function that takes the name as an INPUT — then call it with different names. In Scratch, \"Make a Block\" let you add input slots to your custom blocks (number, string, boolean) — same idea here. C functions take inputs by listing them in the parentheses; those inputs are called PARAMETERS."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Parameter in the parentheses",
+            "image": "/static/tutorials/steps/cFuncP_02_param.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncP.param",
+                "default": "Lines 3 to 5: void greet(char name[]) { printf(\"Hello, %s!\", name); }. The new piece is char name[] inside the parentheses — that's a PARAMETER. char name[] means \"a string variable named name\". The square brackets [] are part of how C declares string parameters — for now just remember the shape. Inside the function, name acts like a local variable that holds whatever the caller passed in. The %s in the printf is the format code for STRINGS (like %d for int and %c for char). It plugs the name into the message."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Call with different names",
+            "image": "/static/tutorials/steps/cFuncP_03_callTwice.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncP.callTwice",
+                "default": "Lines 8 and 9: greet(\"Alice\"); and greet(\"Bob\");. Same function, different inputs. The string in the parentheses is the ARGUMENT — the actual value being passed to the function. Inside greet, the parameter name takes on that value (first \"Alice\", then \"Bob\"). Notice the strings are in DOUBLE quotes — that's the C convention for strings (single quotes for char). So one function, two different outputs because the caller controls the input."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — two personalised hellos",
+            "image": "/static/tutorials/steps/cFuncP_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncP.run",
+                "default": "Click Run. Console: \"Hello, Alice!\" then \"Hello, Bob!\". The function is a TEMPLATE; the call fills in the blank. Add a third call: greet(\"Charlie\"); below the first two. Run. Three lines now. You can have hundreds of callers, each with a different argument. This is why functions are so powerful — they make ONE chunk of code reusable in MANY situations."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

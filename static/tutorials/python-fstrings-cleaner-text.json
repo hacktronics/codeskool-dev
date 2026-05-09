@@ -42,6 +42,15 @@
             }
         },
         {
+            "title": "The plus-glue way — Visual",
+            "image": "/static/tutorials/steps/pyFstrings_03_plusGlueChunks.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonFstringsCleanerText.plusGlueChunks",
+                "default": "The plus-glue way means stitching every chunk together with + and wrapping numbers in str. It works, but it's a lot of tape — easy to lose a quote or miss a +."
+            }
+        },
+        {
             "title": "The f-string way",
             "image": "/static/tutorials/steps/pythonFstrings_04_fstring.webp",
             "narration": {
@@ -53,6 +62,15 @@
                 "x": 2,
                 "y": 16,
                 "zoom": 3
+            }
+        },
+        {
+            "title": "The f-string way — Visual",
+            "image": "/static/tutorials/steps/pyFstrings_04_fillSlots.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonFstringsCleanerText.fillSlots",
+                "default": "An f-string is a sentence with slots. The f before the quote turns on the magic, and Python fills each {variable} slot with its value — no + signs, no str."
             }
         },
         {

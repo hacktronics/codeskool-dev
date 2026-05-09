@@ -1,0 +1,126 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    char name[20] = \"CodeSkool\";\n    printf(\"Name: %s\\n\", name);\n    printf(\"First letter: %c\\n\", name[0]);\n    name[0] = 'B';\n    printf(\"Changed: %s\\n\", name);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Strings are char arrays",
+            "image": "/static/tutorials/steps/cStr_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.intro",
+                "default": "In Scratch, \"Hello world\" was just a string — easy. C is fussier: a STRING in C is actually an ARRAY of chars. Each letter sits in its own slot, plus a hidden '\\0' (the \"null terminator\") at the end so C knows where the string stops. So \"Hello\" in C takes 6 slots: 'H', 'e', 'l', 'l', 'o', '\\0'. The null terminator is invisible but critical — without it, functions like printf wouldn't know when to stop reading. Today you'll create a string, print it whole, peek at individual letters, and change a letter directly."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "char name[20] holds up to 19 letters",
+            "image": "/static/tutorials/steps/cStr_02_declare.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.declare",
+                "default": "Line 4: char name[20] = \"CodeSkool\"; — char is the type, name is the variable name, [20] is the BUFFER SIZE (room for 19 letters PLUS the hidden '\\0'). The text in DOUBLE quotes \"CodeSkool\" gets stored in the array, including the automatic terminator at the end. Always size your buffer bigger than your worst-case string — if you might hold a 30-character name, declare char name[40] for safety. Forgetting room for the '\\0' is a classic bug."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "%s prints the whole string",
+            "image": "/static/tutorials/steps/cStr_03_print.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.print",
+                "default": "Line 5: printf(\"Name: %s\\n\", name); — %s is the format code for STRINGS (the s stands for string). printf reads characters from name one at a time and prints them, until it hits the '\\0' terminator — then it stops. If the '\\0' was missing, printf would keep going into garbage memory and you'd see random gibberish. This is why the null terminator is so important: it's the \"stop sign\" for string functions."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "name[0] is the first letter",
+            "image": "/static/tutorials/steps/cStr_04_index.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.index",
+                "default": "Line 6: name[0] is 'C' — the first letter, zero-indexed (just like regular arrays). %c is the format code for char (one character). So name[0] is 'C', name[1] is 'o', name[2] is 'd', name[3] is 'e', name[4] is 'S', and so on. Strings in C ARE arrays — same indexing rules. You can read or write any individual letter using the [index] syntax."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Change a letter directly",
+            "image": "/static/tutorials/steps/cStr_05_buffer.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.buffer",
+                "default": "Line 7: name[0] = 'B'; — overwrite slot 0 with the letter B. SINGLE quotes around B because it's a char, not a string. After this line, the string in name is \"BodeSkool\" — the B replaced the C. The next printf will show the new version. You CAN'T do name = \"BodeSkool\"; — that doesn't work for arrays. To change letters you either edit them one at a time (like this) or use a function like strcpy (next chapter)."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "scanf reads strings too",
+            "image": "/static/tutorials/steps/cStr_06_scanf.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.scanf",
+                "default": "To read a string from the kid: char input[40]; then scanf(\"%s\", input);. Two important details. (1) NO ampersand & in front of input — array names ALREADY are addresses in C, so scanf doesn't need the &. (2) scanf with %s reads only one WORD — it stops at the first space. So if the kid types \"John Smith\", only \"John\" gets stored. To read a whole line including spaces, you'd use fgets — for now stick to single-word inputs."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Run — see the change",
+            "image": "/static/tutorials/steps/cStr_07_greetUser.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.greetUser",
+                "default": "Click Run. Console:\nName: CodeSkool\nFirst letter: C\nChanged: BodeSkool\nThe third line shows the result of overwriting slot 0 — the B replaced the C, and the rest of the word stayed put. Try changing other slots: name[5] = 'X'; would change the S in the middle. Each slot is its own char; you can edit any of them."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Strings are special arrays",
+            "image": "/static/tutorials/steps/cStr_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.cStr.recap",
+                "default": "Three things to remember about C strings: (1) they are CHAR ARRAYS — each letter is one char in a numbered slot. (2) they end in a HIDDEN '\\0' terminator that tells string functions where to stop. (3) %s prints the whole thing; %c prints one char at a time. Next chapter we'll meet the helper functions that work on whole strings: strlen (length), strcpy (copy), strcmp (compare), strcat (join). Together those let you do most string work without manually walking the array."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

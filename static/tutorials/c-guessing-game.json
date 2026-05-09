@@ -1,0 +1,162 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n#include <stdlib.h>\n#include <time.h>\n\nint main() {\n    srand(time(NULL));\n    int secret = rand() % 100 + 1;\n    int guess = 0;\n    while (guess != secret) {\n        printf(\"Guess (1-100): \");\n        scanf(\"%d\", &guess);\n        if (guess < secret) printf(\"Higher!\\n\");\n        else if (guess > secret) printf(\"Lower!\\n\");\n    }\n    printf(\"You got it!\\n\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "The guessing game",
+            "image": "/static/tutorials/steps/cGuess_01_plan.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.plan",
+                "default": "A classic game: the computer picks a SECRET number between 1 and 100. You guess a number; the computer says \"Higher!\" or \"Lower!\" depending on whether your guess is too low or too high. You keep guessing until you get it right. The game uses lots of what you've learned: a while loop (until correct), if-else (give the right hint), scanf (read your guess), and a NEW thing — random numbers. By the end you'll have a real game that's actually fun to play."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Three #includes",
+            "image": "/static/tutorials/steps/cGuess_02_includes.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.includes",
+                "default": "Lines 1 to 3: three different toolboxes. stdio.h for printf and scanf (familiar). stdlib.h for the rand() function (random number generator). time.h for the time() function (current time, used as a seed). Why two extra includes? Because computers don't actually have \"true\" randomness — they use a formula that LOOKS random. If we don't SEED the formula with a different starting value each run, every \"random\" pick would be the same number every time. time(NULL) gives the current time as a seed, so each run picks differently."
+            },
+            "highlightLine": {
+                "from": 1,
+                "to": 3
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Pick a random 1-100",
+            "image": "/static/tutorials/steps/cGuess_03_getSecret.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.getSecret",
+                "default": "Lines 6 and 7: srand(time(NULL)); seeds the random generator (do this ONCE near the start of the program). int secret = rand() % 100 + 1; picks a random number. rand() returns a big random int (0 to about 2 billion). rand() % 100 gives the remainder when divided by 100, so the result is 0 to 99. Adding 1 shifts the range to 1 to 100 (the inclusive range we want). The kid never sees this number until they guess it."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Loop until correct",
+            "image": "/static/tutorials/steps/cGuess_04_readGuess.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.readGuess",
+                "default": "Lines 9 to 13: while (guess != secret). The != means \"not equal\". So this reads as \"while the guess is NOT yet the secret, keep going\". Inside the loop: prompt for a guess, read it with scanf, then give a hint with if-else. The loop runs until guess matches secret — could be 3 tries or 30, the loop adapts. (This is a great example of when to use while instead of for: you don't know the count upfront.)"
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 13
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Higher or Lower hint",
+            "image": "/static/tutorials/steps/cGuess_05_giveHint.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.giveHint",
+                "default": "Lines 12 and 13: if guess < secret → tell kid \"Higher!\" (your guess was too low, aim higher). else if guess > secret → tell kid \"Lower!\" (your guess was too high, aim lower). Notice there's NO else for the equal case — because if guess equals secret, the while condition becomes false and the loop just ends naturally. Less code that way."
+            },
+            "highlightLine": {
+                "from": 12,
+                "to": 13
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Initial guess = 0",
+            "image": "/static/tutorials/steps/cGuess_06_setup.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.setup",
+                "default": "Line 8: int guess = 0; — set guess to 0 BEFORE the while loop. Why 0? Because the while needs something to check on the very first pass. Setting guess to 0 ensures the loop runs at least once (since secret is 1-100, never 0, so 0 != secret is always true). Any starting value other than a possible secret would work — we picked 0 because it's outside the secret range and easy to see at a glance."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Why while, not for?",
+            "image": "/static/tutorials/steps/cGuess_07_while.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.while",
+                "default": "A short philosophy break. for is great when you know the count up front — \"loop exactly 5 times\". while wins when you DON'T — \"loop until something happens, no idea how long it'll take\". This game might end in 1 try (lucky guess) or 50 (very unlucky). while fits this kind of unknown-length situation perfectly. Pick the loop type that matches the problem: for for fixed counts, while for unknown counts."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Trace one round",
+            "image": "/static/tutorials/steps/cGuess_08_body.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.body",
+                "default": "Say secret is 42 and you guess 50. The loop checks 50 != 42 → true → enter the body. printf shows the prompt. scanf reads 50 into guess (well, was already 50). 50 < 42? No. 50 > 42? Yes → print \"Lower!\". Loop body ends, jump back to the while check. 50 != 42 still true → loop again. You type 30. 30 < 42? Yes → \"Higher!\". Loop again. You type 42. 42 != 42 → FALSE → exit the loop."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Final message after the loop",
+            "image": "/static/tutorials/steps/cGuess_09_won.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.won",
+                "default": "Line 15: printf(\"You got it!\\n\"); — placed AFTER the while loop's closing brace. This line runs ONCE, after the loop ends. Since the loop only ends when guess == secret, this is always the right moment to celebrate. Code OUTSIDE the loop runs once; code INSIDE runs every pass. Knowing the difference is a key skill for designing good loops."
+            },
+            "highlightLine": {
+                "from": 15,
+                "to": 15
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — play the game",
+            "image": "/static/tutorials/steps/cGuess_10_play.webp",
+            "narration": {
+                "id": "gui.tutorials.cGuess.play",
+                "default": "Click Run. Console: \"Guess (1-100): \". Click in the Console, type a number (50 is a smart first guess — splits the range in half), and press Enter. The hint tells you to go higher or lower. Use the hint to BISECT: if \"Higher\", try 75 (halfway between 50 and 100). If \"Lower\", try 25. Keep bisecting and you'll always win in 7 tries or fewer (this is called binary search — a very famous algorithm)."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

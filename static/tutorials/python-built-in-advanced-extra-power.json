@@ -34,7 +34,7 @@
         },
         {
             "title": "map — apply a function to every item",
-            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_03_map.webp",
+            "image": "/static/tutorials/steps/pyBuiltinAdvanced_03_mapAssemblyLine.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInAdvanced.map",
                 "default": "Type:\n\nnumbers = [1, 2, 3]\n\ndef double(x):\n    return x * 2\n\nprint(\"Doubled:\", list(map(double, numbers)))\n\nmap takes two arguments — a FUNCTION and a LIST. It runs the function on every item and gives back a new sequence of results. We wrap it in list(...) to force the results out into a real list. Result: [2, 4, 6] — every number doubled, no for loop in sight."
@@ -46,14 +46,14 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "filter — keep only what passes the test",
-            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_04_filter.webp",
+            "image": "/static/tutorials/steps/pyBuiltinAdvanced_04_filterSieve.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInAdvanced.filter",
                 "default": "Type:\n\ndef greater_than_one(x):\n    return x > 1\n\nprint(\"Filtered:\", list(filter(greater_than_one, numbers)))\n\nfilter also takes a function and a list, but the function must return True or False. Only items where the function returns True survive. greater_than_one is True for 2 and 3, False for 1 — so the result is [2, 3]."
@@ -65,14 +65,14 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "zip — pair two lists together",
-            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_05_zip.webp",
+            "image": "/static/tutorials/steps/pyBuiltinAdvanced_05_zipZipper.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInAdvanced.zip",
                 "default": "Type:\n\nnames = [\"Aman\", \"Riya\", \"Kabir\"]\nscores = [90, 85, 88]\n\nprint(\"Paired:\", list(zip(names, scores)))\n\nzip pairs items from two lists by position — first with first, second with second. Result: [('Aman', 90), ('Riya', 85), ('Kabir', 88)] — a list of tuples. Useful for printing a table, or for matching things up after sorting them separately."
@@ -84,14 +84,14 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "enumerate — number the items",
-            "image": "/static/tutorials/steps/pythonBuiltInAdvanced_06_enumerate.webp",
+            "image": "/static/tutorials/steps/pyBuiltinAdvanced_06_enumerateTags.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInAdvanced.enumerate",
                 "default": "Type:\n\nprint(\"With index:\", list(enumerate(names)))\n\nenumerate pairs every item with its position number — starting at 0. Result: [(0, 'Aman'), (1, 'Riya'), (2, 'Kabir')]. Useful when you want to loop over a list and ALSO know how far along you are: \"3rd in line, here is your name\"."
@@ -107,9 +107,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

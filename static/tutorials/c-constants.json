@@ -1,0 +1,64 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\n#define PI 3.14\n#define MAX_LIVES 3\n\nint main() {\n    const int speed = 60;\n    printf(\"PI = %.2f\\n\", PI);\n    printf(\"Lives = %d\\n\", MAX_LIVES);\n    printf(\"Speed = %d\\n\", speed);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Things that don't change",
+            "image": "/static/tutorials/steps/cConst_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cConst.why",
+                "default": "Some values in your program never change while it runs. Pi is always 3.14159..., the maximum number of lives in your game might always be 3, the speed limit on a road is always 60. These are CONSTANTS — values that should be set once and never modified. C lets you mark them as constant so that anyone (including future-you) can't accidentally change them. There are two ways to make constants in C: #define at the top of the file (a kind of search-and-replace) and const inside your function (a real variable that's locked). Today you'll see both. Using constants makes your code clearer (the reader sees PI not 3.14 — they immediately know what it means) and safer (if it can't change, it can't accidentally be wrong)."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "The #define way",
+            "image": "/static/tutorials/steps/cConst_02_define.webp",
+            "narration": {
+                "id": "gui.tutorials.cConst.define",
+                "default": "Lines 3 and 4 use #define — pronounced \"hash define\". This is a special instruction (note the # at the start, like #include). #define does a SEARCH-AND-REPLACE on your code BEFORE the compiler even reads it. Anywhere PI appears below, the compiler swaps in 3.14 first. Same for MAX_LIVES — anywhere it appears, the compiler swaps in 3. The convention in C is to use ALL CAPITAL LETTERS for #define names (like PI, MAX_LIVES, BUFFER_SIZE) so that anyone reading your code instantly recognizes them as constants and not regular variables. #define is great for constants you might use across multiple files (like a PI you share between math files). It's also great for \"magic numbers\" — instead of writing 3 in 20 places in your code, write MAX_LIVES once and use the name everywhere."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "The const way",
+            "image": "/static/tutorials/steps/cConst_03_const.webp",
+            "narration": {
+                "id": "gui.tutorials.cConst.const",
+                "default": "Line 7 uses const int — a different way to make a constant. Read it as: \"constant integer named speed, value 60\". It looks just like a regular variable declaration but with const stuck on the front. Unlike #define, const is a REAL variable — it has a type (int), takes memory, and you can pass it around. The \"const\" part just locks it: any attempt to change it later (like writing speed = 80; on the next line) would get refused by the compiler. Try it — add the line speed = 80; below line 7 and watch the compiler complain. const is preferred over #define when the constant only matters inside one function (like a local speed limit). Both ways work; pick whichever fits the situation."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — three constants printed",
+            "image": "/static/tutorials/steps/cConst_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cConst.run",
+                "default": "Click Run. The Console shows three lines: PI = 3.14, Lives = 3, Speed = 60. Each printf used its constant the same way it would use a normal variable. The kid (or you in 6 months) reading this code can see PI, MAX_LIVES, and speed at a glance — much clearer than seeing 3.14, 3, and 60 scattered through the code with no explanation. The general rule: if a value is fixed and meaningful, give it a NAME. Constants make code self-documenting. Use #define for shared values across many files, use const for one-function locks."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

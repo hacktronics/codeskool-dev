@@ -1,0 +1,77 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int score = 75;\n    if (score >= 90) {\n        printf(\"Grade: A\\n\");\n    } else if (score >= 75) {\n        printf(\"Grade: B\\n\");\n    } else if (score >= 60) {\n        printf(\"Grade: C\\n\");\n    } else {\n        printf(\"Grade: F\\n\");\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "More than two paths",
+            "image": "/static/tutorials/steps/cElseIf_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cElseIf.why",
+                "default": "if-else gave you a way to pick between TWO paths. But what if you need to pick between FOUR — Grade A, B, C, or F? Or seven — days of the week? Or ten — different shop items? You CHAIN if-elses together using the special form \"else if\". C tries each condition in order from top to bottom, and the FIRST one that's true wins — the rest are skipped completely. The final else (no condition) catches everything that didn't match any of the previous conditions. It's like a flowchart with multiple decision diamonds in a row."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "First condition wins",
+            "image": "/static/tutorials/steps/cElseIf_02_first.webp",
+            "narration": {
+                "id": "gui.tutorials.cElseIf.first",
+                "default": "Lines 5 to 7 check the first condition: score >= 90 → print \"Grade: A\". If score is 90 or higher, this prints A and the entire chain STOPS — none of the else if blocks are even checked. This is important to understand: ORDER MATTERS in an if-else if chain. C goes top-down and picks the first match. If you put score >= 60 first, then EVERY score 60+ would match (because 95 is also 60+) and you'd never reach the more-specific A or B checks. So always go from MOST SPECIFIC to LEAST SPECIFIC, top to bottom."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Else if chain",
+            "image": "/static/tutorials/steps/cElseIf_03_chain.webp",
+            "narration": {
+                "id": "gui.tutorials.cElseIf.chain",
+                "default": "Lines 7 to 11 chain three more checks: 75+ is B, 60+ is C, anything below those is F (the final else). Notice the structure: } else if (...) { ... } — the else and the if are joined together. You can chain as many else if blocks as you want — five, ten, twenty. After all the else ifs, the final else (no condition) is the catch-all that runs only when NONE of the previous conditions matched. Exactly ONE branch always runs — same guarantee as plain if-else, just with more options."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 30,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run — predict the grade",
+            "image": "/static/tutorials/steps/cElseIf_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cElseIf.run",
+                "default": "Score is 75. Trace it: 75 >= 90? NO. 75 >= 75? YES. So the second branch wins → \"Grade: B\" prints, and C skips the rest. Click Run to confirm. Now experiment: change score to 95 (should be A), then 65 (should be C), then 40 (should be F). Each different score triggers a different branch. This pattern — chaining checks from highest to lowest — is one of the most common shapes in real-world programs (grading systems, age groups, traffic light colors, anything with categories)."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Order matters!",
+            "image": "/static/tutorials/steps/cElseIf_05_orderTrap.webp",
+            "narration": {
+                "id": "gui.tutorials.cElseIf.order",
+                "default": "Imagine you accidentally put score >= 60 FIRST instead of score >= 90. What would happen? Every score 60 or higher would match the first condition and print \"Grade: C\" — even a 95 would print C, because C never gets to check the higher-grade conditions after the first match wins. So a top scorer would get a C. Bug! The fix is always: put your STRICTEST condition first (>= 90), then loosen as you go down. This is the most common bug in else-if chains. Read your conditions from top to bottom and ask: \"is each one stricter than the next?\" If not, reorder."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

@@ -15,7 +15,7 @@
         },
         {
             "title": "Add and subtract — two functions, two parameters each",
-            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_02_addSub.webp",
+            "image": "/static/tutorials/steps/pyMultipleAnswers_02_paramSlots.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandMultipleAnswers.addSub",
                 "default": "Type:\n\ndef add(a, b):\n    print(a + b)\n\ndef subtract(a, b):\n    print(a - b)\n\nThe (a, b) inside the brackets is new — those are PARAMETERS. They're like empty boxes the function expects to be filled when it's called. Inside the function, a and b act like normal variables."
@@ -27,9 +27,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -96,7 +96,7 @@
         },
         {
             "title": "Parameters vs arguments",
-            "image": "/static/tutorials/steps/pythonOneCommandMultipleAnswers_06_terminology.webp",
+            "image": "/static/tutorials/steps/pyMultipleAnswers_06_paramVsArg.webp",
             "narration": {
                 "id": "gui.tutorials.pythonOneCommandMultipleAnswers.terminology",
                 "default": "Two words you'll hear: PARAMETER is the empty box in the function definition (a and b). ARGUMENT is the actual value you pass in when you call (5 and 3). Same idea, just the names differ depending on which side you're on. Don't worry about getting the names right — most programmers use them interchangeably."

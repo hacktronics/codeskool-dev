@@ -1,0 +1,64 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint factorial(int n) {\n    if (n <= 1) {\n        return 1;\n    }\n    return n * factorial(n - 1);\n}\n\nint main() {\n    printf(\"5! = %d\\n\", factorial(5));\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Functions that call themselves",
+            "image": "/static/tutorials/steps/cRecur_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cRecur.intro",
+                "default": "A function in C is allowed to CALL ITSELF. That sounds weird — even paradoxical — but it works for problems where the answer is \"the smaller version of this same problem, plus one step\". Think of Russian nesting dolls: each big doll contains a smaller doll inside, which contains an even smaller doll, all the way down to the tiniest one. When a function calls itself, the technique is called RECURSION. Today you'll write a recursive function to compute FACTORIAL: 5! = 5 × 4 × 3 × 2 × 1 = 120. The recursive insight: 5! = 5 × 4! and 4! = 4 × 3! and so on, all the way down to 1! = 1."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "The base case stops the chain",
+            "image": "/static/tutorials/steps/cRecur_02_basecase.webp",
+            "narration": {
+                "id": "gui.tutorials.cRecur.basecase",
+                "default": "Lines 4 to 6: if (n <= 1) { return 1; }. This is the BASE CASE — the simplest version of the problem, answered directly. For factorial, 1! = 1 (and 0! is also 1 by mathematical convention). Without a base case, the function would call itself forever and forever, and your program would crash with a \"stack overflow\" error. EVERY recursive function MUST have a base case. The base case is the bottom of the chain — the smallest doll that doesn't open."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "The recursive call",
+            "image": "/static/tutorials/steps/cRecur_03_recursive.webp",
+            "narration": {
+                "id": "gui.tutorials.cRecur.recursive",
+                "default": "Line 7: return n * factorial(n - 1); — the RECURSIVE call. To compute factorial(5), C asks \"what's factorial(4)?\". To compute factorial(4), it asks \"what's factorial(3)?\". And so on down to factorial(1), which hits the base case and returns 1 directly. Then the answers UNWIND back up: factorial(2) = 2 * 1 = 2, factorial(3) = 3 * 2 = 6, factorial(4) = 4 * 6 = 24, factorial(5) = 5 * 24 = 120. Each call waits for the smaller one to finish, then multiplies and returns."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — 5! = 120",
+            "image": "/static/tutorials/steps/cRecur_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cRecur.run",
+                "default": "Click Run. Console: \"5! = 120\". The whole chain happened in microseconds. Try factorial(7) (= 5040), factorial(10) (= 3628800), factorial(12) (= 479001600). Try factorial(20) — you'll get a weird negative number, because 20! is too big to fit in an int. Numbers grow VERY fast with factorial — a classic gotcha. The recursion itself is correct; the int type just can't hold the result. (For bigger numbers, you'd use a long long type — beyond this chapter.)"
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

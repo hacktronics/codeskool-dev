@@ -1,0 +1,64 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint square(int n) {\n    return n * n;\n}\n\nint main() {\n    int result = square(5);\n    printf(\"5 squared is %d\\n\", result);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Getting answers back",
+            "image": "/static/tutorials/steps/cFuncR_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncR.why",
+                "default": "So far our functions just DID things — printed messages — but didn't hand back any answer. Sometimes you want a function to compute something and HAND BACK the result so the caller can use it. Think of Scratch's \"reporter blocks\" — the round green blocks that GIVE BACK a value, like ((x) + (y)) or (sqrt of (9)). You can't just stand them on the script area; you have to slot them INTO another block. Same idea in C: a function that returns a value can be used wherever a value would normally fit — in math, in printf, anywhere."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "int means returns int",
+            "image": "/static/tutorials/steps/cFuncR_02_return.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncR.return",
+                "default": "Lines 3 to 5: int square(int n) { return n * n; }. Two big changes from last chapter's function. (1) The first int means \"this function RETURNS an int\" — it gives back a whole number when it finishes. Last chapter we used void (returns nothing); now we use int (returns an int). (2) Inside the body, return n * n; — return is the magic keyword. It calculates n times n and HANDS THAT VALUE back to whoever called square. The function exits the moment return runs."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Catch the return value",
+            "image": "/static/tutorials/steps/cFuncR_03_call.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncR.call",
+                "default": "Line 8: int result = square(5); — this is where the return value gets CAUGHT. C reads it as: \"call square with 5, get back the answer, store it in result\". square(5) computes 5 * 5 = 25, returns 25, the = stores 25 into result. Now the function call square(5) is acting like an EXPRESSION — like the number 25 itself. You can use a returning-function-call anywhere you'd use a number: in math, in conditions, in printf, in other function calls."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — 5 squared is 25",
+            "image": "/static/tutorials/steps/cFuncR_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cFuncR.run",
+                "default": "Click Run. Console: \"5 squared is 25\". Now try CHAINING: replace the printf with printf(\"Sum of squares: %d\\n\", square(7) + square(3));. square(7) returns 49, square(3) returns 9, the sum is 58. Reporter-block-style chaining works in C the same way it did in Scratch — function calls plug into bigger expressions."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

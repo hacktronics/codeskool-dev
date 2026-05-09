@@ -1,0 +1,128 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    // your variable goes here\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Programs that remember",
+            "image": "/static/tutorials/steps/cVar_01_why.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.why",
+                "default": "So far every printf had the message baked right into the quotes. That works fine for fixed text, but real programs need to REMEMBER values that can change — like a score, a level number, the player's age, or how many lives are left. In Scratch, when you wanted to remember a number, you made a VARIABLE — that orange round bubble in the Variables panel. You set its value with \"set [score] to (0)\" and changed it with \"change [score] by 1\". C does the exact same thing, just typed instead of dragged. Today you'll create your first C variable, give it a starting value, print it, change it, and add a second variable too. By the end you will understand the basic shape that EVERY C variable uses."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Make a variable called age",
+            "image": "/static/tutorials/steps/cVar_02_intAge.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.declare",
+                "default": "Replace the placeholder line (the // your variable goes here line) with this: int age = 12; — exact spelling, semicolon at the end. Let's break it down piece by piece. The word int means INTEGER — a whole number with no decimal point. C is fussier than Scratch; you have to TELL it what type of value the variable will hold. age is the NAME you picked for the variable — you choose names that make sense for what they hold. The = sign means \"make this variable equal to\" — it's ASSIGNMENT, not \"is equal to\" (we'll see what equal-equal looks like in a later chapter). 12 is the value being stored. The semicolon ends the line. The whole thing reads as: \"Create a whole-number box called age, put 12 in it.\" In Scratch this was a \"set [age] to (12)\" block."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Print the variable",
+            "image": "/static/tutorials/steps/cVar_03_printAge.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.print",
+                "default": "Add a new line below: printf(\"My age is %d\\n\", age); — there are TWO new things to notice here. First: inside the quotes is %d (percent-d). That is a PLACEHOLDER — a slot that printf will fill in with a number when the program runs. The d stands for \"decimal integer\" (i.e. a whole number). Second: after the closing quote, there is a comma and then the variable name (, age). That comma tells printf \"use this value to fill in the placeholder\". You can think of it like this: printf reads the quote string, sees the %d slot, and reaches into its arguments to pull out the next value. So \"My age is %d\" + age=12 becomes \"My age is 12\". In Scratch this was the \"join [Hello] [world]\" block — combining text and a variable."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Click Run — predict first",
+            "image": "/static/tutorials/steps/cVar_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.run",
+                "default": "Before clicking Run, predict in your head: when this runs, will the Console show \"My age is %d\" or will it show \"My age is 12\"? Decide first, then click Run. The Console shows \"My age is 12\" — the %d placeholder was REPLACED by the value of age. This is exactly like Scratch's \"join\" block stitching text with a variable, just written differently. printf is smart: every %d in the string gets matched up with the next variable in the comma-separated list after the quotes. We only have one %d here, so we only need one variable."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Change 12 to your real age",
+            "image": "/static/tutorials/steps/cVar_05_changeValue.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.change",
+                "default": "Edit line 4 — change the 12 to your own real age (or any number you like — pick something different from 12 so you can see the change). Click Run. The Console shows your new number — but notice you only had to change ONE place. The printf stayed exactly the same. That is the WIN of variables: you store a value once, use it many times by referring to its name. Imagine if your program printed the age 50 times — without a variable you'd have to update 50 lines. With a variable you update 1 line and all 50 printfs follow. This becomes huge as programs grow."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Add a second variable",
+            "image": "/static/tutorials/steps/cVar_06_year.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.second",
+                "default": "Variables stack — you can have as many as you want in one program. Below the existing two lines, add two more lines: int year = 2026; on one line, then printf(\"The year is %d\\n\", year); on the next. Same shape as before, different name and different value. Each printf has its own %d slot and its own variable to fill it. This is how you'd track a player's score, lives, level, time-left, ammo, and high-score all separately in a real game — each gets its own variable, each has its own purpose, each is updated independently."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Run — two values",
+            "image": "/static/tutorials/steps/cVar_07_runBoth.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.runBoth",
+                "default": "Click Run. Two lines now in the Console — your age, then the year (2026). Each printf used its own variable in its own %d slot. The order matches the order of the printfs. You can have as many variables and as many printfs as you want; the program runs them top to bottom. Try adding a third variable like int month = 11; with its own printf. The pattern is always the same: declare the variable on its own line (int NAME = VALUE;), then use it in a printf with %d wherever you want it to appear."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "What if the format code is wrong?",
+            "image": "/static/tutorials/steps/cVar_08_typeMismatch.webp",
+            "narration": {
+                "id": "gui.tutorials.cVar.mismatch",
+                "default": "Now let's break it ON PURPOSE so you understand the rule. On line 5, change %d to %f and click Run. The age line now prints something WEIRD — usually 0.000000 or a giant random decimal that makes no sense. C did NOT refuse to compile — it just trusted you blindly. %d means \"the value here is a whole number\"; %f means \"the value here is a decimal number\". They are stored differently in memory, so when you tell printf \"treat this whole-number area as a decimal\", it reads the bits wrong and shows garbage. This trips up everyone at least once. The lesson: %d goes with int, %f goes with float, %c goes with char. Always match the format code to the variable type. Change %f back to %d."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

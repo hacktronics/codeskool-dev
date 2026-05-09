@@ -1,0 +1,77 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint globalCount = 0;\n\nvoid bump() {\n    int localCount = 0;\n    localCount++;\n    globalCount++;\n    printf(\"local=%d global=%d\\n\", localCount, globalCount);\n}\n\nint main() {\n    bump();\n    bump();\n    bump();\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Where variables live",
+            "image": "/static/tutorials/steps/cScope_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cScope.intro",
+                "default": "In Scratch, when you made a variable you had a choice: \"For this sprite only\" or \"For all sprites\". That's SCOPE — where the variable is visible. C has the same idea but with different words. Variables made INSIDE a function are LOCAL — only that function can see them, and they disappear when the function ends. Variables made OUTSIDE any function (at the top of the file) are GLOBAL — visible to every function, and they stick around for the whole program. Today you'll see both at the same time and watch the difference in behavior."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Global lives outside",
+            "image": "/static/tutorials/steps/cScope_02_global.webp",
+            "narration": {
+                "id": "gui.tutorials.cScope.global",
+                "default": "Line 3: int globalCount = 0; — declared OUTSIDE any function, at the very top of the file. This is a GLOBAL variable. Every function in this file can read it AND change it. It exists for the entire lifetime of the program — it's \"born\" when the program starts and \"dies\" only when the program ends. Like Scratch's \"for all sprites\" variable that all sprites can change."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 3
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Local lives inside",
+            "image": "/static/tutorials/steps/cScope_03_local.webp",
+            "narration": {
+                "id": "gui.tutorials.cScope.local",
+                "default": "Line 6: int localCount = 0; — declared INSIDE the bump function. This is a LOCAL variable. It is BORN every time bump is called (set to 0), it's only visible inside bump (main can't see it), and it DIES when bump returns. Every call to bump gets a FRESH localCount — nothing is remembered between calls. Like a sticky note you write inside a meeting and throw away when you leave the room."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — local stays at 1, global grows",
+            "image": "/static/tutorials/steps/cScope_04_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cScope.run",
+                "default": "Click Run. Console:\nlocal=1 global=1\nlocal=1 global=2\nlocal=1 global=3\nWatch what happens. localCount RESETS to 0 every call (born fresh, dies at end of function), so it always prints 1 after the ++. globalCount keeps GROWING because it lives across all calls — each call adds 1 to the same shared variable. Three calls → global ends at 3."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Use locals when you can",
+            "image": "/static/tutorials/steps/cScope_05_advice.webp",
+            "narration": {
+                "id": "gui.tutorials.cScope.advice",
+                "default": "Globals are CONVENIENT (any function can change them anywhere) but they are also DANGEROUS (any function can change them anywhere — same property is both good and bad). With many globals, your program becomes hard to follow because you can't tell what changes the variable just by reading one function. Real-world C code uses locals heavily and globals sparingly. The rule of thumb: if a value only matters inside one function, keep it LOCAL. Only go global when truly needed (configuration, shared counters, etc.). Smaller scope = safer code."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

@@ -118,13 +118,18 @@
             }
         },
         {
+            "title": "Two Kinds of Address",
+            "image": "/static/tutorials/steps/htmlUploadImageTwoAddresses.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.twoAddresses",
+                "default": "You have now seen TWO kinds of address. The image tutorial used a long web address starting with https:// — that works from anywhere on the internet. This time you typed just my-pet.jpg — that is a SHORT address that only works because the file lives in the SAME folder as your page. Long addresses for far-away pictures, short addresses for files you uploaded right here."
+            }
+        },
+        {
             "title": "Recap",
-            "image": "/static/tutorials/steps/htmlUploadImageRecap.webp",
-            "imageFocus": {
-                "x": 75,
-                "y": 50,
-                "zoom": 1.3
-            },
+            "image": "/static/tutorials/steps/htmlUploadImageFlow.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.recap",
                 "default": "You uploaded an image, named it, used it in img src, and saw it on your page. Anything you can take a photo of can now go on a webpage you make."

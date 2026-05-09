@@ -1,6 +1,19 @@
 {
     "steps": [
         {
+            "title": "What a function actually is",
+            "image": "/static/tutorials/steps/pyBuiltins_01_functionVendingMachine.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.functionConcept",
+                "default": "We've been using the word FUNCTION for a while — print, int, input, len. Let's nail down what one actually is. A function is like a tiny vending machine: you give it something (the input), it does its job inside, and sometimes it gives you something back (the output). print takes a value and shows it on the terminal. int takes text and gives back a number. len takes a list and gives back its size. Same shape — input, job, output — but each does a different job. Today we'll meet a whole shelf of these built-in machines."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
             "title": "Tools Python gives you for free",
             "image": "/static/tutorials/steps/pythonBuiltInFunctions_01_intro.webp",
             "narration": {
@@ -83,10 +96,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "sorted — make a new ordered list — Visual",
+            "image": "/static/tutorials/steps/pyBuiltins_05_sortedReturnsNew.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.sortedReturnsNew",
+                "default": "sorted gives back a NEW list in order, smallest to largest. The original list stays untouched — sorted returns a fresh sorted copy."
             }
         },
         {
@@ -94,7 +112,7 @@
             "image": "/static/tutorials/steps/pythonBuiltInFunctions_06_type.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBuiltInFunctions.type",
-                "default": "Type the last line:\n\nprint(\"Type:\", type(numbers))\n\ntype shows what KIND of thing a value is — Python prints something like <class 'list'>. Useful when debugging — if a print shows a string when you expected a number, type tells you so. type works on any value: type(5) is int, type(\"hi\") is str, type(True) is bool."
+                "default": "Type the last line:\n\nprint(\"Type:\", type(numbers))\n\ntype shows what KIND of thing a value is — Python prints something like <class 'list'>. Useful when debugging — if a print shows a string when you expected a number, type tells you so. type works on any value: type(5) is int, type(\"hi\") is str, type(True) is bool. One more thing — Python is what's called DYNAMICALLY TYPED, which is a fancy way of saying: a variable doesn't lock into one type. The same name `x` can hold a number now and text later. Python tracks the TYPE on the value, not on the box."
             },
             "validateCode": {
                 "functionName": "print",
@@ -106,10 +124,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "type — what KIND of value is this? — Visual",
+            "image": "/static/tutorials/steps/pyBuiltins_06_typeBins.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.typeBins",
+                "default": "type tells you what KIND of value something is — int, str, bool, list. Super useful for debugging when a value isn't what you expected."
             }
         },
         {

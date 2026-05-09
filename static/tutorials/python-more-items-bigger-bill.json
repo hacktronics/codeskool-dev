@@ -53,12 +53,25 @@
         },
         {
             "title": "Why parentheses matter",
-            "image": "/static/tutorials/steps/pythonMoreItemsBiggerBill_04_parensExplain.webp",
+            "image": "/static/tutorials/steps/pyMoreItemsBigger_04_parensClarity.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMoreItemsBiggerBill.parensExplain",
                 "default": "Python actually does multiplication before addition without the parentheses — but writing (price * qty) makes the line easy to read. Future-you, looking at this code months from now, won't have to remember the order-of-operations rules. Parentheses are free; clarity is priceless."
             },
             "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Order of operations — the precedence ladder",
+            "image": "/static/tutorials/steps/pyMath_05_precedenceLadder.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMoreItemsBiggerBill.precedence",
+                "default": "Python doesn't run a line left to right — it follows a precedence ladder. Parentheses are at the top: Python does whatever is inside them first. Next come power and multiply/divide. Then plus and minus. After that come comparisons like > and ==, and at the bottom sit the logical words and / or / not. So in 2 + 3 * 4, Python multiplies first (3 * 4 = 12), then adds (2 + 12 = 14). When in doubt, add parentheses — they jump anything to the top of the ladder."
+            },
+            "imageFocus": {
                 "x": 50,
                 "y": 50,
                 "zoom": 1

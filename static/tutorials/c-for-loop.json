@@ -1,0 +1,100 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    for (int i = 1; i <= 5; i++) {\n        printf(\"Step %d\\n\", i);\n    }\n    printf(\"Done!\\n\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Counting made simple",
+            "image": "/static/tutorials/steps/cFor_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.intro",
+                "default": "Last chapter you used while to count 1 to 5. It worked, but it took 4 separate lines: declare counter, while-condition, body, count++. The for loop bundles all that bookkeeping into ONE line. Scratch's \"repeat (10)\" block is the closest match — it counts a fixed number of times and runs its body each time. while is great for \"repeat UNTIL something happens\" (unknown count), for is great for \"repeat exactly N times\" (known count). For most simple counting jobs, for is the right choice."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "for has THREE pieces",
+            "image": "/static/tutorials/steps/cFor_02_threePieces.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.threePieces",
+                "default": "Look at line 4: for (int i = 1; i <= 5; i++). Inside the parentheses are THREE pieces separated by SEMICOLONS. (1) START: int i = 1; — declare and initialize the counter, runs ONCE before the loop begins. (2) KEEP-GOING-WHILE: i <= 5; — checked BEFORE each pass; if true, body runs; if false, loop exits. (3) AFTER-EACH-PASS: i++ — runs at the END of each pass, before checking the condition again. All three pieces of loop bookkeeping in one line. The semicolons between the pieces are required (the third piece has no semicolon after it because it's the last)."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "The body runs each pass",
+            "image": "/static/tutorials/steps/cFor_03_body.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.body",
+                "default": "Line 5 is the body of the for loop — printf(\"Step %d\\n\", i);. The body runs once PER PASS, with i changing each time. Same idea as the SUBSTACK slot inside Scratch's \"repeat\" block. The braces { } around the body work the same way as in if-else and while — they group \"the stuff to do each pass\". You can put as many lines inside the braces as you want."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Five steps, then done",
+            "image": "/static/tutorials/steps/cFor_04_loop.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.loop",
+                "default": "Trace the whole loop step by step. Pass 1: i=1, 1<=5 true, print \"Step 1\", i becomes 2. Pass 2: i=2, 2<=5 true, print \"Step 2\", i becomes 3. Pass 3: i=3, print \"Step 3\", i becomes 4. Pass 4: i=4, print \"Step 4\", i becomes 5. Pass 5: i=5, 5<=5 true, print \"Step 5\", i becomes 6. Check 6<=5 → false → exit loop, jump to Done!. Five prints total, then the final Done! line. The for loop did the same job as last chapter's while in fewer lines."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Run — five steps",
+            "image": "/static/tutorials/steps/cFor_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.run",
+                "default": "Click Run. Console: Step 1, Step 2, Step 3, Step 4, Step 5, Done!. Try changing 5 to 10 and Run — 10 steps. Try i = 0; i < 5; — that counts 0, 1, 2, 3, 4 (still 5 passes, but starting at 0 — the most common style in real C code, especially with arrays which are also 0-indexed). Notice the < instead of <= because you want it to stop AT 5, not include 5. Whether you start at 0 or 1 is a STYLE choice — both work — but the C tradition is to start at 0."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Try counting backwards",
+            "image": "/static/tutorials/steps/cFor_06_play.webp",
+            "narration": {
+                "id": "gui.tutorials.cFor.play",
+                "default": "Change the for to: for (int i = 5; i >= 1; i--). Three changes: start at 5 (not 1), keep going while i is at LEAST 1 (not at MOST 5), and SUBTRACT 1 each pass (not add). Run. Console: Step 5, Step 4, Step 3, Step 2, Step 1, Done!. Same loop structure, opposite direction. for loops can count UP, DOWN, by 2s (i += 2), by 10s, in any pattern — you control the three pieces."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

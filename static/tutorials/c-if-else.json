@@ -1,0 +1,95 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int age = 12;\n    if (age >= 13) {\n        printf(\"You are a teenager.\\n\");\n    } else {\n        printf(\"Not a teenager yet.\\n\");\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Choosing a path",
+            "image": "/static/tutorials/steps/cIfElse_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.intro",
+                "default": "In Scratch, the \"if-then-else\" block was a C-shaped block with TWO slots inside — one for \"then do this\" and one for \"else do this\". A hexagon-shaped condition slotted into the top. C has the exact same idea, just typed differently: if (...) { ... } else { ... }. The hexagon condition becomes round PARENTHESES. The two SUBSTACK slots become two pairs of CURLY BRACES. The logic is identical — based on a true/false test, run one of two paths. Today you'll write your first if-else in C, then test it with different values to see both branches fire."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A variable to test",
+            "image": "/static/tutorials/steps/cIfElse_02_age.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.age",
+                "default": "Line 4 is just int age = 12; — a regular int variable holding 12. The next lines will check this variable against the threshold for being a teenager (13). The whole point of if-else is to make different things happen based on the VALUE of a variable — without if-else your program would do exactly the same thing every time, no matter what."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "The if block",
+            "image": "/static/tutorials/steps/cIfElse_03_if.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.if",
+                "default": "Lines 5 to 7 are the if block: if (age >= 13) { printf(\"You are a teenager.\"); }. Three pieces. (1) The keyword if. (2) The CONDITION inside parentheses: age >= 13 means \"age greater than or equal to 13\". (3) The BODY inside curly braces: the code that runs when the condition is true. The braces { } work the same way as Scratch's SUBSTACK slot — they hold \"the stuff to do when the condition matches\". You can put as many statements inside the braces as you want."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "The else block",
+            "image": "/static/tutorials/steps/cIfElse_04_else.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.else",
+                "default": "Lines 7 to 9 are the else block: } else { printf(\"Not a teenager yet.\"); }. The else block runs when the if condition is FALSE. EXACTLY ONE of the two branches will run — never both, never neither. This is the key superpower of if-else: it picks one path. Without an else, you only have an \"if\" that may or may not run; with else, you guarantee that one branch always runs. Use else when you want a fallback for \"what to do if the condition wasn't met\"."
+            },
+            "highlightLine": {
+                "from": 7,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — predict which branch",
+            "image": "/static/tutorials/steps/cIfElse_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.run",
+                "default": "Before clicking Run, predict in your head which branch fires. age is 12. The condition is age >= 13. Is 12 greater than or equal to 13? NO. So the if condition is FALSE, and the else branch runs. Click Run. The Console shows \"Not a teenager yet.\" Now change age to 15 and Run again. This time 15 >= 13 is TRUE, so the if branch wins and the Console shows \"You are a teenager.\" Try age = 13 too (right at the boundary — the >= includes 13)."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "All the comparison operators",
+            "image": "/static/tutorials/steps/cIfElse_06_compare.webp",
+            "narration": {
+                "id": "gui.tutorials.cIfElse.compare",
+                "default": "Here are all the C comparison operators you'll use in conditions: < (less than), > (greater than), <= (less than or equal), >= (greater than or equal), == (EQUAL — note TWO equals signs), != (NOT equal). The double-equals == catches everyone at least once. SINGLE equals = means assignment (\"set this variable to that value\"); DOUBLE equals == means comparison (\"are these two values the same?\"). Mixing them up is the most common bug in all of C. If you write if (age = 13), C will SET age to 13 and the if always runs (because 13 is treated as \"true\"). You almost certainly meant if (age == 13). Triple-check this every single time."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

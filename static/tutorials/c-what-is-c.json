@@ -1,0 +1,57 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello from C!\\n\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Welcome to C",
+            "image": "/static/tutorials/steps/cIntro_01_welcome.webp",
+            "narration": {
+                "id": "gui.tutorials.cIntro.welcome",
+                "default": "You already know Scratch — you drag colored blocks together, click the green flag, and your sprite jumps and talks. C is doing the SAME job: telling the computer what to do. The big difference is that you TYPE the instructions instead of dragging blocks. Typing sounds harder, but it gives you way more power. C is one of the oldest and most respected programming languages in the world. Most of Windows is written in C. Most of Linux is written in C. Big chunks of the games you play, the apps on your phone, even parts of Python and JavaScript themselves — all built on top of C. By the end of these chapters, you will be able to read and write your own C programs. Don't worry about being slow at first; everyone is. The trick is just to keep going."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "How a C program runs",
+            "image": "/static/tutorials/steps/cIntro_02_pipeline.webp",
+            "narration": {
+                "id": "gui.tutorials.cIntro.pipeline",
+                "default": "In Scratch, you click the green flag and the blocks just run — the Scratch app does all the hard work behind the scenes. C has one extra step you should know about. When you type C code, the computer can't actually run it directly — your typed words are just text, like a story. A special tool called the COMPILER reads your text and turns it into machine code (the secret language the CPU actually speaks). Only then can your program run. The good news: CodeSkool runs the compiler for you automatically every time you click Run. You don't do anything extra — but knowing this step exists will help you later when you see messages like \"compiling...\" in the Log tab. So the journey is: you type → compiler turns it into machine code → machine code runs → output appears in the Console."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Same idea, three ways",
+            "image": "/static/tutorials/steps/cIntro_03_blocks_python_c.webp",
+            "narration": {
+                "id": "gui.tutorials.cIntro.threeWays",
+                "default": "Look at the picture: the same simple program — print the word Hello — written three different ways. On the left is the Scratch version (drag a \"say [Hello]\" block onto the script area). In the middle is Python (one short typed line). On the right is C (a few more lines, with #include and main and braces). All three programs do exactly the same thing when you run them. They look different because each language has its own rules and its own style — but the idea behind them is identical. The C version on the right looks the most complicated right now — that's normal. By chapter 5 it will feel completely natural. Stick with it."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Where you'll write C",
+            "image": "/static/tutorials/steps/cIntro_04_welcome_card.webp",
+            "narration": {
+                "id": "gui.tutorials.cIntro.whereToWrite",
+                "default": "Next chapter you'll click the C++ Editor card on the Welcome dialog. Don't be put off by the name — even though it says C++, that is the right environment for our C programs (C++ is C's big brother and runs C code just fine). The very FIRST time you click the Run button, it will take about 45 seconds before anything happens. That's because CodeSkool is quietly downloading the C compiler in the background. After the first run, every Run is instant. So if the first one feels slow, just wait — it only happens once per session. When you're ready, click Next to start your first real C program."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

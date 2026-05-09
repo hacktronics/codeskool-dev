@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    int age;\n    printf(\"How old are you? \");\n    scanf(\"%d\", &age);\n    printf(\"You are %d years old.\\n\", age);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Programs that listen",
+            "image": "/static/tutorials/steps/cInput_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cInput.intro",
+                "default": "Until now your programs only TALKED — printf shouted things at the Console and that was it. Real programs also LISTEN — they take input from the kid using them. In Scratch, the \"ask [What's your name?] and wait\" block did exactly this: the program would pause, the kid would type an answer, and the answer block would hold what they typed. C's version of \"ask\" is called scanf (pronounced \"scan-eff\"). It's a bit fussier than Scratch — you must say WHAT TYPE you're asking for (a number? a letter? a whole sentence?) — but the idea is the same: pause the program, let the kid type, save what they typed into a variable. Today you'll write your first interactive program."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Make an empty box first",
+            "image": "/static/tutorials/steps/cInput_02_declare.webp",
+            "narration": {
+                "id": "gui.tutorials.cInput.declare",
+                "default": "Look at line 4: int age; — note that there is NO equals sign and no value. We're creating the variable but NOT putting anything in it yet. In the previous chapters you always wrote int age = 12; with a starting value. This time we're leaving it empty because the kid is going to fill it in when they type. The compiler still needs to know it exists and what type it is, but the actual number gets filled in by scanf later. (Note: until scanf runs, the variable holds GARBAGE — whatever random bits were in that memory. So don't print it before reading.)"
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Ask the question",
+            "image": "/static/tutorials/steps/cInput_03_prompt.webp",
+            "narration": {
+                "id": "gui.tutorials.cInput.prompt",
+                "default": "Line 5 is your normal printf: printf(\"How old are you? \"); — but notice there is NO \\n at the end. That is on purpose. By skipping the \\n, the cursor stays on the SAME LINE as the question — so when the kid types their answer, it appears right after the question mark, like a real form. It would look wrong if the question was on one line and their typed answer was on the next. Without the \\n: \"How old are you? 12\". With the \\n: \"How old are you?\" then a new line and \"12\" awkwardly below. This little detail makes interactive programs feel polished."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Listen with scanf",
+            "image": "/static/tutorials/steps/cInput_04_scanf.webp",
+            "narration": {
+                "id": "gui.tutorials.cInput.scanf",
+                "default": "Line 6 is the new magic: scanf(\"%d\", &age); — three things to learn here. (1) \"%d\" tells scanf \"expect a whole number\" — same %d we use in printf, but here it means \"read this type\". (2) &age (with the AMPERSAND in front of age) tells scanf \"put the number into the box at the address of age\". The & means \"address of\" — it gives scanf the LOCATION of the variable, not its current value. (3) Forgetting the & is the most common scanf bug ever. Without &, your program will crash when it runs. Always: variable in printf, &variable in scanf. It feels weird at first but you'll get used to it."
+            },
+            "highlightLine": {
+                "from": 6,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — type a number when prompted",
+            "image": "/static/tutorials/steps/cInput_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cInput.run",
+                "default": "Click Run. The Console shows the question \"How old are you? \" and then sits there waiting. Click inside the Console (so it has focus), type a number (like 12 or 100), and press Enter. The program wakes up — scanf reads what you typed, puts it into age, and the next printf shows it back: \"You are 12 years old.\" This is your first INTERACTIVE C program. Try running it again with different numbers — the printf reflects whatever you type. If you type something that's NOT a number (like the word \"twelve\"), scanf gets confused and the printf shows garbage. We'll cover handling bad input later; for now just type a number."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

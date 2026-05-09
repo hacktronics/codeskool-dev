@@ -14,6 +14,15 @@
             }
         },
         {
+            "title": "Every Element Is a Box",
+            "image": "/static/tutorials/steps/htmlCssBoxModel.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.everyElementIsBox",
+                "default": "Every element on your page — every heading, every paragraph, every div — is a BOX. And every box has four layers: the CONTENT in the middle, the PADDING around the content, the BORDER at the edge, and the MARGIN keeping its neighbours away on the outside. That is called the BOX MODEL — it is the most important diagram in CSS."
+            }
+        },
+        {
             "title": "Add a Card",
             "image": "/static/tutorials/steps/htmlCssBoxDiv.webp",
             "imageFocus": {
@@ -51,11 +60,7 @@
         {
             "title": "Pick the Card",
             "image": "/static/tutorials/steps/htmlCssBoxSelector.webp",
-            "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
-            },
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
             "narration": {
                 "id": "gui.tutorials.htmlCssBox.selector",
                 "default": "Drag a selector inside the style. Replace the text with .card — the dot tells CSS to look for the class card."
@@ -63,6 +68,15 @@
             "highlightBlock": {
                 "category": "css",
                 "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "Tag Selector vs Class Selector",
+            "image": "/static/tutorials/steps/htmlCssBoxElementVsClassSelector.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.elementVsClass",
+                "default": "CSS selectors come in flavours. A bare tag name like p picks EVERY paragraph on the page. A name with a dot like .card picks ONLY elements with that class. Knowing which kind to use is half of CSS."
             }
         },
         {
@@ -148,8 +162,17 @@
             "highlightUI": "viewTab"
         },
         {
+            "title": "Which Rule Wins?",
+            "image": "/static/tutorials/steps/htmlCssBox_cascade.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.cascade",
+                "default": "What if TWO CSS rules tell the same element different things? Imagine one rule says div { color: blue; } and another says .card { color: red; } — which colour does your card actually get? CSS has a tie-breaker: the more SPECIFIC selector wins. .card is more specific than just div, so the card will be red. Selectors with an id (like #main) are even more specific. If you ever have a CSS rule that doesn't seem to do anything, check if a more specific rule somewhere else is overriding it. The browser is just following the specificity ladder — once you know the order, the rules become predictable."
+            }
+        },
+        {
             "title": "The Box Model",
-            "image": "/static/tutorials/steps/htmlCssBoxRecap.webp",
+            "image": "/static/tutorials/steps/htmlCssBoxModel.webp",
             "imageFocus": {
                 "x": 75,
                 "y": 50,

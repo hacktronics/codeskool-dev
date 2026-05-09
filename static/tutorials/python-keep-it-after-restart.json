@@ -56,8 +56,17 @@
             }
         },
         {
+            "title": "Open a file for writing — Visual",
+            "image": "/static/tutorials/steps/pyFiles_04_newlineMarker.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonKeepItAfterRestart.newlineMarker",
+                "default": "The \\n is the newline marker — it tells the file \"start a new line here\". Without it, every item would smush together on one line."
+            }
+        },
+        {
             "title": "Why with — Python closes the file for you",
-            "image": "/static/tutorials/steps/pythonFiles_05_withExplain.webp",
+            "image": "/static/tutorials/steps/pyFiles_05_withLibraryCard.webp",
             "narration": {
                 "id": "gui.tutorials.pythonFiles.withExplain",
                 "default": "The with keyword is a Python feature for things that need to be closed when you're done with them — files, network connections, and more. The moment the indented block under with ends, Python automatically closes the file. No closing line to write yourself, no risk of forgetting. Always use with when you open a file."

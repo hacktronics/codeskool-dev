@@ -45,10 +45,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Start the running total — Visual",
+            "image": "/static/tutorials/steps/pyShoppingBill_03_runningTotalJar.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.runningTotalJar",
+                "default": "A running total is like an empty jar that starts at 0 and gets a coin added every loop. \"Start at zero, add as you go\" shows up everywhere — counting, scoring, summing."
             }
         },
         {
@@ -64,10 +69,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "The for loop with range — Visual",
+            "image": "/static/tutorials/steps/pyShoppingBill_04_rangeNumberLine.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonSmartShoppingBill.rangeNumberLine",
+                "default": "range(n) makes a number line from 0 up to n-1 — exactly n numbers. for i in range(n) means \"do the indented block n times\"."
             }
         },
         {

@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "A pack of values that don't change",
-            "image": "/static/tutorials/steps/pythonTuples_01_intro.webp",
+            "image": "/static/tutorials/steps/pyTuples_01_listVsTupleSplit.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTuples.intro",
                 "default": "Sometimes a few values belong as a unit and shouldn't change once set — an x-y position on a stage, the red-green-blue parts of a colour, the day-month-year of a date. Python has a special type for these: a tuple. It looks like a list, but with round brackets instead of square — and once made, you can't add, remove, or change items. Lists grow and shrink; tuples stay fixed."
@@ -26,10 +26,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Make a colour as a tuple — Visual",
+            "image": "/static/tutorials/steps/pyTuples_02_rgbSwatch.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonTuplesFixedTogether.rgbSwatch",
+                "default": "A tuple packs a few values together as one — like the red, green, blue trio that describes a colour. Round brackets make a tuple; square brackets make a list."
             }
         },
         {
@@ -109,7 +114,7 @@
         },
         {
             "title": "Where tuples shine",
-            "image": "/static/tutorials/steps/pythonTuples_07_recap.webp",
+            "image": "/static/tutorials/steps/pyTuples_07_mutableVsImmutable.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTuples.recap",
                 "default": "Use them for coordinates: position = (x, y). RGB colours: (red, green, blue). Dates: (year, month, day). Anything where the count is fixed and changing one piece without the others would be wrong. Tuples also let a function hand back more than one value at a time — return (name, score) packs both into one tuple the caller can unpack."
@@ -120,9 +125,9 @@
                 "zoom": 5.3
             },
             "imageFocus": {
-                "x": 0,
-                "y": 94,
-                "zoom": 5.3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

@@ -45,10 +45,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Convert lists into sets — Visual",
+            "image": "/static/tutorials/steps/pySets_03_filterDuplicates.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonSetsNoDuplicates.filterDuplicates",
+                "default": "set takes any collection and keeps only the unique values — duplicates are dropped automatically. Same names, only one copy each."
             }
         },
         {
@@ -87,10 +92,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Find players on BOTH teams with & — Visual",
+            "image": "/static/tutorials/steps/pySets_05_venn.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonSetsNoDuplicates.venn",
+                "default": "& between two sets gives the intersection — the values that appear in BOTH. Like the overlapping middle of a Venn diagram."
             }
         },
         {
@@ -115,7 +125,7 @@
         },
         {
             "title": "Other set operators",
-            "image": "/static/tutorials/steps/pythonSets_07_recap.webp",
+            "image": "/static/tutorials/steps/pySets_07_unionDiff.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSets.recap",
                 "default": "Two more useful operators: a | b is the UNION (everyone on either team). a - b is the DIFFERENCE (everyone on Team A who is not on Team B). All standard Python. Use a set anywhere duplicates would be wrong: unique words in a story, unique IPs visiting a website, students who finished a quiz."
@@ -126,9 +136,9 @@
                 "zoom": 5.3
             },
             "imageFocus": {
-                "x": 0,
-                "y": 94,
-                "zoom": 5.3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

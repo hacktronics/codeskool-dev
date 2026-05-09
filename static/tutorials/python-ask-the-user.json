@@ -66,10 +66,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Greet them with their answer — Visual",
+            "image": "/static/tutorials/steps/pyAskUser_04_concatGlue.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonAskTheUser.concatGlue",
+                "default": "The plus sign glues two pieces of text into one — that's called concatenation. \"Hello, \" is fixed text and name holds what the kid typed."
             }
         },
         {

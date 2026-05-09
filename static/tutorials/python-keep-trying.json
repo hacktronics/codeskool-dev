@@ -34,7 +34,7 @@
         },
         {
             "title": "Meet while",
-            "image": "/static/tutorials/steps/pythonKeepTrying_03_whileHeader.webp",
+            "image": "/static/tutorials/steps/pyKeepTrying_03_whileFlowchart.webp",
             "narration": {
                 "id": "gui.tutorials.pythonKeepTrying.whileHeader",
                 "default": "Leave a blank line, then type:\n\nwhile guess != number:\n\nwhile is standard Python. != means \"not equal\". Read it in English: \"while the guess is NOT equal to the secret number, keep running the indented lines below\". As soon as guess EQUALS number, the loop stops. The colon at the end is the same as with if — what follows must be indented."
@@ -46,9 +46,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -72,7 +72,7 @@
         },
         {
             "title": "Ask for a new guess — still inside the loop",
-            "image": "/static/tutorials/steps/pythonKeepTrying_05_regrab.webp",
+            "image": "/static/tutorials/steps/pyKeepTrying_05_infiniteLoop.webp",
             "narration": {
                 "id": "gui.tutorials.pythonKeepTrying.regrab",
                 "default": "Still indented inside the while, type:\n\n    guess = int(input(\"Try again: \"))\n\nThis is critical — you MUST change guess somewhere inside the loop. Otherwise guess stays the same number it was before the loop started, guess != number stays true forever, and the loop never ends. That's called an infinite loop — a real bug you'll hit more than once."
@@ -84,9 +84,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

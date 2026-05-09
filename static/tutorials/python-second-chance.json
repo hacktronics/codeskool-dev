@@ -72,7 +72,7 @@
         },
         {
             "title": "The inner if — nested inside else",
-            "image": "/static/tutorials/steps/pythonSecondChance_05_innerIf.webp",
+            "image": "/static/tutorials/steps/pySecondChance_05_nestedBands.webp",
             "narration": {
                 "id": "gui.tutorials.pythonSecondChance.innerIf",
                 "default": "Still inside the else block, type:\n\n    if guess == number:\n        print(\"Correct!\")\n    else:\n        print(\"Game over\")\n\nLook at the indentation — EIGHT spaces in front of the inner if and else, because they're inside the outer else. The inner if/else only runs when the outer else is taken. This is called nesting, and it can go as deep as you need."
@@ -88,9 +88,9 @@
                 "zoom": 3
             },
             "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {

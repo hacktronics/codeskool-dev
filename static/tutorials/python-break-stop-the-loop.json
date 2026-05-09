@@ -47,7 +47,7 @@
         },
         {
             "title": "break — pop out instantly",
-            "image": "/static/tutorials/steps/pythonBreak_04_break.webp",
+            "image": "/static/tutorials/steps/pyBreak_04_trapdoor.webp",
             "narration": {
                 "id": "gui.tutorials.pythonBreak.break",
                 "default": "Still inside the loop, type:\n\n    if word == \"stop\":\n        break\n\nbreak is standard Python. The moment Python runs break, it pops out of the nearest loop instantly — even if the loop's condition is still True. Without break, while True would run forever and the kid could never finish."

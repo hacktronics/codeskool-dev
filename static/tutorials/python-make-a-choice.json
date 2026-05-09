@@ -2,7 +2,7 @@
     "steps": [
         {
             "title": "Programs that decide",
-            "image": "/static/tutorials/steps/pythonMakeAChoice_01_intro.webp",
+            "image": "/static/tutorials/steps/pyMakeChoice_01_scratchPythonIfElse.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.intro",
                 "default": "Every program you've written so far runs the same way from top to bottom, one line after another. Today your program will start to DECIDE — it will do one thing when the answer is big enough, and something different when it isn't. In Scratch this is the \"if-else\" block shaped like a C. In Python it's two keywords: if and else. Let's build one."
@@ -57,10 +57,10 @@
         },
         {
             "title": "Indentation is how Python groups lines",
-            "image": "/static/tutorials/steps/pythonMakeAChoice_04_indentExplain.webp",
+            "image": "/static/tutorials/steps/pyMakeChoice_04_indentBands.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.indentExplain",
-                "default": "Look at the four spaces before print. Python uses those spaces — called indentation — to know which lines belong to the if. Most editors, including this one, add them automatically when you press Enter after a colon. If you forget to indent, Python will complain. If you add extra spaces, Python will complain. Same amount of indent, every time."
+                "default": "Look at the four spaces before print. Python uses those spaces — called indentation — to know which lines belong to the if. Most editors, including this one, add them automatically when you press Enter after a colon. If you forget to indent, Python will complain. If you add extra spaces, Python will complain. Same amount of indent, every time. Python's creator chose indentation on purpose — there's a famous Python motto, 'readability counts'. The shape of your code IS part of what it means."
             },
             "_sourceCrop": {
                 "x": 50,
@@ -133,7 +133,7 @@
         },
         {
             "title": "The comparison toolbox",
-            "image": "/static/tutorials/steps/pythonMakeAChoice_08_recap.webp",
+            "image": "/static/tutorials/steps/pyMakeChoice_08_comparisonCheatsheet.webp",
             "narration": {
                 "id": "gui.tutorials.pythonMakeAChoice.recap",
                 "default": "You used greater-than-or-equal — that's the angle bracket pointing right next to an equals sign. Python has more comparisons too. Greater than. Less than. Less than or equal. Two equals signs side by side mean is exactly the same. An exclamation mark and an equals sign mean is not the same. Try changing the condition to is exactly 10, or is less than 18. Each one gives the program a different rule for who gets in."
@@ -144,9 +144,9 @@
                 "zoom": 5.3
             },
             "imageFocus": {
-                "x": 0,
-                "y": 94,
-                "zoom": 5.3
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

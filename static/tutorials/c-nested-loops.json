@@ -1,0 +1,82 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    for (int row = 1; row <= 3; row++) {\n        for (int col = 1; col <= 3; col++) {\n            printf(\"(%d,%d) \", row, col);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Loops inside loops",
+            "image": "/static/tutorials/steps/cNested_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.cNested.intro",
+                "default": "Sometimes you need a loop INSIDE another loop. Think of a grid of cells: the OUTER loop counts the rows, and INSIDE each row the INNER loop counts the columns. This pattern shows up everywhere: tables, grids, multiplication times-tables, tic-tac-toe boards, calendar layouts, pixels in an image. The shape is always the same — outer loop runs N times, and each pass of the outer loop runs the inner loop M times. So total = N × M body executions."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Outer loop = rows",
+            "image": "/static/tutorials/steps/cNested_02_outer.webp",
+            "narration": {
+                "id": "gui.tutorials.cNested.outer",
+                "default": "Line 4: for (int row = 1; row <= 3; row++). The OUTER for loops three times — once per row (rows 1, 2, 3). Each pass of the outer loop runs the entire INNER loop from start to finish. So if the inner loop runs 3 times per outer pass, that's 3 outer × 3 inner = 9 total executions of the innermost body. Different counter names (row, col) make it crystal clear what each loop is counting."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Inner loop = columns",
+            "image": "/static/tutorials/steps/cNested_03_inner.webp",
+            "narration": {
+                "id": "gui.tutorials.cNested.inner",
+                "default": "Lines 5 to 7 are the inner for loop and its body. for (int col = 1; col <= 3; col++) { print (row, col) }. The inner loop runs FROM SCRATCH every time the outer loops — col starts at 1 each time, counts up to 3, exits. Inside the inner body, the printf has access to BOTH row (from the outer loop) and col (from the inner loop) — they print together as (1,1), (1,2), (1,3), (2,1), (2,2), (2,3), (3,1), (3,2), (3,3)."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 7
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Newline after each row",
+            "image": "/static/tutorials/steps/cNested_04_newline.webp",
+            "narration": {
+                "id": "gui.tutorials.cNested.newline",
+                "default": "Line 8: printf(\"\\n\"); — placed AFTER the inner loop's closing brace but INSIDE the outer loop. So after the inner loop finishes printing all three columns of one row, this printf drops the cursor to a fresh line, ready for the next row to print below. Without this line, all 9 cells would land on ONE long line — try it (delete line 8 and run). The newline is the small thing that turns a flat list into a 2D grid."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 8
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
+        },
+        {
+            "title": "Run — see the 3×3 grid",
+            "image": "/static/tutorials/steps/cNested_05_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cNested.run",
+                "default": "Click Run. Console:\n(1,1) (1,2) (1,3)\n(2,1) (2,2) (2,3)\n(3,1) (3,2) (3,3)\nThree rows, three columns each. The outer loop counted rows 1-3; for each row, the inner loop printed columns 1-3, then the newline dropped to the next row. This nested-loop pattern is the foundation for working with 2D arrays (grids of data) — you'll see it again very soon."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

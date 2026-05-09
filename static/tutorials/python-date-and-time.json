@@ -20,6 +20,15 @@
             "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
         },
         {
+            "title": "A new shape of import — Visual",
+            "image": "/static/tutorials/steps/pyDateTime_02_fromImportToolbox.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.fromImportToolbox",
+                "default": "from datetime import datetime pulls one specific tool out of a module. The from version saves you from writing datetime.datetime every time."
+            }
+        },
+        {
             "title": "Get the current moment",
             "image": "/static/tutorials/steps/pythonDateAndTime_03_getNow.webp",
             "narration": {
@@ -49,6 +58,15 @@
             "validateCode": {"functionName": "print", "lineIndex": 11},
             "highlightUI": "pythonEditor",
             "_sourceCrop": {"x": 2, "y": 16, "zoom": 3}
+        },
+        {
+            "title": "Format it nicely with strftime — Visual",
+            "image": "/static/tutorials/steps/pyDateTime_05_strftimeRecipe.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonDateAndTime.strftimeRecipe",
+                "default": "strftime turns a datetime into pretty text using a recipe of percent codes — %A is weekday, %d is day, %B is month, %Y is year."
+            }
         },
         {
             "title": "Run and see today",

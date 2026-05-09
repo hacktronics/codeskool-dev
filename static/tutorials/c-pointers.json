@@ -1,0 +1,112 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nvoid doubleIt(int *p) {\n    *p = *p * 2;\n}\n\nint main() {\n    int x = 10;\n    int *p = &x;\n    printf(\"x lives at %p\\n\", (void*)&x);\n    printf(\"p points to %p\\n\", (void*)p);\n    printf(\"Value at p: %d\\n\", *p);\n    doubleIt(&x);\n    printf(\"After doubleIt: %d\\n\", x);\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "What is a pointer?",
+            "image": "/static/tutorials/steps/cPtr_01_concept.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.concept",
+                "default": "Every variable you make in C lives somewhere in the computer's memory. Each \"somewhere\" has a unique address — like a house number on a street. A POINTER is a special kind of variable that holds an address instead of a value. Think of it as an arrow that points AT another variable's box. Pointers sound scary at first, but they unlock two superpowers: a function can CHANGE a variable from outside (like scanf does with &age — yes, you've been using pointers without realizing!), and your program can work with arrays and strings efficiently. Today: meet pointers, learn the two operators (& for \"address of\" and * for \"value at\"), and use a function that changes a number from the outside."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Every variable has a HOUSE ADDRESS",
+            "image": "/static/tutorials/steps/cPtr_02_addressOf.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.addressOf",
+                "default": "Look at lines 8 and 10. Line 8: int x = 10; — a regular int variable. Line 10: printf(\"x lives at %p\\n\", (void*)&x); — the &x is \"the ADDRESS of x\". %p is the format code for printing addresses (p for pointer). The (void*) cast just tells printf \"this address is not tied to any specific type, just print it\". When you Run, you'll see something like 0x7ffe... — that's a hexadecimal number, the actual location of x in memory. The exact value changes each run; that's normal. The point is: every variable has one."
+            },
+            "highlightLine": {
+                "from": 8,
+                "to": 10
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Declare a pointer with int *p",
+            "image": "/static/tutorials/steps/cPtr_03_declarePointer.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.declare",
+                "default": "Line 9: int *p = &x; — let's break this down piece by piece. (1) int * means \"this is a pointer to an int\" — so p will hold the address of an int variable. The asterisk * goes BETWEEN the type and the name (some books put it next to the name like int *p, others next to the type like int* p — same thing). (2) p is the name. (3) = &x assigns the address of x to p. So now p HOLDS the address of x. p is itself a variable (it has its own address!) but the value INSIDE p is x's address. The arrow analogy: p is an arrow pointing to x."
+            },
+            "highlightLine": {
+                "from": 9,
+                "to": 9
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "p points to the same address",
+            "image": "/static/tutorials/steps/cPtr_04_pointsTo.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.pointsTo",
+                "default": "Line 11: printf(\"p points to %p\\n\", (void*)p); — note no & this time. We just print p directly because p ALREADY holds an address. When you Run, this address will MATCH the one from line 10 — &x and p give the same number, because p was set to &x. They are two ways to talk about the same memory location."
+            },
+            "highlightLine": {
+                "from": 11,
+                "to": 11
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Follow the arrow with *p",
+            "image": "/static/tutorials/steps/cPtr_05_dereference.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.dereference",
+                "default": "Line 12: printf(\"Value at p: %d\\n\", *p); — the *p in front of the variable is DEREFERENCING. It says \"follow the arrow and grab the value at the other end\". So *p is the same as x — both equal 10. Confusing fact: the * means TWO different things in C. In a declaration (int *p), the * says \"this is a pointer\". In an expression (*p), the * says \"follow the pointer\". Same symbol, different jobs depending on context. Read it carefully: int *p creates a pointer; *p uses a pointer."
+            },
+            "highlightLine": {
+                "from": 12,
+                "to": 12
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Why pointers? Modify from outside",
+            "image": "/static/tutorials/steps/cPtr_06_passToFunction.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.passToFunction",
+                "default": "Lines 3-5 define doubleIt: void doubleIt(int *p) { *p = *p * 2; }. The parameter is int *p — the function takes a POINTER, not an int. Inside, *p = *p * 2 means: read the value at p, multiply by 2, store the result back at p. So if p is pointing at x, this changes x itself — not a local copy. Without pointers, the function would only get a COPY of x and any change would vanish when the function returned. Pointers are how you give a function the power to modify its caller's variables."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Call doubleIt(&x)",
+            "image": "/static/tutorials/steps/cPtr_07_callIt.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.callIt",
+                "default": "Line 13: doubleIt(&x); — pass the address of x. Inside doubleIt, p becomes &x (the address). The function dereferences and writes — so x in main becomes 20. Notice scanf(\"%d\", &age) works the same way: scanf takes a pointer, dereferences it, and writes the kid's number into your variable. Now you know WHY scanf needed the & — it needed a pointer to MODIFY the variable."
+            },
+            "highlightLine": {
+                "from": 13,
+                "to": 13
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Run — see addresses + the doubled x",
+            "image": "/static/tutorials/steps/cPtr_08_run.webp",
+            "narration": {
+                "id": "gui.tutorials.cPtr.run",
+                "default": "Click Run. The Console shows four lines. (1) \"x lives at 0x...\" — some hex address. (2) \"p points to 0x...\" — the SAME hex address (p was set to &x). (3) \"Value at p: 10\" — *p dereferences and reads x's value. (4) \"After doubleIt: 20\" — x got doubled by the function call. The exact hex addresses change each run; the relationships don't. p == &x, *p == x, and a function with a pointer parameter can change the original."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

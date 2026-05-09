@@ -1,0 +1,128 @@
+{
+    "preseedCSketch": "#include <stdio.h>\n\nint main() {\n    printf(\"Hello, world!\\n\");\n    return 0;\n}\n",
+    "steps": [
+        {
+            "title": "Open the C editor",
+            "image": "/static/tutorials/steps/cHello_01_clickCard.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.openEditor",
+                "default": "Click the C++ Editor card. As soon as you do, the editor opens with a starter program already typed for you — six short lines. We are going to read EACH line together before clicking Run, so you understand what every piece does. This first program is called \"Hello, World\" and it's the very first program every programmer writes in every language. The job is super simple: print the words Hello, world! to the screen. By the end of this chapter you will know what those six lines mean, you will have run them, and you will have changed the message to your own."
+            },
+            "highlightUI": "welcomeCardCpp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
+        },
+        {
+            "title": "Meet your workspace",
+            "image": "/static/tutorials/steps/cHello_02_workspace.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.workspace",
+                "default": "Take a moment to look around. The big white panel in the MIDDLE is the editor — that is where C code lives. It's like the script area in Scratch, except instead of dropping blocks you type letters. On the RIGHT side you can see two tabs called Log and Console. The Log tab is where the COMPILER talks to you — it shows messages like \"compiling...\" or \"build successful\". The Console tab is where YOUR PROGRAM talks — anything your program prints appears there. Think of the Console as the C version of Scratch's Stage. The Run button is at the top right with a triangle icon — that's what you click to make your program go."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Line 1 — #include <stdio.h>",
+            "image": "/static/tutorials/steps/cHello_03_include.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.include",
+                "default": "Line 1 says #include <stdio.h>. Let's break it down. The word \"include\" means \"bring in this toolbox\". The thing in the brackets — stdio.h — is the name of the toolbox. stdio is short for STandard Input Output, and the .h means \"header file\". So the whole line is saying: \"I am going to use the standard tools for printing and reading, please bring them in for me.\" In Scratch, all the blocks were already there in the panel on the left — you didn't have to ask. C is fussier: you have to ASK for the tools you want to use. Without this line, the printf below wouldn't exist and the compiler would shout at you. The hash sign # at the start tells the compiler \"do this BEFORE you compile the rest\" — it's a special instruction. You'll see #include at the top of nearly every C program you ever read."
+            },
+            "highlightLine": {
+                "from": 1,
+                "to": 1
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Where the program starts",
+            "image": "/static/tutorials/steps/cHello_04_main.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.main",
+                "default": "Lines 3 to 6 contain the most important block of any C program: int main() { ... }. Let's decode each piece. The word int means \"this section will give back a whole number when it finishes\" — we'll see why in a moment. The word main is the name of this section, and it is special: every C program has a main, and that's where the program starts running. The empty parentheses ( ) are where INPUTS would go — main usually takes none, so they are empty. The curly braces { and } mark the START and END of the section's body. Everything between them runs in order, top to bottom, the moment the program starts. If you remember Scratch's \"when green flag clicked\" hat block, main is C's version of that hat block — the entry point. The two lines inside (lines 4 and 5) are what main does: print a message, then return 0."
+            },
+            "highlightLine": {
+                "from": 3,
+                "to": 6
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Line 4 — printf prints",
+            "image": "/static/tutorials/steps/cHello_05_printf.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.printf",
+                "default": "Line 4 is the line that does the actual work: printf(\"Hello, world!\\n\"); — say that out loud as \"print f, open quote, Hello comma world exclamation, backslash n, close quote, semicolon\". printf is the C function for printing text. The f at the end means \"formatted\" — we'll explore the formatting features in later chapters. Whatever you put inside the QUOTES is what gets printed to the Console. The strange-looking \\n at the end is a special code that means NEW LINE — like pressing the Enter key on a keyboard. Without \\n, the next thing printed would land right after the exclamation mark on the same line. The semicolon ; at the very end is super important — every statement in C ends with one. If you forget the semicolon, the compiler will refuse to build your program and complain. In Scratch you used a \"say [Hello!]\" block to show a message — printf is C's version of say."
+            },
+            "highlightLine": {
+                "from": 4,
+                "to": 4
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Line 5 — return 0",
+            "image": "/static/tutorials/steps/cHello_06_return.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.return",
+                "default": "Line 5 is return 0; — this tells the operating system \"I am finished, and everything went well.\" The number 0 means OK. Any other number signals that something went wrong (1 might mean \"file not found\", 2 might mean \"out of memory\", etc. — different programs use different numbers). Most of the time, your main will end with return 0; — that is the standard \"all good\" signal. Remember from line 3 we said int main() means main GIVES BACK a whole number? This line is what gives it back. Without this line, the compiler would warn you. Always end your main with return 0; until you have a reason to do otherwise."
+            },
+            "highlightLine": {
+                "from": 5,
+                "to": 5
+            },
+            "highlightUI": "cEditor",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Click Run — first time is slow",
+            "image": "/static/tutorials/steps/cHello_07_runFirstTime.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.runFirstTime",
+                "default": "Time to make it actually run. Click the Run button — it's the play-style triangle icon at the top right. The very first time you click Run in a session, it takes about 45 seconds because CodeSkool is downloading the C compiler in the background. While you wait, watch the Log tab on the right — you will see a sequence of messages: first \"downloading...\", then \"compiling...\", then \"running\" or \"ready\". Every Run after this first one is instant — the compiler stays loaded for the rest of the session. So if this first run feels slow, that's totally normal — wait it out. If you ever see RED text in the Log tab, that means a compile error (usually a missing semicolon or a typo). Don't panic — read the error, fix the line it points to, and run again."
+            },
+            "highlightUI": "runButton",
+            "imageFocus": {
+                "x": 88,
+                "y": 30,
+                "zoom": 1.5
+            }
+        },
+        {
+            "title": "Your message in the Console",
+            "image": "/static/tutorials/steps/cHello_08_console.webp",
+            "narration": {
+                "id": "gui.tutorials.cHello.console",
+                "default": "Once Run finishes, click the Console tab on the right. There it is — Hello, world! printed by your very own C program. That's exactly the same thing you would see if you ran a C program in a black command-line window on a real computer. You just wrote, compiled, and ran your first C program! Now try this: change the text inside the quotes on line 4 — make it say something else, like \"Hello, [your name]!\" — and click Run again. The Console will show your new message. This is the same loop you used in Scratch (edit the script, click the flag, watch what happens) — just typed instead of dragged. Get comfortable with that loop because every chapter from here on uses it."
+            },
+            "highlightUI": "consoleTab",
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        }
+    ]
+}

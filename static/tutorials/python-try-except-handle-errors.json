@@ -26,10 +26,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Wrap risky code in try — Visual",
+            "image": "/static/tutorials/steps/pyTryExcept_02_jumpToExcept.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonTryExceptHandleErrors.jumpToExcept",
+                "default": "try wraps risky code. If anything inside crashes, Python doesn't quit — it jumps straight to the except block instead."
             }
         },
         {
@@ -37,7 +42,7 @@
             "image": "/static/tutorials/steps/pythonTryExcept_03_except.webp",
             "narration": {
                 "id": "gui.tutorials.pythonTryExcept.except",
-                "default": "Type:\n\nexcept:\n    print(\"Error occurred\")\n\nIf any line inside the try fails, Python jumps straight here — skipping the rest of the try block — and runs the except block. Then the program keeps going, no crash. The except is your safety net."
+                "default": "Type:\n\nexcept:\n    print(\"Error occurred\")\n\nexcept is also standard Python — it catches the error from the try block above. When anything inside try fails, Python jumps straight here, runs your except code, and the program keeps going instead of crashing."
             },
             "highlightUI": "pythonEditor",
             "_sourceCrop": {
@@ -68,10 +73,15 @@
                 "y": 16,
                 "zoom": 3
             },
-            "imageFocus": {
-                "x": 2,
-                "y": 16,
-                "zoom": 3
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "Always-run cleanup with finally — Visual",
+            "image": "/static/tutorials/steps/pyTryExcept_04_finallyAlwaysRuns.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonTryExceptHandleErrors.finallyAlwaysRuns",
+                "default": "finally always runs — whether the try succeeded, the except caught an error, or both. Perfect for cleanup like closing files or saving progress."
             }
         },
         {
