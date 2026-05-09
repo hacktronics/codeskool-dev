@@ -638,5 +638,16 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "oracle-owl"
+  },
+  "bear-diary": {
+    "name": "Bear's Diary",
+    "description": "Show anything to the camera — a friendly bear's AI eye spots it and writes each new discovery in its diary. 3 unique items wins.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/bear-diary.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "bear-diary"
   }
 }
