@@ -628,6 +628,17 @@
     "isMemberOnly": false,
     "urlId": "alien-translate-bridge"
   },
+  "weather-traveler-bear": {
+    "name": "Weather Traveler Bear",
+    "description": "Speak any city — worldWeather fetches the live forecast and Bear's outfit changes (sun-hat / umbrella / scarf) to match the conditions.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/weather-traveler-bear.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "weather-traveler-bear"
+  },
   "oracle-owl": {
     "name": "Oracle Owl",
     "description": "Speak any question to a wise owl — Chrome’s on-device Gemini Nano answers locally. No API key, no internet, no server.",
@@ -649,5 +660,27 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "bear-diary"
+  },
+  "sentiment-mood-mirror": {
+    "name": "Mood Mirror",
+    "description": "Tell the cloud how you're feeling — AI reads your sentiment and the cloud's face mirrors your mood. After 5 thoughts, the cloud sums up your day.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/sentiment-mood-mirror.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "sentiment-mood-mirror"
+  },
+  "wikipedia-curious-fox": {
+    "name": "Wikipedia Curious Fox",
+    "description": "Speak any topic aloud — a curious Fox looks it up on Wikipedia and reads the answer back to you. Free, no API key, no login.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/wikipedia-curious-fox.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "wikipedia-curious-fox"
   }
 }
