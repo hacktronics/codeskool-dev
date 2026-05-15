@@ -58,7 +58,11 @@
                 "default": "Click Run. The Console shows three lines: PI = 3.14, Lives = 3, Speed = 60. Each printf used its constant the same way it would use a normal variable. The kid (or you in 6 months) reading this code can see PI, MAX_LIVES, and speed at a glance — much clearer than seeing 3.14, 3, and 60 scattered through the code with no explanation. The general rule: if a value is fixed and meaningful, give it a NAME. Constants make code self-documenting. Use #define for shared values across many files, use const for one-function locks."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

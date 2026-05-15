@@ -1,0 +1,165 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Template Strings</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "A cleaner way to build text",
+            "image": "/static/tutorials/steps/jsTemplate_04_plusGlue.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.intro",
+                "default": "Gluing strings with the plus sign works, but it gets noisy fast. JavaScript has a cleaner way called template strings. In this tutorial you will build the same sentence two ways — once with plus, once with a template — and see why the template version reads more like the actual sentence."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsTemplate_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Set up the data",
+            "image": "/static/tutorials/steps/jsTemplate_03_setup.webp",
+            "imageFocus": {
+                "x": 39.8,
+                "y": 57.2,
+                "zoom": 3.23
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.setup",
+                "default": "Drag a let block. Name it name and set the value to Riya. Drag another let. Name it score and set it to eighty-five — no quotes, because it is a number. We will print a sentence that uses both."
+            }
+        },
+        {
+            "title": "The plus-glue way",
+            "image": "/static/tutorials/steps/jsTemplate_04_plusGlue.webp",
+            "imageFocus": {
+                "x": 38.7,
+                "y": 60.0,
+                "zoom": 2.46
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.plusGlue",
+                "default": "Drag a log to console block. Inside the message slot, build the sentence by joining several pieces with plus: the literal Hi-comma-space, plus the variable name, plus the literal you-scored-space, plus the variable score, plus the literal space-points. Click Run."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsTemplate_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears at the bottom-right."
+            }
+        },
+        {
+            "title": "It works, but it is noisy",
+            "image": "/static/tutorials/steps/jsTemplate_06_worksNoisy.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.worksNoisy",
+                "default": "The sentence appears in the console — Hi-comma Riya, you scored eighty-five points. It works. But look at the Code panel: the line is full of quotes, plus signs, and tiny snippets. It is hard to read at a glance."
+            }
+        },
+        {
+            "title": "A third kind of quote: backticks",
+            "image": "/static/tutorials/steps/jsTemplate_08_tryTemplate.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.backticks",
+                "default": "JavaScript has three kinds of quote — single, double, and backtick. Backticks look like little slanted lines. They are special. Inside a backtick string, you can drop a variable directly using dollar-sign open-curly variable close-curly. JavaScript pastes the variable's value right into the sentence."
+            }
+        },
+        {
+            "title": "Try the template version",
+            "image": "/static/tutorials/steps/jsTemplate_08_tryTemplate.webp",
+            "imageFocus": {
+                "x": 34.0,
+                "y": 67.0,
+                "zoom": 1.72
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.tryTemplate",
+                "default": "Add a second log to console block. Inside the message slot, drop a template-string block from the Strings section. Write the sentence as ordinary text but use dollar-open-curly name close-curly where the name belongs, and dollar-open-curly score close-curly where the score belongs. The whole thing reads as one sentence. Click Run."
+            }
+        },
+        {
+            "title": "Same output, half the noise",
+            "image": "/static/tutorials/steps/jsTemplate_09_halfNoise.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.halfNoise",
+                "default": "Open the console. Both lines print the same sentence. But the backtick version reads like the actual sentence with small slots for the values. Real JavaScript code uses templates all the time once you have more than one variable to embed."
+            }
+        },
+        {
+            "title": "Curly braces hold any expression",
+            "image": "/static/tutorials/steps/jsTemplate_09_halfNoise.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsTemplateStrings.anyExpr",
+                "default": "Inside dollar-open-curly you can put any expression — a variable, an arithmetic calculation, a function call. The result drops into the string at that spot. From now on, prefer template strings whenever you have variables to embed — they keep your code readable as your sentences get longer."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

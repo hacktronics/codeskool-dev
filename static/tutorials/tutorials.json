@@ -2,7 +2,13 @@
     "getting-started": {
         "name": "Getting Started",
         "description": "Learn to make the cat move and talk",
-        "tags": ["help", "stuck", "how", "can", "say"],
+        "tags": [
+            "help",
+            "stuck",
+            "how",
+            "can",
+            "say"
+        ],
         "category": "gettingStarted",
         "urlId": "getStarted",
         "img": "/static/tutorials/thumbnails/getting-started.webp",
@@ -48,17 +54,34 @@
                     "blockType": "event_whenflagclicked"
                 },
                 "validate": true,
-                "expectedSequence": ["event_whenflagclicked", "motion_movesteps", "looks_sayforsecs"]
+                "expectedSequence": [
+                    "event_whenflagclicked",
+                    "motion_movesteps",
+                    "looks_sayforsecs"
+                ]
             },
             {
-                "deckIds": ["add-a-backdrop", "add-sprite"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "add-sprite"
+                ]
             }
         ]
     },
     "getting-started-asl": {
         "name": "Getting Started - ASL",
         "description": "Getting started with Scratch using American Sign Language",
-        "tags": ["help", "stuck", "how", "can", "say", "asl", "deaf", "accessible", "hear"],
+        "tags": [
+            "help",
+            "stuck",
+            "how",
+            "can",
+            "say",
+            "asl",
+            "deaf",
+            "accessible",
+            "hear"
+        ],
         "category": "gettingStarted",
         "urlId": "getting-started-ASL",
         "img": "/static/tutorials/thumbnails/getting-started-asl.webp",
@@ -67,14 +90,22 @@
                 "video": "intro-getting-started-ASL"
             },
             {
-                "deckIds": ["add-a-backdrop", "add-sprite"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "add-sprite"
+                ]
             }
         ]
     },
     "add-sprite": {
         "name": "Add a Sprite",
         "description": "Learn how to add a new sprite",
-        "tags": ["art", "games", "stories", "character"],
+        "tags": [
+            "art",
+            "games",
+            "stories",
+            "character"
+        ],
         "category": "gettingStarted",
         "urlId": "add-a-sprite",
         "img": "/static/tutorials/thumbnails/add-sprite.webp",
@@ -89,14 +120,22 @@
                 }
             },
             {
-                "deckIds": ["add-a-backdrop", "switch-costume"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "add-a-backdrop": {
         "name": "Add a Backdrop",
         "description": "Learn how to add a backdrop",
-        "tags": ["art", "games", "stories", "background"],
+        "tags": [
+            "art",
+            "games",
+            "stories",
+            "background"
+        ],
         "category": "gettingStarted",
         "urlId": "add-a-backdrop",
         "img": "/static/tutorials/thumbnails/add-backdrop.webp",
@@ -114,14 +153,27 @@
                 }
             },
             {
-                "deckIds": ["change-size", "switch-costume"]
+                "deckIds": [
+                    "change-size",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "switch-costume": {
         "name": "Animate a Sprite",
         "description": "Learn how to animate a sprite by switching costumes",
-        "tags": ["animation", "art", "games", "stories", "paint", "edit", "change", "character", "sprite"],
+        "tags": [
+            "animation",
+            "art",
+            "games",
+            "stories",
+            "paint",
+            "edit",
+            "change",
+            "character",
+            "sprite"
+        ],
         "category": "gettingStarted",
         "urlId": "animate-a-sprite",
         "img": "/static/tutorials/thumbnails/animate-sprite.webp",
@@ -138,14 +190,20 @@
                 }
             },
             {
-                "deckIds": ["imagine", "add-effects"]
+                "deckIds": [
+                    "imagine",
+                    "add-effects"
+                ]
             }
         ]
     },
     "move-around-with-arrow-keys": {
         "name": "Use Arrow Keys",
         "description": "Learn how to move a sprite with arrow keys",
-        "tags": ["games", "keyboard"],
+        "tags": [
+            "games",
+            "keyboard"
+        ],
         "category": "basics",
         "urlId": "arrow-keys",
         "img": "/static/tutorials/thumbnails/move-arrow-keys.webp",
@@ -170,14 +228,21 @@
                 }
             },
             {
-                "deckIds": ["make-it-fly", "switch-costume"]
+                "deckIds": [
+                    "make-it-fly",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "change-size": {
         "name": "Change Size",
         "description": "Learn how to change the size of a sprite",
-        "tags": ["art", "animation", "scale"],
+        "tags": [
+            "art",
+            "animation",
+            "scale"
+        ],
         "category": "basics",
         "urlId": "change-size",
         "img": "/static/tutorials/thumbnails/change-size.webp",
@@ -194,14 +259,25 @@
                 }
             },
             {
-                "deckIds": ["glide-around", "spin-video"]
+                "deckIds": [
+                    "glide-around",
+                    "spin-video"
+                ]
             }
         ]
     },
     "glide-around": {
         "name": "Glide Around",
         "description": "Learn how to make a sprite glide around the stage",
-        "tags": ["animation", "stories", "music", "instrument", "play", "song", "band"],
+        "tags": [
+            "animation",
+            "stories",
+            "music",
+            "instrument",
+            "play",
+            "song",
+            "band"
+        ],
         "category": "basics",
         "urlId": "glide-around",
         "img": "/static/tutorials/thumbnails/glide-around.webp",
@@ -226,14 +302,21 @@
                 }
             },
             {
-                "deckIds": ["Tell-A-Story", "switch-costume"]
+                "deckIds": [
+                    "Tell-A-Story",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "spin-video": {
         "name": "Make It Spin",
         "description": "Learn how to make a sprite spin",
-        "tags": ["animation", "rotate", "rotation"],
+        "tags": [
+            "animation",
+            "rotate",
+            "rotation"
+        ],
         "category": "basics",
         "urlId": "make-it-spin",
         "img": "/static/tutorials/thumbnails/spin.webp",
@@ -258,14 +341,21 @@
                 }
             },
             {
-                "deckIds": ["add-a-backdrop", "switch-costume"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "record-a-sound": {
         "name": "Record a Sound",
         "description": "Learn how to record your own sounds",
-        "tags": ["music", "games", "stories"],
+        "tags": [
+            "music",
+            "games",
+            "stories"
+        ],
         "category": "basics",
         "urlId": "record-a-sound",
         "img": "/static/tutorials/thumbnails/record-a-sound.webp",
@@ -314,14 +404,21 @@
                 }
             },
             {
-                "deckIds": ["Make-Music", "switch-costume"]
+                "deckIds": [
+                    "Make-Music",
+                    "switch-costume"
+                ]
             }
         ]
     },
     "hide-and-show": {
         "name": "Hide and Show",
         "description": "Learn how to hide and show sprites",
-        "tags": ["stories", "appear", "disappear"],
+        "tags": [
+            "stories",
+            "appear",
+            "disappear"
+        ],
         "category": "basics",
         "urlId": "hide",
         "img": "/static/tutorials/thumbnails/hide-and-show.webp",
@@ -338,14 +435,434 @@
                 }
             },
             {
-                "deckIds": ["add-a-backdrop", "switch-costume"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "switch-costume"
+                ]
+            }
+        ]
+    },
+    "add-effects": {
+        "name": "Add Effects",
+        "description": "Add visual effects like color, fisheye, and more",
+        "tags": [
+            "animation",
+            "art",
+            "games",
+            "stories",
+            "8-bit",
+            "brightness",
+            "ghost",
+            "transparency",
+            "opacity",
+            "fx",
+            "color",
+            "fisheye",
+            "whirl",
+            "twist",
+            "pixelate",
+            "mosaic",
+            "8bit"
+        ],
+        "category": "intermediate",
+        "urlId": "add-effects",
+        "img": "/static/tutorials/thumbnails/add-effects.webp",
+        "steps": [
+            {
+                "video": "add-effects"
+            },
+            {
+                "title": "Add Effects",
+                "image": "/static/tutorials/steps/addEffects.webp",
+                "narration": {
+                    "id": "gui.tutorials.addEffects.step1",
+                    "default": "Use the change effect block to add visual effects like color, fisheye, whirl, pixelate, mosaic, brightness, and ghost to your sprite."
+                }
+            },
+            {
+                "deckIds": [
+                    "add-a-backdrop",
+                    "code-cartoon"
+                ]
+            }
+        ]
+    },
+    "make-it-fly": {
+        "name": "Make it Fly",
+        "description": "Create a flying game with scoring and scenery",
+        "tags": [
+            "game",
+            "fly",
+            "how",
+            "can",
+            "animation"
+        ],
+        "category": "intermediate",
+        "urlId": "make-it-fly",
+        "img": "/static/tutorials/thumbnails/make-it-fly.webp",
+        "steps": [
+            {
+                "video": "zbtdx2dem9"
+            },
+            {
+                "title": "Choose a Sky Background",
+                "image": "/static/tutorials/steps/flyChooseBackdrop.gif",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepChooseBackdrop",
+                    "default": "Click the Choose a Backdrop button and pick a sky background for your flying game."
+                }
+            },
+            {
+                "title": "Choose a Character",
+                "image": "/static/tutorials/steps/flyChooseCharacter.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepChooseCharacter",
+                    "default": "Choose a character sprite that will fly around the screen."
+                }
+            },
+            {
+                "title": "Say Something",
+                "image": "/static/tutorials/steps/flySaySomething.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepSaySomething",
+                    "default": "Add a say block to make your flying character say something when the game starts."
+                }
+            },
+            {
+                "title": "Move With Arrow Keys",
+                "image": "/static/tutorials/steps/flyMoveArrows.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepMoveArrows",
+                    "default": "Add when key pressed blocks with change x and change y blocks to control your character with arrow keys."
+                }
+            },
+            {
+                "title": "Choose an Object to Collect",
+                "image": "/static/tutorials/steps/flyChooseObject.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepChooseObject",
+                    "default": "Add another sprite that your character will try to collect as it flies around."
+                }
+            },
+            {
+                "title": "Make the Object Move",
+                "image": "/static/tutorials/steps/flyFlyingObject.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepFlyingObject",
+                    "default": "Add code to make the collectible object move across the screen and reappear."
+                }
+            },
+            {
+                "title": "Select Your Character",
+                "image": "/static/tutorials/steps/flySelectFlyingSprite.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepSelectFlyingSprite",
+                    "default": "Click on your flying character sprite to select it and add more code."
+                }
+            },
+            {
+                "title": "Add a Score",
+                "image": "/static/tutorials/steps/flyAddScore.gif",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepAddScore",
+                    "default": "Create a variable called score to keep track of how many objects you collect."
+                }
+            },
+            {
+                "title": "Keep Score",
+                "image": "/static/tutorials/steps/flyKeepScore.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepKeepScore",
+                    "default": "Add a change score by 1 block inside an if touching block so the score goes up when you collect an object."
+                }
+            },
+            {
+                "title": "Add Scenery",
+                "image": "/static/tutorials/steps/flyAddScenery.gif",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepAddScenery",
+                    "default": "Add a scenery sprite like clouds or buildings to make the background more interesting."
+                }
+            },
+            {
+                "title": "Move the Scenery",
+                "image": "/static/tutorials/steps/flyMoveScenery.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepMoveScenery",
+                    "default": "Add code to make the scenery move across the screen to create a scrolling effect."
+                }
+            },
+            {
+                "title": "Next Costume",
+                "image": "/static/tutorials/steps/flySwitchLooks.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeItFly.stepSwitchLooks",
+                    "default": "Use the next costume block to change the scenery appearance as it moves."
+                }
+            },
+            {
+                "deckIds": [
+                    "change-size",
+                    "spin-video"
+                ]
+            }
+        ]
+    },
+    "Make-Music": {
+        "name": "Make Music",
+        "description": "Create a musical instrument project with sounds and beats",
+        "tags": [
+            "music",
+            "sound",
+            "instrument",
+            "play",
+            "song",
+            "band"
+        ],
+        "category": "intermediate",
+        "urlId": "music",
+        "img": "/static/tutorials/thumbnails/make-music.webp",
+        "steps": [
+            {
+                "video": "Make-Music"
+            },
+            {
+                "title": "Pick an Instrument Sprite",
+                "image": "/static/tutorials/steps/musicPickInstrument.gif",
+                "narration": {
+                    "id": "gui.tutorials.makeMusic.stepPickInstrument",
+                    "default": "Click the Choose a Sprite button and pick an instrument sprite to use in your music project."
+                }
+            },
+            {
+                "title": "Play Sound When Clicked",
+                "image": "/static/tutorials/steps/musicPlaySound.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeMusic.stepPlaySound",
+                    "default": "Add a when this sprite clicked block and a play sound block so the instrument plays when you click it."
+                }
+            },
+            {
+                "title": "Create a Song",
+                "image": "/static/tutorials/steps/musicMakeSong.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeMusic.stepMakeSong",
+                    "default": "Add multiple play sound blocks with different notes to create a song that plays automatically."
+                }
+            },
+            {
+                "title": "Choose a Drum & Make a Beat",
+                "image": "/static/tutorials/steps/musicMakeBeat.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeMusic.stepMakeBeat",
+                    "default": "Pick a drum sprite and add play drum blocks to create a beat."
+                }
+            },
+            {
+                "title": "Choose the Microphone Sprite & Surprise Beatbox",
+                "image": "/static/tutorials/steps/musicMakeBeatbox.webp",
+                "narration": {
+                    "id": "gui.tutorials.makeMusic.stepMakeBeatbox",
+                    "default": "Pick the microphone sprite and add random play sound blocks for a surprise beatbox effect."
+                }
+            },
+            {
+                "deckIds": [
+                    "add-a-backdrop",
+                    "add-sprite"
+                ]
+            }
+        ]
+    },
+    "Video-Sensing": {
+        "name": "Video Sensing",
+        "description": "Use your camera to interact with sprites",
+        "tags": [
+            "video",
+            "camera",
+            "sensing"
+        ],
+        "category": "intermediate",
+        "urlId": "video-sensing",
+        "img": "/static/tutorials/thumbnails/video-sensing.webp",
+        "steps": [
+            {
+                "video": "3pd1z110d6"
+            },
+            {
+                "title": "Add Extension",
+                "image": "/static/tutorials/steps/videoAddExtension.gif",
+                "narration": {
+                    "id": "gui.tutorials.videoSensing.stepAddExtension",
+                    "default": "Click the Add Extension button at the bottom left and choose the Video Sensing extension."
+                }
+            },
+            {
+                "title": "Pet the Cat",
+                "image": "/static/tutorials/steps/videoPet.webp",
+                "narration": {
+                    "id": "gui.tutorials.videoSensing.stepPet",
+                    "default": "Add a when video motion is greater than block to detect when you wave your hand near the cat sprite."
+                }
+            },
+            {
+                "title": "Animate",
+                "image": "/static/tutorials/steps/videoAnimate.webp",
+                "narration": {
+                    "id": "gui.tutorials.videoSensing.stepAnimate",
+                    "default": "Add a next costume block so the sprite animates when it detects video motion."
+                }
+            },
+            {
+                "title": "Pop a Balloon",
+                "image": "/static/tutorials/steps/videoPop.webp",
+                "narration": {
+                    "id": "gui.tutorials.videoSensing.stepPop",
+                    "default": "Add a balloon sprite and use video sensing to pop it when you wave your hand over it."
+                }
+            },
+            {
+                "deckIds": [
+                    "Make-Music",
+                    "add-effects"
+                ]
+            }
+        ]
+    },
+    "talking": {
+        "name": "Talking Tales",
+        "description": "Create a multi-scene talking tale with music and dance",
+        "tags": [
+            "talking"
+        ],
+        "category": "intermediate",
+        "urlId": "talking",
+        "img": "/static/tutorials/thumbnails/talking.webp",
+        "steps": [
+            {
+                "video": "talking"
+            },
+            {
+                "title": "Click to Add the Text-to-Speech Blocks",
+                "image": "/static/tutorials/steps/talesAddExtension.gif",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepAddExtension",
+                    "default": "Click the Add Extension button and choose the Text to Speech extension to add talking blocks."
+                }
+            },
+            {
+                "title": "Choose a Sprite",
+                "image": "/static/tutorials/steps/talesChooseSprite.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseSprite",
+                    "default": "Click the Choose a Sprite button and pick a character for your tale."
+                }
+            },
+            {
+                "title": "Make a Character Speak",
+                "image": "/static/tutorials/steps/talesSaySomething.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepSaySomething",
+                    "default": "Add a speak block and type what you want the character to say out loud."
+                }
+            },
+            {
+                "title": "Choose a Backdrop",
+                "image": "/static/tutorials/steps/talesChooseBackdrop.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseBackdrop",
+                    "default": "Click the Choose a Backdrop button and pick a backdrop for your first scene."
+                }
+            },
+            {
+                "title": "Click a Character to Go to the Next Backdrop",
+                "image": "/static/tutorials/steps/talesSwitchBackdrop.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepSwitchBackdrop",
+                    "default": "Add a when this sprite clicked block with a next backdrop block to change scenes when you click the character."
+                }
+            },
+            {
+                "title": "Choose Another Sprite",
+                "image": "/static/tutorials/steps/talesChooseAnotherSprite.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseAnotherSprite",
+                    "default": "Add another character sprite to your tale."
+                }
+            },
+            {
+                "title": "Move Around",
+                "image": "/static/tutorials/steps/talesMoveAround.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepMoveAround",
+                    "default": "Add motion blocks to make this character move around the stage."
+                }
+            },
+            {
+                "title": "Choose Another Backdrop",
+                "image": "/static/tutorials/steps/talesChooseAnotherBackdrop.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseAnotherBackdrop",
+                    "default": "Add another backdrop for a new scene in your tale."
+                }
+            },
+            {
+                "title": "Animate Talking",
+                "image": "/static/tutorials/steps/talesAnimateTalking.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepAnimateTalking",
+                    "default": "Use switch costume blocks to animate the character's mouth moving while it speaks."
+                }
+            },
+            {
+                "title": "Choose Another Backdrop",
+                "image": "/static/tutorials/steps/talesChooseThirdBackdrop.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseThirdBackdrop",
+                    "default": "Add a third backdrop for the final scene of your tale."
+                }
+            },
+            {
+                "title": "Choose a Song to Dance To",
+                "image": "/static/tutorials/steps/talesChooseSound.gif",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepChooseSound",
+                    "default": "Go to the Sounds tab and add a music track from the sound library for your characters to dance to."
+                }
+            },
+            {
+                "title": "Dance Moves",
+                "image": "/static/tutorials/steps/talesDanceMoves.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepDanceMoves",
+                    "default": "Add turn and move blocks to make your character dance when the music plays."
+                }
+            },
+            {
+                "title": "Get the Ask and Answer Blocks from the Sensing Category",
+                "image": "/static/tutorials/steps/talesAskAnswer.webp",
+                "narration": {
+                    "id": "gui.tutorials.talking.stepAskAnswer",
+                    "default": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer."
+                }
+            },
+            {
+                "deckIds": [
+                    "Tell-A-Story",
+                    "Animate-A-Character"
+                ]
             }
         ]
     },
     "animate-a-name": {
         "name": "Animate a Name",
         "description": "Make letters spin, grow, and change color",
-        "tags": ["animation", "art", "spin", "grow"],
+        "tags": [
+            "animation",
+            "art",
+            "spin",
+            "grow"
+        ],
         "category": "prompts",
         "urlId": "name",
         "img": "/static/tutorials/thumbnails/animate-a-name.webp",
@@ -402,14 +919,20 @@
                 }
             },
             {
-                "deckIds": ["add-a-backdrop", "glide-around"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "glide-around"
+                ]
             }
         ]
     },
     "Animate-A-Character": {
         "name": "Animate A Character",
         "description": "Add a backdrop, sprite, sound, and movement to create an animated character",
-        "tags": ["animation", "character"],
+        "tags": [
+            "animation",
+            "character"
+        ],
         "category": "prompts",
         "urlId": "animate-a-character",
         "img": "/static/tutorials/thumbnails/animate-a-character.webp",
@@ -484,14 +1007,21 @@
                 }
             },
             {
-                "deckIds": ["code-cartoon", "Tell-A-Story"]
+                "deckIds": [
+                    "code-cartoon",
+                    "Tell-A-Story"
+                ]
             }
         ]
     },
     "Tell-A-Story": {
         "name": "Create A Story",
         "description": "Create a story with characters, dialogue, and scenes",
-        "tags": ["story", "narrative", "dialogue"],
+        "tags": [
+            "story",
+            "narrative",
+            "dialogue"
+        ],
         "category": "prompts",
         "urlId": "tell-a-story",
         "img": "/static/tutorials/thumbnails/tell-a-story.webp",
@@ -581,14 +1111,22 @@
                 }
             },
             {
-                "deckIds": ["say-it-out-loud", "record-a-sound"]
+                "deckIds": [
+                    "say-it-out-loud",
+                    "record-a-sound"
+                ]
             }
         ]
     },
     "say-it-out-loud": {
         "name": "Create Animations That Talk",
         "description": "Use the Text to Speech extension to make characters speak out loud",
-        "tags": ["text", "speech", "voice", "talk"],
+        "tags": [
+            "text",
+            "speech",
+            "voice",
+            "talk"
+        ],
         "category": "prompts",
         "urlId": "animations-that-talk",
         "img": "/static/tutorials/thumbnails/text-to-speech.webp",
@@ -678,14 +1216,19 @@
                 }
             },
             {
-                "deckIds": ["animate-a-name", "talking"]
+                "deckIds": [
+                    "animate-a-name",
+                    "talking"
+                ]
             }
         ]
     },
     "imagine": {
         "name": "Imagine a World",
         "description": "Create an interactive world with multiple characters and backdrops",
-        "tags": ["imagine"],
+        "tags": [
+            "imagine"
+        ],
         "category": "prompts",
         "urlId": "imagine",
         "img": "/static/tutorials/thumbnails/imagine.webp",
@@ -814,206 +1357,20 @@
                 }
             },
             {
-                "deckIds": ["hide-and-show", "Chase-Game"]
-            }
-        ]
-    },
-    "add-effects": {
-        "name": "Add Effects",
-        "description": "Add visual effects like color, fisheye, and more",
-        "tags": ["animation", "art", "games", "stories", "8-bit", "brightness", "ghost", "transparency", "opacity", "fx", "color", "fisheye", "whirl", "twist", "pixelate", "mosaic", "8bit"],
-        "category": "intermediate",
-        "urlId": "add-effects",
-        "img": "/static/tutorials/thumbnails/add-effects.webp",
-        "steps": [
-            {
-                "video": "add-effects"
-            },
-            {
-                "title": "Add Effects",
-                "image": "/static/tutorials/steps/addEffects.webp",
-                "narration": {
-                    "id": "gui.tutorials.addEffects.step1",
-                    "default": "Use the change effect block to add visual effects like color, fisheye, whirl, pixelate, mosaic, brightness, and ghost to your sprite."
-                }
-            },
-            {
-                "deckIds": ["add-a-backdrop", "code-cartoon"]
-            }
-        ]
-    },
-    "make-it-fly": {
-        "name": "Make it Fly",
-        "description": "Create a flying game with scoring and scenery",
-        "tags": ["game", "fly", "how", "can", "animation"],
-        "category": "intermediate",
-        "urlId": "make-it-fly",
-        "img": "/static/tutorials/thumbnails/make-it-fly.webp",
-        "steps": [
-            {
-                "video": "zbtdx2dem9"
-            },
-            {
-                "title": "Choose a Sky Background",
-                "image": "/static/tutorials/steps/flyChooseBackdrop.gif",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepChooseBackdrop",
-                    "default": "Click the Choose a Backdrop button and pick a sky background for your flying game."
-                }
-            },
-            {
-                "title": "Choose a Character",
-                "image": "/static/tutorials/steps/flyChooseCharacter.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepChooseCharacter",
-                    "default": "Choose a character sprite that will fly around the screen."
-                }
-            },
-            {
-                "title": "Say Something",
-                "image": "/static/tutorials/steps/flySaySomething.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepSaySomething",
-                    "default": "Add a say block to make your flying character say something when the game starts."
-                }
-            },
-            {
-                "title": "Move With Arrow Keys",
-                "image": "/static/tutorials/steps/flyMoveArrows.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepMoveArrows",
-                    "default": "Add when key pressed blocks with change x and change y blocks to control your character with arrow keys."
-                }
-            },
-            {
-                "title": "Choose an Object to Collect",
-                "image": "/static/tutorials/steps/flyChooseObject.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepChooseObject",
-                    "default": "Add another sprite that your character will try to collect as it flies around."
-                }
-            },
-            {
-                "title": "Make the Object Move",
-                "image": "/static/tutorials/steps/flyFlyingObject.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepFlyingObject",
-                    "default": "Add code to make the collectible object move across the screen and reappear."
-                }
-            },
-            {
-                "title": "Select Your Character",
-                "image": "/static/tutorials/steps/flySelectFlyingSprite.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepSelectFlyingSprite",
-                    "default": "Click on your flying character sprite to select it and add more code."
-                }
-            },
-            {
-                "title": "Add a Score",
-                "image": "/static/tutorials/steps/flyAddScore.gif",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepAddScore",
-                    "default": "Create a variable called score to keep track of how many objects you collect."
-                }
-            },
-            {
-                "title": "Keep Score",
-                "image": "/static/tutorials/steps/flyKeepScore.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepKeepScore",
-                    "default": "Add a change score by 1 block inside an if touching block so the score goes up when you collect an object."
-                }
-            },
-            {
-                "title": "Add Scenery",
-                "image": "/static/tutorials/steps/flyAddScenery.gif",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepAddScenery",
-                    "default": "Add a scenery sprite like clouds or buildings to make the background more interesting."
-                }
-            },
-            {
-                "title": "Move the Scenery",
-                "image": "/static/tutorials/steps/flyMoveScenery.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepMoveScenery",
-                    "default": "Add code to make the scenery move across the screen to create a scrolling effect."
-                }
-            },
-            {
-                "title": "Next Costume",
-                "image": "/static/tutorials/steps/flySwitchLooks.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeItFly.stepSwitchLooks",
-                    "default": "Use the next costume block to change the scenery appearance as it moves."
-                }
-            },
-            {
-                "deckIds": ["change-size", "spin-video"]
-            }
-        ]
-    },
-    "Make-Music": {
-        "name": "Make Music",
-        "description": "Create a musical instrument project with sounds and beats",
-        "tags": ["music", "sound", "instrument", "play", "song", "band"],
-        "category": "intermediate",
-        "urlId": "music",
-        "img": "/static/tutorials/thumbnails/make-music.webp",
-        "steps": [
-            {
-                "video": "Make-Music"
-            },
-            {
-                "title": "Pick an Instrument Sprite",
-                "image": "/static/tutorials/steps/musicPickInstrument.gif",
-                "narration": {
-                    "id": "gui.tutorials.makeMusic.stepPickInstrument",
-                    "default": "Click the Choose a Sprite button and pick an instrument sprite to use in your music project."
-                }
-            },
-            {
-                "title": "Play Sound When Clicked",
-                "image": "/static/tutorials/steps/musicPlaySound.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeMusic.stepPlaySound",
-                    "default": "Add a when this sprite clicked block and a play sound block so the instrument plays when you click it."
-                }
-            },
-            {
-                "title": "Create a Song",
-                "image": "/static/tutorials/steps/musicMakeSong.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeMusic.stepMakeSong",
-                    "default": "Add multiple play sound blocks with different notes to create a song that plays automatically."
-                }
-            },
-            {
-                "title": "Choose a Drum & Make a Beat",
-                "image": "/static/tutorials/steps/musicMakeBeat.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeMusic.stepMakeBeat",
-                    "default": "Pick a drum sprite and add play drum blocks to create a beat."
-                }
-            },
-            {
-                "title": "Choose the Microphone Sprite & Surprise Beatbox",
-                "image": "/static/tutorials/steps/musicMakeBeatbox.webp",
-                "narration": {
-                    "id": "gui.tutorials.makeMusic.stepMakeBeatbox",
-                    "default": "Pick the microphone sprite and add random play sound blocks for a surprise beatbox effect."
-                }
-            },
-            {
-                "deckIds": ["add-a-backdrop", "add-sprite"]
+                "deckIds": [
+                    "hide-and-show",
+                    "Chase-Game"
+                ]
             }
         ]
     },
     "pong": {
         "name": "Pong Game",
         "description": "Create a classic Pong game with a ball, paddle, and score",
-        "tags": ["pong", "game"],
+        "tags": [
+            "pong",
+            "game"
+        ],
         "category": "prompts",
         "urlId": "pong",
         "img": "/static/tutorials/thumbnails/pong.webp",
@@ -1127,14 +1484,22 @@
                 }
             },
             {
-                "deckIds": ["add-effects", "Video-Sensing"]
+                "deckIds": [
+                    "add-effects",
+                    "Video-Sensing"
+                ]
             }
         ]
     },
     "Make-A-Game": {
         "name": "Make a Clicker Game",
         "description": "Create a clicker game where you click sprites to score points",
-        "tags": ["games", "click", "clicked", "score"],
+        "tags": [
+            "games",
+            "click",
+            "clicked",
+            "score"
+        ],
         "category": "prompts",
         "urlId": "clicker-game",
         "img": "/static/tutorials/thumbnails/pop-game.webp",
@@ -1199,14 +1564,22 @@
                 }
             },
             {
-                "deckIds": ["add-a-backdrop", "move-around-with-arrow-keys"]
+                "deckIds": [
+                    "add-a-backdrop",
+                    "move-around-with-arrow-keys"
+                ]
             }
         ]
     },
     "Chase-Game": {
         "name": "Make a Chase Game",
         "description": "Create a chase game with two sprites and scoring",
-        "tags": ["games", "arrow", "keyboard", "score"],
+        "tags": [
+            "games",
+            "arrow",
+            "keyboard",
+            "score"
+        ],
         "category": "prompts",
         "urlId": "chase-game",
         "img": "/static/tutorials/thumbnails/chase-game.webp",
@@ -1289,14 +1662,19 @@
                 }
             },
             {
-                "deckIds": ["add-effects", "move-around-with-arrow-keys"]
+                "deckIds": [
+                    "add-effects",
+                    "move-around-with-arrow-keys"
+                ]
             }
         ]
     },
     "code-cartoon": {
         "name": "Code a Cartoon",
         "description": "Animate characters in a pre-made cartoon project",
-        "tags": ["code-cartoon"],
+        "tags": [
+            "code-cartoon"
+        ],
         "category": "prompts",
         "urlId": "code-cartoon",
         "requiredProjectId": "331474033",
@@ -1394,14 +1772,21 @@
                 }
             },
             {
-                "deckIds": ["Chase-Game", "Tell-A-Story"]
+                "deckIds": [
+                    "Chase-Game",
+                    "Tell-A-Story"
+                ]
             }
         ]
     },
     "cartoon-network": {
         "name": "Animate an Adventure Game",
         "description": "Create an adventure game with characters, collecting, and scoring",
-        "tags": ["cartoon", "network", "adventure"],
+        "tags": [
+            "cartoon",
+            "network",
+            "adventure"
+        ],
         "category": "prompts",
         "urlId": "animate-an-adventure-game",
         "requiredProjectId": "249143200",
@@ -1478,182 +1863,22 @@
                 "video": "6o76f5ivo1"
             },
             {
-                "deckIds": ["switch-costume", "add-effects"]
-            }
-        ]
-    },
-    "Video-Sensing": {
-        "name": "Video Sensing",
-        "description": "Use your camera to interact with sprites",
-        "tags": ["video", "camera", "sensing"],
-        "category": "intermediate",
-        "urlId": "video-sensing",
-        "img": "/static/tutorials/thumbnails/video-sensing.webp",
-        "steps": [
-            {
-                "video": "3pd1z110d6"
-            },
-            {
-                "title": "Add Extension",
-                "image": "/static/tutorials/steps/videoAddExtension.gif",
-                "narration": {
-                    "id": "gui.tutorials.videoSensing.stepAddExtension",
-                    "default": "Click the Add Extension button at the bottom left and choose the Video Sensing extension."
-                }
-            },
-            {
-                "title": "Pet the Cat",
-                "image": "/static/tutorials/steps/videoPet.webp",
-                "narration": {
-                    "id": "gui.tutorials.videoSensing.stepPet",
-                    "default": "Add a when video motion is greater than block to detect when you wave your hand near the cat sprite."
-                }
-            },
-            {
-                "title": "Animate",
-                "image": "/static/tutorials/steps/videoAnimate.webp",
-                "narration": {
-                    "id": "gui.tutorials.videoSensing.stepAnimate",
-                    "default": "Add a next costume block so the sprite animates when it detects video motion."
-                }
-            },
-            {
-                "title": "Pop a Balloon",
-                "image": "/static/tutorials/steps/videoPop.webp",
-                "narration": {
-                    "id": "gui.tutorials.videoSensing.stepPop",
-                    "default": "Add a balloon sprite and use video sensing to pop it when you wave your hand over it."
-                }
-            },
-            {
-                "deckIds": ["Make-Music", "add-effects"]
-            }
-        ]
-    },
-    "talking": {
-        "name": "Talking Tales",
-        "description": "Create a multi-scene talking tale with music and dance",
-        "tags": ["talking"],
-        "category": "intermediate",
-        "urlId": "talking",
-        "img": "/static/tutorials/thumbnails/talking.webp",
-        "steps": [
-            {
-                "video": "talking"
-            },
-            {
-                "title": "Click to Add the Text-to-Speech Blocks",
-                "image": "/static/tutorials/steps/talesAddExtension.gif",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepAddExtension",
-                    "default": "Click the Add Extension button and choose the Text to Speech extension to add talking blocks."
-                }
-            },
-            {
-                "title": "Choose a Sprite",
-                "image": "/static/tutorials/steps/talesChooseSprite.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseSprite",
-                    "default": "Click the Choose a Sprite button and pick a character for your tale."
-                }
-            },
-            {
-                "title": "Make a Character Speak",
-                "image": "/static/tutorials/steps/talesSaySomething.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepSaySomething",
-                    "default": "Add a speak block and type what you want the character to say out loud."
-                }
-            },
-            {
-                "title": "Choose a Backdrop",
-                "image": "/static/tutorials/steps/talesChooseBackdrop.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseBackdrop",
-                    "default": "Click the Choose a Backdrop button and pick a backdrop for your first scene."
-                }
-            },
-            {
-                "title": "Click a Character to Go to the Next Backdrop",
-                "image": "/static/tutorials/steps/talesSwitchBackdrop.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepSwitchBackdrop",
-                    "default": "Add a when this sprite clicked block with a next backdrop block to change scenes when you click the character."
-                }
-            },
-            {
-                "title": "Choose Another Sprite",
-                "image": "/static/tutorials/steps/talesChooseAnotherSprite.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseAnotherSprite",
-                    "default": "Add another character sprite to your tale."
-                }
-            },
-            {
-                "title": "Move Around",
-                "image": "/static/tutorials/steps/talesMoveAround.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepMoveAround",
-                    "default": "Add motion blocks to make this character move around the stage."
-                }
-            },
-            {
-                "title": "Choose Another Backdrop",
-                "image": "/static/tutorials/steps/talesChooseAnotherBackdrop.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseAnotherBackdrop",
-                    "default": "Add another backdrop for a new scene in your tale."
-                }
-            },
-            {
-                "title": "Animate Talking",
-                "image": "/static/tutorials/steps/talesAnimateTalking.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepAnimateTalking",
-                    "default": "Use switch costume blocks to animate the character's mouth moving while it speaks."
-                }
-            },
-            {
-                "title": "Choose Another Backdrop",
-                "image": "/static/tutorials/steps/talesChooseThirdBackdrop.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseThirdBackdrop",
-                    "default": "Add a third backdrop for the final scene of your tale."
-                }
-            },
-            {
-                "title": "Choose a Song to Dance To",
-                "image": "/static/tutorials/steps/talesChooseSound.gif",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepChooseSound",
-                    "default": "Go to the Sounds tab and add a music track from the sound library for your characters to dance to."
-                }
-            },
-            {
-                "title": "Dance Moves",
-                "image": "/static/tutorials/steps/talesDanceMoves.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepDanceMoves",
-                    "default": "Add turn and move blocks to make your character dance when the music plays."
-                }
-            },
-            {
-                "title": "Get the Ask and Answer Blocks from the Sensing Category",
-                "image": "/static/tutorials/steps/talesAskAnswer.webp",
-                "narration": {
-                    "id": "gui.tutorials.talking.stepAskAnswer",
-                    "default": "Use the ask block from the Sensing category to let the user interact with your tale by typing an answer."
-                }
-            },
-            {
-                "deckIds": ["Tell-A-Story", "Animate-A-Character"]
+                "deckIds": [
+                    "switch-costume",
+                    "add-effects"
+                ]
             }
         ]
     },
     "blink-led": {
         "name": "Blink an LED",
         "description": "Learn to blink an LED using Arduino blocks and the simulator",
-        "tags": ["arduino", "hardware", "beginner", "led"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "beginner",
+            "led"
+        ],
         "category": "arduino",
         "urlId": "blink-led",
         "img": "/static/tutorials/thumbnails/blink-led.webp",
@@ -1663,7 +1888,14 @@
         "name": "Control an LED with a Button",
         "isPremium": true,
         "description": "Turn an LED on when a button is pressed and off when released",
-        "tags": ["arduino", "hardware", "button", "led", "input", "if"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "button",
+            "led",
+            "input",
+            "if"
+        ],
         "category": "arduino",
         "urlId": "button-led",
         "img": "/static/tutorials/thumbnails/button-led.webp",
@@ -1673,7 +1905,14 @@
         "name": "LED Glow Effect",
         "isPremium": true,
         "description": "Use PWM to fade an LED smoothly brighter and dimmer",
-        "tags": ["arduino", "hardware", "led", "pwm", "fade", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "led",
+            "pwm",
+            "fade",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "led-glow-effect",
         "img": "/static/tutorials/thumbnails/led-glow-effect.webp",
@@ -1684,7 +1923,14 @@
         "name": "Traffic Light",
         "isPremium": true,
         "description": "Build a working traffic light with red, yellow and green LEDs",
-        "tags": ["arduino", "hardware", "led", "traffic", "sequence", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "led",
+            "traffic",
+            "sequence",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "traffic-light",
         "img": "/static/tutorials/thumbnails/traffic-light.webp",
@@ -1695,7 +1941,14 @@
         "name": "SOS Morse Code",
         "isPremium": true,
         "description": "Blink an LED with the SOS Morse signal — three short, three long, three short",
-        "tags": ["arduino", "hardware", "led", "morse", "sos", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "led",
+            "morse",
+            "sos",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "sos-morse-code",
         "img": "/static/tutorials/thumbnails/sos-morse-code.webp",
@@ -1706,7 +1959,15 @@
         "name": "Night Lamp",
         "isPremium": true,
         "description": "Turn an LED on automatically when the room gets dark, off when it's bright",
-        "tags": ["arduino", "hardware", "led", "ldr", "sensor", "light", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "led",
+            "ldr",
+            "sensor",
+            "light",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "night-lamp",
         "img": "/static/tutorials/thumbnails/night-lamp.webp",
@@ -1717,7 +1978,15 @@
         "name": "Security Alarm",
         "isPremium": true,
         "description": "Set off an alarm when a motion sensor spots someone sneaking past",
-        "tags": ["arduino", "hardware", "sensor", "motion", "alarm", "buzzer", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "motion",
+            "alarm",
+            "buzzer",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "security-alarm",
         "img": "/static/tutorials/thumbnails/security-alarm.webp",
@@ -1728,7 +1997,15 @@
         "name": "Fan Speed Control",
         "isPremium": true,
         "description": "Turn a knob to speed up or slow down a fan — smoothly, just like a real dimmer",
-        "tags": ["arduino", "hardware", "motor", "fan", "pwm", "potentiometer", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "motor",
+            "fan",
+            "pwm",
+            "potentiometer",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "fan-speed-control",
         "img": "/static/tutorials/thumbnails/fan-speed-control.webp",
@@ -1739,7 +2016,14 @@
         "name": "Move a Servo",
         "isPremium": true,
         "description": "Send a servo motor to a specific angle and watch it sweep — 0, 90, 180 degrees on cue",
-        "tags": ["arduino", "hardware", "servo", "motor", "angle", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "servo",
+            "motor",
+            "angle",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "move-a-servo",
         "img": "/static/tutorials/thumbnails/move-a-servo.webp",
@@ -1749,7 +2033,16 @@
         "name": "Automatic Plant Irrigation",
         "isPremium": true,
         "description": "Water a plant automatically when the soil gets too dry",
-        "tags": ["arduino", "hardware", "sensor", "soil", "water", "pump", "plant", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "soil",
+            "water",
+            "pump",
+            "plant",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "automatic-plant-irrigation",
         "img": "/static/tutorials/thumbnails/automatic-plant-irrigation.webp",
@@ -1760,7 +2053,16 @@
         "name": "Car Parking Sensor System",
         "isPremium": true,
         "description": "Beep faster as a car gets closer to the wall — just like a real parking sensor",
-        "tags": ["arduino", "hardware", "sensor", "ultrasonic", "distance", "buzzer", "car", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "ultrasonic",
+            "distance",
+            "buzzer",
+            "car",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "car-parking-sensor",
         "img": "/static/tutorials/thumbnails/car-parking-sensor.webp",
@@ -1771,7 +2073,16 @@
         "name": "Automatic Hand Sanitizer",
         "isPremium": true,
         "description": "Squirt sanitizer automatically when a hand comes near — no touching needed",
-        "tags": ["arduino", "hardware", "sensor", "ir", "distance", "servo", "touchless", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "ir",
+            "distance",
+            "servo",
+            "touchless",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "automatic-hand-sanitizer",
         "img": "/static/tutorials/thumbnails/automatic-hand-sanitizer.webp",
@@ -1782,7 +2093,15 @@
         "name": "Smart Door Lock",
         "isPremium": true,
         "description": "Unlock a door with a secret keypad code — wrong code, door stays shut",
-        "tags": ["arduino", "hardware", "keypad", "servo", "lock", "password", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "keypad",
+            "servo",
+            "lock",
+            "password",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "smart-door-lock",
         "img": "/static/tutorials/thumbnails/smart-door-lock.webp",
@@ -1793,7 +2112,15 @@
         "name": "Smart People Counter",
         "isPremium": true,
         "description": "Count everyone who walks past with an IR sensor — just like a shop door",
-        "tags": ["arduino", "hardware", "sensor", "ir", "counter", "display", "beginner"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "ir",
+            "counter",
+            "display",
+            "beginner"
+        ],
         "category": "arduino",
         "urlId": "smart-people-counter",
         "img": "/static/tutorials/thumbnails/smart-people-counter.webp",
@@ -1804,7 +2131,15 @@
         "name": "Line Following Robot",
         "isPremium": true,
         "description": "Build a robot that drives along a black line on its own — IR sensors see, motors steer",
-        "tags": ["arduino", "hardware", "sensor", "ir", "motor", "robot", "intermediate"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "ir",
+            "motor",
+            "robot",
+            "intermediate"
+        ],
         "category": "arduino",
         "urlId": "line-following-robot",
         "img": "/static/tutorials/thumbnails/line-following-robot.webp",
@@ -1815,7 +2150,15 @@
         "name": "Smart Thermostat",
         "isPremium": true,
         "description": "Read the room temperature and switch a heater or fan on and off to keep things just right",
-        "tags": ["arduino", "hardware", "sensor", "temperature", "thermostat", "relay", "intermediate"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "temperature",
+            "thermostat",
+            "relay",
+            "intermediate"
+        ],
         "category": "arduino",
         "urlId": "smart-thermostat",
         "img": "/static/tutorials/thumbnails/smart-thermostat.webp",
@@ -1826,7 +2169,14 @@
         "name": "Petrol Pump Meter",
         "isPremium": true,
         "description": "Measure fuel flowing through a pipe and show the amount on a display — like at the petrol station",
-        "tags": ["arduino", "hardware", "sensor", "flow", "display", "intermediate"],
+        "tags": [
+            "arduino",
+            "hardware",
+            "sensor",
+            "flow",
+            "display",
+            "intermediate"
+        ],
         "category": "arduino",
         "urlId": "petrol-pump-meter",
         "img": "/static/tutorials/thumbnails/petrol-pump-meter.webp",
@@ -1836,7 +2186,12 @@
     "html-hello-web": {
         "name": "Hello Web 🌐",
         "description": "Build your very first webpage and see your content appear.",
-        "tags": ["html", "web", "beginner", "hello web"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "hello web"
+        ],
         "category": "html",
         "urlId": "html-hello-web",
         "img": "/static/tutorials/thumbnails/html-hello-web.webp",
@@ -1845,7 +2200,12 @@
     "html-headings": {
         "name": "Headings — Big to Small 📏",
         "description": "Add headings and see how they change in size.",
-        "tags": ["html", "web", "beginner", "headings"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "headings"
+        ],
         "category": "html",
         "urlId": "html-headings",
         "img": "/static/tutorials/thumbnails/html-headings.webp",
@@ -1856,7 +2216,13 @@
     "html-paragraphs": {
         "name": "Write Your Story ✍️",
         "description": "Add real text to your page in clean, readable paragraphs.",
-        "tags": ["html", "web", "beginner", "paragraph", "text"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "paragraph",
+            "text"
+        ],
         "category": "html",
         "urlId": "html-paragraphs",
         "img": "/static/tutorials/thumbnails/html-paragraphs.webp",
@@ -1867,7 +2233,15 @@
     "html-text-formatting": {
         "name": "Text Formatting ✨",
         "description": "Make text bold, italic, and underlined with inline tags.",
-        "tags": ["html", "web", "beginner", "bold", "italic", "underline", "format"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "bold",
+            "italic",
+            "underline",
+            "format"
+        ],
         "category": "html",
         "urlId": "html-text-formatting",
         "img": "/static/tutorials/thumbnails/html-text-formatting.webp",
@@ -1878,7 +2252,15 @@
     "html-links": {
         "name": "Create Links and Navigation 🔗",
         "description": "Add a single link, then build a menu of links to connect pages.",
-        "tags": ["html", "web", "beginner", "link", "anchor", "nav", "menu"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "link",
+            "anchor",
+            "nav",
+            "menu"
+        ],
         "category": "html",
         "urlId": "html-links",
         "img": "/static/tutorials/thumbnails/html-links.webp",
@@ -1889,7 +2271,13 @@
     "html-images": {
         "name": "Add Pictures to Your Page 🖼️",
         "description": "Make your page more interesting by adding images.",
-        "tags": ["html", "web", "beginner", "image", "img"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "image",
+            "img"
+        ],
         "category": "html",
         "urlId": "html-images",
         "img": "/static/tutorials/thumbnails/html-images.webp",
@@ -1900,7 +2288,14 @@
     "html-upload-image": {
         "name": "Upload Your Own Picture 📸",
         "description": "Skip internet pictures — upload a photo from your computer right into your webpage.",
-        "tags": ["html", "web", "beginner", "image", "upload", "photo"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "image",
+            "upload",
+            "photo"
+        ],
         "category": "html",
         "urlId": "html-upload-image",
         "img": "/static/tutorials/thumbnails/html-upload-image.webp",
@@ -1911,7 +2306,14 @@
     "html-lists": {
         "name": "Pack Your List 🎒",
         "description": "Create a list of things, just like packing items for a trip.",
-        "tags": ["html", "web", "beginner", "list", "ul", "li"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "list",
+            "ul",
+            "li"
+        ],
         "category": "html",
         "urlId": "html-lists",
         "img": "/static/tutorials/thumbnails/html-lists.webp",
@@ -1922,7 +2324,14 @@
     "html-tables": {
         "name": "Show Data in Tables 📊",
         "description": "Arrange information neatly using rows and columns.",
-        "tags": ["html", "web", "beginner", "table", "tr", "td"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "table",
+            "tr",
+            "td"
+        ],
         "category": "html",
         "urlId": "html-tables",
         "img": "/static/tutorials/thumbnails/html-tables.webp",
@@ -1933,7 +2342,14 @@
     "html-forms": {
         "name": "Build a Contact Form 📝",
         "description": "Let people interact with your page using input fields and a button.",
-        "tags": ["html", "web", "beginner", "form", "input", "button"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "form",
+            "input",
+            "button"
+        ],
         "category": "html",
         "urlId": "html-forms",
         "img": "/static/tutorials/thumbnails/html-forms.webp",
@@ -1944,7 +2360,13 @@
     "html-save-page": {
         "name": "Save Your Webpage 💾",
         "description": "Save your webpage as a real .html file you can come back to anytime.",
-        "tags": ["html", "web", "beginner", "save", "file"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "save",
+            "file"
+        ],
         "category": "html",
         "urlId": "html-save-page",
         "img": "/static/tutorials/thumbnails/html-save-page.webp",
@@ -1955,7 +2377,13 @@
     "html-comments": {
         "name": "Add Notes to Your Code 💬",
         "description": "Use HTML comments to leave notes for yourself that the browser ignores.",
-        "tags": ["html", "web", "beginner", "comments", "notes"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "comments",
+            "notes"
+        ],
         "category": "html",
         "urlId": "html-comments",
         "img": "/static/tutorials/thumbnails/html-comments.webp",
@@ -1966,7 +2394,17 @@
     "html-sections": {
         "name": "Design Your Website 🏗️",
         "description": "Use semantic header, nav, section, and footer to design a real website layout.",
-        "tags": ["html", "web", "beginner", "header", "nav", "section", "footer", "semantic", "layout"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "header",
+            "nav",
+            "section",
+            "footer",
+            "semantic",
+            "layout"
+        ],
         "category": "html",
         "urlId": "html-sections",
         "img": "/static/tutorials/thumbnails/html-sections.webp",
@@ -1977,7 +2415,15 @@
     "html-link-pages": {
         "name": "Link Pages Together 🔗",
         "description": "Build a real multi-page website — Home, About, Contact — with menus that actually work.",
-        "tags": ["html", "web", "beginner", "link", "navigation", "multi-page", "save"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "link",
+            "navigation",
+            "multi-page",
+            "save"
+        ],
         "category": "html",
         "urlId": "html-link-pages",
         "img": "/static/tutorials/thumbnails/html-link-pages.webp",
@@ -1988,7 +2434,13 @@
     "html-divs": {
         "name": "Group Things Together 🧩",
         "description": "Use invisible containers to group parts of your page.",
-        "tags": ["html", "web", "beginner", "div", "class"],
+        "tags": [
+            "html",
+            "web",
+            "beginner",
+            "div",
+            "class"
+        ],
         "category": "html",
         "urlId": "html-divs",
         "img": "/static/tutorials/thumbnails/html-divs.webp",
@@ -1999,7 +2451,15 @@
     "html-css-intro": {
         "name": "Colour Your Page 🎨",
         "description": "Install CSS and add your first colour and background to a heading.",
-        "tags": ["html", "css", "web", "beginner", "color", "background", "selector"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "beginner",
+            "color",
+            "background",
+            "selector"
+        ],
         "category": "html",
         "urlId": "html-css-intro",
         "img": "/static/tutorials/thumbnails/html-css-intro.webp",
@@ -2010,7 +2470,15 @@
     "html-css-fonts": {
         "name": "Style Your Text ✏️",
         "description": "Change font size, alignment, and font family with CSS.",
-        "tags": ["html", "css", "web", "beginner", "font", "text-align", "font-size"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "beginner",
+            "font",
+            "text-align",
+            "font-size"
+        ],
         "category": "html",
         "urlId": "html-css-fonts",
         "img": "/static/tutorials/thumbnails/html-css-fonts.webp",
@@ -2021,7 +2489,16 @@
     "html-css-box": {
         "name": "Build Beautiful Boxes 📦",
         "description": "Padding, border, and margin — the three layers of every element.",
-        "tags": ["html", "css", "web", "beginner", "padding", "margin", "border", "box-model"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "beginner",
+            "padding",
+            "margin",
+            "border",
+            "box-model"
+        ],
         "category": "html",
         "urlId": "html-css-box",
         "img": "/static/tutorials/thumbnails/html-css-box.webp",
@@ -2032,7 +2509,15 @@
     "html-css-flex": {
         "name": "Arrange Things in a Row 📐",
         "description": "Use display flex to arrange cards side by side.",
-        "tags": ["html", "css", "web", "beginner", "flex", "flexbox", "layout"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "beginner",
+            "flex",
+            "flexbox",
+            "layout"
+        ],
         "category": "html",
         "urlId": "html-css-flex",
         "img": "/static/tutorials/thumbnails/html-css-flex.webp",
@@ -2043,7 +2528,16 @@
     "html-make-it-yours": {
         "name": "Build Your Personal Page 🌟",
         "description": "Combine HTML and CSS to build your own personal page with hero and button.",
-        "tags": ["html", "css", "web", "intermediate", "personal", "hero", "button", "project"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "intermediate",
+            "personal",
+            "hero",
+            "button",
+            "project"
+        ],
         "category": "html",
         "urlId": "html-make-it-yours",
         "img": "/static/tutorials/thumbnails/html-make-it-yours.webp",
@@ -2054,7 +2548,13 @@
     "html-make-it-happen": {
         "name": "Build It. Code It. Make It Happen 🚀",
         "description": "Capstone project — a full styled portfolio with navigation, hero, features, and footer.",
-        "tags": ["html", "css", "web", "project", "capstone"],
+        "tags": [
+            "html",
+            "css",
+            "web",
+            "project",
+            "capstone"
+        ],
         "category": "html",
         "urlId": "html-make-it-happen",
         "img": "/static/tutorials/thumbnails/html-make-it-happen.webp",
@@ -2065,7 +2565,13 @@
     "python-hello-world": {
         "name": "Hello, Python! 🐍",
         "description": "Write your first two lines of Python — make the penguin speak and print to the terminal",
-        "tags": ["python", "hello world", "beginner", "say", "print"],
+        "tags": [
+            "python",
+            "hello world",
+            "beginner",
+            "say",
+            "print"
+        ],
         "category": "python",
         "urlId": "python-hello",
         "img": "/static/tutorials/thumbnails/python-hello-world.webp",
@@ -2076,7 +2582,11 @@
         "name": "Use a Variable",
         "isPremium": true,
         "description": "Store a value in a name you pick, then use that name in your code",
-        "tags": ["python", "variable", "beginner"],
+        "tags": [
+            "python",
+            "variable",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-use-a-variable",
         "img": "/static/tutorials/thumbnails/python-use-a-variable.webp",
@@ -2087,7 +2597,11 @@
         "name": "Ask the User",
         "isPremium": true,
         "description": "Use input to ask a question and work with the kid's answer",
-        "tags": ["python", "input", "beginner"],
+        "tags": [
+            "python",
+            "input",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-ask-the-user",
         "img": "/static/tutorials/thumbnails/python-ask-the-user.webp",
@@ -2098,7 +2612,12 @@
         "name": "Numbers in Python",
         "isPremium": true,
         "description": "Do maths with Python — add, subtract, multiply, divide",
-        "tags": ["python", "numbers", "math", "beginner"],
+        "tags": [
+            "python",
+            "numbers",
+            "math",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-numbers",
         "img": "/static/tutorials/thumbnails/python-numbers.webp",
@@ -2109,7 +2628,15 @@
         "name": "Type Conversion — Fix the Input",
         "isPremium": true,
         "description": "Turn text into numbers and back again — int, float, str — so keyboard input can do maths",
-        "tags": ["python", "type", "int", "float", "str", "input", "beginner"],
+        "tags": [
+            "python",
+            "type",
+            "int",
+            "float",
+            "str",
+            "input",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-type-conversion-fix-the-input",
         "img": "/static/tutorials/thumbnails/python-type-conversion-fix-the-input.webp",
@@ -2120,7 +2647,13 @@
         "name": "Make a Choice",
         "isPremium": true,
         "description": "Use if and else to make your program pick between options",
-        "tags": ["python", "if", "else", "choice", "beginner"],
+        "tags": [
+            "python",
+            "if",
+            "else",
+            "choice",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-make-a-choice",
         "img": "/static/tutorials/thumbnails/python-make-a-choice.webp",
@@ -2131,7 +2664,15 @@
         "name": "Boolean Logic",
         "isPremium": true,
         "description": "Use True, False, and, or, not to build smart decisions — check two things at once, flip answers",
-        "tags": ["python", "boolean", "logic", "and", "or", "not", "beginner"],
+        "tags": [
+            "python",
+            "boolean",
+            "logic",
+            "and",
+            "or",
+            "not",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-boolean-logic-smart-decisions",
         "img": "/static/tutorials/thumbnails/python-boolean-logic-smart-decisions.webp",
@@ -2142,7 +2683,14 @@
         "name": "Guess the Secret Number",
         "isPremium": true,
         "description": "Build a number-guessing game — the computer picks a secret, you try to find it",
-        "tags": ["python", "game", "random", "if", "input", "beginner"],
+        "tags": [
+            "python",
+            "game",
+            "random",
+            "if",
+            "input",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-guess-the-number",
         "img": "/static/tutorials/thumbnails/python-guess-the-number.webp",
@@ -2153,7 +2701,13 @@
         "name": "Second Chance",
         "isPremium": true,
         "description": "Use a loop to let the kid try again when they get something wrong",
-        "tags": ["python", "loop", "while", "retry", "beginner"],
+        "tags": [
+            "python",
+            "loop",
+            "while",
+            "retry",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-second-chance",
         "img": "/static/tutorials/thumbnails/python-second-chance.webp",
@@ -2164,7 +2718,13 @@
         "name": "Keep Trying Till You Win",
         "isPremium": true,
         "description": "Use a loop that keeps running until the kid finally gets the right answer",
-        "tags": ["python", "loop", "while", "game", "beginner"],
+        "tags": [
+            "python",
+            "loop",
+            "while",
+            "game",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-keep-trying",
         "img": "/static/tutorials/thumbnails/python-keep-trying.webp",
@@ -2175,7 +2735,13 @@
         "name": "Break — Stop the Loop",
         "isPremium": true,
         "description": "Pop out of any loop the moment something specific happens — keep going until the kid says stop",
-        "tags": ["python", "loop", "while", "break", "beginner"],
+        "tags": [
+            "python",
+            "loop",
+            "while",
+            "break",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-break-stop-the-loop",
         "img": "/static/tutorials/thumbnails/python-break-stop-the-loop.webp",
@@ -2186,7 +2752,14 @@
         "name": "Smart Shopping Bill",
         "isPremium": true,
         "description": "Add up shopping items in a loop and print a neat bill with the total",
-        "tags": ["python", "loop", "list", "bill", "shopping", "beginner"],
+        "tags": [
+            "python",
+            "loop",
+            "list",
+            "bill",
+            "shopping",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-smart-shopping-bill",
         "img": "/static/tutorials/thumbnails/python-smart-shopping-bill.webp",
@@ -2197,7 +2770,14 @@
         "name": "More Items, Bigger Bill",
         "isPremium": true,
         "description": "Store many items in a list and loop through them to build a growing bill",
-        "tags": ["python", "list", "loop", "for", "bill", "beginner"],
+        "tags": [
+            "python",
+            "list",
+            "loop",
+            "for",
+            "bill",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-more-items-bigger-bill",
         "img": "/static/tutorials/thumbnails/python-more-items-bigger-bill.webp",
@@ -2208,7 +2788,14 @@
         "name": "Lists — Many Things, One Name",
         "isPremium": true,
         "description": "One name, many values in order — make a list, count it, grow it, loop through every item",
-        "tags": ["python", "list", "for", "append", "len", "beginner"],
+        "tags": [
+            "python",
+            "list",
+            "for",
+            "append",
+            "len",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-lists-many-things-one-name",
         "img": "/static/tutorials/thumbnails/python-lists-many-things-one-name.webp",
@@ -2219,7 +2806,13 @@
         "name": "Built-in Functions — Power Tools",
         "isPremium": true,
         "description": "Meet Python's ready-made commands — len, max, min, sum, sorted — the power tools you'll reach for every day",
-        "tags": ["python", "builtin", "functions", "tools", "beginner"],
+        "tags": [
+            "python",
+            "builtin",
+            "functions",
+            "tools",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-built-in-functions-power-tools",
         "img": "/static/tutorials/thumbnails/python-built-in-functions-power-tools.webp",
@@ -2230,7 +2823,13 @@
         "name": "Strings — Control Your Text",
         "isPremium": true,
         "description": "Shape and clean up any piece of text with Python's string tools — upper, lower, split, replace, strip",
-        "tags": ["python", "string", "text", "methods", "beginner"],
+        "tags": [
+            "python",
+            "string",
+            "text",
+            "methods",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-strings-control-your-text",
         "img": "/static/tutorials/thumbnails/python-strings-control-your-text.webp",
@@ -2241,7 +2840,14 @@
         "name": "F-Strings — Cleaner Text",
         "isPremium": true,
         "description": "Drop variables straight into a string with f-quote and curly braces — the way real Python prints",
-        "tags": ["python", "string", "fstring", "format", "print", "beginner"],
+        "tags": [
+            "python",
+            "string",
+            "fstring",
+            "format",
+            "print",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-fstrings-cleaner-text",
         "img": "/static/tutorials/thumbnails/python-fstrings-cleaner-text.webp",
@@ -2252,7 +2858,14 @@
         "name": "Reach Inside — Indexing and Slicing",
         "isPremium": true,
         "description": "Pull out one item or a chunk by position — works the same way on lists and on text",
-        "tags": ["python", "list", "string", "index", "slice", "beginner"],
+        "tags": [
+            "python",
+            "list",
+            "string",
+            "index",
+            "slice",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-indexing-and-slicing",
         "img": "/static/tutorials/thumbnails/python-indexing-and-slicing.webp",
@@ -2263,7 +2876,14 @@
         "name": "Can You Beat the Computer?",
         "isPremium": true,
         "description": "Play rock-paper-scissors against the computer and see who wins",
-        "tags": ["python", "game", "random", "if", "input", "beginner"],
+        "tags": [
+            "python",
+            "game",
+            "random",
+            "if",
+            "input",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-beat-the-computer",
         "img": "/static/tutorials/thumbnails/python-beat-the-computer.webp",
@@ -2274,7 +2894,13 @@
         "name": "Tuples — Fixed Together",
         "isPremium": true,
         "description": "Hold a few things together that should never change — like coordinates or an RGB colour",
-        "tags": ["python", "tuple", "data", "immutable", "beginner"],
+        "tags": [
+            "python",
+            "tuple",
+            "data",
+            "immutable",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-tuples-fixed-together",
         "img": "/static/tutorials/thumbnails/python-tuples-fixed-together.webp",
@@ -2285,7 +2911,13 @@
         "name": "Math Module",
         "isPremium": true,
         "description": "Unlock pi, square root, powers, and rounding with Python's built-in math module",
-        "tags": ["python", "math", "module", "import", "intermediate"],
+        "tags": [
+            "python",
+            "math",
+            "module",
+            "import",
+            "intermediate"
+        ],
         "category": "python",
         "urlId": "python-math-module-power-tools",
         "img": "/static/tutorials/thumbnails/python-math-module-power-tools.webp",
@@ -2296,7 +2928,14 @@
         "name": "Date and Time",
         "isPremium": true,
         "description": "Get the current date and time with Python's datetime module — pull out the year, month, day, format it nicely",
-        "tags": ["python", "datetime", "module", "import", "format", "intermediate"],
+        "tags": [
+            "python",
+            "datetime",
+            "module",
+            "import",
+            "format",
+            "intermediate"
+        ],
         "category": "python",
         "urlId": "python-date-and-time",
         "img": "/static/tutorials/thumbnails/python-date-and-time.webp",
@@ -2307,7 +2946,13 @@
         "name": "Create Your Own Commands",
         "isPremium": true,
         "description": "Teach Python your own commands by writing a function — use them again and again",
-        "tags": ["python", "function", "def", "reuse", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "def",
+            "reuse",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-custom-commands",
         "img": "/static/tutorials/thumbnails/python-custom-commands.webp",
@@ -2318,7 +2963,13 @@
         "name": "One Command, Multiple Answers",
         "isPremium": true,
         "description": "Write a command that returns different answers depending on what you give it",
-        "tags": ["python", "function", "return", "arguments", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "return",
+            "arguments",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-one-command-multiple-answers",
         "img": "/static/tutorials/thumbnails/python-one-command-multiple-answers.webp",
@@ -2329,7 +2980,13 @@
         "name": "Connect Your Commands",
         "isPremium": true,
         "description": "Call one command from inside another — connect small pieces into bigger programs",
-        "tags": ["python", "function", "compose", "reuse", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "compose",
+            "reuse",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-connect-your-commands",
         "img": "/static/tutorials/thumbnails/python-connect-your-commands.webp",
@@ -2340,7 +2997,13 @@
         "name": "One Command, One Job",
         "isPremium": true,
         "description": "Keep each function focused on a single job — small, clear, reusable",
-        "tags": ["python", "function", "refactor", "reuse", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "refactor",
+            "reuse",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-one-command-one-job",
         "img": "/static/tutorials/thumbnails/python-one-command-one-job.webp",
@@ -2351,7 +3014,13 @@
         "name": "Handle Any Number of Inputs",
         "isPremium": true,
         "description": "Write one command that works with any number of inputs — one, five, or fifty",
-        "tags": ["python", "function", "args", "variadic", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "args",
+            "variadic",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-handle-any-number-of-inputs",
         "img": "/static/tutorials/thumbnails/python-handle-any-number-of-inputs.webp",
@@ -2362,7 +3031,15 @@
         "name": "Built-in Advanced — Extra Power",
         "isPremium": true,
         "description": "Turn long loops into one clean line with zip, enumerate, map, filter, any, all",
-        "tags": ["python", "builtin", "zip", "enumerate", "map", "filter", "intermediate"],
+        "tags": [
+            "python",
+            "builtin",
+            "zip",
+            "enumerate",
+            "map",
+            "filter",
+            "intermediate"
+        ],
         "category": "python",
         "urlId": "python-built-in-advanced-extra-power",
         "img": "/static/tutorials/thumbnails/python-built-in-advanced-extra-power.webp",
@@ -2373,7 +3050,13 @@
         "name": "Count What Matters",
         "isPremium": true,
         "description": "Count items in a list that match a rule — bigger than X, longer than Y, that kind of question",
-        "tags": ["python", "function", "count", "filter", "beginner"],
+        "tags": [
+            "python",
+            "function",
+            "count",
+            "filter",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-pick-what-matters",
         "img": "/static/tutorials/thumbnails/python-pick-what-matters.webp",
@@ -2384,7 +3067,13 @@
         "name": "Store Data with Meaning",
         "isPremium": true,
         "description": "Label every piece of data with a name so you can look it up by meaning, not position",
-        "tags": ["python", "dict", "key-value", "data", "beginner"],
+        "tags": [
+            "python",
+            "dict",
+            "key-value",
+            "data",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-store-data-with-meaning",
         "img": "/static/tutorials/thumbnails/python-store-data-with-meaning.webp",
@@ -2395,7 +3084,13 @@
         "name": "Sets — No Duplicates",
         "isPremium": true,
         "description": "A smart collection that throws out duplicates automatically — one of each, no repeats",
-        "tags": ["python", "set", "data", "unique", "beginner"],
+        "tags": [
+            "python",
+            "set",
+            "data",
+            "unique",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-sets-no-duplicates",
         "img": "/static/tutorials/thumbnails/python-sets-no-duplicates.webp",
@@ -2406,7 +3101,14 @@
         "name": "Try / Except — Handle Errors",
         "isPremium": true,
         "description": "Catch mistakes before they crash your program — try something, and handle it if it goes wrong",
-        "tags": ["python", "try", "except", "errors", "exception", "beginner"],
+        "tags": [
+            "python",
+            "try",
+            "except",
+            "errors",
+            "exception",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-try-except-handle-errors",
         "img": "/static/tutorials/thumbnails/python-try-except-handle-errors.webp",
@@ -2417,7 +3119,15 @@
         "name": "Save Your Data",
         "isPremium": true,
         "description": "Build a save-and-load app with functions, files, and a menu loop — bring it all together",
-        "tags": ["python", "file", "function", "menu", "while", "break", "capstone"],
+        "tags": [
+            "python",
+            "file",
+            "function",
+            "menu",
+            "while",
+            "break",
+            "capstone"
+        ],
         "category": "python",
         "urlId": "python-save-your-data",
         "img": "/static/tutorials/thumbnails/python-save-your-data.webp",
@@ -2428,7 +3138,15 @@
         "name": "Keep It After Restart — Files",
         "isPremium": true,
         "description": "A cleaner way to handle files using the with keyword — automatic open and close in one block",
-        "tags": ["python", "file", "open", "with", "read", "write", "intermediate"],
+        "tags": [
+            "python",
+            "file",
+            "open",
+            "with",
+            "read",
+            "write",
+            "intermediate"
+        ],
         "category": "python",
         "urlId": "python-keep-it-after-restart",
         "img": "/static/tutorials/thumbnails/python-keep-it-after-restart.webp",
@@ -2439,17 +3157,556 @@
         "name": "Build a List as You Go",
         "isPremium": true,
         "description": "Collect items in a list as a loop runs and print them all at the end",
-        "tags": ["python", "list", "append", "loop", "beginner"],
+        "tags": [
+            "python",
+            "list",
+            "append",
+            "loop",
+            "beginner"
+        ],
         "category": "python",
         "urlId": "python-build-a-list-as-you-go",
         "img": "/static/tutorials/thumbnails/python-build-a-list-as-you-go.webp",
         "requiresEmptyWorkspaceBefore": true,
         "stepsFile": "/static/tutorials/python-build-a-list-as-you-go.json"
     },
+    "js-hello-js": {
+        "name": "Hello, JavaScript! 📜",
+        "description": "Write your first two lines of JavaScript - print to the console and pop up an alert",
+        "tags": [
+            "javascript",
+            "hello world",
+            "console",
+            "alert",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-hello-js",
+        "img": "/static/tutorials/thumbnails/js-hello-js.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-hello-js.json",
+        "locked": false
+    },
+    "js-html-and-js-together": {
+        "name": "HTML and JavaScript Together 🔗",
+        "description": "Build a page in HTML, write behaviour in JavaScript, link them with a script tag — the two-file pattern every real website uses",
+        "tags": [
+            "javascript",
+            "html",
+            "save",
+            "link",
+            "script src",
+            "files",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-html-and-js-together",
+        "img": "/static/tutorials/thumbnails/js-html-and-js-together.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-html-and-js-together.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-html-and-js-together.sb3"
+    },
+    "js-use-a-variable": {
+        "name": "Use a Variable",
+        "description": "Store a value in a name you pick with let, then use that name in your code",
+        "tags": [
+            "javascript",
+            "variable",
+            "let",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-use-a-variable",
+        "img": "/static/tutorials/thumbnails/js-use-a-variable.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-use-a-variable.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-const-vs-let": {
+        "name": "Constants - Things That Don't Change",
+        "description": "Use const for values that should never be reassigned - and meet the error you get if you try",
+        "tags": [
+            "javascript",
+            "const",
+            "let",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-const-vs-let",
+        "img": "/static/tutorials/thumbnails/js-const-vs-let.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-const-vs-let.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-ask-the-user": {
+        "name": "Ask the User",
+        "description": "Use prompt to ask the kid a question and use their answer in your code",
+        "tags": [
+            "javascript",
+            "prompt",
+            "input",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-ask-the-user",
+        "img": "/static/tutorials/thumbnails/js-ask-the-user.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-ask-the-user.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-numbers": {
+        "name": "Numbers in JavaScript",
+        "description": "Do maths with JavaScript - add, subtract, multiply, divide, and the modulo trick",
+        "tags": [
+            "javascript",
+            "numbers",
+            "math",
+            "modulo",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-numbers",
+        "img": "/static/tutorials/thumbnails/js-numbers.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-numbers.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-template-strings": {
+        "name": "Template Strings",
+        "description": "Drop variables straight into a string with backticks and ${...} - the way real JS prints",
+        "tags": [
+            "javascript",
+            "template",
+            "backtick",
+            "string",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-template-strings",
+        "img": "/static/tutorials/thumbnails/js-template-strings.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-template-strings.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-make-a-choice": {
+        "name": "Make a Choice",
+        "description": "Use if and else to make your program pick between two paths",
+        "tags": [
+            "javascript",
+            "if",
+            "else",
+            "choice",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-make-a-choice",
+        "img": "/static/tutorials/thumbnails/js-make-a-choice.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-make-a-choice.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-comparisons": {
+        "name": "Compare Things",
+        "description": "The six comparison operators - equal, not equal, less, greater, and the strict-equality difference",
+        "tags": [
+            "javascript",
+            "comparison",
+            "equality",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-comparisons",
+        "img": "/static/tutorials/thumbnails/js-comparisons.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-comparisons.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-and-or-not": {
+        "name": "Combine Decisions",
+        "description": "Use &&, ||, ! to check two things at once and to flip an answer",
+        "tags": [
+            "javascript",
+            "logic",
+            "and",
+            "or",
+            "not",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-and-or-not",
+        "img": "/static/tutorials/thumbnails/js-and-or-not.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-and-or-not.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-while-loop": {
+        "name": "Loop Until It is Done",
+        "description": "Use a while loop to keep doing something until a condition stops being true",
+        "tags": [
+            "javascript",
+            "loop",
+            "while",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-while-loop",
+        "img": "/static/tutorials/thumbnails/js-while-loop.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-while-loop.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-for-loop": {
+        "name": "Loop a Fixed Number of Times",
+        "description": "Pack the counter, the test, and the change into one tidy for line",
+        "tags": [
+            "javascript",
+            "loop",
+            "for",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-for-loop",
+        "img": "/static/tutorials/thumbnails/js-for-loop.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-for-loop.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-arrays-many-things": {
+        "name": "Lists in JavaScript - Arrays",
+        "description": "One name, many values - arrays. Make one, count it, grow it, read it by position",
+        "tags": [
+            "javascript",
+            "array",
+            "list",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-arrays-many-things",
+        "img": "/static/tutorials/thumbnails/js-arrays-many-things.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-arrays-many-things.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-for-of-loop": {
+        "name": "Visit Every Item - for...of",
+        "description": "A cleaner loop just for arrays - for (const item of array) { ... }",
+        "tags": [
+            "javascript",
+            "loop",
+            "for-of",
+            "array",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-for-of-loop",
+        "img": "/static/tutorials/thumbnails/js-for-of-loop.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-for-of-loop.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-array-methods": {
+        "name": "Array Power Tools - forEach, map, filter",
+        "description": "Built-in array commands that take a function - visit every item, transform every item, keep some items",
+        "tags": [
+            "javascript",
+            "array",
+            "foreach",
+            "map",
+            "filter",
+            "callback",
+            "intermediate"
+        ],
+        "category": "javascript",
+        "urlId": "js-array-methods",
+        "img": "/static/tutorials/thumbnails/js-array-methods.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-array-methods.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-strings-control": {
+        "name": "Strings - Control Your Text",
+        "description": "Reshape and clean any text with JS string methods - upper, lower, length, includes, split, replace",
+        "tags": [
+            "javascript",
+            "string",
+            "text",
+            "methods",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-strings-control",
+        "img": "/static/tutorials/thumbnails/js-strings-control.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-strings-control.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-functions": {
+        "name": "Create Your Own Commands",
+        "description": "Teach JavaScript a new command by writing a function - use it again and again",
+        "tags": [
+            "javascript",
+            "function",
+            "def",
+            "reuse",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-functions",
+        "img": "/static/tutorials/thumbnails/js-functions.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-functions.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-functions-return": {
+        "name": "Functions That Give Back",
+        "description": "Write a function with parameters and return - feed it different inputs and get different answers",
+        "tags": [
+            "javascript",
+            "function",
+            "return",
+            "parameters",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-functions-return",
+        "img": "/static/tutorials/thumbnails/js-functions-return.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-functions-return.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-arrow-functions": {
+        "name": "Arrow Functions - Shorter",
+        "description": "A shorter way to write functions - (x) => x * 2. Same idea, less typing.",
+        "tags": [
+            "javascript",
+            "function",
+            "arrow",
+            "intermediate"
+        ],
+        "category": "javascript",
+        "urlId": "js-arrow-functions",
+        "img": "/static/tutorials/thumbnails/js-arrow-functions.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-arrow-functions.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-objects": {
+        "name": "Objects - Label Your Data",
+        "description": "Group related values under one name with labels - { name: \"Riya\", score: 85 }",
+        "tags": [
+            "javascript",
+            "object",
+            "key-value",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-objects",
+        "img": "/static/tutorials/thumbnails/js-objects.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-objects.json",
+        "locked": false,
+        "isPremium": true
+    },
+    "js-meet-the-dom": {
+        "name": "Meet the DOM",
+        "description": "What document is, and how to grab a chunk of the page with getElementById",
+        "tags": [
+            "javascript",
+            "dom",
+            "document",
+            "getElementById",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-meet-the-dom",
+        "img": "/static/tutorials/thumbnails/js-meet-the-dom.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-meet-the-dom.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-meet-the-dom.sb3"
+    },
+    "js-change-text": {
+        "name": "Change Text on the Page",
+        "description": "Use .textContent and .innerHTML to swap text inside a tag - your first visible page change",
+        "tags": [
+            "javascript",
+            "dom",
+            "textContent",
+            "innerHTML",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-change-text",
+        "img": "/static/tutorials/thumbnails/js-change-text.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-change-text.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-change-text.sb3"
+    },
+    "js-change-style": {
+        "name": "Change Style on the Page",
+        "description": "Restyle elements live with .style.color, .style.background, and classList.add",
+        "tags": [
+            "javascript",
+            "dom",
+            "style",
+            "class",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-change-style",
+        "img": "/static/tutorials/thumbnails/js-change-style.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-change-style.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-change-style.sb3"
+    },
+    "js-button-click": {
+        "name": "Click a Button - Events",
+        "description": "Make a button do something with addEventListener - the most-used line of JS on the entire web",
+        "tags": [
+            "javascript",
+            "event",
+            "addEventListener",
+            "click",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-button-click",
+        "img": "/static/tutorials/thumbnails/js-button-click.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-button-click.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-button-click.sb3"
+    },
+    "js-read-input": {
+        "name": "Read What the User Typed",
+        "description": "Read text from an <input> field, click a button, show the answer on the page",
+        "tags": [
+            "javascript",
+            "dom",
+            "input",
+            "value",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-read-input",
+        "img": "/static/tutorials/thumbnails/js-read-input.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-read-input.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-read-input.sb3"
+    },
+    "js-keyboard-events": {
+        "name": "Keyboard Events - Move with Arrow Keys",
+        "description": "Listen for the kid pressing keys - make a sprite move with the arrow keys",
+        "tags": [
+            "javascript",
+            "event",
+            "keyboard",
+            "keydown",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-keyboard-events",
+        "img": "/static/tutorials/thumbnails/js-keyboard-events.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-keyboard-events.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-keyboard-events.sb3"
+    },
+    "js-create-elements": {
+        "name": "Build New Elements with JS",
+        "description": "Create fresh HTML tags from JS with createElement and appendChild - build a list as the kid types",
+        "tags": [
+            "javascript",
+            "dom",
+            "createElement",
+            "appendChild",
+            "beginner"
+        ],
+        "category": "javascript",
+        "urlId": "js-create-elements",
+        "img": "/static/tutorials/thumbnails/js-create-elements.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-create-elements.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-create-elements.sb3"
+    },
+    "js-timers": {
+        "name": "Repeat Forever - setInterval",
+        "description": "setInterval runs your function every N milliseconds - clocks, animations, slideshows",
+        "tags": [
+            "javascript",
+            "timer",
+            "setInterval",
+            "setTimeout",
+            "intermediate"
+        ],
+        "category": "javascript",
+        "urlId": "js-timers",
+        "img": "/static/tutorials/thumbnails/js-timers.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-timers.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-timers.sb3"
+    },
+    "js-capstone-quiz": {
+        "name": "Capstone - Quiz App",
+        "description": "Build a working multi-question quiz that scores the kid - combines arrays, objects, the DOM, and events",
+        "tags": [
+            "javascript",
+            "capstone",
+            "quiz",
+            "dom",
+            "event",
+            "array",
+            "object"
+        ],
+        "category": "javascript",
+        "urlId": "js-capstone-quiz",
+        "img": "/static/tutorials/thumbnails/js-capstone-quiz.webp",
+        "requiresEmptyWorkspaceBefore": true,
+        "stepsFile": "/static/tutorials/js-capstone-quiz.json",
+        "locked": false,
+        "isPremium": true,
+        "starterProject": "/static/tutorials/starters/js-capstone-quiz.sb3"
+    },
     "c-what-is-c": {
         "name": "Welcome to C",
         "description": "Where programs come from — meet the C language and how its programs really run",
-        "tags": ["c", "intro", "concept"],
+        "tags": [
+            "c",
+            "intro",
+            "concept"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-what-is-c",
@@ -2461,7 +3718,12 @@
     "c-hello-world": {
         "name": "Hello, World",
         "description": "Your first C program, line by line — read it, run it, edit it",
-        "tags": ["c", "hello", "printf", "boilerplate"],
+        "tags": [
+            "c",
+            "hello",
+            "printf",
+            "boilerplate"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-hello-world",
@@ -2473,7 +3735,12 @@
     "c-printing-text": {
         "name": "Words on the Screen",
         "description": "Make C talk back — multiple printf, escape codes, comments",
-        "tags": ["c", "printf", "escape", "comments"],
+        "tags": [
+            "c",
+            "printf",
+            "escape",
+            "comments"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-printing-text",
@@ -2485,7 +3752,12 @@
     "c-variables-int": {
         "name": "Boxes that Remember",
         "description": "Variables for whole numbers — store a value once, use it many times",
-        "tags": ["c", "variables", "int", "printf"],
+        "tags": [
+            "c",
+            "variables",
+            "int",
+            "printf"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-variables-int",
@@ -2497,7 +3769,13 @@
     "c-variables-types": {
         "name": "Decimals and Letters",
         "description": "More kinds of boxes — float, char, %f, %c, single vs double quotes",
-        "tags": ["c", "variables", "float", "char", "types"],
+        "tags": [
+            "c",
+            "variables",
+            "float",
+            "char",
+            "types"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-variables-types",
@@ -2509,7 +3787,12 @@
     "c-constants": {
         "name": "Things That Don't Change",
         "description": "Constants with const and #define — safer programs, clearer code",
-        "tags": ["c", "constants", "const", "define"],
+        "tags": [
+            "c",
+            "constants",
+            "const",
+            "define"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-constants",
@@ -2521,7 +3804,12 @@
     "c-input-scanf": {
         "name": "Programs that Listen",
         "description": "Read user input with scanf and the & address-of operator",
-        "tags": ["c", "scanf", "input", "address-of"],
+        "tags": [
+            "c",
+            "scanf",
+            "input",
+            "address-of"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-input-scanf",
@@ -2533,7 +3821,13 @@
     "c-arithmetic": {
         "name": "C as a Calculator",
         "description": "Doing math with code — + - * /, integer-division gotcha, modulo, casts",
-        "tags": ["c", "math", "operators", "division", "modulo"],
+        "tags": [
+            "c",
+            "math",
+            "operators",
+            "division",
+            "modulo"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-arithmetic",
@@ -2545,7 +3839,12 @@
     "c-operator-shortcuts": {
         "name": "Smart Shortcuts",
         "description": "Compact operators — ++, --, +=, -=, *=, /=",
-        "tags": ["c", "operators", "increment", "decrement"],
+        "tags": [
+            "c",
+            "operators",
+            "increment",
+            "decrement"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-operator-shortcuts",
@@ -2557,7 +3856,12 @@
     "c-if-else": {
         "name": "Choosing a Path",
         "description": "Decisions with if and else — and the = vs == trap",
-        "tags": ["c", "if", "else", "conditions"],
+        "tags": [
+            "c",
+            "if",
+            "else",
+            "conditions"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-if-else",
@@ -2569,7 +3873,12 @@
     "c-else-if-chain": {
         "name": "Many Paths, One Choice",
         "description": "Build a grade calculator — handle four outcomes with an else if chain",
-        "tags": ["c", "else-if", "branching", "grade"],
+        "tags": [
+            "c",
+            "else-if",
+            "branching",
+            "grade"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-else-if-chain",
@@ -2581,7 +3890,13 @@
     "c-logical-ops": {
         "name": "Smart Conditions",
         "description": "Combine multiple checks — AND, OR, NOT — to handle real-world rules",
-        "tags": ["c", "logical", "and", "or", "not"],
+        "tags": [
+            "c",
+            "logical",
+            "and",
+            "or",
+            "not"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-logical-ops",
@@ -2593,7 +3908,12 @@
     "c-switch": {
         "name": "Switching Between Cases",
         "description": "switch — a cleaner alternative to else-if when matching one variable against several values",
-        "tags": ["c", "switch", "case", "decisions"],
+        "tags": [
+            "c",
+            "switch",
+            "case",
+            "decisions"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-switch",
@@ -2605,7 +3925,12 @@
     "c-while-loop": {
         "name": "Doing It Again",
         "description": "Run code over and over with the while loop — and avoid the infinite-loop trap",
-        "tags": ["c", "while", "loop", "repetition"],
+        "tags": [
+            "c",
+            "while",
+            "loop",
+            "repetition"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-while-loop",
@@ -2617,7 +3942,11 @@
     "c-for-loop": {
         "name": "Counting Made Simple",
         "description": "The for loop — same counting work as while, written shorter",
-        "tags": ["c", "for", "loop"],
+        "tags": [
+            "c",
+            "for",
+            "loop"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-for-loop",
@@ -2629,7 +3958,12 @@
     "c-do-while": {
         "name": "Run It At Least Once",
         "description": "do-while — runs the body first, checks the condition after; perfect for input validation",
-        "tags": ["c", "do-while", "loop", "input-validation"],
+        "tags": [
+            "c",
+            "do-while",
+            "loop",
+            "input-validation"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-do-while",
@@ -2641,7 +3975,12 @@
     "c-nested-loops": {
         "name": "Loops Inside Loops",
         "description": "Loops inside loops — build a multiplication table grid",
-        "tags": ["c", "nested", "loops", "grid"],
+        "tags": [
+            "c",
+            "nested",
+            "loops",
+            "grid"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-nested-loops",
@@ -2653,7 +3992,12 @@
     "c-break-continue": {
         "name": "Breaking Out, Skipping Ahead",
         "description": "break exits a loop early; continue skips to the next iteration",
-        "tags": ["c", "break", "continue", "loop-control"],
+        "tags": [
+            "c",
+            "break",
+            "continue",
+            "loop-control"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-break-continue",
@@ -2665,7 +4009,11 @@
     "c-functions-basic": {
         "name": "Your Own Tools",
         "description": "Define a function, call it from main — the leap from scripts to real programs",
-        "tags": ["c", "functions", "void"],
+        "tags": [
+            "c",
+            "functions",
+            "void"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-functions-basic",
@@ -2677,7 +4025,11 @@
     "c-function-params": {
         "name": "Talking to Functions",
         "description": "Pass values into a function with parameters — the function works on what you give it",
-        "tags": ["c", "functions", "parameters"],
+        "tags": [
+            "c",
+            "functions",
+            "parameters"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-function-params",
@@ -2689,7 +4041,11 @@
     "c-function-return": {
         "name": "Getting Answers Back",
         "description": "A function returns a value to whoever called it — use the answer in a bigger expression",
-        "tags": ["c", "functions", "return"],
+        "tags": [
+            "c",
+            "functions",
+            "return"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-function-return",
@@ -2701,7 +4057,12 @@
     "c-scope": {
         "name": "Where Variables Live",
         "description": "Variables exist only where they are declared — local variables in functions are independent boxes",
-        "tags": ["c", "scope", "local", "global"],
+        "tags": [
+            "c",
+            "scope",
+            "local",
+            "global"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-scope",
@@ -2713,7 +4074,12 @@
     "c-recursion": {
         "name": "Functions That Call Themselves",
         "description": "Recursion — countdown and factorial, the classic recursive patterns",
-        "tags": ["c", "functions", "recursion", "factorial"],
+        "tags": [
+            "c",
+            "functions",
+            "recursion",
+            "factorial"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-recursion",
@@ -2725,7 +4091,12 @@
     "c-math-library": {
         "name": "The Math Toolbox",
         "description": "Use sqrt, pow, floor, ceil from <math.h> — ready-made math tools",
-        "tags": ["c", "math", "library", "math-h"],
+        "tags": [
+            "c",
+            "math",
+            "library",
+            "math-h"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-math-library",
@@ -2737,7 +4108,11 @@
     "c-arrays-basic": {
         "name": "Lists of Numbers",
         "description": "Arrays — store many values in one variable, accessed by index",
-        "tags": ["c", "arrays", "indexing"],
+        "tags": [
+            "c",
+            "arrays",
+            "indexing"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-arrays-basic",
@@ -2749,7 +4124,12 @@
     "c-array-loops": {
         "name": "Walking Through Arrays",
         "description": "Loops + arrays — print every value, sum them up, find the maximum",
-        "tags": ["c", "arrays", "loops", "algorithms"],
+        "tags": [
+            "c",
+            "arrays",
+            "loops",
+            "algorithms"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-array-loops",
@@ -2761,7 +4141,12 @@
     "c-arrays-2d": {
         "name": "Grids of Data",
         "description": "2D arrays — store rows and columns of values, walk them with nested loops",
-        "tags": ["c", "arrays", "2d", "grids"],
+        "tags": [
+            "c",
+            "arrays",
+            "2d",
+            "grids"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-arrays-2d",
@@ -2773,7 +4158,12 @@
     "c-strings-basic": {
         "name": "Strings are Char Arrays",
         "description": "In C, a string is just an array of chars ending in a hidden null character",
-        "tags": ["c", "strings", "char", "text"],
+        "tags": [
+            "c",
+            "strings",
+            "char",
+            "text"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-strings-basic",
@@ -2785,7 +4175,12 @@
     "c-string-functions": {
         "name": "Tools for Strings",
         "description": "Standard library functions for measuring, copying, comparing, and joining strings",
-        "tags": ["c", "strings", "string-h", "library"],
+        "tags": [
+            "c",
+            "strings",
+            "string-h",
+            "library"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-string-functions",
@@ -2797,7 +4192,12 @@
     "c-pointers": {
         "name": "Pointers — Arrows to Variables",
         "description": "Addresses, the & and * operators, passing pointers to functions to modify values",
-        "tags": ["c", "pointers", "memory", "advanced"],
+        "tags": [
+            "c",
+            "pointers",
+            "memory",
+            "advanced"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-pointers",
@@ -2806,10 +4206,15 @@
         "stepsFile": "/static/tutorials/c-pointers.json",
         "locked": false
     },
-        "c-mini-calculator": {
+    "c-mini-calculator": {
         "name": "The Calculator, Refactored",
         "description": "Capstone — combine variables, scanf, arithmetic, and if-else into a real interactive calculator",
-        "tags": ["c", "capstone", "calculator", "project"],
+        "tags": [
+            "c",
+            "capstone",
+            "calculator",
+            "project"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-mini-calculator",
@@ -2821,7 +4226,14 @@
     "c-guessing-game": {
         "name": "The Guessing Game",
         "description": "Build a real game — the computer picks a secret, you guess, it gives hints until you win",
-        "tags": ["c", "capstone", "game", "rand", "while-loop", "functions"],
+        "tags": [
+            "c",
+            "capstone",
+            "game",
+            "rand",
+            "while-loop",
+            "functions"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-guessing-game",
@@ -2833,7 +4245,14 @@
     "c-quiz-game": {
         "name": "The Quiz Game",
         "description": "Final project — a quiz with questions in arrays of strings, scored with functions",
-        "tags": ["c", "capstone", "quiz", "strings", "arrays", "functions"],
+        "tags": [
+            "c",
+            "capstone",
+            "quiz",
+            "strings",
+            "arrays",
+            "functions"
+        ],
         "category": "c",
         "isPremium": true,
         "urlId": "c-quiz-game",

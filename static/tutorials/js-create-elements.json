@@ -1,0 +1,161 @@
+{
+    "steps": [
+        {
+            "title": "Grow the page from JS",
+            "image": "/static/tutorials/steps/jsCreateElements_01_growPage.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.growPage",
+                "default": "Scratch has clone — make a new sprite at runtime. JavaScript can do the same to HTML — create brand-new elements from code and stick them on the page. Today you build a to-do list."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsCreateElements_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.pageReady",
+                "default": "The page sprite already has an input with id itemInput, a button with id add, and an empty ul with id list. You edit the script sprite to wire them up."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsCreateElements_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the three elements",
+            "image": "/static/tutorials/steps/jsCreateElements_04_grabThree.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.grabThree",
+                "default": "Three const blocks. itemInput with find element by id and the text itemInput. addBtn with the text add. list with the text list."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Wire the click",
+            "image": "/static/tutorials/steps/jsCreateElements_05_wireClick.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.wireClick",
+                "default": "Drag a when click on block. Element is addBtn. Event is click. Body runs on every click."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Create a new li",
+            "image": "/static/tutorials/steps/jsCreateElements_06_createLi.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.createLi",
+                "default": "Inside the click body, add a const named li. Value is create element with the tag li. Behind the scenes — document dot createElement. The new tag exists in memory only. It is NOT on the page yet."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Fill it with the typed text",
+            "image": "/static/tutorials/steps/jsCreateElements_07_fillLi.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.fillLi",
+                "default": "Drag a set text of block. Element is li. Value is a get value of block with itemInput inside. That reads what the user typed into the input."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Append to the list",
+            "image": "/static/tutorials/steps/jsCreateElements_08_appendIt.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.appendIt",
+                "default": "Drag an append to block. Child is li. Parent is list. Behind the scenes — list dot appendChild. Now the new li attaches to the ul, and the browser paints it instantly."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Clear the input",
+            "image": "/static/tutorials/steps/jsCreateElements_09_clearInput.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.clearInput",
+                "default": "Still inside the click body. Add a set text of block. Element is itemInput. Text is empty. That clears the input so the user can type the next item."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and try it",
+            "image": "/static/tutorials/steps/jsCreateElements_10_saveAndTry.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.saveAndTry",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. Type Apples. Click Add. The word appears as a list item. Type Bananas. Click Add. The list grows."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Three steps, working app",
+            "image": "/static/tutorials/steps/jsCreateElements_11_threeStepsApp.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsCreateElements.threeStepsApp",
+                "default": "Create element. Set its text. Append. Three steps and you built a working to-do list. The same shape powers every comment thread and every list app."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

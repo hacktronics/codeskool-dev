@@ -1,0 +1,118 @@
+{
+    "steps": [
+        {
+            "title": "Inputs and outputs",
+            "image": "/static/tutorials/steps/jsReturn_01_inputsOutputs.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.inputsOutputs",
+                "default": "In Scratch, Make-a-Block has parameters and reporter blocks can report a value. JavaScript has the same — INPUTS called parameters, and the keyword RETURN to send a value back."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "A function that adds",
+            "image": "/static/tutorials/steps/jsReturn_02_functionAdds.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.functionAdds",
+                "default": "Drag a function block. Name it add. Inputs are a and b. Inside the body, return a plus b. The return keyword sends the value back to whoever called add."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Parameters are placeholders",
+            "image": "/static/tutorials/steps/jsReturn_03_parametersPlaceholders.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.parametersPlaceholders",
+                "default": "a and b are placeholders — same as Scratch Make-a-Block parameters. When you call add with five and three, a becomes five, b becomes three, and the answer is eight."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Call and store the result",
+            "image": "/static/tutorials/steps/jsReturn_04_callStore.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.callStore",
+                "default": "Set result to add called with five and three. Log result. Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Open the console pane",
+            "image": "/static/tutorials/steps/jsReturn_04a_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.openConsole",
+                "default": "Click the Console button next to Run. You see eight. The function returned eight, and you stored it."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Use the call directly",
+            "image": "/static/tutorials/steps/jsReturn_05_useCallDirect.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.useCallDirect",
+                "default": "You do not have to store the answer. Log add called with ten and twenty. Click Run. add returns thirty, log prints thirty — all in one line."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Pass the result anywhere",
+            "image": "/static/tutorials/steps/jsReturn_06_passAnywhere.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.passAnywhere",
+                "default": "A returned value can go anywhere a value can go. Print it, store it, pass it to another function, use it in maths."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Parameters in, return out",
+            "image": "/static/tutorials/steps/jsReturn_07_paramsInReturnOut.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsFunctionsReturn.paramsInReturnOut",
+                "default": "Parameters in. return out. Same shape as a Scratch reporter Make-a-Block, written in JavaScript."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

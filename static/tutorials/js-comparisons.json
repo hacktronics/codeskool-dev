@@ -1,0 +1,155 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Compare Things</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Six comparison tools",
+            "image": "/static/tutorials/steps/jsCompare_01_sixTools.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.sixTools",
+                "default": "You know greater-than, less-than, and equals from Scratch. JavaScript has six comparison operators total — greater-than, less-than, greater-than-or-equal, less-than-or-equal, triple-equals for equal, and exclamation-equals for not-equal. Every comparison returns either true or false."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsCompare_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Ask for a score",
+            "image": "/static/tutorials/steps/jsCompare_03_askScore.webp",
+            "imageFocus": {
+                "x": 36.0,
+                "y": 57.5,
+                "zoom": 1.92
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.askScore",
+                "default": "Drag a let block. Name it score. For the value, wrap a Number block around an ask user block that asks Score. We will run three different checks against this one value."
+            }
+        },
+        {
+            "title": "Perfect score check",
+            "image": "/static/tutorials/steps/jsCompare_04_perfect.webp",
+            "imageFocus": {
+                "x": 30.1,
+                "y": 60.0,
+                "zoom": 2.94
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.perfect",
+                "default": "Drag an if block. Inside the condition slot, build score triple-equals one hundred — the triple-equals operator is in the Operators section. Inside the body, log Perfect. Click Run and type one hundred."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsCompare_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Perfect is printed. Run again and type any other number — nothing prints, because the condition was false."
+            }
+        },
+        {
+            "title": "Pass mark",
+            "image": "/static/tutorials/steps/jsCompare_06_pass.webp",
+            "imageFocus": {
+                "x": 26.7,
+                "y": 65.3,
+                "zoom": 2.37
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.pass",
+                "default": "Add a second if block. Condition — score greater-than-or-equal fifty. Body — log Pass. Click Run and type seventy. The console shows Pass. Run again with forty-five — nothing prints, the condition is false."
+            }
+        },
+        {
+            "title": "Below fifty",
+            "image": "/static/tutorials/steps/jsCompare_07_below.webp",
+            "imageFocus": {
+                "x": 22.2,
+                "y": 71.8,
+                "zoom": 1.97
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.below",
+                "default": "Add a third if. Condition — score less-than fifty. Body — log Fail. Click Run, type forty-five. Now Fail prints. The Operators section has every comparison you need for the rest of these tutorials."
+            }
+        },
+        {
+            "title": "Why three equals signs",
+            "image": "/static/tutorials/steps/jsCompare_08_threeEquals.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.threeEquals",
+                "default": "JavaScript also has double-equals — two equal signs. Double-equals is loose; it says the text five and the number five are equal. Triple-equals is strict; it says they are different because one is text and the other is a number. Use triple-equals everywhere — it catches bugs that double-equals would hide."
+            }
+        },
+        {
+            "title": "Six tools, one truth",
+            "image": "/static/tutorials/steps/jsCompare_09_oneTruth.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsComparisons.oneTruth",
+                "default": "Six comparison operators, every one returns true or false. Same shape as the boolean blocks you used inside Scratch's if blocks — just spelled with symbols. The next tutorial combines comparisons with and, or, and not so you can write conditions like age greater-than ten and hasPass."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

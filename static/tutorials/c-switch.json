@@ -76,7 +76,11 @@
                 "default": "Trace it: grade is 'B'. switch checks case 'A' — no match. Checks case 'B' — MATCH. Runs the body: prints \"Good job.\" then break exits the switch entirely. The default case is skipped. Click Run to confirm — Console shows \"Good job.\" Now change grade to 'A' and rerun → \"Excellent!\" Try 'C', then 'X' (unknown), then 'F' (unknown). The default catches anything that doesn't match any specific case."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

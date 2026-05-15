@@ -76,7 +76,11 @@
                 "default": "Trace each line in your head before clicking. age=15, hasTicket=1. (1) && line: 15 >= 13 true AND 1 is true → print runs (\"You can enter.\"). (2) || line: 15 < 5 false OR 15 > 65 false → both false → silent. (3) ! line: !1 is false → silent. So only ONE line should print. Click Run to confirm. Now change hasTicket to 0 and Run again — different lines fire. Try age = 3 with hasTicket = 1, then age = 70 with hasTicket = 1. Each combination triggers a different mix of branches."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

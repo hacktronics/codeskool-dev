@@ -1,0 +1,147 @@
+{
+    "steps": [
+        {
+            "title": "Every page is a tree",
+            "image": "/static/tutorials/steps/jsMeetDom_01_pageIsTree.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.pageIsTree",
+                "default": "In Scratch you control sprites. On a webpage, you control HTML elements. The browser turns the HTML into a tree of objects called the DOM. JavaScript can grab any element from that tree and change it. That is how webpages come alive."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Two sprites, already wired",
+            "image": "/static/tutorials/steps/jsMeetDom_02_twoSprites.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.twoSprites",
+                "default": "Two sprites in the sprite selector. page already has the HTML — an h1 with id title and a p with id message. script is the empty JavaScript sprite. You only edit script today."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsMeetDom_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.clickScript",
+                "default": "Click the script sprite. The workspace switches to JavaScript blocks. The code panel switches to JS mode. Same project, different file."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the title",
+            "image": "/static/tutorials/steps/jsMeetDom_04_grabTitle.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.grabTitle",
+                "default": "Drag the script hat. Drag a const block. Name it title. Value is find element by id with the text title. You just asked the page for the h1 with that id. This is the JS line — document dot getElementById."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Log what you got",
+            "image": "/static/tutorials/steps/jsMeetDom_05_logTitle.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.logTitle",
+                "default": "Drag a log to console block. Drop title inside. The console will print the real h1 element."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and open the page",
+            "image": "/static/tutorials/steps/jsMeetDom_06_saveAndOpen.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.saveAndOpen",
+                "default": "Click Save. Default name is script, extension is already .js. Click Save. Then click View Files and open index.html. The browser fetches script.js and runs it."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Open the console",
+            "image": "/static/tutorials/steps/jsMeetDom_07_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.openConsole",
+                "default": "Click the Console button next to Run. The pane shows the h1 element printed, not plain text. You grabbed a live piece of the page."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Grab the message too",
+            "image": "/static/tutorials/steps/jsMeetDom_08_grabMessage.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.grabMessage",
+                "default": "Add another const block. Name it msg. Value is find element by id with the text message. Log msg. Save and reopen index.html. Two element references in hand."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "The id must match exactly",
+            "image": "/static/tutorials/steps/jsMeetDom_09_idMustMatch.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.idMustMatch",
+                "default": "One trap. The id in the block must match the id in your HTML exactly. Title with capital T will not find id title with small t. The page returns nothing."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Foundation of every page",
+            "image": "/static/tutorials/steps/jsMeetDom_10_foundationOfEvery.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsMeetTheDom.foundationOfEvery",
+                "default": "Every interactive page starts by grabbing an element. Once you have a reference, you can change its text, its style, listen for clicks. That comes next."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

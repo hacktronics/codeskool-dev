@@ -40,7 +40,11 @@
                 "default": "Trace it: n=10, run body (print \"n is 10\", n becomes 9), check 9>5 true → loop again. Run body (print \"n is 9\", n becomes 8), check 8>5 true → again. ... Run body (print \"n is 6\", n becomes 5), check 5>5 FALSE → exit. Click Run. Console shows 10, 9, 8, 7, 6 — the body ran five times. Notice the body printed n BEFORE n was decremented — that's why we see 10 first, not 9."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "When to choose do-while",

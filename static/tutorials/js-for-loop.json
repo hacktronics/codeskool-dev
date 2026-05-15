@@ -1,0 +1,147 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>For Loops</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Three jobs on one line",
+            "image": "/static/tutorials/steps/jsFor_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.intro",
+                "default": "You know repeat ten times from Scratch. JavaScript has the same idea in a shape called the for loop. The for loop bundles three jobs on one line — start the counter, check whether to continue, change the counter. When you know exactly how many rounds you want, this is the shape to use."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsFor_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "The for shape",
+            "image": "/static/tutorials/steps/jsFor_03_forShape.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 58.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_for"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.forShape",
+                "default": "Drag a for block from the Control section. It has four slots — name, start, end, step. Set them to i, one, five, one. The letter i is the traditional name for a loop counter. The Code panel now reads for open-paren let i equals one semicolon i less-than-or-equal five semicolon i plus-plus close-paren."
+            }
+        },
+        {
+            "title": "What the step does",
+            "image": "/static/tutorials/steps/jsFor_04_stepExplained.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.stepExplained",
+                "default": "Step is how much i changes after each round. Step one counts up one at a time. Step two skips every other number — one, three, five. Step minus one counts DOWN. Scratch's repeat block could only count up by one; the for loop is more flexible."
+            }
+        },
+        {
+            "title": "Add the body",
+            "image": "/static/tutorials/steps/jsFor_05_body.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 62.0,
+                "zoom": 1.8
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.body",
+                "default": "Inside the for block, drop a log to console. The message is a template string saying Round space dollar-curly i close-curly. Each time the loop runs, i takes the next value — one, two, three, four, five — and the template pastes it into the sentence."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsFor_06_run.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.run",
+                "default": "Click the Run button at the top-right."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsFor_07_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Round one through Round five prints — one line per round."
+            }
+        },
+        {
+            "title": "for versus while",
+            "image": "/static/tutorials/steps/jsFor_08_forVsWhile.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.forVsWhile",
+                "default": "Two patterns. Use a for loop when you know the count in advance — like Scratch's repeat block. Use a while loop when the end depends on a condition that changes during the loop — like Scratch's repeat-until. Both are useful in different situations."
+            }
+        },
+        {
+            "title": "The most-used loop",
+            "image": "/static/tutorials/steps/jsFor_09_workhorse.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsForLoop.workhorse",
+                "default": "The for loop is the workhorse loop in JavaScript. Counting up, counting down, walking through a list. In the next tutorial you will meet arrays — JavaScript's word for lists — and use a for loop to read through each item."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

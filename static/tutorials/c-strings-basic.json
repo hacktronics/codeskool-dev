@@ -107,7 +107,11 @@
                 "default": "Click Run. Console:\nName: CodeSkool\nFirst letter: C\nChanged: BodeSkool\nThe third line shows the result of overwriting slot 0 — the B replaced the C, and the rest of the word stayed put. Try changing other slots: name[5] = 'X'; would change the S in the middle. Each slot is its own char; you can edit any of them."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "Strings are special arrays",

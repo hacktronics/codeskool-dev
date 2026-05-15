@@ -58,7 +58,11 @@
                 "default": "Click Run. Console: \"Hello, Alice!\" then \"Hello, Bob!\". The function is a TEMPLATE; the call fills in the blank. Add a third call: greet(\"Charlie\"); below the first two. Run. Three lines now. You can have hundreds of callers, each with a different argument. This is why functions are so powerful — they make ONE chunk of code reusable in MANY situations."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

@@ -107,7 +107,11 @@
                 "default": "Click Run. The Console shows the prompt and waits. Click in the Console area, type: 5 + 3, then press Enter. The program reads it, picks the + branch, computes 5 + 3 = 8, and prints: 5.00 + 3.00 = 8.00. The doubles printed with two decimals each, the operator printed in the middle. Your first calculator operation works."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "Try - and *",
@@ -156,7 +160,11 @@
                 "default": "14 lines, 4 operations, error handling, formatted output. Every concept from the last 13 chapters — variables, types (double, char), scanf, if-else-if, printf with multiple format codes — combined into one useful program. This is what programming is: combining small concepts into bigger usable things. The next two chapters (guessing game, quiz game) push that further."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

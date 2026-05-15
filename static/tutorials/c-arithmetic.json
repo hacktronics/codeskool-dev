@@ -94,7 +94,11 @@
                 "default": "Predict before clicking Run: what will the division line show? Did you guess 3 or 3.33? Click Run. The Console shows: 13, 7, 30, 3 (yes, 3, not 3.33), 1. Now change a to 17 and b to 5 and Run again. Predict the new outputs first, then check. Same operations, different numbers. Math in C is mostly the same as math on a calculator — except for that integer-division surprise."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

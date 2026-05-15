@@ -1,0 +1,169 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Array Methods</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Tools that take a function",
+            "image": "/static/tutorials/steps/jsArrMethods_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.intro",
+                "default": "Scratch lists do not have anything like these. JavaScript arrays come with built-in tools that take a small function and run it on every item. The three big ones are forEach, map, and filter. In this tutorial you use each in turn on a list of numbers."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsArrMethods_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Set up the numbers",
+            "image": "/static/tutorials/steps/jsArrMethods_03_setup.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 56.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.setup",
+                "default": "Drag a let block. Name it numbers. For the value, drop in an array with five items — one, two, three, four, five. These are real numbers, no quotes anywhere."
+            }
+        },
+        {
+            "title": "forEach — visit every item",
+            "image": "/static/tutorials/steps/jsArrMethods_04_forEach.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 60.0,
+                "zoom": 1.8
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_array_forEach"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.forEach",
+                "default": "Drag a numbers dot forEach block. Use n as the item name. Inside the body, drop a log to console block that prints n. forEach is like for-of but with one extra twist — you hand it a small function and it calls that function once for every item. Click Run."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsArrMethods_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Each number prints on its own line. forEach walked through every item for you."
+            }
+        },
+        {
+            "title": "That little function is a callback",
+            "image": "/static/tutorials/steps/jsArrMethods_06_callback.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.callback",
+                "default": "Here is a new idea. The small block you handed to forEach is called a CALLBACK — a function you hand to another function so it can call yours back later. Lots of real JavaScript uses this pattern. forEach is the simplest example."
+            }
+        },
+        {
+            "title": "map — transform every item",
+            "image": "/static/tutorials/steps/jsArrMethods_07_map.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 62.0,
+                "zoom": 1.7
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_array_map"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.map",
+                "default": "Drag a let block named doubled. Set it to numbers dot map with a callback that returns n times two. Log doubled. Click Run. The console shows two, four, six, eight, ten — a brand-new array. map turns every item into a new item, without changing the original."
+            }
+        },
+        {
+            "title": "filter — keep only some",
+            "image": "/static/tutorials/steps/jsArrMethods_08_filter.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 64.0,
+                "zoom": 1.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_array_filter"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.filter",
+                "default": "Drag a let block named bigOnes. Set it to numbers dot filter with a callback that returns n greater-than two. Log bigOnes. Click Run. The console shows three, four, five — only the items the callback returned true for. filter keeps; map transforms; forEach just visits."
+            }
+        },
+        {
+            "title": "Three tools, three jobs",
+            "image": "/static/tutorials/steps/jsArrMethods_09_threeTools.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.threeTools",
+                "default": "forEach visits each item. map transforms each into a new one. filter keeps only items that pass a test. Each takes a callback. Each leaves the original array untouched, except for forEach which is purely about doing something with each item."
+            }
+        },
+        {
+            "title": "The shape of modern JavaScript",
+            "image": "/static/tutorials/steps/jsArrMethods_10_modernJs.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrayMethods.modernJs",
+                "default": "Real JavaScript code reads like English with these — take the users, filter the active ones, map their names, log them. Chain them together and a five-line loop turns into a single readable line. The next tutorial covers string methods that work the same way."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

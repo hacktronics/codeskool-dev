@@ -1,0 +1,161 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Ask the User</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Programs that talk back",
+            "image": "/static/tutorials/steps/jsAsk_01_talksBack.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.talksBack",
+                "default": "In Scratch you use ask and wait to grab an answer from the user. JavaScript has prompt — a popup that asks a question and waits for the kid to type. The block here is called ask user. Same idea, browser-style. In this tutorial you will ask for a name and then greet the person by name."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsAsk_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Ask their name and store it",
+            "image": "/static/tutorials/steps/jsAsk_03_askName.webp",
+            "imageFocus": {
+                "x": 35.8,
+                "y": 57.3,
+                "zoom": 1.89
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.askName",
+                "default": "Drag a let block under the script hat. Name it name. For the value slot, find the ask user block in the Dialogs section and drop it INTO the value slot. Set the ask user prompt to What is your name. This is different from Scratch — the answer comes straight back as the value of the variable, in one step. No separate answer reporter."
+            }
+        },
+        {
+            "title": "Greet them",
+            "image": "/static/tutorials/steps/jsAsk_04_greet.webp",
+            "imageFocus": {
+                "x": 33.6,
+                "y": 57.0,
+                "zoom": 3.55
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.greet",
+                "default": "Drag a log to console block under the let. Inside the message slot, build a join: the literal text Hello comma space — that one IS in quotes because it is fixed text — plus the variable name with no quotes because we want its value. The plus sign in JavaScript glues two strings together. The Code panel now shows console.log open-quote Hello-comma-space close-quote plus name close-paren semicolon."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsAsk_05_run.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.run",
+                "default": "Click Run. A popup appears over the preview asking What is your name. Type your name and click OK."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsAsk_06_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears at the bottom-right."
+            }
+        },
+        {
+            "title": "Your personalised greeting",
+            "image": "/static/tutorials/steps/jsAsk_07_greetingShown.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.greetingShown",
+                "default": "There it is — Hello, then your name. JavaScript took the fixed text Hello-comma-space, stuck the value of the name variable onto the end, and printed the whole thing in one go."
+            }
+        },
+        {
+            "title": "What is gluing called",
+            "image": "/static/tutorials/steps/jsAsk_01_talksBack.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.concatenation",
+                "default": "Sticking strings together with the plus sign is called concatenation — a long word for end-to-end join. JavaScript looks at the plus sign between two pieces of text, glues them, and gives you back one combined string. You will use concatenation in almost every program from now on."
+            }
+        },
+        {
+            "title": "ask user always returns text",
+            "image": "/static/tutorials/steps/jsAsk_07_greetingShown.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.returnsText",
+                "default": "One important warning. Whatever the user types comes back as TEXT — even when they type digits. If the kid types five, you get the text five, not the number five. That matters when you try to do maths on it. The Numbers tutorial coming up shows you exactly when this bites and how to fix it."
+            }
+        },
+        {
+            "title": "Ask, store, use",
+            "image": "/static/tutorials/steps/jsAsk_07_greetingShown.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsAskTheUser.askStoreUse",
+                "default": "Ask. Store the answer in a variable. Use the variable later. The same shape you used in Scratch, written in JavaScript. In the next tutorial you will learn how JavaScript handles numbers and arithmetic, and why ask user returning text occasionally causes a surprise."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

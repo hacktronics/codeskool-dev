@@ -148,7 +148,11 @@
                 "default": "Click Run. Console asks \"Capital of France? \" — click in the Console and type Paris, press Enter. Then \"2 + 2 * 3 = ? \" — type 8 (math: multiplication first → 2 + 6 → 8). Then \"Color of the sky? \" — type Blue. Final line: \"You scored 3 / 3\". Try one wrong on purpose (type \"London\" for the first one) and see the score drop to 2."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "What you used",

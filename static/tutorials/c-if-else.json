@@ -76,7 +76,11 @@
                 "default": "Before clicking Run, predict in your head which branch fires. age is 12. The condition is age >= 13. Is 12 greater than or equal to 13? NO. So the if condition is FALSE, and the else branch runs. Click Run. The Console shows \"Not a teenager yet.\" Now change age to 15 and Run again. This time 15 >= 13 is TRUE, so the if branch wins and the Console shows \"You are a teenager.\" Try age = 13 too (right at the boundary — the >= includes 13)."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "All the comparison operators",

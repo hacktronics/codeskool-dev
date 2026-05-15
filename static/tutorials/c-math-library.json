@@ -76,7 +76,11 @@
                 "default": "Click Run. Console: sqrt(16) = 4.00, pow(2, 8) = 256, abs(-5) = 5. abs is from stdlib (already included via stdio in this case) and works on int — returns the positive version of any number. Other math.h goodies you might explore: sin(angle), cos(angle), log(x) (natural log), log10(x) (base-10 log), floor(x) (round down), ceil(x) (round up), round(x). All take and return doubles."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

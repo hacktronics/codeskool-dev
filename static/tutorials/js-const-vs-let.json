@@ -1,0 +1,179 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Constants vs let</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Some values never change",
+            "image": "/static/tutorials/steps/jsConst_01_someNever.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.someNever",
+                "default": "In Scratch every variable can be changed any time. JavaScript lets you lock some down. Use let for values you plan to change. Use const for values that should never change. Locking values down stops you from accidentally changing something that was supposed to stay the same."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsConst_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.dragHat",
+                "default": "Open the JavaScript category in the flyout and drag the script hat block into the empty workspace. Every JavaScript program starts with this hat."
+            }
+        },
+        {
+            "title": "Make a constant called pi",
+            "image": "/static/tutorials/steps/jsConst_03_pi.webp",
+            "imageFocus": {
+                "x": 40.6,
+                "y": 55.5,
+                "zoom": 3.45
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_const_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.pi",
+                "default": "Find the const block in the Variables section of the flyout. Drag it under the script hat. Name the slot pi and set the value to three point one four. The Code panel on the right shows const pi equals three point one four semicolon. JavaScript will now refuse any line that tries to change pi."
+            }
+        },
+        {
+            "title": "Add a let for the radius",
+            "image": "/static/tutorials/steps/jsConst_04_radius.webp",
+            "imageFocus": {
+                "x": 39.8,
+                "y": 57.3,
+                "zoom": 3.09
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.radius",
+                "default": "Radius can change for different circle sizes, so it goes in a let. Drag a let block under the const, name it radius, and set the value to five. The Code panel now shows two lines: const pi equals three point one four; let radius equals five. One locked, one changeable."
+            }
+        },
+        {
+            "title": "Drag log-to-console and compute the area",
+            "image": "/static/tutorials/steps/jsConst_05_logArea.webp",
+            "imageFocus": {
+                "x": 38.6,
+                "y": 61.9,
+                "zoom": 2.42
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.logArea",
+                "default": "Drag a log to console block and snap it below the let. Inside the message slot, build the formula pi times radius times radius — that is the area of a circle. Use the Operators category to drop in the multiply operator, and grab the variables pi and radius from the Variables section. No quotes anywhere — we want the computed number, not the literal text."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsConst_06_run.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.run",
+                "default": "Click the Run button at the top-right. The View pane stays blank — the answer goes to the console."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsConst_07_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears at the bottom-right with the title Console."
+            }
+        },
+        {
+            "title": "The area appears",
+            "image": "/static/tutorials/steps/jsConst_08_areaShown.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.areaShown",
+                "default": "The console prints seventy-eight point five. That is the area of a circle of radius five — pi times five times five. JavaScript did the arithmetic, the variables held their values, and the answer is there."
+            }
+        },
+        {
+            "title": "What const protects against",
+            "image": "/static/tutorials/steps/jsConst_05_logArea.webp",
+            "imageFocus": {
+                "x": 38.6,
+                "y": 61.9,
+                "zoom": 2.42
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.tryBreak",
+                "default": "Imagine you had used let for pi instead of const. Anywhere later in the program, an assignment like pi equals four would silently change the value. The next line that uses pi would compute the wrong area, with no warning. const stops that — it makes pi a promise to JavaScript that nothing will reassign it."
+            }
+        },
+        {
+            "title": "JavaScript refuses to break the const",
+            "image": "/static/tutorials/steps/jsConst_08_areaShown.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.redError",
+                "default": "If you do try to reassign pi later — by typing pi equals four in real code — JavaScript shows a red error in the console: assignment to constant variable. The program stops there. That refusal is the safety const gives you. radius can still change because it is a let, but pi is locked forever."
+            }
+        },
+        {
+            "title": "Default to const",
+            "image": "/static/tutorials/steps/jsConst_11_defaultConst.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsConstVsLet.defaultConst",
+                "default": "A habit real JavaScript programmers follow: reach for const by default. Only switch to let when you genuinely plan to reassign the variable later. Locking values down by default catches a whole class of bugs early. In the next tutorial we will use prompt to ask the user for input."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

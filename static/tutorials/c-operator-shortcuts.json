@@ -94,7 +94,11 @@
                 "default": "Trace it in your head before clicking: score starts at 10. After +=5 it's 15. After -=2 it's 13. After ++ it's 14. After -- it's 13 again. Click Run. The Console should show exactly that sequence: 15, 13, 14, 13. Each printf shows the value AT THAT MOMENT. These four shortcuts are everywhere in real C code — get comfortable with all of them."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

@@ -376,5 +376,311 @@
         "language_code": "es-ES",
         "bytes": 115392,
         "generated_at": "2026-04-24T11:25:08.051078+00:00"
+    },
+    "gui.tutorials.jsHello.threeFriends": {
+        "sha256": "64c4acbb4d0f0417284d90c6914e44814f5614e2ba54c9aa0ddf89f59ee82a16",
+        "text_len": 303,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 101024,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.twoWays": {
+        "sha256": "4d748215bdc7d8172dd578cc244af391457db48d4fffe79f260bf9d515725eeb",
+        "text_len": 307,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 92424,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.addExtension": {
+        "sha256": "087a0086f806e243e41b23308b4ae9a753604ec35b4fe57e15d693c062e30ca2",
+        "text_len": 211,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 59750,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.progFilter": {
+        "sha256": "8c8386e0420d0f2e28382dbcc77f0dd5fd32e71c4a944a947b8fe34b4ee9f5da",
+        "text_len": 221,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 77400,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.selectJs": {
+        "sha256": "4a678a7478f64e2ce53d2837aee66067ee89eeab5d605cbf58ae01c155518411",
+        "text_len": 260,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 77463,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.uploadMode": {
+        "sha256": "659a966ae2630880de380f390f3b23de43f1925be682a2242244efe1d9592562",
+        "text_len": 322,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 93425,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.jsCategory": {
+        "sha256": "bc38dc2857756411183a6c3f1337e12857a4b3093276374757d4e35c7bec1794",
+        "text_len": 388,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 107438,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.dragHat": {
+        "sha256": "23b0767d4188bedfaf005dd060ad7658503661d970b92da696ec509425723e37",
+        "text_len": 411,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 113595,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.dragLog": {
+        "sha256": "085bc8d9096de38d66fc29166fa2317c47416eadccd18fff5c68c6a9b8fca1dc",
+        "text_len": 308,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 90992,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.typeMessage": {
+        "sha256": "a5bc4ac4363150045ce2770bd4c69345db08eb6dc671d503d2e5e3144a33ba7c",
+        "text_len": 577,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 180119,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.codePanel": {
+        "sha256": "ddccb0ea7f664c472acf712abcc93865e98c7b2e6555586c8077cd01b75f7aa3",
+        "text_len": 468,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 135542,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.clickRun": {
+        "sha256": "abe6c715c252507ca55692d7c8aa585b18dce282f325d6d94f6eda5d64c2d65d",
+        "text_len": 308,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 92245,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.openConsole": {
+        "sha256": "ec4e5db99434d1fa1d4269ee2e2c33ad1ec5ef399a11e8386fc91e9a5c3e63e8",
+        "text_len": 248,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 81369,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.consoleResult": {
+        "sha256": "de512e6d757ee462e6aa168ee94dec75b5c84b73104c245844281ff8bc6aab5c",
+        "text_len": 227,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 59563,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.dragAlert": {
+        "sha256": "4c93d350bd27761bf67848a32e789cf82995d0a46e8a2c990ff7d1f3e24afae7",
+        "text_len": 323,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 87938,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.alertPops": {
+        "sha256": "33c4661c3b80beef3217fa7f2ada40beaeada43d6ac10bcd063983435609ac92",
+        "text_len": 431,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 119534,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHello.twoVoices": {
+        "sha256": "35b8d98ab0f30a5652f6c88f01075a89dccc254fa183486679c83eae8904c794",
+        "text_len": 420,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 123024,
+        "generated_at": "2026-05-14T03:35:58.222340+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.buildPage": {
+        "sha256": "5c70416091bf7695e879f5882aeafe9cd798cd4907ac25ced1316b3104de5fc2",
+        "text_len": 195,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 84528,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickPage": {
+        "sha256": "1429e2638e297612fd47473b12a5c5ec866a6e99867198e7c234b53275f6e51d",
+        "text_len": 211,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 91320,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickScript": {
+        "sha256": "06aed0c40946b2e6f6b1bc41c225b353dcab16be6a684fa1ad15f46e358ecd77",
+        "text_len": 247,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 86658,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.grabAndChange": {
+        "sha256": "29bf8e6d0087a470b59a76b74ebb4a4fa75eb2fc005131fa358a5a10cb7d5214",
+        "text_len": 319,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 114278,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.lookAtSprites": {
+        "sha256": "c0ad374d210a8261f549dad1c54502c03ffb2af0cc0cfb3434f75157ed84815f",
+        "text_len": 252,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 92140,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openIndex": {
+        "sha256": "6069a4c9f981b41ee084d201229dbd4739bca5fa41d054f0c6c3e6713fd7c1de",
+        "text_len": 208,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 79039,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.patternForever": {
+        "sha256": "828ba1a110005c55fd45a6c07640f8280731a14bb86769597d483ab941a01d16",
+        "text_len": 361,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 117558,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.savePage": {
+        "sha256": "36a8e0dcfe11918e22f4b06c4a7b1a8d3984217ef5719bb225567a3fe64037ee",
+        "text_len": 145,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 55314,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.saveScript": {
+        "sha256": "f57676c7681206d7566bf1b0984a7be38cdd1b2304e8698e6e95a6d10854e255",
+        "text_len": 200,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 68389,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.twoFiles": {
+        "sha256": "b9bb3b5804ca8f0a79b94f0cc0b86199e158d6d3c02ce02d4594fc2fe3c920e4",
+        "text_len": 429,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 139284,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.oneSpriteOneFile": {
+        "sha256": "f2f1369944ab735f581cfa6549f203838bb6b981b93490be13274ea6950a7701",
+        "text_len": 365,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 122128,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openSwitcher": {
+        "sha256": "d6bdf1a0574a68db7955cd2356cf9543aaa2938025160908b46779b6552ca6ba",
+        "text_len": 225,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 63718,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openHtmlCategory": {
+        "sha256": "1002a191ef2692229bd76cf72e44d1788d8cfaf58a99786dcd55f356e7b00560",
+        "text_len": 204,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 75900,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openJsCategory": {
+        "sha256": "abb6b8855f6006af5970245bb53f6269cb4048aa3a65bff9d8dd4172facdd7e0",
+        "text_len": 187,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 56000,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.backToPage": {
+        "sha256": "4db0caf100cb469b7d5a6e27473350fb3925f3fb26cb5a5f67d4917f4c88bce7",
+        "text_len": 281,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 93255,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickViewTab": {
+        "sha256": "c185269d430cc79e4f31ba1726e2e88dc95453faacdb4b950dccc336b56723e5",
+        "text_len": 252,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 93479,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.seePage": {
+        "sha256": "4681bffd1a4ca62364babf202c6a1c8539ee7badcc762ed301d70cf0b158aa65",
+        "text_len": 175,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 53992,
+        "generated_at": "2026-05-15T07:23:32.655964+00:00"
     }
 }

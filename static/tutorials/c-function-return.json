@@ -58,7 +58,11 @@
                 "default": "Click Run. Console: \"5 squared is 25\". Now try CHAINING: replace the printf with printf(\"Sum of squares: %d\\n\", square(7) + square(3));. square(7) returns 49, square(3) returns 9, the sum is 58. Reporter-block-style chaining works in C the same way it did in Scratch — function calls plug into bigger expressions."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

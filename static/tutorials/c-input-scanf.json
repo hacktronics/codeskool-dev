@@ -76,7 +76,11 @@
                 "default": "Click Run. The Console shows the question \"How old are you? \" and then sits there waiting. Click inside the Console (so it has focus), type a number (like 12 or 100), and press Enter. The program wakes up — scanf reads what you typed, puts it into age, and the next printf shows it back: \"You are 12 years old.\" This is your first INTERACTIVE C program. Try running it again with different numbers — the printf reflects whatever you type. If you type something that's NOT a number (like the word \"twelve\"), scanf gets confused and the printf shows garbage. We'll cover handling bad input later; for now just type a number."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

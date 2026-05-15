@@ -1,0 +1,260 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Hello, JavaScript</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Three friends make a webpage",
+            "image": "/static/tutorials/steps/jsHello_01_threeFriends.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.threeFriends",
+                "default": "Webpages are built by three friends. HTML is the bones — the shape. CSS is the paint — the colours. JavaScript is the muscle — the actions. You already made sprites move in Scratch. Now you will make a webpage do things, with JavaScript blocks that look just like Scratch blocks."
+            }
+        },
+        {
+            "title": "Two ways for JavaScript to talk",
+            "image": "/static/tutorials/steps/jsHello_02_twoWays.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.twoWays",
+                "default": "JavaScript has two ways to show a message. The CONSOLE is a hidden panel only the developer sees — that's where you debug. An ALERT is a popup that every visitor sees and it freezes the page until they click OK. Today we will use BOTH. Let's start by adding the JavaScript blocks to our project."
+            }
+        },
+        {
+            "title": "Click Add Extension",
+            "image": "/static/tutorials/steps/jsHello_03_addExtension.webp",
+            "imageFocus": {
+                "x": 0.0,
+                "y": 100.0,
+                "zoom": 2.96
+            },
+            "highlightUI": "addExtensionButton",
+            "narration": {
+                "id": "gui.tutorials.jsHello.addExtension",
+                "default": "Click the Add Extension button at the bottom-left of the screen. This opens the Extension Library — that's where all the special block sets live, including the JavaScript blocks we are about to use."
+            }
+        },
+        {
+            "title": "Filter by Programming",
+            "image": "/static/tutorials/steps/jsHello_04_progFilter.webp",
+            "imageFocus": {
+                "x": 63.8,
+                "y": 0.0,
+                "zoom": 3.22
+            },
+            "narration": {
+                "id": "gui.tutorials.jsHello.progFilter",
+                "default": "The Extension Library shows a lot of cards. To find JavaScript faster, click the Programming tab at the top. Now only programming-language extensions are visible — HTML 5, CSS, Python, C, and JavaScript."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Select JavaScript",
+            "image": "/static/tutorials/steps/jsHello_05_selectJs.webp",
+            "imageFocus": {
+                "x": 82.8,
+                "y": 30.6,
+                "zoom": 1.62
+            },
+            "highlightUI": "extension.javascript",
+            "narration": {
+                "id": "gui.tutorials.jsHello.selectJs",
+                "default": "Click the JavaScript card. This adds the full set of JavaScript blocks to your project — log-to-console, show-alert, variables, loops, all of it. The card closes and you are back on the workspace, now with a JavaScript category in the blocks panel."
+            }
+        },
+        {
+            "title": "Make sure you're in Upload Mode",
+            "image": "/static/tutorials/steps/jsHello_06_uploadMode.webp",
+            "imageFocus": {
+                "x": 98.9,
+                "y": 0.0,
+                "zoom": 3.47
+            },
+            "highlightUI": "modeSwitch",
+            "narration": {
+                "id": "gui.tutorials.jsHello.uploadMode",
+                "default": "Look at the toggle at the very top-right of the screen. Adding the JavaScript extension already turned this on, so you should be in Upload mode now — the Code panel is on the right side. If for some reason you're not in Upload mode, click this toggle to switch into it. The Code panel and View tab only show up in Upload mode."
+            }
+        },
+        {
+            "title": "The JavaScript blocks are ready",
+            "image": "/static/tutorials/steps/jsHello_07_jsCategory.webp",
+            "imageFocus": {
+                "x": 0.0,
+                "y": 42.0,
+                "zoom": 3.35
+            },
+            "highlightUI": "category.javascript",
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.jsCategory",
+                "default": "Look at the blocks panel on the left — the JavaScript category is already selected for you, and the flyout shows every JavaScript block you can use. Right at the top, under the Entry label, is the script block — the one shaped like a hat. Every JavaScript program starts with that. If you ever click away to another category, just click JavaScript again to come back."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsHello_08_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.dragHat",
+                "default": "Find the script block at the top of the flyout — the one shaped like a hat. DRAG it into the middle of the empty workspace. This is your HAT block — it marks where your JavaScript program starts. Once you drop it, look at the Code tab on the right — it shows the start of your JavaScript program. As you add more blocks underneath, more code appears in the Code tab in real time."
+            }
+        },
+        {
+            "title": "Drag the log-to-console block under the hat",
+            "image": "/static/tutorials/steps/jsHello_09_dragLog.webp",
+            "imageFocus": {
+                "x": 39.6,
+                "y": 55.9,
+                "zoom": 2.8
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.dragLog",
+                "default": "Now find the log-to-console block in the flyout and DRAG it under the script hat. You will see a faint shadow showing where it will snap — drop it there. The two blocks now stick together, just like a Scratch script. The hat alone does nothing; the log block underneath is what actually prints."
+            }
+        },
+        {
+            "title": "Type your message in the quotes",
+            "image": "/static/tutorials/steps/jsHello_10_typeMessage.webp",
+            "imageFocus": {
+                "x": 39.8,
+                "y": 55.8,
+                "zoom": 2.91
+            },
+            "narration": {
+                "id": "gui.tutorials.jsHello.typeMessage",
+                "default": "Click inside the text slot on the block where it says message and type: Hello JavaScript. You can put anything in there — your name, a joke, anything. You only type the text — no quotes. Now look at the Code tab on the right: the line reads console.log open-quote Hello JavaScript close-quote. The block automatically wrapped your text in quotes for you. If you were typing real JavaScript by hand, you would have to add the quotes yourself — that's how JavaScript knows the value is text, not a number — but the block does that work for you."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "See the real code on the right",
+            "image": "/static/tutorials/steps/jsHello_10_typeMessage.webp",
+            "imageFocus": {
+                "x": 99.8,
+                "y": 4.2,
+                "zoom": 2.8
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.codePanel",
+                "default": "Look at the Code panel on the right side. It already shows the REAL JavaScript text your block generated: console dot log open-bracket quote Hello JavaScript quote close-bracket semicolon. That is the same line working developers around the world type a thousand times a day. Your block is just a shortcut for typing it. There is also a View tab next to Code — that one shows the actual web page, but it stays blank until you click Run."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsHello_12_clickRun.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 0.5,
+                "zoom": 4.53
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsHello.clickRun",
+                "default": "Click the Run button at the top-right — it's the triangle play icon. Like the flag in Scratch, this runs your code. Watch the View pane in the middle — it stays BLANK. That's right — nothing showed up on the page. Don't worry, your message DID get sent — just not to the page. It went to the console."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsHello_13_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 0.5,
+                "zoom": 4.53
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsHello.openConsole",
+                "default": "See the little >_ button right next to Run? That toggles the Console pane. Click it. A panel appears at the bottom-right of the View area with the title Console — that's it. Real developers keep this open all day long when they are building websites."
+            }
+        },
+        {
+            "title": "Your message in the console",
+            "image": "/static/tutorials/steps/jsHello_14_consoleResult.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.consoleResult",
+                "default": "There it is — Hello JavaScript — printed in the console by your very own program. You wrote, you ran, you saw it work. Now let's try the OTHER way to show a message — the loud one that the visitor sees too."
+            }
+        },
+        {
+            "title": "Drag the show-alert block",
+            "image": "/static/tutorials/steps/jsHello_15_dragAlert.webp",
+            "imageFocus": {
+                "x": 36.5,
+                "y": 57.6,
+                "zoom": 2.84
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_alert"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.dragAlert",
+                "default": "Open the JavaScript category in the flyout again and find the show-alert block. Drag it into the workspace and snap it UNDER your console-log block. The two blocks now form a stack — JavaScript will run the top one first, then the bottom one. Click the text slot on the alert block and type: Hi there!"
+            }
+        },
+        {
+            "title": "Click Run — alert pops up",
+            "image": "/static/tutorials/steps/jsHello_16_alertPops.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsHello.alertPops",
+                "default": "Click Run again. This time your BROWSER itself pops up a small dialog box at the top of the page saying Hi there! — that's the alert. The whole page is frozen until you click OK on it. That's the LOUD way to show a message — the visitor cannot ignore it. The console message also printed, but you cannot read it until you dismiss the alert. Go ahead — click OK on the alert."
+            }
+        },
+        {
+            "title": "Two voices, one program",
+            "image": "/static/tutorials/steps/jsHello_17_twoVoices.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsHello.twoVoices",
+                "default": "You just used two voices. log-to-console is quiet — only the developer sees it, perfect for debugging. show-alert is loud — every visitor sees it AND the page freezes, so use it sparingly. From now on, every JavaScript chapter starts by ADDING the JavaScript extension, switching to Upload mode, and using these same blocks. You have everything you need to build the next program."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

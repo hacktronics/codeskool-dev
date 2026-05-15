@@ -58,7 +58,11 @@
                 "default": "Trace pass by pass. i=1: not 5, odd → print 1. i=2: not 5, even → continue (skip print). i=3: not 5, odd → print 3. i=4: not 5, even → continue. i=5: equals 5 → BREAK → loop ends. Click Run. The Console shows just two numbers: 1 and 3. break and continue together let you express \"skip these, stop at that\" in one short loop — a powerful pattern."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

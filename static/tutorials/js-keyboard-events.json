@@ -1,0 +1,147 @@
+{
+    "steps": [
+        {
+            "title": "Beyond the mouse",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_01_beyondMouse.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.beyondMouse",
+                "default": "Scratch has when key pressed hat blocks — one per key. JavaScript has ONE event, keydown, that fires for any key. Inside, you check WHICH key. Every browser game uses this pattern. Today you move a sprite with arrow keys."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.pageReady",
+                "default": "The page sprite already has a div with id sprite — a tomato 40 by 40 box sitting at left 100, top 100. You edit the script sprite to make it move."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab and track position",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_04_setupState.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.setupState",
+                "default": "A const named sprite with find element by id and the text sprite. A let named x with value 100. A let named y with value 100. Two numbers track position — just like Scratch sprite x and y."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Listen for keys on the page",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_05_keydownListener.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.keydownListener",
+                "default": "Drag a when keydown on block. Element is document — the whole page. Event is keydown. The body runs every time ANY key is pressed."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Which key was pressed",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_06_whichKey.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.whichKey",
+                "default": "Inside the listener, the event key reporter gives the name of the pressed key. The value is a string — ArrowRight, ArrowLeft, ArrowUp, ArrowDown, a, b, space, Enter. That is how you tell which key fired."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Four if checks",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_07_fourIfs.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.fourIfs",
+                "default": "Inside the keydown body, four ifs. If event key equals ArrowRight, change x by ten. ArrowLeft, change x by minus ten. ArrowDown, change y by ten. ArrowUp, change y by minus ten."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Apply the position",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_08_applyPosition.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.applyPosition",
+                "default": "After the four ifs, still inside the listener, two set style blocks. Property left on sprite, value is join x with px. Property top on sprite, value is join y with px. Setting CSS left and top is how you move an element on a webpage — different from Scratch where you set x and y directly."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and play",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_09_saveAndPlay.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.saveAndPlay",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. Click into the preview so the page has focus. Press an arrow key. The sprite moves."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Three lines, one game",
+            "image": "/static/tutorials/steps/jsKeyboardEvents_10_threeLinesOneGame.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsKeyboardEvents.threeLinesOneGame",
+                "default": "Listen for keys. Read which key. Update the position. Every keyboard-controlled browser game uses this shape."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

@@ -26,7 +26,11 @@
                 "to": 10
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
         },
         {
             "title": "Declare a pointer with int *p",
@@ -40,7 +44,11 @@
                 "to": 9
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
         },
         {
             "title": "p points to the same address",
@@ -54,7 +62,11 @@
                 "to": 11
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
         },
         {
             "title": "Follow the arrow with *p",
@@ -68,7 +80,11 @@
                 "to": 12
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
         },
         {
             "title": "Why pointers? Modify from outside",
@@ -82,7 +98,11 @@
                 "to": 5
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
         },
         {
             "title": "Call doubleIt(&x)",
@@ -96,7 +116,11 @@
                 "to": 13
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 40,
+                "zoom": 1.8
+            }
         },
         {
             "title": "Run — see addresses + the doubled x",
@@ -106,7 +130,11 @@
                 "default": "Click Run. The Console shows four lines. (1) \"x lives at 0x...\" — some hex address. (2) \"p points to 0x...\" — the SAME hex address (p was set to &x). (3) \"Value at p: 10\" — *p dereferences and reads x's value. (4) \"After doubleIt: 20\" — x got doubled by the function call. The exact hex addresses change each run; the relationships don't. p == &x, *p == x, and a function with a pointer parameter can change the original."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

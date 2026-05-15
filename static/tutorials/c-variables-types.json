@@ -107,7 +107,11 @@
                 "default": "Click Run. The Console shows three lines: Score: 90, Price: 12.50, Grade: A. Same printf trick you learned last chapter — just three different format codes for three different types. Once you know the four basic format codes (%d for int, %f for float, %c for char, %s for string — coming later), you can print pretty much anything. Try changing the values: edit price to 99.99, grade to 'B', score to 75, and Run again. The output reflects your changes immediately. Every C program from here on uses these types — int the most, then float, then char. Get comfortable with all three."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

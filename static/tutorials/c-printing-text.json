@@ -59,9 +59,9 @@
             },
             "highlightUI": "runButton",
             "imageFocus": {
-                "x": 30,
-                "y": 40,
-                "zoom": 1.8
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
             }
         },
         {
@@ -96,8 +96,8 @@
             "highlightUI": "cEditor",
             "imageFocus": {
                 "x": 30,
-                "y": 18,
-                "zoom": 2.2
+                "y": 40,
+                "zoom": 1.8
             }
         },
         {
@@ -112,7 +112,11 @@
                 "to": 4
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
         },
         {
             "title": "Run again — all four prints",
@@ -122,7 +126,11 @@
                 "default": "Click Run one more time. Notice that the comment line you added didn't print anything to the Console — exactly right; C ignored it. The Console shows your three printfs in order: the greeting, your name, the tab-spaced words, and the quoted line. You've learned the basics of printing in C: multiple printfs, the \\n newline, the \\t tab, and how to print quote marks with \\\". You also know what comments are for. Next chapter we move on from printing fixed text to PRINTING VALUES — variables that can hold and remember numbers."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

@@ -1,0 +1,147 @@
+{
+    "steps": [
+        {
+            "title": "Grab and change",
+            "image": "/static/tutorials/steps/jsChangeText_01_grabAndChange.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.grabAndChange",
+                "default": "Last chapter you grabbed an element. Now you change what is inside it — the JS lines textContent and innerHTML. The page updates instantly."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Same two sprites",
+            "image": "/static/tutorials/steps/jsChangeText_02_sameTwoSprites.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.sameTwoSprites",
+                "default": "Same shape as last time. The page sprite already has the h1 with id title and the p with id message. You edit the script sprite to change them from JavaScript."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsChangeText_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Empty workspace ready for code."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the title",
+            "image": "/static/tutorials/steps/jsChangeText_04_grabTitle.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.grabTitle",
+                "default": "Drag the script hat. Add a const named title with find element by id and the text title."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Set the text",
+            "image": "/static/tutorials/steps/jsChangeText_05_setText.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.setText",
+                "default": "Drag a set text of block. Element is title. Text is Changed by JavaScript. Behind the scenes this is title dot textContent equals Changed by JavaScript."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and view",
+            "image": "/static/tutorials/steps/jsChangeText_06_saveAndView.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.saveAndView",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. The h1 now reads Changed by JavaScript."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Set HTML for tags inside",
+            "image": "/static/tutorials/steps/jsChangeText_07_setHtml.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.setHtml",
+                "default": "Add a const named message with find element by id and the text message. Drag a set HTML of block — this is dot innerHTML in real JS. Element is message. Type Now with a real b tag around the word bold. Open-angle-bracket b close-angle-bracket bold open-angle-bracket slash b close-angle-bracket."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "See bold words appear",
+            "image": "/static/tutorials/steps/jsChangeText_08_seeBold.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.seeBold",
+                "default": "Save the script. Reopen index.html. The word bold appears in actual bold. set HTML treats the value as HTML and parses the tags inside."
+            },
+            "highlightUI": "viewFilesButton"
+        },
+        {
+            "title": "Text versus HTML",
+            "image": "/static/tutorials/steps/jsChangeText_09_textVsHtml.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.textVsHtml",
+                "default": "set text treats the value as plain text. set HTML reads tags inside the value. Pick set text by default — set HTML only when you really mean to inject markup."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "The page is now alive",
+            "image": "/static/tutorials/steps/jsChangeText_10_pageNowAlive.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsChangeText.pageNowAlive",
+                "default": "Your first visible JavaScript effect on a real page. Like changing a sprite's say bubble, but on a webpage instead of the Scratch stage."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

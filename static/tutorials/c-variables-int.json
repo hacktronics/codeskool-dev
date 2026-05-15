@@ -59,9 +59,9 @@
             },
             "highlightUI": "runButton",
             "imageFocus": {
-                "x": 30,
-                "y": 18,
-                "zoom": 2.2
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
             }
         },
         {
@@ -78,8 +78,8 @@
             "highlightUI": "cEditor",
             "imageFocus": {
                 "x": 30,
-                "y": 40,
-                "zoom": 1.8
+                "y": 18,
+                "zoom": 2.2
             }
         },
         {
@@ -96,8 +96,8 @@
             "highlightUI": "cEditor",
             "imageFocus": {
                 "x": 30,
-                "y": 18,
-                "zoom": 2.2
+                "y": 40,
+                "zoom": 1.8
             }
         },
         {
@@ -108,7 +108,11 @@
                 "default": "Click Run. Two lines now in the Console — your age, then the year (2026). Each printf used its own variable in its own %d slot. The order matches the order of the printfs. You can have as many variables and as many printfs as you want; the program runs them top to bottom. Try adding a third variable like int month = 11; with its own printf. The pattern is always the same: declare the variable on its own line (int NAME = VALUE;), then use it in a printf with %d wherever you want it to appear."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "What if the format code is wrong?",
@@ -122,7 +126,11 @@
                 "to": 5
             },
             "highlightUI": "cEditor",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.2
+            }
         }
     ]
 }

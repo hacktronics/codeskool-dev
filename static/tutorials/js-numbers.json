@@ -1,0 +1,179 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Numbers in JavaScript</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Five maths tools",
+            "image": "/static/tutorials/steps/jsNumbers_01_fiveTools.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.fiveTools",
+                "default": "You already know the maths operators from Scratch. JavaScript spells them plus for add, minus for subtract, star for multiply, slash for divide, and percent for the remainder after dividing. The only one with a surprise is plus — when both sides are text, plus glues the strings instead of adding. This tutorial walks through that surprise and how to fix it."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsNumbers_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Ask the kid for an age",
+            "image": "/static/tutorials/steps/jsNumbers_03_askAge.webp",
+            "imageFocus": {
+                "x": 36.7,
+                "y": 57.0,
+                "zoom": 2.01
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.askAge",
+                "default": "Drag a let block. Name it age. For the value slot, drop in an ask user block from Dialogs that asks How old are you. Just like Scratch's ask and wait — but watch what happens when we try to do maths with what comes back."
+            }
+        },
+        {
+            "title": "Try to add one — naive version",
+            "image": "/static/tutorials/steps/jsNumbers_04_addOne.webp",
+            "imageFocus": {
+                "x": 36.2,
+                "y": 57.7,
+                "zoom": 2.67
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.addOne",
+                "default": "Drag a log to console block. Inside the message slot, build: the literal text Next year you will be, plus the variable age, plus the number one. Use the plus operator from the Operators category. We are TRYING to compute the age plus one. Click Run and type the number ten."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsNumbers_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears at the bottom-right."
+            }
+        },
+        {
+            "title": "The answer is wrong: 101",
+            "image": "/static/tutorials/steps/jsNumbers_06_wrong101.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.wrong101",
+                "default": "The console says Next year you will be one zero one. That is wrong — you typed ten, the answer should be eleven. What happened? The next step explains."
+            }
+        },
+        {
+            "title": "Why it printed 101",
+            "image": "/static/tutorials/steps/jsNumbers_07_whyWrong.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.whyWrong",
+                "default": "Big JavaScript surprise. The ask user block always hands back TEXT, never a number — even when the kid types digits. In JavaScript, when plus has text on one side, it glues. So the text ten and the number one became the text one zero one. JavaScript was not doing maths; it was concatenating."
+            }
+        },
+        {
+            "title": "Convert with the Number block",
+            "image": "/static/tutorials/steps/jsNumbers_08_convertNumber.webp",
+            "imageFocus": {
+                "x": 33.7,
+                "y": 60.5,
+                "zoom": 1.69
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_Number_of"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.convertNumber",
+                "default": "Find the Number block in the Conversions section of the flyout. Drag it AROUND the ask user block — the Number block wraps the ask user so the text comes out as a real number. The Code panel now shows let age equals Number open-paren prompt close-paren. Click Run and type ten again."
+            }
+        },
+        {
+            "title": "Now it says 11",
+            "image": "/static/tutorials/steps/jsNumbers_09_correct11.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.correct11",
+                "default": "Open the console. The answer is now eleven. The Number block converted the text ten into the real number ten, and JavaScript could do real addition. The fix was tiny — one extra block — but it changed the whole behaviour."
+            }
+        },
+        {
+            "title": "More maths in ten years",
+            "image": "/static/tutorials/steps/jsNumbers_10_moreMaths.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.moreMaths",
+                "default": "Try one more — add a second log to console: the text In ten years you will be, plus age, plus ten. Click Run and type ten. The console now prints two lines. The first is eleven; the second is twenty. Both worked because age is a real number, not text."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Five tools, one rule",
+            "image": "/static/tutorials/steps/jsNumbers_11_fiveOneRule.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsNumbers.fiveOneRule",
+                "default": "Five operators — plus, minus, star, slash, percent — and one rule to remember. Always wrap every ask user inside a Number block before doing arithmetic. Without that wrap, plus will glue text. With the wrap, plus adds. In the next tutorial you will learn template strings — a cleaner way to build text with values inside."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

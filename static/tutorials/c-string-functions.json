@@ -120,7 +120,11 @@
                 "default": "Click Run. Console: len(a) = 5, Different, Joined: Hello World. strlen counted \"Hello\" as 5. strcmp returned non-zero because \"Hello\" and \"World\" are different strings, so the else branch fired. strcat joined them with a space in between. Scratch's \"length of\", \"=\" check, and \"join\" all in one C chapter."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

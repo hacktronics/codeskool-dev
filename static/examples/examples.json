@@ -120,17 +120,6 @@
     "isMemberOnly": false,
     "urlId": "OpenAIToolCall"
   },
-  "BarChart": {
-    "name": "Bar Chart",
-    "description": "Create a bar chart from a given data set.",
-    "tags": [
-      "scratch"
-    ],
-    "img": "/static/examples/thumbnails/bar_chart.webp",
-    "insetIconURL": "scratch",
-    "isMemberOnly": false,
-    "urlId": "BarChart"
-  },
   "CustomSpeechCommands": {
     "name": "Custom Speech Commands",
     "description": "Create custom speech commands using TensorFlow.",
@@ -682,5 +671,16 @@
     "insetIconURL": "scratch",
     "isMemberOnly": false,
     "urlId": "wikipedia-curious-fox"
+  },
+  "js_calculator": {
+    "name": "Calculator",
+    "description": "A working calculator web app — its index.html, main.css and script.js are all generated from blocks.",
+    "tags": [
+      "js"
+    ],
+    "img": "/static/examples/thumbnails/js_calculator.webp",
+    "insetIconURL": "js",
+    "isMemberOnly": false,
+    "urlId": "js_calculator"
   }
 }

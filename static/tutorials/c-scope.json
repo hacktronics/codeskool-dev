@@ -58,7 +58,11 @@
                 "default": "Click Run. Console:\nlocal=1 global=1\nlocal=1 global=2\nlocal=1 global=3\nWatch what happens. localCount RESETS to 0 every call (born fresh, dies at end of function), so it always prints 1 after the ++. globalCount keeps GROWING because it lives across all calls — each call adds 1 to the same shared variable. Three calls → global ends at 3."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         },
         {
             "title": "Use locals when you can",

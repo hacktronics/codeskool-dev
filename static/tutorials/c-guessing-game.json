@@ -156,7 +156,11 @@
                 "default": "Click Run. Console: \"Guess (1-100): \". Click in the Console, type a number (50 is a smart first guess — splits the range in half), and press Enter. The hint tells you to go higher or lower. Use the hint to BISECT: if \"Higher\", try 75 (halfway between 50 and 100). If \"Lower\", try 25. Keep bisecting and you'll always win in 7 tries or fewer (this is called binary search — a very famous algorithm)."
             },
             "highlightUI": "runButton",
-            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.3
+            }
         }
     ]
 }

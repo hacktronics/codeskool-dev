@@ -1,0 +1,161 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Arrays</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "One name, many values",
+            "image": "/static/tutorials/steps/jsArrays_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.intro",
+                "default": "You already use lists in Scratch — add things to list, item one of list, length of list. JavaScript calls them ARRAYS. Same idea, different name, slightly different rules. In this tutorial you will make an array of fruits, read items out of it, count them, and add a new one."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsArrays_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Make the array",
+            "image": "/static/tutorials/steps/jsArrays_03_makeArray.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 56.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_array_literal"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.makeArray",
+                "default": "Drag a let block. Name it fruits. For the value, drop in an array block from the Arrays section and add three items — apple, banana, mango. Each fruit is text, so each one goes in its own slot. The Code panel shows let fruits equals square-bracket apple comma banana comma mango close-bracket."
+            }
+        },
+        {
+            "title": "Print the whole array",
+            "image": "/static/tutorials/steps/jsArrays_04_printAll.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 60.0,
+                "zoom": 1.9
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.printAll",
+                "default": "Drop a log to console block and pass it the variable fruits. Click Run."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsArrays_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. The whole array prints — square brackets, items separated by commas, the lot."
+            }
+        },
+        {
+            "title": "How many: length",
+            "image": "/static/tutorials/steps/jsArrays_06_length.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.length",
+                "default": "Add another log line and pass it fruits dot length. Click Run. The console prints three. dot length is JavaScript's version of Scratch's length-of-list — it tells you how many items the array currently holds."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Index from zero",
+            "image": "/static/tutorials/steps/jsArrays_07_indexZero.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.indexZero",
+                "default": "A big surprise after Scratch. Scratch lists start at position ONE — item one is the first thing. JavaScript arrays start at ZERO. So the first fruit is fruits at index zero. The second is at index one. The third is at index two. This is just how JavaScript counts — get used to off-by-one."
+            }
+        },
+        {
+            "title": "Read by index",
+            "image": "/static/tutorials/steps/jsArrays_08_readByIndex.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.readByIndex",
+                "default": "Add two more logs: fruits at index zero, then fruits at index two. Click Run. You see apple and mango — the first and third items. The block uses square brackets around the index, exactly how it looks in real JavaScript code."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Add a new item with push",
+            "image": "/static/tutorials/steps/jsArrays_09_push.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.push",
+                "default": "Call fruits dot push with kiwi. That sticks kiwi on the end of the array — same idea as Scratch's add-to-list. Log fruits again and click Run. The array now has four items: apple, banana, mango, kiwi."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Three powers",
+            "image": "/static/tutorials/steps/jsArrays_10_recap.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsArraysManyThings.recap",
+                "default": "The same three list jobs you used in Scratch: read by position, count, add. JavaScript spells them fruits-at-index, dot length, and dot push. Remember the zero-based indexing — that single difference trips up everyone moving from Scratch to JavaScript. In the next tutorial you walk through an array with a for-of loop."
+            },
+            "autoAdvance": true
+        }
+    ]
+}
