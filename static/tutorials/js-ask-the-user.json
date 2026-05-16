@@ -116,7 +116,7 @@
         },
         {
             "title": "What is gluing called",
-            "image": "/static/tutorials/steps/jsAsk_01_talksBack.webp",
+            "image": "/static/tutorials/steps/jsAsk_08_whatIsGluing.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,
@@ -130,7 +130,7 @@
         },
         {
             "title": "ask user always returns text",
-            "image": "/static/tutorials/steps/jsAsk_07_greetingShown.webp",
+            "image": "/static/tutorials/steps/jsAsk_09_alwaysText.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,
@@ -144,7 +144,7 @@
         },
         {
             "title": "Ask, store, use",
-            "image": "/static/tutorials/steps/jsAsk_07_greetingShown.webp",
+            "image": "/static/tutorials/steps/jsAsk_10_askStoreUse.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,

@@ -6,7 +6,7 @@
     "steps": [
         {
             "title": "A cleaner way to build text",
-            "image": "/static/tutorials/steps/jsTemplate_04_plusGlue.webp",
+            "image": "/static/tutorials/steps/jsTemplate_01_cleanerWay.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,
@@ -102,7 +102,7 @@
         },
         {
             "title": "A third kind of quote: backticks",
-            "image": "/static/tutorials/steps/jsTemplate_08_tryTemplate.webp",
+            "image": "/static/tutorials/steps/jsTemplate_07_thirdQuote.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,
@@ -148,7 +148,7 @@
         },
         {
             "title": "Curly braces hold any expression",
-            "image": "/static/tutorials/steps/jsTemplate_09_halfNoise.webp",
+            "image": "/static/tutorials/steps/jsTemplate_10_anyExpression.webp",
             "imageFocus": {
                 "x": 50.0,
                 "y": 50.0,

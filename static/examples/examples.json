@@ -1,4 +1,15 @@
 {
+  "PythonTurtle": {
+    "name": "Python Turtle",
+    "description": "A colourful spiral drawn with the Turtle extension — the same program shown as blocks and as Python code.",
+    "tags": [
+      "python"
+    ],
+    "img": "/static/examples/thumbnails/python_turtle.webp",
+    "insetIconURL": "python",
+    "isMemberOnly": false,
+    "urlId": "PythonTurtle"
+  },
   "DinosaurVolcanoRescue": {
     "name": "Dinosaur Volcano Rescue",
     "description": "Mom Dinosaur rescues her babies before the volcano erupts — guide her with AR markers.",
