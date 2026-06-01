@@ -1,4 +1,8 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -16,7 +20,11 @@
         {
             "title": "Labelled Rooms vs Plain Rooms",
             "image": "/static/tutorials/steps/htmlSectionsSemanticVsGeneric.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlSections.labelledRooms",
                 "default": "Until now we used <div> — a generic box you label yourself. Now you will meet semantic tags — <header>, <nav>, <section>, <footer>. They do the same job as div, but their NAMES tell helpers (search engines, screen readers) what each part of your page IS. Like rooms in a house — a div is just \"a room\", but <kitchen> tells everyone what it is for."
@@ -124,7 +132,11 @@
         {
             "title": "Semantic Tags Give Pages Shape",
             "image": "/static/tutorials/steps/htmlSectionsThreeAudiences.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlSections.recap",
                 "default": "Header, nav, section, and footer are called semantic tags because their names describe what's inside. They help browsers, search engines, and screen readers understand your page."

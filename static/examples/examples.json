@@ -32,6 +32,17 @@
     "isMemberOnly": false,
     "urlId": "pose-dragon-soar"
   },
+  "TrafficControl": {
+    "name": "Traffic Control",
+    "description": "Control a traffic light with hand gestures using AI.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/traffic_control.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "TrafficControl"
+  },
   "ClockFace": {
     "name": "Clock Face",
     "description": "Analog clock face drawn with the Draw extension — push/pop/translate/rotate, arc, and text.",
@@ -328,17 +339,6 @@
     "insetIconURL": "ai",
     "isMemberOnly": false,
     "urlId": "HandwritingRecognition"
-  },
-  "FingerCountingLed": {
-    "name": "Finger Counting LED",
-    "description": "Count fingers and control LED based on count.",
-    "tags": [
-      "ai"
-    ],
-    "img": "/static/examples/thumbnails/finger_counting_led.webp",
-    "insetIconURL": "ai",
-    "isMemberOnly": false,
-    "urlId": "FingerCountingLed"
   },
   "SmartTrashCan": {
     "name": "Smart Trash Can",
@@ -693,5 +693,38 @@
     "insetIconURL": "js",
     "isMemberOnly": false,
     "urlId": "js_calculator"
+  },
+  "linear-equations-grid": {
+    "name": "Where Do The Lines Cross?",
+    "description": "Enter two equations in standard form a x + b y = c — the Pen draws both lines on a coordinate grid and a ring marks where they cross: the solution to the system.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/linear-equations-grid.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "linear-equations-grid"
+  },
+  "ratio-mixer": {
+    "name": "Ratio Mixer",
+    "description": "Mix two paint colours in a ratio to match a target shade — scale the recipe across 8 colour mixes. A proportional-reasoning game.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/ratio-mixer.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "ratio-mixer"
+  },
+  "pattern-painter": {
+    "name": "Pattern Painter",
+    "description": "Spot the rule in a row of shapes and tap what comes next — three pattern puzzles guided by Mayur the peacock. A pattern-recognition game.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/pattern-painter.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "pattern-painter"
   }
 }

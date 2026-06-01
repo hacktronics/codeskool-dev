@@ -1,4 +1,9 @@
 {
+    "preseedExtensions": [
+        "html5",
+        "css"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -16,7 +21,11 @@
         {
             "title": "Style Flows Downward",
             "image": "/static/tutorials/steps/htmlCssFonts_inheritance.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlCssFonts.inheritance",
                 "default": "Here's a useful CSS trick. If you set a colour or font on the body, every heading, paragraph, and word INSIDE the body inherits it automatically — you don't have to repeat it on each element. We say the property CASCADES down the page tree, parent to child to grandchild. So one rule like body { font-family: Comic Sans MS; } makes every paragraph, list item, and heading use Comic Sans — unless you override it on a specific element later. This is why CSS feels efficient once you get used to it: write the style once at the top, let it flow down to everything inside."
@@ -111,7 +120,11 @@
         {
             "title": "Change the Font",
             "image": "/static/tutorials/steps/htmlCssFontsFamily.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlCssFonts.family",
                 "default": "Drag a font block inside the selector. Pick family from the property dropdown and type Arial in the value field."
@@ -124,7 +137,11 @@
         {
             "title": "Font Families Side by Side",
             "image": "/static/tutorials/steps/htmlCssFontsFamilies.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlCssFonts.families",
                 "default": "Different font families have different personalities. Arial is clean and modern. Comic Sans MS is playful and round. Georgia is serif and bookish. Pick the family that matches the feeling of your page."
@@ -147,7 +164,11 @@
         {
             "title": "Sizes — px and Friends",
             "image": "/static/tutorials/steps/htmlCssFonts_units.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlCssFonts.units",
                 "default": "When you read CSS online you'll meet several size units. Here's a quick guide. px (pixels) — one tiny dot on the screen, the simplest unit. em — relative to the current font size. rem — relative to the page's root font size. % (percent) — a percentage of the parent's size. vh and vw — percentage of the viewport (the visible browser window). For now, px is the easiest and works everywhere. As you build bigger sites you'll want em and rem so sizes scale together when zooming, and vh/vw for full-screen layouts. You don't need them all yet. Just recognise them when you see them."

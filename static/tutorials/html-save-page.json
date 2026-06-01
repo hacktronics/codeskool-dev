@@ -1,4 +1,8 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -111,7 +115,11 @@
         {
             "title": "Recap",
             "image": "/static/tutorials/steps/htmlSavePageBrowserStorage.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlSavePage.recap",
                 "default": "You built a page, saved it as index.html, and opened the file list to see it. Saved pages are real .html files inside your browser — ready for the next tutorial where you'll link multiple pages together."

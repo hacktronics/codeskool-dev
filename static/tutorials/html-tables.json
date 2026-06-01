@@ -1,4 +1,8 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -118,7 +122,11 @@
         {
             "title": "How Tables Work",
             "image": "/static/tutorials/steps/htmlTablesAnatomy.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlTables.recap",
                 "default": "A table is built from rows. Each tr is a row. Inside each row, th is a header cell and td is a data cell. Tables show data in rows and columns."

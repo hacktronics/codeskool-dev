@@ -1,4 +1,8 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -16,7 +20,11 @@
         {
             "title": "Add Your First Comment",
             "image": "/static/tutorials/steps/htmlCommentsFirst.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlComments.first",
                 "default": "Drag a text block inside the body. In the text field, type the comment markers exactly: less-than-sign exclamation dash dash space This is the page header space dash dash greater-than-sign. Anything between these markers is a comment."
@@ -29,7 +37,11 @@
         {
             "title": "How a Comment Looks in HTML",
             "image": "/static/tutorials/steps/htmlCommentsCommentMarkers.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlComments.commentMarkers",
                 "default": "A comment has four parts. Open it with less-than, exclamation, two dashes. Close it with two dashes, greater-than. Whatever you put between them is YOUR note. The browser sees the markers and skips everything inside."
@@ -103,7 +115,11 @@
         {
             "title": "Notes for the Programmer",
             "image": "/static/tutorials/steps/htmlCommentsHtmlVsView.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlComments.recap",
                 "default": "Comments are notes you leave in your code so you can remember what each part does. The browser ignores them. Real websites use comments all the time to organise their code."

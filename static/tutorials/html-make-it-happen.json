@@ -1,4 +1,9 @@
 {
+    "preseedExtensions": [
+        "html5",
+        "css"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -50,7 +55,11 @@
         {
             "title": "Build the Features Section",
             "image": "/static/tutorials/steps/htmlMakeItHappenFeatures.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItHappen.features",
                 "default": "Drag a second section below the hero. Set its class to features. Inside it, drag three div blocks each with class card. In each card, add a heading at level 2 and a paragraph — Innovate / Ideas into action, Create / With purpose, and Inspire / Empower others."
@@ -63,7 +72,11 @@
         {
             "title": "Your Page Has a Tree Shape",
             "image": "/static/tutorials/steps/htmlMakeItHappenFeaturesTree.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlMakeItHappen.featuresTree",
                 "default": "Your page now has a tree shape — header at top, hero below, features inside, then footer. Each section is a div with a class so we can style it next. Bigger sites all follow this same shape."

@@ -1,4 +1,8 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
@@ -165,7 +169,11 @@
         {
             "title": "Recap",
             "image": "/static/tutorials/steps/htmlLinkPagesSiteMap.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlLinkPages.recap",
                 "default": "You built three pages, saved each one with its own filename, and the menu links between them work. That's a real multi-page website — every site you visit on the internet works exactly the same way under the hood."

@@ -1,4 +1,9 @@
 {
+    "preseedExtensions": [
+        "html5",
+        "css"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",

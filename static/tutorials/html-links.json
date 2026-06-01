@@ -1,25 +1,34 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
             "image": "/static/tutorials/steps/htmlLinksBoilerplate.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 16,
+                "y": 16,
+                "zoom": 2.8
             },
             "narration": {
                 "id": "gui.tutorials.html_links.boilerplate",
                 "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            },
+            "_sourceCrop": {
+                "x": 16,
+                "y": 16,
+                "zoom": 2.8
             }
         },
         {
             "title": "Add a Heading",
             "image": "/static/tutorials/steps/htmlLinksHeading.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 37,
+                "y": 55,
+                "zoom": 2.5
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.heading",
@@ -28,15 +37,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_heading"
+            },
+            "_sourceCrop": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.5
             }
         },
         {
             "title": "Drag a Link Block",
             "image": "/static/tutorials/steps/htmlLinksAnchor.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 35,
+                "y": 55,
+                "zoom": 1.9
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.dragAnchor",
@@ -46,15 +60,20 @@
                 "category": "html5",
                 "blockType": "html5_html5_anchor"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 35,
+                "y": 55,
+                "zoom": 1.9
+            }
         },
         {
             "title": "Set the Link URL",
             "image": "/static/tutorials/steps/htmlLinksUrl.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 38,
+                "y": 55,
+                "zoom": 1.9
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.setUrl",
@@ -63,24 +82,39 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_anchor"
+            },
+            "_sourceCrop": {
+                "x": 38,
+                "y": 55,
+                "zoom": 1.9
             }
         },
         {
             "title": "Parts of a Web Address",
             "image": "/static/tutorials/steps/htmlLinks_urlAnatomy.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.urlAnatomy",
                 "default": "Look at the URL you typed. A web address has parts — and once you know them, web addresses stop feeling random. https:// is the PROTOCOL — the language the browser uses to talk to the server. The next part is the DOMAIN — the name of the site (like google.com or youtube.com). After the slash comes the PATH — which page on that site you want. Sometimes there's a question mark and extra info called QUERY parameters. Every link you'll write breaks down this way. Knowing the parts helps you spot bad links — wrong protocol, wrong domain, missing path — and write working ones."
-            }
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
         },
         {
             "title": "Put Text Inside the Link",
             "image": "/static/tutorials/steps/htmlLinksText.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 38,
+                "y": 56,
+                "zoom": 1.8
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.addText",
@@ -89,15 +123,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_text"
+            },
+            "_sourceCrop": {
+                "x": 38,
+                "y": 56,
+                "zoom": 1.8
             }
         },
         {
             "title": "Make a Menu — Drag a List",
             "image": "/static/tutorials/steps/htmlLinksUl.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 31,
+                "y": 57,
+                "zoom": 1.5
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.ul",
@@ -107,15 +146,20 @@
                 "category": "html5",
                 "blockType": "html5_html5_ul"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 31,
+                "y": 57,
+                "zoom": 1.5
+            }
         },
         {
             "title": "Home Menu Item",
             "image": "/static/tutorials/steps/htmlLinksHome.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 17,
+                "y": 60,
+                "zoom": 1.1
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.home",
@@ -124,15 +168,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_li"
+            },
+            "_sourceCrop": {
+                "x": 17,
+                "y": 60,
+                "zoom": 1.1
             }
         },
         {
             "title": "About Us Menu Item",
             "image": "/static/tutorials/steps/htmlLinksAbout.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 39,
+                "y": 94,
+                "zoom": 2.2
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.about",
@@ -141,15 +190,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_li"
+            },
+            "_sourceCrop": {
+                "x": 39,
+                "y": 94,
+                "zoom": 2.2
             }
         },
         {
             "title": "Contact Menu Item",
             "image": "/static/tutorials/steps/htmlLinksContact.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 39,
+                "y": 94,
+                "zoom": 2.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.contact",
@@ -158,29 +212,48 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_li"
+            },
+            "_sourceCrop": {
+                "x": 39,
+                "y": 94,
+                "zoom": 2.3
             }
         },
         {
             "title": "See Your Page",
             "image": "/static/tutorials/steps/htmlLinksView.webp",
             "imageFocus": {
-                "x": 75,
-                "y": 50,
-                "zoom": 1.3
+                "x": 100,
+                "y": 8,
+                "zoom": 2.6
             },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.viewTab",
                 "default": "Click the View tab. You should see one Wikipedia link at the top, and a menu with Home, About Us, and Contact below it."
             },
-            "highlightUI": "viewTab"
+            "highlightUI": "viewTab",
+            "_sourceCrop": {
+                "x": 100,
+                "y": 8,
+                "zoom": 2.6
+            }
         },
         {
             "title": "Links and Menus",
             "image": "/static/tutorials/steps/htmlLinksHrefMapping.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlLinks.recap",
                 "default": "A link has two parts — the URL it goes to, and the text people click. Put many links inside a ul to build a menu. Real websites use this same recipe to connect their pages."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

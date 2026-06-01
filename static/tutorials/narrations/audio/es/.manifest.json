@@ -682,5 +682,14 @@
         "language_code": "es-ES",
         "bytes": 53992,
         "generated_at": "2026-05-15T07:23:32.655964+00:00"
+    },
+    "gui.tutorials.htmlHello.blocksConcept": {
+        "sha256": "6a123220707bbc9e16842cfa4e8252358b47baefcb194e4d61a1c959bcbedeea",
+        "text_len": 335,
+        "voice": "es-ES-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "es-ES",
+        "bytes": 100558,
+        "generated_at": "2026-05-20T10:57:16.424593+00:00"
     }
 }

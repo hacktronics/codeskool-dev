@@ -3,37 +3,77 @@
         {
             "title": "How a Webpage Really Works",
             "image": "/static/tutorials/steps/htmlHelloIntro.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
             "narration": {
                 "id": "gui.tutorials.htmlHello.intro",
                 "default": "Every webpage on the internet — Google, YouTube, your friend's page — is HTML code under the hood. The browser reads that code and draws the page. Right-click any webpage and pick View Page Source to see it for yourself. Browsers like Chrome, Firefox, Safari, and Edge are different programs, but they all read the same HTML — that's why we call HTML a web STANDARD. HTML itself was invented in 1989 by Tim Berners-Lee at CERN, the science lab. Same idea, same shape, still running the modern internet."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "Where the HTML Lives",
             "image": "/static/tutorials/steps/htmlIntro_clientServer.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
             "narration": {
                 "id": "gui.tutorials.htmlHello.clientServer",
                 "default": "When you type youtube.com into your browser, the browser sends a quick message to a faraway computer that's always switched on — that computer is called a SERVER. The server has all of YouTube's HTML files saved on it. It sends one back to your browser. Your browser reads that HTML and draws the page on your screen. Every site works this way — Google, your school's website, your favourite game site. CodeSkool is special — your HTML lives RIGHT HERE in this editor while you build it. Once your page is done you can save it and put it on a real server too — and then anyone in the world can visit it."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "What Are These Blocks?",
             "image": "/static/tutorials/steps/htmlHelloBlocksConcept.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
             "narration": {
                 "id": "gui.tutorials.htmlHello.blocksConcept",
-                "default": "The HTML blocks you're about to use are a CodeSkool helper. Snap them together like LEGO and they generate the real HTML code for you — no typing angle brackets, no missing closing tags. The HTML tab on the right will show the code your blocks made; the View tab shows what the browser draws from that code."
+                "default": "The HTML blocks you're about to use are a CodeSkool helper. Snap them together like LEGO and they generate the real HTML code for you — no typing angle brackets, no missing closing tags. The HTML tab on the right will show the code your blocks made; the View tab shows what the browser draws from that code. The browser only understands and renders HTML code, not CodeSkool blocks. If you right-click the rendered page and choose View Page Source, you will see HTML source code, not blocks."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "Open. Close. The Stuff in Between.",
             "image": "/static/tutorials/steps/htmlTagAnatomy.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
             "narration": {
                 "id": "gui.tutorials.htmlHello.tagAnatomy",
                 "default": "Every HTML tag has three parts — the OPEN tag, the CLOSE tag, and the STUFF you put between. The blocks you will use shape themselves around the stuff. Watch — every C-shape block IS one tag with a slot for what is inside. Open at the top, close at the bottom, the slot in the middle."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
@@ -45,9 +85,14 @@
             },
             "highlightUI": "addExtensionButton",
             "imageFocus": {
-                "x": 50,
-                "y": 0,
-                "zoom": 1
+                "x": 0,
+                "y": 100,
+                "zoom": 3.7
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 100,
+                "zoom": 3.7
             }
         },
         {
@@ -61,6 +106,11 @@
             "narration": {
                 "id": "gui.tutorials.htmlHello.progFilter",
                 "default": "Click the Programming tab at the top to filter the extensions. You will see the HTML 5 extension."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1.2
             }
         },
         {
@@ -75,6 +125,11 @@
             "narration": {
                 "id": "gui.tutorials.htmlHello.selectHtml5",
                 "default": "Click the HTML 5 card to add the HTML extension to your project. This gives you all the blocks needed to build web pages."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 27,
+                "zoom": 1.6
             }
         },
         {
@@ -88,7 +143,12 @@
             "highlightUI": "modeSwitch",
             "narration": {
                 "id": "gui.tutorials.htmlHello.uploadMode",
-                "default": "Click the Upload toggle at the top right to switch to Upload mode. This shows the HTML and View tabs on the right side."
+                "default": "If you are not in Upload mode, click the Upload toggle at the top right to switch into Upload mode. This shows the HTML and View tabs on the right side."
+            },
+            "_sourceCrop": {
+                "x": 87,
+                "y": 0,
+                "zoom": 7.8
             }
         },
         {
@@ -103,6 +163,11 @@
             "narration": {
                 "id": "gui.tutorials.htmlHello.category",
                 "default": "Click the HTML5 category in the blocks panel on the left. You will see all the blocks needed to build a web page."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 18,
+                "zoom": 2
             }
         },
         {
@@ -121,7 +186,12 @@
                 "category": "html5",
                 "blockType": "html5_html5_html"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 41,
+                "y": 54,
+                "zoom": 5.1
+            }
         },
         {
             "title": "Add the <head> Block",
@@ -139,12 +209,21 @@
                 "category": "html5",
                 "blockType": "html5_html5_head"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 41,
+                "y": 55,
+                "zoom": 3.1
+            }
         },
         {
             "title": "Add <title> and Set Text",
             "image": "/static/tutorials/steps/htmlHelloAddTitle.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "imageFocus": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.7
+            },
             "narration": {
                 "id": "gui.tutorials.htmlHello.addTitle",
                 "default": "Drag the title block inside the head block. Click the text field and type Hello Web. This text appears in the browser tab."
@@ -152,16 +231,31 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_title"
+            },
+            "_sourceCrop": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.7
             }
         },
         {
             "title": "Where the Title Actually Shows",
             "image": "/static/tutorials/steps/htmlHelloBrowserTab.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlHello.titleInBrowserTab",
                 "default": "The title tag is special. Its text does NOT appear on the page itself — it appears in the BROWSER TAB at the very top of the window. That's how you name your page."
-            }
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
         },
         {
             "title": "Add the <body> Block",
@@ -179,7 +273,12 @@
                 "category": "html5",
                 "blockType": "html5_html5_body"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 34,
+                "y": 54,
+                "zoom": 2.2
+            }
         },
         {
             "title": "Add a Heading",
@@ -196,6 +295,11 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_heading"
+            },
+            "_sourceCrop": {
+                "x": 32,
+                "y": 54,
+                "zoom": 2
             }
         },
         {
@@ -213,26 +317,50 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_paragraph"
+            },
+            "_sourceCrop": {
+                "x": 29,
+                "y": 56,
+                "zoom": 1.8
             }
         },
         {
             "title": "See the Generated HTML",
             "image": "/static/tutorials/steps/htmlHelloHTMLTab.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1.4},
+            "imageFocus": {
+                "x": 100,
+                "y": 8,
+                "zoom": 2.5
+            },
             "highlightUI": "htmlTab",
             "narration": {
                 "id": "gui.tutorials.htmlHello.htmlTab",
                 "default": "Click the HTML tab on the right panel. You can see the real HTML code that your blocks have generated!"
+            },
+            "_sourceCrop": {
+                "x": 100,
+                "y": 8,
+                "zoom": 2.5
             }
         },
         {
             "title": "Open Tag, Content, Close Tag",
             "image": "/static/tutorials/steps/htmlHelloHtmlTabAnnotated.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlHello.htmlTabAnnotated",
                 "default": "Look at the real HTML your blocks made. Every C-shape block became ONE tag pair — an open tag with angle brackets, your content in the middle, and a matching close tag with a slash. Same shape, every time."
-            }
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
         },
         {
             "title": "Preview Your Web Page",
@@ -246,6 +374,11 @@
             "narration": {
                 "id": "gui.tutorials.htmlHello.viewTab",
                 "default": "Click the View tab to see your web page rendered in the browser. Congratulations — you have built your first HTML page!"
+            },
+            "_sourceCrop": {
+                "x": 100,
+                "y": 0,
+                "zoom": 2.4
             }
         }
     ]

@@ -1,138 +1,347 @@
 {
+    "starterProject": "/static/tutorials/starters/html-upload-image.sb3",
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
-            "title": "Start with the Boilerplate",
-            "image": "/static/tutorials/steps/htmlUploadImageBoilerplate.webp",
+            "title": "Pictures Live in Your Project",
+            "image": "/static/tutorials/steps/htmlUploadImage_01_picturesLive.webp",
             "imageFocus": {
                 "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "y": 50,
+                "zoom": 1
             },
             "narration": {
-                "id": "gui.tutorials.html_upload_image.boilerplate",
-                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+                "id": "gui.tutorials.htmlUploadImage.picturesLive",
+                "default": "A webpage shows a picture by POINTING at a picture file. The file has to live somewhere your page can find it. Today you'll bring YOUR own pictures into your project — two different ways."
+            },
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
             "title": "Add a Heading",
-            "image": "/static/tutorials/steps/htmlUploadImageH1.webp",
+            "image": "/static/tutorials/steps/htmlUploadImage_02_heading.webp",
             "imageFocus": {
-                "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "x": 38,
+                "y": 54,
+                "zoom": 2.5
             },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.heading",
-                "default": "Drop a heading inside body and type \"My Pet\" — that's the title above your photo."
+                "default": "Drag a heading inside body and type My Pet — the title above your picture."
             },
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_heading"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 38,
+                "y": 54,
+                "zoom": 2.5
+            }
         },
         {
-            "title": "Add an <img> Block",
-            "image": "/static/tutorials/steps/htmlUploadImageImg.webp",
+            "title": "Add an Image Block",
+            "image": "/static/tutorials/steps/htmlUploadImage_03_img.webp",
             "imageFocus": {
-                "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "x": 39,
+                "y": 55,
+                "zoom": 2.2
             },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.dragImg",
-                "default": "Snap an img block after the heading. Right now it points at a placeholder picture — let's swap it for one of your own."
+                "default": "Snap an img block after the heading. It comes with a placeholder src — you'll point it at YOUR picture in a moment."
             },
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_img"
             },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 39,
+                "y": 55,
+                "zoom": 2.2
+            }
         },
         {
-            "title": "Click the Upload Image Button",
-            "image": "/static/tutorials/steps/htmlUploadImageUpload.webp",
+            "title": "Two Places to Get Pictures",
+            "image": "/static/tutorials/steps/htmlUploadImage_04_twoPlaces.webp",
             "imageFocus": {
                 "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "y": 50,
+                "zoom": 1
             },
             "narration": {
-                "id": "gui.tutorials.htmlUploadImage.uploadClick",
-                "default": "Up in the toolbar there's an Upload Image button — the icon with a picture and a plus. Click it. Your computer's file picker opens."
+                "id": "gui.tutorials.htmlUploadImage.twoPlaces",
+                "default": "Your picture lives in one of two places. Either it's a FILE on your computer — a photo, a drawing, anything. Or it's a sprite COSTUME already in your project. CodeSkool has ONE button that opens BOTH paths."
             },
-            "highlightUI": "uploadImageButton"
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
         },
         {
-            "title": "Pick Your Photo",
-            "image": "/static/tutorials/steps/htmlUploadImagePick.webp",
+            "title": "Open the Add Image Dialog",
+            "image": "/static/tutorials/steps/htmlUploadImage_05_openDialog.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 5,
+                "zoom": 5.9
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.openDialog",
+                "default": "Up in the toolbar, find the icon that looks like a picture with a plus on it — that's the Add Image button. Click it."
+            },
+            "highlightUI": "addImageButton",
+            "_sourceCrop": {
+                "x": 100,
+                "y": 5,
+                "zoom": 5.9
+            }
+        },
+        {
+            "title": "Two Tabs, One Button",
+            "image": "/static/tutorials/steps/htmlUploadImage_06_twoTabs.webp",
             "imageFocus": {
                 "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.twoTabs",
+                "default": "The dialog has TWO tabs at the top. From device picks files off your computer. From costumes picks pictures from your project's sprites. Whichever tab you choose, every picture saves as a dot p n g file your page can use."
+            },
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "From Device — Pick a File",
+            "image": "/static/tutorials/steps/htmlUploadImage_07_deviceTab.webp",
+            "imageFocus": {
+                "x": 57,
+                "y": 50,
+                "zoom": 1.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.deviceTab",
+                "default": "Make sure the From device tab is selected. Click Choose image files. Your computer's file picker opens."
+            },
+            "highlightUI": "addImageDevicePickButton",
+            "_sourceCrop": {
+                "x": 57,
+                "y": 50,
+                "zoom": 1.1
+            }
+        },
+        {
+            "title": "Pick Your Picture",
+            "image": "/static/tutorials/steps/htmlUploadImage_08_pickFile.webp",
+            "imageFocus": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.6
             },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.pickFile",
-                "default": "Pick any photo from your computer — your pet, your toy, a drawing — and confirm. CodeSkool saves it to your project."
+                "default": "Pick any picture from your computer — your pet, your toy, a drawing — and confirm. When you come back, the dialog shows your picture as a tile, ready to use."
+            },
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 30,
+                "y": 18,
+                "zoom": 2.6
+            }
+        },
+        {
+            "title": "Rename It",
+            "image": "/static/tutorials/steps/htmlUploadImage_09_rename.webp",
+            "imageFocus": {
+                "x": 63,
+                "y": 50,
+                "zoom": 1.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.rename",
+                "default": "Each tile has a name box. Type a short name — like my-pet. Use lowercase letters and dashes, no spaces. That's the name your page will use to find the picture."
+            },
+            "highlightUI": "addImageRenameField",
+            "_sourceCrop": {
+                "x": 63,
+                "y": 50,
+                "zoom": 1.1
+            }
+        },
+        {
+            "title": "Save It to Your Project",
+            "image": "/static/tutorials/steps/htmlUploadImage_10_addButton.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 74,
+                "zoom": 1.8
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.addButton",
+                "default": "Click Add image at the bottom. The dialog closes and CodeSkool saves your picture into your project as my-pet dot p n g."
+            },
+            "highlightUI": "addImageConfirmButton",
+            "_sourceCrop": {
+                "x": 50,
+                "y": 74,
+                "zoom": 1.8
             }
         },
         {
             "title": "Use Your Picture",
-            "image": "/static/tutorials/steps/htmlUploadImageImgSrc.webp",
+            "image": "/static/tutorials/steps/htmlUploadImage_11_src.webp",
             "imageFocus": {
-                "x": 50,
-                "y": 30,
-                "zoom": 1.6
+                "x": 37,
+                "y": 55,
+                "zoom": 2.2
             },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.setSrc",
-                "default": "In the img block, type the filename you just uploaded (like my-pet.jpg) into the src field. The picture you uploaded now points to your photo."
+                "default": "Click the src field on the img block. Type my-pet dot p n g — the same name you just used in the dialog. Your page now points at the picture you just uploaded."
             },
-            "validate": true
-        },
-        {
-            "title": "Add Alt Text",
-            "image": "/static/tutorials/steps/htmlUploadImageAlt.webp",
-            "imageFocus": {
-                "x": 50,
-                "y": 30,
-                "zoom": 1.6
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_img"
             },
-            "narration": {
-                "id": "gui.tutorials.htmlUploadImage.alt",
-                "default": "Type a short description into the alt field — \"A photo of my pet\". This shows up if the picture can't load and helps screen readers describe the image."
-            },
-            "validate": true
+            "validate": true,
+            "_sourceCrop": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.2
+            }
         },
         {
             "title": "See It on Your Page",
-            "image": "/static/tutorials/steps/htmlUploadImageView.webp",
+            "image": "/static/tutorials/steps/htmlUploadImage_12_view.webp",
             "imageFocus": {
-                "x": 75,
-                "y": 50,
+                "x": 100,
+                "y": 14,
                 "zoom": 1.3
             },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.view",
-                "default": "Click the View tab. Your actual picture is on your webpage. That's a real photo from YOUR computer rendered inside the browser."
+                "default": "Click the View tab. Your actual picture sits below the heading. That's a real photo from YOUR computer rendered inside the browser."
+            },
+            "highlightUI": "viewTab",
+            "_sourceCrop": {
+                "x": 100,
+                "y": 14,
+                "zoom": 1.3
             }
         },
         {
-            "title": "Two Kinds of Address",
-            "image": "/static/tutorials/steps/htmlUploadImageTwoAddresses.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "title": "The Other Path — From Costumes",
+            "image": "/static/tutorials/steps/htmlUploadImage_13_costumesIntro.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
-                "id": "gui.tutorials.htmlUploadImage.twoAddresses",
-                "default": "You have now seen TWO kinds of address. The image tutorial used a long web address starting with https:// — that works from anywhere on the internet. This time you typed just my-pet.jpg — that is a SHORT address that only works because the file lives in the SAME folder as your page. Long addresses for far-away pictures, short addresses for files you uploaded right here."
+                "id": "gui.tutorials.htmlUploadImage.costumesIntro",
+                "default": "Your project also has a sprite called Puppy with four costumes. ANY sprite costume can become a webpage picture — just one click away. Let's try it."
+            },
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         },
         {
-            "title": "Recap",
-            "image": "/static/tutorials/steps/htmlUploadImageFlow.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "title": "Open the Costumes Tab",
+            "image": "/static/tutorials/steps/htmlUploadImage_14_costumesTab.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 26,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.costumesTab",
+                "default": "Click the Add Image button again. This time switch to the From costumes tab at the top of the dialog. You'll see every costume from every sprite in your project."
+            },
+            "highlightUI": "addImageCostumesTab",
+            "_sourceCrop": {
+                "x": 50,
+                "y": 26,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Pick a Costume",
+            "image": "/static/tutorials/steps/htmlUploadImage_15_pickCostume.webp",
+            "imageFocus": {
+                "x": 54,
+                "y": 51,
+                "zoom": 1.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.pickCostume",
+                "default": "Click any puppy costume to select it — the tile gets a tick. Then click Add image at the bottom. CodeSkool saves it into your project as puppy-sit dot p n g."
+            },
+            "highlightUI": "addImageCostumeTile",
+            "_sourceCrop": {
+                "x": 54,
+                "y": 51,
+                "zoom": 1.1
+            }
+        },
+        {
+            "title": "Use the Costume on Your Page",
+            "image": "/static/tutorials/steps/htmlUploadImage_16_costumeSrc.webp",
+            "imageFocus": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlUploadImage.costumeSrc",
+                "default": "Click the src field on the img block again and replace the text with puppy-sit dot p n g. Switch to View. Now your page shows the puppy costume from your sprite — same img block, different file."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_img"
+            },
+            "validate": true,
+            "_sourceCrop": {
+                "x": 37,
+                "y": 55,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Recap — Two Paths, One Img Tag",
+            "image": "/static/tutorials/steps/htmlUploadImage_17_recap.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlUploadImage.recap",
-                "default": "You uploaded an image, named it, used it in img src, and saw it on your page. Anything you can take a photo of can now go on a webpage you make."
+                "default": "Two paths into your page. From device for your own files. From costumes for sprite pictures already in your project. Both end up as dot p n g files. The same img block uses both — just type the matching name into src."
+            },
+            "autoAdvance": true,
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]

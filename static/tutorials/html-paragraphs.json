@@ -1,25 +1,34 @@
 {
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
     "steps": [
         {
             "title": "Start with the Boilerplate",
             "image": "/static/tutorials/steps/htmlParagraphsBoilerplate.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 15,
+                "y": 16,
+                "zoom": 2.7
             },
             "narration": {
                 "id": "gui.tutorials.html_paragraphs.boilerplate",
                 "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            },
+            "_sourceCrop": {
+                "x": 15,
+                "y": 16,
+                "zoom": 2.7
             }
         },
         {
             "title": "Your First Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP1.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 36,
+                "y": 43,
+                "zoom": 2.4
             },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP1",
@@ -28,15 +37,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_paragraph"
+            },
+            "_sourceCrop": {
+                "x": 36,
+                "y": 43,
+                "zoom": 2.4
             }
         },
         {
             "title": "Add a Second Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP2.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 30,
+                "y": 38,
+                "zoom": 2.1
             },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP2",
@@ -45,15 +59,20 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_paragraph"
+            },
+            "_sourceCrop": {
+                "x": 30,
+                "y": 38,
+                "zoom": 2.1
             }
         },
         {
             "title": "Add a Third Paragraph",
             "image": "/static/tutorials/steps/htmlParagraphsP3.webp",
             "imageFocus": {
-                "x": 55,
-                "y": 50,
-                "zoom": 1.4
+                "x": 27,
+                "y": 34,
+                "zoom": 1.9
             },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.addP3",
@@ -62,29 +81,48 @@
             "highlightBlock": {
                 "category": "html5",
                 "blockType": "html5_html5_paragraph"
+            },
+            "_sourceCrop": {
+                "x": 27,
+                "y": 34,
+                "zoom": 1.9
             }
         },
         {
             "title": "See the Spacing",
             "image": "/static/tutorials/steps/htmlParagraphsView.webp",
             "imageFocus": {
-                "x": 75,
-                "y": 50,
-                "zoom": 1.3
+                "x": 100,
+                "y": 9,
+                "zoom": 2.6
             },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.viewTab",
                 "default": "Click the View tab. Look at the page — are your sentences separated into blocks? Do you see space between them?"
             },
-            "highlightUI": "viewTab"
+            "highlightUI": "viewTab",
+            "_sourceCrop": {
+                "x": 100,
+                "y": 9,
+                "zoom": 2.6
+            }
         },
         {
             "title": "Paragraphs Make Reading Easy",
             "image": "/static/tutorials/steps/htmlParagraphsSpacing.webp",
-            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
             "narration": {
                 "id": "gui.tutorials.htmlParagraphs.recap",
                 "default": "Each paragraph is a block of writing. The browser adds space between them so your text is easy to read. Use one paragraph for each idea."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
             }
         }
     ]
