@@ -1,4 +1,48 @@
 {
+  "DecisionTree": {
+    "name": "Decision Tree",
+    "description": "Send an animal down a tree of yes-or-no questions and watch the AI reach the right answer - then run it yourself.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/decision-tree.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "DecisionTree"
+  },
+  "PatternPlayground": {
+    "name": "Pattern Playground",
+    "description": "Tilt the line to split the two groups of dots - the AI sorts each dot by the side it lands on. Reach 100%, then watch it classify brand-new dots.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/pattern-playground.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "PatternPlayground"
+  },
+  "PromptLab": {
+    "name": "Prompt Lab",
+    "description": "Prompt engineering in action: ask the same AI a vague question, then a clear one, and watch the answer get better - rated up to 3 stars.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/prompt-lab.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "PromptLab"
+  },
+  "TowerOfHanoi": {
+    "name": "Tower of Hanoi",
+    "description": "Move the whole stack onto the last peg, one disk at a time - and never put a bigger disk on a smaller one.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/tower_of_hanoi.webp",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "TowerOfHanoi"
+  },
   "PythonTurtle": {
     "name": "Python Turtle",
     "description": "A colourful spiral drawn with the Turtle extension — the same program shown as blocks and as Python code.",
