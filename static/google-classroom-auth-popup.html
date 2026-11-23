@@ -1,0 +1,163 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signing in to Google Classroom</title><style>html, body { margin: 0; padding: 0; height: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      height: 100%; background: #f5f5f5;
+    }
+    .msg { color: #555; font-size: 15px; text-align: center; max-width: 360px; padding: 16px; }
+    .spinner {
+      width: 32px; height: 32px; border: 3px solid #ddd;
+      border-top-color: #4285f4; border-radius: 50%;
+      animation: spin 0.8s linear infinite; margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #status { margin-top: 8px; font-size: 13px; color: #888; word-break: break-all; }
+    .error { color: #c62828; font-weight: 500; }</style></head><body><div class="msg"><div class="spinner" id="spinner"></div><p id="label">Signing in to Google Classroom…</p><p id="status"></p></div><script>// PKCE-free implicit flow relay for Google Classroom OAuth.
+    //
+    // Why this file exists: CodeSkool ships with COOP:same-origin for Pyodide
+    // SharedArrayBuffer. gis (Google Identity Services) token client's popup
+    // flow polls popup.closed which reads as true immediately under COOP
+    // same-origin, so gis can never return a token on this origin. Firebase
+    // SSO hit the same wall and uses src/auth-popup.html as a same-origin
+    // relay that communicates via localStorage. This file is the equivalent
+    // for Google Classroom OAuth scopes.
+    //
+    // Flow (single popup, single window, never nested):
+    //   Phase 1 (fresh load, no URL fragment):
+    //     - navigate THIS window to Google's OAuth 2 authorize endpoint with
+    //       response_type=token and redirect_uri pointing back at this file
+    //   Phase 2 (redirect back with #access_token=... in fragment):
+    //     - parse token + expires_in + state from fragment
+    //     - verify state matches what we stored in localStorage
+    //     - write result to localStorage (main page polls and listens)
+    //     - close window
+
+    var CLIENT_ID = '147568153083-i7eidiin9u7b0oja7jcnhfevk1ump4ek.apps.googleusercontent.com';
+    var SCOPES = [
+      'https://www.googleapis.com/auth/classroom.coursework.me',
+      'https://www.googleapis.com/auth/classroom.coursework.students',
+      'https://www.googleapis.com/auth/classroom.courses.readonly',
+      'https://www.googleapis.com/auth/drive.file'
+    ].join(' ');
+
+    var RESULT_KEY = 'gclassroom-oauth-result';
+    var STATE_KEY = 'gclassroom-oauth-state';
+
+    function setStatus(msg, isError) {
+      var el = document.getElementById('status');
+      if (el) {
+        el.textContent = msg;
+        if (isError) {
+          el.className = 'error';
+          var s = document.getElementById('spinner');
+          if (s) s.style.display = 'none';
+          var l = document.getElementById('label');
+          if (l) l.textContent = 'Sign-in failed';
+        }
+      }
+    }
+
+    function randomString(length) {
+      var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var values = new Uint8Array(length);
+      crypto.getRandomValues(values);
+      var result = '';
+      for (var i = 0; i < length; i++) {
+        result += chars[values[i] % chars.length];
+      }
+      return result;
+    }
+
+    function sendResult(data) {
+      try {
+        // Two-step write forces the 'storage' event to fire in the opener
+        // even if the same key was written on a previous attempt.
+        localStorage.removeItem(RESULT_KEY);
+        localStorage.setItem(RESULT_KEY, JSON.stringify({ts: Date.now(), data: data}));
+      } catch (_e) { /* nothing else we can do */ }
+    }
+
+    function closeAfter(ms) {
+      setTimeout(function () {
+        try { window.close(); } catch (_e) {}
+      }, ms);
+    }
+
+    function isReturnFromOAuth() {
+      return location.hash.indexOf('access_token=') > -1 ||
+             location.hash.indexOf('error=') > -1 ||
+             location.search.indexOf('error=') > -1;
+    }
+
+    function startPhase1() {
+      setStatus('Preparing Google sign-in…');
+      var state = randomString(32);
+      try { localStorage.setItem(STATE_KEY, state); } catch (_e) {}
+
+      var redirectUri = location.origin + location.pathname;
+      var params = new URLSearchParams({
+        client_id: CLIENT_ID,
+        redirect_uri: redirectUri,
+        response_type: 'token',
+        scope: SCOPES,
+        state: state,
+        include_granted_scopes: 'true',
+        prompt: 'consent'
+      });
+      location.href = 'https://accounts.google.com/o/oauth2/v2/auth?' + params.toString();
+    }
+
+    function startPhase2() {
+      setStatus('Finishing sign-in…');
+
+      // OAuth 2 implicit returns the token in the URL fragment.
+      var hash = (location.hash || '').replace(/^#/, '');
+      var search = (location.search || '').replace(/^\?/, '');
+      var params = new URLSearchParams(hash || search);
+
+      var err = params.get('error');
+      if (err) {
+        setStatus('Google returned: ' + err, true);
+        sendResult({type: 'error', error: err, description: params.get('error_description') || ''});
+        closeAfter(2500);
+        return;
+      }
+
+      var accessToken = params.get('access_token');
+      var expiresIn = parseInt(params.get('expires_in') || '3600', 10);
+      var state = params.get('state');
+
+      var expectedState = null;
+      try { expectedState = localStorage.getItem(STATE_KEY); } catch (_e) {}
+      try { localStorage.removeItem(STATE_KEY); } catch (_e) {}
+
+      if (!accessToken) {
+        setStatus('No access token in response', true);
+        sendResult({type: 'error', error: 'no_token', description: 'No access_token returned'});
+        closeAfter(2500);
+        return;
+      }
+      if (!expectedState || state !== expectedState) {
+        setStatus('State mismatch — possible CSRF', true);
+        sendResult({type: 'error', error: 'state_mismatch', description: 'OAuth state parameter did not match'});
+        closeAfter(2500);
+        return;
+      }
+
+      sendResult({
+        type: 'token',
+        access_token: accessToken,
+        expires_in: expiresIn,
+        scope: params.get('scope') || ''
+      });
+      // Clean the URL so refresh does not replay Phase 2.
+      try { history.replaceState({}, '', location.pathname); } catch (_e) {}
+      setStatus('Done. Closing…');
+      closeAfter(250);
+    }
+
+    if (isReturnFromOAuth()) {
+      startPhase2();
+    } else {
+      startPhase1();
+    }</script></body></html>

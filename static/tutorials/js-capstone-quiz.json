@@ -1,0 +1,203 @@
+{
+    "steps": [
+        {
+            "title": "Putting it all together",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_01_puttingTogether.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.puttingTogether",
+                "default": "Capstone day. Today you build a real quiz. Arrays, functions, the DOM, click events — all wired together. By the end you have a working quiz that scores the player."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.pageReady",
+                "default": "The page sprite already has a p with id q, an input with id a, a button with id next and text Next, and a p with id score and text Score zero. You edit the script sprite to wire the quiz."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "The questions list",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_04_questionsList.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.questionsList",
+                "default": "A const named questions. Inside, an array of three objects. Each object has a question and an answer property. Two plus two — four. Capital of France — Paris. Legs on a spider — eight. Arrays of objects is how real apps store data."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "State and references",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_05_stateRefs.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.stateRefs",
+                "default": "A let named index with value zero. A let named score with value zero. Four const blocks — qEl, aEl, nextBtn, scoreEl. Each uses find element by id with the matching id."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Define showQuestion",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_06_defineShow.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.defineShow",
+                "default": "Drag a function block. Name it showQuestion. No parameters. It draws the current question on the page."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "End-of-quiz guard",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_07_endGuard.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.endGuard",
+                "default": "Inside showQuestion. An if block. Condition — index is not less-than the length of questions. Inside — set text of qEl to Quiz over. Set style display of aEl to none. Same for nextBtn. Then a return. return exits the function early."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Draw the current question",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_08_drawCurrent.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.drawCurrent",
+                "default": "After the if, still inside showQuestion. A set text of block. Element is qEl. Text is the question text at position index from the questions array. Then a set text of block. Element is aEl. Text is empty. The input clears between questions."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Wire the Next button",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_09_wireNext.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.wireNext",
+                "default": "Drag a when click on block. Element is nextBtn. Event is click. The body runs on every Next click."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Check the answer",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_10_checkAnswer.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.checkAnswer",
+                "default": "Inside the click body. An if block. Condition — the value of aEl made lowercase triple-equals the answer at position index made lowercase. If true, change score by one. Lowercase makes the check forgiving."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Show score and advance",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_11_advance.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.advance",
+                "default": "After the if, still inside the click body. Set text of scoreEl to a join of Score, a space, and score. Change index by one. Then call showQuestion. The next question appears."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "First call to start the quiz",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_12_firstCall.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.firstCall",
+                "default": "Outside the listener, at the bottom of the script, add one call to showQuestion. That draws the first question when the page loads. Without it, the page starts blank."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and play",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_13_saveAndPlay.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.saveAndPlay",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. Type an answer. Click Next. The score updates and the next question appears. Three rounds, then Quiz over."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "The shape of every list app",
+            "image": "/static/tutorials/steps/jsCapstoneQuiz_14_listAppShape.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsCapstoneQuiz.listAppShape",
+                "default": "A list of data. A function that draws one item. A button that advances. That shape powers Twitter showing tweets, Spotify showing songs, every comment thread on every site. Capstone done — you can now build real JavaScript apps."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

@@ -1,0 +1,177 @@
+{
+    "steps": [
+        {
+            "title": "What a function actually is",
+            "image": "/static/tutorials/steps/pyBuiltins_01_functionVendingMachine.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.functionConcept",
+                "default": "We've been using the word FUNCTION for a while — print, int, input, len. Let's nail down what one actually is. A function is like a tiny vending machine: you give it something (the input), it does its job inside, and sometimes it gives you something back (the output). print takes a value and shows it on the terminal. int takes text and gives back a number. len takes a list and gives back its size. Same shape — input, job, output — but each does a different job. Today we'll meet a whole shelf of these built-in machines."
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Tools Python gives you for free",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.intro",
+                "default": "Python comes with dozens of small functions ready to use — no import needed. Today we'll meet the most useful ones for working with lists: sum, max, min, len, sorted, type. They each do one specific job, and together they're enough to write a real little stats program in five lines."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Make a list of numbers",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_02_list.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.list",
+                "default": "Type:\n\nnumbers = [5, 8, 2, 10]\n\nprint(\"Numbers:\", numbers)\n\nThe square brackets here create a LIST — a single name that holds many values in order. numbers holds five-eight-two-ten as one bundle. Lists are everywhere in Python: shopping items, quiz questions, scores, friend names. The first print shows the whole list."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "sum, max, min — three at once",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_03_summary.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.summary",
+                "default": "Type three more lines:\n\nprint(\"Total:\", sum(numbers))\nprint(\"Highest:\", max(numbers))\nprint(\"Lowest:\", min(numbers))\n\nsum adds every number in the list. max returns the biggest, min the smallest. All three are standard Python — they work on any list of numbers, no matter how long. Imagine writing a for loop yourself for each — these save you the work."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "len counts how many",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_04_len.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.len",
+                "default": "Type:\n\nprint(\"Count:\", len(numbers))\n\nlen tells you how many things are in a list. Here it'll print 4, because the list has four numbers. len also works on strings — len(\"Python\") is 6 — and on most other Python collections."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "sorted — make a new ordered list",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_05_sorted.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.sorted",
+                "default": "Type:\n\nprint(\"Sorted:\", sorted(numbers))\n\nsorted gives you back a NEW list, smallest to largest, without changing the original. After this line numbers is still [5, 8, 2, 10] — the print just shows [2, 5, 8, 10]. Important: sorted does not modify; it returns a new sorted copy."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "sorted — make a new ordered list — Visual",
+            "image": "/static/tutorials/steps/pyBuiltins_05_sortedReturnsNew.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.sortedReturnsNew",
+                "default": "sorted gives back a NEW list in order, smallest to largest. The original list stays untouched — sorted returns a fresh sorted copy."
+            }
+        },
+        {
+            "title": "type — what KIND of value is this?",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_06_type.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.type",
+                "default": "Type the last line:\n\nprint(\"Type:\", type(numbers))\n\ntype shows what KIND of thing a value is — Python prints something like <class 'list'>. Useful when debugging — if a print shows a string when you expected a number, type tells you so. type works on any value: type(5) is int, type(\"hi\") is str, type(True) is bool. One more thing — Python is what's called DYNAMICALLY TYPED, which is a fancy way of saying: a variable doesn't lock into one type. The same name `x` can hold a number now and text later. Python tracks the TYPE on the value, not on the box."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 9
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {"x": 30, "y": 40, "zoom": 1.8}
+        },
+        {
+            "title": "type — what KIND of value is this? — Visual",
+            "image": "/static/tutorials/steps/pyBuiltins_06_typeBins.webp",
+            "imageFocus": {"x": 50, "y": 50, "zoom": 1},
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.typeBins",
+                "default": "type tells you what KIND of value something is — int, str, bool, list. Super useful for debugging when a value isn't what you expected."
+            }
+        },
+        {
+            "title": "Run all six",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_07_terminal.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.run",
+                "default": "Click Run. The terminal shows six lines: the original list, the total 25, the highest 10, the lowest 2, the count 4, the sorted version, and the type. Six built-in tools, one short program."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Try with your own data",
+            "image": "/static/tutorials/steps/pythonBuiltInFunctions_08_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonBuiltInFunctions.recap",
+                "default": "Change numbers to your test scores, your daily steps, the number of likes on your last 5 posts. The same six tools work on any list. Pair them with strings, files, scores, votes — anywhere you have a bundle of values, these built-ins save you a loop."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+  "title": "Forest Rescue",
+  "project": "ForestRescue",
+  "environment": "forest-trail",
+  "variables": {
+    "Rescued": 0
+  },
+  "assets": [
+    {
+      "name": "Forest Trail Scenery",
+      "glbURL": "static/models/3d/world-content/environments/forest-trail.glb",
+      "scale3d": 22000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Forest Trail"
+    },
+    {
+      "name": "Forest Ranger",
+      "glbURL": "static/models/3d/world-content/sprites/forest-ranger.glb",
+      "scale3d": 220,
+      "positionScratch": {
+        "x": -2340,
+        "y": 3,
+        "z": 2160
+      },
+      "library": "Forest Ranger"
+    },
+    {
+      "name": "Hiker 1",
+      "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
+      "scale3d": 210,
+      "positionScratch": {
+        "x": -1440,
+        "y": 3,
+        "z": 1080
+      },
+      "library": "Hiker"
+    },
+    {
+      "name": "Hiker 2",
+      "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
+      "scale3d": 210,
+      "positionScratch": {
+        "x": -2340,
+        "y": 3,
+        "z": -720
+      },
+      "library": "Hiker"
+    },
+    {
+      "name": "Hiker 3",
+      "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
+      "scale3d": 210,
+      "positionScratch": {
+        "x": 2160,
+        "y": 3,
+        "z": -360
+      },
+      "library": "Hiker"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 150,
+    "where": "first block after the green flag of Forest Ranger"
+  }
+}

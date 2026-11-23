@@ -1,0 +1,686 @@
+{
+    "gui.tutorials.blinkLed.boardMenu": {
+        "sha256": "2aa47cffd6c1265e27e42db469d06cce08539fd965018175e780485b428587ea",
+        "text_len": 74,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 21696,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.boardManager": {
+        "sha256": "7df8ad75de134df530174444895d3cc50030c2587fc779e5ca05437a5955cb1f",
+        "text_len": 81,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 24576,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.searchUno": {
+        "sha256": "2bed829c1ffcd1e3586777e86b455f22e8e71b7008ca803aceb25da32247243b",
+        "text_len": 49,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 18432,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.selectUno": {
+        "sha256": "b0803b909747dee56f55c516b026e03e4a39ba82c6c51a3a838de1cc696b3995",
+        "text_len": 36,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 15456,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.addBoard": {
+        "sha256": "4814ff1820e110941bfec12076691d56aa4966a317eb92c11556ddb569d1a479",
+        "text_len": 68,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 17952,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.dismissConnection": {
+        "sha256": "47fce6c844c298473558759b4598ba4b8a4c171d37b1227cae5bc1ff553101ce",
+        "text_len": 122,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 34944,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.uploadMode": {
+        "sha256": "a80e18b69df4ccff6ca4da507ff0401aba76fe0ddbf2aa246ce5bbc56bbff839",
+        "text_len": 122,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 31872,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.findSetup": {
+        "sha256": "48ff11171b2680c6bbb794498132df36fe43bfc29684b3d983d772ee3c130e51",
+        "text_len": 123,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 36576,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.dragSetup": {
+        "sha256": "569ded3f137c61ee8a93cf7ba83d6af6a7daed838a81c641a12688d586a50a82",
+        "text_len": 160,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 47136,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.addPinMode": {
+        "sha256": "9febdd3f0a27148f1600ccc7e2d8888ef065f6dc4fd84f4d1e84e07a6aba43b3",
+        "text_len": 135,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 47424,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.dwHigh": {
+        "sha256": "8ee9c6144926cb61788c124b4fc2710309fc1294a464cb150c5f2b1d3152efed",
+        "text_len": 92,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 36384,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.delay1": {
+        "sha256": "f5d7e92b303cee4b6e23b92eac7d236169e04660b1c23ea889a6d3e748085e50",
+        "text_len": 120,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 35424,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.dwLow": {
+        "sha256": "5ee32fba3dc9ad830882de94a95adf78d746a4769402851d33f049bbfff8a59e",
+        "text_len": 90,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 35232,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.delay2": {
+        "sha256": "0f2fb32538662e81bfcdd9b460966b52cb0f3dac02efbd9c8b98f11a6a688482",
+        "text_len": 136,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 44736,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.simulator": {
+        "sha256": "37f32b9a61795bcae9645fec29055bc657297a5421a662e48adebafd6421e252",
+        "text_len": 104,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 32256,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.openPicker": {
+        "sha256": "a577dcb79a5b13b2429338d2119ecda9df29a14c81e0cbb5dcf73da5ca05682e",
+        "text_len": 66,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 19872,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.selectLed": {
+        "sha256": "3d2152bca69faa2f0ec3d93550c2579fa30162ef46009c6635b9a0f250e8f599",
+        "text_len": 57,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 17952,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.pinMapping": {
+        "sha256": "7968bb9a9e65e1b77fe07eac015e9e9cd715f3be20e237d11bc5413c3c33e52d",
+        "text_len": 128,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 41856,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.ledAdded": {
+        "sha256": "c8b7f0b1da126e0f01f73f3f2b5bde5ca1d2fcf4ab144f831281322354ed4866",
+        "text_len": 86,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 26496,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.clickStart": {
+        "sha256": "e3f7561615373d55cfc0c7678477c408c8812fdff80ee3426db0c66358d52ef9",
+        "text_len": 107,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 27936,
+        "generated_at": "2026-04-24T12:34:21.434547+00:00"
+    },
+    "gui.tutorials.blinkLed.compiling": {
+        "sha256": "38762f0f4b6c8bed4005f91d742d93b1edb022f9ed391628c7cffdd725e3e14a",
+        "text_len": 119,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 33504,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.blinkLed.running": {
+        "sha256": "9ef3861b3a85ee9bf1c8f99cb592d05cdeb898a092619b1a4bdc27ed8686439e",
+        "text_len": 157,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 45216,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addExtension": {
+        "sha256": "9ad5f0e7394b46882fe951b77434303b69d0541991e47d0ac81ce4632d6dbbd6",
+        "text_len": 88,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 27072,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.progFilter": {
+        "sha256": "ec1323f0e2f8fc4c4a7d99c266fbd07e028a76df6510f1c7523f29d80e531987",
+        "text_len": 88,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 32832,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.selectHtml5": {
+        "sha256": "61bb1ee468f67beb7a5e8b15ad90c65d3902501b8228eb9be99309989e3b1d05",
+        "text_len": 128,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 39936,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.uploadMode": {
+        "sha256": "291ed9f1e91dc313c946df750ba9dfc7f9ea2b8e182425c757408bbec3157758",
+        "text_len": 125,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 38592,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.category": {
+        "sha256": "efc1074c94f21c6463f1a124ba68a54c2b452a9257f5fa298cb3b7817673f92a",
+        "text_len": 112,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 30912,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.dragHtml": {
+        "sha256": "a1797068ebdc708947a5eabb66c6b3ac0cbaa0311245d260b7c32793c8a0e2e9",
+        "text_len": 112,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 42912,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addHead": {
+        "sha256": "39f0298cb8bb6d6f66d515ad34ea3bff4a961d4d75ea293ac4bca18930852611",
+        "text_len": 98,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 31104,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addTitle": {
+        "sha256": "1209c716b7ecd04fb4ebfb574ca461fbb25c51ef9ad4a50686eeeb5805b2b84a",
+        "text_len": 118,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 35232,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addBody": {
+        "sha256": "06ffd3e3fa0cd0f32a80895f1eac8a902497e89b82bbed0bcddabd3d9a113eb0",
+        "text_len": 99,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 28704,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addH1": {
+        "sha256": "69e65a733224d0fe42526d3d0088bf039771bbcc25fb0dbe7c39df74ca8c08c7",
+        "text_len": 108,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 36096,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.addParagraph": {
+        "sha256": "e8c3f5c24bfb06a42fd198eb8779a681bb12f58e0df5b3698866fbcfa87f3478",
+        "text_len": 113,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 36384,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.htmlTab": {
+        "sha256": "ecd92eefd08e8939349c0deed0a83f1b2b7db02c9e0f6fc0d0d36228f338513f",
+        "text_len": 94,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 37536,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.htmlHello.viewTab": {
+        "sha256": "6a1262a64c70dea240064b971c953b1f9ae06361c4a8db0b7fcb4f59bc0e88f4",
+        "text_len": 133,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 36096,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.workspace": {
+        "sha256": "d9277302791da5b63734227c0e9b811fbf7e1a2b7d7963f0e6e65001aa2bfea4",
+        "text_len": 369,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 102336,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.typeSay": {
+        "sha256": "aa5f6aea8cdff387b4d721e39ccd2e4092f6d68cc3ac1e0041b37da5d99f350d",
+        "text_len": 480,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 130272,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.runSay": {
+        "sha256": "18c56a3a9175d4c6cda34fd4422050d9d027bba64270f2d20943347d146467b1",
+        "text_len": 384,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 99456,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.typePrint": {
+        "sha256": "a7c402092145fee17d9f441b6310b3485ebebef6641e33104d36b75d36c74636",
+        "text_len": 375,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 109152,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.terminal": {
+        "sha256": "afda31313ed624ea91ee06b6290cb9152fd2296f772dc7f9e6b1a62e32db032d",
+        "text_len": 368,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 99264,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.runBoth": {
+        "sha256": "cc1b14d8a3d372a98cce13014b5c09dc0b48d5232a2b384d1da095718788d807",
+        "text_len": 369,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 107136,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.pythonHello.recap": {
+        "sha256": "b8f0968a90c7cd23b2f8f2e11babc4110fb387eccad736eb5e65d676b10631cb",
+        "text_len": 407,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 111264,
+        "generated_at": "2026-04-24T11:54:26.948594+00:00"
+    },
+    "gui.tutorials.jsHello.threeFriends": {
+        "sha256": "70769b51384a227f0ccd5c9bc697862804da45b298676d1bb3f7acc666c6743a",
+        "text_len": 270,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 99390,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.twoWays": {
+        "sha256": "10ad71d51297cecb5dc5134ebf003ea995252359a2857b5e2424184c0a08a372",
+        "text_len": 285,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 88160,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.addExtension": {
+        "sha256": "61075c35c99ec6843bf609249abf4da1e8a76283e8fd819a65a2b8275fb5d3a8",
+        "text_len": 185,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 56420,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.progFilter": {
+        "sha256": "dddcc3db784e23c0d783441219429390de21ec23244783e42ee6d091d6bcf3d2",
+        "text_len": 198,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 72680,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.selectJs": {
+        "sha256": "2a39afa569bb50060e4cf15bbb1d4eeeb34dff8dfdba32f3cb4b54a6b150ef45",
+        "text_len": 226,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 66703,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.uploadMode": {
+        "sha256": "0b8024d41d0009299833899c18ea3bb04de720e4f78a1ecb68e228b21e948db4",
+        "text_len": 282,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 87669,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.jsCategory": {
+        "sha256": "9b0dd54213fe19da49f05fc841b53544bd61f38cbdb49d91936370a7d49ce2de",
+        "text_len": 325,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 95402,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.dragHat": {
+        "sha256": "4d78e77b6abd188b2c8a0238190bc5f50bc9963528364de74ec764bd949437b6",
+        "text_len": 366,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 109792,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.dragLog": {
+        "sha256": "9b667693600fbe7410c5bbe5211ec7ab047a21eb62bdbca13bee023622a43169",
+        "text_len": 275,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 83226,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.typeMessage": {
+        "sha256": "d11289a8b299477913410dd53012ad9e6b4dac7c22dcfe6080ea005d04d672ec",
+        "text_len": 500,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 165198,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.codePanel": {
+        "sha256": "38ecd0721f19d0fb85d51f4bb5d3f9ab178c78520c95e50e17b6248bc209c3c1",
+        "text_len": 408,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 115262,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.clickRun": {
+        "sha256": "95c0630d2d9a87656e576a1e4aa9e9de921090375f5f8077537c9192026effd0",
+        "text_len": 292,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 95382,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.openConsole": {
+        "sha256": "c2fe73eac982e409e3893c5d73ccddb3a7ec5f78e2fa8fd2fd041134ea01994b",
+        "text_len": 218,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 75632,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.consoleResult": {
+        "sha256": "c2c15ec1491e09e080956f011e1414ef821ccae7ee86c530d6c53a7d5c7528ae",
+        "text_len": 205,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 63770,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.dragAlert": {
+        "sha256": "09f82ffe21b598a9000e3d89f32f447e0c9a2916373cb2d697b8886b4fe51319",
+        "text_len": 269,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 90320,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.alertPops": {
+        "sha256": "b44ca29ca608b0264cf5c789142dbde9ffa1b0121f3c3379ac0237a5db751230",
+        "text_len": 356,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 116574,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHello.twoVoices": {
+        "sha256": "97a35a7f4630b50b032a77009f3ab118394e3215330b322d2107ed03a97aa837",
+        "text_len": 384,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 113592,
+        "generated_at": "2026-05-14T03:53:56.807528+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.buildPage": {
+        "sha256": "40c93dccc4f11bed697db2ba6b34b1731a63decf5cdb333d4086540adf7118b1",
+        "text_len": 174,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 81369,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickPage": {
+        "sha256": "e24ccb9687a15a5381d74dfdd0c7d2d270d2f022a6c52a3b02bbe57640d1e337",
+        "text_len": 183,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 144671,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickScript": {
+        "sha256": "8361e52ec61a6b03c9444a389e7443036330a5308b0da1112c757328efd40686",
+        "text_len": 210,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 77274,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.grabAndChange": {
+        "sha256": "f51c0354eb64363aa168cc02ad1f91aebbc88e33b0b984549640313b231e73a9",
+        "text_len": 324,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 122949,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.lookAtSprites": {
+        "sha256": "ff00675316fffddfdb44f5b19ac872b602d809d4b2102be8e0208794dbe2f36b",
+        "text_len": 238,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 88175,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openIndex": {
+        "sha256": "e580203a438799df45f44a99ae6c22e950b22262dfcd3ea62ecc692beeed4b84",
+        "text_len": 174,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 74387,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.patternForever": {
+        "sha256": "e418da9fa3831bf0393efc094f0b26a05c5084c64cfc09498571c608fb9c9aed",
+        "text_len": 329,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 117045,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.savePage": {
+        "sha256": "d34b586816bbdf158db1f739af7606814c530c621967d2fc2231dcc17f5d9568",
+        "text_len": 112,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 52045,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.saveScript": {
+        "sha256": "1765ed3e994c653b526ad68784cc822b94fba7dbec65bd96c041a7362cf54990",
+        "text_len": 161,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 61240,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.twoFiles": {
+        "sha256": "34d8b132977a0654b139a1cb1b145494aedda5153748def74b13ff58beddfa9c",
+        "text_len": 385,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 130739,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.oneSpriteOneFile": {
+        "sha256": "95567b6e9c9c4c847c3efe48047a4de3c1424fe0d663ba378868cbf579119158",
+        "text_len": 328,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 121992,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openSwitcher": {
+        "sha256": "c2505d40fc3099b9e14754bdc905460a46db8dc3c21b61e05dadd420e0c10fb0",
+        "text_len": 208,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 64590,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openHtmlCategory": {
+        "sha256": "0563e8594adb72a42f9d716207f5d6431664b3b5ee44b4b2769154f5b1cb5680",
+        "text_len": 170,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 81873,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.openJsCategory": {
+        "sha256": "58c6c3e29edaba5978dd20b77581ed6757c969df69e5e1bd7a9ff39b5100fc87",
+        "text_len": 157,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 54753,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.backToPage": {
+        "sha256": "828cb14e95ccc3b7165e560df592deb22b2175ace2e14dd19d010dc3d136cc8a",
+        "text_len": 267,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 92428,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.clickViewTab": {
+        "sha256": "3523542f6e7ea2c8569852adcf6f4dda3286b096cc7be5d444b7e2587ec7d13d",
+        "text_len": 222,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 93643,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    },
+    "gui.tutorials.jsHtmlAndJs.seePage": {
+        "sha256": "eff2a81be3a16117ff0d1b20709bbe5801c7ba43aa928db7d0695c4efdf5f98b",
+        "text_len": 172,
+        "voice": "vi-VN-Chirp3-HD-Laomedeia",
+        "rate": 0.85,
+        "language_code": "vi-VN",
+        "bytes": 53113,
+        "generated_at": "2026-05-15T07:38:09.657060+00:00"
+    }
+}

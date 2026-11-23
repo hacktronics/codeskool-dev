@@ -1,0 +1,132 @@
+{
+    "steps": [
+        {
+            "title": "Labels, not positions",
+            "image": "/static/tutorials/steps/jsObjects_01_labelsNotPositions.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.labelsNotPositions",
+                "default": "Scratch lists are positional — item one, item two, item three. JavaScript has another shape called an OBJECT. Inside, each value has a LABEL — player dot name, player dot score, player dot level. Scratch has nothing like this."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Make a player object",
+            "image": "/static/tutorials/steps/jsObjects_02_makePlayer.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.makePlayer",
+                "default": "Make an object called player with three pairs — name is Riya, score is eighty-five, level is three. Each pair is a label and a value. In JS this writes as curly braces with key colon value pairs inside."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Read with a dot",
+            "image": "/static/tutorials/steps/jsObjects_03_readWithDot.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.readWithDot",
+                "default": "Log property name of player. Then property score of player. In real JS, this is player dot name and player dot score. Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Open the console pane",
+            "image": "/static/tutorials/steps/jsObjects_03a_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.openConsole",
+                "default": "Click the Console button next to Run. You see Riya and eighty-five. The property block reads a value by its label."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Dot versus bracket",
+            "image": "/static/tutorials/steps/jsObjects_04_dotVsBracket.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.dotVsBracket",
+                "default": "Arrays reach in by number. Objects reach in by name. Pick array for ordered same-shape data. Pick object for one labelled thing with named parts."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Update a property",
+            "image": "/static/tutorials/steps/jsObjects_05_updateProperty.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.updateProperty",
+                "default": "Set property score of player to ninety. Log player. Click Run. The whole object prints with score now ninety. The other properties are unchanged."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Bracket form",
+            "image": "/static/tutorials/steps/jsObjects_06_bracketForm.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.bracketForm",
+                "default": "There is another way to reach a property — square brackets with the name in quotes. player open-bracket name close-bracket. Brackets help when the property name is in a variable."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "When to use which",
+            "image": "/static/tutorials/steps/jsObjects_07_whenToUseWhich.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsObjects.whenToUseWhich",
+                "default": "Dot when you know the name in advance. Brackets when the name comes from a variable. Most of the time, dot."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "The bundle of related stuff",
+            "image": "/static/tutorials/steps/jsObjects_08_bundleRelated.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsObjects.bundleRelated",
+                "default": "Objects bundle related values together. Every game character, every quiz question, every JSON response from a server — all objects in real JavaScript."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

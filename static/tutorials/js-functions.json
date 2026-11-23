@@ -1,0 +1,104 @@
+{
+    "steps": [
+        {
+            "title": "A name for a chunk of code",
+            "image": "/static/tutorials/steps/jsFunctions_01_nameForChunk.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.nameForChunk",
+                "default": "You already use Make-a-Block in Scratch to wrap reusable code. JavaScript calls these FUNCTIONS. Same idea — define once, call many times — different word."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Define the function",
+            "image": "/static/tutorials/steps/jsFunctions_02_defineFunction.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.defineFunction",
+                "default": "Drag a function block. Name it greet. Leave the inputs empty. Inside the body, log Hello with an exclamation mark. Just like Scratch's define-greet hat block."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Defining is not running",
+            "image": "/static/tutorials/steps/jsFunctions_03_definingNotRunning.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.definingNotRunning",
+                "default": "Click Run. Nothing prints. You defined the function but never called it. Same as Scratch — a define hat block on its own does nothing until something calls it."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Call it",
+            "image": "/static/tutorials/steps/jsFunctions_04_callIt.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.callIt",
+                "default": "Drag a call block for greet — three times in a row."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Run and see",
+            "image": "/static/tutorials/steps/jsFunctions_05_runAndSee.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.runAndSee",
+                "default": "Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Open the console pane",
+            "image": "/static/tutorials/steps/jsFunctions_05a_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.openConsole",
+                "default": "Click the Console button next to Run. Hello prints three times. Three calls, one definition."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Wrap repetition",
+            "image": "/static/tutorials/steps/jsFunctions_06_wrapRepetition.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsFunctions.wrapRepetition",
+                "default": "Same rule as Scratch — anything you write twice belongs in a function. Real programs are mostly small functions calling other functions."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

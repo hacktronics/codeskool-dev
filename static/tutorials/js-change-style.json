@@ -1,0 +1,189 @@
+{
+    "steps": [
+        {
+            "title": "Restyle live",
+            "image": "/static/tutorials/steps/jsChangeStyle_01_restyleLive.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.restyleLive",
+                "default": "In Scratch you change a sprite's costume or colour to restyle it live. On a webpage you change CSS. Two ways from JavaScript — set a single style, or add a CSS class. Both work."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Three sprites this time",
+            "image": "/static/tutorials/steps/jsChangeStyle_02_threeSprites.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.threeSprites",
+                "default": "Today the sprite selector has three. page already has the h1 with id title and the p with id message and a link to style.css. style is the CSS sprite. script is the JS sprite. You edit script first, then style."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsChangeStyle_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Empty workspace ready."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the title",
+            "image": "/static/tutorials/steps/jsChangeStyle_04_grabTitle.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.grabTitle",
+                "default": "Drag the script hat. Add a const named title with find element by id and the text title."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Set the color",
+            "image": "/static/tutorials/steps/jsChangeStyle_05_setColor.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.setColor",
+                "default": "Drag a set style block. Property is color. Element is title. Value is tomato. Behind the scenes this is title dot style dot color equals tomato."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Property names use camelCase",
+            "image": "/static/tutorials/steps/jsChangeStyle_06_camelCase.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.camelCase",
+                "default": "Small gotcha. CSS uses dashes — font-size, background-color. JavaScript cannot have dashes in names, so they become fontSize, backgroundColor — camelCase. The browser still understands."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Set a font size",
+            "image": "/static/tutorials/steps/jsChangeStyle_07_setFontSize.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.setFontSize",
+                "default": "Add another set style block. Property is fontSize. Element is title. Value is 48px. The heading will grow when you save and open the page."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Add a CSS class",
+            "image": "/static/tutorials/steps/jsChangeStyle_08_addClass.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.addClass",
+                "default": "Add a const named message with find element by id and the text message. Drag a class on element block. Action is add. Class name is highlight. Element is message."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Click the style sprite",
+            "image": "/static/tutorials/steps/jsChangeStyle_09_clickStyle.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.clickStyle",
+                "default": "Click the style sprite. The workspace switches to CSS blocks. Same project — just a different file."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Define the highlight class",
+            "image": "/static/tutorials/steps/jsChangeStyle_10_defineHighlight.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.defineHighlight",
+                "default": "Drop a rule for the highlight class. Background yellow, padding ten pixels. The CSS rule waits in style.css for the JS to add the class."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save both and view",
+            "image": "/static/tutorials/steps/jsChangeStyle_11_saveAndView.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.saveAndView",
+                "default": "Click Save on the style sprite. Default name is style, extension .css. Click Save. Switch back to script and Save it too. Then View Files, open index.html. The h1 is tomato and big, and the message paragraph glows yellow."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Why class wins for many styles",
+            "image": "/static/tutorials/steps/jsChangeStyle_12_classWins.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.classWins",
+                "default": "One or two inline styles is fine. For many styles, write them once in a CSS class and just add the class from JavaScript. Pros pick class almost every time."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Two ways, one job",
+            "image": "/static/tutorials/steps/jsChangeStyle_13_twoWays.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsChangeStyle.twoWays",
+                "default": "set style for quick tweaks. class on element for organised styling. Both update the page live."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

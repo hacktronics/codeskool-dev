@@ -1,0 +1,137 @@
+Checkpoint Circuit
+==================
+
+Use the arrow keys to visit the three checker gates in order. Each gate disappears when reached; the floating label shows progress. Your finish time appears after Gate 3. Use the circuit road for the full route. All proximity checks use the existing AI blocks. Green flag starts a new run.
+
+This project contains 66 ordinary visible Scratch blocks. The scenery and every actor come from the 3D library; nothing is uploaded or embedded. No editor, renderer, VM or extension changes are required.
+
+Rebuild: in 3D and XR Studio start a blank 3D project. Click Choose a 3D Object and pick each model listed under SETUP from the library (the worlds are under the Worlds tag), then rename each sprite exactly as listed. Set each sprite's size with Transform > set all scale (the number is the model's biggest side in world units x 100, so a world 220 units wide is 22000) and place it with Transform > go to x/y/z. The maps are measured in world units; multiply positions by 36 for the Scratch blocks (a 220-unit world is 7920 Scratch units wide). Add the World extension: it holds the haze block "set fog to ... at distance ..." that the first script uses. Create the variables below for all sprites. Indented recipe lines belong inside their enclosing Control block.
+
+SETUP
+{
+  "title": "Checkpoint Circuit",
+  "project": "CheckpointCircuit",
+  "environment": "racing-circuit",
+  "variables": {
+    "Checkpoints": 0
+  },
+  "assets": [
+    {
+      "name": "Racing Circuit Scenery",
+      "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb",
+      "scale3d": 24000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Racing Circuit"
+    },
+    {
+      "name": "Red Racing Car",
+      "glbURL": "static/models/3d/world-content/sprites/red-race-car.glb",
+      "scale3d": 420,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 3060
+      },
+      "library": "Red Race Car"
+    },
+    {
+      "name": "Gate 1",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 3024,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 2",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": -3060
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 3",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": -3024,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 260,
+    "where": "first block after the green flag of Red Racing Car"
+  }
+}
+
+VISIBLE BLOCK RECIPES
+
+SPRITE: Red Racing Car
+when green flag clicked
+set fog to #d5e6ee at distance 260
+set Checkpoints to 0
+reset timer
+create text Reach Gate 1, then 2, then 3 named Mission
+set font size of Mission to 34
+attach Mission to Red Racing Car
+set offset of Mission to x: 0 y: 144 z: 0
+go to x: 0 y: 3 z: 3060
+show
+follow Red Racing Car at distance 900
+repeat until (Checkpoints) = 3
+  if key up arrow pressed? then
+    change z position by -27
+  if key down arrow pressed? then
+    change z position by 27
+  if key left arrow pressed? then
+    change x position by -27
+  if key right arrow pressed? then
+    change x position by 27
+  wait 0.03 seconds
+
+
+SPRITE: Gate 1
+when green flag clicked
+show
+wait 0.2 seconds
+wait until (Checkpoints) = 0 and is Red Racing Car within 180 of Gate 1?
+hide
+change Checkpoints by 1
+set text of Mission to join Gates / 3:  (Checkpoints)
+
+
+SPRITE: Gate 2
+when green flag clicked
+show
+wait 0.2 seconds
+wait until (Checkpoints) = 1 and is Red Racing Car within 180 of Gate 2?
+hide
+change Checkpoints by 1
+set text of Mission to join Gates / 3:  (Checkpoints)
+
+
+SPRITE: Gate 3
+when green flag clicked
+show
+wait 0.2 seconds
+wait until (Checkpoints) = 2 and is Red Racing Car within 180 of Gate 3?
+hide
+change Checkpoints by 1
+set text of Mission to join Finish seconds:  timer
+

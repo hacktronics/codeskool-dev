@@ -1,0 +1,169 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Combine Decisions</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "One check is rarely enough",
+            "image": "/static/tutorials/steps/jsAndOrNot_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.intro",
+                "default": "You know and, or, and not from Scratch's boolean blocks. JavaScript spells them as symbols. Two ampersands for AND. Two pipes for OR. An exclamation mark in front for NOT. Same rules — different shape. In this tutorial you will combine two checks with each operator and see exactly when each one is true."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsAndOrNot_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Set up the variables",
+            "image": "/static/tutorials/steps/jsAndOrNot_03_setup.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 56.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.setup",
+                "default": "Drag a let block. Name it age and set it to fifteen. Drag another let. Name it hasPass and set it to true — no quotes. The words true and false without quotes are JavaScript booleans. With quotes they would be text."
+            }
+        },
+        {
+            "title": "AND — both must be true",
+            "image": "/static/tutorials/steps/jsAndOrNot_04_and.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 60.0,
+                "zoom": 1.9
+            },
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_and"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.and",
+                "default": "Drag an if block. Inside the condition slot, build age greater-than ten AND hasPass — using the AND operator from the Operators section. Inside the body, log Allowed. For AND, both halves must be true. Click Run."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsAndOrNot_05_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Allowed is printed — age fifteen is greater than ten, and hasPass is true. Both halves true, AND is true."
+            }
+        },
+        {
+            "title": "OR — either half is enough",
+            "image": "/static/tutorials/steps/jsAndOrNot_06_or.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 62.0,
+                "zoom": 1.8
+            },
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_or"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.or",
+                "default": "Add a second if block. Condition — age greater-than eighteen OR hasPass. Body — log Welcome. Age fifteen is NOT greater than eighteen, but hasPass is true. For OR, only one half needs to be true. Click Run — Welcome appears."
+            }
+        },
+        {
+            "title": "NOT — flip true and false",
+            "image": "/static/tutorials/steps/jsAndOrNot_07_not.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 64.0,
+                "zoom": 1.7
+            },
+            "highlightBlock": {
+                "category": "operators",
+                "blockType": "operator_not"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.not",
+                "default": "Add a third if. Condition — exclamation-mark hasPass. That is NOT hasPass. The NOT operator flips true to false and false to true. Body — log Buy a pass first. hasPass is currently true, so NOT hasPass is false. Click Run. Buy a pass first does NOT appear."
+            }
+        },
+        {
+            "title": "Flip and rerun",
+            "image": "/static/tutorials/steps/jsAndOrNot_08_flip.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.flip",
+                "default": "Change hasPass from true to false. Click Run again. Now Buy a pass first appears. NOT flipped false into true, so the third if ran. AND and OR also re-evaluated — the Allowed line no longer prints because hasPass is now false."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Truth tables in your head",
+            "image": "/static/tutorials/steps/jsAndOrNot_09_truthTables.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.truthTables",
+                "default": "Three simple rules. AND — both halves true. OR — at least one half true. NOT — flip. Same rules you used in Scratch. The only thing that changed is the spelling: two ampersands, two pipes, one exclamation."
+            }
+        },
+        {
+            "title": "Combining decisions",
+            "image": "/static/tutorials/steps/jsAndOrNot_10_combine.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsAndOrNot.combine",
+                "default": "Real checks combine all three — like age greater-than eighteen AND hasPass OR isVip. When you mix AND with OR, use parentheses to group them, just like maths. The next tutorial moves on to loops — letting JavaScript repeat work for you."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

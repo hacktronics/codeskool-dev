@@ -1,0 +1,189 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Use a Variable</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "A name for a value",
+            "image": "/static/tutorials/steps/jsVar_01_aName.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.aName",
+                "default": "In Scratch you make variables with the set variable to block. JavaScript does the same thing with the keyword let. Same idea — a name that holds a value — just a different word. In this tutorial you will make a variable called message, put text into it, and then print it to the console."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsVar_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.dragHat",
+                "default": "Open the JavaScript category in the flyout on the left and drag the script hat block into the empty workspace. Just like in the last tutorial, this hat marks where your JavaScript program starts. The Code panel on the right shows the beginning of your program."
+            }
+        },
+        {
+            "title": "Drag the let block under the hat",
+            "image": "/static/tutorials/steps/jsVar_03_dragLet.webp",
+            "imageFocus": {
+                "x": 38.3,
+                "y": 56.4,
+                "zoom": 2.33
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.dragLet",
+                "default": "Find the let block in the Variables section of the flyout. Drag it under the script hat. The block has two slots — a name slot on the left and a value slot on the right. This is JavaScript's way of saying make a new variable with this name and this value."
+            }
+        },
+        {
+            "title": "Name it message, value Hello JavaScript",
+            "image": "/static/tutorials/steps/jsVar_04_fillSlots.webp",
+            "imageFocus": {
+                "x": 39.3,
+                "y": 56.0,
+                "zoom": 2.68
+            },
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.fillSlots",
+                "default": "Click the name slot and type message. Click the value slot and type Hello JavaScript. You only type the words — no quotes. Now look at the Code panel: it shows let message equals open-quote Hello JavaScript close-quote semicolon. The block wrapped the value in quotes for you because the value is text. If it were a number, no quotes would be added."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "See the real code on the right",
+            "image": "/static/tutorials/steps/jsVar_04_fillSlots.webp",
+            "imageFocus": {
+                "x": 99.8,
+                "y": 4.2,
+                "zoom": 2.8
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.seeCode",
+                "default": "The Code panel now shows: let message equals quote Hello JavaScript quote semicolon. That is real JavaScript that any browser can run. The word let creates the variable, the equals sign sets its value, and the semicolon ends the line."
+            }
+        },
+        {
+            "title": "Quotes versus no quotes",
+            "image": "/static/tutorials/steps/jsVar_03_whatsInside.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.quotesVsNo",
+                "default": "Here is the key rule. If you write a word with quotes around it, JavaScript treats it as literal text. If you write the same word without quotes, JavaScript looks for a variable with that name and uses its value. Same rule as Scratch — drop in the variable name to read it. We will use this now."
+            }
+        },
+        {
+            "title": "Drag log-to-console and drop the variable in",
+            "image": "/static/tutorials/steps/jsVar_07_logVariable.webp",
+            "imageFocus": {
+                "x": 36.8,
+                "y": 59.4,
+                "zoom": 2.85
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.logVariable",
+                "default": "Drag a log to console block and snap it below the let block. Now, instead of typing text into the message slot of the log block, drop the message variable in there. You will find the message variable in the Variables section — it appeared after you made it. The log block now shows the variable, not the words."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsVar_08_clickRun.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 0,
+                "zoom": 4
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.clickRun",
+                "default": "Click the Run button at the top-right. Like before, the View pane stays blank — the message goes to the console, not to the page."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsVar_09_openConsole.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 0,
+                "zoom": 4
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.openConsole",
+                "default": "Click the >_ button next to Run to open the Console pane. The pane appears at the bottom-right of the View area with the title Console."
+            }
+        },
+        {
+            "title": "Your message in the console",
+            "image": "/static/tutorials/steps/jsVar_10_consoleResult.webp",
+            "imageFocus": {
+                "x": 98.5,
+                "y": 100.0,
+                "zoom": 2.86
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.consoleResult",
+                "default": "There it is — Hello JavaScript — printed by reading the variable. JavaScript took the value out of message and showed it. Change the variable's value once, and every place that reads message picks up the new value automatically. That is the whole point of a variable."
+            }
+        },
+        {
+            "title": "Naming rules",
+            "image": "/static/tutorials/steps/jsVar_06_namingRules.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.namingRules",
+                "default": "A few rules for JavaScript variable names. No spaces. Cannot start with a digit. Case matters — Message with a capital M and message with a small m are two different variables. The common style is camelCase — start with lowercase and capitalise each new word, like myFirstName or playerScore. Use names that describe what the value is for, not single letters like x or a."
+            }
+        },
+        {
+            "title": "One change, many uses",
+            "image": "/static/tutorials/steps/jsVar_07_oneChange.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsUseAVariable.recap",
+                "default": "You made a variable with let, gave it a value, used the variable to read the value, and watched the console print it. From now on, every JavaScript program you write will use variables this way: let to declare, a name, an equals sign, a value. In the next tutorial you will learn about const — for values that never change."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

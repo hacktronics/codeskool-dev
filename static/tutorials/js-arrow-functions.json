@@ -1,0 +1,104 @@
+{
+    "steps": [
+        {
+            "title": "A shorter shape",
+            "image": "/static/tutorials/steps/jsArrow_01_shorterShape.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.shorterShape",
+                "default": "JavaScript has a shorter way to write functions. Modern JS uses these constantly — especially for callbacks. The shape uses an arrow — equals greater-than. Same idea — input in, value out — but tighter."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "An arrow function for add",
+            "image": "/static/tutorials/steps/jsArrow_02_arrowAdd.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.arrowAdd",
+                "default": "Drag an arrow function block. Name it add. Inputs are a and b. Expression is a plus b. The arrow reads as gives-back. a and b give back a plus b."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "One expression, no extra words",
+            "image": "/static/tutorials/steps/jsArrow_03_noCurly.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.noCurly",
+                "default": "When the body is one expression, you skip the return word — JavaScript adds it for you. Less typing, same result."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Try square",
+            "image": "/static/tutorials/steps/jsArrow_04_trySquare.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.trySquare",
+                "default": "Make an arrow function called square. Input is x. Expression is x times x. Log square called with four. Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Open the console pane",
+            "image": "/static/tutorials/steps/jsArrow_04a_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.openConsole",
+                "default": "Click the Console button next to Run. You see sixteen."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Arrow with a body",
+            "image": "/static/tutorials/steps/jsArrow_05_withCurly.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.withCurly",
+                "default": "When the body needs many lines, use the arrow function with a body block. Make greet — input is name, body logs Hi space joined with name."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Both shapes work",
+            "image": "/static/tutorials/steps/jsArrow_06_bothShapes.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsArrowFunctions.bothShapes",
+                "default": "Arrow for short callbacks. Classic function for bigger logic with a name. You will see both everywhere in real code."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Loop Until It's Done</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Repeat without copy-paste",
+            "image": "/static/tutorials/steps/jsWhile_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.intro",
+                "default": "Scratch has repeat-until — it loops UNTIL a condition becomes true. JavaScript has while — it loops WHILE a condition stays true. Same idea, opposite phrasing. In this tutorial you will print numbers one through five by letting a while loop count them for you."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsWhile_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Set up the counter",
+            "image": "/static/tutorials/steps/jsWhile_03_counter.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 56.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.counter",
+                "default": "Drag a let block. Name it count and set it to one. This counter is what the loop will watch — it starts at one and we will count up to five."
+            }
+        },
+        {
+            "title": "The while shape",
+            "image": "/static/tutorials/steps/jsWhile_04_whileShape.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 60.0,
+                "zoom": 1.9
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_repeat_until"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.whileShape",
+                "default": "Drag a while block from Control. The condition is count less-than-or-equal five. Leave the body empty for a moment — we will fill it in next. The Code panel shows while open-paren count less-than-or-equal five close-paren open-brace close-brace."
+            }
+        },
+        {
+            "title": "Print and step",
+            "image": "/static/tutorials/steps/jsWhile_05_printStep.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 64.0,
+                "zoom": 1.7
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.printStep",
+                "default": "Inside the while body, drop a log to console block. The message is a template string saying Count colon space dollar-curly count close-curly. Then drop a change-by block from Variables and set it to change count by one. Without that change, count would stay at one forever — the loop would never end."
+            }
+        },
+        {
+            "title": "The runaway loop warning",
+            "image": "/static/tutorials/steps/jsWhile_06_runaway.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.runaway",
+                "default": "A loop whose condition never becomes false is called an infinite loop. In Scratch the green flag just keeps running, but in JavaScript the browser tab freezes and you have to close it. Whenever you write a while loop, double-check that something inside the body changes the value the condition is checking."
+            }
+        },
+        {
+            "title": "Click Run",
+            "image": "/static/tutorials/steps/jsWhile_07_run.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.run",
+                "default": "Click the Run button at the top-right."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsWhile_08_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Count one through Count five prints, one per line, then the loop stops."
+            }
+        },
+        {
+            "title": "Walk through it",
+            "image": "/static/tutorials/steps/jsWhile_09_walkthrough.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.walkthrough",
+                "default": "Step by step: count starts at one, the check is true, the body runs, count becomes two. The cycle repeats. When count becomes six, the check fails — six is not less-than-or-equal five — so the body does not run and the loop ends. Exactly five rounds, just what we wanted."
+            }
+        },
+        {
+            "title": "while plus a counter",
+            "image": "/static/tutorials/steps/jsWhile_10_recap.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsWhileLoop.recap",
+                "default": "A while loop plus a counter that changes inside the body — that pattern repeats exactly the right number of times. When you know the count in advance, the next tutorial shows an even shorter shape — the for loop."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

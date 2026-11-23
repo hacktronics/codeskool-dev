@@ -1,0 +1,43 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-02-09T17:18:03.612593Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-02-09T19:16:45.741209Z",
+      "mimetype": null,
+      "name": "code.ipynb",
+      "path": "code.ipynb",
+      "size": 538,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-02-10T00:00:00.000000Z",
+      "format": "text",
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-02-10T00:00:00.000000Z",
+      "mimetype": "text/x-python",
+      "name": "codeskool.py",
+      "path": "codeskool.py",
+      "size": null,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-02-09T17:18:03.612593Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-02-09T19:20:54.284276Z",
+  "mimetype": null,
+  "name": "",
+  "path": "",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

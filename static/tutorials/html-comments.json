@@ -1,0 +1,129 @@
+{
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
+    "steps": [
+        {
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlCommentsBoilerplate.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.html_comments.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
+        },
+        {
+            "title": "Add Your First Comment",
+            "image": "/static/tutorials/steps/htmlCommentsFirst.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.first",
+                "default": "Drag a text block inside the body. In the text field, type the comment markers exactly: less-than-sign exclamation dash dash space This is the page header space dash dash greater-than-sign. Anything between these markers is a comment."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_text"
+            }
+        },
+        {
+            "title": "How a Comment Looks in HTML",
+            "image": "/static/tutorials/steps/htmlCommentsCommentMarkers.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.commentMarkers",
+                "default": "A comment has four parts. Open it with less-than, exclamation, two dashes. Close it with two dashes, greater-than. Whatever you put between them is YOUR note. The browser sees the markers and skips everything inside."
+            }
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlCommentsHeading.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.heading",
+                "default": "Drag a heading below the comment, still inside the body. Keep level 1 and type My Recipe Book."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_heading"
+            }
+        },
+        {
+            "title": "Add Another Comment",
+            "image": "/static/tutorials/steps/htmlCommentsSecond.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.second",
+                "default": "Drag another text block below the heading, still inside the body. Type the same kind of comment markers around the words Favourite recipes."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_text"
+            }
+        },
+        {
+            "title": "Add a List of Recipes",
+            "image": "/static/tutorials/steps/htmlCommentsList.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.list",
+                "default": "Drag a ul below the second comment inside the body. Add two li items, each with a text block inside, and type Pancakes and Pizza."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_ul"
+            }
+        },
+        {
+            "title": "See Your Page",
+            "image": "/static/tutorials/steps/htmlCommentsView.webp",
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.viewTab",
+                "default": "Click the View tab. You should see only the heading and the list — the comments are invisible to readers. Now click the HTML tab to see the comments in the source code."
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Notes for the Programmer",
+            "image": "/static/tutorials/steps/htmlCommentsHtmlVsView.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlComments.recap",
+                "default": "Comments are notes you leave in your code so you can remember what each part does. The browser ignores them. Real websites use comments all the time to organise their code."
+            }
+        }
+    ]
+}

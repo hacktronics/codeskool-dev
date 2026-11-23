@@ -1,0 +1,71 @@
+{
+  "title": "Robot Gate Trail",
+  "project": "RobotSensorTrail",
+  "environment": "robot-lab",
+  "variables": {
+    "Checkpoints": 0
+  },
+  "assets": [
+    {
+      "name": "Robot Test Lab Scenery",
+      "glbURL": "static/models/3d/world-content/environments/robot-lab.glb",
+      "scale3d": 22000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Robot Lab"
+    },
+    {
+      "name": "Trail Robot",
+      "glbURL": "static/models/3d/world-content/sprites/robot-car.glb",
+      "scale3d": 280,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 2880
+      },
+      "library": "Robot Car"
+    },
+    {
+      "name": "Gate 1",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": -1980,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 2",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": -2700
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 3",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 2448,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 220,
+    "where": "first block after the green flag of Trail Robot"
+  }
+}

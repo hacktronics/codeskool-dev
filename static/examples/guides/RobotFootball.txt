@@ -1,0 +1,106 @@
+Robot Football Practice
+=======================
+
+Arrow keys drive the robot. Approach the football from the side opposite your target goal, then press Space to kick. The ball travels away from the robot, so your approach controls the shot direction. Score through either end goal; shots outside the posts miss. The ball resets after each shot. The visible Operators blocks normalize a direction vector; no physics engine changes are used.
+
+This project contains 91 ordinary visible Scratch blocks. The scenery and every actor come from the 3D library; nothing is uploaded or embedded. No editor, renderer, VM or extension changes are required.
+
+Rebuild: in 3D and XR Studio start a blank 3D project. Click Choose a 3D Object and pick each model listed under SETUP from the library (the worlds are under the Worlds tag), then rename each sprite exactly as listed. Set each sprite's size with Transform > set all scale (the number is the model's biggest side in world units x 100, so a world 220 units wide is 22000) and place it with Transform > go to x/y/z. The maps are measured in world units; multiply positions by 36 for the Scratch blocks (a 220-unit world is 7920 Scratch units wide). Create the variables below for all sprites. Indented recipe lines belong inside their enclosing Control block.
+
+SETUP
+{
+  "title": "Robot Football Practice",
+  "project": "RobotFootball",
+  "environment": "football-stadium",
+  "variables": {
+    "Score": 0,
+    "Player x": 0,
+    "Player z": 900,
+    "Kick x": 0,
+    "Kick z": 0,
+    "Kick length": 1
+  },
+  "assets": [
+    {
+      "name": "Football Stadium Scenery",
+      "glbURL": "static/models/3d/world-content/environments/football-stadium.glb",
+      "scale3d": 22000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Football Stadium"
+    },
+    {
+      "name": "Football Robot",
+      "glbURL": "static/models/3d/world-content/sprites/robot-car.glb",
+      "scale3d": 280,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 900
+      },
+      "library": "Robot Car"
+    },
+    {
+      "name": "Football",
+      "glbURL": "static/models/3d/world-content/sprites/football.glb",
+      "scale3d": 70,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Football"
+    }
+  ]
+}
+
+VISIBLE BLOCK RECIPES
+
+SPRITE: Football Robot
+when green flag clicked
+go to x: 0 y: 3 z: 900
+set Score to 0
+create text Approach the ball; Space kicks named Mission
+set font size of Mission to 34
+attach Mission to Football Robot
+set offset of Mission to x: 0 y: 144 z: 0
+follow Football Robot at distance 1200
+forever
+  if key up arrow pressed? then
+    change z position by -18
+  if key down arrow pressed? then
+    change z position by 18
+  if key left arrow pressed? then
+    change x position by -18
+  if key right arrow pressed? then
+    change x position by 18
+  set Player x to x position
+  set Player z to z position
+  wait 0.03 seconds
+
+
+SPRITE: Football
+when green flag clicked
+go to x: 0 y: 3 z: 0
+forever
+  wait until key space pressed? and is Football Robot within 180 of Football?
+  set Kick x to x position - (Player x)
+  set Kick z to z position - (Player z)
+  set Kick length to sqrt of (Kick x) * (Kick x) + (Kick z) * (Kick z)
+  if (Kick length) > 18 then
+    set Kick x to (Kick x) / (Kick length) * 48
+    set Kick z to (Kick z) / (Kick length) * 48
+    repeat until abs of x position > 1980 or abs of z position > 1368
+      change x position by (Kick x)
+      change z position by (Kick z)
+      wait 0.03 seconds
+    if abs of x position > 1900 and abs of z position < 288 then
+      change Score by 1
+      set text of Mission to join Goal! Score:  (Score)
+    wait 1 seconds
+    go to x: 0 y: 3 z: 0
+  wait 0.1 seconds
+

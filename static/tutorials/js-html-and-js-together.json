@@ -1,0 +1,236 @@
+{
+    "steps": [
+        {
+            "title": "One project, many files",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_01_twoFiles.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.twoFiles",
+                "default": "Every real website lives in at least two files. An HTML file — that is the PAGE you can see. And a JavaScript file — that is the SCRIPT that makes the page do things. The HTML file has one special line inside it that says: when the browser loads me, also load the JavaScript file. That is how the two files work together: HTML shows the page, the page loads the script, the script makes the page move."
+            }
+        },
+        {
+            "title": "Each sprite holds one file",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_02_oneSpriteOneFile.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.oneSpriteOneFile",
+                "default": "In Scratch, each sprite held the code for one CHARACTER. Here, each sprite holds the code for one FILE. The sprite called index dot html holds the HTML — that is your web page. The sprite called script dot js holds the JavaScript — that is your script. Click a sprite, the workspace switches to that file. Two sprites, two files, one project that runs together."
+            }
+        },
+        {
+            "title": "Open the sprite switcher",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_03_openSwitcher.webp",
+            "imageFocus": {
+                "x": 90.44,
+                "y": 0.78,
+                "zoom": 6.0
+            },
+            "highlightUI": "spriteSwitcherButton",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.openSwitcher",
+                "default": "At the top-right there is a small icon with two arrows — that is the sprite switcher button. Click it. The sprite switcher dialog opens, showing every sprite in the project. This is how you move between files."
+            }
+        },
+        {
+            "title": "Look at the sprites",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_04_lookAtSprites.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.5
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.lookAtSprites",
+                "default": "The dialog lists two rows. The first row shows index dot html with the HTML icon. The second row shows script dot js with the JavaScript icon. Click a row to switch to that sprite. The workspace, the flyout, and the code panel all follow."
+            }
+        },
+        {
+            "title": "Click the index dot html sprite",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_05_clickPage.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 41,
+                "zoom": 2.5
+            },
+            "highlightUI": "spriteSwitcherButton",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.clickPage",
+                "default": "Click the index dot html row. The dialog closes. The workspace is now on the index dot html page sprite. The flyout shows HTML blocks. The code panel switches to HTML. Same project, different file."
+            }
+        },
+        {
+            "title": "Click the HTML category",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_05a_openHtmlCategory.webp",
+            "imageFocus": {
+                "x": 0,
+                "y": 41.84,
+                "zoom": 4
+            },
+            "highlightUI": "category.html5",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.openHtmlCategory",
+                "default": "On the left, click the HTML category. The flyout fills with every HTML block you need to build a page. Whenever you come back to the index dot html sprite, click HTML here first."
+            }
+        },
+        {
+            "title": "Build a simple page",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_06_buildPage.webp",
+            "imageFocus": {
+                "x": 43,
+                "y": 55,
+                "zoom": 1.5
+            },
+            "highlightUI": "htmlEditor",
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.buildPage",
+                "default": "Drag html, head, and body. Inside body, drop an h1 — id title, text My Page. Drop a p — id message, text Loading. At the end of body, drop a script src block with the URL script dot js."
+            }
+        },
+        {
+            "title": "Save the page",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_07_savePage.webp",
+            "imageFocus": {
+                "x": 95.75,
+                "y": 5.5,
+                "zoom": 5
+            },
+            "highlightUI": "saveButton",
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.savePage",
+                "default": "Click Save. The file name is already index and the extension is already dot html — the sprite is HTML, so Save already knows. Click Save."
+            }
+        },
+        {
+            "title": "Click the script dot js sprite",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_08_clickScript.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.7
+            },
+            "highlightUI": "spriteSwitcherButton",
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.clickScript",
+                "default": "Open the sprite switcher dialog again. Click the script dot js row. The workspace is now on the script dot js script sprite — empty workspace, JavaScript blocks in the flyout, code panel waiting. Same project, different file."
+            }
+        },
+        {
+            "title": "Click the JavaScript category",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_08a_openJsCategory.webp",
+            "imageFocus": {
+                "x": 0,
+                "y": 49.63,
+                "zoom": 4
+            },
+            "highlightUI": "category.javascript",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.openJsCategory",
+                "default": "On the left, click the JavaScript category. The flyout fills with every JS block you need. Whenever you come back to the script dot js sprite, click JavaScript here first."
+            }
+        },
+        {
+            "title": "Change the title from JavaScript",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_09_grabAndChange.webp",
+            "imageFocus": {
+                "x": 25,
+                "y": 4,
+                "zoom": 2.5
+            },
+            "highlightUI": "jsEditor",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.grabAndChange",
+                "default": "Drag the script hat. Now drag a const block. Name it title. For its value, drop in a find element by id block and set its id to title — that grabs the h1 from your HTML page. Next, drag a set text of block. Element is title, text is Hello from JavaScript. This will change the h1 you wrote on the page."
+            }
+        },
+        {
+            "title": "Save the script",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_10_saveScript.webp",
+            "imageFocus": {
+                "x": 92.5,
+                "y": 5.5,
+                "zoom": 5
+            },
+            "highlightUI": "saveButton",
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.saveScript",
+                "default": "Click Save. The default name is script and the extension is already dot js — the script dot js sprite is JavaScript, so Save already knows. Click Save. Two files now, sitting next to each other."
+            }
+        },
+        {
+            "title": "Switch back to the page",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_11_switchDialog.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 31,
+                "zoom": 2
+            },
+            "highlightUI": "spriteSwitcherButton",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.backToPage",
+                "default": "Your script is saved. But the View on this script sprite would only show a tiny test page — not your real page. To see your real page run, go back to the index dot html page sprite. Open the sprite switcher dialog again and click the index dot html row."
+            }
+        },
+        {
+            "title": "Click the View tab",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_12_clickViewTab.webp",
+            "imageFocus": {
+                "x": 79.27,
+                "y": 0,
+                "zoom": 5
+            },
+            "highlightUI": "viewTab",
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.clickViewTab",
+                "default": "Now on the index dot html page sprite, click the View tab on the right. The browser loads your index dot html. Inside it is the script src block pointing at script dot js — that line tells the browser to fetch your script and run it."
+            }
+        },
+        {
+            "title": "Watch the page change",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_13_seePage.webp",
+            "imageFocus": {
+                "x": 95,
+                "y": 15,
+                "zoom": 2
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.seePage",
+                "default": "Look at the View pane. The h1 that said My Page now reads Hello from JavaScript — the browser ran your script and changed the page. Two files, one project, working together."
+            }
+        },
+        {
+            "title": "The pattern you will use forever",
+            "image": "/static/tutorials/steps/jsHtmlAndJs_12_patternForever.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsHtmlAndJs.patternForever",
+                "default": "One project. One sprite per file. Open the sprite switcher dialog to move between files. Save each sprite. Switch to the index dot html page sprite and click View to see them run together. Every DOM tutorial from here on uses this pattern — you only edit the script dot js sprite, then jump back to the page sprite to see the result."
+            }
+        }
+    ]
+}

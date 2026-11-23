@@ -1,0 +1,71 @@
+{
+  "title": "Checkpoint Circuit",
+  "project": "CheckpointCircuit",
+  "environment": "racing-circuit",
+  "variables": {
+    "Checkpoints": 0
+  },
+  "assets": [
+    {
+      "name": "Racing Circuit Scenery",
+      "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb",
+      "scale3d": 24000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Racing Circuit"
+    },
+    {
+      "name": "Red Racing Car",
+      "glbURL": "static/models/3d/world-content/sprites/red-race-car.glb",
+      "scale3d": 420,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 3060
+      },
+      "library": "Red Race Car"
+    },
+    {
+      "name": "Gate 1",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 3024,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 2",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": -3060
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 3",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": -3024,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Checkpoint Gate"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 260,
+    "where": "first block after the green flag of Red Racing Car"
+  }
+}

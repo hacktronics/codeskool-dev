@@ -1,0 +1,153 @@
+{
+    "steps": [
+        {
+            "title": "Programs that decide",
+            "image": "/static/tutorials/steps/pyMakeChoice_01_scratchPythonIfElse.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.intro",
+                "default": "Every program you've written so far runs the same way from top to bottom, one line after another. Today your program will start to DECIDE — it will do one thing when the answer is big enough, and something different when it isn't. In Scratch this is the \"if-else\" block shaped like a C. In Python it's two keywords: if and else. Let's build one."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Ask for an age",
+            "image": "/static/tutorials/steps/pythonMakeAChoice_02_inputLine.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.typeInput",
+                "default": "Type line 1: age = int(input(\"How old are you?\")). You've done this pattern before — ask a question, wrap the answer in int because we'll compare the number. The kid's age will flow into the decision you're about to build."
+            },
+            "validateCode": {
+                "functionName": "input",
+                "lineIndex": 0
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "The if branch",
+            "image": "/static/tutorials/steps/pythonMakeAChoice_03_ifBranch.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.typeIf",
+                "default": "Leave a blank line, then type:\n\nif age >= 10:\n    print(\"You can join!\")\n\nif is a standard Python keyword. The condition age >= 10 means \"age is 10 or more\". The colon at the end of the line is the \"then\" part — what follows must be INDENTED (four spaces at the start of the next line). Only the indented lines run when the condition is true."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Indentation is how Python groups lines",
+            "image": "/static/tutorials/steps/pyMakeChoice_04_indentBands.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.indentExplain",
+                "default": "Look at the four spaces before print. Python uses those spaces — called indentation — to know which lines belong to the if. Most editors, including this one, add them automatically when you press Enter after a colon. If you forget to indent, Python will complain. If you add extra spaces, Python will complain. Same amount of indent, every time. Python's creator chose indentation on purpose — there's a famous Python motto, 'readability counts'. The shape of your code IS part of what it means."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "The else branch",
+            "image": "/static/tutorials/steps/pythonMakeAChoice_05_elseBranch.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.typeElse",
+                "default": "Type these two lines next:\n\nelse:\n    print(\"You are too young\")\n\nelse is Python's way of saying \"otherwise\". Its indented line only runs when the if's condition was false. Together, if and else cover every possibility — the kid is old enough, OR they are not. There is no in-between here."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 3
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and try an age that passes",
+            "image": "/static/tutorials/steps/pythonMakeAChoice_06_runPass.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.runPass",
+                "default": "Click Run. Type 12 when it asks. The terminal prints You can join! — because 12 is 10 or more, so the if was true and Python ran the first indented line. It SKIPPED the else branch entirely."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Run again with an age that fails",
+            "image": "/static/tutorials/steps/pythonMakeAChoice_07_runFail.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.runFail",
+                "default": "Click Run again. This time type 5. Now the terminal prints You are too young — because 5 is not 10 or more, the if was false, and Python ran the else branch instead. One program, two different paths, chosen live depending on what the kid answers."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "The comparison toolbox",
+            "image": "/static/tutorials/steps/pyMakeChoice_08_comparisonCheatsheet.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonMakeAChoice.recap",
+                "default": "You used greater-than-or-equal — that's the angle bracket pointing right next to an equals sign. Python has more comparisons too. Greater than. Less than. Less than or equal. Two equals signs side by side mean is exactly the same. An exclamation mark and an equals sign mean is not the same. Try changing the condition to is exactly 10, or is less than 18. Each one gives the program a different rule for who gets in."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

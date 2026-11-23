@@ -1,0 +1,71 @@
+{
+  "title": "Obstacle Explorer",
+  "project": "ObstacleExplorer",
+  "environment": "obstacle-course",
+  "variables": {
+    "Checkpoints": 0
+  },
+  "assets": [
+    {
+      "name": "Obstacle Course Scenery",
+      "glbURL": "static/models/3d/world-content/environments/obstacle-course.glb",
+      "scale3d": 22000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Obstacle Course"
+    },
+    {
+      "name": "Course Explorer",
+      "glbURL": "static/models/3d/world-content/sprites/forest-ranger.glb",
+      "scale3d": 220,
+      "positionScratch": {
+        "x": -2700,
+        "y": 3,
+        "z": 3060
+      },
+      "library": "Forest Ranger"
+    },
+    {
+      "name": "Gate 1",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": -1440,
+        "y": 3,
+        "z": -2340
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 2",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 1440,
+        "y": 3,
+        "z": -2340
+      },
+      "library": "Checkpoint Gate"
+    },
+    {
+      "name": "Gate 3",
+      "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "scale3d": 660,
+      "positionScratch": {
+        "x": 2700,
+        "y": 3,
+        "z": 3060
+      },
+      "library": "Checkpoint Gate"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 150,
+    "where": "first block after the green flag of Course Explorer"
+  }
+}

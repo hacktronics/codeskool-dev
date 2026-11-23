@@ -1,0 +1,135 @@
+{
+    "steps": [
+        {
+            "title": "Make a function hand back an answer",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_01_intro.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.intro",
+                "default": "Last tutorial your functions PRINTED their results, but they couldn't pass values to other functions. Today you'll meet return — the way a function hands a result back to whoever called it. With return, the answer from one function can flow straight into the next. That's how you connect tiny commands into bigger programs."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "An add that returns",
+            "image": "/static/tutorials/steps/pyConnectCommands_02_returnChute.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.addReturn",
+                "default": "Type:\n\ndef add(a, b):\n    return a + b\n\nNotice — no print this time. The keyword return is standard Python. It says \"give this value back to the caller and stop\". The caller can then store the value, print it, or pass it into another call. One small but important note: if a function has no return at all (or just an empty return), Python quietly hands back a special value called None — meaning 'nothing here'. You'll meet None more later; for now just remember: every function hands SOMETHING back, even if it's None."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "A multiply that returns",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_03_multiplyReturn.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.multiplyReturn",
+                "default": "Type:\n\ndef multiply(a, b):\n    return a * b\n\nSame shape as add, just multiplication instead of addition. Two tiny functions, each doing one job and handing the answer back. Now we can connect them."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Connect them — call inside a call",
+            "image": "/static/tutorials/steps/pyConnectCommands_04_nestedComposition.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.compose",
+                "default": "Below, type:\n\nresult = multiply(add(2, 3), 4)\n\nRead it from the inside out. add(2, 3) runs first and returns 5. That 5 becomes the FIRST argument to multiply. multiply(5, 4) runs and returns 20. The whole expression gives 20, which gets stored in result. Two functions chained — the answer from one piped straight into the other."
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        },
+        {
+            "title": "Print the connected result",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_05_print.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.print",
+                "default": "Type:\n\nprint(result)\n\nYou could also have written print(multiply(add(2, 3), 4)) directly — but storing the answer in a named variable makes long programs easier to read. Either way works."
+            },
+            "validateCode": {
+                "functionName": "print",
+                "lineIndex": 7
+            },
+            "highlightUI": "pythonEditor",
+            "_sourceCrop": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            },
+            "imageFocus": {
+                "x": 2,
+                "y": 16,
+                "zoom": 3
+            }
+        },
+        {
+            "title": "Run and see 20",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_06_run.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.run",
+                "default": "Click Run. The terminal prints 20. (2 + 3) is 5, then 5 × 4 is 20. The two functions cooperated without you writing any extra code — return made it possible. Imagine a third function divide(a, b) — you could chain that on too: divide(multiply(add(2, 3), 4), 2)."
+            },
+            "highlightUI": "pythonRun",
+            "clearRuntimeBefore": true,
+            "_sourceCrop": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            },
+            "imageFocus": {
+                "x": 1,
+                "y": 90,
+                "zoom": 1.6
+            }
+        },
+        {
+            "title": "Why this matters",
+            "image": "/static/tutorials/steps/pythonConnectYourCommands_07_recap.webp",
+            "narration": {
+                "id": "gui.tutorials.pythonConnectYourCommands.recap",
+                "default": "Big programs are made of small functions that hand results to each other. With return, every function becomes a reusable building block. The same chained-function pattern shows up everywhere — converting units, parsing dates, pricing items with tax, scoring quiz answers. Anywhere you'd want to feed one calculation into another, return is the bridge."
+            },
+            "_sourceCrop": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            },
+            "imageFocus": {
+                "x": 0,
+                "y": 94,
+                "zoom": 5.3
+            }
+        }
+    ]
+}

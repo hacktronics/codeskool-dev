@@ -1,0 +1,161 @@
+{
+    "steps": [
+        {
+            "title": "The most-used line on the web",
+            "image": "/static/tutorials/steps/jsButtonClick_01_mostUsedLine.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.mostUsedLine",
+                "default": "Scratch has hat blocks like when this sprite clicked. JavaScript does the same with addEventListener. The when click on block is JS's way of saying — when this button is clicked, run these blocks. The most-used pattern on the web."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsButtonClick_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.pageReady",
+                "default": "The page sprite already has a button with id go and text Click me, and a p with id counter and text Clicks zero. You edit the script sprite to wire the click."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsButtonClick_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the button and counter",
+            "image": "/static/tutorials/steps/jsButtonClick_04_grabBoth.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.grabBoth",
+                "default": "A const named btn with find element by id and the text go. A const named counter with find element by id and the text counter."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "A place to remember clicks",
+            "image": "/static/tutorials/steps/jsButtonClick_05_letCount.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.letCount",
+                "default": "Drag a let block. Name it count. Value is zero. This remembers how many clicks have happened."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "The listener shape",
+            "image": "/static/tutorials/steps/jsButtonClick_06_listenerShape.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.listenerShape",
+                "default": "Drag a when click on block. Element is btn. Event is click. The blocks inside the C shape run every time the button is clicked — like a Scratch when this sprite clicked hat block, but for any HTML element."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Read it like a sentence",
+            "image": "/static/tutorials/steps/jsButtonClick_07_readLikeSentence.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.readLikeSentence",
+                "default": "Read the line aloud — when btn is clicked, run these blocks. Pros read code this way to spot bugs."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Bump the count",
+            "image": "/static/tutorials/steps/jsButtonClick_08_bumpCount.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.bumpCount",
+                "default": "Inside the click body, drag a change by block. Variable is count. Amount is one. Just like Scratch's change variable by."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Show the count",
+            "image": "/static/tutorials/steps/jsButtonClick_09_showCount.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.showCount",
+                "default": "Still inside the click body. Drag a set text of block. Element is counter. Use a join to glue Clicks space and the count variable. The paragraph updates on every click."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and click",
+            "image": "/static/tutorials/steps/jsButtonClick_10_saveAndClick.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.saveAndClick",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. Click the button. The counter goes up. Click again. Up again."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "The three-step pattern",
+            "image": "/static/tutorials/steps/jsButtonClick_11_threeStepPattern.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsButtonClick.threeStepPattern",
+                "default": "Grab the element. Listen for an event. Run blocks. This three-step pattern lives on every interactive site — every like button, every menu, every search box."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

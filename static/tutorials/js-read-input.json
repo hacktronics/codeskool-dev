@@ -1,0 +1,105 @@
+{
+    "steps": [
+        {
+            "title": "Goodbye prompt",
+            "image": "/static/tutorials/steps/jsReadInput_01_goodbyePrompt.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.goodbyePrompt",
+                "default": "ask user is a popup — it interrupts the page. Real websites have input fields sitting on the page. JavaScript reads what the user typed using dot value. Today you build your first real form."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsReadInput_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.pageReady",
+                "default": "The page sprite already has an input with id nameInput, a button with id greetBtn and text Greet, and an empty p with id out. You edit the script sprite to wire the form."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsReadInput_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab the three elements",
+            "image": "/static/tutorials/steps/jsReadInput_04_grabThree.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.grabThree",
+                "default": "Three const blocks named nameInput, greetBtn, and out. Each value is find element by id with the matching id. Three references to page elements."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Wire the click",
+            "image": "/static/tutorials/steps/jsReadInput_05_wireClick.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.wireClick",
+                "default": "Drag a when click on block. Element is greetBtn. Inside, a set text of block. Element out. Text joins Hello comma space, the get value of nameInput, and an exclamation. The get value block is JavaScript's dot value — it reads whatever the user typed."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and open the page",
+            "image": "/static/tutorials/steps/jsReadInput_06_saveAndOpen.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.saveAndOpen",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. Type a name in the box, click Greet. The paragraph fills with your greeting. No popup — the page itself responds."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Your first real form",
+            "image": "/static/tutorials/steps/jsReadInput_07_firstRealForm.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsReadInput.firstRealForm",
+                "default": "An input, a button, a handler that reads dot value and writes to the page. The shape of every signup form, every search box, every comment field on the web. dot value works on text fields, number fields, dropdowns, and checkboxes."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

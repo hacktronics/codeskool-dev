@@ -1,0 +1,209 @@
+{
+    "preseedExtensions": [
+        "html5"
+    ],
+    "preseedStarter": "htmlBoilerplate",
+    "steps": [
+        {
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlImagesBoilerplate.webp",
+            "imageFocus": {
+                "x": 16,
+                "y": 16,
+                "zoom": 2.7
+            },
+            "narration": {
+                "id": "gui.tutorials.html_images.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            },
+            "_sourceCrop": {
+                "x": 16,
+                "y": 16,
+                "zoom": 2.7
+            }
+        },
+        {
+            "title": "Add a Heading",
+            "image": "/static/tutorials/steps/htmlImagesHeading.webp",
+            "imageFocus": {
+                "x": 36,
+                "y": 55,
+                "zoom": 2.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.addHeading",
+                "default": "Drag a heading inside the body. Keep the level at 1 and type My Favourite Animal."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_heading"
+            },
+            "_sourceCrop": {
+                "x": 36,
+                "y": 55,
+                "zoom": 2.4
+            }
+        },
+        {
+            "title": "Tags Can Carry Extras",
+            "image": "/static/tutorials/steps/htmlImagesAttributesConcept.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.attributesConcept",
+                "default": "Some tags carry extra information on the OPEN tag itself — like an <img> tag carrying the picture's web address and a description. Those extras are called ATTRIBUTES — a name and a value, joined by an equals sign. The block has a slot for each one."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "No Slot Inside",
+            "image": "/static/tutorials/steps/htmlImagesSelfClosing.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.selfClosing",
+                "default": "When you grab the img block in a moment, notice something different — it's a STACK shape, not a C-shape. Most blocks (like p, h1, div) have a SLOT in the middle for content to nest inside. img doesn't. That's because the img tag is SELF-CLOSING — it stands alone, holding all its information in attributes (src and alt). Other self-closing tags work the same way: input (the form box) and br (a line break). They don't WRAP content — they ARE the content. When you see a stack-shape block in the toolbox, that's your hint that the tag is self-closing."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Drag the Image Block",
+            "image": "/static/tutorials/steps/htmlImagesImg.webp",
+            "imageFocus": {
+                "x": 36,
+                "y": 55,
+                "zoom": 2.2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.dragImg",
+                "default": "Drag the image block below the heading inside the body."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_img"
+            },
+            "validate": true,
+            "_sourceCrop": {
+                "x": 36,
+                "y": 55,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Set the Source URL",
+            "image": "/static/tutorials/steps/htmlImagesSource.webp",
+            "imageFocus": {
+                "x": 40,
+                "y": 55,
+                "zoom": 2.2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.setSource",
+                "default": "Click the source field on the image block, called src. Replace the text with your puppy image URL."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_img"
+            },
+            "_sourceCrop": {
+                "x": 40,
+                "y": 55,
+                "zoom": 2.2
+            }
+        },
+        {
+            "title": "Describe the Picture",
+            "image": "/static/tutorials/steps/htmlImagesAlt.webp",
+            "imageFocus": {
+                "x": 39,
+                "y": 55,
+                "zoom": 2.1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.setAlt",
+                "default": "Click the alt field. Type A puppy looking at the camera. The alt describes the picture in words. It helps people who can't see the image understand it."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_img"
+            },
+            "_sourceCrop": {
+                "x": 39,
+                "y": 55,
+                "zoom": 2.1
+            }
+        },
+        {
+            "title": "Why Alt Text Matters",
+            "image": "/static/tutorials/steps/htmlImagesAltFallback.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.altFallback",
+                "default": "Alt text shows when the image can't load — broken connection, wrong filename, anything. It also helps screen readers describe pictures to people who can't see them. Even when everything works perfectly, the alt is doing its job invisibly."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "See Your Picture",
+            "image": "/static/tutorials/steps/htmlImagesView.webp",
+            "imageFocus": {
+                "x": 100,
+                "y": 17,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.viewTab",
+                "default": "Click the View tab. Do you see the puppy below your heading?"
+            },
+            "highlightUI": "viewTab",
+            "_sourceCrop": {
+                "x": 100,
+                "y": 17,
+                "zoom": 1.2
+            }
+        },
+        {
+            "title": "Two Parts of an Image",
+            "image": "/static/tutorials/steps/htmlImagesRecapAnnotated.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlImages.recap",
+                "default": "An image has two parts: the source, called src, which tells where the picture comes from, and the alt, which describes it."
+            },
+            "_sourceCrop": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            }
+        }
+    ]
+}

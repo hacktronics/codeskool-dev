@@ -1,0 +1,49 @@
+{
+  "title": "Voxel Treasure Hunt",
+  "project": "VoxelTreasure",
+  "environment": "voxel-valley",
+  "variables": {
+    "Found": 0
+  },
+  "assets": [
+    {
+      "name": "Voxel Valley Scenery",
+      "glbURL": "static/models/3d/world-content/environments/voxel-valley.glb",
+      "scale3d": 22000,
+      "positionScratch": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "library": "Voxel Valley"
+    },
+    {
+      "name": "Voxel Explorer",
+      "glbURL": "static/models/3d/world-content/sprites/voxel-explorer.glb",
+      "scale3d": 200,
+      "positionScratch": {
+        "x": 0,
+        "y": 3,
+        "z": 2880
+      },
+      "library": "Voxel Explorer"
+    },
+    {
+      "name": "Treasure Chest",
+      "glbURL": "static/models/3d/world-content/sprites/gold-chest.glb",
+      "scale3d": 220,
+      "positionScratch": {
+        "x": 2340,
+        "y": 3,
+        "z": 0
+      },
+      "library": "Gold Chest"
+    }
+  ],
+  "haze": {
+    "block": "World > set fog to (colour) at distance (distance)",
+    "colour": "#d5e6ee",
+    "distance": 150,
+    "where": "first block after the green flag of Voxel Explorer"
+  }
+}

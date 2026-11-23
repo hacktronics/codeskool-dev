@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "title": "Original reusable content actors",
+  "license": "Proprietary",
+  "authorship": "Original procedurally authored geometry and materials.",
+  "format": "Self-contained glTF 2.0 binary, static meshes, no external resources or extensions.",
+  "scaleNote": "Existing loader normalizes maximum dimension to 1. Use projectScale3d to restore authored world size.",
+  "assets": [
+    {
+      "id": "blue-propeller-plane",
+      "name": "Blue Propeller Plane",
+      "role": "player-plane",
+      "glb": "static/models/3d/world-content/sprites/blue-propeller-plane.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/blue-propeller-plane.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 8.18,
+        "y": 2.77,
+        "z": 5.905
+      },
+      "authoredMaxDimension": 8.18,
+      "projectScale3d": 820,
+      "bounds": {
+        "min": [
+          -4.09,
+          0,
+          -2.9525
+        ],
+        "max": [
+          4.09,
+          2.77,
+          2.9525
+        ]
+      },
+      "meshCount": 33,
+      "triangleCount": 2114,
+      "bytes": 172384
+    },
+    {
+      "id": "red-enemy-plane",
+      "name": "Red Enemy Plane",
+      "role": "enemy-plane",
+      "glb": "static/models/3d/world-content/sprites/red-enemy-plane.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/red-enemy-plane.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 8.18,
+        "y": 2.77,
+        "z": 5.905
+      },
+      "authoredMaxDimension": 8.18,
+      "projectScale3d": 820,
+      "bounds": {
+        "min": [
+          -4.09,
+          0,
+          -2.9525
+        ],
+        "max": [
+          4.09,
+          2.77,
+          2.9525
+        ]
+      },
+      "meshCount": 33,
+      "triangleCount": 2114,
+      "bytes": 172368
+    },
+    {
+      "id": "energy-bolt",
+      "name": "Energy Bolt",
+      "role": "projectile",
+      "glb": "static/models/3d/world-content/sprites/energy-bolt.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/energy-bolt.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 0.34,
+        "y": 0.34,
+        "z": 1.5872
+      },
+      "authoredMaxDimension": 1.5872,
+      "projectScale3d": 160,
+      "bounds": {
+        "min": [
+          -0.17,
+          0,
+          -0.7936
+        ],
+        "max": [
+          0.17,
+          0.34,
+          0.7936
+        ]
+      },
+      "meshCount": 5,
+      "triangleCount": 1564,
+      "bytes": 116036
+    },
+    {
+      "id": "flight-ring",
+      "name": "Flight Ring",
+      "role": "flight-checkpoint",
+      "glb": "static/models/3d/world-content/sprites/flight-ring.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/flight-ring.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 9.96,
+        "y": 9.96,
+        "z": 0.74
+      },
+      "authoredMaxDimension": 9.96,
+      "projectScale3d": 1000,
+      "bounds": {
+        "min": [
+          -4.98,
+          0,
+          -0.37
+        ],
+        "max": [
+          4.98,
+          9.96,
+          0.37
+        ]
+      },
+      "meshCount": 9,
+      "triangleCount": 1984,
+      "bytes": 148376
+    },
+    {
+      "id": "forest-ranger",
+      "name": "Forest Ranger",
+      "role": "forest-player",
+      "glb": "static/models/3d/world-content/sprites/forest-ranger.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/forest-ranger.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 1.23,
+        "y": 2.175,
+        "z": 0.815
+      },
+      "authoredMaxDimension": 2.175,
+      "projectScale3d": 220,
+      "bounds": {
+        "min": [
+          -0.615,
+          0,
+          -0.4075
+        ],
+        "max": [
+          0.615,
+          2.175,
+          0.4075
+        ]
+      },
+      "meshCount": 26,
+      "triangleCount": 1192,
+      "bytes": 102148
+    },
+    {
+      "id": "hiker",
+      "name": "Hiker",
+      "role": "forest-companion",
+      "glb": "static/models/3d/world-content/sprites/hiker.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/hiker.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 1.3513,
+        "y": 2.07,
+        "z": 0.769
+      },
+      "authoredMaxDimension": 2.07,
+      "projectScale3d": 210,
+      "bounds": {
+        "min": [
+          -0.6756,
+          0,
+          -0.3845
+        ],
+        "max": [
+          0.6756,
+          2.07,
+          0.3845
+        ]
+      },
+      "meshCount": 25,
+      "triangleCount": 1296,
+      "bytes": 108980
+    },
+    {
+      "id": "voxel-explorer",
+      "name": "Voxel Explorer",
+      "role": "voxel-player",
+      "glb": "static/models/3d/world-content/sprites/voxel-explorer.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/voxel-explorer.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 1.6,
+        "y": 2.045,
+        "z": 0.769
+      },
+      "authoredMaxDimension": 2.045,
+      "projectScale3d": 200,
+      "bounds": {
+        "min": [
+          -0.8,
+          0,
+          -0.3845
+        ],
+        "max": [
+          0.8,
+          2.045,
+          0.3845
+        ]
+      },
+      "meshCount": 26,
+      "triangleCount": 732,
+      "bytes": 68880
+    },
+    {
+      "id": "gold-chest",
+      "name": "Gold Chest",
+      "role": "collectible",
+      "glb": "static/models/3d/world-content/sprites/gold-chest.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/gold-chest.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 2.24,
+        "y": 1.5163,
+        "z": 1.6709
+      },
+      "authoredMaxDimension": 2.24,
+      "projectScale3d": 220,
+      "bounds": {
+        "min": [
+          -1.12,
+          0,
+          -0.8354
+        ],
+        "max": [
+          1.12,
+          1.5163,
+          0.8354
+        ]
+      },
+      "meshCount": 18,
+      "triangleCount": 2258,
+      "bytes": 173824
+    },
+    {
+      "id": "red-race-car",
+      "name": "Red Race Car",
+      "role": "racing-player",
+      "glb": "static/models/3d/world-content/sprites/red-race-car.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/red-race-car.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 2.52,
+        "y": 1.6175,
+        "z": 4.2175
+      },
+      "authoredMaxDimension": 4.2175,
+      "projectScale3d": 420,
+      "bounds": {
+        "min": [
+          -1.26,
+          0,
+          -2.1087
+        ],
+        "max": [
+          1.26,
+          1.6175,
+          2.1087
+        ]
+      },
+      "meshCount": 25,
+      "triangleCount": 748,
+      "bytes": 69148
+    },
+    {
+      "id": "checkpoint-gate",
+      "name": "Checkpoint Gate",
+      "role": "racing-checkpoint",
+      "glb": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/checkpoint-gate.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 6.6,
+        "y": 4.04,
+        "z": 1.15
+      },
+      "authoredMaxDimension": 6.6,
+      "projectScale3d": 660,
+      "bounds": {
+        "min": [
+          -3.3,
+          0,
+          -0.575
+        ],
+        "max": [
+          3.3,
+          4.04,
+          0.575
+        ]
+      },
+      "meshCount": 33,
+      "triangleCount": 604,
+      "bytes": 62288
+    },
+    {
+      "id": "robot-car",
+      "name": "Robot Car",
+      "role": "robot-player",
+      "glb": "static/models/3d/world-content/sprites/robot-car.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/robot-car.png",
+      "forwardAxis": "-Z",
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 2.52,
+        "y": 1.8644,
+        "z": 2.78
+      },
+      "authoredMaxDimension": 2.78,
+      "projectScale3d": 280,
+      "bounds": {
+        "min": [
+          -1.26,
+          0,
+          -1.39
+        ],
+        "max": [
+          1.26,
+          1.8644,
+          1.39
+        ]
+      },
+      "meshCount": 26,
+      "triangleCount": 1572,
+      "bytes": 129052
+    },
+    {
+      "id": "football",
+      "name": "Football",
+      "role": "ball",
+      "glb": "static/models/3d/world-content/sprites/football.glb",
+      "thumbnail": "static/models/3d/world-content/sprites/football.png",
+      "forwardAxis": null,
+      "upAxis": "+Y",
+      "origin": "centered X/Z, floor Y=0",
+      "dimensions": {
+        "x": 0.7037,
+        "y": 0.7037,
+        "z": 0.7037
+      },
+      "authoredMaxDimension": 0.7037,
+      "projectScale3d": 70,
+      "bounds": {
+        "min": [
+          -0.3518,
+          0,
+          -0.3518
+        ],
+        "max": [
+          0.3518,
+          0.7037,
+          0.3518
+        ]
+      },
+      "meshCount": 33,
+      "triangleCount": 460,
+      "bytes": 51540
+    }
+  ]
+}

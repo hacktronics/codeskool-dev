@@ -1,0 +1,147 @@
+{
+    "steps": [
+        {
+            "title": "Code on a clock",
+            "image": "/static/tutorials/steps/jsTimers_01_codeOnClock.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.codeOnClock",
+                "default": "Scratch's wait block pauses the script. JavaScript timers DO NOT pause — they schedule code to run later while everything else keeps running. Run once after fires one time after a delay. Repeat every fires over and over. These power every clock, slideshow, and animation on the web."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Page sprite is ready",
+            "image": "/static/tutorials/steps/jsTimers_02_pageReady.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.pageReady",
+                "default": "The page sprite already has a p with id clock and text Seconds zero. You edit the script sprite to make the clock tick."
+            },
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Click the script sprite",
+            "image": "/static/tutorials/steps/jsTimers_03_clickScript.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 80,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.clickScript",
+                "default": "Click the script sprite. JavaScript blocks in the flyout. Drag the script hat."
+            },
+            "validate": true,
+            "highlightUI": "spriteSelector"
+        },
+        {
+            "title": "Grab and set up state",
+            "image": "/static/tutorials/steps/jsTimers_04_setupState.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.setupState",
+                "default": "A const named clock with find element by id and the text clock. A let named seconds with value zero. The counter we bump every tick."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Start the repeating timer",
+            "image": "/static/tutorials/steps/jsTimers_05_startInterval.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.startInterval",
+                "default": "Drag a repeat every block. Set the number to one thousand. JavaScript timers count in MILLISECONDS — one thousand of them is one second. The body runs once per second. Unlike Scratch's wait, this does not pause anything else."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Bump and show",
+            "image": "/static/tutorials/steps/jsTimers_06_bumpAndShow.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.bumpAndShow",
+                "default": "Inside repeat every — a change by block. Variable seconds. Amount one. Then a set text of block. Element is clock. Text is a join of Seconds, a space, and seconds. The number ticks on the page."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save the timer id",
+            "image": "/static/tutorials/steps/jsTimers_07_saveId.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.saveId",
+                "default": "Right after the repeat every block, add a const named timerId. Value is the last interval id reporter. Every JS timer has an id. Save it now because you need it to cancel later."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Stop after ten",
+            "image": "/static/tutorials/steps/jsTimers_08_stopAfterTen.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.stopAfterTen",
+                "default": "Inside the repeat every body, after the update, add an if block. Condition — seconds triple-equals ten. Inside — a cancel interval block with timerId. Then a set text of on clock with the value Seconds ten done."
+            },
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Save and watch",
+            "image": "/static/tutorials/steps/jsTimers_09_saveAndWatch.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsTimers.saveAndWatch",
+                "default": "Click Save. Default name is script. Click Save. Then View Files, open index.html. The clock counts up one, two, three. At ten it freezes and prints done."
+            },
+            "highlightUI": "saveButton"
+        },
+        {
+            "title": "Timers everywhere",
+            "image": "/static/tutorials/steps/jsTimers_10_timersEverywhere.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsTimers.timersEverywhere",
+                "default": "Repeat every for ticking clocks and game loops. Run once after for one-shot delays. Save the id to cancel later. Timers run alongside the rest of your code, not instead of it — that is the JS way."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

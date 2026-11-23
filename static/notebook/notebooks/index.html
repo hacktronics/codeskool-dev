@@ -1,0 +1,475 @@
+<!DOCTYPE html><html><head><title>CodeSkool Notebook</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="Description" content="CodeSkool Python Notebook"><link rel="manifest" href="../manifest.webmanifest"><link id="jupyter-lite-main" rel="preload" href="../build/notebooks/bundle.js?_=409c39a" main="index" as="script"><script id="jupyter-config-data" type="application/json" data-jupyter-lite-root="..">{
+        "federated_extensions": [
+          {
+            "name": "@jupyterlite/pyodide-kernel-extension",
+            "load": "static/remoteEntry.a117bd216cefa0b341fe.js"
+          }
+        ],
+        "litePluginSettings": {
+          "@jupyterlite/pyodide-kernel-extension:kernel": {
+            "pyodideUrl": "https://cdn.jsdelivr.net/pyodide/v0.29.3/full/pyodide.mjs"
+          }
+        },
+        "fullLabextensionsUrl": "../extensions",
+        "defaultKernelName": "python"
+      }</script><script>(async function () {
+        const { pathname, origin, search, hash } = window.location;
+        if (pathname.match(/(index.html|\/?)$/) == null) {
+          window.location.href = `${origin}${pathname}/${search}${hash}`;
+          return;
+        }
+        await import(
+          '../config-utils.js?_=409c39a'
+        );
+      }.call(this));</script><style>body {
+        margin: 0;
+        padding: 0;
+      }
+      body { background-color: #fff; color: #000; }</style><style id="codeskool-theme">:root {
+        --cs-ui-primary: hsla(215, 100%, 95%, 1);
+        --cs-ui-secondary: hsla(215, 75%, 95%, 1);
+        --cs-ui-tertiary: hsla(215, 50%, 90%, 1);
+        --cs-ui-white: hsla(0, 100%, 100%, 1);
+        --cs-ui-black-transparent: hsla(0, 0%, 0%, 0.15);
+        --cs-text-primary: hsla(225, 15%, 40%, 1);
+        --cs-motion-primary: hsla(215, 100%, 65%, 1);
+        --cs-motion-tertiary: hsla(215, 60%, 50%, 1);
+        --cs-motion-transparent: hsla(215, 100%, 65%, 0.35);
+        --cs-motion-light-transparent: hsla(215, 100%, 65%, 0.15);
+        --cs-looks-secondary: hsla(260, 60%, 60%, 1);
+        --cs-red-primary: hsla(20, 100%, 55%, 1);
+        --cs-pen-primary: hsla(163, 85%, 40%, 1);
+        --cs-drop-highlight: hsla(215, 100%, 77%, 1);
+        --cs-topbar-h: 46px;
+        --cs-bottombar-h: 34px;
+      }
+
+      /* ===== HIDE ALL JUPYTERLAB/JUPYTERLITE CHROME ===== */
+      #jp-menu-panel,
+      .lm-MenuBar,
+      .lm-Menu,
+      .jp-StatusBar,
+      .lm-DockPanel-tabBar,
+      #jupyterlab-splash,
+      .jp-SpinnerContent,
+      .jp-SideBar,
+      .lm-TabBar,
+      #jp-top-bar,
+      #jp-top-panel,
+      .jp-NotebookPanel-toolbar,
+      .jp-NotebookPanel > .jp-Toolbar,
+      .jp-Toolbar,
+      .jp-Notebook-footer,
+      .jp-NotebookTrustedStatus,
+      .jp-KernelStatus,
+      .jp-Notebook-ExecutionIndicator,
+      [data-jp-toolbar],
+      .jp-nb-toolbar { display: none !important; visibility: hidden !important; height: 0 !important; min-height: 0 !important; overflow: hidden !important; }
+
+      /* ===== LAYOUT ===== */
+      body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        overflow: hidden;
+      }
+      /* Offset the entire app for our fixed bars */
+      #main {
+        position: absolute !important;
+        top: var(--cs-topbar-h) !important;
+        bottom: var(--cs-bottombar-h) !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+      .jp-LabShell, .jp-NotebookPanel {
+        background: var(--cs-ui-primary) !important;
+      }
+      /* Kill any remaining padding/margins from JupyterLab shell */
+      .jp-LabShell, .jp-NotebookPanel, .jp-Notebook {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+      }
+
+      /* ===== CELL CARDS ===== */
+      .jp-Cell {
+        background: var(--cs-ui-white);
+        border-radius: 10px;
+        margin: 4px 8px;
+        border: 2px solid var(--cs-ui-tertiary);
+        transition: border-color 0.2s, box-shadow 0.2s;
+        overflow: hidden;
+      }
+      .jp-Cell:hover {
+        border-color: var(--cs-drop-highlight);
+      }
+      .jp-Cell.jp-mod-active {
+        border-color: var(--cs-motion-primary) !important;
+        box-shadow: 0 2px 12px var(--cs-motion-light-transparent);
+      }
+
+      /* ===== CELL NUMBER BADGES ===== */
+      .jp-InputArea-prompt {
+        color: var(--cs-ui-white) !important;
+        background: var(--cs-motion-primary) !important;
+        border-radius: 16px !important;
+        font-weight: 700 !important;
+        font-size: 11px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        text-align: center !important;
+        padding: 4px 0 !important;
+        margin: 8px 6px 8px 8px !important;
+        line-height: 1.5 !important;
+        align-self: flex-start !important;
+        flex-shrink: 0 !important;
+      }
+      .jp-OutputArea-prompt {
+        color: var(--cs-ui-white) !important;
+        background: var(--cs-pen-primary) !important;
+        border-radius: 16px !important;
+        font-weight: 700 !important;
+        font-size: 10px !important;
+        min-width: 36px !important;
+        max-width: 36px !important;
+        text-align: center !important;
+        padding: 4px 0 !important;
+        margin: 8px 6px 8px 8px !important;
+        line-height: 1.5 !important;
+        align-self: flex-start !important;
+        flex-shrink: 0 !important;
+      }
+      .jp-MarkdownCell .jp-InputArea-prompt {
+        background: var(--cs-looks-secondary) !important;
+      }
+
+      /* ===== CODE EDITOR ===== */
+      .jp-Cell .jp-InputArea-editor {
+        border-radius: 8px;
+        border: 1px solid var(--cs-ui-tertiary);
+        margin: 4px 8px 4px 0;
+      }
+      .jp-Cell.jp-mod-active .jp-InputArea-editor {
+        border-color: var(--cs-motion-transparent);
+      }
+
+      /* ===== OUTPUT AREA ===== */
+      .jp-OutputArea {
+        background: hsla(163, 85%, 40%, 0.04);
+        border-top: 1px dashed var(--cs-ui-tertiary);
+        margin: 0 8px 8px 8px;
+        border-radius: 0 0 8px 8px;
+        padding: 4px 0;
+      }
+      .jp-OutputArea-child { padding: 6px 10px; }
+      .jp-OutputArea-child .jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"] {
+        background: hsla(20, 100%, 55%, 0.06);
+        border-radius: 6px;
+        padding: 8px;
+        border-left: 3px solid var(--cs-red-primary);
+      }
+
+      /* ===== CELL TOOLBAR ===== */
+      .jp-cell-toolbar {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+
+      /* ===== NOTEBOOK ===== */
+      .jp-Notebook {
+        background: transparent !important;
+        padding-bottom: 40px;
+      }
+
+      /* ===== SCROLLBAR ===== */
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: var(--cs-ui-tertiary); border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: var(--cs-motion-transparent); }
+
+      /* ===== CODESKOOL TOP BAR ===== */
+      #cs-topbar {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        height: var(--cs-topbar-h);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        background: var(--cs-ui-white);
+        border-bottom: 2px solid var(--cs-ui-tertiary);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        gap: 8px;
+        z-index: 10000;
+        user-select: none;
+      }
+      #cs-topbar .cs-logo {
+        display: flex; align-items: center; gap: 6px; margin-right: auto;
+      }
+      #cs-topbar .cs-logo-icon {
+        width: 28px; height: 28px;
+        background: var(--cs-motion-primary);
+        border-radius: 8px;
+        display: flex; align-items: center; justify-content: center;
+        color: white; font-weight: 800; font-size: 14px;
+      }
+      #cs-topbar .cs-logo-text {
+        font-weight: 700; font-size: 14px; color: var(--cs-text-primary);
+      }
+      #cs-topbar button {
+        border: none; border-radius: 20px;
+        padding: 7px 16px; cursor: pointer;
+        font-size: 13px; font-weight: 600; font-family: inherit;
+        transition: filter 0.15s, transform 0.1s;
+        display: flex; align-items: center; gap: 5px; white-space: nowrap;
+      }
+      #cs-topbar button:hover { filter: brightness(0.92); }
+      #cs-topbar button:active { transform: scale(0.96); }
+      #cs-topbar .btn-run { background: var(--cs-pen-primary); color: white; font-size: 14px; padding: 8px 20px; }
+      #cs-topbar .btn-blue { background: var(--cs-motion-primary); color: white; }
+      #cs-topbar .btn-ghost { background: var(--cs-ui-primary); color: var(--cs-text-primary); border: 1px solid var(--cs-ui-tertiary); }
+      #cs-topbar .cs-divider { width: 1px; height: 24px; background: var(--cs-ui-tertiary); margin: 0 2px; flex-shrink: 0; }
+
+      /* ===== CODESKOOL BOTTOM BAR ===== */
+      #cs-bottombar {
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        height: var(--cs-bottombar-h);
+        box-sizing: border-box;
+        display: flex; align-items: center;
+        padding: 0 16px;
+        background: var(--cs-ui-secondary);
+        border-top: 1px solid var(--cs-ui-tertiary);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px; color: var(--cs-text-primary);
+        gap: 10px; z-index: 10000; user-select: none;
+      }
+      #cs-bottombar .cs-status { display: flex; align-items: center; gap: 6px; }
+      #cs-bottombar .cs-dot {
+        width: 8px; height: 8px; border-radius: 50%;
+        background: var(--cs-ui-tertiary); transition: background 0.3s; flex-shrink: 0;
+      }
+      #cs-bottombar .cs-dot.ready { background: var(--cs-pen-primary); }
+      #cs-bottombar button {
+        background: var(--cs-ui-white); color: var(--cs-text-primary);
+        border: 1px solid var(--cs-ui-tertiary); border-radius: 14px;
+        padding: 3px 12px; cursor: pointer; font-size: 11px; font-family: inherit;
+        transition: background 0.15s; white-space: nowrap;
+      }
+      #cs-bottombar button:hover { background: var(--cs-ui-primary); }
+      #cs-bottombar .cs-spacer { flex: 1; }
+
+      /* Hide kernel selection dialog background dimmer */
+      .jp-Dialog-header { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }</style></head><body class="jp-ThemedContainer" data-notebook="notebooks"><div id="jupyterlite-loading-indicator" class="hidden"><div class="jupyterlite-loading-indicator-spinner"></div><div class="jupyterlite-loading-indicator-text">Loading CodeSkool...</div></div><noscript><div style="text-align: center; padding: 20px;">CodeSkool Notebook requires JavaScript to be enabled.</div></noscript><script id="codeskool-ui">(function() {
+      'use strict';
+
+      function waitFor(check, timeout) {
+        return new Promise(function(resolve) {
+          var result = check();
+          if (result) { resolve(result); return; }
+          var t = setTimeout(function() { obs.disconnect(); resolve(null); }, timeout || 30000);
+          var obs = new MutationObserver(function() {
+            result = check();
+            if (result) { clearTimeout(t); obs.disconnect(); resolve(result); }
+          });
+          obs.observe(document.body, { childList: true, subtree: true });
+        });
+      }
+
+      // Execute JupyterLab command via the app instance
+      function execCommand(cmd) {
+        var app = window.jupyterapp;
+        if (app && app.commands && app.commands.hasCommand(cmd)) {
+          return app.commands.execute(cmd);
+        }
+        return Promise.reject('Command not found: ' + cmd);
+      }
+
+      function createTopBar() {
+        var bar = document.createElement('div');
+        bar.id = 'cs-topbar';
+        bar.innerHTML =
+          '<div class="cs-logo">' +
+            '<div class="cs-logo-icon">CS</div>' +
+            '<span class="cs-logo-text">CodeSkool Notebook</span>' +
+          '</div>' +
+          '<button class="btn-run" id="cs-run" title="Run this cell (Shift+Enter)">\u25B6 Run</button>' +
+          '<button class="btn-blue" id="cs-run-all" title="Run every cell">\u25B6\u25B6 Run All</button>' +
+          '<div class="cs-divider"></div>' +
+          '<button class="btn-ghost" id="cs-add-cell" title="Add a new code cell">+ New Cell</button>' +
+          '<button class="btn-ghost" id="cs-restart" title="Restart Python (clears variables)">\u27F3 Restart Python</button>' +
+          '<button class="btn-ghost" id="cs-clear" title="Clear all outputs">\uD83E\uDDF9 Clear</button>';
+        return bar;
+      }
+
+      function createBottomBar() {
+        var bar = document.createElement('div');
+        bar.id = 'cs-bottombar';
+        bar.innerHTML =
+          '<div class="cs-status">' +
+            '<div class="cs-dot" id="cs-dot"></div>' +
+            '<span id="cs-status-text">Starting Python...</span>' +
+          '</div>' +
+          '<div class="cs-spacer"></div>' +
+          '<button id="cs-bottom-restart">\u27F3 Restart Python</button>' +
+          '<button id="cs-bottom-restart-run">\u27F3 Restart &amp; Run All</button>' +
+          '<button id="cs-bottom-clear">\uD83E\uDDF9 Clear All Outputs</button>';
+        return bar;
+      }
+
+      function wireButtons() {
+        // Run cell and advance
+        document.getElementById('cs-run').addEventListener('click', function() {
+          execCommand('notebook:run-cell-and-select-next').catch(function() {
+            execCommand('notebook:run-cell');
+          });
+        });
+
+        // Run all cells
+        document.getElementById('cs-run-all').addEventListener('click', function() {
+          execCommand('notebook:run-all-cells');
+        });
+
+        // Add cell below
+        document.getElementById('cs-add-cell').addEventListener('click', function() {
+          execCommand('notebook:insert-cell-below');
+        });
+
+        // Restart kernel
+        function restartKernel() {
+          execCommand('notebook:restart-kernel').catch(function() {
+            execCommand('kernelspec:restart');
+          });
+        }
+        document.getElementById('cs-restart').addEventListener('click', restartKernel);
+        document.getElementById('cs-bottom-restart').addEventListener('click', restartKernel);
+
+        // Clear all outputs
+        function clearOutputs() {
+          execCommand('notebook:clear-all-cell-outputs');
+        }
+        document.getElementById('cs-clear').addEventListener('click', clearOutputs);
+        document.getElementById('cs-bottom-clear').addEventListener('click', clearOutputs);
+
+        // Restart & Run All
+        document.getElementById('cs-bottom-restart-run').addEventListener('click', function() {
+          execCommand('notebook:restart-run-all').catch(function() {
+            restartKernel();
+            setTimeout(function() { execCommand('notebook:run-all-cells'); }, 2000);
+          });
+        });
+      }
+
+      function monitorKernelStatus() {
+        var dot = document.getElementById('cs-dot');
+        var text = document.getElementById('cs-status-text');
+
+        function update(ready, msg) {
+          dot.className = ready ? 'cs-dot ready' : 'cs-dot';
+          text.textContent = msg;
+        }
+
+        // Listen to kernel status changes via the app
+        function pollStatus() {
+          var app = window.jupyterapp;
+          if (!app) return;
+
+          try {
+            // Try to get the current notebook panel's session
+            var widget = app.shell.currentWidget;
+            if (widget && widget.sessionContext) {
+              var session = widget.sessionContext;
+              var status = session.kernelDisplayStatus || '';
+              if (status === 'idle') {
+                update(true, 'Python is ready!');
+              } else if (status === 'busy') {
+                update(false, 'Python is busy...');
+              } else if (status === 'starting' || status === 'restarting') {
+                update(false, 'Starting Python...');
+              } else if (status === '' || status === 'unknown') {
+                // Kernel might not be connected yet
+                update(false, 'Connecting...');
+              } else {
+                update(true, 'Python is ready!');
+              }
+              return;
+            }
+          } catch(e) {}
+          update(false, 'Starting Python...');
+        }
+
+        setInterval(pollStatus, 1500);
+        // Initial optimistic update after kernel should have loaded
+        setTimeout(function() { pollStatus(); }, 5000);
+      }
+
+      // Auto-dismiss kernel selection dialog by clicking "Start python Kernel"
+      function autoStartKernel() {
+        var obs = new MutationObserver(function(mutations) {
+          // Look for the kernel selection dialog
+          var dialog = document.querySelector('.jp-Dialog');
+          if (!dialog) return;
+          var buttons = dialog.querySelectorAll('button');
+          for (var i = 0; i < buttons.length; i++) {
+            var txt = buttons[i].textContent.toLowerCase().trim();
+            if (txt.indexOf('start') !== -1 && txt.indexOf('python') !== -1) {
+              buttons[i].click();
+              obs.disconnect();
+              return;
+            }
+            if (txt === 'start kernel') {
+              buttons[i].click();
+              obs.disconnect();
+              return;
+            }
+          }
+          // Also check for select elements
+          var selects = dialog.querySelectorAll('select');
+          for (var j = 0; j < selects.length; j++) {
+            var options = selects[j].options;
+            for (var k = 0; k < options.length; k++) {
+              if (options[k].textContent.toLowerCase().indexOf('python') !== -1) {
+                selects[j].value = options[k].value;
+                selects[j].dispatchEvent(new Event('change'));
+                break;
+              }
+            }
+          }
+          // Click the accept/OK button
+          setTimeout(function() {
+            var acceptBtns = dialog.querySelectorAll('.jp-Dialog-button.jp-mod-accept, button.jp-mod-accept');
+            if (acceptBtns.length > 0) {
+              acceptBtns[0].click();
+              obs.disconnect();
+            }
+          }, 200);
+        });
+        obs.observe(document.body, { childList: true, subtree: true });
+        // Stop watching after 30s
+        setTimeout(function() { obs.disconnect(); }, 30000);
+      }
+
+      // Main initialization
+      autoStartKernel();
+
+      waitFor(function() {
+        return document.querySelector('#main') || document.querySelector('.jp-NotebookPanel');
+      }).then(function(el) {
+        if (!el) return;
+
+        // Insert bars
+        document.body.insertBefore(createTopBar(), document.body.firstChild);
+        document.body.appendChild(createBottomBar());
+
+        // Wait for app to be ready, then wire buttons
+        var attempts = 0;
+        var interval = setInterval(function() {
+          attempts++;
+          if (window.jupyterapp && window.jupyterapp.commands) {
+            clearInterval(interval);
+            wireButtons();
+            monitorKernelStatus();
+          } else if (attempts > 120) {
+            clearInterval(interval);
+          }
+        }, 500);
+      });
+    })();</script></body></html>

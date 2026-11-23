@@ -1,0 +1,872 @@
+{
+  "ForestRescue": {
+    "name": "Forest Rescue",
+    "description": "Find three hikers along the forest paths. Arrow keys move; rescue progress uses ordinary Text blocks.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-forest-trail.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "ForestRescue"
+  },
+  "VoxelTreasure": {
+    "name": "Voxel Treasure Hunt",
+    "description": "Explore the voxel village and collect the gold chest using arrows and the existing AI proximity block.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-voxel-valley.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "VoxelTreasure"
+  },
+  "CheckpointCircuit": {
+    "name": "Checkpoint Circuit",
+    "description": "Drive through three checkpoints in order and record a finish time. Arrow keys drive.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-racing-circuit.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "CheckpointCircuit"
+  },
+  "RobotFootball": {
+    "name": "Robot Football Practice",
+    "description": "Drive a robot behind the ball and press Space to kick toward either goal. Your approach sets the shot direction.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-football-stadium.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "RobotFootball"
+  },
+  "RobotSensorTrail": {
+    "name": "Robot Gate Trail",
+    "description": "Guide a robot through three checker gates in the test lab using arrow keys.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-robot-lab.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "RobotSensorTrail"
+  },
+  "ObstacleExplorer": {
+    "name": "Obstacle Explorer",
+    "description": "Explore the training course and reach its three gates in order. Arrow keys move.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/world-obstacle-course.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "ObstacleExplorer"
+  },
+  "SkyPatrol": {
+    "name": "Sky Patrol",
+    "description": "Advanced: fly, bank and fire at three raiders over eight islands. Arrow keys and Space, or the existing GamePad BLE controls.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/sky-patrol.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "SkyPatrol"
+  },
+  "DecisionTree": {
+    "name": "Decision Tree",
+    "description": "Send an animal down a tree of yes-or-no questions and watch the AI reach the right answer - then run it yourself.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/decision-tree.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "DecisionTree"
+  },
+  "PatternPlayground": {
+    "name": "Pattern Playground",
+    "description": "Tilt the line to split the two groups of dots - the AI sorts each dot by the side it lands on. Reach 100%, then watch it classify brand-new dots.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/pattern-playground.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "PatternPlayground"
+  },
+  "PromptLab": {
+    "name": "Prompt Lab",
+    "description": "Prompt engineering in action: ask the same AI a vague question, then a clear one, and watch the answer get better - rated up to 3 stars.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/prompt-lab.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "PromptLab"
+  },
+  "TowerOfHanoi": {
+    "name": "Tower of Hanoi",
+    "description": "Move the whole stack onto the last peg, one disk at a time - and never put a bigger disk on a smaller one.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/tower_of_hanoi.webp",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "TowerOfHanoi"
+  },
+  "PythonTurtle": {
+    "name": "Python Turtle",
+    "description": "A colourful spiral drawn with the Turtle extension — the same program shown as blocks and as Python code.",
+    "tags": [
+      "python"
+    ],
+    "img": "/static/examples/thumbnails/python_turtle.webp",
+    "insetIconURL": "python",
+    "isMemberOnly": false,
+    "urlId": "PythonTurtle"
+  },
+  "DinosaurVolcanoRescue": {
+    "name": "Dinosaur Volcano Rescue",
+    "description": "Mom Dinosaur rescues her babies before the volcano erupts — guide her with AR markers.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/dinosaur_volcano_rescue.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "DinosaurVolcanoRescue"
+  },
+  "pose-dragon-soar": {
+    "name": "Pose Dragon Soar",
+    "description": "Steer a dragon with head movement; raise an open hand to breathe fire and melt ice walls before reaching the egg nest.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/pose-dragon-soar.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "pose-dragon-soar"
+  },
+  "TrafficControl": {
+    "name": "Traffic Control",
+    "description": "Control a traffic light with hand gestures using AI.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/traffic_control.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "TrafficControl"
+  },
+  "ClockFace": {
+    "name": "Clock Face",
+    "description": "Analog clock face drawn with the Draw extension — push/pop/translate/rotate, arc, and text.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/clock_face.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "ClockFace"
+  },
+  "nlp": {
+    "name": "NLP: Q&A",
+    "description": "Answer questions based on a given text using tensorflow NLP model.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/nlp.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "nlp"
+  },
+  "OllamaToolCall": {
+    "name": "Ollama Tool Call",
+    "description": "AI agents that can use real time data using the Ollama tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ollama_tool_call.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OllamaToolCall"
+  },
+  "BouncingBall": {
+    "name": "Bouncing Ball",
+    "description": "A bouncing ball animation based on physics game engine.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/bouncing_ball.webp",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "BouncingBall"
+  },
+  "QRCode": {
+    "name": "QR Code",
+    "description": "Detect and decode QR codes in an image.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/qr_code.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "QRCode"
+  },
+  "OCR": {
+    "name": "OCR",
+    "description": "Optical character recognition (OCR) using Tesseract.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/ocr.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OCR"
+  },
+  "FaceMatching": {
+    "name": "Face Matching",
+    "description": "Match faces similarity in two images.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/face_matching.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "FaceMatching"
+  },
+  "ObjectDetection": {
+    "name": "Object Detection",
+    "description": "Detect objects in an image using machine learning.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/object_detection.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "ObjectDetection"
+  },
+  "OpenAIToolCall": {
+    "name": "OpenAI Tool Call",
+    "description": "AI agents that can use real time data using the OpenAI tool calls.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/openai_tool_call.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "OpenAIToolCall"
+  },
+  "CustomSpeechCommands": {
+    "name": "Custom Speech Commands",
+    "description": "Create custom speech commands using TensorFlow.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/custom_speech_commands.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "CustomSpeechCommands"
+  },
+  "Cloudinary": {
+    "name": "Cloudinary",
+    "description": "Upload images to Cloudinary and get the URL.",
+    "tags": [
+      "internet"
+    ],
+    "img": "/static/examples/thumbnails/cloudinary.webp",
+    "insetIconURL": "internet",
+    "isMemberOnly": false,
+    "urlId": "Cloudinary"
+  },
+  "BearTrackingOpenCV": {
+    "name": "Bear Tracking OpenCV",
+    "description": "Track bears in a image using OpenCV.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/bear_tracking_opencv.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "BearTrackingOpenCV"
+  },
+  "TeachableMachines": {
+    "name": "Teachable Machines",
+    "description": "Train a model to recognize images using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/teachable_machines.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "TeachableMachines"
+  },
+  "Florence2": {
+    "name": "Florence2",
+    "description": "Vision tasks using foundation model that uses prompt-based approach.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/florence2.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "Florence2"
+  },
+  "MinecraftFarming": {
+    "name": "Minecraft Farming",
+    "description": "Automate farming in Minecraft using Agents.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/minecraft_farming.webp",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "MinecraftFarming"
+  },
+  "LEDBlink": {
+    "name": "LED Blink",
+    "description": "Blink an LED using Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/led_blink.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "LEDBlink"
+  },
+  "NeoPixelTrafficLight": {
+    "name": "NeoPixel Traffic Light",
+    "description": "Control a traffic light using NeoPixels and Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/neo_pixel_traffic_light.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "NeoPixelTrafficLight"
+  },
+  "AutomaticGate": {
+    "name": "Automatic Gate",
+    "description": "Automatic gate control with servo and ultrasonic sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/automatic_gate.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "AutomaticGate"
+  },
+  "TempDisplay": {
+    "name": "Temperature Display",
+    "description": "Display temperature using DHT11 sensor and TM1637 display.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/temp_display.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "TempDisplay"
+  },
+  "MarioRotaryEncoder": {
+    "name": "Mario Game",
+    "description": "Control Mario's movement using a rotary encoder.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/mario_rotary_encoder.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "MarioRotaryEncoder"
+  },
+  "DigitalLocker": {
+    "name": "Digital Locker",
+    "description": "Simulate a digital locker using a keypad and 16x2 LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/digital_locker.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "DigitalLocker"
+  },
+  "Calculator": {
+    "name": "Calculator",
+    "description": "Simple calculator using membrane keypad and I2C lcd.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/calculator.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "Calculator"
+  },
+  "IkeaPM2.5": {
+    "name": "IKEA PM2.5 Sensor",
+    "description": "Monitor PM2.5 levels using ENS160 air quality sensor and Neopixel led.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ikea_pm_2.5.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "IkeaPM2.5"
+  },
+  "ReverseParking": {
+    "name": "Reverse Parking",
+    "description": "Reverse parking assistance using ultrasonic sensor and buzzer.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/reverse_parking.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "ReverseParking"
+  },
+  "ArduinoBlinkLed": {
+    "name": "Arduino Blink LED",
+    "description": "Blink an LED using Arduino Code.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/arduino_blink_led.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "ArduinoBlinkLed"
+  },
+  "Python101": {
+    "name": "Python 101",
+    "description": "Your first Python program using Scratch.",
+    "tags": [
+      "python"
+    ],
+    "img": "/static/examples/thumbnails/python_101.webp",
+    "insetIconURL": "python",
+    "isMemberOnly": false,
+    "urlId": "Python101"
+  },
+  "HandwritingRecognition": {
+    "name": "Handwriting Recognition",
+    "description": "Recognize handwritten digits using Teachable Machines.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/handwriting_recognition.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "HandwritingRecognition"
+  },
+  "SmartTrashCan": {
+    "name": "Smart Trash Can",
+    "description": "Open trash can lid using IR obstacle sensor and servo motor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/smart_trash_can.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "SmartTrashCan"
+  },
+  "ESP32BoomBarrierGate": {
+    "name": "ESP32 Boom Barrier Gate",
+    "description": "Control a boom barrier gate using ESP32 and ultrasonic sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/esp32_boom_barrier_gate.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "ESP32BoomBarrierGate"
+  },
+  "AIPoweredGarageGate": {
+    "name": "AI Powered Garage Gate",
+    "description": "Control garage gate using teachable machine AI.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ai_powered_garage_gate.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "AIPoweredGarageGate"
+  },
+  "PasswordProtectedGate": {
+    "name": "Password Protected Gate",
+    "description": "Control a gate using password protection.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/password_protected_gate.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "PasswordProtectedGate"
+  },
+  "TrafficViolation": {
+    "name": "Traffic Violation",
+    "description": "Detect vehicles jumping red light signal using an IR sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/traffic_violation.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "TrafficViolation"
+  },
+  "PomodoroTimer": {
+    "name": "Pomodoro Timer",
+    "description": "A Pomodoro timer to boost productivity.",
+    "tags": [
+      "hardware"
+    ],
+    "img": "/static/examples/thumbnails/pomodoro_timer.webp",
+    "insetIconURL": "hardware",
+    "isMemberOnly": false,
+    "urlId": "PomodoroTimer"
+  },
+  "PlantWateringBD": {
+    "name": "Automatic Plant Watering",
+    "description": "Automated plant watering system with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/plant_watering_bd.webp",
+    "insetIconURL": "hardware",
+    "isMemberOnly": false,
+    "urlId": "PlantWateringBD"
+  },
+  "ButtonControlledTrafficLight": {
+    "name": "Button Controlled Traffic Light",
+    "description": "Control traffic light using button with BlockDuino.",
+    "tags": [
+      "hardware",
+      "blockDuino"
+    ],
+    "img": "/static/examples/thumbnails/button_controlled_traffic_light.webp",
+    "insetIconURL": "hardware",
+    "isMemberOnly": false,
+    "urlId": "ButtonControlledTrafficLight"
+  },
+  "RocketLaunch": {
+    "name": "Rocket Launch",
+    "description": "Launch a rocket using 3D blocks.",
+    "tags": [
+      "3d"
+    ],
+    "img": "/static/examples/thumbnails/rocket_launch.webp",
+    "insetIconURL": "3d",
+    "isMemberOnly": false,
+    "urlId": "RocketLaunch"
+  },
+  "WeatherStation": {
+    "name": "Weather Station",
+    "description": "Display temperature and humidity on LCD using DHT22 sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/weather_station.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "WeatherStation"
+  },
+  "ParkingSensor": {
+    "name": "Parking Sensor",
+    "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/parking_sensor.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "ParkingSensor"
+  },
+  "TempMonitorOLED": {
+    "name": "Temperature Monitor OLED",
+    "description": "Display temperature and humidity on OLED using DHT22 sensor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/temp_monitor_oled.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "TempMonitorOLED"
+  },
+  "Thermometer": {
+    "name": "Thermometer",
+    "description": "Read temperature using NTC sensor and display on LCD 16x2.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/thermometer.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "Thermometer"
+  },
+  "DigitalStopwatch": {
+    "name": "Digital Stopwatch",
+    "description": "Stopwatch using TM1637 7-segment display with start and reset buttons.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/digital_stopwatch.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "DigitalStopwatch"
+  },
+  "HCSR04_LCD": {
+    "name": "Ultrasonic Distance Sensor",
+    "description": "Measure distance with HC-SR04 ultrasonic sensor and display on LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/hcsr04_lcd.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "HCSR04_LCD"
+  },
+  "NTCSensorOLED": {
+    "name": "NTC Temperature Sensor OLED",
+    "description": "Read temperature using NTC sensor and display on OLED screen.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/ntc_sensor_oled.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "NTCSensorOLED"
+  },
+  "StepperMotor": {
+    "name": "Stepper Motor",
+    "description": "Control a 28BYJ-48 stepper motor with ULN2003 driver for precise rotation.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/stepper_motor.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "StepperMotor"
+  },
+  "TrafficLight": {
+    "name": "Traffic Light",
+    "description": "Simulate a traffic light sequence using LEDs and Arduino.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/traffic_light_sim.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "TrafficLight"
+  },
+  "BoomBarrierGate": {
+    "name": "Boom Barrier Gate",
+    "description": "Automatic boom barrier gate using HC-SR04 ultrasonic sensor and servo motor.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/boom_barrier_gate.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "BoomBarrierGate"
+  },
+  "RotaryEncoder": {
+    "name": "Rotary Encoder",
+    "description": "Read rotary encoder rotation and button press, display counter on LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/rotary_encoder.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "RotaryEncoder"
+  },
+  "AnalogJoyStick": {
+    "name": "Analog Joystick",
+    "description": "Read joystick X/Y axes and button, display values on LCD.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/analog_joystick.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "AnalogJoyStick"
+  },
+  "KeypadLocker": {
+    "name": "Keypad Locker",
+    "description": "Password-protected locker using membrane keypad and LCD display.",
+    "tags": [
+      "arduino"
+    ],
+    "img": "/static/examples/thumbnails/keypad_locker.webp",
+    "insetIconURL": "arduino",
+    "isMemberOnly": false,
+    "urlId": "KeypadLocker"
+  },
+  "car-parallax": {
+    "name": "Car Parallax",
+    "description": "Side-scrolling driving game with four parallax background layers. Press SPACE to jump the cones.",
+    "tags": [
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/car-parallax.webp",
+    "insetIconURL": "games",
+    "isMemberOnly": false,
+    "urlId": "car-parallax"
+  },
+  "robot-recycle-sorter": {
+    "name": "Robot Recycle Sorter",
+    "description": "Hold trash up to the camera — AI detects it and the robot glides to drop wet waste left or dry waste right. 10 sorts wins.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/robot-recycle-sorter.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "robot-recycle-sorter"
+  },
+  "fairy-voice-spells": {
+    "name": "Fairy Voice Spells",
+    "description": "Cast 5 magic spells to cross the chasm — speak words aloud and the AI checks if each matches the Fairy's challenge.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/fairy-voice-spells.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "fairy-voice-spells"
+  },
+  "alien-translate-bridge": {
+    "name": "Alien Translate Bridge",
+    "description": "An alien speaks Spanish — say the English meaning aloud; AI listens, restores 1 of 3 star-bridge segments per correct trade.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/alien-translate-bridge.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "alien-translate-bridge"
+  },
+  "weather-traveler-bear": {
+    "name": "Weather Traveler Bear",
+    "description": "Speak any city — worldWeather fetches the live forecast and Bear's outfit changes (sun-hat / umbrella / scarf) to match the conditions.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/weather-traveler-bear.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "weather-traveler-bear"
+  },
+  "oracle-owl": {
+    "name": "Oracle Owl",
+    "description": "Speak any question to a wise owl — Chrome’s on-device Gemini Nano answers locally. No API key, no internet, no server.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/oracle-owl.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "oracle-owl"
+  },
+  "bear-diary": {
+    "name": "Bear's Diary",
+    "description": "Show anything to the camera — a friendly bear's AI eye spots it and writes each new discovery in its diary. 3 unique items wins.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/bear-diary.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "bear-diary"
+  },
+  "sentiment-mood-mirror": {
+    "name": "Mood Mirror",
+    "description": "Tell the cloud how you're feeling — AI reads your sentiment and the cloud's face mirrors your mood. After 5 thoughts, the cloud sums up your day.",
+    "tags": [
+      "ai"
+    ],
+    "img": "/static/examples/thumbnails/sentiment-mood-mirror.webp",
+    "insetIconURL": "ai",
+    "isMemberOnly": false,
+    "urlId": "sentiment-mood-mirror"
+  },
+  "wikipedia-curious-fox": {
+    "name": "Wikipedia Curious Fox",
+    "description": "Speak any topic aloud — a curious Fox looks it up on Wikipedia and reads the answer back to you. Free, no API key, no login.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/wikipedia-curious-fox.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "wikipedia-curious-fox"
+  },
+  "js_calculator": {
+    "name": "Calculator",
+    "description": "A working calculator web app — its index.html, main.css and script.js are all generated from blocks.",
+    "tags": [
+      "js"
+    ],
+    "img": "/static/examples/thumbnails/js_calculator.webp",
+    "insetIconURL": "js",
+    "isMemberOnly": false,
+    "urlId": "js_calculator"
+  },
+  "linear-equations-grid": {
+    "name": "Where Do The Lines Cross?",
+    "description": "Enter two equations in standard form a x + b y = c — the Pen draws both lines on a coordinate grid and a ring marks where they cross: the solution to the system.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/linear-equations-grid.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "linear-equations-grid"
+  },
+  "ratio-mixer": {
+    "name": "Ratio Mixer",
+    "description": "Mix two paint colours in a ratio to match a target shade — scale the recipe across 8 colour mixes. A proportional-reasoning game.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/ratio-mixer.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "ratio-mixer"
+  },
+  "pattern-painter": {
+    "name": "Pattern Painter",
+    "description": "Spot the rule in a row of shapes and tap what comes next — three pattern puzzles guided by Mayur the peacock. A pattern-recognition game.",
+    "tags": [
+      "scratch"
+    ],
+    "img": "/static/examples/thumbnails/pattern-painter.webp",
+    "insetIconURL": "scratch",
+    "isMemberOnly": false,
+    "urlId": "pattern-painter"
+  }
+}

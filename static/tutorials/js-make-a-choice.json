@@ -1,0 +1,165 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>Make a Choice</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "Programs that decide",
+            "image": "/static/tutorials/steps/jsChoice_01_decide.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.decide",
+                "default": "You already know if and if-else from Scratch. JavaScript has the same two — just spelled if and else. In this tutorial you write the JavaScript shape: parentheses around the condition, curly braces around the body. Same idea you used in Scratch."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsChoice_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.7,
+                "y": 53.9,
+                "zoom": 3.6
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Ask the age",
+            "image": "/static/tutorials/steps/jsChoice_03_askAge.webp",
+            "imageFocus": {
+                "x": 33.7,
+                "y": 58.3,
+                "zoom": 1.69
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.askAge",
+                "default": "Drag a let block. Name it age. For the value, wrap a Number block around an ask user block that asks How old are you. Remember from the last tutorial — the Number block converts the typed text into a real number so we can compare it with another number."
+            }
+        },
+        {
+            "title": "The if shape",
+            "image": "/static/tutorials/steps/jsChoice_04_ifShape.webp",
+            "imageFocus": {
+                "x": 28.9,
+                "y": 60.0,
+                "zoom": 2.94
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.ifShape",
+                "default": "Drag an if block from Control. The slot is the condition — age greater-than-or-equal ten. The body is what runs if the condition is true — a log to console block saying You can join. Same C-shape you used in Scratch."
+            }
+        },
+        {
+            "title": "Indentation makes it readable",
+            "image": "/static/tutorials/steps/jsChoice_05_indented.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.indented",
+                "default": "Look at the Code panel on the right. Lines inside the if body are indented by four spaces. Curly braces — open brace, close brace — mark where the if body starts and ends. Indentation does not change what runs; it just makes the code easier for humans to read."
+            }
+        },
+        {
+            "title": "Add the else half",
+            "image": "/static/tutorials/steps/jsChoice_06_elseHalf.webp",
+            "imageFocus": {
+                "x": 27.3,
+                "y": 63.0,
+                "zoom": 2.31
+            },
+            "highlightBlock": {
+                "category": "control",
+                "blockType": "control_if_else"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.elseHalf",
+                "default": "Replace the if block with an if-else block. In the else body, log You are too young. Same as Scratch's if-else — two branches, exactly one runs depending on the condition."
+            }
+        },
+        {
+            "title": "Run with twelve",
+            "image": "/static/tutorials/steps/jsChoice_07_runTwelve.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsRun",
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.runTwelve",
+                "default": "Click Run. The prompt appears. Type twelve. Twelve is greater than or equal to ten, so the condition is true."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsChoice_08_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears at the bottom-right. You can join is shown — the if branch ran."
+            }
+        },
+        {
+            "title": "Run with seven",
+            "image": "/static/tutorials/steps/jsChoice_09_runSeven.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.runSeven",
+                "default": "Click Run again and type seven this time. Seven is less than ten, so the condition is false. The else branch runs. The console now shows You are too young."
+            }
+        },
+        {
+            "title": "Two paths, one runs",
+            "image": "/static/tutorials/steps/jsChoice_10_twoPaths.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsMakeAChoice.twoPaths",
+                "default": "Same shape you used in Scratch: exactly one branch runs each time. The JavaScript syntax is parentheses around the condition and curly braces around each branch. In the next tutorial you will learn all the comparison operators so you can write any condition you want."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

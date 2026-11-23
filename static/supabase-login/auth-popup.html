@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Code Skool sign-in</title><style>body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; color: #444; background: #fafafa; }
+  p { text-align: center; padding: 0 1.5rem; }</style></head><body><p id="msg">Signing you in...</p><script>// The page the Google popup comes back to (Supabase sends the browser here with the sign-in tokens in the address).
+// It has no library: it copies what it finds into localStorage for the editor window, clears the address, and closes.
+// Served from /static/supabase-login/, so its name ends in /auth-popup.html, the ending src/sw.js leaves out of cross-origin isolation.
+// Plan: C:\scratch\docs\strategy\supabase-auth-migration\part-b-front-door-plan.md
+(function () {
+  var KEY = 'codeskool-supabase-oauth-result';
+  var msg = document.getElementById('msg');
+  function pairs(s) {
+    var out = {};
+    String(s || '').replace(/^[#?]/, '').split('&').forEach(function (kv) {
+      if (!kv) return;
+      var i = kv.indexOf('=');
+      var k = decodeURIComponent(i < 0 ? kv : kv.slice(0, i));
+      out[k] = i < 0 ? '' : decodeURIComponent(kv.slice(i + 1).replace(/\+/g, ' '));
+    });
+    return out;
+  }
+  var hash = pairs(window.location.hash);
+  var query = pairs(window.location.search);
+  var data = null;
+  if (hash.access_token && hash.refresh_token) {
+    data = {type: 'session', access_token: hash.access_token, refresh_token: hash.refresh_token};
+  } else if (hash.error || query.error || hash.error_description || query.error_description) {
+    data = {type: 'error', code: hash.error_code || query.error_code || hash.error || query.error,
+            message: hash.error_description || query.error_description || hash.error || query.error};
+  }
+  // Take the tokens out of the address bar and the history straight away.
+  try { history.replaceState(null, '', window.location.pathname); } catch (e) { /* ignore */ }
+  if (!data) {
+    msg.textContent = 'Nothing to do here. You can close this window.';
+    return;
+  }
+  try {
+    localStorage.setItem(KEY, JSON.stringify({ts: Date.now(), data: data}));
+    msg.textContent = data.type === 'session' ? 'Signed in. You can close this window.' : 'Sign-in did not finish. You can close this window.';
+  } catch (e) {
+    msg.textContent = 'This browser blocked the sign-in. Please allow site data and try again.';
+    return;
+  }
+  setTimeout(function () { window.close(); }, 300);
+})();</script></body></html>

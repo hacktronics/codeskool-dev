@@ -1,0 +1,151 @@
+{
+    "preseedPreviewFiles": {
+        "index.html": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\">\n  <title>For-Of Loops</title>\n</head>\n<body>\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+        "script.js": ""
+    },
+    "steps": [
+        {
+            "title": "A loop made for arrays",
+            "image": "/static/tutorials/steps/jsForOf_01_intro.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.intro",
+                "default": "In Scratch you walk a list by writing a repeat plus item-i-of-list. JavaScript has a shortcut called the for-of loop. It hands you each item one by one, no index counter needed. When you only need the items themselves, this is the cleanest loop."
+            }
+        },
+        {
+            "title": "Drag the <script> hat block",
+            "image": "/static/tutorials/steps/jsForOf_02_dragHat.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 53.0,
+                "zoom": 3.5
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_js"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.dragHat",
+                "default": "Open the JavaScript category and drag the script hat into the empty workspace."
+            }
+        },
+        {
+            "title": "Set up the array",
+            "image": "/static/tutorials/steps/jsForOf_03_setup.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 56.0,
+                "zoom": 2.0
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_let_assign"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.setup",
+                "default": "Drag a let block. Name it fruits. For the value, drop in an array with four items — apple, banana, mango, kiwi."
+            }
+        },
+        {
+            "title": "The for-of shape",
+            "image": "/static/tutorials/steps/jsForOf_04_forOfShape.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 60.0,
+                "zoom": 1.9
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_for_of"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.forOfShape",
+                "default": "Drag a for-of block from Control. Use f as the item name. For the array, drop in the variable fruits. The Code panel reads for open-paren const f of fruits close-paren open-brace close-brace. Each round, the variable f holds one fruit from the array."
+            }
+        },
+        {
+            "title": "Like each item",
+            "image": "/static/tutorials/steps/jsForOf_05_likeEach.webp",
+            "imageFocus": {
+                "x": 40.0,
+                "y": 62.0,
+                "zoom": 1.8
+            },
+            "highlightBlock": {
+                "category": "javascript",
+                "blockType": "javascript_console_log"
+            },
+            "validate": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.likeEach",
+                "default": "Inside the for-of body, drop a log to console block. The message is a template string saying I like space dollar-curly f close-curly. Click Run."
+            }
+        },
+        {
+            "title": "Open the Console pane",
+            "image": "/static/tutorials/steps/jsForOf_06_openConsole.webp",
+            "imageFocus": {
+                "x": 100.0,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "highlightUI": "jsConsoleToggle",
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.openConsole",
+                "default": "Click the >_ button next to Run. The Console pane appears. Four lines — I like apple, I like banana, I like mango, I like kiwi — one per item."
+            }
+        },
+        {
+            "title": "The name is yours to pick",
+            "image": "/static/tutorials/steps/jsForOf_07_naming.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.naming",
+                "default": "We used the letter f for fruit. Pick whatever variable name reads well in your loop body — fruit, item, thing. The shorter and more descriptive, the easier the code reads."
+            }
+        },
+        {
+            "title": "for-of versus classic for",
+            "image": "/static/tutorials/steps/jsForOf_08_forOfVsFor.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "autoAdvance": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.forOfVsFor",
+                "default": "Use for-of when you just need each item in turn. Use the classic for loop when you ALSO need the position number — like printing Item one apple, Item two banana. Same job, slightly different toolkit."
+            }
+        },
+        {
+            "title": "Cleaner loops",
+            "image": "/static/tutorials/steps/jsForOf_09_cleaner.webp",
+            "imageFocus": {
+                "x": 50.0,
+                "y": 50.0,
+                "zoom": 1.0
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsForOfLoop.cleaner",
+                "default": "for-of is the cleanest way to walk an array in JavaScript. The next tutorial shows even shorter shapes — array methods like forEach, map, and filter — that often replace a loop with one line of code."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

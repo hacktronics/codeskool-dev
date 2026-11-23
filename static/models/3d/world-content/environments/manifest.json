@@ -1,0 +1,1022 @@
+[
+  {
+    "assetId": "sky-archipelago",
+    "title": "Sky Archipelago",
+    "glbURL": "static/models/3d/world-content/environments/sky-archipelago.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-sky-archipelago.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 700.0,
+      "y": 191.112,
+      "z": 800.0
+    },
+    "maxDimension": 800.0,
+    "scale3d": 80000,
+    "bounds": {
+      "minX": -350.0,
+      "maxX": 350.0,
+      "minY": 0,
+      "maxY": 191.112,
+      "minZ": -400.0,
+      "maxZ": 400.0
+    },
+    "spawn": {
+      "x": 0,
+      "y": 60,
+      "z": 150
+    },
+    "camera": {
+      "position": {
+        "x": 22,
+        "y": 80,
+        "z": 190
+      },
+      "target": {
+        "x": 0,
+        "y": 60,
+        "z": 100
+      }
+    },
+    "previewCamera": {
+      "position": [
+        -440,
+        480,
+        650
+      ],
+      "target": [
+        0,
+        20,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Airbase",
+        "position": {
+          "x": -180,
+          "y": 8,
+          "z": 165
+        },
+        "details": "Runway with markings and lights, four arched hangars, control tower, radar, windsock and four parked aircraft"
+      },
+      {
+        "name": "Harbor",
+        "position": {
+          "x": 170,
+          "y": 8,
+          "z": 210
+        },
+        "details": "Three piers with cranes, container yard and three cargo ships"
+      },
+      {
+        "name": "Northern wind farm",
+        "position": {
+          "x": -175,
+          "y": 8,
+          "z": -245
+        },
+        "details": "Five wind turbines and a lighthouse"
+      },
+      {
+        "name": "Eight islands",
+        "details": "Sandy beaches, rocky cliffs, rolling hills, forests and palms, five villages, two rock arches, two lighthouses and puffy clouds"
+      },
+      {
+        "name": "Flight corridor",
+        "details": "Open center with three decorative rings; all game aircraft are separate sprites"
+      }
+    ],
+    "recommendedPlayArea": {
+      "minX": -320,
+      "maxX": 320,
+      "minZ": -370,
+      "maxZ": 370,
+      "minY": 30,
+      "maxY": 180
+    },
+    "routes": {
+      "flight": [
+        {
+          "x": 0,
+          "y": 60,
+          "z": 150
+        },
+        {
+          "x": 0,
+          "y": 72,
+          "z": 30
+        },
+        {
+          "x": -10,
+          "y": 88,
+          "z": -100
+        },
+        {
+          "x": 20,
+          "y": 108,
+          "z": -235
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 23,
+    "triangles": 61865,
+    "bytes": 5284576,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "actorSpawnY": 60,
+    "pointsOfInterest": {
+      "airbase": {
+        "x": -180,
+        "y": 8,
+        "z": 165
+      },
+      "harbor": {
+        "x": 170,
+        "y": 8,
+        "z": 210
+      },
+      "windFarm": {
+        "x": -175,
+        "y": 8,
+        "z": -245
+      }
+    },
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/sky-archipelago.png"
+  },
+  {
+    "assetId": "voxel-valley",
+    "title": "Voxel Valley",
+    "glbURL": "static/models/3d/world-content/environments/voxel-valley.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-voxel-valley.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 220.0,
+      "y": 15.0,
+      "z": 220.0
+    },
+    "maxDimension": 220.0,
+    "scale3d": 22000,
+    "bounds": {
+      "minX": -110.0,
+      "maxX": 110.0,
+      "minY": 0,
+      "maxY": 15.0,
+      "minZ": -110.0,
+      "maxZ": 110.0
+    },
+    "spawn": {
+      "x": 0,
+      "y": 0.08,
+      "z": 80
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "chest": {
+        "x": 65,
+        "y": 0.08,
+        "z": 0
+      },
+      "supply": {
+        "x": -52,
+        "y": 0.08,
+        "z": 0
+      },
+      "farm": {
+        "x": 73,
+        "y": 0.08,
+        "z": 15
+      }
+    },
+    "camera": {
+      "position": {
+        "x": 18,
+        "y": 12,
+        "z": 106
+      },
+      "target": {
+        "x": 0,
+        "y": 2,
+        "z": 65
+      }
+    },
+    "previewCamera": {
+      "position": [
+        180,
+        170,
+        210
+      ],
+      "target": [
+        0,
+        2,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Block village",
+        "details": "Eight block houses with roofs, doors and windows, joined by cobbled roads"
+      },
+      {
+        "name": "Farm district",
+        "position": {
+          "x": 73,
+          "y": 0,
+          "z": 55
+        },
+        "details": "Ten planted crop rows inside a wooden fence"
+      },
+      {
+        "name": "Quarry",
+        "position": {
+          "x": -77,
+          "y": 0,
+          "z": -73
+        },
+        "details": "Terraced stone blocks with gold-coloured ore"
+      },
+      {
+        "name": "River crossing",
+        "position": {
+          "x": 27,
+          "y": 0,
+          "z": 0
+        },
+        "details": "Central blue river and a flush wooden bridge"
+      },
+      {
+        "name": "Exploration gate",
+        "position": {
+          "x": 89,
+          "y": 0,
+          "z": -20
+        },
+        "details": "Decorative stone portal"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": {
+      "village": [
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": 80
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": 0
+        },
+        {
+          "x": 65,
+          "y": 0.08,
+          "z": 0
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 17,
+    "triangles": 17610,
+    "bytes": 1536920,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/voxel-valley.png"
+  },
+  {
+    "assetId": "forest-trail",
+    "title": "Forest Trail",
+    "glbURL": "static/models/3d/world-content/environments/forest-trail.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-forest-trail.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 220.0,
+      "y": 32.396,
+      "z": 220.0
+    },
+    "maxDimension": 220.0,
+    "scale3d": 22000,
+    "bounds": {
+      "minX": -110.0,
+      "maxX": 110.0,
+      "minY": 0,
+      "maxY": 32.396,
+      "minZ": -110.0,
+      "maxZ": 110.0
+    },
+    "spawn": {
+      "x": -65,
+      "y": 0.08,
+      "z": 60
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "hikers": [
+        {
+          "x": -40,
+          "y": 0.08,
+          "z": 30
+        },
+        {
+          "x": -65,
+          "y": 0.08,
+          "z": -20
+        },
+        {
+          "x": 60,
+          "y": 0.08,
+          "z": -10
+        }
+      ],
+      "village": {
+        "x": 65,
+        "y": 0.08,
+        "z": 55
+      },
+      "lake": {
+        "x": 40,
+        "y": 0.08,
+        "z": -50
+      }
+    },
+    "camera": {
+      "position": {
+        "x": -49,
+        "y": 12,
+        "z": 83
+      },
+      "target": {
+        "x": -60,
+        "y": 2,
+        "z": 48
+      }
+    },
+    "previewCamera": {
+      "position": [
+        170,
+        170,
+        210
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Forest trail",
+        "details": "Smooth dirt trail beside a river, crossed by two bridges, with three trail signs"
+      },
+      {
+        "name": "Riverside village",
+        "position": {
+          "x": 65,
+          "y": 0,
+          "z": 65
+        },
+        "details": "Five log cabins with shingle roofs, doors, windows and porches"
+      },
+      {
+        "name": "Lake camp",
+        "position": {
+          "x": 58,
+          "y": 0,
+          "z": -59
+        },
+        "details": "Lake, four tents, stone fire circle, log seats"
+      },
+      {
+        "name": "Woodland",
+        "details": "Oak, pine and birch trees, ferns, flowers, fallen leaves, boulders and a ridge of rocky mountains"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": {
+      "trail": [
+        {
+          "x": -65,
+          "y": 0.08,
+          "z": 80
+        },
+        {
+          "x": -40,
+          "y": 0.08,
+          "z": 30
+        },
+        {
+          "x": -65,
+          "y": 0.08,
+          "z": -20
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": -50
+        },
+        {
+          "x": 60,
+          "y": 0.08,
+          "z": -10
+        },
+        {
+          "x": 65,
+          "y": 0.08,
+          "z": 55
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 21,
+    "triangles": 54814,
+    "bytes": 4884856,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/forest-trail.png"
+  },
+  {
+    "assetId": "robot-lab",
+    "title": "Robot Test Lab",
+    "glbURL": "static/models/3d/world-content/environments/robot-lab.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-robot-lab.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 220.0,
+      "y": 21.5,
+      "z": 200.0
+    },
+    "maxDimension": 220.0,
+    "scale3d": 22000,
+    "bounds": {
+      "minX": -110.0,
+      "maxX": 110.0,
+      "minY": 0,
+      "maxY": 21.5,
+      "minZ": -100.0,
+      "maxZ": 100.0
+    },
+    "spawn": {
+      "x": 0,
+      "y": 0.08,
+      "z": 80
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "checkpoint": {
+        "x": 0,
+        "y": 0.08,
+        "z": -75
+      },
+      "checkpoints": [
+        {
+          "x": -55,
+          "y": 0.08,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": -75
+        },
+        {
+          "x": 68,
+          "y": 0.08,
+          "z": 0
+        }
+      ],
+      "delivery": {
+        "x": -18,
+        "y": 0.08,
+        "z": -48
+      }
+    },
+    "camera": {
+      "position": {
+        "x": 18,
+        "y": 12,
+        "z": 105
+      },
+      "target": {
+        "x": 0,
+        "y": 2,
+        "z": 65
+      }
+    },
+    "previewCamera": {
+      "position": [
+        180,
+        165,
+        210
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Warehouse",
+        "position": {
+          "x": -57,
+          "y": 0,
+          "z": -48
+        },
+        "details": "Open corrugated-steel loading hall with 24 cargo crates in lanes"
+      },
+      {
+        "name": "Research building",
+        "position": {
+          "x": 61,
+          "y": 0,
+          "z": -57
+        },
+        "details": "Glass curtain-wall building with a rooftop solar array"
+      },
+      {
+        "name": "Test campus",
+        "details": "Asphalt road cross with markings, five charging bays, marked test strips, equipment pods, lawns and trees"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": {
+      "campus": [
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": 80
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": -75
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 17,
+    "triangles": 23358,
+    "bytes": 2278300,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/robot-lab.png"
+  },
+  {
+    "assetId": "racing-circuit",
+    "title": "Racing Circuit",
+    "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-racing-circuit.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 240.0,
+      "y": 30.25,
+      "z": 240.0
+    },
+    "maxDimension": 240.0,
+    "scale3d": 24000,
+    "bounds": {
+      "minX": -120.0,
+      "maxX": 120.0,
+      "minY": 0,
+      "maxY": 30.25,
+      "minZ": -120.0,
+      "maxZ": 120.0
+    },
+    "spawn": {
+      "x": 0,
+      "y": 0.08,
+      "z": 85
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "checkpoint": {
+        "x": 0,
+        "y": 0.08,
+        "z": -85
+      },
+      "checkpoints": [
+        {
+          "x": 84,
+          "y": 0.08,
+          "z": 0
+        },
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": -85
+        },
+        {
+          "x": -84,
+          "y": 0.08,
+          "z": 0
+        }
+      ],
+      "finish": {
+        "x": 0,
+        "y": 0.08,
+        "z": 85
+      }
+    },
+    "camera": {
+      "position": {
+        "x": 17,
+        "y": 9,
+        "z": 112
+      },
+      "target": {
+        "x": 0,
+        "y": 1,
+        "z": 75
+      }
+    },
+    "previewCamera": {
+      "position": [
+        200,
+        180,
+        220
+      ],
+      "target": [
+        0,
+        0,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Circuit",
+        "details": "A 20-unit-wide elliptical asphalt course with painted lines, striped kerbs, concrete barriers and tyre stacks"
+      },
+      {
+        "name": "Start gantry",
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 87
+        },
+        "details": "Chequered start line and broad overhead gantry"
+      },
+      {
+        "name": "Pit complex",
+        "position": {
+          "x": -44,
+          "y": 0,
+          "z": 0
+        },
+        "details": "Six garages, pit lane, paddock parking and race-control building"
+      },
+      {
+        "name": "Grandstands",
+        "details": "Three stands with rows of seated spectators"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": {
+      "circuit": [
+        {
+          "x": 0,
+          "y": 0.08,
+          "z": 86
+        },
+        {
+          "x": 32.14540831866754,
+          "y": 0.08,
+          "z": 79.45363979597066
+        },
+        {
+          "x": 59.39696961966999,
+          "y": 0.08,
+          "z": 60.81118318204309
+        },
+        {
+          "x": 77.60588073094809,
+          "y": 0.08,
+          "z": 32.910775183397725
+        },
+        {
+          "x": 84,
+          "y": 0.08,
+          "z": 5.2659812363336185e-15
+        },
+        {
+          "x": 77.60588073094809,
+          "y": 0.08,
+          "z": -32.91077518339772
+        },
+        {
+          "x": 59.396969619669996,
+          "y": 0.08,
+          "z": -60.81118318204308
+        },
+        {
+          "x": 32.14540831866755,
+          "y": 0.08,
+          "z": -79.45363979597066
+        },
+        {
+          "x": 1.0287033112837767e-14,
+          "y": 0.08,
+          "z": -86
+        },
+        {
+          "x": -32.145408318667535,
+          "y": 0.08,
+          "z": -79.45363979597067
+        },
+        {
+          "x": -59.39696961966999,
+          "y": 0.08,
+          "z": -60.8111831820431
+        },
+        {
+          "x": -77.60588073094807,
+          "y": 0.08,
+          "z": -32.91077518339777
+        },
+        {
+          "x": -84,
+          "y": 0.08,
+          "z": -1.5797943709000856e-14
+        },
+        {
+          "x": -77.60588073094807,
+          "y": 0.08,
+          "z": 32.91077518339774
+        },
+        {
+          "x": -59.39696961967,
+          "y": 0.08,
+          "z": 60.811183182043074
+        },
+        {
+          "x": -32.14540831866759,
+          "y": 0.08,
+          "z": 79.45363979597064
+        },
+        {
+          "x": -2.0574066225675533e-14,
+          "y": 0.08,
+          "z": 86
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 19,
+    "triangles": 32076,
+    "bytes": 2718936,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/racing-circuit.png"
+  },
+  {
+    "assetId": "football-stadium",
+    "title": "Football Stadium",
+    "glbURL": "static/models/3d/world-content/environments/football-stadium.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-football-stadium.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 220.0,
+      "y": 37.0,
+      "z": 180.0
+    },
+    "maxDimension": 220.0,
+    "scale3d": 22000,
+    "bounds": {
+      "minX": -110.0,
+      "maxX": 110.0,
+      "minY": 0,
+      "maxY": 37.0,
+      "minZ": -90.0,
+      "maxZ": 90.0
+    },
+    "spawn": {
+      "x": 0,
+      "y": 0.08,
+      "z": 25
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "ballStart": {
+        "x": 0,
+        "y": 0.08,
+        "z": 0
+      },
+      "goalCenter": {
+        "x": -55,
+        "y": 1.8,
+        "z": 0
+      },
+      "goals": [
+        {
+          "x": -55,
+          "y": 1.8,
+          "z": 0
+        },
+        {
+          "x": 55,
+          "y": 1.8,
+          "z": 0
+        }
+      ],
+      "kickoff": {
+        "x": 0,
+        "y": 0.08,
+        "z": 0
+      }
+    },
+    "camera": {
+      "position": {
+        "x": 25,
+        "y": 14,
+        "z": 55
+      },
+      "target": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      }
+    },
+    "previewCamera": {
+      "position": [
+        180,
+        170,
+        210
+      ],
+      "target": [
+        0,
+        3,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Football pitch",
+        "details": "Mown striped pitch with boundary, halfway, centre-circle and penalty-area markings"
+      },
+      {
+        "name": "Goals",
+        "details": "Two goals with posts, crossbars and net"
+      },
+      {
+        "name": "Stadium bowl",
+        "details": "Four tiered stands with a crowd, team benches, scoreboard, roof canopy and four floodlight towers"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": null,
+    "static": true,
+    "meshes": 11,
+    "triangles": 21098,
+    "bytes": 1485568,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/football-stadium.png"
+  },
+  {
+    "assetId": "obstacle-course",
+    "title": "Obstacle Course",
+    "glbURL": "static/models/3d/world-content/environments/obstacle-course.glb",
+    "thumbnailURL": "static/examples/thumbnails/world-obstacle-course.webp",
+    "coordinateSystem": "world units; 36 Scratch units per world unit",
+    "authoredDimensions": {
+      "x": 220.0,
+      "y": 20.305,
+      "z": 220.0
+    },
+    "maxDimension": 220.0,
+    "scale3d": 22000,
+    "bounds": {
+      "minX": -110.0,
+      "maxX": 110.0,
+      "minY": 0,
+      "maxY": 20.305,
+      "minZ": -110.0,
+      "maxZ": 110.0
+    },
+    "spawn": {
+      "x": -75,
+      "y": 0.08,
+      "z": 85
+    },
+    "actorSpawnY": 0.08,
+    "pointsOfInterest": {
+      "checkpoint": {
+        "x": 75,
+        "y": 0.08,
+        "z": 85
+      },
+      "checkpoints": [
+        {
+          "x": -40,
+          "y": 0.08,
+          "z": -65
+        },
+        {
+          "x": 40,
+          "y": 0.08,
+          "z": -65
+        },
+        {
+          "x": 75,
+          "y": 0.08,
+          "z": 85
+        }
+      ]
+    },
+    "camera": {
+      "position": {
+        "x": -57,
+        "y": 10,
+        "z": 109
+      },
+      "target": {
+        "x": -75,
+        "y": 2,
+        "z": 69
+      }
+    },
+    "previewCamera": {
+      "position": [
+        180,
+        170,
+        210
+      ],
+      "target": [
+        0,
+        1,
+        0
+      ],
+      "fov": 48
+    },
+    "parts": [
+      {
+        "name": "Driving route",
+        "details": "Wide dirt track loop through woods, with three log gates, overhead frames and slalom cones"
+      },
+      {
+        "name": "Maze",
+        "position": {
+          "x": 30,
+          "y": 0,
+          "z": 40
+        },
+        "details": "Hedge maze with clear passages"
+      },
+      {
+        "name": "Practice stations",
+        "details": "Stepping platforms, low hurdles, hay bales, a hedge wall and a wooden fence"
+      }
+    ],
+    "recommendedPlayArea": null,
+    "routes": {
+      "course": [
+        {
+          "x": -75,
+          "y": 0.08,
+          "z": 85
+        },
+        {
+          "x": -75,
+          "y": 0.08,
+          "z": 5
+        },
+        {
+          "x": -40,
+          "y": 0.08,
+          "z": -65
+        },
+        {
+          "x": 40,
+          "y": 0.08,
+          "z": -65
+        },
+        {
+          "x": 75,
+          "y": 0.08,
+          "z": 5
+        },
+        {
+          "x": 75,
+          "y": 0.08,
+          "z": 85
+        }
+      ]
+    },
+    "static": true,
+    "meshes": 21,
+    "triangles": 45398,
+    "bytes": 4104060,
+    "author": "CodeSkool",
+    "license": "Proprietary",
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/obstacle-course.png"
+  }
+]

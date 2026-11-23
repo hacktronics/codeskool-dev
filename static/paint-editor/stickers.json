@@ -1,0 +1,34 @@
+{
+    "categories": [
+        {
+            "id": "shapes",
+            "title": "Shapes & Symbols",
+            "icon": "\u2B50",
+            "stickers": [
+                {"name": "Gold Star", "file": "stickers/gold-star.svg"},
+                {"name": "Red Heart", "file": "stickers/red-heart.svg"},
+                {"name": "Checkmark", "file": "stickers/checkmark.svg"},
+                {"name": "Cross Mark", "file": "stickers/cross-mark.svg"},
+                {"name": "Lightning", "file": "stickers/lightning.svg"},
+                {"name": "Diamond", "file": "stickers/diamond.svg"},
+                {"name": "Arrow Right", "file": "stickers/arrow-right.svg"},
+                {"name": "Speech Bubble", "file": "stickers/speech-bubble.svg"}
+            ]
+        },
+        {
+            "id": "nature",
+            "title": "Nature",
+            "icon": "\uD83C\uDF3B",
+            "stickers": [
+                {"name": "Sun", "file": "stickers/sun.svg"},
+                {"name": "Cloud", "file": "stickers/cloud.svg"},
+                {"name": "Raindrop", "file": "stickers/raindrop.svg"},
+                {"name": "Tree", "file": "stickers/tree.svg"},
+                {"name": "Flower", "file": "stickers/flower.svg"},
+                {"name": "Rainbow", "file": "stickers/rainbow.svg"},
+                {"name": "Snowflake", "file": "stickers/snowflake.svg"},
+                {"name": "Crescent Moon", "file": "stickers/crescent-moon.svg"}
+            ]
+        }
+    ]
+}

@@ -1,0 +1,118 @@
+{
+    "steps": [
+        {
+            "title": "Make some text",
+            "image": "/static/tutorials/steps/jsStrings_01_makeText.webp",
+            "imageFocus": {
+                "x": 45,
+                "y": 50,
+                "zoom": 1.2
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.makeText",
+                "default": "Make a variable called text. Set it to two spaces, then Hello JavaScript, then two more spaces. Those spaces are part of the string. We will clean them up."
+            },
+            "validate": true,
+            "highlightUI": "jsEditor"
+        },
+        {
+            "title": "Methods live on values",
+            "image": "/static/tutorials/steps/jsStrings_02_methodsLive.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.methodsLive",
+                "default": "Scratch's strings extension has blocks like trim and replace as separate blocks. JavaScript builds them right onto every string. You call them with a dot — text dot trim. They are called methods."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Trim and case",
+            "image": "/static/tutorials/steps/jsStrings_03_trimAndCase.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.trimAndCase",
+                "default": "Log text dot trim — removes spaces from both ends. Then text dot toUpperCase — all caps. Then text dot toLowerCase — all small. Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Open the console pane",
+            "image": "/static/tutorials/steps/jsStrings_03a_openConsole.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.openConsole",
+                "default": "Click the Console button next to Run. You see the trimmed, the uppercase, and the lowercase versions."
+            },
+            "highlightUI": "jsConsoleToggle"
+        },
+        {
+            "title": "Length and includes",
+            "image": "/static/tutorials/steps/jsStrings_04_lengthIncludes.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.lengthIncludes",
+                "default": "Log text dot length — same as Scratch's length-of block, counts every character, spaces too. Then text dot includes with Java in quotes — returns true or false. Click Run."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Replace",
+            "image": "/static/tutorials/steps/jsStrings_05_replace.webp",
+            "imageFocus": {
+                "x": 80,
+                "y": 10,
+                "zoom": 5.0
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.replace",
+                "default": "Log text dot replace with two arguments — Java and Type. Click Run. replace swaps the first piece for the second and returns a new string."
+            },
+            "highlightUI": "jsRun"
+        },
+        {
+            "title": "Split into an array",
+            "image": "/static/tutorials/steps/jsStrings_06_split.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.split",
+                "default": "split cuts a string into an array. Log text dot split with a space as the separator. JavaScript chops wherever it sees a space — turning a sentence into a list of words."
+            },
+            "autoAdvance": true
+        },
+        {
+            "title": "Strings never change",
+            "image": "/static/tutorials/steps/jsStrings_07_neverChange.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "clearRuntimeBefore": true,
+            "narration": {
+                "id": "gui.tutorials.jsStringsControl.neverChange",
+                "default": "Big rule — every string method returns a NEW string. The original variable does not change. That is why you print or save the result — the method by itself leaves text untouched."
+            },
+            "autoAdvance": true
+        }
+    ]
+}

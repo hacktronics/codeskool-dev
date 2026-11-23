@@ -1,0 +1,208 @@
+{
+    "preseedExtensions": [
+        "html5",
+        "css"
+    ],
+    "preseedStarter": "htmlBoilerplate",
+    "steps": [
+        {
+            "title": "Start with the Boilerplate",
+            "image": "/static/tutorials/steps/htmlCssBoxBoilerplate.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.html_css_box.boilerplate",
+                "default": "Your workspace already has the html, head, and body blocks — every webpage starts that way (you built this in the Hello Web tutorial). Today we just focus on what we add INSIDE the body."
+            }
+        },
+        {
+            "title": "Every Element Is a Box",
+            "image": "/static/tutorials/steps/htmlCssBoxModel.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.everyElementIsBox",
+                "default": "Every element on your page — every heading, every paragraph, every div — is a BOX. And every box has four layers: the CONTENT in the middle, the PADDING around the content, the BORDER at the edge, and the MARGIN keeping its neighbours away on the outside. That is called the BOX MODEL — it is the most important diagram in CSS."
+            }
+        },
+        {
+            "title": "Add a Card",
+            "image": "/static/tutorials/steps/htmlCssBoxDiv.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.div",
+                "default": "Drag a div inside the body. Set its class to card. Drag a paragraph inside the div and type I am inside a box."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_div"
+            }
+        },
+        {
+            "title": "Add a Style Block",
+            "image": "/static/tutorials/steps/htmlCssBoxStyle.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.style",
+                "default": "Drag the style block inside the head."
+            },
+            "highlightBlock": {
+                "category": "html5",
+                "blockType": "html5_html5_style"
+            },
+            "validate": true
+        },
+        {
+            "title": "Pick the Card",
+            "image": "/static/tutorials/steps/htmlCssBoxSelector.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.selector",
+                "default": "Drag a selector inside the style. Replace the text with .card — the dot tells CSS to look for the class card."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_selector"
+            }
+        },
+        {
+            "title": "Tag Selector vs Class Selector",
+            "image": "/static/tutorials/steps/htmlCssBoxElementVsClassSelector.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.elementVsClass",
+                "default": "CSS selectors come in flavours. A bare tag name like p picks EVERY paragraph on the page. A name with a dot like .card picks ONLY elements with that class. Knowing which kind to use is half of CSS."
+            }
+        },
+        {
+            "title": "Make the Box Visible",
+            "image": "/static/tutorials/steps/htmlCssBoxBg.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.bg",
+                "default": "Drag a background-color block inside the selector. Replace skyblue with lightblue. Now the box has a colour we can see."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_background_color"
+            }
+        },
+        {
+            "title": "Add Padding (Inside Space)",
+            "image": "/static/tutorials/steps/htmlCssBoxPadding.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.padding",
+                "default": "Drag a padding block inside the selector. Replace 10 pixels with 20 pixels. Padding pushes the text away from the inside edge of the box."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_padding"
+            }
+        },
+        {
+            "title": "Add a Border (the Edge)",
+            "image": "/static/tutorials/steps/htmlCssBoxBorder.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.border",
+                "default": "Drag a border block inside the selector. Replace the value with 2 pixels solid darkblue. The border draws a line around the box."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_border"
+            }
+        },
+        {
+            "title": "Add Margin (Outside Space)",
+            "image": "/static/tutorials/steps/htmlCssBoxMargin.webp",
+            "imageFocus": {
+                "x": 55,
+                "y": 50,
+                "zoom": 1.4
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.margin",
+                "default": "Drag a margin block inside the selector. Replace 10 pixels with 20 pixels. Margin pushes the box away from its neighbours on the outside."
+            },
+            "highlightBlock": {
+                "category": "css",
+                "blockType": "css_css_margin"
+            }
+        },
+        {
+            "title": "See the Three Layers",
+            "image": "/static/tutorials/steps/htmlCssBoxView.webp",
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.viewTab",
+                "default": "Click the View tab. Look at your box — can you spot the colour inside, the line at the edge, and the gap on the outside?"
+            },
+            "highlightUI": "viewTab"
+        },
+        {
+            "title": "Which Rule Wins?",
+            "image": "/static/tutorials/steps/htmlCssBox_cascade.webp",
+            "imageFocus": {
+                "x": 50,
+                "y": 50,
+                "zoom": 1
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.cascade",
+                "default": "What if TWO CSS rules tell the same element different things? Imagine one rule says div { color: blue; } and another says .card { color: red; } — which colour does your card actually get? CSS has a tie-breaker: the more SPECIFIC selector wins. .card is more specific than just div, so the card will be red. Selectors with an id (like #main) are even more specific. If you ever have a CSS rule that doesn't seem to do anything, check if a more specific rule somewhere else is overriding it. The browser is just following the specificity ladder — once you know the order, the rules become predictable."
+            }
+        },
+        {
+            "title": "The Box Model",
+            "image": "/static/tutorials/steps/htmlCssBoxModel.webp",
+            "imageFocus": {
+                "x": 75,
+                "y": 50,
+                "zoom": 1.3
+            },
+            "narration": {
+                "id": "gui.tutorials.htmlCssBox.recap",
+                "default": "Every element on a page is a box with three layers — padding inside, border at the edge, margin outside. This is called the box model."
+            }
+        }
+    ]
+}
