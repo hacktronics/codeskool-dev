@@ -2,26 +2,25 @@
   "title": "Obstacle Explorer",
   "project": "ObstacleExplorer",
   "environment": "obstacle-course",
+  "stage": {
+    "type": "model",
+    "name": "Obstacle Course",
+    "thumbnailURL": "static/examples/thumbnails/world-obstacle-course.webp",
+    "model3d": {
+      "source": "library",
+      "glbURL": "static/models/3d/world-content/environments/obstacle-course.glb"
+    },
+    "scale3d": 22000
+  },
   "variables": {
     "Checkpoints": 0
   },
   "assets": [
     {
-      "name": "Obstacle Course Scenery",
-      "glbURL": "static/models/3d/world-content/environments/obstacle-course.glb",
-      "scale3d": 22000,
-      "positionScratch": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "library": "Obstacle Course"
-    },
-    {
       "name": "Course Explorer",
       "glbURL": "static/models/3d/world-content/sprites/forest-ranger.glb",
       "scale3d": 220,
-      "positionScratch": {
+      "position": {
         "x": -2700,
         "y": 3,
         "z": 3060
@@ -32,7 +31,7 @@
       "name": "Gate 1",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
       "scale3d": 660,
-      "positionScratch": {
+      "position": {
         "x": -1440,
         "y": 3,
         "z": -2340
@@ -43,7 +42,7 @@
       "name": "Gate 2",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
       "scale3d": 660,
-      "positionScratch": {
+      "position": {
         "x": 1440,
         "y": 3,
         "z": -2340
@@ -54,7 +53,7 @@
       "name": "Gate 3",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
       "scale3d": 660,
-      "positionScratch": {
+      "position": {
         "x": 2700,
         "y": 3,
         "z": 3060

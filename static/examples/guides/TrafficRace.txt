@@ -1,0 +1,210 @@
+Traffic Race
+============
+
+Click the green flag. Hold Up to drive, use Left and Right to steer, and hold Down to reverse. Pass Gates 1, 2, and 3 in order, then drive through the finish gate. The green flag starts a fresh attempt. The lap timer keeps running during a penalty. Overtake the Taxi, the Police Car and the Van: touching one is a crash.
+
+Stay on the road: if the car goes onto the grass it skids and stops, and if it leaves the road at a gate it has hit the post and crashes. After a 3 second countdown it goes back to the last place it was in the middle of the road, pointing the right way.
+
+This project contains 213 ordinary blocks.
+
+1. Set up the track
+
+In 3D and XR Studio, choose File > New Blank 3D Project. Select Stage in the lower-right panel, open Choose an Environment, and choose Racing Circuit. Use Choose a 3D Object to add Red Race Car, four copies of Checkpoint Gate and a Cube. Rename the gate copies Gate 1, Gate 2, Gate 3, and Finish Gate, and the cube Track Centre. Remove any number the library adds to a name. Also add Taxi, Police Car and Van.
+
+X, Y and Z are positions, Y rotation is in degrees, and size is a percentage. Leave X and Z rotation at 0. Apply them with the Transform blocks for each sprite: go to x/y/z, set rotation to x/y/z, and set all scale to %.
+
+Sprite           | X     | Y | Z     | Y rotation | Size
+Red Race Car     | -144  | 3 | 3096  | -90        | 420%
+Gate 1           | 3060  | 3 | 0     | 0          | 3000%
+Gate 2           | 0     | 3 | -3060 | 90         | 3000%
+Gate 3           | -3060 | 3 | 0     | 0          | 3000%
+Finish Gate      | 0     | 3 | 3060  | 90         | 3000%
+Taxi             | 2344  | 3 | 1967  | 140        | 420%
+Police Car       | 1615  | 3 | -2797 | 240        | 420%
+Van              | -2716 | 3 | -988  | 340        | 420%
+Track Centre     | 0     | 3 | 0     | 0          | 100%
+
+Keep Racing Circuit selected as the Stage environment. In the Scene Editor enable linear fog with color #d5e6ee and distance 200, and set the ambient light intensity to 1.2.
+
+2. Variables and messages
+
+Use the Transform, World, Camera, Text, AI and Player categories. Create Checkpoints and Lap time as variables for all sprites. On Red Race Car, create Drive step, Safe x and Safe z for this sprite only. Create a broadcast message called Race ready. On Red Race Car make the My Blocks listed below as "define".
+
+3. How the road rules work: the World block "what is under" says grass when the car has left the road. Track Centre is a hidden Cube in the middle of the track. The car is in the middle of the road when it is between 2960 and 3160 from Track Centre, and that spot is remembered in Safe x and Safe z. To point along the road again, the car faces Track Centre and turns -90 degrees.
+
+4. Blocks
+
+Indented blocks go inside the block above them. Build each "define" stack as its own stack.
+
+SPRITE: Red Race Car
+when green flag clicked
+set Checkpoints to 0
+set Lap time to 0
+set Drive step to 0
+set Safe x to -144
+set Safe z to 3096
+go to x: -144 y: 3 z: 3096
+set rotation to x: 0 y: -90 z: 0
+show
+set camera position to x: -792 y: 327 z: 3096
+follow Red Race Car at distance 648
+create text Hold Up to start named Race Status
+set font size of Race Status to 54
+attach Race Status to Red Race Car
+set offset of Race Status to x: 0 y: 234 z: 0
+set color of Race Status to #ffdf77
+create text Overtake the traffic named Race Controls
+set font size of Race Controls to 39
+attach Race Controls to Red Race Car
+set offset of Race Controls to x: 0 y: 162 z: 0
+broadcast Race ready
+wait until key up arrow pressed?
+reset timer
+set text of Race Status to Checkpoint 1 of 3
+set text of Race Controls to Up: drive  /  Down: reverse
+repeat until ((Lap time) > 0)
+  set Drive step to 0
+  if key up arrow pressed? then
+    set Drive step to 54
+  if key down arrow pressed? then
+    set Drive step to -27
+  if (not ((Drive step) = 0)) then
+    if key left arrow pressed? then
+      rotate 2 degrees around y
+    if key right arrow pressed? then
+      rotate -2 degrees around y
+    move (Drive step) steps forward
+    Check road
+    Check traffic
+  wait 0.03 seconds
+
+define Check road
+if (is Red Race Car within 3160 of Track Centre? and (not is Red Race Car within 2960 of Track Centre?)) then
+  set Safe x to (x position)
+  set Safe z to (z position)
+if ((what is under Red Race Car?) = grass) then
+  Freeze camera
+  if (((is Red Race Car within 500 of Gate 1? or is Red Race Car within 500 of Gate 2?) or is Red Race Car within 500 of Gate 3?) or is Red Race Car within 500 of Finish Gate?) then
+    Crash
+  else
+    Skid
+  Back to the road
+
+define Freeze camera
+set camera position to x: (camera x position) y: (camera y position) z: (camera z position)
+point camera at Red Race Car
+
+define Crash
+set text of Race Status to CRASH!
+shake camera for 0.6 secs
+set Drive step to ((Drive step) * -2)
+move (Drive step) steps forward
+set rotation to x: 0 y: (y rotation) z: 14
+
+define Skid
+set text of Race Status to Off the road!
+repeat 10
+  move (Drive step) steps forward
+  rotate 18 degrees around y
+  set Drive step to ((Drive step) * 0.8)
+  wait 0.03 seconds
+
+define Back to the road
+set text of Race Controls to Back on the road in 3
+wait 1 seconds
+set text of Race Controls to Back on the road in 2
+wait 1 seconds
+set text of Race Controls to Back on the road in 1
+wait 1 seconds
+go to x: (Safe x) y: 3 z: (Safe z)
+set rotation to x: 0 y: 0 z: 0
+face Red Race Car towards Track Centre
+rotate -90 degrees around y
+set Drive step to 0
+follow Red Race Car at distance 648
+set text of Race Status to (join Checkpoints:  (join (Checkpoints)  of 3))
+set text of Race Controls to Up: drive  /  Down: reverse
+
+define Check traffic
+if ((is Red Race Car within 140 of Taxi? or is Red Race Car within 140 of Police Car?) or is Red Race Car within 140 of Van?) then
+  Freeze camera
+  Crash
+  Back to the road
+
+
+SPRITE: Gate 1
+when I receive Race ready
+show
+wait until ((Checkpoints = 0) and is Red Race Car within 340 of Gate 1?)
+hide
+change Checkpoints by 1
+set text of Race Status to Checkpoint 2 of 3
+
+
+SPRITE: Gate 2
+when I receive Race ready
+show
+wait until ((Checkpoints = 1) and is Red Race Car within 340 of Gate 2?)
+hide
+change Checkpoints by 1
+set text of Race Status to Checkpoint 3 of 3
+
+
+SPRITE: Gate 3
+when I receive Race ready
+show
+wait until ((Checkpoints = 2) and is Red Race Car within 340 of Gate 3?)
+hide
+change Checkpoints by 1
+set text of Race Status to Return to the finish gate
+
+
+SPRITE: Finish Gate
+when I receive Race ready
+show
+wait until ((Checkpoints = 3) and is Red Race Car within 340 of Finish Gate?)
+set Lap time to ((round ((timer) * 10)) / 10)
+set text of Race Status to (join Lap time:  (join Lap time  s))
+set text of Race Controls to Green flag to race again
+
+
+SPRITE: Taxi
+when I receive Race ready
+go to x: 2344 y: 3 z: 1967
+set rotation to x: 0 y: 140 z: 0
+show
+wait until key up arrow pressed?
+repeat until ((Lap time) > 0)
+  move 18.7 steps forward
+  rotate 0.35 degrees around y
+  wait 0.03 seconds
+
+
+SPRITE: Police Car
+when I receive Race ready
+go to x: 1615 y: 3 z: -2797
+set rotation to x: 0 y: 240 z: 0
+show
+wait until key up arrow pressed?
+repeat until ((Lap time) > 0)
+  move 25.4 steps forward
+  rotate 0.45 degrees around y
+  wait 0.03 seconds
+
+
+SPRITE: Van
+when I receive Race ready
+go to x: -2716 y: 3 z: -988
+set rotation to x: 0 y: 340 z: 0
+show
+wait until key up arrow pressed?
+repeat until ((Lap time) > 0)
+  move 15.1 steps forward
+  rotate 0.3 degrees around y
+  wait 0.03 seconds
+
+
+SPRITE: Track Centre
+when green flag clicked
+hide
+go to x: 0 y: 3 z: 0

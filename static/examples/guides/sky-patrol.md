@@ -1,6 +1,6 @@
 # Sky Patrol
 
-Fly a blue propeller plane above eight islands, shoot three incoming raiders, and pass the bonus ring. The example has seven independent sprites and 214 ordinary editable blocks. You build it in five small parts, and each part ends with something you can try.
+Fly a blue propeller plane above eight islands, shoot three incoming raiders, and pass the bonus ring. The example has six independent sprites and 214 ordinary editable blocks. You build it in five small parts, and each part ends with something you can try.
 
 ## Controls
 
@@ -10,15 +10,14 @@ Optional phone remote: add the existing **GamePad BLE** extension, use its **Dow
 
 ## Before you start
 
-1. Enter **3D and XR Studio** and start a blank 3D project. Click **Choose a 3D Object** and add every model in the table below from the library: the island world is under the **Worlds** tag; the planes, bolt and ring are in the library with their names below. Use **Red Enemy Plane** three times. Rename the sprites exactly as listed.
-2. Choose the existing Blue Sky environment. In Scene Editor, select Ambient Light in the scene list, then set its Properties > Intensity to 1.2.
-3. Set each sprite's size with **Transform > set all scale** (the number is the model's biggest side in world units x 100: the world is 800 units long, so 80000) and place it with **Transform > go to x/y/z**. Maps are measured in world units; multiply by 36 for Scratch blocks (a plane at 60 units high is y 2160).
+1. Enter **3D and XR Studio** and start a blank 3D project. Select **Stage** in the lower-right panel, open **Choose an Environment**, and select **Sky Archipelago**. The chooser applies the island landscape to Stage at 80000% scale. Use **Choose a 3D Object** for the six actor rows below, including three copies of **Red Enemy Plane**, and rename those sprites exactly as listed.
+2. In Scene Editor, select Ambient Light in the scene list, then set its Properties > Intensity to 1.2.
+3. Set each actor's size with **Transform > set all scale** and position with **Transform > go to x/y/z**. Use the actor table's block coordinates; 36 position units equal one world unit, so a plane at 60 units high is y 2160.
 4. In Variables create every variable below **for all sprites**. Add the existing **AI**, **World** and **GamePad BLE** extensions if their palettes are not visible. The AI proximity blocks compare the named sprites' positions in 3D.
 5. Create each listed My Block on its named sprite, with no inputs and **Run without screen refresh unchecked**. No JavaScript, Python, custom controller, or changed block is required.
 
 | Sprite name | Pick this from the 3D library | x | y | z | Scale % |
 |---|---|---:|---:|---:|---:|
-| Sky Archipelago | Sky Archipelago | 0 | 0 | 0 | 80000 |
 | Blue Patrol | Blue Propeller Plane | 0 | 2160 | 5400 | 820 |
 | Red Raider | Red Enemy Plane | 0 | 2160 | 1800 | 820 |
 | Crimson Ace | Red Enemy Plane | -792 | 2304 | 180 | 820 |
@@ -26,7 +25,7 @@ Optional phone remote: add the existing **GamePad BLE** extension, use its **Dow
 | Patrol Bolt | Energy Bolt | 36000 | 36000 | 0 | 160 |
 | Bonus Ring | Flight Ring | 0 | 1980 | 3600 | 1000 |
 
-Apply each row with the Transform blocks (or the 3D size and position fields), then remove those setup blocks from the workspace: placement and scale stay in the saved model settings. Sky Archipelago has no scripts; its scale of 80000% gives the 700 x 800 world-unit scene (36 Scratch units equal one world unit). The aircraft point along local -Z, so Heading 0 flies toward decreasing z with the follow camera behind the plane. The hidden bolt starts parked far away (any large number, 36000 here, is fine) and its script hides it until it is fired. The islands are an ordinary stationary sprite.
+Apply the actor rows with Transform blocks, then remove those temporary setup blocks: actor placement and scale stay in the saved model settings. The islands belong to Stage and have no sprite or scripts. The Stage environment uses 80000% scale for its 700 x 800 world-unit scene. Aircraft point along local -Z, so Heading 0 flies toward decreasing z with the follow camera behind the plane. The hidden bolt starts parked far away and its script hides it until fired.
 
 ## Variables
 
@@ -82,8 +81,7 @@ set rotation to x: 0 y: (Heading) z: (Bank)
 
 ```text
 define Fly forward
-change [x] position by (([sin] of (Heading)) * -36)
-change [z] position by (([cos] of (Heading)) * -36)
+move (36) steps forward
 if <((y position) < 1080)> then
   set [y] position to (1080)
 if <((y position) > 6480)> then
@@ -119,8 +117,7 @@ go to x: (Flight x) y: (Flight y) z: (Flight z)
 set rotation to x: 0 y: (Shot heading) z: 0
 show sprite
 repeat (30)
-  change [x] position by (([sin] of (Shot heading)) * -180)
-  change [z] position by (([cos] of (Shot heading)) * -180)
+  move (180) steps forward
   wait (0.03) seconds
 hide sprite
 go to x: 36000 y: 36000 z: 0
@@ -136,10 +133,9 @@ Build **Red Raider** first. Its start spot and the parking spot after a hit are 
 when green flag clicked
 go to x: 0 y: 2160 z: 1800
 show sprite
-wait (0.2) seconds
+wait (3) seconds
 forever
-  move [Red Raider] towards [Blue Patrol] at speed (900)
-  rotate (180) degrees around [y]
+  move [Red Raider] towards [Blue Patrol] at speed (450)
   Check contacts
   wait (0.03) seconds
 ```
@@ -154,7 +150,7 @@ if <<is [Red Raider] within (216) of [Patrol Bolt]?>> then
   stop [this script]
 if <<is [Red Raider] within (216) of [Blue Patrol]?>> then
   change [Health] by (-1)
-  move [Red Raider] away from [Blue Patrol] at speed (10800)
+  move [Red Raider] away from [Blue Patrol] at speed (108000)
   wait (0.8) seconds
 ```
 
@@ -224,6 +220,6 @@ The optional phone remote in Controls uses the same Steer aircraft and Fire one 
 
 **Fire one bolt** copies the heading at launch, so a shot stays straight while the plane turns.
 
-Each raider uses the existing AI move-towards block. That block faces +Z, so the following visible rotate-y-by-180 block points these -Z-nose models toward the player. **Check contacts** uses the existing AI within-distance reporter. A hit hides and parks a defeated raider far away.
+Each raider waits three seconds, then uses the AI move-towards block, which turns it to face the player. **Check contacts** uses the existing AI within-distance reporter. A hit hides and parks a defeated raider far away.
 
-Try changing the raider speed 900 to 700, the flight step 36 to 48, or the steering thresholds 10 and -10. Every model comes from the 3D library, so a saved project reloads them from the library and stays small.
+Try changing the raider speed 450 to 700, the flight step 36 to 48, or the steering thresholds 10 and -10. Every model comes from the 3D library, so a saved project reloads them from the library and stays small.

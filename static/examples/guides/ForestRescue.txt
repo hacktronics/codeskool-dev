@@ -3,35 +3,37 @@ Forest Rescue
 
 Reach the three orange hikers along the forest paths. Arrow keys move the ranger. Each rescued hiker disappears; the ordinary Text blocks update the floating mission label. Green flag restarts all hikers. Use AI > is sprite within distance to detect each rescue.
 
-This project contains 56 ordinary visible Scratch blocks. The scenery and every actor come from the 3D library; nothing is uploaded or embedded. No editor, renderer, VM or extension changes are required.
+This project contains 79 ordinary blocks. Forest Trail is the Stage environment; only the 4 gameplay actors are sprites. The project stores its Stage setting and actor library choices.
 
-Rebuild: in 3D and XR Studio start a blank 3D project. Click Choose a 3D Object and pick each model listed under SETUP from the library (the worlds are under the Worlds tag), then rename each sprite exactly as listed. Set each sprite's size with Transform > set all scale (the number is the model's biggest side in world units x 100, so a world 220 units wide is 22000) and place it with Transform > go to x/y/z. The maps are measured in world units; multiply positions by 36 for the Scratch blocks (a 220-unit world is 7920 Scratch units wide). Add the World extension: it holds the haze block "set fog to ... at distance ..." that the first script uses. Create the variables below for all sprites. Indented recipe lines belong inside their enclosing Control block.
+Rebuild in 3D and XR Studio:
+1. Start a blank 3D project. Select Stage in the lower-right panel, open Choose an Environment, and select Forest Trail. The environment chooser applies the landscape to Stage at scale 22000%.
+2. Use Choose a 3D Object for the actors in SETUP.assets only. Pick each row's library model and rename the sprite to its listed name. Set actor scale with Transform > set all scale and position with Transform > go to x/y/z using the listed values (36 position units equal one world unit).
+3. Add the World extension for the existing set fog block described in SETUP.haze. Create the variables for all sprites, then build the visible recipes. Indented lines belong inside their enclosing Control block.
 
 SETUP
 {
   "title": "Forest Rescue",
   "project": "ForestRescue",
   "environment": "forest-trail",
+  "stage": {
+    "type": "model",
+    "name": "Forest Trail",
+    "thumbnailURL": "static/examples/thumbnails/world-forest-trail.webp",
+    "model3d": {
+      "source": "library",
+      "glbURL": "static/models/3d/world-content/environments/forest-trail.glb"
+    },
+    "scale3d": 22000
+  },
   "variables": {
     "Rescued": 0
   },
   "assets": [
     {
-      "name": "Forest Trail Scenery",
-      "glbURL": "static/models/3d/world-content/environments/forest-trail.glb",
-      "scale3d": 22000,
-      "positionScratch": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "library": "Forest Trail"
-    },
-    {
       "name": "Forest Ranger",
       "glbURL": "static/models/3d/world-content/sprites/forest-ranger.glb",
       "scale3d": 220,
-      "positionScratch": {
+      "position": {
         "x": -2340,
         "y": 3,
         "z": 2160
@@ -42,7 +44,7 @@ SETUP
       "name": "Hiker 1",
       "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
       "scale3d": 210,
-      "positionScratch": {
+      "position": {
         "x": -1440,
         "y": 3,
         "z": 1080
@@ -53,7 +55,7 @@ SETUP
       "name": "Hiker 2",
       "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
       "scale3d": 210,
-      "positionScratch": {
+      "position": {
         "x": -2340,
         "y": 3,
         "z": -720
@@ -64,7 +66,7 @@ SETUP
       "name": "Hiker 3",
       "glbURL": "static/models/3d/world-content/sprites/hiker.glb",
       "scale3d": 210,
-      "positionScratch": {
+      "position": {
         "x": 2160,
         "y": 3,
         "z": -360
@@ -87,21 +89,34 @@ when green flag clicked
 set fog to #d5e6ee at distance 150
 set Rescued to 0
 create text Rescue all three hikers named Mission
-set font size of Mission to 34
+set font size of Mission to 64
 attach Mission to Forest Ranger
-set offset of Mission to x: 0 y: 144 z: 0
+set offset of Mission to x: 0 y: 216 z: 0
 go to x: -2340 y: 3 z: 2160
 show
-follow Forest Ranger at distance 900
-repeat until (Rescued) = 3
+set rotation to x: 0 y: 0 z: 0
+follow Forest Ranger at distance 900 without turning
+repeat until (Rescued = 3)
   if key up arrow pressed? then
+    set rotation to x: 0 y: 0 z: 0
     change z position by -18
   if key down arrow pressed? then
+    set rotation to x: 0 y: 180 z: 0
     change z position by 18
   if key left arrow pressed? then
+    set rotation to x: 0 y: 90 z: 0
     change x position by -18
   if key right arrow pressed? then
+    set rotation to x: 0 y: -90 z: 0
     change x position by 18
+  if ((x position) > 3780) then
+    set x position to 3780
+  if ((x position) < -3780) then
+    set x position to -3780
+  if ((z position) > 3780) then
+    set z position to 3780
+  if ((z position) < -3780) then
+    set z position to -3780
   wait 0.03 seconds
 
 
@@ -112,7 +127,7 @@ wait 0.2 seconds
 wait until is Forest Ranger within 180 of Hiker 1?
 hide
 change Rescued by 1
-set text of Mission to join Rescued / 3:  (Rescued)
+set text of Mission to (join Hikers rescued:  (join (Rescued)  of 3))
 
 
 SPRITE: Hiker 2
@@ -122,7 +137,7 @@ wait 0.2 seconds
 wait until is Forest Ranger within 180 of Hiker 2?
 hide
 change Rescued by 1
-set text of Mission to join Rescued / 3:  (Rescued)
+set text of Mission to (join Hikers rescued:  (join (Rescued)  of 3))
 
 
 SPRITE: Hiker 3
@@ -132,5 +147,4 @@ wait 0.2 seconds
 wait until is Forest Ranger within 180 of Hiker 3?
 hide
 change Rescued by 1
-set text of Mission to join Rescued / 3:  (Rescued)
-
+set text of Mission to (join Hikers rescued:  (join (Rescued)  of 3))

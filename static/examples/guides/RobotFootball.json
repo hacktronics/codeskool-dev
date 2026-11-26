@@ -2,6 +2,16 @@
   "title": "Robot Football Practice",
   "project": "RobotFootball",
   "environment": "football-stadium",
+  "stage": {
+    "type": "model",
+    "name": "Football Stadium",
+    "thumbnailURL": "static/examples/thumbnails/world-football-stadium.webp",
+    "model3d": {
+      "source": "library",
+      "glbURL": "static/models/3d/world-content/environments/football-stadium.glb"
+    },
+    "scale3d": 22000
+  },
   "variables": {
     "Score": 0,
     "Player x": 0,
@@ -12,21 +22,10 @@
   },
   "assets": [
     {
-      "name": "Football Stadium Scenery",
-      "glbURL": "static/models/3d/world-content/environments/football-stadium.glb",
-      "scale3d": 22000,
-      "positionScratch": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "library": "Football Stadium"
-    },
-    {
       "name": "Football Robot",
       "glbURL": "static/models/3d/world-content/sprites/robot-car.glb",
       "scale3d": 280,
-      "positionScratch": {
+      "position": {
         "x": 0,
         "y": 3,
         "z": 900
@@ -37,7 +36,7 @@
       "name": "Football",
       "glbURL": "static/models/3d/world-content/sprites/football.glb",
       "scale3d": 70,
-      "positionScratch": {
+      "position": {
         "x": 0,
         "y": 3,
         "z": 0

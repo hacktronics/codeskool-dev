@@ -1,75 +1,94 @@
 Checkpoint Circuit
 ==================
 
-Use the arrow keys to visit the three checker gates in order. Each gate disappears when reached; the floating label shows progress. Your finish time appears after Gate 3. Use the circuit road for the full route. All proximity checks use the existing AI blocks. Green flag starts a new run.
+Hold Up to drive, use Left and Right to steer and Down to reverse. Pass the three gates in order; your time appears after Gate 3. Green flag starts a new run.
 
-This project contains 66 ordinary visible Scratch blocks. The scenery and every actor come from the 3D library; nothing is uploaded or embedded. No editor, renderer, VM or extension changes are required.
+Stay on the road: if the car goes onto the grass it skids and stops, and if it leaves the road at a gate it has hit the post and crashes. After a 3 second countdown it goes back to the last place it was in the middle of the road, pointing the right way.
 
-Rebuild: in 3D and XR Studio start a blank 3D project. Click Choose a 3D Object and pick each model listed under SETUP from the library (the worlds are under the Worlds tag), then rename each sprite exactly as listed. Set each sprite's size with Transform > set all scale (the number is the model's biggest side in world units x 100, so a world 220 units wide is 22000) and place it with Transform > go to x/y/z. The maps are measured in world units; multiply positions by 36 for the Scratch blocks (a 220-unit world is 7920 Scratch units wide). Add the World extension: it holds the haze block "set fog to ... at distance ..." that the first script uses. Create the variables below for all sprites. Indented recipe lines belong inside their enclosing Control block.
+This project contains 171 ordinary blocks. Racing Circuit is the Stage environment; the sprites are the car, three gates and a hidden Cube called Track Centre. The project stores its Stage setting and actor library choices.
+
+Rebuild in 3D and XR Studio:
+1. Start a blank 3D project. Select Stage in the lower-right panel, open Choose an Environment, and select Racing Circuit. The environment chooser applies the landscape to Stage at scale 24000%.
+2. Use Choose a 3D Object for the actors in SETUP.assets only. Pick each row's library model and rename the sprite to its listed name. Set actor scale with Transform > set all scale and position with Transform > go to x/y/z using the listed values (36 position units equal one world unit).
+3. Add the World extension (for the fog block described in SETUP.haze and for "what is under"), and the AI, Camera and Text categories. Turn each gate by its rotationY with Transform > set rotation. Add a Cube, call it Track Centre and build its three blocks. Create Checkpoints for all sprites, and Drive step, Safe x and Safe z for the car only. Make the My Blocks listed as "define", then build the visible recipes. Indented lines belong inside their enclosing Control block.
+
+How the road rules work: the World block "what is under" says grass when the car has left the road. Track Centre is a hidden Cube in the middle of the track. The car is in the middle of the road when it is between 2960 and 3160 from Track Centre, and that spot is remembered in Safe x and Safe z. To point along the road again, the car faces Track Centre and turns -90 degrees.
 
 SETUP
 {
   "title": "Checkpoint Circuit",
   "project": "CheckpointCircuit",
   "environment": "racing-circuit",
+  "stage": {
+    "type": "model",
+    "name": "Racing Circuit",
+    "thumbnailURL": "static/examples/thumbnails/world-racing-circuit.webp",
+    "model3d": {
+      "source": "library",
+      "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb"
+    },
+    "scale3d": 24000
+  },
   "variables": {
     "Checkpoints": 0
   },
   "assets": [
     {
-      "name": "Racing Circuit Scenery",
-      "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb",
-      "scale3d": 24000,
-      "positionScratch": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "library": "Racing Circuit"
-    },
-    {
       "name": "Red Racing Car",
       "glbURL": "static/models/3d/world-content/sprites/red-race-car.glb",
       "scale3d": 420,
-      "positionScratch": {
-        "x": 0,
+      "library": "Red Race Car",
+      "rotationY": -90,
+      "position": {
+        "x": -144,
         "y": 3,
-        "z": 3060
-      },
-      "library": "Red Race Car"
+        "z": 3096
+      }
     },
     {
       "name": "Gate 1",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
-      "scale3d": 660,
-      "positionScratch": {
-        "x": 3024,
+      "scale3d": 3000,
+      "library": "Checkpoint Gate",
+      "position": {
+        "x": 3060,
         "y": 3,
         "z": 0
-      },
-      "library": "Checkpoint Gate"
+      }
     },
     {
       "name": "Gate 2",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
-      "scale3d": 660,
-      "positionScratch": {
+      "scale3d": 3000,
+      "library": "Checkpoint Gate",
+      "rotationY": 90,
+      "position": {
         "x": 0,
         "y": 3,
         "z": -3060
-      },
-      "library": "Checkpoint Gate"
+      }
     },
     {
       "name": "Gate 3",
       "glbURL": "static/models/3d/world-content/sprites/checkpoint-gate.glb",
-      "scale3d": 660,
-      "positionScratch": {
-        "x": -3024,
+      "scale3d": 3000,
+      "library": "Checkpoint Gate",
+      "position": {
+        "x": -3060,
         "y": 3,
         "z": 0
-      },
-      "library": "Checkpoint Gate"
+      }
+    },
+    {
+      "name": "Track Centre",
+      "library": "Cube",
+      "scale3d": 100,
+      "hidden": true,
+      "position": {
+        "x": 0,
+        "y": 3,
+        "z": 0
+      }
     }
   ],
   "haze": {
@@ -86,52 +105,123 @@ SPRITE: Red Racing Car
 when green flag clicked
 set fog to #d5e6ee at distance 260
 set Checkpoints to 0
-reset timer
-create text Reach Gate 1, then 2, then 3 named Mission
-set font size of Mission to 34
-attach Mission to Red Racing Car
-set offset of Mission to x: 0 y: 144 z: 0
-go to x: 0 y: 3 z: 3060
+set Drive step to 0
+set Safe x to -144
+set Safe z to 3096
+go to x: -144 y: 3 z: 3096
+set rotation to x: 0 y: -90 z: 0
 show
-follow Red Racing Car at distance 900
-repeat until (Checkpoints) = 3
+set camera position to x: -792 y: 327 z: 3096
+follow Red Racing Car at distance 648
+create text Hold Up to start named Mission
+set font size of Mission to 54
+attach Mission to Red Racing Car
+set offset of Mission to x: 0 y: 234 z: 0
+set color of Mission to #ffdf77
+create text Left / Right to steer named Race Controls
+set font size of Race Controls to 39
+attach Race Controls to Red Racing Car
+set offset of Race Controls to x: 0 y: 162 z: 0
+wait until key up arrow pressed?
+reset timer
+set text of Mission to Gate 1 of 3
+set text of Race Controls to Up: drive  /  Down: reverse
+repeat until ((Checkpoints) = 3)
+  set Drive step to 0
   if key up arrow pressed? then
-    change z position by -27
+    set Drive step to 54
   if key down arrow pressed? then
-    change z position by 27
-  if key left arrow pressed? then
-    change x position by -27
-  if key right arrow pressed? then
-    change x position by 27
+    set Drive step to -27
+  if (not ((Drive step) = 0)) then
+    if key left arrow pressed? then
+      rotate 2 degrees around y
+    if key right arrow pressed? then
+      rotate -2 degrees around y
+    move (Drive step) steps forward
+    Check road
   wait 0.03 seconds
+set text of Mission to (join Finished in  (join ((round ((timer) * 10)) / 10)  seconds))
+set text of Race Controls to Green flag to race again
+
+define Check road
+if (is Red Racing Car within 3160 of Track Centre? and (not is Red Racing Car within 2960 of Track Centre?)) then
+  set Safe x to (x position)
+  set Safe z to (z position)
+if ((what is under Red Racing Car?) = grass) then
+  Freeze camera
+  if ((is Red Racing Car within 500 of Gate 1? or is Red Racing Car within 500 of Gate 2?) or is Red Racing Car within 500 of Gate 3?) then
+    Crash
+  else
+    Skid
+  Back to the road
+
+define Freeze camera
+set camera position to x: (camera x position) y: (camera y position) z: (camera z position)
+point camera at Red Racing Car
+
+define Crash
+set text of Mission to CRASH!
+shake camera for 0.6 secs
+set Drive step to ((Drive step) * -2)
+move (Drive step) steps forward
+set rotation to x: 0 y: (y rotation) z: 14
+
+define Skid
+set text of Mission to Off the road!
+repeat 10
+  move (Drive step) steps forward
+  rotate 18 degrees around y
+  set Drive step to ((Drive step) * 0.8)
+  wait 0.03 seconds
+
+define Back to the road
+set text of Race Controls to Back on the road in 3
+wait 1 seconds
+set text of Race Controls to Back on the road in 2
+wait 1 seconds
+set text of Race Controls to Back on the road in 1
+wait 1 seconds
+go to x: (Safe x) y: 3 z: (Safe z)
+set rotation to x: 0 y: 0 z: 0
+face Red Racing Car towards Track Centre
+rotate -90 degrees around y
+set Drive step to 0
+follow Red Racing Car at distance 648
+set text of Mission to (join Checkpoints:  (join (Checkpoints)  of 3))
+set text of Race Controls to Up: drive  /  Down: reverse
 
 
 SPRITE: Gate 1
 when green flag clicked
 show
 wait 0.2 seconds
-wait until (Checkpoints) = 0 and is Red Racing Car within 180 of Gate 1?
+wait until (((Checkpoints) = 0) and is Red Racing Car within 340 of Gate 1?)
 hide
 change Checkpoints by 1
-set text of Mission to join Gates / 3:  (Checkpoints)
+set text of Mission to (join Checkpoints:  (join (Checkpoints)  of 3))
 
 
 SPRITE: Gate 2
 when green flag clicked
 show
 wait 0.2 seconds
-wait until (Checkpoints) = 1 and is Red Racing Car within 180 of Gate 2?
+wait until (((Checkpoints) = 1) and is Red Racing Car within 340 of Gate 2?)
 hide
 change Checkpoints by 1
-set text of Mission to join Gates / 3:  (Checkpoints)
+set text of Mission to (join Checkpoints:  (join (Checkpoints)  of 3))
 
 
 SPRITE: Gate 3
 when green flag clicked
 show
 wait 0.2 seconds
-wait until (Checkpoints) = 2 and is Red Racing Car within 180 of Gate 3?
+wait until (((Checkpoints) = 2) and is Red Racing Car within 340 of Gate 3?)
 hide
 change Checkpoints by 1
-set text of Mission to join Finish seconds:  timer
+set text of Mission to (join Checkpoints:  (join (Checkpoints)  of 3))
 
+
+SPRITE: Track Centre
+when green flag clicked
+hide
+go to x: 0 y: 3 z: 0

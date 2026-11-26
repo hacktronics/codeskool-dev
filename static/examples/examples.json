@@ -41,6 +41,20 @@
     "isMemberOnly": false,
     "urlId": "CheckpointCircuit"
   },
+  "TrafficRace": {
+    "name": "Traffic Race",
+    "description": "Overtake a taxi, a police car and a van, then finish the lap. Arrow keys drive.",
+    "tags": [
+      "3d",
+      "scratch",
+      "games"
+    ],
+    "img": "/static/examples/thumbnails/traffic-race.webp",
+    "insetIconURL": "3d",
+    "isPremium": false,
+    "isMemberOnly": false,
+    "urlId": "TrafficRace"
+  },
   "RobotFootball": {
     "name": "Robot Football Practice",
     "description": "Drive a robot behind the ball and press Space to kick toward either goal. Your approach sets the shot direction.",
@@ -404,6 +418,17 @@
     "insetIconURL": "arduino",
     "isMemberOnly": false,
     "urlId": "MarioRotaryEncoder"
+  },
+  "MarioArcadeLab": {
+    "name": "Mario on Arcade Lab",
+    "description": "Play Mario on the Arcade Lab board. Move with the left and right keys and press the joystick button to jump.",
+    "tags": [
+      "hardware"
+    ],
+    "img": "/static/examples/thumbnails/mario_arcade_lab.webp",
+    "insetIconURL": "hardware",
+    "isMemberOnly": false,
+    "urlId": "MarioArcadeLab"
   },
   "DigitalLocker": {
     "name": "Digital Locker",

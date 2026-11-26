@@ -6,19 +6,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-sky-archipelago.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 700.0,
+      "x": 700,
       "y": 191.112,
-      "z": 800.0
+      "z": 800
     },
-    "maxDimension": 800.0,
+    "maxDimension": 800,
     "scale3d": 80000,
     "bounds": {
-      "minX": -350.0,
-      "maxX": 350.0,
+      "minX": -350,
+      "maxX": 350,
       "minY": 0,
       "maxY": 191.112,
-      "minZ": -400.0,
-      "maxZ": 400.0
+      "minZ": -400,
+      "maxZ": 400
     },
     "spawn": {
       "x": 0,
@@ -39,16 +39,16 @@
     },
     "previewCamera": {
       "position": [
-        -440,
-        480,
-        650
+        0,
+        600,
+        300
       ],
       "target": [
         0,
-        20,
+        0,
         0
       ],
-      "fov": 48
+      "fov": 70
     },
     "parts": [
       {
@@ -143,7 +143,18 @@
         "z": -245
       }
     },
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/sky-archipelago.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/sky-archipelago.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Sky Archipelago",
+      "thumbnailURL": "static/examples/thumbnails/world-sky-archipelago.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/sky-archipelago.glb"
+      },
+      "scale3d": 80000
+    }
   },
   {
     "assetId": "voxel-valley",
@@ -152,19 +163,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-voxel-valley.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 220.0,
-      "y": 15.0,
-      "z": 220.0
+      "x": 220,
+      "y": 15,
+      "z": 220
     },
-    "maxDimension": 220.0,
+    "maxDimension": 220,
     "scale3d": 22000,
     "bounds": {
-      "minX": -110.0,
-      "maxX": 110.0,
+      "minX": -110,
+      "maxX": 110,
       "minY": 0,
-      "maxY": 15.0,
-      "minZ": -110.0,
-      "maxZ": 110.0
+      "maxY": 15,
+      "minZ": -110,
+      "maxZ": 110
     },
     "spawn": {
       "x": 0,
@@ -277,12 +288,23 @@
       ]
     },
     "static": true,
-    "meshes": 17,
+    "meshes": 18,
     "triangles": 17610,
-    "bytes": 1536920,
+    "bytes": 1538180,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/voxel-valley.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/voxel-valley.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Voxel Valley",
+      "thumbnailURL": "static/examples/thumbnails/world-voxel-valley.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/voxel-valley.glb"
+      },
+      "scale3d": 22000
+    }
   },
   {
     "assetId": "forest-trail",
@@ -291,19 +313,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-forest-trail.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 220.0,
+      "x": 220,
       "y": 32.396,
-      "z": 220.0
+      "z": 220
     },
-    "maxDimension": 220.0,
+    "maxDimension": 220,
     "scale3d": 22000,
     "bounds": {
-      "minX": -110.0,
-      "maxX": 110.0,
+      "minX": -110,
+      "maxX": 110,
       "minY": 0,
       "maxY": 32.396,
-      "minZ": -110.0,
-      "maxZ": 110.0
+      "minZ": -110,
+      "maxZ": 110
     },
     "spawn": {
       "x": -65,
@@ -434,7 +456,18 @@
     "bytes": 4884856,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/forest-trail.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/forest-trail.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Forest Trail",
+      "thumbnailURL": "static/examples/thumbnails/world-forest-trail.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/forest-trail.glb"
+      },
+      "scale3d": 22000
+    }
   },
   {
     "assetId": "robot-lab",
@@ -443,19 +476,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-robot-lab.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 220.0,
+      "x": 220,
       "y": 21.5,
-      "z": 200.0
+      "z": 200
     },
-    "maxDimension": 220.0,
+    "maxDimension": 220,
     "scale3d": 22000,
     "bounds": {
-      "minX": -110.0,
-      "maxX": 110.0,
+      "minX": -110,
+      "maxX": 110,
       "minY": 0,
       "maxY": 21.5,
-      "minZ": -100.0,
-      "maxZ": 100.0
+      "minZ": -100,
+      "maxZ": 100
     },
     "spawn": {
       "x": 0,
@@ -567,7 +600,18 @@
     "bytes": 2278300,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/robot-lab.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/robot-lab.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Robot Test Lab",
+      "thumbnailURL": "static/examples/thumbnails/world-robot-lab.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/robot-lab.glb"
+      },
+      "scale3d": 22000
+    }
   },
   {
     "assetId": "racing-circuit",
@@ -576,19 +620,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-racing-circuit.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 240.0,
+      "x": 240,
       "y": 30.25,
-      "z": 240.0
+      "z": 240
     },
-    "maxDimension": 240.0,
+    "maxDimension": 240,
     "scale3d": 24000,
     "bounds": {
-      "minX": -120.0,
-      "maxX": 120.0,
+      "minX": -120,
+      "maxX": 120,
       "minY": 0,
       "maxY": 30.25,
-      "minZ": -120.0,
-      "maxZ": 120.0
+      "minZ": -120,
+      "maxZ": 120
     },
     "spawn": {
       "x": 0,
@@ -774,7 +818,18 @@
     "bytes": 2718936,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/racing-circuit.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/racing-circuit.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Racing Circuit",
+      "thumbnailURL": "static/examples/thumbnails/world-racing-circuit.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/racing-circuit.glb"
+      },
+      "scale3d": 24000
+    }
   },
   {
     "assetId": "football-stadium",
@@ -783,19 +838,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-football-stadium.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 220.0,
-      "y": 37.0,
-      "z": 180.0
+      "x": 220,
+      "y": 37,
+      "z": 180
     },
-    "maxDimension": 220.0,
+    "maxDimension": 220,
     "scale3d": 22000,
     "bounds": {
-      "minX": -110.0,
-      "maxX": 110.0,
+      "minX": -110,
+      "maxX": 110,
       "minY": 0,
-      "maxY": 37.0,
-      "minZ": -90.0,
-      "maxZ": 90.0
+      "maxY": 37,
+      "minZ": -90,
+      "maxZ": 90
     },
     "spawn": {
       "x": 0,
@@ -879,7 +934,18 @@
     "bytes": 1485568,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/football-stadium.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/football-stadium.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Football Stadium",
+      "thumbnailURL": "static/examples/thumbnails/world-football-stadium.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/football-stadium.glb"
+      },
+      "scale3d": 22000
+    }
   },
   {
     "assetId": "obstacle-course",
@@ -888,19 +954,19 @@
     "thumbnailURL": "static/examples/thumbnails/world-obstacle-course.webp",
     "coordinateSystem": "world units; 36 Scratch units per world unit",
     "authoredDimensions": {
-      "x": 220.0,
+      "x": 220,
       "y": 20.305,
-      "z": 220.0
+      "z": 220
     },
-    "maxDimension": 220.0,
+    "maxDimension": 220,
     "scale3d": 22000,
     "bounds": {
-      "minX": -110.0,
-      "maxX": 110.0,
+      "minX": -110,
+      "maxX": 110,
       "minY": 0,
       "maxY": 20.305,
-      "minZ": -110.0,
-      "maxZ": 110.0
+      "minZ": -110,
+      "maxZ": 110
     },
     "spawn": {
       "x": -75,
@@ -1017,6 +1083,17 @@
     "bytes": 4104060,
     "author": "CodeSkool",
     "license": "Proprietary",
-    "spriteThumbnailURL": "static/models/3d/world-content/environments/obstacle-course.png"
+    "spriteThumbnailURL": "static/models/3d/world-content/environments/obstacle-course.png",
+    "usage": "stage-environment",
+    "stageGround": {
+      "type": "model",
+      "name": "Obstacle Course",
+      "thumbnailURL": "static/examples/thumbnails/world-obstacle-course.webp",
+      "model3d": {
+        "source": "library",
+        "glbURL": "static/models/3d/world-content/environments/obstacle-course.glb"
+      },
+      "scale3d": 22000
+    }
   }
 ]
